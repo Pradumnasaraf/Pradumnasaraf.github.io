@@ -1,2 +1,2 @@
-# Pradumnasaraf.github.io
+# pradumnasaraf.github.io
 Personal website, still under construction
