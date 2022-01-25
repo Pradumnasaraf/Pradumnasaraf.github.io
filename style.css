@@ -1,67 +1,118 @@
 *{
-    margin: 0;
-    padding: 0;
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
 }
-.container{
-    height: 100vh;
-    width: 100vw;
-    background-image: url(images/background.jpg);
-    background-size: cover;
-    padding-left: 5%;
-    opacity: 0.75; 
-
-}
-.parent{
-    justify-content: center;
+.Top{
+    background-color: rgb(31,34,53);
+    height: 70px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-
-
+    border-bottom: 0.5px solid goldenrod;
 }
-#child1{
-    padding-top: 75px;
-    padding-right: 140px;
-    font-family: sans-serif;
-    color:beige;
-    font-size: 60px;
-    width: 300px;
-    font-weight: 400;
-
-    float: right;  
+.name{
+    font-size:20px;
+    letter-spacing:2px;
+    font-weight:bold
 }
-.connect{
+.nav{
+    margin-left: 200px;
     display: flex;
-    flex-direction: column;
-    width: 220px;
-}
-#child2{
-    padding-top: 75px;
-    font-family: sans-serif;
-    color:beige;
-    font-size: 40px;
-    font-weight: 400;
-    float: left;  
-}
-
-.socials{   
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 50px;
-  
-}
-.icon{
-    padding:13px;
+    flex-wrap: wrap;
 
 }
-div, a, img{
-    height: 50px;
+.nav > a{
+    color: beige;
+    text-decoration: none;
+    font-size: 18px;
+    padding:15px;
+    letter-spacing:4px
 }
-.icon :hover{
-    height:60px;
-    transition: all 500ms ease;
+.nav > a:hover{
+    color: lightcoral;
+    text-decoration:underline;
+    text-underline-position:under;
+    text-decoration-style: dotted;
     
 }
+/******HEADING******/
 
-   
+.heading{
+    background-color: rgb(31,34,53);
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.socialmedia{
+    margin: 15px 0px;
+}
+.socialmedia>a>i{
+    padding:15px;
+    margin:0px 5px;
+    border-radius: 20px;
+    color: white;
+    border: 2px solid goldenrod;
+    font-size:30px;
+    transition: all 0.7s ease;
+
+}
+.socialmedia>a>i:hover{
+    background-color:white;
+    border: 2px solid transparent;
+    color:rgb(31,37,58);
+    padding: 25px;
+    font-size:35px;
+
+}
+.left >h2 {
+    color: white;
+    font-size:35px;
+    margin:10px 0px;
+
+}
+.left >p {
+    color: white;
+    font-size:20px;
+    margin:5px 0px;
+    width: 500px;
+}
+.GitHub{
+    width: 180px;
+    height: 50px;
+    border: 2px solid goldenrod;
+    background-color: transparent;
+    color: white;
+    font-size:18px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin:7px 0px;
+    transition: all 0.7s ease;
+}
+.GitHub:hover{
+    background-color:white;
+    color:rgb(31,37,58);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+ /****RIGHT***/
+
+.right{
+    border:2px dotted white;
+    border-radius:300px;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all 0.5s ease;
+}
+.right:hover{
+    border: 3px solid goldenrod;
+    
+}
