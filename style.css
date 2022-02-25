@@ -42,7 +42,7 @@
 
 .heading{
     background-color: rgb(31,34,53);
-    height: 600px;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
