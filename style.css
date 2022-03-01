@@ -47,6 +47,7 @@
 .heading{
     background-color: rgb(31,34,53);
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -103,6 +104,32 @@
     color:rgb(31,37,58);
     border: 2px solid transparent;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+    .socialmedia {
+        display: flex;
+        justify-content: center;
+    }
+    .socialmedia, .socialmedia > a > i, .socialmedia > a > i:hover {
+        margin: auto;
+    }
+    .left {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .left > h2 {
+        font-size: 24px;
+    }
+    .left > p {
+        font-size: 16px;
+        width: 100%;
+        margin: 1em;
+        text-align: center;
+    }
 }
  /****RIGHT***/
 
