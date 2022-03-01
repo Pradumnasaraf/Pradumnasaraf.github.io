@@ -19,10 +19,8 @@
     font-weight:bold
 }
 .nav{
-    margin-left: 200px;
     display: flex;
     flex-wrap: wrap;
-
 }
 .nav > a{
     color: beige;
@@ -37,6 +35,12 @@
     text-underline-position:under;
     text-decoration-style: dotted;
     
+}
+@media only screen and (max-width: 480px) {
+    .nav > a {
+        font-size: 16px;
+        padding: 8px;
+    }
 }
 /******HEADING******/
 
