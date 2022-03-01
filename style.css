@@ -145,5 +145,14 @@
 }
 .right:hover{
     border: 3px solid goldenrod;
-    
+}
+
+@media only screen and (max-width: 480px) {
+    .right {
+        border-radius: 200px;
+    }
+    .right > img {
+        height: 300px;
+        width: 300px;
+    }
 }
