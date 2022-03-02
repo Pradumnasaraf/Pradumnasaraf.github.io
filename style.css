@@ -19,10 +19,8 @@
     font-weight:bold
 }
 .nav{
-    margin-left: 200px;
     display: flex;
     flex-wrap: wrap;
-
 }
 .nav > a{
     color: beige;
@@ -38,11 +36,18 @@
     text-decoration-style: dotted;
     
 }
+@media only screen and (max-width: 480px) {
+    .nav > a {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
 /******HEADING******/
 
 .heading{
     background-color: rgb(31,34,53);
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -100,6 +105,29 @@
     border: 2px solid transparent;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 480px) {
+    .socialmedia {
+        display: flex;
+        justify-content: center;
+    }
+    .left {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .left > h2 {
+        font-size: 24px;
+    }
+    .left > p {
+        font-size: 16px;
+        width: 100%;
+        margin: 1em;
+        text-align: center;
+    }
+}
  /****RIGHT***/
 
 .right{
@@ -114,5 +142,14 @@
 }
 .right:hover{
     border: 3px solid goldenrod;
-    
+}
+
+@media only screen and (max-width: 480px) {
+    .right {
+        border-radius: 200px;
+    }
+    .right > img {
+        height: 300px;
+        width: 300px;
+    }
 }
