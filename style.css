@@ -111,9 +111,6 @@
         display: flex;
         justify-content: center;
     }
-    .socialmedia, .socialmedia > a > i, .socialmedia > a > i:hover {
-        margin: auto;
-    }
     .left {
         display: flex;
         flex-wrap: wrap;
