@@ -1,4 +1,4 @@
-# 1.3.0 (2022-08-10)
+# [1.3.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/e76b6944ea89c92d62a43cfc7b1b5c1ffa20a08a...v1.3.0) (2022-08-10)
 
 
 ### Bug Fixes
