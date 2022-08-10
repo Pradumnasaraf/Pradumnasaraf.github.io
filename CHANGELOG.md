@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v1.3.0...v1.4.0) (2022-08-10)
+
+
+### Features
+
+* refactor file structure ([8dcfd35](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8dcfd352a4d7967dc41cb86493599b88c644a50a))
+
+
+
 # [1.3.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/e76b6944ea89c92d62a43cfc7b1b5c1ffa20a08a...v1.3.0) (2022-08-10)
 
 
