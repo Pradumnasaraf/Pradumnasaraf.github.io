@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+.main {
+    background-color: #eae7dc;
+    font-family: 'Roboto', sans-serif;
+}
+.nav {
+    background-color: ;
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.pages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.pages a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color:#2e2e2d;
+    margin: 10px;
+}
+.nav p{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color:#2e2e2d;
+    margin: 10px;
+}
+/***************************************/
+
+.quote {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #D8C3A5;
+}
+.quote-title {
+    height: 15vh;
+    width: 100%;
+    color: #2e2e2d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.quote-title h1 {
+    font-size: 3.2em;
+    font-weight: 300;
+}
+.quote-body {
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.quote-box {
+    width: 16%;
+    padding: 10px;
+    height: 80%;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #eae7dc;
+    border: 2px solid #eae7dc;
+    border-radius: 15px;
+    background-color: #8E8D8A;
+}
+.quote-box i {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 10Vh;
+    width: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2.0em;
+    background-color: #eae7dc;
+    color: #8E8D8A;
+}
+.quote-box p {
+    font-weight: 300;
+    margin: 8px;
+    font-size: 1.1em;
+}
+.quote-box h1 {
+    font-weight: 400;
+    margin: 4px;
+    color: #fffd93;
+    font-size: 3.5em;
+}
+.quote-box h2 {
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    font-weight: 300;
+    margin: 4px;
+}
+.quote-box h5 {
+    color: #fffd93;
+}
+
+/***************************************/
+.footer{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eae7dc;
+}
+.social-handle{
+    width: 10vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.social-handle i{
+    font-size: 1.3em;
+}
