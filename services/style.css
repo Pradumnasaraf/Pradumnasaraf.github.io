@@ -3,11 +3,14 @@
     margin: 0;
 }
 .main {
-    background-color: #eae7dc;
+    background-color: white;
     font-family: 'Roboto', sans-serif;
 }
+
+/*** NAVBARK******/
+
 .nav {
-    background-color: #D8C3A5;
+    background-color:#2C3333;
     height: 12vh;
     width: 100%;
     display: flex;
@@ -24,14 +27,15 @@
 .pages a{
     font-size: 1.2rem;
     text-decoration: none;
-    color:#2e2e2d;
     margin: 10px;
+    color: white;
+
 }
 .nav p{
     font-size: 1.5rem;
     text-decoration: none;
-    color:#2e2e2d;
     margin: 10px;
+    color: white;
 }
 
 
@@ -43,24 +47,21 @@
     justify-content: center;
     flex-direction: column;
 }
-
 .service-title {
     height: 15vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(8, 8, 8);
+    color:#2C3333;
     text-align: center;
 }
-
 .service-title h1 {
     font-size: 3.0em;
     font-weight: 300;
 }
 
 .service-body {
-    color: aliceblue;
     display: flex;
     height: 55vh;
     align-items: center;
@@ -71,7 +72,7 @@
 .service-box {
     width: 28%;
     height: 70%;
-    color: #000000;
+    color: #2C3333;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,8 +80,8 @@
 }
 
 .service-box i {
-    background-color: #8E8D8A;
-    color: #eae7dc;
+    background-color: #2C3333;
+    color: white;
     height: 10vh;
     width: 10vh;
     display: flex;
@@ -110,12 +111,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #D8C3A5;
+    background-color: #2C3333;
 }
 .quote-title {
     height: 15vh;
     width: 100%;
-    color: #2e2e2d;
     text-align: center;
     display: flex;
     align-items: center;
@@ -124,7 +124,8 @@
 }
 .quote-title h1 {
     font-size: 3.2em;
-    font-weight: 300;
+    font-weight: 400;
+    color: white;
 }
 .quote-body {
     display: flex;
@@ -138,15 +139,14 @@
     width: 16%;
     padding: 10px;
     height: 80%;
-    color: #000000;
+    color: #2C3333;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    color: #eae7dc;
     border: 2px solid #eae7dc;
     border-radius: 15px;
-    background-color: #8E8D8A;
+    background-color: #ffffff;
 }
 .quote-box i {
     margin-top: 15px;
@@ -158,8 +158,8 @@
     justify-content: center;
     border-radius: 50%;
     font-size: 2.0em;
-    background-color: #eae7dc;
-    color: #8E8D8A;
+    color: #2C3333;
+    border: 2px solid #2C3333;
 }
 .quote-box p {
     font-weight: 300;
@@ -169,7 +169,7 @@
 .quote-box h1 {
     font-weight: 400;
     margin: 4px;
-    color: #fffd93;
+    color: #ff3636;
     font-size: 3.5em;
 }
 .quote-box h2 {
@@ -179,7 +179,7 @@
     margin: 4px;
 }
 .quote-box h5 {
-    color: #fffd93;
+    color: #ff3636;
 }
 
 /***************************************/
@@ -191,10 +191,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #eae7dc;
+    background-color: white;
 }
 .stats-title {
-    height: 15vh;
+    height: 12vh;
     width: 100%;
     color: #2e2e2d;
     text-align: center;
@@ -246,7 +246,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #eae7dc;
+    background-color: #2C3333;
+    color: white;
 }
 .social-handle{
     width: 10vw;
