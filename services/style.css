@@ -206,6 +206,25 @@
     cursor: pointer;
     transition: 0.8s;
 }
+.enq-btn {
+    color: #2C3333;
+    font-size: 1.2rem;
+    margin: 10px;
+    font-size: 1.5rem;
+    background-color: white;
+    padding: 4px 15px;
+    border-radius: 25px;
+    border: 1px solid #ffffff;
+    font-weight:300;
+    text-decoration: none;
+}
+.enq-btn:hover {
+    background-color:#2C3333;;
+    color: white;
+    cursor: pointer;
+    transition: 0.8s;
+
+}
 .pkg-btn{
     padding: 0px 8px;
     margin-top: 5px;
