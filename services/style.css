@@ -11,7 +11,7 @@
 
 .nav {
     background-color:#2C3333;
-    height: 12vh;
+    height: 8vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -37,10 +37,8 @@
     margin: 10px;
     color: white;
 }
-
-
 .service {
-    height: 72vh;
+    height: 78vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -48,7 +46,7 @@
     flex-direction: column;
 }
 .service-title {
-    height: 15vh;
+    height: 12vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -63,37 +61,38 @@
 
 .service-body {
     display: flex;
-    height: 55vh;
+    height: 32vh;
+    width: 100%;    
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 
 .service-box {
     width: 28%;
-    height: 70%;
+    height: 85%;
     color: #2C3333;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
     text-align: center;
 }
 
 .service-box i {
     background-color: #2C3333;
     color: white;
-    height: 10vh;
-    width: 10vh;
+    height: 8vh;
+    width: 8vh;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 1.8em;
+    font-size: 1.4em;
     margin-bottom: 14px;
 }
 
 .service-box h2 {
-    font-size: 2.2em;
+    font-size: 1.5em;
     margin-bottom: 10px;
     font-weight: 300;
 }
@@ -105,7 +104,7 @@
 /***************************************/
 
 .quote {
-    height: 95vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -114,7 +113,7 @@
     background-color: #2C3333;
 }
 .quote-title {
-    height: 15vh;
+    height: 10vh;
     width: 100%;
     text-align: center;
     display: flex;
@@ -124,7 +123,7 @@
 }
 .quote-title h1 {
     font-size: 3.2em;
-    font-weight: 400;
+    font-weight: 300;
     color: white;
 }
 .quote-body {
@@ -181,6 +180,33 @@
 .quote-box h5 {
     color: #ff3636;
 }
+.btn-box{
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.btn-box div {
+    color: white;
+    font-size: 1.2rem;
+    margin: 10px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    padding: 4px 15px;
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+}
+.btn-box div:hover {
+    background-color: #ffffff;
+    color: #2C3333;
+    cursor: pointer;
+    transition: 0.6s;
+
+}
+
+
 
 /***************************************/
 
