@@ -274,14 +274,14 @@
     margin: 6px; 
 }
 #followers{
-    font-weight: bold;
+    font-weight: 400;
     color: #fa3131;
-
+    font-size: 0.9em;
 }
 
 /***************************************/
 .footer{
-    height: 20vh;
+    height: 15vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -307,4 +307,8 @@
     cursor: pointer;
     transition: 0.4s;
     color: orange
+}
+#footer-copy{
+    font-weight: 300;
+    font-size: 0.8rem;
 }

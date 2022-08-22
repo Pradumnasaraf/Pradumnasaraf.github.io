@@ -119,61 +119,6 @@
 }
 
 /***************************************/
-
-.stats {
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: white;
-}
-.stats-title {
-    height: 12vh;
-    width: 100%;
-    color: #2e2e2d;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.stats-title h1 {
-    font-size: 3.2em;
-    font-weight: 300;
-}
-.social {
-    height: 25vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.social-box {
-    display: flex;
-    width: 35%;
-    align-items: center;
-    flex-direction: column;
-}
-.social-box i {
-    font-size: 3.0em;
-}
-.social-box h2 {
-    font-size: 2.0em;
-    font-weight: 300;
-    margin: 4px; 
-}
-.social-box h4 {
-    font-size: 0.8em;
-    font-weight: 300;
-    margin: 6px; 
-}
-#followers{
-    font-weight: bold;
-    color: #fa3131;
-
-}
-/***************************************/
 .footer{
     height: 15vh;
     width: 100%;

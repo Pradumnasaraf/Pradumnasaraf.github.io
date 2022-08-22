@@ -1,52 +1,41 @@
 *{
     padding:0;
     margin:0;
-    font-family: sans-serif;
 }
-.Top{
-    background-color: rgb(31,34,53);
-    height: 70px;
-    color: white;
+body{
+    background-color: #2C3333;
+    font-family: 'Roboto', sans-serif;
+}
+.nav {
+    height: 10vh;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 0.5px solid goldenrod;
+    justify-content: space-around;
+    font-weight:300;
 }
-.name{
-    font-size:20px;
-    letter-spacing:2px;
-    font-weight:bold
-}
-.nav{
+.pages{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
-.nav > a{
-    color: beige;
+.pages a{
+    font-size: 1.2rem;
     text-decoration: none;
-    font-size: 18px;
-    padding:15px;
-    letter-spacing:4px
-}
-.nav > a:hover{
-    color: lightcoral;
-    text-decoration:underline;
-    text-underline-position:under;
-    text-decoration-style: dotted;
-    
-}
-@media only screen and (max-width: 480px) {
-    .nav > a {
-        font-size: 16px;
-        padding: 8px;
-    }
-}
-/******HEADING******/
+    margin: 10px;
+    color: white;
 
+}
+.nav p{
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+}
 .heading{
-    background-color: rgb(31,34,53);
-    height: 100vh;
+    height: 77vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -62,71 +51,45 @@
     margin:0px 5px;
     border-radius: 20px;
     color: white;
-    border: 2px solid goldenrod;
+    border: 1px solid white;
     font-size:30px;
     transition: all 0.7s ease;
 
 }
 .socialmedia>a>i:hover{
-    background-color:white;
-    border: 2px solid transparent;
-    color:rgb(31,37,58);
-    padding: 25px;
-    font-size:35px;
-
+    background-color: white;
+    color: #2e2e2d;
+    
 }
 .left >h2 {
     color: white;
-    font-size:35px;
-    margin:10px 0px;
+    font-weight: 300;
+    margin: 10px 0px 10px 10px;
 
 }
 .left >p {
     color: white;
-    font-size:20px;
-    margin:5px 0px;
+    margin: 10px 0px 10px 10px;
     width: 500px;
+    font-weight: 300;
 }
-.GitHub{
+.connect{
+    font-family: 'Roboto', sans-serif;
     width: 180px;
     height: 50px;
-    border: 2px solid goldenrod;
+    border: 1.5px solid goldenrod;
     background-color: transparent;
     color: white;
-    font-size:18px;
+    font-weight:400;
     border-radius: 20px;
-    font-weight: bold;
-    margin:7px 0px;
+    margin:10px 0px 10px 10px;
     transition: all 0.7s ease;
 }
-.GitHub:hover{
+.connect:hover{
     background-color:white;
     color:rgb(31,37,58);
     border: 2px solid transparent;
     cursor: pointer;
-}
-
-@media only screen and (max-width: 480px) {
-    .socialmedia {
-        display: flex;
-        justify-content: center;
-    }
-    .left {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .left > h2 {
-        font-size: 24px;
-    }
-    .left > p {
-        font-size: 16px;
-        width: 100%;
-        margin: 1em;
-        text-align: center;
-    }
 }
  /****RIGHT***/
 
@@ -144,16 +107,35 @@
     border: 3px solid goldenrod;
 }
 
-@media only screen and (max-width: 480px) {
-    .right {
-        border-radius: 200px;
-    }
-    .right > img {
-        height: 300px;
-        width: 300px;
-    }
+.footer{
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2C3333;
+    color: white;
 }
-
-/*****************************************************************************/
-
-
+.social-handle{
+    width: 10vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.social-handle > a > i{
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+}
+.social-handle i:hover{
+    cursor: pointer;
+    transition: 0.4s;
+    color: orange
+}
+#footer-copy{
+    font-weight: 300;
+    font-size: 0.8rem;
+}
