@@ -56,7 +56,7 @@ body{
     color: white;
     border: 1px solid white;
     font-size:30px;
-    transition: all 0.7s ease;
+    transition: all 0.5s ease;
 
 }
 .socialmedia>a>i:hover{
@@ -87,7 +87,7 @@ body{
     border-radius: 20px;
     margin:10px 0px 10px 10px;
     font-size: 1.2rem;
-    transition: all 0.7s ease;
+    transition: all 0.5s ease;
 }
 .connect:hover{
     background-color:white;
