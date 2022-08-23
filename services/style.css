@@ -29,6 +29,7 @@
     text-decoration: none;
     margin: 10px;
     color: white;
+    font-weight: 300;
 
 }
 .nav p{
@@ -36,6 +37,7 @@
     text-decoration: none;
     margin: 10px;
     color: white;
+    font-weight: 300;
 }
 .service {
     height: 78vh;
