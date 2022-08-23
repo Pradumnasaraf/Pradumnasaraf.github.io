@@ -41,7 +41,10 @@ body{
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+.left{
+    width:35%
 }
 .socialmedia{
     margin: 15px 0px;
@@ -95,17 +98,18 @@ body{
  /****RIGHT***/
 
 .right{
-    border:2px dotted white;
-    border-radius:300px;
     overflow: hidden;
     display: flex;
-    justify-content:center;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    transition: all 0.5s ease;
+    justify-content: center;
 }
-.right:hover{
-    border: 3px solid goldenrod;
+.right img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white
 }
 
 .footer{
