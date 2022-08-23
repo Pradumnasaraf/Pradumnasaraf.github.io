@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*** NAVBARK******/
+
+.nav {
+    background-color: #2C3333;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pages a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    font-weight: 300;
+
+}
+
+.nav p {
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    font-weight: 300;
+}
+
+/**********/
+
+.quote {
+    height: 180vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2C3333;
+}
+
+.quote-title {
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.quote-title h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    color: white;
+}
+
+.quote-body {
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.quote-box {
+    width: 16%;
+    padding: 10px;
+    height: 80%;
+    color: #2C3333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #eae7dc;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.quote-box i {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 10Vh;
+    width: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2.0em;
+    color: #2C3333;
+    border: 2px solid #2C3333;
+}
+
+.quote-box p {
+    font-weight: 300;
+    margin: 8px;
+    font-size: 1.1em;
+}
+
+.quote-box h1 {
+    font-weight: 400;
+    margin: 4px;
+    color: #ff3636;
+    font-size: 3.5em;
+}
+
+.quote-box h2 {
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    font-weight: 300;
+    margin: 4px;
+}
+
+.quote-box h5 {
+    color: #ff3636;
+}
+
+.btn-box {
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.get-btn {
+    color: white;
+    font-size: 1.2rem;
+    margin: 10px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    padding: 4px 15px;
+    border-radius: 25px;
+    border: 1px solid #ffffff;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.get-btn:hover {
+    background-color: #ffffff;
+    color: #2C3333;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+/************DO DONT***/
+
+.do-dont {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #2C3333
+}
+
+.do-title {
+    height: 15vh;
+    width: 100%;    
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.do-title h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    color: #2C3333
+}
+.do-body{
+    display: flex;
+    height: 40vh;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.child-box{
+    width: 30%;
+}
+.child-box h2{
+   margin-top: 5px; 
+   margin-bottom: 10px; 
+   border-bottom: 1px solid #2C3333;
+}
+.child-box p{
+   margin-top: 18px; 
+   margin-bottom: 18px; 
+    font-size: 1.1em;
+}
+
+
+
+
+/***************************************/
+.footer {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2C3333;
+    color: white;
+}
+
+.social-handle {
+    width: 10vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.social-handle i {
+    font-size: 1.3em;
+}
