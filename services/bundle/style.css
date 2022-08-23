@@ -165,7 +165,7 @@
 .do-dont {
     display: flex;
     width: 100%;
-    height: 90vh;
+    height: 60vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -180,34 +180,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-
 .do-title h1 {
     font-size: 2.5em;
     font-weight: 300;
     color: #2C3333
 }
-
-.do-body {
-    width: 60%;
-    height: 80%;
+.do-body{
     display: flex;
-    flex-direction: column;
+    height: 40vh;
+    width: 100%;
+    justify-content: space-evenly;
 }
-
-.do-body p {
-    margin-top: 4px;
-    margin-bottom: 4px;
+.child-box{
+    width: 30%;
+}
+.child-box h2{
+   margin-top: 5px; 
+   margin-bottom: 10px; 
+   border-bottom: 1px solid #2C3333;
+}
+.child-box p{
+   margin-top: 18px; 
+   margin-bottom: 18px; 
     font-size: 1.1em;
-
 }
 
-.do-body h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid black;
-}
+
 
 
 /***************************************/

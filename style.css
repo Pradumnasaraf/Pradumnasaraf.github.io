@@ -80,9 +80,10 @@ body{
     border: 1.5px solid goldenrod;
     background-color: transparent;
     color: white;
-    font-weight:400;
+    font-weight:300;
     border-radius: 20px;
     margin:10px 0px 10px 10px;
+    font-size: 1.2rem;
     transition: all 0.7s ease;
 }
 .connect:hover{
