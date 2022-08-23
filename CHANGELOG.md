@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v1.4.0...v2.0.0) (2022-08-23)
+
+
+* BREAKING CHANGE: v2.0.0 (#16) ([a46cfe2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a46cfe21e4acfc25731c9153c5e9bf43924921cc)), closes [#16](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/16)
+
+
+### BREAKING CHANGES
+
+* v2.0.0
+
+
+
 # [1.4.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v1.3.0...v1.4.0) (2022-08-10)
 
 
