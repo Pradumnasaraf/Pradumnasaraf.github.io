@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.0...v2.0.1) (2022-08-23)
+
+
+### Bug Fixes
+
+* typo in the bundle page ([8f44a5f](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8f44a5f6a986491602bfee9b9ac77e20748b2c15))
+
+
+
 # [2.0.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v1.4.0...v2.0.0) (2022-08-23)
 
 
