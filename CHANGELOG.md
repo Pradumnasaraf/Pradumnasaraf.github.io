@@ -1,3 +1,12 @@
+## [2.0.2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.1...v2.0.2) (2022-08-24)
+
+
+### Bug Fixes
+
+* typo in the homepage ([540ac25](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/540ac255b285a55422ba94e68c97156b5e361b79))
+
+
+
 ## [2.0.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.0...v2.0.1) (2022-08-23)
 
 
