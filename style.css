@@ -144,3 +144,9 @@ body{
     font-weight: 300;
     font-size: 0.8rem;
 }
+.hover{
+    transition: all 0.1 ease-in-out;
+}
+.hover:hover{
+   transform: scale(1.1);
+}
