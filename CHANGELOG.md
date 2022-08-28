@@ -1,3 +1,12 @@
+## [2.0.4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.3...v2.0.4) (2022-08-28)
+
+
+### Bug Fixes
+
+* Twitter followers to 5.0k ([1af08de](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/1af08ded0f2eaebf0191592767926f4a047332a4))
+
+
+
 ## [2.0.3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.2...v2.0.3) (2022-08-25)
 
 
@@ -34,15 +43,6 @@
 ### BREAKING CHANGES
 
 * v2.0.0
-
-
-
-# [1.4.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v1.3.0...v1.4.0) (2022-08-10)
-
-
-### Features
-
-* refactor file structure ([8dcfd35](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8dcfd352a4d7967dc41cb86493599b88c644a50a))
 
 
 
