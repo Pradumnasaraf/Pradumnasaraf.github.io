@@ -1,3 +1,12 @@
+## [2.0.6](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.5...v2.0.6) (2022-09-05)
+
+
+### Bug Fixes
+
+* updated the Twitter & dev.to followers count ([3610838](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/3610838e495c314d61966a0705b4ae2796b4fd6b))
+
+
+
 ## [2.0.5](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.4...v2.0.5) (2022-08-29)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * typo in the homepage ([540ac25](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/540ac255b285a55422ba94e68c97156b5e361b79))
-
-
-
-## [2.0.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.0...v2.0.1) (2022-08-23)
-
-
-### Bug Fixes
-
-* typo in the bundle page ([8f44a5f](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8f44a5f6a986491602bfee9b9ac77e20748b2c15))
 
 
 
