@@ -1,3 +1,12 @@
+## [2.0.7](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.6...v2.0.7) (2022-09-27)
+
+
+### Bug Fixes
+
+* Twitter follower count on service page ([386aca7](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/386aca71cf256a1a7670fcd7c865a0d396a87473))
+
+
+
 ## [2.0.6](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.5...v2.0.6) (2022-09-05)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * the wrong nav option name - BLOG ([#19](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/19)) ([b590590](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/b590590c4fe1ebfebe5cd642bd31ecef526dbb1a))
-
-
-
-## [2.0.2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.1...v2.0.2) (2022-08-24)
-
-
-### Bug Fixes
-
-* typo in the homepage ([540ac25](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/540ac255b285a55422ba94e68c97156b5e361b79))
 
 
 
