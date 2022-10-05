@@ -105,8 +105,8 @@ body{
     justify-content: center;
 }
 .right img {
-    width: 50%;
-    height: 50%;
+    width: 55%;
+    height: 55%;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid white
