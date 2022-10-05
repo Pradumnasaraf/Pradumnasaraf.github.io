@@ -1,3 +1,12 @@
+## [2.0.8](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.7...v2.0.8) (2022-10-05)
+
+
+### Bug Fixes
+
+* picture and fav icon ([2f33b71](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/2f33b71d1d681017018553caa46230c03f22308e))
+
+
+
 ## [2.0.7](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.6...v2.0.7) (2022-09-27)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * Twitter followers to 5.0k ([1af08de](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/1af08ded0f2eaebf0191592767926f4a047332a4))
-
-
-
-## [2.0.3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.2...v2.0.3) (2022-08-25)
-
-
-### Bug Fixes
-
-* the wrong nav option name - BLOG ([#19](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/19)) ([b590590](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/b590590c4fe1ebfebe5cd642bd31ecef526dbb1a))
 
 
 
