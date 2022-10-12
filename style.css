@@ -1,4 +1,4 @@
-*{
+*{ box-sizing: border-box;
     padding:0;
     margin:0;
 }
@@ -43,6 +43,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+
 .left{
     width:35%
 }
@@ -144,3 +145,53 @@ body{
     font-weight: 300;
     font-size: 0.8rem;
 }
+
+/* *************responsive******* */
+
+@media (max-width:800px) {
+    .heading{flex-direction: column;
+    flex-wrap:nowrap;
+height: fit-content;
+}
+.left{
+    width:100%;
+    padding:5em;
+    text-align: center;
+
+    }
+    .left h2{
+        padding:1em 0
+    }
+
+.left p{
+    width:auto;}
+.pradumna{
+    display: block;
+    font-size: 1.2em;
+}
+    .nav p{font-size: 1.5em;
+        font-weight: bolder;
+    }
+      .socialmedia{
+        display: flex;
+        gap: 1em;
+        justify-content: space-evenly;
+        margin-top: 0;
+        margin-bottom: 3em;
+      } 
+      .nav{
+        flex-direction: column;
+        margin: 1.5em 0;
+      } 
+      .page-item{
+       background: #2e2e2d;
+        padding: 0.2em;
+        border:1px solid white;
+       
+      }
+      .social-handle{
+        gap:2em
+      }
+     
+     
+    }
