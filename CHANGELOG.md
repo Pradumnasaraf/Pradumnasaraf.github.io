@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.8...v2.1.0) (2022-10-15)
+
+
+### Features
+
+* make the Homepage responsive ([#21](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/21)) ([aa31b93](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/aa31b932a1c56a66263b783ffae3ed5cdbcc2aea))
+
+
+
 ## [2.0.8](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.7...v2.0.8) (2022-10-05)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * updated the Twitter & dev.to followers count ([ab376f3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/ab376f391100492704b44ee50a6f4c4362dff238))
-
-
-
-## [2.0.4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.3...v2.0.4) (2022-08-28)
-
-
-### Bug Fixes
-
-* Twitter followers to 5.0k ([1af08de](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/1af08ded0f2eaebf0191592767926f4a047332a4))
 
 
 
