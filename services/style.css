@@ -206,7 +206,7 @@
     background-color: #ffffff;
     color: #2C3333;
     cursor: pointer;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 .enq-btn {
     color: #2C3333;
@@ -224,7 +224,7 @@
     background-color:#2C3333;;
     color: white;
     cursor: pointer;
-    transition: 0.8s;
+    transition: 0.5s;
 
 }
 .pkg-btn{
@@ -240,7 +240,19 @@
     background-color: #2C3333;
     color: white;
     cursor: pointer;
-    transition: 0.8s;
+    transition: 0.5s;
+}
+.added-value{
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}.added-value h3{
+    font-size: 1.0em;
+    font-weight: 300;
+    color: white;
 }
 
 
@@ -326,7 +338,7 @@
 }
 .social-handle i:hover{
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.5s;
     color: orange
 }
 #footer-copy{
@@ -431,6 +443,7 @@
         display: flex;
         flex-direction: column;
     }
+
 
 }
 
