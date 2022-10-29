@@ -1,3 +1,12 @@
+# [2.2.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.1.0...v2.2.0) (2022-10-29)
+
+
+### Features
+
+* make the service & package page reponsive ([#24](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/24)) ([51c2348](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/51c234825d5c63e3f75f67b80b1c01636fe34406))
+
+
+
 # [2.1.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.8...v2.1.0) (2022-10-15)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * updated the Twitter & dev.to followers count ([3610838](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/3610838e495c314d61966a0705b4ae2796b4fd6b))
-
-
-
-## [2.0.5](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.4...v2.0.5) (2022-08-29)
-
-
-### Bug Fixes
-
-* updated the Twitter & dev.to followers count ([ab376f3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/ab376f391100492704b44ee50a6f4c4362dff238))
 
 
 
