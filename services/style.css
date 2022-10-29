@@ -333,3 +333,104 @@
     font-weight: 300;
     font-size: 0.8rem;
 }
+
+@media (max-width:800px) {
+
+    *{ box-sizing: border-box;
+        padding:0;
+        margin:0;
+    }
+
+    .service {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .service-body{
+        flex-direction: column;
+        height: auto;
+    }
+    .service-box {
+        height: 100%;
+        width: 70%;
+        margin: 10px;
+    }
+    .quote {
+        height: 100%;
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .quote-body {
+        height: 100%;
+        width: 100%;
+        flex-direction: column; 
+    }
+    .quote-box {
+        width: 70%;
+        height: 100%;
+        margin: 10px;
+    }
+    .stats-title{
+        margin-top: 10px;
+
+    }
+    .social{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+    }
+    .social-box{
+        height: 100%;
+        text-align: center;
+        margin: 10px;
+
+    }
+    .stats
+    {
+        height: 100%;
+        width: 100%;
+    }
+    .footer{
+        height: 100%;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .social-handle{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .nav{
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+        padding-bottom: 10px; ;
+
+      } 
+      .nav p{font-size: 1.5em;
+        font-weight: bolder;
+    } 
+      .page-item{
+       background: #2e2e2d;
+        padding: 0.2em;
+        border:1px solid white;
+
+      }
+      .btn-box{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
