@@ -1,3 +1,12 @@
+## [2.2.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.0...v2.2.1) (2022-10-29)
+
+
+### Bug Fixes
+
+* pricing, resp ([06437eb](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/06437eb1e881a60c164f046bc90b9eeb1a17342c))
+
+
+
 # [2.2.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.1.0...v2.2.0) (2022-10-29)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * Twitter follower count on service page ([386aca7](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/386aca71cf256a1a7670fcd7c865a0d396a87473))
-
-
-
-## [2.0.6](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.5...v2.0.6) (2022-09-05)
-
-
-### Bug Fixes
-
-* updated the Twitter & dev.to followers count ([3610838](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/3610838e495c314d61966a0705b4ae2796b4fd6b))
 
 
 
