@@ -1,3 +1,12 @@
+## [2.2.2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.1...v2.2.2) (2022-10-31)
+
+
+### Bug Fixes
+
+* worng padding property ([8e4b7db](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8e4b7db3a5dd2d1b27d3a37d2e0b42f1f58f8253))
+
+
+
 ## [2.2.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.0...v2.2.1) (2022-10-29)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * picture and fav icon ([2f33b71](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/2f33b71d1d681017018553caa46230c03f22308e))
-
-
-
-## [2.0.7](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.6...v2.0.7) (2022-09-27)
-
-
-### Bug Fixes
-
-* Twitter follower count on service page ([386aca7](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/386aca71cf256a1a7670fcd7c865a0d396a87473))
 
 
 
