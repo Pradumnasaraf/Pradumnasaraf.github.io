@@ -257,7 +257,7 @@
     .nav{
         height: 100%;
         width: 100%;
-        padding: 10px;
+        padding-top: 10px;
         flex-direction: column;
         padding-bottom: 10px; ;
 
