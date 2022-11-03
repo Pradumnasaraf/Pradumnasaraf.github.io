@@ -9,7 +9,7 @@ Contains code for Pradumna's personal webiste.
 - CSS
 
 ### Live
-Link - [pradumnasaraf.co](https://pradumnasaraf.co/)
+Link - [pradumnasaraf.dev](https://pradumnasaraf.dev/)
 
 ### Preview
 ![Screenshot from 2022-08-23 22-49-21](https://user-images.githubusercontent.com/51878265/186223744-d956bb86-d03f-45ff-a595-23eea7416f0b.png)
