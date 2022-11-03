@@ -1,3 +1,12 @@
+## [2.2.3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.2...v2.2.3) (2022-11-03)
+
+
+### Bug Fixes
+
+* blog link ([#25](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/25)) ([a575251](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a57525197e528c33822f1f4a0ece40fdabca1ab7))
+
+
+
 ## [2.2.2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.1...v2.2.2) (2022-10-31)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * make the Homepage responsive ([#21](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/21)) ([aa31b93](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/aa31b932a1c56a66263b783ffae3ed5cdbcc2aea))
-
-
-
-## [2.0.8](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.7...v2.0.8) (2022-10-05)
-
-
-### Bug Fixes
-
-* picture and fav icon ([2f33b71](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/2f33b71d1d681017018553caa46230c03f22308e))
 
 
 
