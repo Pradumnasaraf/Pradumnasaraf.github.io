@@ -1,3 +1,12 @@
+## [2.2.4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.3...v2.2.4) (2022-11-11)
+
+
+### Bug Fixes
+
+* profile picture + followers count ([b3d123a](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/b3d123a8ec257ecb667057f357d807337a10432a))
+
+
+
 ## [2.2.3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.2...v2.2.3) (2022-11-03)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * make the service & package page reponsive ([#24](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/24)) ([51c2348](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/51c234825d5c63e3f75f67b80b1c01636fe34406))
-
-
-
-# [2.1.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.0.8...v2.1.0) (2022-10-15)
-
-
-### Features
-
-* make the Homepage responsive ([#21](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/21)) ([aa31b93](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/aa31b932a1c56a66263b783ffae3ed5cdbcc2aea))
 
 
 
