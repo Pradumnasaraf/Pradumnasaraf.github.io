@@ -1,3 +1,12 @@
+## [2.2.5](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.4...v2.2.5) (2022-11-23)
+
+
+### Bug Fixes
+
+* README preview and followers count ([42bad72](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/42bad7215e0d3c1567fd81820d034382f529b6ef))
+
+
+
 ## [2.2.4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.3...v2.2.4) (2022-11-11)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * pricing, resp ([06437eb](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/06437eb1e881a60c164f046bc90b9eeb1a17342c))
-
-
-
-# [2.2.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.1.0...v2.2.0) (2022-10-29)
-
-
-### Features
-
-* make the service & package page reponsive ([#24](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/24)) ([51c2348](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/51c234825d5c63e3f75f67b80b1c01636fe34406))
 
 
 
