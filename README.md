@@ -1,16 +1,16 @@
-<h2 align="center"> pradumnasaraf.github.io</h2>
-
-Contains code for Pradumna's personal webiste.
+<p align="center"><b>Contains code for Pradumna's personal webiste.</b> </p>
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Pradumnasaraf/Pradumnasaraf.github.io)
 
-### Tech Stacks
+## Tech Stacks
+
 - HTML
 - CSS
 
-### Live
+## Live
+
 Link - [pradumnasaraf.dev](https://pradumnasaraf.dev/)
 
-### Preview
+## Preview
 
-![Screenshot from 2022-11-03 22-31-52](https://user-images.githubusercontent.com/51878265/199786876-740b8675-757f-4cbd-91d5-062583f56091.png)
+![Website prevview GIF](https://user-images.githubusercontent.com/51878265/203626527-d604fefe-4ccb-4377-bb89-5bf72bb24053.gif)
