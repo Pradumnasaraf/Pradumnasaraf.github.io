@@ -1,3 +1,12 @@
+## [2.2.6](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.5...v2.2.6) (2023-01-13)
+
+
+### Bug Fixes
+
+* year and followers count ([10e1ce6](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/10e1ce63951f785da6eca2f28519598293ce9f80))
+
+
+
 ## [2.2.5](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.4...v2.2.5) (2022-11-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * worng padding property ([8e4b7db](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8e4b7db3a5dd2d1b27d3a37d2e0b42f1f58f8253))
-
-
-
-## [2.2.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.0...v2.2.1) (2022-10-29)
-
-
-### Bug Fixes
-
-* pricing, resp ([06437eb](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/06437eb1e881a60c164f046bc90b9eeb1a17342c))
 
 
 
