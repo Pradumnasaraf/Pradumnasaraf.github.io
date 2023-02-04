@@ -1,3 +1,12 @@
+## [2.2.8](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.7...v2.2.8) (2023-02-04)
+
+
+### Bug Fixes
+
+* wrong id name ([a4ea2c3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a4ea2c373a4b6bfe02bcaf90429b0ffe54fac58e))
+
+
+
 ## [2.2.7](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.6...v2.2.7) (2023-01-27)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * profile picture + followers count ([b3d123a](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/b3d123a8ec257ecb667057f357d807337a10432a))
-
-
-
-## [2.2.3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.2...v2.2.3) (2022-11-03)
-
-
-### Bug Fixes
-
-* blog link ([#25](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/25)) ([a575251](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a57525197e528c33822f1f4a0ece40fdabca1ab7))
 
 
 
