@@ -1,3 +1,12 @@
+## [2.2.9](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.8...v2.2.9) (2023-03-01)
+
+
+### Bug Fixes
+
+* price ([e1cdadf](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/e1cdadfe85f321550605fd5d51435413f35fee1c))
+
+
+
 ## [2.2.8](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.7...v2.2.8) (2023-02-04)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * README preview and followers count ([42bad72](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/42bad7215e0d3c1567fd81820d034382f529b6ef))
-
-
-
-## [2.2.4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.3...v2.2.4) (2022-11-11)
-
-
-### Bug Fixes
-
-* profile picture + followers count ([b3d123a](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/b3d123a8ec257ecb667057f357d807337a10432a))
 
 
 
