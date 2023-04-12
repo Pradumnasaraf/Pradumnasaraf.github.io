@@ -146,6 +146,16 @@ body{
     font-size: 0.8rem;
 }
 
+.ad-line{
+    background-color: goldenrod;
+    padding: 8px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    color: #2C3333;
+    font-weight: 500;
+}
+
 /* *************responsive******* */
 
 @media (max-width:800px) {
@@ -195,3 +205,4 @@ height: fit-content;
      
      
     }
+
