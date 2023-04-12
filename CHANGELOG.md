@@ -1,3 +1,12 @@
+## [2.2.10](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.9...v2.2.10) (2023-04-12)
+
+
+### Bug Fixes
+
+* view heights and stats ([2a4b960](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/2a4b9606a698e3f7f3fc909771fec2c0dd16d06d))
+
+
+
 ## [2.2.9](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.8...v2.2.9) (2023-03-01)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * year and followers count ([10e1ce6](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/10e1ce63951f785da6eca2f28519598293ce9f80))
-
-
-
-## [2.2.5](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.4...v2.2.5) (2022-11-23)
-
-
-### Bug Fixes
-
-* README preview and followers count ([42bad72](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/42bad7215e0d3c1567fd81820d034382f529b6ef))
 
 
 
