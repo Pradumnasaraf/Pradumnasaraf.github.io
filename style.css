@@ -146,14 +146,16 @@ body{
     font-size: 0.8rem;
 }
 
-.ad-line{
-    background-color: goldenrod;
-    padding: 8px;
+#ad-line{
+    color: goldenrod;
+    background-color: black;
+    padding: 10px;
     text-align: center;
-    font-size: 15px;
-    font-weight: 300;
-    color: #2C3333;
-    font-weight: 500;
+}
+
+#ad-line a{
+    color: white;
+    font-style: bold;
 }
 
 /* *************responsive******* */
