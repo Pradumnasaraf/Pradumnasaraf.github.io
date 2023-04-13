@@ -28,18 +28,6 @@ body{
     color: white;
 
 }
-.pages a::after{
-    content: "";
-    position: absolute;
-    background-color: orange;
-    height: 3px;
-    width: 0px;
-    bottom: -10px;
-    transition: 0.3s;
-}
-.pages a:hover:after{
-    width: 100%;
-}
 .pages a:hover{
     color: orange;
 }
