@@ -1,3 +1,12 @@
+# [2.3.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.10...v2.3.0) (2023-04-13)
+
+
+### Features
+
+* automatically update the year at the footer ([#26](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/26)) ([f253d21](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/f253d21695f799813590aea2c4a53a16fb43d6c1))
+
+
+
 ## [2.2.10](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.9...v2.2.10) (2023-04-12)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * pricing and stats ([ef15b23](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/ef15b23688cee4ff786da12b543bf2eb5b797e4b))
-
-
-
-## [2.2.6](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.5...v2.2.6) (2023-01-13)
-
-
-### Bug Fixes
-
-* year and followers count ([10e1ce6](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/10e1ce63951f785da6eca2f28519598293ce9f80))
 
 
 
