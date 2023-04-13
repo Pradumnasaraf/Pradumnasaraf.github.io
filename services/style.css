@@ -32,6 +32,9 @@
     font-weight: 300;
 
 }
+.pages a:hover{
+    color: orange;
+}
 .nav p{
     font-size: 1.5rem;
     text-decoration: none;
