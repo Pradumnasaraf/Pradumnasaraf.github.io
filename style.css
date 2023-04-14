@@ -29,8 +29,8 @@ body{
 
 }
 .pages a:hover{
-    color: orange;
-    
+   color: orange;
+   transition: 0.4s;
 }
 .nav p{
     font-size: 1.5rem;
