@@ -32,6 +32,10 @@
     font-weight: 300;
 
 }
+.pages a:hover{
+    color: orange;
+    transition: 0.4s;
+}
 .nav p{
     font-size: 1.5rem;
     text-decoration: none;

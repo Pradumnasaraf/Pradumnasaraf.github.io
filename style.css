@@ -28,6 +28,10 @@ body{
     color: white;
 
 }
+.pages a:hover{
+   color: orange;
+   transition: 0.4s;
+}
 .nav p{
     font-size: 1.5rem;
     text-decoration: none;
