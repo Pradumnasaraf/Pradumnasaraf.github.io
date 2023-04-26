@@ -29,8 +29,9 @@ body{
 
 }
 .pages a:hover{
-   color: orange;
-   transition: 0.4s;
+    cursor: pointer;
+    transition: 0.4s;
+    opacity: 0.5;
 }
 .nav p{
     font-size: 1.5rem;
@@ -143,7 +144,7 @@ body{
 .social-handle i:hover{
     cursor: pointer;
     transition: 0.4s;
-    color: orange
+    opacity: 0.5;
 }
 #footer-copy{
     font-weight: 300;

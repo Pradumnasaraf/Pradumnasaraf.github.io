@@ -36,8 +36,9 @@
 
 }
 .pages a:hover{
-    color: orange;
+    cursor: pointer;
     transition: 0.4s;
+    opacity: 0.5;
 }
 
 .nav p {
