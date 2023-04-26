@@ -1,3 +1,12 @@
+## [2.4.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.0...v2.4.1) (2023-04-26)
+
+
+### Bug Fixes
+
+* hover effect ([d1e05ad](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/d1e05ad46de4437ffd546202f354b53b33ad8f45))
+
+
+
 # [2.4.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.3.0...v2.4.0) (2023-04-15)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * price ([e1cdadf](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/e1cdadfe85f321550605fd5d51435413f35fee1c))
-
-
-
-## [2.2.8](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.7...v2.2.8) (2023-02-04)
-
-
-### Bug Fixes
-
-* wrong id name ([a4ea2c3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a4ea2c373a4b6bfe02bcaf90429b0ffe54fac58e))
 
 
 
