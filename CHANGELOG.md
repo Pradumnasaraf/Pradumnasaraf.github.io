@@ -1,3 +1,12 @@
+## [2.4.2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.1...v2.4.2) (2023-05-02)
+
+
+### Bug Fixes
+
+* the quote box ([f1de413](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/f1de41301c6bae2f0100f489e6376532ed6740c7))
+
+
+
 ## [2.4.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.0...v2.4.1) (2023-04-26)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * view heights and stats ([2a4b960](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/2a4b9606a698e3f7f3fc909771fec2c0dd16d06d))
-
-
-
-## [2.2.9](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.8...v2.2.9) (2023-03-01)
-
-
-### Bug Fixes
-
-* price ([e1cdadf](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/e1cdadfe85f321550605fd5d51435413f35fee1c))
 
 
 
