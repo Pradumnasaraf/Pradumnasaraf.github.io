@@ -1,3 +1,12 @@
+## [2.4.3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.2...v2.4.3) (2023-05-28)
+
+
+### Bug Fixes
+
+* the footer and metrics ([8f03b7b](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8f03b7bf540537a2e68bfedc206892e3202d3096))
+
+
+
 ## [2.4.2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.1...v2.4.2) (2023-05-02)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * automatically update the year at the footer ([#26](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/26)) ([f253d21](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/f253d21695f799813590aea2c4a53a16fb43d6c1))
-
-
-
-## [2.2.10](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.9...v2.2.10) (2023-04-12)
-
-
-### Bug Fixes
-
-* view heights and stats ([2a4b960](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/2a4b9606a698e3f7f3fc909771fec2c0dd16d06d))
 
 
 
