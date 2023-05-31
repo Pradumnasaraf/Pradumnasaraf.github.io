@@ -1,3 +1,12 @@
+## [2.4.4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.3...v2.4.4) (2023-05-31)
+
+
+### Reverts
+
+* Revert "chore: update Twitter link" ([a8327d3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a8327d3a39a4cba2cff0ff17ded3246fa7b54828))
+
+
+
 ## [2.4.3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.2...v2.4.3) (2023-05-28)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * Add hover effects in the nav bar ([#28](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/28)) ([842793a](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/842793afcf2f5a60b989e793670745f2e80f87bd))
-
-
-
-# [2.3.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.2.10...v2.3.0) (2023-04-13)
-
-
-### Features
-
-* automatically update the year at the footer ([#26](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/26)) ([f253d21](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/f253d21695f799813590aea2c4a53a16fb43d6c1))
 
 
 
