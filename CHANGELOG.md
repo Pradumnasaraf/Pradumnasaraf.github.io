@@ -1,3 +1,12 @@
+# [2.5.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.4...v2.5.0) (2023-06-18)
+
+
+### Features
+
+* improve accessibilty ([f8d89ff](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/f8d89ff46ecdf6d4d7a8283629a1c9fc913c95ec))
+
+
+
 ## [2.4.4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.3...v2.4.4) (2023-05-31)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * hover effect ([d1e05ad](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/d1e05ad46de4437ffd546202f354b53b33ad8f45))
-
-
-
-# [2.4.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.3.0...v2.4.0) (2023-04-15)
-
-
-### Features
-
-* Add hover effects in the nav bar ([#28](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/28)) ([842793a](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/842793afcf2f5a60b989e793670745f2e80f87bd))
 
 
 
