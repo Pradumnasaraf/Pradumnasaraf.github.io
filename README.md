@@ -1,16 +1,19 @@
-<p align="center"><b>Contains code for Pradumna's personal webiste.</b> </p>
+## Pradumna Saraf Portfolio
+
+This repository contains the source code for my portfolio website. It is built using HTML and CSS. It is hosted on GitHub Pages.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Pradumnasaraf/Pradumnasaraf.github.io)
 
-## Tech Stacks
+![Website Demo](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/assets/51878265/0b330ade-1645-4005-b4fd-2f1aeb6a17bf)
 
-- HTML
-- CSS
+## 🌐 Website
 
-## Live
+A custom domain name is used for the website. It is hosted on GitHub Pages. The website is accessible at [pradumnasaraf.dev](https://pradumnasaraf.dev/)
 
-Link - [pradumnasaraf.dev](https://pradumnasaraf.dev/)
+## 🛡️ License
 
-## Preview
+**OpenSource API** is licensed under the GPL-3.0 License - see the [LICENSE](/LICENSE) file for details.
 
-![Website prevview GIF](https://user-images.githubusercontent.com/51878265/203626527-d604fefe-4ccb-4377-bb89-5bf72bb24053.gif)
+## 🤝 Support
+
+Don't forget to leave a star ⭐️
