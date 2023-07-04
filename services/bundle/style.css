@@ -35,7 +35,8 @@
     font-weight: 300;
 
 }
-.pages a:hover{
+
+.pages a:hover {
     cursor: pointer;
     transition: 0.4s;
     opacity: 0.5;
@@ -85,6 +86,7 @@
     justify-content: space-evenly;
     flex-direction: row;
 }
+
 .quote-box {
     width: 16%;
     padding: 10px;
@@ -98,6 +100,7 @@
     border-radius: 15px;
     background-color: #ffffff;
 }
+
 .quote-box i {
     margin-top: 15px;
     margin-bottom: 10px;
@@ -111,23 +114,29 @@
     color: #2C3333;
     border: 2px solid #2C3333;
 }
-.quote-box p, h3 {
+
+.quote-box p,
+h3 {
     margin: 6px;
 }
+
 .quote-box-title {
     font-weight: 300;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
+
 .quote-box-at {
     font-weight: 400;
 }
+
 .quote-box-price {
     font-weight: 300;
     margin: 4px;
     color: #ff3636;
     font-size: 3.5em;
 }
+
 .quote-box-info {
     font-weight: 300;
     font-size: 1.1em;
@@ -177,36 +186,42 @@
 
 .do-title {
     height: 15vh;
-    width: 100%;    
+    width: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .do-title h2 {
     font-size: 2.5em;
     font-weight: 300;
     color: #2C3333
 }
-.do-body{
+
+.do-body {
     display: flex;
     height: 40vh;
     width: 100%;
     justify-content: space-evenly;
 }
-.child-box{
+
+.child-box {
     width: 30%;
 }
-.child-box h3{
-   margin-top: 5px; 
-   margin-bottom: 10px; 
-   border-bottom: 1px solid #2C3333;
+
+.child-box h3 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #2C3333;
 }
-.child-box p{
-   margin-top: 18px; 
-   margin-bottom: 18px; 
+
+.child-box p {
+    margin-top: 18px;
+    margin-bottom: 18px;
     font-size: 1.1em;
 }
+
 .added-value {
     height: 5vh;
     width: 100%;
@@ -221,7 +236,6 @@
     font-weight: 300;
     color: white;
 }
-
 
 
 /***************************************/
@@ -274,68 +288,82 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
+
     .quote-body {
         height: 100%;
         width: 100%;
-        flex-direction: column; 
+        flex-direction: column;
     }
+
     .quote-box {
         width: 70%;
         height: 100%;
         margin: 10px;
     }
-    .nav{
+
+    .nav {
         height: 100%;
         width: 100%;
         padding-top: 10px;
         flex-direction: column;
-        padding-bottom: 10px; ;
+        padding-bottom: 10px;
+        ;
 
-      } 
-      .nav p{font-size: 1.5em;
+    }
+
+    .nav p {
+        font-size: 1.5em;
         font-weight: bolder;
-    } 
-      .page-item{
-       background: #2e2e2d;
-        padding: 0.2em;
-        border:1px solid white;
+    }
 
-      }
-      .btn-box{
+    .page-item {
+        background: #2e2e2d;
+        padding: 0.2em;
+        border: 1px solid white;
+
+    }
+
+    .btn-box {
         height: auto;
         width: 100%;
         display: flex;
         flex-direction: column;
     }
-    .quote-title{
+
+    .quote-title {
         height: 100%;
         width: 80%;
         font-size: 0.7em;
-        margin-top: 10px; ;
-        margin-bottom: 10px; ;
+        margin-top: 10px;
+        ;
+        margin-bottom: 10px;
+        ;
 
     }
-    .do-dont
-    {
+
+    .do-dont {
         height: 100%;
         width: 100%;
     }
-    .do-body{
+
+    .do-body {
         height: 100%;
         width: 100%;
     }
+
     .do-title h1 {
         font-size: 2.0em;
         width: 90%;
         font-weight: 300;
     }
 
-    .footer{
+    .footer {
         height: 100%;
         width: 100%;
         padding-bottom: 10px;
     }
-    .social-handle{
+
+    .social-handle {
         width: 60%;
         display: flex;
         align-items: center;

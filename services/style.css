@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
 }
+
 .main {
     background-color: white;
     font-family: 'Roboto', sans-serif;
@@ -10,7 +11,7 @@
 /*** NAVBARK******/
 
 .nav {
-    background-color:#2C3333;
+    background-color: #2C3333;
     height: 8vh;
     width: 100%;
     display: flex;
@@ -18,13 +19,15 @@
     align-items: center;
     justify-content: space-around;
 }
-.pages{
+
+.pages {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
-.pages a{
+
+.pages a {
     font-size: 1.2rem;
     text-decoration: none;
     margin: 10px;
@@ -32,18 +35,21 @@
     font-weight: 300;
 
 }
-.pages a:hover{
+
+.pages a:hover {
     cursor: pointer;
     transition: 0.4s;
     opacity: 0.5;
 }
-.nav p{
+
+.nav p {
     font-size: 1.5rem;
     text-decoration: none;
     margin: 10px;
     color: white;
     font-weight: 300;
 }
+
 .service {
     height: 78vh;
     width: 100%;
@@ -52,23 +58,26 @@
     justify-content: center;
     flex-direction: column;
 }
+
 .service-title {
     height: 12vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color:#2C3333;
+    color: #2C3333;
     text-align: center;
 }
+
 .service-title h2 {
     font-size: 3.0em;
     font-weight: 300;
 }
+
 .service-body {
     display: flex;
     height: 32vh;
-    width: 100%;    
+    width: 100%;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
@@ -80,7 +89,7 @@
     color: #2C3333;
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
     text-align: center;
 }
 
@@ -100,7 +109,8 @@
 .service-box p {
     font-weight: 300;
 }
-.service-box-service{
+
+.service-box-service {
     font-size: 1.6em;
     margin-bottom: 10px;
     font-weight: 300;
@@ -118,6 +128,7 @@
     flex-direction: column;
     background-color: #2C3333;
 }
+
 .quote-title {
     height: 10vh;
     width: 100%;
@@ -127,6 +138,7 @@
     justify-content: center;
 
 }
+
 .quote-title h2 {
     font-size: 3.2em;
     font-weight: 300;
@@ -141,6 +153,7 @@
     justify-content: space-around;
     flex-direction: row;
 }
+
 .quote-box {
     width: 16%;
     padding: 10px;
@@ -154,6 +167,7 @@
     border-radius: 15px;
     background-color: #ffffff;
 }
+
 .quote-box i {
     margin-top: 15px;
     margin-bottom: 10px;
@@ -167,28 +181,35 @@
     color: #2C3333;
     border: 2px solid #2C3333;
 }
-.quote-box p, h3 {
+
+.quote-box p,
+h3 {
     margin: 6px;
 }
+
 .quote-box-title {
     font-weight: 300;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
+
 .quote-box-at {
     font-weight: 400;
 }
+
 .quote-box-price {
     font-weight: 300;
     margin: 4px;
     color: #ff3636;
     font-size: 3.5em;
 }
+
 .quote-box-info {
     font-weight: 300;
     font-size: 1.1em;
 }
-.btn-box{
+
+.btn-box {
     display: flex;
     width: 100%;
     height: 8vh;
@@ -196,6 +217,7 @@
     justify-content: center;
     flex-direction: row;
 }
+
 .get-btn {
     color: white;
     font-size: 1.2rem;
@@ -205,15 +227,17 @@
     padding: 4px 15px;
     border-radius: 25px;
     border: 1px solid #ffffff;
-    font-weight:300;
+    font-weight: 300;
     text-decoration: none;
 }
+
 .get-btn:hover {
     background-color: #ffffff;
     color: #2C3333;
     cursor: pointer;
     transition: 0.5s;
 }
+
 .enq-btn {
     color: #2C3333;
     font-size: 1.2rem;
@@ -223,39 +247,46 @@
     padding: 4px 15px;
     border-radius: 25px;
     border: 1px solid #ffffff;
-    font-weight:300;
+    font-weight: 300;
     text-decoration: none;
 }
+
 .enq-btn:hover {
-    background-color:#2C3333;;
+    background-color: #2C3333;
+    ;
     color: white;
     cursor: pointer;
     transition: 0.5s;
 
 }
-.pkg-btn{
+
+.pkg-btn {
     padding: 0px 8px;
     margin-top: 5px;
     border-radius: 25px;
-    border: 2px solid  #2C3333 ;
+    border: 2px solid #2C3333;
     text-decoration: none;
-    font-weight:300;
+    font-weight: 300;
     color: #2C3333;
 }
-.pkg-btn:hover{
+
+.pkg-btn:hover {
     background-color: #2C3333;
     color: white;
     cursor: pointer;
     transition: 0.5s;
 }
-.added-value{
+
+.added-value {
     height: 5vh;
     width: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-}.added-value p{
+}
+
+.added-value p {
     font-size: 1.0em;
     font-weight: 300;
     color: white;
@@ -273,6 +304,7 @@
     flex-direction: column;
     background-color: white;
 }
+
 .stats-title h2 {
     height: 12vh;
     width: 100%;
@@ -284,6 +316,7 @@
     font-size: 3.2em;
     font-weight: 300;
 }
+
 .social {
     height: 25vh;
     width: 100%;
@@ -291,39 +324,45 @@
     align-items: center;
     justify-content: space-around;
 }
+
 .social-box {
     display: flex;
     width: 35%;
     align-items: center;
     flex-direction: column;
 }
+
 .social-box i {
     font-size: 3.0em;
     margin-bottom: 6px;
 }
+
 .social-box p {
-    margin : 4px;
+    margin: 4px;
 }
+
 .social-box-social {
     font-size: 1.7em;
     font-weight: 300;
-    margin: 6px; 
-    
+    margin: 6px;
+
 }
+
 .social-box-followers {
     font-weight: 300;
     color: #f90000;
     font-size: 1.5em;
 }
+
 .social-box-growth {
     font-size: 0.9em;
     font-weight: 300;
-    margin: 6px; 
+    margin: 6px;
 }
 
 
 /***************************************/
-.footer{
+.footer {
     height: 15vh;
     width: 100%;
     display: flex;
@@ -333,7 +372,8 @@
     background-color: #2C3333;
     color: white;
 }
-.social-handle{
+
+.social-handle {
     width: 10vw;
     height: 8vh;
     display: flex;
@@ -341,26 +381,30 @@
     justify-content: space-around;
     flex-direction: row;
 }
-.social-handle > a > i{
+
+.social-handle>a>i {
     font-size: 1.3em;
     color: white;
     text-decoration: none;
 }
-.social-handle i:hover{
+
+.social-handle i:hover {
     cursor: pointer;
     transition: 0.4s;
     opacity: 0.5;
 }
-#footer-copy{
+
+#footer-copy {
     font-weight: 300;
     font-size: 0.8rem;
 }
 
 @media (max-width:800px) {
 
-    *{ box-sizing: border-box;
-        padding:0;
-        margin:0;
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
     }
 
     .service {
@@ -372,15 +416,17 @@
         flex-direction: column;
     }
 
-    .service-body{
+    .service-body {
         flex-direction: column;
         height: auto;
     }
+
     .service-box {
         height: 100%;
         width: 70%;
         margin: 10px;
     }
+
     .quote {
         height: 100%;
         width: 100%;
@@ -388,66 +434,79 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
+
     .quote-body {
         height: 100%;
         width: 100%;
-        flex-direction: column; 
+        flex-direction: column;
     }
+
     .quote-box {
         width: 70%;
         height: 100%;
         margin: 10px;
     }
-    .stats-title{
+
+    .stats-title {
         margin-top: 10px;
 
     }
-    .social{
+
+    .social {
         flex-direction: column;
         height: 100%;
         width: 100%;
         padding: 10px;
     }
-    .social-box{
+
+    .social-box {
         height: 100%;
         text-align: center;
         margin: 10px;
 
     }
-    .stats
-    {
+
+    .stats {
         height: 100%;
         width: 100%;
     }
-    .footer{
+
+    .footer {
         height: 100%;
         width: 100%;
         padding-bottom: 10px;
     }
-    .social-handle{
+
+    .social-handle {
         width: 60%;
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
-    .nav{
+
+    .nav {
         height: 100%;
         width: 100%;
         padding: 10px;
         flex-direction: column;
-        padding-bottom: 10px; ;
+        padding-bottom: 10px;
+        ;
 
-      } 
-      .nav p{font-size: 1.5em;
+    }
+
+    .nav p {
+        font-size: 1.5em;
         font-weight: bolder;
-    } 
-      .page-item{
-       background: #2e2e2d;
-        padding: 0.2em;
-        border:1px solid white;
+    }
 
-      }
-      .btn-box{
+    .page-item {
+        background: #2e2e2d;
+        padding: 0.2em;
+        border: 1px solid white;
+
+    }
+
+    .btn-box {
         height: auto;
         width: 100%;
         display: flex;
@@ -456,4 +515,3 @@
 
 
 }
-
