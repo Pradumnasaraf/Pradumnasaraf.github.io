@@ -61,7 +61,7 @@
     color:#2C3333;
     text-align: center;
 }
-.service-title p {
+.service-title h2 {
     font-size: 3.0em;
     font-weight: 300;
 }
@@ -101,8 +101,9 @@
     font-weight: 300;
 }
 .service-box-service{
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-bottom: 10px;
+    font-weight: 300;
 }
 
 
@@ -126,7 +127,7 @@
     justify-content: center;
 
 }
-.quote-title p {
+.quote-title h2 {
     font-size: 3.2em;
     font-weight: 300;
     color: white;
@@ -166,8 +167,8 @@
     color: #2C3333;
     border: 2px solid #2C3333;
 }
-.quote-box p {
-    margin: 8px;
+.quote-box p, h3 {
+    margin: 6px;
 }
 .quote-box-title {
     font-weight: 300;
@@ -175,8 +176,7 @@
     margin-bottom: 10px;
 }
 .quote-box-at {
-    font-weight: 300;
-    color: #ff3636;
+    font-weight: 400;
 }
 .quote-box-price {
     font-weight: 300;
@@ -273,7 +273,7 @@
     flex-direction: column;
     background-color: white;
 }
-.stats-title {
+.stats-title h2 {
     height: 12vh;
     width: 100%;
     color: #2e2e2d;
@@ -281,8 +281,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.stats-title  {
     font-size: 3.2em;
     font-weight: 300;
 }
@@ -301,22 +299,24 @@
 }
 .social-box i {
     font-size: 3.0em;
+    margin-bottom: 6px;
 }
 .social-box p {
     margin : 4px;
 }
 .social-box-social {
-    font-size: 2.0em;
+    font-size: 1.7em;
     font-weight: 300;
-    margin: 4px; 
+    margin: 6px; 
+    
 }
 .social-box-followers {
-    font-weight: 400;
-    color: #fa3131;
-    font-size: 1.0em;
+    font-weight: 300;
+    color: #f90000;
+    font-size: 1.5em;
 }
 .social-box-growth {
-    font-size: 0.85em;
+    font-size: 0.9em;
     font-weight: 300;
     margin: 6px; 
 }
