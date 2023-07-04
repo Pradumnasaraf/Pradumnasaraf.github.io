@@ -1,3 +1,12 @@
+# [2.6.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.5.0...v2.6.0) (2023-07-04)
+
+
+### Features
+
+* make the website more accessible ([#29](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/29)) ([e9b4d81](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/e9b4d8148c19f7c52d6dcceeebf2f1e26014905d))
+
+
+
 # [2.5.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.4...v2.5.0) (2023-06-18)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * the quote box ([f1de413](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/f1de41301c6bae2f0100f489e6376532ed6740c7))
-
-
-
-## [2.4.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.0...v2.4.1) (2023-04-26)
-
-
-### Bug Fixes
-
-* hover effect ([d1e05ad](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/d1e05ad46de4437ffd546202f354b53b33ad8f45))
 
 
 
