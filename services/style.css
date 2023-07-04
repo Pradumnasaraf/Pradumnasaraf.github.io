@@ -61,11 +61,10 @@
     color:#2C3333;
     text-align: center;
 }
-.service-title h1 {
+.service-title p {
     font-size: 3.0em;
     font-weight: 300;
 }
-
 .service-body {
     display: flex;
     height: 32vh;
@@ -98,15 +97,14 @@
     margin-bottom: 14px;
 }
 
-.service-box h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    font-weight: 300;
-}
-
 .service-box p {
     font-weight: 300;
 }
+.service-box-service{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
 
 /***************************************/
 
@@ -128,11 +126,12 @@
     justify-content: center;
 
 }
-.quote-title h1 {
+.quote-title p {
     font-size: 3.2em;
     font-weight: 300;
     color: white;
 }
+
 .quote-body {
     display: flex;
     width: 100%;
@@ -168,24 +167,26 @@
     border: 2px solid #2C3333;
 }
 .quote-box p {
-    font-weight: 300;
     margin: 8px;
-    font-size: 1.1em;
 }
-.quote-box h1 {
-    font-weight: 400;
+.quote-box-title {
+    font-weight: 300;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+.quote-box-at {
+    font-weight: 300;
+    color: #ff3636;
+}
+.quote-box-price {
+    font-weight: 300;
     margin: 4px;
     color: #ff3636;
     font-size: 3.5em;
 }
-.quote-box h2 {
-    font-size: 1.7em;
-    margin-bottom: 10px;
+.quote-box-info {
     font-weight: 300;
-    margin: 4px;
-}
-.quote-box h5 {
-    color: #ff3636;
+    font-size: 1.1em;
 }
 .btn-box{
     display: flex;
@@ -254,7 +255,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}.added-value h3{
+}.added-value p{
     font-size: 1.0em;
     font-weight: 300;
     color: white;
@@ -281,7 +282,7 @@
     align-items: center;
     justify-content: center;
 }
-.stats-title h1 {
+.stats-title  {
     font-size: 3.2em;
     font-weight: 300;
 }
@@ -301,21 +302,25 @@
 .social-box i {
     font-size: 3.0em;
 }
-.social-box h2 {
+.social-box p {
+    margin : 4px;
+}
+.social-box-social {
     font-size: 2.0em;
     font-weight: 300;
     margin: 4px; 
 }
-.social-box h4 {
-    font-size: 0.85em;
-    font-weight: 300;
-    margin: 6px; 
-}
-#followers{
+.social-box-followers {
     font-weight: 400;
     color: #fa3131;
     font-size: 1.0em;
 }
+.social-box-growth {
+    font-size: 0.85em;
+    font-weight: 300;
+    margin: 6px; 
+}
+
 
 /***************************************/
 .footer{

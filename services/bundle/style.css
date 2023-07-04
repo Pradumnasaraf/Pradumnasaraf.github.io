@@ -115,27 +115,30 @@
 }
 
 .quote-box p {
-    font-weight: 300;
     margin: 8px;
-    font-size: 1.1em;
 }
 
-.quote-box h1 {
-    font-weight: 400;
+.quote-box-title {
+    font-weight: 300;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.quote-box-at {
+    font-weight: 300;
+    color: #ff3636;
+}
+
+.quote-box-price {
+    font-weight: 300;
     margin: 4px;
     color: #ff3636;
     font-size: 3.5em;
 }
 
-.quote-box h2 {
-    font-size: 1.7em;
-    margin-bottom: 10px;
+.quote-box-info {
     font-weight: 300;
-    margin: 4px;
-}
-
-.quote-box h5 {
-    color: #ff3636;
+    font-size: 1.1em;
 }
 
 .btn-box {
@@ -248,6 +251,23 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
+}
+
+.social-handle>a>i {
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+}
+
+.social-handle i:hover {
+    cursor: pointer;
+    transition: 0.4s;
+    opacity: 0.5;
+}
+
+#footer-copy {
+    font-weight: 300;
+    font-size: 0.8rem;
 }
 
 .social-handle i {
