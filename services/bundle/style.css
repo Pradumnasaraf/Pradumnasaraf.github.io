@@ -8,7 +8,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/*** NAVBARK******/
+/************NAV************/
 
 .nav {
     background-color: #2C3333;
@@ -50,7 +50,7 @@
     font-weight: 300;
 }
 
-/**********/
+/*******QUOTE********/
 
 .quote {
     height: 170vh;
@@ -171,7 +171,7 @@ h3 {
     transition: 0.5s;
 }
 
-/************DO DONT***/
+/************DO-DONT************/
 
 .do-dont {
     display: flex;
@@ -237,8 +237,8 @@ h3 {
     color: white;
 }
 
+/************FOOTER************/
 
-/***************************************/
 .footer {
     height: 15vh;
     width: 100%;
@@ -279,6 +279,8 @@ h3 {
 .social-handle i {
     font-size: 1.3em;
 }
+
+/************RESPONSIVE************/
 
 @media (max-width:800px) {
 

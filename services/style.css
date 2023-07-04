@@ -8,7 +8,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/*** NAVBARK******/
+/************NAV************/
 
 .nav {
     background-color: #2C3333;
@@ -49,6 +49,8 @@
     color: white;
     font-weight: 300;
 }
+
+/*****SERVICES*****/
 
 .service {
     height: 78vh;
@@ -117,7 +119,7 @@
 }
 
 
-/***************************************/
+/****** QUOTE ******/
 
 .quote {
     height: 105vh;
@@ -293,7 +295,7 @@ h3 {
 }
 
 
-/***************************************/
+/***********STATS************/
 
 .stats {
     height: 45vh;
@@ -361,7 +363,7 @@ h3 {
 }
 
 
-/***************************************/
+/**************FOOTER*************/
 .footer {
     height: 15vh;
     width: 100%;
@@ -450,6 +452,10 @@ h3 {
     .stats-title {
         margin-top: 10px;
 
+    }
+
+    .social-box-followers {
+        font-size: 1.2em;
     }
 
     .social {
