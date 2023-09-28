@@ -1,3 +1,12 @@
+# [2.7.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.6.0...v2.7.0) (2023-09-28)
+
+
+### Features
+
+* Add meeting schedule page ([914bbe4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/914bbe43894c00adf19a63086129421fc4e06a34))
+
+
+
 # [2.6.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.5.0...v2.6.0) (2023-07-04)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * the footer and metrics ([8f03b7b](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8f03b7bf540537a2e68bfedc206892e3202d3096))
-
-
-
-## [2.4.2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.1...v2.4.2) (2023-05-02)
-
-
-### Bug Fixes
-
-* the quote box ([f1de413](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/f1de41301c6bae2f0100f489e6376532ed6740c7))
 
 
 
