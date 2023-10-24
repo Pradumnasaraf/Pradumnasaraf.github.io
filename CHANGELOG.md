@@ -1,3 +1,12 @@
+## [2.8.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.8.0...v2.8.1) (2023-10-24)
+
+
+### Bug Fixes
+
+* file names ([b9f6513](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/b9f6513d8d7746fd61b81096b0173a54e94104df))
+
+
+
 # [2.8.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.7.0...v2.8.0) (2023-10-24)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * improve accessibilty ([f8d89ff](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/f8d89ff46ecdf6d4d7a8283629a1c9fc913c95ec))
-
-
-
-## [2.4.4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.3...v2.4.4) (2023-05-31)
-
-
-### Reverts
-
-* Revert "chore: update Twitter link" ([a8327d3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a8327d3a39a4cba2cff0ff17ded3246fa7b54828))
 
 
 
