@@ -8,7 +8,7 @@
 <img src="Wise/1.png" width="900">
 </p>
 
-2) To include all the fees, add the "Total fees" amount to the amount you want to send and keep adjusting the amount until the "Total amount we'll convert" is equal to the amount you want to send. This is because the "Total amount we'll convert" is the amount that will be received by me. The "Total fees" is the amount that Wise will charge you for the transfer.
+2) To include all the fees, add the "Total fees" amount to the amount you want to send and keep adjusting the amount until the "Total amount we'll convert" is equal to the amount you want to send (Invoice amount). This is because the "Total amount we'll convert" is the amount that will be received by me. The "Total fees" is the amount that Wise will charge you for the transfer.
 
 <p align="center">
 <img src="Wise/2.png" width="900">
