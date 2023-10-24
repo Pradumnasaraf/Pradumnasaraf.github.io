@@ -1,3 +1,12 @@
+# [2.8.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.7.0...v2.8.0) (2023-10-24)
+
+
+### Features
+
+* Add payment guide for wise and paypal ([#30](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/30)) ([cdbd95d](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/cdbd95d93359ba13cb010bf736bbf66099f3d1d5))
+
+
+
 # [2.7.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.6.0...v2.7.0) (2023-09-28)
 
 
@@ -31,15 +40,6 @@
 ### Reverts
 
 * Revert "chore: update Twitter link" ([a8327d3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a8327d3a39a4cba2cff0ff17ded3246fa7b54828))
-
-
-
-## [2.4.3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.2...v2.4.3) (2023-05-28)
-
-
-### Bug Fixes
-
-* the footer and metrics ([8f03b7b](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8f03b7bf540537a2e68bfedc206892e3202d3096))
 
 
 
