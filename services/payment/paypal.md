@@ -14,6 +14,6 @@
 <img src="./paypal-2.png" width="900">
 </p>
 
-1) After clicking Calculate, you will see the amount to send under "You should ask for," which, in this case, is $1069.57 USD. This is the amount you should transfer to the PayPal account.
+3) After clicking Calculate, you will see the amount to send under "You should ask for," which, in this case, is $1069.57 USD. This is the amount you should transfer to the PayPal account.
 
 If you have any questions, please contact Pradumna at pradumnasaraf@gmail.com.
