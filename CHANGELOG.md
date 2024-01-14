@@ -1,3 +1,12 @@
+## [2.8.2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.8.1...v2.8.2) (2024-01-14)
+
+
+### Bug Fixes
+
+* PayPal payment instructions and calculator ([8cc9482](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8cc94824891dc7c1c351cde778e18a0cf6c74f3b))
+
+
+
 ## [2.8.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.8.0...v2.8.1) (2023-10-24)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * make the website more accessible ([#29](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/29)) ([e9b4d81](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/e9b4d8148c19f7c52d6dcceeebf2f1e26014905d))
-
-
-
-# [2.5.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.4.4...v2.5.0) (2023-06-18)
-
-
-### Features
-
-* improve accessibilty ([f8d89ff](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/f8d89ff46ecdf6d4d7a8283629a1c9fc913c95ec))
 
 
 
