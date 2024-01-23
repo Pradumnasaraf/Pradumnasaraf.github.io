@@ -1,3 +1,12 @@
+# [2.9.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.8.2...v2.9.0) (2024-01-23)
+
+
+### Features
+
+* Add Google Analytics ([a92cb80](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a92cb8081b4778cf712561712588ca4c7d0e9db8))
+
+
+
 ## [2.8.2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.8.1...v2.8.2) (2024-01-14)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * Add meeting schedule page ([914bbe4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/914bbe43894c00adf19a63086129421fc4e06a34))
-
-
-
-# [2.6.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.5.0...v2.6.0) (2023-07-04)
-
-
-### Features
-
-* make the website more accessible ([#29](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/29)) ([e9b4d81](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/e9b4d8148c19f7c52d6dcceeebf2f1e26014905d))
 
 
 
