@@ -1,3 +1,12 @@
+# [2.10.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.9.0...v2.10.0) (2024-02-04)
+
+
+### Features
+
+* add Google Tag Manager code to remaning index.html pages ([d0317cc](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/d0317cc6c188d9db020796154254b80f28e45978))
+
+
+
 # [2.9.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.8.2...v2.9.0) (2024-01-23)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * Add payment guide for wise and paypal ([#30](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/30)) ([cdbd95d](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/cdbd95d93359ba13cb010bf736bbf66099f3d1d5))
-
-
-
-# [2.7.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.6.0...v2.7.0) (2023-09-28)
-
-
-### Features
-
-* Add meeting schedule page ([914bbe4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/914bbe43894c00adf19a63086129421fc4e06a34))
 
 
 
