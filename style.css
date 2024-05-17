@@ -147,7 +147,7 @@ body {
 }
 
 .social-handle {
-    width: 10vw;
+    gap: 2em;
     height: 8vh;
     display: flex;
     align-items: center;
