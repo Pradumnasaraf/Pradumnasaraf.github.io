@@ -1,3 +1,12 @@
+## [2.10.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.10.0...v2.10.1) (2024-05-17)
+
+
+### Bug Fixes
+
+* footer social media icon aligmnet ([0ab8672](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/0ab8672f44eb1f10d343c8bdb3d80863a8051dae))
+
+
+
 # [2.10.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.9.0...v2.10.0) (2024-02-04)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * file names ([b9f6513](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/b9f6513d8d7746fd61b81096b0173a54e94104df))
-
-
-
-# [2.8.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.7.0...v2.8.0) (2023-10-24)
-
-
-### Features
-
-* Add payment guide for wise and paypal ([#30](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/30)) ([cdbd95d](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/cdbd95d93359ba13cb010bf736bbf66099f3d1d5))
 
 
 
