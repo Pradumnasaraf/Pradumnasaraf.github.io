@@ -298,19 +298,19 @@ h3 {
 /***********STATS************/
 
 .stats {
-    height: 45vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: white;
+    background-color:  #2C3333;
 }
 
 .stats-title h2 {
     height: 12vh;
     width: 100%;
-    color: #2e2e2d;
+    color: white;
     text-align: center;
     display: flex;
     align-items: center;
@@ -332,21 +332,26 @@ h3 {
     width: 35%;
     align-items: center;
     flex-direction: column;
+
 }
 
 .social-box i {
     font-size: 3.0em;
     margin-bottom: 6px;
+    color: white;   
 }
 
 .social-box p {
     margin: 4px;
+    color: white;
+
 }
 
 .social-box-social {
     font-size: 1.7em;
     font-weight: 300;
     margin: 6px;
+    color: white;
 
 }
 
@@ -362,17 +367,52 @@ h3 {
     margin: 6px;
 }
 
-
-/**************FOOTER*************/
-.footer {
-    height: 15vh;
+/***********CLIENT************/
+.client {
+    height: 42vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #2C3333;
-    color: white;
+    background-color: white;
+}
+
+.client-title h2 {
+    height: 12vh;
+    width: 100%;
+    color: #2C3333;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2em;
+    font-weight: 300;
+}
+
+.client-container{
+    height: 14vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.client-box img {
+    width: 20vh;
+}
+
+
+/**************FOOTER*************/
+.footer {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    color: #2C3333;
 }
 
 .social-handle {
@@ -386,7 +426,7 @@ h3 {
 
 .social-handle>a>i {
     font-size: 1.3em;
-    color: white;
+    color: #2C3333;
     text-decoration: none;
 }
 
@@ -477,6 +517,25 @@ h3 {
         width: 100%;
     }
 
+    .client {
+        height: 100%;
+        width: 100%;
+    }
+
+    .client-container {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .client-box {
+      margin: 5px;
+    }
+    .client-box img {
+        width: 20vh;
+
+    }
+
     .footer {
         height: 100%;
         width: 100%;
@@ -518,6 +577,7 @@ h3 {
         display: flex;
         flex-direction: column;
     }
+    
 
 
 }
