@@ -12,7 +12,7 @@ A custom domain name is used for the website. It is hosted on GitHub Pages. The 
 
 ## 🛡️ License
 
-**OpenSource API** is licensed under the GPL-3.0 License - see the [LICENSE](/LICENSE) file for details.
+**Pradumnasaraf.github.io** is licensed under the GPL-3.0 License - see the [LICENSE](/LICENSE) file for details.
 
 ## 🤝 Support
 
