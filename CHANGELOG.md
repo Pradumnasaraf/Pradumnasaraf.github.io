@@ -1,3 +1,12 @@
+# [2.11.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.10.1...v2.11.0) (2024-06-29)
+
+
+### Features
+
+* Add a client section in the service page ([#35](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/35)) ([3827bdc](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/3827bdc0dcf8a53b9f8bcc8688a46437d49b33aa))
+
+
+
 ## [2.10.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.10.0...v2.10.1) (2024-05-17)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * PayPal payment instructions and calculator ([8cc9482](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8cc94824891dc7c1c351cde778e18a0cf6c74f3b))
-
-
-
-## [2.8.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.8.0...v2.8.1) (2023-10-24)
-
-
-### Bug Fixes
-
-* file names ([b9f6513](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/b9f6513d8d7746fd61b81096b0173a54e94104df))
 
 
 
