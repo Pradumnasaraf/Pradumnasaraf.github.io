@@ -11,6 +11,21 @@
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-WRGLMZCX');</script>
 <!-- End Google Tag Manager -->
+<!-- Cal inline embed code begins -->
+<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init",  {origin:"https://cal.com"});
+
+  Cal("inline", {
+	elementOrSelector:"#my-cal-inline",
+	calLink: "pradumnasaraf/30min",
+	layout: "month_view"
+  });
+
+  Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+<!-- Cal inline embed code ends -->
 <head>
     <link rel="icon"
         href="https://user-images.githubusercontent.com/51878265/194138074-7a341083-e80e-49d9-8e58-02882b26d3d9.png" />
@@ -18,14 +33,5 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Schedule a Meeting</title>
 </head>
-
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRGLMZCX" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <script type="text/javascript" async src="https://static.zcal.co/embed/v1/embed.js"></script>
-    <div class="zcal-inline-widget"><a href="https://zcal.co/i/cjg9Vuw1">30 Minute Chat - Schedule a meeting</a></div>
-</body>
 
 </html>
