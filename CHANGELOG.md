@@ -1,3 +1,12 @@
+## [2.11.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.11.0...v2.11.1) (2024-07-03)
+
+
+### Bug Fixes
+
+* favicon issue on chat page ([4bac6f4](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/4bac6f4232fc48bf471c5a63851f5e5e8239ec1a))
+
+
+
 # [2.11.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.10.1...v2.11.0) (2024-06-29)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * Add Google Analytics ([a92cb80](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a92cb8081b4778cf712561712588ca4c7d0e9db8))
-
-
-
-## [2.8.2](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.8.1...v2.8.2) (2024-01-14)
-
-
-### Bug Fixes
-
-* PayPal payment instructions and calculator ([8cc9482](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/8cc94824891dc7c1c351cde778e18a0cf6c74f3b))
 
 
 
