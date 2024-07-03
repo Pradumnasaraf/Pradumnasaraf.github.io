@@ -1,3 +1,12 @@
+# [2.12.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.11.1...v2.12.0) (2024-07-03)
+
+
+### Features
+
+* add a floating-popup meeting booking system to services/index.html ([9e6874f](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/9e6874f08971b8d715eec0a1415911660a2d53c0))
+
+
+
 ## [2.11.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.11.0...v2.11.1) (2024-07-03)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * add Google Tag Manager code to remaning index.html pages ([d0317cc](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/d0317cc6c188d9db020796154254b80f28e45978))
-
-
-
-# [2.9.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.8.2...v2.9.0) (2024-01-23)
-
-
-### Features
-
-* Add Google Analytics ([a92cb80](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/a92cb8081b4778cf712561712588ca4c7d0e9db8))
 
 
 
