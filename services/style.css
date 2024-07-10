@@ -343,8 +343,6 @@ h3 {
 
 .social-box p {
     margin: 4px;
-    color: white;
-
 }
 
 .social-box-social {
@@ -355,10 +353,14 @@ h3 {
 
 }
 
+.social-box-growth{
+    color: white;
+}
+
 .social-box-followers {
-    font-weight: 300;
-    color: #f90000;
-    font-size: 1.5em;
+    font-weight: 600;
+    color: goldenrod;
+    font-size: 1.6em;
 }
 
 .social-box-growth {
