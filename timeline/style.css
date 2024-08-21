@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Pop', sans-serif;
 }
 
 body{
@@ -112,7 +112,7 @@ body{
 
 .text-box small{
     display: inline;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 
 }
 
@@ -159,7 +159,7 @@ body{
     .text-box{
         font-size: 13px;
     }
-    .text-box samll{
+    .text-box small{
         margin-bottom: 10px;
     }
 
