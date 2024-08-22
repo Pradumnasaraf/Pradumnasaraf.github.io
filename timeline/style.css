@@ -17,6 +17,7 @@ body {
     color: #fff;
     margin-top: 20px;
     margin-bottom: 50px;
+    font-weight: 200;
 }
 
 /* Timeline Container */
@@ -88,16 +89,20 @@ body {
 }
 
 .text-box h2 {
-    font-weight: 600;
+    font-weight: 350;
+    margin-bottom: 5px;
+    color: brown
 }
 
 .text-box small {
     display: inline;
     font-size: 14px;
+    font-weight: 350;
 }
 
 .text-box p {
     margin-top: 15px;
+    font-weight: 300;
 }
 
 /* Container Positioning */
@@ -108,10 +113,12 @@ body {
 .container img {
     position: absolute;
     width: 40px;
+    height: 40px;
     border-radius: 50%;
     right: -20px;
     top: 32px;
     z-index: 10;
+    background-color: #fff;
 }
 
 .right-container img {
