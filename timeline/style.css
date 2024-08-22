@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,94 +6,27 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     background-color: #2C3333;
 }
 
+/* Timeline Title */
 .timeline-title {
     text-align: center;
-    font-size: 50px; /* Adjust size as needed */
-    color: #fff; /* White color */
-    margin-top: 20px; /* Adjust top margin as needed */
-    margin-bottom: 50px; /* Space below the title */
+    font-size: 50px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
-.timeline{
+/* Timeline Container */
+.timeline {
     position: relative;
     max-width: 1200px;
     margin: 100px auto;
 }
 
-.container{
-    padding: 10px 50px;
-    position: relative;
-    width: 50%;
-    animation: movedown 1s linear forwards;
-    opacity: 0;
-}
-
-@keyframes movedown {
-    0% {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-.container:nth-child(1){
-    animation-delay: 0s;
-}
-
-.container:nth-child(2){
-    animation-delay: 1s;
-}
-.container:nth-child(3){
-    animation-delay: 2s;
-}
-.container:nth-child(4){
-    animation-delay: 3s;
-}
-.container:nth-child(5){
-    animation-delay: 4s;
-}
-.container:nth-child(6){
-    animation-delay: 5s;
-}
-
-.text-box{
-    padding: 20px 30px;
-    background: #fff;
-    position: relative;
-    border-radius: 6px;
-    font-size: 15px;
-}
-
-.left-container{
-    left: 0;
-}
-
-.right-container{
-    left: 50%;
-}
-
-.container img {
-    position: absolute;
-    width: 40px;
-    border-radius: 50%;
-    right: -20px;
-    top: 32px;
-    z-index: 10;
-
-}
-
-.right-container img{
-    left: -20px;
-}
-
-.timeline::after{
+.timeline::after {
     content: '';
     position: absolute;
     width: 6px;
@@ -105,6 +39,7 @@ body{
     animation: moveline 6s linear forwards;
 }
 
+/* Keyframes for Line Animation */
 @keyframes moveline {
     0% {
         height: 0;
@@ -114,21 +49,77 @@ body{
     }
 }
 
+/* Timeline Item Container */
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+/* Keyframes for Container Animation */
+@keyframes movedown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Staggered Animation Delay for Each Container */
+.container:nth-child(1) { animation-delay: 0s; }
+.container:nth-child(2) { animation-delay: 1s; }
+.container:nth-child(3) { animation-delay: 2s; }
+.container:nth-child(4) { animation-delay: 3s; }
+.container:nth-child(5) { animation-delay: 4s; }
+.container:nth-child(6) { animation-delay: 5s; }
+
+/* Text Box Styles */
+.text-box {
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
 .text-box h2 {
     font-weight: 600;
 }
 
-.text-box small{
+.text-box small {
     display: inline;
     font-size: 14px;
 }
 
-.text-box p{
+.text-box p {
     margin-top: 15px;
 }
 
+/* Container Positioning */
+.left-container { left: 0; }
+.right-container { left: 50%; }
 
-.left-container-arrow{
+/* Image Styles for Timeline Items */
+.container img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+
+.right-container img {
+    left: -20px;
+}
+
+/* Arrow Indicators for Containers */
+.left-container-arrow {
     height: 0;
     width: 0;
     position: absolute;
@@ -136,11 +127,11 @@ body{
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left : 15px solid #fff;
+    border-left: 15px solid #fff;
     right: -15px;
 }
 
-.right-container-arrow{
+.right-container-arrow {
     height: 0;
     width: 0;
     position: absolute;
@@ -148,74 +139,26 @@ body{
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right : 15px solid #fff;
+    border-right: 15px solid #fff;
     left: -15px;
-} 
-
-
-@media screen and (max-width: 600px){
-
-    .timeline{
-        margin: 50px auto;
-    }
-
-    .timeline::after{
-        left: 31px;
-    }
-
-    .container{
-        width: 100%;
-        padding-left: 80px;
-        padding-right: 25px;
-    }
-    .text-box{
-        font-size: 13px;
-    }
-    .text-box small{
-        margin-bottom: 10px;
-    }
-
-    .right-container{
-        left: 0;
-    }
-    .left-container img, .right-container img{
-        left: 10px;
-    }
-
-    .left-container-arrow, .right-container-arrow{
-        border-right: 15px solid #fff;
-        border-left: 0;
-        left: -15px;
-    }
-
-    .source-button {
-        bottom: 10px; /* Maintain bottom positioning */
-        right: 10px;  /* Maintain right positioning */
-        width: 25px;  /* Smaller button size */
-        height: 25px; /* Smaller button size */
-    }
-    
-    .source-button svg {
-        width: 14px;  /* Smaller icon size */
-        height: 14px; /* Smaller icon size */
-    }
 }
 
+/* Source Button Styles */
 .source-button {
     position: absolute;
-    top: 10px;  /* Adjust positioning as needed */
-    right: 10px; /* Adjust positioning as needed */
-    width: 30px; /* Default size */
-    height: 30px; /* Default size */
-    background-color: transparent; /* No background */
-    border: 2px solid #000; /* Black border */
-    border-radius: 50%; /* Round button */
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none; /* Remove underline */
-    color: #000; /* Default color: black */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .source-button svg {
@@ -226,4 +169,55 @@ body{
 .source-button:hover {
     color: #797ff3; 
     border-color: #797ff3;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media screen and (max-width: 600px) {
+    .timeline {
+        margin: 50px auto;
+    }
+
+    .timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .text-box {
+        font-size: 13px;
+    }
+
+    .text-box small {
+        margin-bottom: 10px;
+    }
+
+    .right-container {
+        left: 0;
+    }
+
+    .left-container img, .right-container img {
+        left: 10px;
+    }
+
+    .left-container-arrow, .right-container-arrow {
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+
+    .source-button {
+        bottom: 10px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .source-button svg {
+        width: 14px;
+        height: 14px;
+    }
 }
