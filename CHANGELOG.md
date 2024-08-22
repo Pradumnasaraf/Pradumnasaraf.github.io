@@ -1,3 +1,12 @@
+# [2.13.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.12.0...v2.13.0) (2024-08-22)
+
+
+### Features
+
+* Add timeline page  ([#37](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/37)) ([42908e3](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/42908e303c3fb9854ac8abac2069c36469fb3d35))
+
+
+
 # [2.12.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.11.1...v2.12.0) (2024-07-03)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * footer social media icon aligmnet ([0ab8672](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/0ab8672f44eb1f10d343c8bdb3d80863a8051dae))
-
-
-
-# [2.10.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.9.0...v2.10.0) (2024-02-04)
-
-
-### Features
-
-* add Google Tag Manager code to remaning index.html pages ([d0317cc](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/d0317cc6c188d9db020796154254b80f28e45978))
 
 
 
