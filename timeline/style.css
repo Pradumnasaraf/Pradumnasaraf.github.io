@@ -2,11 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Pop', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
     background-color: #2C3333;
+}
+
+.timeline-title {
+    text-align: center;
+    font-size: 50px; /* Adjust size as needed */
+    color: #fff; /* White color */
+    margin-top: 20px; /* Adjust top margin as needed */
+    margin-bottom: 50px; /* Space below the title */
 }
 
 .timeline{
@@ -112,9 +120,13 @@ body{
 
 .text-box small{
     display: inline;
-    margin-bottom: 25px;
-
+    font-size: 14px;
 }
+
+.text-box p{
+    margin-top: 15px;
+}
+
 
 .left-container-arrow{
     height: 0;
@@ -176,5 +188,42 @@ body{
         left: -15px;
     }
 
+    .source-button {
+        bottom: 10px; /* Maintain bottom positioning */
+        right: 10px;  /* Maintain right positioning */
+        width: 25px;  /* Smaller button size */
+        height: 25px; /* Smaller button size */
+    }
     
+    .source-button svg {
+        width: 14px;  /* Smaller icon size */
+        height: 14px; /* Smaller icon size */
+    }
+}
+
+.source-button {
+    position: absolute;
+    top: 10px;  /* Adjust positioning as needed */
+    right: 10px; /* Adjust positioning as needed */
+    width: 30px; /* Default size */
+    height: 30px; /* Default size */
+    background-color: transparent; /* No background */
+    border: 2px solid #000; /* Black border */
+    border-radius: 50%; /* Round button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Default color: black */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.source-button svg {
+    width: 16px; 
+    height: 16px; 
+}
+
+.source-button:hover {
+    color: #797ff3; 
+    border-color: #797ff3;
 }
