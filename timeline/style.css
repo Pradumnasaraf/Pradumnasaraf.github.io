@@ -16,7 +16,7 @@ body {
     font-size: 50px;
     color: #fff;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     font-weight: 200;
 }
 
@@ -174,8 +174,8 @@ body {
 }
 
 .source-button:hover {
-    color: #797ff3; 
-    border-color: #797ff3;
+    color: brown;
+    border-color: brown
 }
 
 /* Responsive Styles for Mobile Devices */
