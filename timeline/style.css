@@ -37,7 +37,7 @@ body {
     top: 0; 
     margin-left: -3px;
     z-index: -1;
-    animation: moveline 6s linear forwards;
+    animation: moveline 20s linear forwards;
 }
 
 /* Keyframes for Line Animation */
@@ -78,6 +78,21 @@ body {
 .container:nth-child(4) { animation-delay: 3s; }
 .container:nth-child(5) { animation-delay: 4s; }
 .container:nth-child(6) { animation-delay: 5s; }
+.container:nth-child(7) { animation-delay: 6s; }
+.container:nth-child(8) { animation-delay: 7s; }
+.container:nth-child(9) { animation-delay: 8s; }
+.container:nth-child(10) { animation-delay: 9s; }
+.container:nth-child(11) { animation-delay: 10s; }
+.container:nth-child(12) { animation-delay: 11s; }
+.container:nth-child(13) { animation-delay: 12s; }
+.container:nth-child(14) { animation-delay: 13s; }
+.container:nth-child(15) { animation-delay: 14s; }
+.container:nth-child(16) { animation-delay: 15s; }
+.container:nth-child(17) { animation-delay: 16s; }
+.container:nth-child(18) { animation-delay: 17s; }
+.container:nth-child(19) { animation-delay: 18s; }
+.container:nth-child(20) { animation-delay: 19s; }
+.container:nth-child(21) { animation-delay: 20s; }
 
 /* Text Box Styles */
 .text-box {
