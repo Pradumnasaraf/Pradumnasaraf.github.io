@@ -1,3 +1,12 @@
+## [2.13.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.13.0...v2.13.1) (2024-09-03)
+
+
+### Reverts
+
+* Revert "chore: Update navigation links in index.html and services pages" ([d45318b](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/d45318bfec04be0cc5e4bbad8bfab963ebef8e87))
+
+
+
 # [2.13.0](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.12.0...v2.13.0) (2024-08-22)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * Add a client section in the service page ([#35](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues/35)) ([3827bdc](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/3827bdc0dcf8a53b9f8bcc8688a46437d49b33aa))
-
-
-
-## [2.10.1](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/compare/v2.10.0...v2.10.1) (2024-05-17)
-
-
-### Bug Fixes
-
-* footer social media icon aligmnet ([0ab8672](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/commit/0ab8672f44eb1f10d343c8bdb3d80863a8051dae))
 
 
 
