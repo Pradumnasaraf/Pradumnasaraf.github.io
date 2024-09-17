@@ -19,6 +19,9 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           version-file: "./version.yaml"
+          output-file: "false"
+          skip-commit: "true"
+          create-summary: 'true'
 
       - name: Create Release
         if: steps.changelog.outputs.skipped == 'false'
