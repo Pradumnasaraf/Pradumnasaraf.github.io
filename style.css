@@ -100,7 +100,7 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 180px;
     height: 50px;
-    border: 1.5px solid goldenrod;
+    border: 1.5px solid gold;
     background-color: transparent;
     color: white;
     font-weight: 300;
@@ -173,7 +173,7 @@ body {
 }
 
 #ad-line {
-    color: goldenrod;
+    color: gold;
     background-color: black;
     padding: 10px;
     text-align: center;
