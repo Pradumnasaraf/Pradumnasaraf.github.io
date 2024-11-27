@@ -1,6 +1,6 @@
 ## PayPal Payments
 
-**Procedure for Sending Money via PayPal and Calculating Transfer Fees**
+**Procedure for Calculating Transfer Fees**
 
 1) To calculate the fees, visit [https://smallseotools.com/paypal-fee-calculator/](https://smallseotools.com/paypal-fee-calculator/) and locate the section shown in the image below. This PayPal calculator is the most accurate one I've found so far. I have encountered inaccuracies with others in the past, as they don't offer flexibility in choosing the Fee Rate.
 
