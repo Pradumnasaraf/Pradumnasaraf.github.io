@@ -5,8 +5,12 @@ on:
       - main
 
 jobs:
-  changelog:
+  release:
     runs-on: ubuntu-20.04
+
+    permissions:
+      actions: write
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -15,7 +19,7 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
         with:
-          github-token: ${{ secrets.PA_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           version-file: 'package.json, package-lock.json'
           output-file: "false"
           create-summary: 'true'
@@ -24,7 +28,7 @@ jobs:
         if: steps.changelog.outputs.skipped == 'false'
         uses: ncipollo/release-action@v1
         with:
-          token: ${{ secrets.PA_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           tag	: ${{ steps.changelog.outputs.tag }}
           name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
