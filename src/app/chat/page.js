@@ -81,7 +81,7 @@ const ScheduleMeetingPage = () => {
         <title>Schedule a Meeting</title>
       </head>
 
-      <div style={{ width: '100%', height: '100%', overflow: 'scroll' }} id="my-cal-inline"></div>
+      <div style={{ width: '100vw', height: '100vh', overflow: 'scroll', backgroundColor: 'white', padding: '30px' }} id="my-cal-inline"></div>
     </div>
   );
 };
