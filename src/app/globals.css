@@ -70,7 +70,7 @@ body {
   margin-right: 12px;
   border-radius: 20px;
   border: 0.8px solid white;
-  font-size: 2em; /* Ensure icons are large enough */
+  font-size: 1.7em; /* Ensure icons are large enough */
   transition: all 0.5s ease;
 }
 
