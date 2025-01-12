@@ -1,11 +1,36 @@
 // app/page.js
 import './style.css'
 import Head from 'next/head';
-import { FaTwitter, FaLinkedin, FaDev, FaGithub, FaEnvelope } from 'react-icons/fa';  // Corrected icon imports
+import { useEffect } from 'react';
+import { FaTwitter, FaLinkedin, FaDev, FaGithub, FaEnvelope } from 'react-icons/fa'; 
 import { FaSuitcase, FaFeather, FaMicrophone, FaTerminal } from 'react-icons/fa';
 import Image from 'next/image';
 
 const ServicesPage = () => {
+    useEffect(() => {
+      // Google Tag Manager Script
+      const scriptGTM = document.createElement('script');
+      scriptGTM.innerHTML = `
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js',
+          });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WRGLMZCX');
+      `;
+      document.head.appendChild(scriptGTM);
+  
+      return () => {
+        document.head.removeChild(scriptGTM);
+      };
+    }, []);
   return (
     <>
       <Head>
@@ -32,14 +57,6 @@ const ServicesPage = () => {
           rel="stylesheet"
         />
       </Head>
-      {/* Google Tag Manager */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WRGLMZCX');`,
-        }}
-      ></script>
-      {/* End Google Tag Manager */}
-
       <body>
         <div className="main">
           {/* NAV BAR */}

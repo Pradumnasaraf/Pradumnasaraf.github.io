@@ -4,6 +4,7 @@ import{ FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 export default function BundlePage() {
+  
   return (
     <div className="main">
       <div className="nav">
