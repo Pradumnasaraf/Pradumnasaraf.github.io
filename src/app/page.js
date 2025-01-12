@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react'; // Import useState for managing state
-import './globals.css';  // Import global styles
+import { useEffect } from 'react';  
+import './globals.css';  
 import Head from 'next/head';
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'; // Import specific icons from React Icons
+import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'; 
 
 export default function Home() {
   // Define the handleClick function
@@ -11,6 +11,30 @@ export default function Home() {
     // Here you can define what happens when the button is clicked
     window.location.href = 'https://github.com/Pradumnasaraf';  // Example: redirect to GitHub
   };
+  useEffect(() => {
+      // Google Tag Manager Script
+      const scriptGTM = document.createElement('script');
+      scriptGTM.innerHTML = `
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js',
+          });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WRGLMZCX');
+      `;
+      document.head.appendChild(scriptGTM);
+  
+      return () => {
+        document.head.removeChild(scriptGTM);
+      };
+    }, []);
 
   return (
     <>

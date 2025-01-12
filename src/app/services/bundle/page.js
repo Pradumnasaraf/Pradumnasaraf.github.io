@@ -2,7 +2,8 @@
 import React, { useEffect } from "react";
 import './style.css';
 import Link from "next/link";
-import{ FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiPackage } from "react-icons/fi";
+import{ FaTwitter, FaGithub, FaLinkedin, FaVideo, FaShare, FaStackExchange } from "react-icons/fa";
 
 export default function BundlePage() {
   useEffect(() => {
@@ -66,7 +67,7 @@ export default function BundlePage() {
             <p className="quote-box-info">Draft before posting</p>
           </div>
           <div className="quote-box">
-            <FaTwitter className='icon-quote'/>
+            <FaShare className='icon-quote'/>
             <h3 className="quote-box-title">Reshare</h3>
             <p className="quote-box-at">AT</p>
             <p className="quote-box-price">$200</p>
@@ -74,7 +75,7 @@ export default function BundlePage() {
             <p className="quote-box-info">No links</p>
           </div>
           <div className="quote-box">
-            <FaTwitter className='icon-quote'/>
+            <FaVideo className='icon-quote'/>
             <h3 className="quote-box-title">Post With A Video</h3>
             <p className="quote-box-at">AT</p>
             <p className="quote-box-price">$350</p>
@@ -84,7 +85,7 @@ export default function BundlePage() {
             <p className="quote-box-info">Draft before posting</p>
           </div>
           <div className="quote-box">
-            <FaTwitter className='icon-quote'/>
+            <FaStackExchange className='icon-quote'/>
             <h3 className="quote-box-title">Twitter Thread</h3>
             <p className="quote-box-at">AT</p>
             <p className="quote-box-price">$350</p>
@@ -101,7 +102,7 @@ export default function BundlePage() {
         </div>
         <div className="quote-body">
           <div className="quote-box">
-            <FaTwitter className='icon-quote'/>
+            <FiPackage className='icon-quote'/>
             <h3 className="quote-box-title">Pack of 4</h3>
             <p className="quote-box-at">AT</p>
             <p className="quote-box-price">$720</p>
@@ -111,7 +112,7 @@ export default function BundlePage() {
             <p className="quote-box-info">Draft before posting</p>
           </div>
           <div className="quote-box">
-            <FaTwitter className='icon-quote'/>
+            <FiPackage className='icon-quote'/>
             <h3 className="quote-box-title">Pack of 8</h3>
             <p className="quote-box-at">AT</p>
             <p className="quote-box-price">$1400</p>
@@ -121,7 +122,7 @@ export default function BundlePage() {
             <p className="quote-box-info">Draft before posting</p>
           </div>
           <div className="quote-box">
-            <FaTwitter className='icon-quote'/>
+            <FiPackage className='icon-quote'/>
             <h3 className="quote-box-title">Pack of 12</h3>
             <p className="quote-box-at">AT</p>
             <p className="quote-box-price">$2000</p>

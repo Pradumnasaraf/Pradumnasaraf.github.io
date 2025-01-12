@@ -2,8 +2,8 @@
 import './style.css'
 import Head from 'next/head';
 import { useEffect } from 'react';
-import { FaTwitter, FaLinkedin, FaDev, FaGithub, FaEnvelope } from 'react-icons/fa'; 
-import { FaSuitcase, FaFeather, FaMicrophone, FaTerminal } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaDev, FaGithub, FaEnvelope, FaSuitcase, FaFeather, FaMicrophone, FaTerminal, FaVideo, FaStackExchange } from 'react-icons/fa';
+import { TbArticle } from "react-icons/tb";
 import Image from 'next/image';
 
 const ServicesPage = () => {
@@ -208,8 +208,8 @@ const ServicesPage = () => {
                 </a>
               </div>
               <div className="quote-box">
-                <FaTwitter className='icon-quote' />
-                <h3 className="quote-box-title">Twitter Thread</h3>
+                <FaStackExchange className='icon-quote' />
+                <h3 className="quote-box-title">Twitter (X) Thread</h3>
                 <p className="quote-box-at">AT</p>
                 <p className="quote-box-price">$350</p>
                 <p className="quote-box-info">3-4 Post Thread</p>
@@ -218,7 +218,7 @@ const ServicesPage = () => {
                 <p className="quote-box-info">Draft before posting</p>
               </div>
               <div className="quote-box">
-                <FaTwitter className='icon-quote' />
+                <FaVideo className='icon-quote' />
                 <h3 className="quote-box-title">Post With A Video</h3>
                 <p className="quote-box-at">AT</p>
                 <p className="quote-box-price">$350</p>
@@ -228,7 +228,7 @@ const ServicesPage = () => {
                 <p className="quote-box-info">Draft before posting</p>
               </div>
               <div className="quote-box">
-                <FaTwitter className='icon-quote' />
+                <TbArticle className='icon-quote' />
                 <h3 className="quote-box-title">Blog</h3>
                 <p className="quote-box-at">FROM</p>
                 <p className="quote-box-price">$500</p>
@@ -346,7 +346,7 @@ const ServicesPage = () => {
               </div>
               <div className="social-box">
                 <a href="https://blog.pradumnasaraf.dev" aria-label="Visit my Blog">
-                  <FaTwitter className='icon-stats' />
+                  <TbArticle className='icon-stats' />
                 </a>
                 <h3 className="social-box-social">Hashnode</h3>
                 <p className="social-box-followers">500+ Followers</p>
