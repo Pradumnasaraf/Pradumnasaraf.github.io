@@ -134,7 +134,7 @@ const ServicesPage = () => {
                 <p className="quote-box-info">Per Post</p>
                 <p className="quote-box-info">Twitter / LinkedIn</p>
                 <p className="quote-box-info">Graphics Included</p>
-                <a className="pkg-btn" aria-label="Get a package" href="./bundle">
+                <a className="pkg-btn" aria-label="Get a package" href="./services/bundle">
                   <p>Package Available</p>
                 </a>
               </div>
@@ -169,7 +169,7 @@ const ServicesPage = () => {
               </div>
             </div>
             <div className="btn-box">
-              <a className="get-btn" href="./bundle" aria-label="Get a package">
+              <a className="get-btn" href="./services/bundle" aria-label="Get a package">
                 <p>PACKAGES</p>
               </a>
               <a className="enq-btn" href="../chat" aria-label="chat about services">
