@@ -95,14 +95,16 @@ body {
 
 .connect {
   font-family: 'Roboto', sans-serif;
-  width: 180px;
+  width: auto;
   height: 50px;
-  border: 0.8px solid gold;
+  padding: 10px 20px;
+  border: 0.9px solid gold;
   background-color: transparent;
   color: white;
   font-weight: 300;
   border-radius: 10px;
   margin: 10px 0;
+  margin-right: 10px;
   font-size: 1.2rem;
   transition: all 0.5s ease;
 }

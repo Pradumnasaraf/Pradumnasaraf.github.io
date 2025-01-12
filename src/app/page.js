@@ -7,9 +7,13 @@ import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 export default function Home() {
   // Define the handleClick function
-  const handleClick = () => {
+  const handleClickGitHub = () => {
     // Here you can define what happens when the button is clicked
     window.location.href = 'https://github.com/Pradumnasaraf';  // Example: redirect to GitHub
+  };  
+  const handleClickService = () => {
+    // Here you can define what happens when the button is clicked
+    window.location.href = './services';  // Example: redirect to GitHub
   };
   useEffect(() => {
       // Google Tag Manager Script
@@ -105,7 +109,9 @@ export default function Home() {
           <h2>Hello, I'm <span className="pradumna">Pradumna Saraf</span></h2>
           <p>Developer Advocate. Docker Captain. Open Source evangelism</p>
           <div className="ibutton">
-            <button className="connect" onClick={handleClick}>Let's Collaborate</button>
+            <button className="connect" onClick={handleClickGitHub}>Let's Collaborate</button>            
+            <button className="connect" onClick={handleClickService}>My Services</button>
+
           </div>
         </div>
         <div className="right">
