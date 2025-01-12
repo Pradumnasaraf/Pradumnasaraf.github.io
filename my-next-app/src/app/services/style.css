@@ -95,17 +95,18 @@
     text-align: center;
 }
 
-.service-box i {
+.icon-service{
     background-color: #2C3333;
-    color: white;
-    height: 8vh;
+    padding: 20px;
+    height: 8Vh;
     width: 8vh;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     font-size: 2.0em;
-    margin-bottom: 14px;
+    color: white;
+    border: 1px solid #2C3333;
 }
 
 .service-box p {
@@ -170,9 +171,10 @@
     background-color: #ffffff;
 }
 
-.quote-box i {
-    margin-top: 15px;
+.icon-quote {
+    margin-top: 10px;
     margin-bottom: 10px;
+    padding: 20px;
     height: 10Vh;
     width: 10vh;
     display: flex;
@@ -335,7 +337,7 @@ h3 {
 
 }
 
-.social-box i {
+.icon-stats {
     font-size: 3.0em;
     margin-bottom: 6px;
     color: white;   
@@ -426,13 +428,13 @@ h3 {
     flex-direction: row;
 }
 
-.social-handle>a>i {
+.icon-footer {
     font-size: 1.3em;
     color: #2C3333;
     text-decoration: none;
 }
 
-.social-handle i:hover {
+.icon-footer:hover {
     cursor: pointer;
     transition: 0.4s;
     opacity: 0.5;
