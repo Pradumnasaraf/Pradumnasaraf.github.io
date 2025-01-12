@@ -1,4 +1,4 @@
-// app/page.js
+'use client'
 import './style.css'
 import Head from 'next/head';
 import { useEffect } from 'react';
@@ -7,30 +7,82 @@ import { FaSuitcase, FaFeather, FaMicrophone, FaTerminal } from 'react-icons/fa'
 import Image from 'next/image';
 
 const ServicesPage = () => {
-    useEffect(() => {
-      // Google Tag Manager Script
-      const scriptGTM = document.createElement('script');
-      scriptGTM.innerHTML = `
-        (function (w, d, s, l, i) {
-          w[l] = w[l] || [];
-          w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js',
-          });
-          var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-          j.async = true;
-          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-          f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WRGLMZCX');
-      `;
-      document.head.appendChild(scriptGTM);
-  
-      return () => {
-        document.head.removeChild(scriptGTM);
-      };
-    }, []);
+  useEffect(() => {
+    // Google Tag Manager Script
+    const scriptGTM = document.createElement("script");
+    scriptGTM.innerHTML = `
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js',
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WRGLMZCX');
+    `;
+    document.head.appendChild(scriptGTM);
+
+    // Cal embed script
+    const scriptCal = document.createElement("script");
+    scriptCal.type = "text/javascript";
+    scriptCal.innerHTML = `
+      (function (C, A, L) { 
+        let p = function (a, ar) { a.q.push(ar); }; 
+        let d = C.document; 
+        C.Cal = C.Cal || function () { 
+          let cal = C.Cal; 
+          let ar = arguments; 
+          if (!cal.loaded) { 
+            cal.ns = {}; 
+            cal.q = cal.q || []; 
+            d.head.appendChild(d.createElement("script")).src = A; 
+            cal.loaded = true; 
+          } 
+          if (ar[0] === L) { 
+            const api = function () { p(api, arguments); }; 
+            const namespace = ar[1]; 
+            api.q = api.q || []; 
+            if (typeof namespace === "string") { 
+              cal.ns[namespace] = cal.ns[namespace] || api; 
+              p(cal.ns[namespace], ar); 
+              p(cal, ["initNamespace", namespace]); 
+            } else p(cal, ar); 
+            return; 
+          } 
+          p(cal, ar); 
+        }; 
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+
+      Cal("init", { origin: "https://cal.com" });
+      Cal("floatingButton", { 
+        calLink: "pradumnasaraf/30min", 
+        buttonText: "Let's chat", 
+        buttonColor: "#000000", 
+        hideButtonIcon: false, 
+        buttonPosition: "bottom-right" 
+      });
+      Cal("ui", { 
+        styles: { 
+          branding: { 
+            brandColor: "#000000" 
+          } 
+        }, 
+        hideEventTypeDetails: false, 
+        layout: "month_view" 
+      });
+    `;
+    document.body.appendChild(scriptCal);
+
+    return () => {
+      document.head.removeChild(scriptGTM);
+      document.body.removeChild(scriptCal);
+    };
+  }, []);
   return (
     <>
       <Head>

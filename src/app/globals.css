@@ -66,7 +66,7 @@ body {
 .socialmedia a {
   color: white;
   padding: 15px;
-  padding-bottom: 9px;
+  padding-bottom: 6.5px;
   margin-right: 12px;
   border-radius: 20px;
   border: 0.8px solid white;
@@ -79,10 +79,18 @@ body {
   color: #2e2e2d;
 }
 
-.left > h2,
-.left > p {
+.left > h2 {
   color: white;
   font-weight: 300;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.left > p{
+  color: white;
+  font-weight: 300;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 1.1em;
 }
 
 .connect {

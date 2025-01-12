@@ -158,9 +158,9 @@
 }
 
 .quote-box {
-    width: 16%;
+    width: 20%;
     padding: 10px;
-    height: 75%;
+    height: 70%;
     color: #2C3333;
     display: flex;
     flex-direction: column;
@@ -265,18 +265,20 @@ h3 {
 }
 
 .pkg-btn {
+    font-size: 1.1em;
     padding: 0px 8px;
-    margin-top: 5px;
+    margin-top: 15px;
     border-radius: 25px;
     border: 2px solid #2C3333;
     text-decoration: none;
     font-weight: 300;
-    color: #2C3333;
+    background-color: #2C3333;
+    color: white
 }
 
 .pkg-btn:hover {
-    background-color: #2C3333;
-    color: white;
+    background-color: white;
+    color: #2C3333;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -360,13 +362,13 @@ h3 {
 }
 
 .social-box-followers {
-    font-weight: 600;
+    font-weight: 400;
     color: gold;
     font-size: 1.6em;
 }
 
 .social-box-growth {
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: 300;
     margin: 6px;
 }
