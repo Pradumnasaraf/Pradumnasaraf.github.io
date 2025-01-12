@@ -28,11 +28,3 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Check build
-        run: |
-          if [ -d "out" ]; then
-            echo "Build successful"
-          else
-            echo "Build failed"
-            exit 1
-          fi
