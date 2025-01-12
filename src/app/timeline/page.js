@@ -122,7 +122,7 @@ const TimelinePage = () => {
         </div>        
         
         <div class="container left-container">
-            <img src="/timeline-logo/postman.jpg" alt="Postman"/>
+            <img src="/timeline-logo/postman.png" alt="Postman"/>
             <div class="text-box">
                 <a href="https://blog.postman.com/highlights-of-api-fest-2022/" class="source-button" aria-label="Postman">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -211,7 +211,7 @@ const TimelinePage = () => {
         </div>
         
         <div class="container left-container">
-            <img src="/timeline-logo/postman.jpg" alt="Postman"/>
+            <img src="/timeline-logo/postman.png" alt="Postman"/>
             <div class="text-box">
                 <a href="https://badgr.com/public/assertions/pwl4EICMTQm-YJwDCpKAGQ" class="source-button" aria-label="Postman Student Leader">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
