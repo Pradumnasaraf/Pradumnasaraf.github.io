@@ -66,9 +66,9 @@ body {
 .socialmedia a {
   color: white;
   padding: 15px;
-  padding-bottom: 6.5px;
+  padding-bottom: 7.5px;
   margin-right: 12px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 0.8px solid white;
   font-size: 1.7em; /* Ensure icons are large enough */
   transition: all 0.5s ease;
@@ -101,7 +101,7 @@ body {
   background-color: transparent;
   color: white;
   font-weight: 300;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 10px 0;
   font-size: 1.2rem;
   transition: all 0.5s ease;
@@ -127,7 +127,7 @@ body {
   width: 55%;
   height: 55%;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 10px;
   border: 1px solid white;
 }
 

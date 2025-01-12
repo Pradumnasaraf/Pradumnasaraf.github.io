@@ -295,7 +295,7 @@ const TimelinePage = () => {
         </div>
         
         <div class="container left-container">
-            <img src="/timeline-logo/linkedin.jpeg" alt="LinkedIn"/>
+            <img src="/timeline-logo/linkedin.png" alt="LinkedIn"/>
             <div class="text-box">
                 <a href="https://x.com/pradumna_saraf/status/1688376664445612032" class="source-button" aria-label="LinkedIn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

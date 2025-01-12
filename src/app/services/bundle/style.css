@@ -97,7 +97,7 @@
     align-items: center;
     text-align: center;
     border: 2px solid #eae7dc;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #ffffff;
 }
 
@@ -110,7 +110,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 25%;
+    border-radius: 10px;
     font-size: 2.0em;
     color: #2C3333;
     border: 2px solid #2C3333;
@@ -156,7 +156,7 @@ h3 {
     margin: 10px;
     background-color: transparent;
     padding: 6px 22px;
-    border-radius: 25px;
+    border-radius: 10px;
     border: 1px solid #ffffff;
     font-weight: 300;
     text-decoration: none;
