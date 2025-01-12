@@ -10,8 +10,8 @@ permissions:
   contents: read
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  release:
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Check out code
