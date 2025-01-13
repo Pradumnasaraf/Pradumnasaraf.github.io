@@ -3,8 +3,8 @@ const nextConfig = {
     async redirects() {
       return [
         {
-          source: '/hey',
-          destination: '/',
+          source: '/monitoring',
+          destination: 'https://Pradumnasaraf.github.io/Monitoring',
           permanent: true, // Permanent redirect (301)
         },
       ];

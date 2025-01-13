@@ -2,7 +2,8 @@
 import './style.css'
 import Head from 'next/head';
 import { useEffect } from 'react';
-import { FaTwitter, FaLinkedin, FaDev, FaGithub, FaEnvelope, FaSuitcase, FaFeather, FaMicrophone, FaTerminal, FaVideo, FaStackExchange } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaDev, FaGithub, FaEnvelope, FaSuitcase, FaFeather, FaMicrophone, FaTools, FaVideo, FaStackExchange } from 'react-icons/fa';
+import { BsPeopleFill } from "react-icons/bs";
 import { TbArticle } from "react-icons/tb";
 import Image from 'next/image';
 
@@ -169,14 +170,14 @@ const ServicesPage = () => {
                 </p>
               </div>
               <div className="service-box">
-                <FaTerminal className='icon-service' />
+                <FaTools className='icon-service' />
                 <h3 className="service-box-service">Build Products</h3>
                 <p className="service-box-desc">
                   Building products, tools, apps, etc for companies according to their needs.
                 </p>
               </div>
               <div className="service-box">
-                <FaFeather className='icon-service' />
+                <BsPeopleFill className='icon-service' />
                 <h3 className="service-box-service">Community</h3>
                 <p className="service-box-desc">
                   Building community around products and companies to scale up the product feedback
