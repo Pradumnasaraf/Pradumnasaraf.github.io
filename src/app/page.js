@@ -125,7 +125,7 @@ export default function Home() {
           <a href="https://github.com/Pradumnasaraf">
             <FaGithub />
           </a>
-          <a href="https://twitter.com/pradumnasaraf">
+          <a href="https://twitter.com/pradumna_saraf">
             <FaTwitter />
           </a>
           <a href="https://www.linkedin.com/in/pradumnasaraf/">
