@@ -1,0 +1,255 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #2C3333;
+}
+
+/* Timeline Title */
+.timeline-title {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 200;
+}
+
+/* Timeline Container */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    left: 50%;
+    top: 0; 
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 30s linear forwards;
+}
+
+/* Keyframes for Line Animation */
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+/* Timeline Item Container */
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+/* Keyframes for Container Animation */
+@keyframes movedown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Staggered Animation Delay for Each Container */
+.container:nth-child(1) { animation-delay: 0s; }
+.container:nth-child(2) { animation-delay: 1s; }
+.container:nth-child(3) { animation-delay: 2s; }
+.container:nth-child(4) { animation-delay: 3s; }
+.container:nth-child(5) { animation-delay: 4s; }
+.container:nth-child(6) { animation-delay: 5s; }
+.container:nth-child(7) { animation-delay: 6s; }
+.container:nth-child(8) { animation-delay: 7s; }
+.container:nth-child(9) { animation-delay: 8s; }
+.container:nth-child(10) { animation-delay: 9s; }
+.container:nth-child(11) { animation-delay: 10s; }
+.container:nth-child(12) { animation-delay: 11s; }
+.container:nth-child(13) { animation-delay: 12s; }
+.container:nth-child(14) { animation-delay: 13s; }
+.container:nth-child(15) { animation-delay: 14s; }
+.container:nth-child(16) { animation-delay: 15s; }
+.container:nth-child(17) { animation-delay: 16s; }
+.container:nth-child(18) { animation-delay: 17s; }
+.container:nth-child(19) { animation-delay: 18s; }
+.container:nth-child(20) { animation-delay: 19s; }
+.container:nth-child(21) { animation-delay: 20s; }
+.container:nth-child(22) { animation-delay: 21s; }
+.container:nth-child(23) { animation-delay: 22s; }
+.container:nth-child(24) { animation-delay: 23s; }
+.container:nth-child(25) { animation-delay: 24s; }
+.container:nth-child(26) { animation-delay: 26s; }
+.container:nth-child(27) { animation-delay: 27s; }
+.container:nth-child(28) { animation-delay: 28s; }
+.container:nth-child(29) { animation-delay: 29s; }
+.container:nth-child(30) { animation-delay: 30s; }
+
+/* Text Box Styles */
+.text-box {
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.text-box h2 {
+    font-weight: 350;
+    margin-bottom: 5px;
+    color: brown
+}
+
+.text-box small {
+    display: inline;
+    font-size: 14px;
+    font-weight: 350;
+}
+
+.text-box p {
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+/* Container Positioning */
+.left-container { left: 0; }
+.right-container { left: 50%; }
+
+/* Image Styles for Timeline Items */
+.container img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+    background-color: #fff;
+    border: 2px solid white
+}
+
+.right-container img {
+    left: -20px;
+}
+
+/* Arrow Indicators for Containers */
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+
+/* Source Button Styles */
+.source-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.source-button svg {
+    width: 16px; 
+    height: 16px; 
+}
+
+.source-button:hover {
+    color: brown;
+    border-color: brown
+}
+
+/* Responsive Styles for Mobile Devices */
+@media screen and (max-width: 600px) {
+    .timeline {
+        margin: 50px auto;
+    }
+
+    .timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .text-box {
+        font-size: 13px;
+    }
+
+    .text-box small {
+        margin-bottom: 10px;
+    }
+
+    .right-container {
+        left: 0;
+    }
+
+    .left-container img, .right-container img {
+        left: 10px;
+    }
+
+    .left-container-arrow, .right-container-arrow {
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+
+    .source-button {
+        bottom: 10px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .source-button svg {
+        width: 14px;
+        height: 14px;
+    }
+}

@@ -11,8 +11,11 @@
 
 #### Code
 
-- [HTML](https://www.w3schools.com/html/)
-- [CSS](https://www.w3schools.com/css/)
+- [Node.js](https://nodejs.org/en/)
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## 💥 How to Contribute
 

@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add to globals.css */
+@layer components {
+    .masonry-grid-item {
+      transition: transform 0.3s ease;
+    }
+    .masonry-grid-item:hover {
+      transform: scale(1.05);
+    }
+  }
+
+/* In your styles/globals.css or any relevant CSS file */
+body {
+  background-color: #f0f0f0; /* Light grey background color */
+  color: #333; /* Dark grey text color for contrast */
+  font-family: Arial, sans-serif; /* Update to your preferred font */
+}
+
+.page-container {
+  background-color: #ffffff; /* White background for the main content */
+  padding: 2rem; /* Adjust padding as needed */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
+/* In your styles/globals.css or any relevant CSS file */
+.my-masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  margin-left: -1rem; /* gutter size */
+  margin-right: -1rem; /* gutter size */
+}
+
+.my-masonry-grid_column {
+  padding-left: 0.1rem; /* gutter size */
+  padding-right: 0.65rem; /* gutter size */
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > img {
+  margin-bottom: 0.75rem; /* gutter size */
+}
+
+.my-masonry-grid img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.my-masonry-grid img:hover {
+  filter: grayscale(0%);
+}
