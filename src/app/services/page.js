@@ -2,8 +2,10 @@
 import './style.css'
 import Head from 'next/head';
 import { useEffect } from 'react';
-import { FaTwitter, FaLinkedin, FaDev, FaGithub, FaEnvelope, FaSuitcase, FaFeather, FaMicrophone, FaTerminal, FaVideo, FaStackExchange } from 'react-icons/fa';
-import { TbArticle } from "react-icons/tb";
+import { FaTwitter, FaLinkedin, FaDev, FaGithub, FaEnvelope, FaSuitcase, FaFeather, FaMicrophone, FaTools, FaVideo, FaStackExchange } from 'react-icons/fa';
+import { FaHashnode } from "react-icons/fa6";
+import { BsPeopleFill } from "react-icons/bs";
+import { MdArticle } from "react-icons/md";
 import Image from 'next/image';
 
 const ServicesPage = () => {
@@ -121,6 +123,9 @@ const ServicesPage = () => {
                 </a>
               </span>
               <span className="page-item">
+                <a href="https://pradumnasaraf.substack.com">Newsletter</a>
+              </span>
+              <span className="page-item">
                 <a aria-label="Contact me on my email" href="mailto:pradumnasaraf@gmail.com">
                   Contact
                 </a>
@@ -169,14 +174,14 @@ const ServicesPage = () => {
                 </p>
               </div>
               <div className="service-box">
-                <FaTerminal className='icon-service' />
+                <FaTools className='icon-service' />
                 <h3 className="service-box-service">Build Products</h3>
                 <p className="service-box-desc">
                   Building products, tools, apps, etc for companies according to their needs.
                 </p>
               </div>
               <div className="service-box">
-                <FaFeather className='icon-service' />
+                <BsPeopleFill className='icon-service' />
                 <h3 className="service-box-service">Community</h3>
                 <p className="service-box-desc">
                   Building community around products and companies to scale up the product feedback
@@ -228,7 +233,7 @@ const ServicesPage = () => {
                 <p className="quote-box-info">Draft before posting</p>
               </div>
               <div className="quote-box">
-                <TbArticle className='icon-quote' />
+                <MdArticle className='icon-quote' />
                 <h3 className="quote-box-title">Blog</h3>
                 <p className="quote-box-at">FROM</p>
                 <p className="quote-box-price">$500</p>
@@ -346,7 +351,7 @@ const ServicesPage = () => {
               </div>
               <div className="social-box">
                 <a href="https://blog.pradumnasaraf.dev" aria-label="Visit my Blog">
-                  <TbArticle className='icon-stats' />
+                  <FaHashnode className='icon-stats' />
                 </a>
                 <h3 className="social-box-social">Hashnode</h3>
                 <p className="social-box-followers">500+ Followers</p>

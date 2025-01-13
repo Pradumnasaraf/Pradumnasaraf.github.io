@@ -85,6 +85,9 @@ export default function Home() {
         <div className="pages">
           <span className="page-item">
             <a href="/services">Services</a>
+          </span>          
+          <span className="page-item">
+            <a href="https://pradumnasaraf.substack.com">Newsletter</a>
           </span>
           <span className="page-item">
             <a href="mailto:pradumnasaraf@gmail.com">Contact</a>

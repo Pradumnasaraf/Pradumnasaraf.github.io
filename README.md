@@ -1,19 +1,13 @@
-## Pradumna Saraf Portfolio
+### Pradumnasaraf.github.io
 
-This repository contains the source code for my portfolio website. It is built using HTML and CSS. It is hosted on GitHub Pages.
+This repository contains the source code for my personal/portfolio/service website. It is built Next.js and Tailwind CSS. The Code is 100% open source and available for anyone to use.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Pradumnasaraf/Pradumnasaraf.github.io)
+![website screenshot](https://github.com/user-attachments/assets/c4e1fdf8-49fd-4e2b-a66c-bb55e84e3e01)
 
-![Website Demo](https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/assets/51878265/0b330ade-1645-4005-b4fd-2f1aeb6a17bf)
-
-## 🌐 Website
-
-A custom domain name is used for the website. It is hosted on GitHub Pages. The website is accessible at [pradumnasaraf.dev](https://pradumnasaraf.dev/)
-
-## 🛡️ License
+### 📜 License
 
 **Pradumnasaraf.github.io** is licensed under the GPL-3.0 License - see the [LICENSE](/LICENSE) file for details.
 
-## 🤝 Support
+### 🛡 Security
 
-Don't forget to leave a star ⭐️
+If you discover a security vulnerability within this project, please check the [SECURITY](SECURITY.md) for more information.
