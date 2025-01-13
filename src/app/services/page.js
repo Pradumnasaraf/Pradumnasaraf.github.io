@@ -123,6 +123,9 @@ const ServicesPage = () => {
                 </a>
               </span>
               <span className="page-item">
+                <a href="https://pradumnasaraf.substack.com">Newsletter</a>
+              </span>
+              <span className="page-item">
                 <a aria-label="Contact me on my email" href="mailto:pradumnasaraf@gmail.com">
                   Contact
                 </a>
