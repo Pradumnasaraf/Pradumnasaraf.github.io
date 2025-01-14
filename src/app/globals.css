@@ -178,6 +178,9 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 800px) {
+  .nav {
+    padding: 0;
+  }
   .heading {
       flex-direction: column;
       flex-direction: column;
@@ -189,13 +192,13 @@ body {
 
   .left {
     width: 100%;
-    padding: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 5em;
+    padding-left: 5em;
     text-align: center;
   }
 
-  .left h2 {
-    padding: 1em 0;
-  }
 
   .left p {
     width: auto;
@@ -220,12 +223,12 @@ body {
 
   .nav {
     flex-direction: column;
-    margin: 1.5em 0;
+    margin: 1.0em 0;
   }
 
   .page-item {
     background: #2e2e2d;
-    padding: 0.2em;
+    padding: 0.5em;
     border: 1px solid white;
   }
 

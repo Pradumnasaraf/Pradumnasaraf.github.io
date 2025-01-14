@@ -6,6 +6,7 @@
 .main {
     background-color: white;
     font-family: 'Roboto', sans-serif;
+    background-color: #2C3333;
 }
 
 /************NAV************/
@@ -179,7 +180,8 @@ h3 {
     align-items: center;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    color: #2C3333
+    color: #2C3333;
+    background-color: #ffffff;
 }
 
 .do-title {
@@ -307,8 +309,6 @@ h3 {
         padding-top: 10px;
         flex-direction: column;
         padding-bottom: 10px;
-        ;
-
     }
 
     .nav p {
@@ -334,35 +334,28 @@ h3 {
         height: 100%;
         width: 80%;
         font-size: 0.7em;
-        margin-top: 10px;
-        ;
-        margin-bottom: 10px;
-        ;
-
+        margin-top: 10px;;
+        margin-bottom: 10px;;
     }
-
     .do-dont {
         height: 100%;
         width: 100%;
     }
-
     .do-body {
         height: 100%;
         width: 100%;
-    }
 
-    .do-title h1 {
+    }
+    .do-title h2 {
         font-size: 2.0em;
         width: 90%;
         font-weight: 300;
     }
-
     .footer {
         height: 100%;
         width: 100%;
         padding-bottom: 10px;
     }
-
     .social-handle {
         width: 60%;
         display: flex;
