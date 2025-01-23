@@ -56,7 +56,7 @@ const TimelinePage = () => {
             <h2>Featured on an Article with ShareIT COO</h2>
             <small>Sep, 2018</small>
             <p>
-              Tiger sniffing group from China wrote an article on ShareIt and I was featured in that article with the COO (Json Wang) of ShareIt. The article was about how ShareIt is helping people to share files without internet. The main article was published in China in Mandarin language.
+              One of China's leading publishers of tech news, Tiger sniffing group wrote an article on ShareIT and I was featured in that with the COO (Json Wang) of ShareIt. The article was about how ShareIT is helping people to share files without internet. The main article was published in China in Mandarin language.
             </p>
             <span className="right-container-arrow"></span>
           </div>
@@ -70,9 +70,9 @@ const TimelinePage = () => {
                         <path d="M7 17l10-10M17 17V7h-7"></path>
                     </svg>
                 </a>
-                <h2>Started Open Source Contribution</h2>
+                <h2>Started Open Source</h2>
                 <small>July, 2021</small>
-                <p>Started my Open Source Journey by contributing to various projects on GitHub. It all started with fixing typos, broken links and documentation.</p>
+                <p>It all started with a website asking for a GitHub profile and I didn't know what it's all about. Then I did into it and started contributing to open source. I started with fixing typos, broken links and documentation.</p>
                 <span class="left-container-arrow"></span>
             </div>
         </div>
@@ -85,9 +85,9 @@ const TimelinePage = () => {
                         <path d="M7 17l10-10M17 17V7h-7"></path>
                     </svg>
                 </a>
-                <h2>EddieHub Maintainer</h2>
+                <h2>Open Source Maintainer</h2>
                 <small>Aug, 2021</small>
-                <p> This was my first experience as a maintainer. I became a maintainer at EddieHub because I was contributing to the community and helping others on the GitHub Org as well as Discord.</p>
+                <p> This was my first experience as a maintainer. I became a maintainer at EddieHub because I was contributing to the community projects and helping others on the GitHub Org as well as Discord.</p>
                 <span class="right-container-arrow"></span>
             </div>
         </div>        
@@ -117,7 +117,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>Delivered my first talk</h2>
                 <small>Jan, 2022</small>
-                <p> First time I got invite to deliver a talk on open source and how to get started with it. It was virtually and the fact that I delivered the talk via my $100 phone because laptop mic and camera was broken and battery don't work. Check the link for the phone screenshot I posted on Twitter.</p>
+                <p> First time I got invite to deliver a talk. It was on open source and how to get started with it. It was virtually and the fact that I delivered the talk via my $100 phone because laptop mic and camera was broken and battery don't work. Check the link for the phone screenshot I posted on Twitter.</p>
                 <span class="right-container-arrow"></span>
             </div>
         </div>        
@@ -132,7 +132,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>Won Postman Hackathon</h2>
                 <small>Jan, 2022</small>
-                <p> Postman Hosted a hackathon called API Fest 2022. I with a team of two build a fully functional API from scratch using Node.js and MongoDB. We won the hackathon and got a chance to present our project to the Postman team.</p>
+                <p> Postman Hosted a hackathon called API Fest 2022. I with a team of two, we build a fully functional API from scratch using Node.js and MongoDB. We won the hackathon and got a chance to present our project to the Postman team.</p>
                 <span class="left-container-arrow"></span>
             </div>
         </div>          
@@ -162,7 +162,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>"Open Source with Pradumna"</h2>
                 <small>April, 2022</small>
-                <p>Open Source With Pradumna started as a 15-day bootcamp of Twitter post (Threads) where I was sharing my journey of open source and how to get started with open source. This was my life turning point. Fun fact: It all started from no where. I was in the bed rest as I screwed my food with a bike accident and have nothing to do. After this my social media presence blew up.</p>
+                <p>Open Source With Pradumna started as a 15-day bootcamp of Twitter post (Threads) where I was sharing my journey of open source and how to get started with it. This was a turning point for me. Fun fact: It all started from no where. I was in the bed rest as I screwed my food with a bike accident and have nothing to do. After this my social media presence grow and a lot people started knowing me.</p>
                 <span class="left-container-arrow"></span>
             </div>
         </div>        
@@ -192,7 +192,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>EddieHub Ambassador</h2>
                 <small>April, 2022</small>
-                <p> After contributing to the EddieHub community for a while and passionate about open source, I was selected as an EddieHub Ambassador. There were only 7 ambassadors at that time. I retained my position as an ambassador for next batch as well.</p>
+                <p> As I was contributing to the EddieHub community for a while and passionate about open source, I was selected as an EddieHub Ambassador. There were only 7 ambassadors at that time. I retained my position as an ambassador for next batch as well.</p>
                 <span class="left-container-arrow"></span>
             </div>
         </div>
@@ -236,7 +236,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>First GitHub Sponsor</h2>
                 <small>July, 2022</small>
-                <p> I got my first GitHub sponsor. This feeling was bit overwhelming because I never expected that someone would sponsor me for my work. Can't disclose the name of the sponsor.</p>
+                <p> I got my first GitHub sponsor. This feeling was bit overwhelming because I never expected that someone would sponsor me for my work. They were super generous and sponsored me.</p>
                 <span class="right-container-arrow"></span>
             </div>
         </div>       
@@ -246,7 +246,7 @@ const TimelinePage = () => {
             <div class="text-box">
                 <h2>First Freelancing Gig</h2>
                 <small>Oct, 2022</small>
-                <p> I got my first freelancing gig from a open source cloud company. It was a Sponsored post on my Twitter account. The gig was about sharing about their open source project.</p>
+                <p> I got my first freelancing gig from a open source cloud company. It was a Sponsored post on my Twitter account. The gig was about sharing about their open source project. This is time I realized that I can make money from my social media presence.</p>
                 <span class="left-container-arrow"></span>
             </div>
         </div>
@@ -261,7 +261,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>10K Followers on Twitter</h2>
                 <small>Oct, 2022</small>
-                <p> I reached 10K followers on Twitter. I was regularly posting about open source and learning I was doing.</p>
+                <p> I reached 10K followers on Twitter. I was regularly posting about open source and learning I was doing. It was a great milestone for me.</p>
                 <span class="right-container-arrow"></span>
             </div>
         </div>
@@ -276,7 +276,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>Kubernetes and SIGs Org Member</h2>
                 <small>Dec, 2022</small>
-                <p> I became a member of Kubernetes and Kubernetes SIGs GitHub Org. I was contributing to the Kubernetes Website project and helping in the area of documentation.</p>
+                <p> I became a member of Kubernetes and Kubernetes SIGs GitHub Org. I was contributing to the Kubernetes Website project and helping in the area of documentation, triaging issues and PRs.</p> 
                 <span class="left-container-arrow"></span>
             </div>
         </div>   
@@ -335,7 +335,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>Delivered my first conference talk</h2>
                 <small>Aug, 2023</small>
-                <p> I delivered my first conference talk at Web3Conf. I talked about how how to get started with open source and how to maintain a open source software being a maintainer.</p>
+                <p> I delivered my first conference talk at Web3Conf. I talked about how how to get started with open source and how to maintain a open source software being a maintainer. Room was almost houseful and it was a unforgettable experience.</p>
                 <span class="left-container-arrow"></span>
             </div>
         </div>
@@ -380,7 +380,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>100K Views on dev.to My Articles</h2>
                 <small>Jan, 2024</small>
-                <p> I reached 100K views on my articles on Dev.to. Total views including other platforms are 135K. I mostly write about open source devops and everything in between. And got this many views just after writing 10-12 articles.</p>
+                <p> I never though people would be interested in reading my articles. I reached 100K views on my articles on Dev.to. Total views including other platforms are 135K. I mostly write about open source devops and everything in between. And got this many views just after writing 10-12 articles. </p>
                 <span class="right-container-arrow"></span>
             </div>
         </div>        
@@ -440,7 +440,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>Docker Captain</h2>
                 <small>July, 2024</small>
-                <p>I was recognized as a Docker Captain for my contributions to the Docker community. This is a huge achievement as a Docker finatic. I work closely with different teams at Docker to improve the product and help the community.</p>
+                <p>It was a long time coming. I was recognized as a Docker Captain for my contributions to the Docker community. This is a huge achievement as a Docker finatic. I work closely with different teams at Docker to improve the product and help the community.</p>
                 <span class="right-container-arrow"></span>
             </div>
         </div>  
@@ -452,7 +452,7 @@ const TimelinePage = () => {
                         <path d="M7 17l10-10M17 17V7h-7"></path>
                     </svg>
                 </a>
-                <h2>Working with Official Docker Docs team</h2>
+                <h2>Part of Docker Official Docs team</h2>
                 <small>August, 2024</small>
                 <p> I was invited to official Docker docs team as a Docker Captain. I am one of few people who are working on the official Docker docs. I am helping the team to improve the docs, adding language-specific guides, how-to guides and more.</p>
                 <span class="left-container-arrow"></span>
@@ -483,7 +483,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>Delivered a talk at Linux Foundation event</h2>
                 <small>Dec, 2024</small>
-                <p> I delivered a talk at the SOSS Community Day, India (KubeCon India), hosted by the Linux Foundation/CNCF. This was the first event of its kind in India. I delivered a talk on Software Supply Chain Security and how to improve it by using Docker Scout in the CI/CD pipeline.</p>
+                <p> I delivered a talk at the SOSS Community Day, India (KubeCon India), hosted by the Linux Foundation/CNCF. This was the first event of its kind in India. I delivered a talk on Software Supply Chain Security and how to improve it by using Docker Scout in the CI/CD pipeline. Withough any doubt, this was the best talk I have ever delivered.</p>
                 <span class="left-container-arrow"></span>
             </div>
         </div>  
