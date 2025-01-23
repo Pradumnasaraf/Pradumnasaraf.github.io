@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 
 const Page = () => {
   useEffect(() => {
+    document.title = 'Pradumna Saraf | Payments'; // Set the document title
     // Load Docsify script
     const scriptDocsify = document.createElement('script');
     scriptDocsify.src = '//cdn.jsdelivr.net/npm/docsify@4';

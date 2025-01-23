@@ -16,6 +16,7 @@ export default function Home() {
     window.location.href = './services';  // Example: redirect to GitHub
   };
   useEffect(() => {
+      document.title = 'Pradumna Saraf | Home'; // Set the document
       // Google Tag Manager Script
       const scriptGTM = document.createElement('script');
       scriptGTM.innerHTML = `
@@ -77,7 +78,6 @@ export default function Home() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
         />
-        <title>Pradumna Saraf | Home</title>
       </Head>
 
       <div className="nav">

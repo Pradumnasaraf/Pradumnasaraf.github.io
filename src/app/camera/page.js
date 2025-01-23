@@ -102,6 +102,7 @@ export default function Home() {
   };
 
   useEffect(() => {
+    document.title = 'Pradumna Saraf | Photography'; // Set the document title
     // Google Tag Manager Script
     const scriptGTM = document.createElement('script');
     scriptGTM.innerHTML = `

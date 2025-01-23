@@ -10,6 +10,8 @@ import Image from 'next/image';
 
 const ServicesPage = () => {
   useEffect(() => {
+    // Set the document title
+    document.title = 'Pradumna Saraf | Services';
     // Google Tag Manager Script
     const scriptGTM = document.createElement("script");
     scriptGTM.innerHTML = `

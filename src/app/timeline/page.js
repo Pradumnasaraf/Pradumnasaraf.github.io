@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 
 const TimelinePage = () => {
   useEffect(() => {
+    document.title = 'Pradumna Saraf | Timeline'; // Set the document title
     // Google Tag Manager Script
     const scriptGTM = document.createElement('script');
     scriptGTM.innerHTML = `

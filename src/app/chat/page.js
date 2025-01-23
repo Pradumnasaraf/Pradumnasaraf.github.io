@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 
 const ScheduleMeetingPage = () => {
   useEffect(() => {
+    document.title = 'Pradumna Saraf | Schedule a Meeting'; // Set the document title
     // Google Tag Manager Script
     const script = document.createElement('script');
     script.innerHTML = `

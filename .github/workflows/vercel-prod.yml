@@ -9,6 +9,8 @@ on:
 jobs:
   release:
     runs-on: ubuntu-24.04
+    environment: 
+      name: production
     steps:
       - uses: actions/checkout@v4
       - name: Install Vercel CLI

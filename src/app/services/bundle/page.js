@@ -7,6 +7,7 @@ import{ FaTwitter, FaGithub, FaLinkedin, FaVideo, FaShare, FaStackExchange } fro
 
 export default function BundlePage() {
   useEffect(() => {
+    document.title = 'Pradumna Saraf | Services'; // Set the document title
     // Google Tag Manager Script
     const scriptGTM = document.createElement('script');
     scriptGTM.innerHTML = `
