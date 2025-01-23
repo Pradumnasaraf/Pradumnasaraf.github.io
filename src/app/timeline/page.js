@@ -117,7 +117,7 @@ const TimelinePage = () => {
                 </a>
                 <h2>Delivered my first talk</h2>
                 <small>Jan, 2022</small>
-                <p> First time I got invite to deliver a talk on open source and how to get started with open source. It was virtually and the fact that I delivered the talk via my $100 phone because laptop was having no mic and camera. Check the link for the phone screenshot I posted on Twitter.</p>
+                <p> First time I got invite to deliver a talk on open source and how to get started with it. It was virtually and the fact that I delivered the talk via my $100 phone because laptop mic and camera was broken and battery don't work. Check the link for the phone screenshot I posted on Twitter.</p>
                 <span class="right-container-arrow"></span>
             </div>
         </div>        
