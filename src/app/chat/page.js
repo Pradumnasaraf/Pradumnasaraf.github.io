@@ -1,5 +1,8 @@
 "use client";
 import React, { useEffect } from 'react';
+import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
+import Head from 'next/head';
+
 
 const ScheduleMeetingPage = () => {
   useEffect(() => {
@@ -72,17 +75,54 @@ const ScheduleMeetingPage = () => {
 
   return (
     <div>
-      <head>
+      <Head>
         <link
           rel="icon"
           href="https://user-images.githubusercontent.com/51878265/194138074-7a341083-e80e-49d9-8e58-02882b26d3d9.png"
         />
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Schedule a Meeting</title>
-      </head>
-
-      <div style={{ width: '100vw', height: '100vh', overflow: 'scroll', backgroundColor: 'white', padding: '30px' }} id="my-cal-inline"></div>
+      </Head>
+      <body>
+      <div className="main">
+        {/* NAVIGATION */}
+        <div className="nav">
+            <p>PRADUMNA SARAF</p>
+            <div className="pages">
+              <span className="page-item">
+                <a aria-label="Visit my Home page" href="/">
+                  Home
+                </a>
+              </span>
+              <span className="page-item">
+                <a href="https://pradumnasaraf.substack.com">Newsletter</a>
+              </span>
+              <span className="page-item">
+                <a aria-label="My Services" href="/services">
+                  Services
+                </a>
+              </span>
+            </div>
+          </div>
+          {/* FOOTER */}
+        </div>
+        <div style={{ width: '100vw', height: '82vh', overflow: 'scroll', backgroundColor: '#2C3333', padding: '30px' }} id="my-cal-inline"></div>
+        <div className="footer">
+          <div className="social-handle">
+            <a aria-label="Visit my Twitter profile" href="https://twitter.com/pradumna_saraf">
+              <FaTwitter className='icon-footer' />
+            </a>
+            <a aria-label="Visit my GitHub profile" href="https://github.com/Pradumnasaraf">
+              <FaGithub className='icon-footer' />
+            </a>
+            <a aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/pradumnasaraf/">
+              <FaLinkedin className='icon-footer' />
+            </a>
+          </div>
+      </div>
+    </body>
     </div>
   );
 };
