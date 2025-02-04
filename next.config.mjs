@@ -26,11 +26,6 @@ const nextConfig = {
           source: '/blog',
           destination: 'https://blog.pradumnasaraf.dev',
           permanent: true,
-        },
-        {
-          source: '/contact',
-          destination: 'mailto:pradumnasaraf@gmail.com',
-          permanent: true,
         }
       ]
     },
