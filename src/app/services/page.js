@@ -332,7 +332,7 @@ const ServicesPage = () => {
                   <FaTwitter className='icon-stats' />
                 </a>
                 <h3 className="social-box-social">X (Twitter)</h3>
-                <p className="social-box-followers">36K+ Followers</p>
+                <p className="social-box-followers">37K+ Followers</p>
                 <p className="social-box-growth">1k+ new monthly followers</p>
               </div>
               <div className="social-box">
@@ -340,7 +340,7 @@ const ServicesPage = () => {
                   <FaLinkedin className='icon-stats' />
                 </a>
                 <h3 className="social-box-social">LinkedIn</h3>
-                <p className="social-box-followers">13K+ Followers</p>
+                <p className="social-box-followers">14K+ Followers</p>
                 <p className="social-box-growth">2k+ new monthly followers</p>
               </div>
               <div className="social-box">
@@ -348,7 +348,7 @@ const ServicesPage = () => {
                   <FaDev className='icon-stats' />
                 </a>
                 <h3 className="social-box-social">Dev.to</h3>
-                <p className="social-box-followers">13K+ Followers</p>
+                <p className="social-box-followers">14K+ Followers</p>
                 <p className="social-box-growth">155k+ Views</p>
               </div>
               <div className="social-box">
