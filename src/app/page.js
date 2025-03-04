@@ -78,6 +78,7 @@ export default function Home() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
         />
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet"></link>
       </Head>
 
       <div className="nav">
@@ -110,7 +111,7 @@ export default function Home() {
             </a>
           </div>
           <h2>Hello, I'm <span className="pradumna">Pradumna Saraf</span></h2>
-          <p>Developer Advocate. Docker Captain. Open Source evangelism</p>
+          <p>Developer Advocate. Docker Captain. Open Source evangelism. Owner <a href="https://github.com/rebasemedia">@ rebase media</a></p>
           <div className="ibutton">
             <button className="connect" onClick={handleClickGitHub}>Let's Collaborate</button>            
             <button className="connect" onClick={handleClickService}>My Services</button>
