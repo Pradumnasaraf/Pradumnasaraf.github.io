@@ -349,7 +349,7 @@ const ServicesPage = () => {
                 </a>
                 <h3 className="social-box-social">Dev.to</h3>
                 <p className="social-box-followers">14K+ Followers</p>
-                <p className="social-box-growth">155k+ Views</p>
+                <p className="social-box-growth">160k+ Views</p>
               </div>
               <div className="social-box">
                 <a href="https://blog.pradumnasaraf.dev" aria-label="Visit my Blog">
@@ -365,7 +365,7 @@ const ServicesPage = () => {
                 </a>
                 <h3 className="social-box-social">Newsletter</h3>
                 <p className="social-box-followers">150+ Subscribers</p>
-                <p className="social-box-growth">25% new monthly subscribers</p>
+                <p className="social-box-growth">35% Open Rate</p>
               </div>
             </div>
           </div>

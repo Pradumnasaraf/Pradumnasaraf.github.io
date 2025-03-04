@@ -16,7 +16,7 @@ export default function Home() {
     window.location.href = './services';  // Example: redirect to GitHub
   };
   useEffect(() => {
-      document.title = 'Pradumna Saraf | Home'; // Set the document
+      document.title = 'Pradumna Saraf'; // Set the document
       // Google Tag Manager Script
       const scriptGTM = document.createElement('script');
       scriptGTM.innerHTML = `
