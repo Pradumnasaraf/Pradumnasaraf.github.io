@@ -7,6 +7,7 @@ import { FaHashnode } from "react-icons/fa6";
 import { BsPeopleFill } from "react-icons/bs";
 import { MdArticle } from "react-icons/md";
 import Image from 'next/image';
+import Link from "next/link";
 
 const ServicesPage = () => {
   useEffect(() => {
@@ -120,17 +121,17 @@ const ServicesPage = () => {
             <p>PRADUMNA SARAF</p>
             <div className="pages">
               <span className="page-item">
-                <a aria-label="Visit my Home page" href="/">
+                <Link aria-label="Visit my Home page" href="/">
                   Home
-                </a>
+                </Link>
               </span>
               <span className="page-item">
-                <a href="https://pradumnasaraf.substack.com">Newsletter</a>
+                <Link href="https://pradumnasaraf.substack.com">Newsletter</Link>
               </span>
               <span className="page-item">
-                <a aria-label="Contact me on my email" href="mailto:pradumnasaraf@gmail.com">
+                <Link aria-label="Contact me on my email" href="mailto:pradumnasaraf@gmail.com">
                   Contact
-                </a>
+                </Link>
               </span>
             </div>
           </div>
@@ -145,8 +146,8 @@ const ServicesPage = () => {
                 <FaSuitcase className='icon-service' />
                 <h3 className="service-box-service">DevRel As A Service</h3>
                 <p className="service-box-desc">
-                  Working as a "Freelance Developer Relations" for companies to help them grow their
-                  community and product.
+                  {`Working as a "Freelance Developer Relations" for companies to help them grow their
+                  community and product.`}
                 </p>
               </div>
               <div className="service-box">
@@ -210,9 +211,9 @@ const ServicesPage = () => {
                 <p className="quote-box-info">Per Post</p>
                 <p className="quote-box-info">Twitter / LinkedIn</p>
                 <p className="quote-box-info">Graphics Included</p>
-                <a className="pkg-btn" aria-label="Get a package" href="./services/bundle">
+                <Link className="pkg-btn" aria-label="Get a package" href="./services/bundle">
                   <p>Package Available</p>
-                </a>
+                </Link>
               </div>
               <div className="quote-box">
                 <FaStackExchange className='icon-quote' />
@@ -245,12 +246,12 @@ const ServicesPage = () => {
               </div>
             </div>
             <div className="btn-box">
-              <a className="get-btn" href="./services/bundle" aria-label="Get a package">
+              <Link className="get-btn" href="./services/bundle" aria-label="Get a package">
                 <p>PACKAGES</p>
-              </a>
-              <a className="enq-btn" href="../chat" aria-label="chat about services">
-                <p>Let's Chat</p>
-              </a>
+              </Link>
+              <Link className="enq-btn" href="../chat" aria-label="chat about services">
+                <p>{`Let's Chat`}</p>
+              </Link>
             </div>
           </div>
 
@@ -328,41 +329,41 @@ const ServicesPage = () => {
             </div>
             <div className="social">
               <div className="social-box">
-                <a href="https://twitter.com/pradumna_saraf" aria-label="Visit my Twitter profile">
+                <Link href="https://twitter.com/pradumna_saraf" aria-label="Visit my Twitter profile">
                   <FaTwitter className='icon-stats' />
-                </a>
+                </Link>
                 <h3 className="social-box-social">X (Twitter)</h3>
                 <p className="social-box-followers">37K+ Followers</p>
                 <p className="social-box-growth">1k+ new monthly followers</p>
               </div>
               <div className="social-box">
-                <a href="http://linkedin.com/in/pradumnasaraf" aria-label="Visit my LinkedIn profile">
+                <Link href="http://linkedin.com/in/pradumnasaraf" aria-label="Visit my LinkedIn profile">
                   <FaLinkedin className='icon-stats' />
-                </a>
+                </Link>
                 <h3 className="social-box-social">LinkedIn</h3>
                 <p className="social-box-followers">14K+ Followers</p>
                 <p className="social-box-growth">2k+ new monthly followers</p>
               </div>
               <div className="social-box">
-                <a href="https://dev.to/pradumnasaraf" aria-label="Visit my Dev.to profile">
+                <Link href="https://dev.to/pradumnasaraf" aria-label="Visit my Dev.to profile">
                   <FaDev className='icon-stats' />
-                </a>
+                </Link>
                 <h3 className="social-box-social">Dev.to</h3>
                 <p className="social-box-followers">14K+ Followers</p>
                 <p className="social-box-growth">160k+ Views</p>
               </div>
               <div className="social-box">
-                <a href="https://blog.pradumnasaraf.dev" aria-label="Visit my Blog">
+                <Link href="https://blog.pradumnasaraf.dev" aria-label="Visit my Blog">
                   <FaHashnode className='icon-stats' />
-                </a>
+                </Link>
                 <h3 className="social-box-social">Hashnode</h3>
                 <p className="social-box-followers">500+ Followers</p>
                 <p className="social-box-growth">40k+ Views</p>
               </div>
               <div className="social-box">
-                <a href="https://newsletter.pradumnasaraf.dev" aria-label="Visit my Newsletter">
+                <Link href="https://newsletter.pradumnasaraf.dev" aria-label="Visit my Newsletter">
                   <FaEnvelope className='icon-stats' />
-                </a>
+                </Link>
                 <h3 className="social-box-social">Newsletter</h3>
                 <p className="social-box-followers">150+ Subscribers</p>
                 <p className="social-box-growth">35% Open Rate</p>
@@ -373,15 +374,15 @@ const ServicesPage = () => {
           {/* FOOTER */}
           <div className="footer">
             <div className="social-handle">
-              <a aria-label="Visit my Twitter profile" href="https://twitter.com/pradumna_saraf">
+              <Link aria-label="Visit my Twitter profile" href="https://twitter.com/pradumna_saraf">
                 <FaTwitter className='icon-footer' />
-              </a>
-              <a aria-label="Visit my GitHub profile" href="https://github.com/Pradumnasaraf">
+              </Link>
+              <Link aria-label="Visit my GitHub profile" href="https://github.com/Pradumnasaraf">
                 <FaGithub className='icon-footer' />
-              </a>
-              <a aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/pradumnasaraf/">
+              </Link>
+              <Link aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/pradumnasaraf/">
                 <FaLinkedin className='icon-footer' />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

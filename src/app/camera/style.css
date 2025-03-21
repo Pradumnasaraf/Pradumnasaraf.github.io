@@ -47,10 +47,8 @@ body {
 }
 
 .my-masonry-grid img {
-  filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .my-masonry-grid img:hover {
-  filter: grayscale(0%);
 }
