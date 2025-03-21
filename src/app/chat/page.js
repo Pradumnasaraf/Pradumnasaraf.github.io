@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Head from 'next/head';
+import Link from "next/link";
 
 
 const ScheduleMeetingPage = () => {
@@ -92,17 +93,17 @@ const ScheduleMeetingPage = () => {
             <p>PRADUMNA SARAF</p>
             <div className="pages">
               <span className="page-item">
-                <a aria-label="Visit my Home page" href="/">
+                <Link aria-label="Visit my Home page" href="/">
                   Home
-                </a>
+                </Link>
               </span>
               <span className="page-item">
-                <a href="https://pradumnasaraf.substack.com">Newsletter</a>
+                <Link href="https://pradumnasaraf.substack.com">Newsletter</Link>
               </span>
               <span className="page-item">
-                <a aria-label="My Services" href="/services">
+                <Link aria-label="My Services" href="/services">
                   Services
-                </a>
+                </Link>
               </span>
             </div>
           </div>
@@ -111,15 +112,15 @@ const ScheduleMeetingPage = () => {
         <div style={{ width: '100vw', height: '82vh', overflow: 'scroll', backgroundColor: '#2C3333', padding: '30px' }} id="my-cal-inline"></div>
         <div className="footer">
           <div className="social-handle">
-            <a aria-label="Visit my Twitter profile" href="https://twitter.com/pradumna_saraf">
+            <Link aria-label="Visit my Twitter profile" href="https://twitter.com/pradumna_saraf">
               <FaTwitter className='icon-footer' />
-            </a>
-            <a aria-label="Visit my GitHub profile" href="https://github.com/Pradumnasaraf">
+            </Link>
+            <Link aria-label="Visit my GitHub profile" href="https://github.com/Pradumnasaraf">
               <FaGithub className='icon-footer' />
-            </a>
-            <a aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/pradumnasaraf/">
+            </Link>
+            <Link aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/pradumnasaraf/">
               <FaLinkedin className='icon-footer' />
-            </a>
+            </Link>
           </div>
       </div>
     </body>

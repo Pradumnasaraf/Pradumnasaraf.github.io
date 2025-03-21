@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 
 import { useEffect } from 'react';  
 import './globals.css';  
@@ -85,13 +86,13 @@ export default function Home() {
         <p>PRADUMNA SARAF</p>
         <div className="pages">
           <span className="page-item">
-            <a href="/services">Services</a>
+            <Link href="/services">Services</Link>
           </span>          
           <span className="page-item">
-            <a href="https://pradumnasaraf.substack.com">Newsletter</a>
+            <Link href="https://pradumnasaraf.substack.com">Newsletter</Link>
           </span>
           <span className="page-item">
-            <a href="mailto:pradumnasaraf@gmail.com">Contact</a>
+            <Link href="mailto:pradumnasaraf@gmail.com">Contact</Link>
           </span>
         </div>
       </div>
@@ -100,20 +101,20 @@ export default function Home() {
         <div className="left">
           <div className="socialmedia">
             {/* Using React Icons */}
-            <a href="https://github.com/Pradumnasaraf">
+            <Link href="https://github.com/Pradumnasaraf">
               <FaGithub />
-            </a>
-            <a href="https://twitter.com/pradumna_saraf">
+            </Link>
+            <Link href="https://twitter.com/pradumna_saraf">
               <FaTwitter />
-            </a>
-            <a href="https://www.linkedin.com/in/pradumnasaraf/">
+            </Link>
+            <Link href="https://www.linkedin.com/in/pradumnasaraf/">
               <FaLinkedin />
-            </a>
+            </Link>
           </div>
-          <h2>Hello, I'm <span className="pradumna">Pradumna Saraf</span></h2>
-          <p>Developer Advocate. Docker Captain. Open Source evangelism. Owner <a href="https://github.com/rebasemedia">@ rebase media</a></p>
+          <h2>{`Hello, I'm`} <span className="pradumna">Pradumna Saraf</span></h2>
+          <p>Developer Advocate. Docker Captain. Open Source evangelism. Owner <Link href="https://github.com/rebasemedia">@ rebase media</Link></p>
           <div className="ibutton">
-            <button className="connect" onClick={handleClickGitHub}>Let's Collaborate</button>            
+            <button className="connect" onClick={handleClickGitHub}>{`Let's Collaborate`}</button>            
             <button className="connect" onClick={handleClickService}>My Services</button>
 
           </div>
@@ -126,15 +127,15 @@ export default function Home() {
       <div className="footer">
         <div className="social-handle">
           {/* Using React Icons */}
-          <a href="https://github.com/Pradumnasaraf">
+          <Link href="https://github.com/Pradumnasaraf">
             <FaGithub />
-          </a>
-          <a href="https://twitter.com/pradumna_saraf">
+          </Link>
+          <Link href="https://twitter.com/pradumna_saraf">
             <FaTwitter />
-          </a>
-          <a href="https://www.linkedin.com/in/pradumnasaraf/">
+          </Link>
+          <Link href="https://www.linkedin.com/in/pradumnasaraf/">
             <FaLinkedin />
-          </a>
+          </Link>
         </div>
       </div>
     </>

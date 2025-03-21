@@ -98,7 +98,7 @@ export default function BundlePage() {
         </div>
         <div className="btn-box">
           <Link className="get-btn" aria-label="chat about services" href="/chat">
-            <p>Let's Chat</p>
+            <p>{`Let's Chat`}</p>
           </Link>
         </div>
         <div className="quote-body">
@@ -137,7 +137,7 @@ export default function BundlePage() {
 
       <div className="do-dont">
         <div className="do-title">
-          <h2>Conditions + Do's and Don'ts</h2>
+          <h2>{`Conditions + Do's and Don'ts`}</h2>
         </div>
         <div className="do-body">
           <div className="child-box">
@@ -147,8 +147,8 @@ export default function BundlePage() {
             <p className="pointer">◾ Approval before posting - Draft</p>
           </div>
           <div className="child-box">
-            <h3 className="do-head">Won't do:</h3>
-            <p className="pointer">◾ No 'salesy' and Exclusive language</p>
+            <h3 className="do-head">{`Won't do:`}</h3>
+            <p className="pointer">{`◾ No 'salesy' and Exclusive language`}`</p>
             <p className="pointer">◾ No defaming competitors</p>
             <p className="pointer">◾ No controversial graphics</p>
             <p className="pointer">◾ No promotion for bad product/project</p>
@@ -158,15 +158,15 @@ export default function BundlePage() {
 
       <div className="footer">
         <div className="social-handle">
-          <a aria-label="Visit my Twitter profile" href="https://twitter.com/pradumna_saraf">
+          <Link aria-label="Visit my Twitter profile" href="https://twitter.com/pradumna_saraf">
             <FaTwitter className='icon-footer'/>
-          </a>
-          <a aria-label="Visit my GitHub profile" href="https://github.com/Pradumnasaraf">
+          </Link>
+          <Link aria-label="Visit my GitHub profile" href="https://github.com/Pradumnasaraf">
             <FaGithub className='icon-footer'/>
-          </a>
-          <a aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/pradumnasaraf/">
+          </Link>
+          <Link aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/pradumnasaraf/">
             <FaLinkedin className='icon-footer'/>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
