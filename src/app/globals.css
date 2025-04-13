@@ -72,15 +72,15 @@ body {
 .socialmedia {
   margin: 35px 0;
   display: flex;
-  gap: 15px;
+  gap: 16px;
 }
 
 .socialmedia a {
   color: #333333;
-  padding: 12px;
+  padding: 14px;
   border-radius: 8px;
-  border: 0.8px solid #333333;
-  font-size: 1.5em;
+  border: 1px solid #333333;
+  font-size: 1.6em;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -90,22 +90,24 @@ body {
 .socialmedia a:hover {
   background-color: #333333;
   color: #ffffff;
+  transform: translateY(-2px);
 }
 
 .left > h2 {
   color: #333333;
   font-weight: 400;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 2rem;
   letter-spacing: -0.02em;
 }
 
 .left > p {
   color: #666666;
   font-weight: 300;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
   letter-spacing: -0.01em;
 }
 
@@ -117,19 +119,19 @@ body {
 
 .ibutton {
   display: flex;
-  gap: 15px;
-  margin-top: 25px;
+  gap: 16px;
+  margin-top: 30px;
 }
 
 .connect {
   font-family: 'League Spartan', sans-serif;
-  padding: 12px 24px;
+  padding: 14px 28px;
   border: 1px solid #000000;
   background-color: #ffffff;
   color: #000000;
   font-weight: 300;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   white-space: nowrap;
   letter-spacing: 0;
@@ -138,8 +140,7 @@ body {
 .connect:hover {
   background-color: #000000;
   color: #ffffff;
-  border: 1px solid #000000;
-  cursor: pointer;
+  transform: translateY(-2px);
 }
 
 /* Right Section */
@@ -274,14 +275,14 @@ body {
 
   .heading {
     margin-top: 8vh;
-    padding-top: 0;
+    padding-top: 1rem;
     height: auto;
     min-height: 85vh;
   }
 
   .left {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -289,39 +290,58 @@ body {
   }
 
   .left > h2 {
-    margin: 10px 0;
+    font-size: 1.7rem;
+    margin: 8px 0;
+    letter-spacing: -0.02em;
   }
 
   .left > p {
+    font-size: 1.05rem;
     margin: 8px 0;
+    letter-spacing: -0.01em;
   }
 
   .socialmedia {
-    display: flex;
     justify-content: center;
     gap: 15px;
-    margin: 15px 0;
+    margin: 20px 0;
+  }
+
+  .socialmedia a {
+    padding: 12px;
+    font-size: 1.5em;
   }
 
   .ibutton {
-    flex-direction: row;
+    gap: 12px;
+    margin-top: 20px;
     justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
   }
 
   .connect {
-    width: auto;
+    padding: 12px 24px;
+    font-size: 1rem;
     min-width: 140px;
   }
 
   .right {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    width: 100%;
   }
 
   .right img {
-    width: 80%;
+    width: 75%;
     height: auto;
     margin: 0 auto;
+    max-width: 300px;
+  }
+
+  .pages {
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .page-item {
+    padding: 0.8rem;
   }
 }
