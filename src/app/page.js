@@ -1,12 +1,17 @@
 'use client';
 import Link from "next/link";
-
-import { useEffect } from 'react';  
+import { useEffect, useState } from 'react';  
 import './globals.css';  
 import Head from 'next/head';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'; 
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   // Define the handleClick function
   const handleClickGitHub = () => {
     // Here you can define what happens when the button is clicked
@@ -14,7 +19,7 @@ export default function Home() {
   };  
   const handleClickService = () => {
     // Here you can define what happens when the button is clicked
-    window.location.href = './services';  // Example: redirect to GitHub
+    window.location.href = 'https://rebasemedia.com';  // Redirect to rebasemedia.com
   };
   useEffect(() => {
       document.title = 'Pradumna Saraf'; // Set the document
@@ -75,21 +80,25 @@ export default function Home() {
           referrerpolicy="no-referrer"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
-        />
-        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap" rel="stylesheet" />
       </Head>
 
       <div className="nav">
-        <p>PRADUMNA SARAF</p>
-        <div className="pages">
+        <div className="hamburger" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className={`pages ${isMenuOpen ? 'active' : ''}`}>
           <span className="page-item">
-            <Link href="/services">Services</Link>
+            <Link href="https://rebasemedia.com">Services</Link>
           </span>          
           <span className="page-item">
             <Link href="https://pradumnasaraf.substack.com">Newsletter</Link>
+          </span>
+          <span className="page-item">
+            <Link href="/timeline">Timeline</Link>
           </span>
           <span className="page-item">
             <Link href="mailto:pradumnasaraf@gmail.com">Contact</Link>

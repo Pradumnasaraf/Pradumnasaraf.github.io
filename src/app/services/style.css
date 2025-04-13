@@ -11,13 +11,15 @@
 /************NAV************/
 
 .nav {
-    background-color: #2C3333;
-    height: 8vh;
+    background-color: #ffffff;
+    height: 10vh;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    border-bottom: 1px solid #eaeaea;
+    padding: 0 2rem;
 }
 
 .pages {
@@ -25,29 +27,26 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    gap: 2rem;
 }
 
 .pages a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
-    margin: 10px;
-    color: white;
-    font-weight: 300;
-
+    color: #333333;
+    font-weight: 400;
+    transition: color 0.2s ease;
 }
 
 .pages a:hover {
+    color: #000000;
     cursor: pointer;
-    transition: 0.4s;
-    opacity: 0.5;
 }
 
 .nav p {
     font-size: 1.5rem;
-    text-decoration: none;
-    margin: 10px;
-    color: white;
-    font-weight: 300;
+    color: #000000;
+    font-weight: 600;
 }
 
 /*****SERVICES*****/
@@ -222,62 +221,61 @@ h3 {
 }
 
 .get-btn {
-    color: white;
+    color: #000000;
     font-size: 1.2rem;
     margin: 10px;
     font-size: 1.5rem;
-    background-color: transparent;
+    background-color: #ffffff;
     padding: 4px 15px;
     border-radius: 10px;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     font-weight: 300;
     text-decoration: none;
 }
 
 .get-btn:hover {
-    background-color: #ffffff;
-    color: #2C3333;
+    background-color: #000000;
+    color: #ffffff;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .enq-btn {
-    color: #2C3333;
+    color: #000000;
     font-size: 1.2rem;
     margin: 10px;
     font-size: 1.5rem;
-    background-color: white;
+    background-color: #ffffff;
     padding: 4px 15px;
     border-radius: 10px;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     font-weight: 300;
     text-decoration: none;
 }
 
 .enq-btn:hover {
-    background-color: #2C3333;
-    ;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     cursor: pointer;
     transition: 0.5s;
-
 }
 
 .pkg-btn {
-    font-size: 1.1em;
-    padding: 0px 8px;
-    margin-top: 15px;
+    color: #000000;
+    font-size: 1.2rem;
+    margin: 10px;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    padding: 4px 15px;
     border-radius: 10px;
-    border: 2px solid #2C3333;
-    text-decoration: none;
+    border: 1px solid #000000;
     font-weight: 300;
-    background-color: #2C3333;
-    color: white
+    text-decoration: none;
 }
 
 .pkg-btn:hover {
-    background-color: white;
-    color: #2C3333;
+    background-color: #000000;
+    color: #ffffff;
     cursor: pointer;
     transition: 0.5s;
 }

@@ -3,21 +3,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'League Spartan', sans-serif;
 }
 
 body {
-    background-color: #2C3333;
+    background-color: #f8f9fa;
+    background-image: 
+        radial-gradient(circle at 25px 25px, #e0e0e0 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, #e0e0e0 2%, transparent 0%);
+    background-size: 100px 100px;
 }
 
 /* Timeline Title */
 .timeline-title {
     text-align: center;
-    font-size: 50px;
-    color: #fff;
+    font-size: 48px;
+    color: #1a1a1a;
     margin-top: 20px;
     margin-bottom: 25px;
-    font-weight: 200;
+    font-weight: 300;
+    letter-spacing: -0.02em;
 }
 
 /* Timeline Container */
@@ -30,12 +35,12 @@ body {
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
+    width: 4px;
     height: 100%;
-    background: #fff;
+    background: #e0e0e0;
     left: 50%;
     top: 0; 
-    margin-left: -3px;
+    margin-left: -2px;
     z-index: -1;
     animation: moveline 30s linear forwards;
 }
@@ -105,28 +110,38 @@ body {
 
 /* Text Box Styles */
 .text-box {
-    padding: 20px 30px;
-    background: #fff;
+    padding: 25px 35px;
+    background: #ffffff;
     position: relative;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 15px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .text-box h2 {
-    font-weight: 350;
-    margin-bottom: 5px;
-    color: brown
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+    letter-spacing: -0.01em;
 }
 
 .text-box small {
     display: inline;
     font-size: 14px;
-    font-weight: 350;
+    font-weight: 300;
+    color: #666666;
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
 .text-box p {
     margin-top: 15px;
     font-weight: 300;
+    color: #4a4a4a;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
 }
 
 /* Container Positioning */
@@ -136,18 +151,19 @@ body {
 /* Image Styles for Timeline Items */
 .container img {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    right: -20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    right: -22px;
     top: 32px;
     z-index: 10;
-    background-color: #fff;
-    border: 2px solid white
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .right-container img {
-    left: -20px;
+    left: -22px;
 }
 
 /* Arrow Indicators for Containers */
@@ -159,8 +175,9 @@ body {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #fff;
+    border-left: 15px solid #f0f0f0;
     right: -15px;
+    filter: drop-shadow(1px 0 1px rgba(0, 0, 0, 0.1));
 }
 
 .right-container-arrow {
@@ -171,8 +188,9 @@ body {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #fff;
+    border-right: 15px solid #f0f0f0;
     left: -15px;
+    filter: drop-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));
 }
 
 /* Source Button Styles */
@@ -180,27 +198,26 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border: 2px solid #000;
-    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #000;
-    transition: background-color 0.3s, color 0.3s;
+    color: #1a1a1a;
+}
+
+.source-button:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
 }
 
 .source-button svg {
     width: 16px; 
     height: 16px; 
-}
-
-.source-button:hover {
-    color: brown;
-    border-color: brown
 }
 
 /* Responsive Styles for Mobile Devices */
@@ -220,11 +237,13 @@ body {
     }
 
     .text-box {
-        font-size: 13px;
+        padding: 20px 25px;
+        font-size: 14px;
     }
 
     .text-box small {
-        margin-bottom: 10px;
+        font-size: 12px;
+        padding: 3px 6px;
     }
 
     .right-container {
@@ -233,19 +252,20 @@ body {
 
     .left-container img, .right-container img {
         left: 10px;
+        width: 40px;
+        height: 40px;
     }
 
     .left-container-arrow, .right-container-arrow {
-        border-right: 15px solid #fff;
+        border-right: 15px solid #f0f0f0;
         border-left: 0;
         left: -15px;
+        filter: drop-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));
     }
 
     .source-button {
-        bottom: 10px;
-        right: 10px;
-        width: 25px;
-        height: 25px;
+        width: 28px;
+        height: 28px;
     }
     
     .source-button svg {

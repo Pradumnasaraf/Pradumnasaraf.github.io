@@ -2,12 +2,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'League Spartan', sans-serif;
 }
 
 body {
-  background-color: #2C3333;
-  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
   margin: 0;  
+  letter-spacing: -0.01em;
 }
 
 .nav {
@@ -18,6 +19,12 @@ body {
   align-items: center;
   justify-content: space-around;
   font-weight: 300;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 .pages {
@@ -25,24 +32,26 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  gap: 2rem;
 }
 
 .pages a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
-  margin: 10px;
-  color: white;
+  color: #333333;
+  font-weight: 300;
+  transition: color 0.2s ease;
 }
 
 .pages a:hover {
+  color: #000000;
   cursor: pointer;
-  transition: 0.4s;
-  opacity: 0.5;
 }
 
 .nav p {
   font-size: 1.5rem;
-  color: white;
+  color: #000000;
+  font-weight: 600;
 }
 
 .heading {
@@ -53,6 +62,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 10vh;
 }
 
 .left {
@@ -60,59 +70,75 @@ body {
 }
 
 .socialmedia {
-  margin: 25px 0;
+  margin: 35px 0;
+  display: flex;
+  gap: 15px;
 }
 
 .socialmedia a {
-  color: white;
-  padding: 15px;
-  padding-bottom: 7.5px;
-  margin-right: 12px;
-  border-radius: 10px;
-  border: 0.8px solid white;
-  font-size: 1.7em; /* Ensure icons are large enough */
-  transition: all 0.5s ease;
+  color: #333333;
+  padding: 12px;
+  border-radius: 8px;
+  border: 0.8px solid #333333;
+  font-size: 1.5em;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .socialmedia a:hover {
-  background-color: white;
-  color: #2e2e2d;
+  background-color: #333333;
+  color: #ffffff;
 }
 
 .left > h2 {
-  color: white;
-  font-weight: 300;
+  color: #333333;
+  font-weight: 400;
   margin-top: 8px;
   margin-bottom: 8px;
+  letter-spacing: -0.02em;
 }
-.left > p{
-  color: white;
+
+.left > p {
+  color: #666666;
   font-weight: 300;
   margin-top: 8px;
   margin-bottom: 8px;
-  font-size: 1.1em;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.left > p > a {
+  color: #666666;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.ibutton {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
 }
 
 .connect {
-  font-family: 'Roboto', sans-serif;
-  width: auto;
-  height: 50px;
-  padding: 10px 20px;
-  border: 0.9px solid gold;
-  background-color: transparent;
-  color: white;
+  font-family: 'League Spartan', sans-serif;
+  padding: 12px 24px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
   font-weight: 300;
-  border-radius: 10px;
-  margin: 10px 0;
-  margin-right: 10px;
-  font-size: 1.2rem;
-  transition: all 0.5s ease;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  letter-spacing: 0;
 }
 
 .connect:hover {
-  background-color: white;
-  color: rgb(31, 37, 58);
-  border: 2px solid transparent;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
   cursor: pointer;
 }
 
@@ -140,8 +166,10 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #2C3333;
-  color: white;
+  background-color: #ffffff;
+  color: #333333;
+  position: relative;
+  bottom: 0;
 }
 
 .social-handle {
@@ -155,13 +183,13 @@ body {
 
 .social-handle a {
   font-size: 1.3em;
-  color: white;
+  color: #333333;
   text-decoration: none;
-  transition: opacity 0.4s ease; /* Add transition to opacity */
+  transition: opacity 0.4s ease;
 }
 
 .social-handle a:hover {
-  opacity: 0.5;
+  color: #0070f3;
 }
 
 #ad-line {
@@ -176,69 +204,124 @@ body {
   font-style: bold;
 }
 
-.left > p > a {
-  color: white;
-  text-decoration: none;
-  font-family: 'League Spartan', sans-serif;
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 1rem;
 }
 
-/* Responsive Styles */
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navigation Styles */
 @media (max-width: 800px) {
   .nav {
-    padding: 0;
+    padding: 0 1rem;
+    height: auto;
+    min-height: 8vh;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
   }
-  .heading {
-      flex-direction: column;
-      flex-direction: column;
-      flex-wrap: nowrap;
+
+  .hamburger {
+    display: block;
+  }
+
+  .pages {
+    display: none;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
     flex-direction: column;
-      flex-wrap: nowrap;
-    height: fit-content;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+  }
+
+  .pages.active {
+    display: flex;
+  }
+
+  .page-item {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: none;
+    font-family: 'League Spartan', sans-serif;
+  }
+
+  .page-item:last-child {
+    border-bottom: none;
+  }
+
+  .pages a {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .heading {
+    margin-top: 8vh;
+    padding-top: 0;
+    height: auto;
+    min-height: 85vh;
   }
 
   .left {
     width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-right: 5em;
-    padding-left: 5em;
+    padding: 1.5rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-
-  .left p {
-    width: auto;
+  .left > h2 {
+    margin: 10px 0;
   }
 
-  .pradumna {
-    font-size: 1.2em;
-  }
-
-  .nav p {
-    font-size: 1.5em;
-    font-weight: bolder;
+  .left > p {
+    margin: 8px 0;
   }
 
   .socialmedia {
     display: flex;
-    gap: 1em;
-    justify-content: space-evenly;
-    margin-top: 0;
-    margin-bottom: 3em;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
   }
 
-  .nav {
-    flex-direction: column;
-    margin: 1.0em 0;
+  .ibutton {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
   }
 
-  .page-item {
-    background: #2e2e2d;
-    padding: 0.5em;
-    border: 1px solid white;
+  .connect {
+    width: auto;
+    min-width: 140px;
   }
 
-  .social-handle {
-    gap: 2em;
+  .right {
+    margin-top: 1rem;
+  }
+
+  .right img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
   }
 }

@@ -6,6 +6,13 @@ import Link from "next/link";
 const TimelinePage = () => {
   useEffect(() => {
     document.title = 'Pradumna Saraf | Timeline'; // Set the document title
+    
+    // Add League Spartan font
+    const linkElement = document.createElement('link');
+    linkElement.rel = 'stylesheet';
+    linkElement.href = 'https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap';
+    document.head.appendChild(linkElement);
+
     // Google Tag Manager Script
     const scriptGTM = document.createElement('script');
     scriptGTM.innerHTML = `
@@ -27,6 +34,7 @@ const TimelinePage = () => {
 
     return () => {
       document.head.removeChild(scriptGTM);
+      document.head.removeChild(linkElement);
     };
   }, []);
 
