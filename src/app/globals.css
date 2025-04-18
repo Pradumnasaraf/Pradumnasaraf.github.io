@@ -274,7 +274,7 @@ body {
   }
 
   .heading {
-    margin-top: 8vh;
+    margin-top: 5vh;
     padding-top: 1rem;
     height: auto;
     min-height: 85vh;
@@ -304,7 +304,7 @@ body {
   .socialmedia {
     justify-content: center;
     gap: 15px;
-    margin: 20px 0;
+    margin: 15px 0;
   }
 
   .socialmedia a {

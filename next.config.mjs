@@ -9,7 +9,7 @@ const nextConfig = {
         },
         {
           source: '/newsletter',
-          destination: 'https://pradumnasaa.substack.com',
+          destination: 'https://pradumnasaraf.substack.com',
           permanent: true,
         },
         {
@@ -23,10 +23,25 @@ const nextConfig = {
           permanent: true,
         },
         {
-          source: '/blog',
-          destination: 'https://blog.pradumnasaraf.dev',
+          source: '/services',
+          destination: 'https://rebasemedia.com',
           permanent: true,
-        }
+        },
+        {
+          source: '/services/bundle',
+          destination: 'https://rebasemedia.com/bundle',
+          permanent: true,
+        },
+        {
+          source: '/services/payment',
+          destination: 'https://rebasemedia.com/payment',
+          permanent: true,
+        },
+        {
+          source: '/contact',
+          destination: 'mailto:pradumnasaraf@gmail.com',
+          permanent: true,
+        },
       ]
     },
   };

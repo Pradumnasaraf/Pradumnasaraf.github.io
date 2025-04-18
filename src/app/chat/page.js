@@ -3,11 +3,11 @@ import React, { useEffect } from 'react';
 import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Head from 'next/head';
 import Link from "next/link";
-
+import './style.css';
 
 const ScheduleMeetingPage = () => {
   useEffect(() => {
-    document.title = 'Pradumna Saraf | Schedule a Meeting'; // Set the document title
+    document.title = 'Pradumna Saraf | Schedule a Meeting';
     // Google Tag Manager Script
     const script = document.createElement('script');
     script.innerHTML = `
@@ -68,63 +68,53 @@ const ScheduleMeetingPage = () => {
     document.head.appendChild(calScript);
 
     return () => {
-      // Clean up the scripts when the component unmounts
       document.head.removeChild(script);
       document.head.removeChild(calScript);
     };
   }, []);
 
   return (
-    <div>
+    <>
       <Head>
-        <link
-          rel="icon"
-          href="https://user-images.githubusercontent.com/51878265/194138074-7a341083-e80e-49d9-8e58-02882b26d3d9.png"
-        />
+        <link rel="icon" href="https://user-images.githubusercontent.com/51878265/194138074-7a341083-e80e-49d9-8e58-02882b26d3d9.png" />
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Schedule a Meeting</title>
       </Head>
-      <body>
-      <div className="main">
-        {/* NAVIGATION */}
-        <div className="nav">
-            <p>PRADUMNA SARAF</p>
-            <div className="pages">
-              <span className="page-item">
-                <Link aria-label="Visit my Home page" href="/">
-                  Home
-                </Link>
-              </span>
-              <span className="page-item">
-                <Link href="https://pradumnasaraf.substack.com">Newsletter</Link>
-              </span>
-              <span className="page-item">
-                <Link aria-label="My Services" href="/services">
-                  Services
-                </Link>
-              </span>
-            </div>
-          </div>
-          {/* FOOTER */}
+
+      {/* NAVIGATION */}
+      <div className="nav">
+        <div className="pages">
+          <span className="page-item">
+            <Link href="/">Home</Link>
+          </span>
+          <span className="page-item">
+            <Link href="https://pradumnasaraf.substack.com">Newsletter</Link>
+          </span>
+          <span className="page-item">
+            <Link href="https://rebasemedia.com">Services</Link>
+          </span>
         </div>
-        <div style={{ width: '100vw', height: '82vh', overflow: 'scroll', backgroundColor: '#2C3333', padding: '30px' }} id="my-cal-inline"></div>
-        <div className="footer">
-          <div className="social-handle">
-            <Link aria-label="Visit my Twitter profile" href="https://twitter.com/pradumna_saraf">
-              <FaTwitter className='icon-footer' />
-            </Link>
-            <Link aria-label="Visit my GitHub profile" href="https://github.com/Pradumnasaraf">
-              <FaGithub className='icon-footer' />
-            </Link>
-            <Link aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/pradumnasaraf/">
-              <FaLinkedin className='icon-footer' />
-            </Link>
-          </div>
       </div>
-    </body>
-    </div>
+      
+      {/* Calendar Section */}
+      <div id="my-cal-inline" className="calendar-container"></div>
+
+      {/* FOOTER */}
+      <div className="footer">
+        <div className="social-handle">
+          <Link aria-label="Visit my Twitter profile" href="https://twitter.com/pradumna_saraf">
+            <FaTwitter className='icon-footer' />
+          </Link>
+          <Link aria-label="Visit my GitHub profile" href="https://github.com/Pradumnasaraf">
+            <FaGithub className='icon-footer' />
+          </Link>
+          <Link aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/pradumnasaraf/">
+            <FaLinkedin className='icon-footer' />
+          </Link>
+        </div>
+      </div>
+    </>
   );
 };
 
