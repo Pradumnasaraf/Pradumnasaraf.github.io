@@ -259,7 +259,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">Pradumna's Photography</h1>
+        <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">{"Pradumna's Photography"}</h1>
         <div className="relative">
           {isLoading && (
             <div className="absolute inset-0 flex items-center justify-center">
