@@ -29,6 +29,20 @@
   filter: grayscale(0%);
 }
 
+/* Update hover effect to show both color and button */
+.group:hover .grayscale-image {
+  filter: grayscale(0%);
+}
+
+.group:hover .bg-opacity-0 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.group:hover .opacity-0 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Loading Animation */
 @keyframes pulse {
   0% {
