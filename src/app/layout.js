@@ -3,7 +3,7 @@ import './globals.css'; // Tailwind and global styles
 
 export const metadata = {
   title: 'Pradumna Saraf',
-  description: 'Developer Advocate. Docker Captain. Open Source evangelism.',
+  description: "Developer Advocate. Docker Captain. Open Source evangelism.",
 }
 
 export default function RootLayout({ children }) {
