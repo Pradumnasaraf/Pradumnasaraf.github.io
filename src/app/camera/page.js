@@ -59,24 +59,115 @@ const images = [
   { src: 'https://drive.google.com/thumbnail?id=1-umcEA-0sefXkCVXtpEFxvVAWqtnw2y1&sz=w2000', alt: 'photo' },
 ]
 
-// FullScreenModal Component
-const FullScreenModal = ({ isOpen, imageSrc, onClose }) => {
+// ImageItem Component with enhanced features
+const ImageItem = ({ src, alt, onClick }) => {
+  const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const currentElement = document.getElementById(`image-${src}`);
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
+
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
+  }, [src]);
+
+  return !hasError ? (
+    <div className="relative group">
+      <div 
+        id={`image-${src}`}
+        className={`w-full aspect-auto overflow-hidden rounded-lg shadow-md transition-all duration-300 ${
+          isLoading ? 'animate-pulse bg-gray-200' : ''
+        }`}
+      >
+        {isVisible && (
+          <img
+            src={src}
+            alt={alt}
+            className={`w-full h-auto object-cover cursor-pointer transition-all duration-500 transform group-hover:scale-105 grayscale-image ${
+              isLoading ? 'opacity-0' : 'opacity-100'
+            }`}
+            onClick={onClick}
+            onError={() => setHasError(true)}
+            onLoad={() => setIsLoading(false)}
+            loading="lazy"
+          />
+        )}
+      </div>
+      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+        <button
+          onClick={onClick}
+          className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white text-black px-4 py-2 rounded-full font-medium shadow-lg hover:bg-gray-100"
+        >
+          View Photo
+        </button>
+      </div>
+    </div>
+  ) : null;
+};
+
+// Enhanced FullScreenModal Component
+const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (!isOpen) return;
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowLeft') onPrev();
+      if (e.key === 'ArrowRight') onNext();
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+    return () => document.removeEventListener('keydown', handleKeyPress);
+  }, [isOpen, onClose, onPrev, onNext]);
+
   if (!isOpen) return null;
 
   return createPortal(
-    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-5">
+    <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+      <div className="absolute top-4 right-4 flex gap-4">
+        <button
+          onClick={onClose}
+          className="flex items-center justify-center w-10 h-10 bg-white text-black rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-110"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+      </div>
       <button
-        onClick={onClose}
-        className="absolute top-6 right-6 flex items-center justify-center w-12 h-12 bg-white text-black text-2xl font-bold rounded-full shadow-lg border-2 border-black hover:bg-gray-100 transition-transform transform hover:scale-110"
-        aria-label="Close"
+        onClick={onPrev}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-transform hover:scale-110"
+        aria-label="Previous image"
       >
-        &times;
+        ←
       </button>
       <img
         src={imageSrc}
         alt="Full Screen"
         className="max-w-[90vw] max-h-[90vh] object-contain"
       />
+      <button
+        onClick={onNext}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-transform hover:scale-110"
+        aria-label="Next image"
+      >
+        →
+      </button>
     </div>,
     document.body
   );
@@ -86,8 +177,12 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose }) => {
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageSrc, setModalImageSrc] = useState('');
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const openModal = (src) => {
+    const index = images.findIndex(img => img.src === src);
+    setCurrentImageIndex(index);
     setModalImageSrc(src);
     setIsModalOpen(true);
   };
@@ -97,11 +192,25 @@ export default function Home() {
     setModalImageSrc('');
   };
 
+  const showPrevImage = () => {
+    const newIndex = (currentImageIndex - 1 + images.length) % images.length;
+    setCurrentImageIndex(newIndex);
+    setModalImageSrc(images[newIndex].src);
+  };
+
+  const showNextImage = () => {
+    const newIndex = (currentImageIndex + 1) % images.length;
+    setCurrentImageIndex(newIndex);
+    setModalImageSrc(images[newIndex].src);
+  };
+
   const breakpointColumnsObj = {
-    default: 3,
-    1100: 3,
-    700: 2,
-    500: 1
+    default: 4,
+    1536: 4,
+    1280: 3,
+    1024: 3,
+    768: 2,
+    640: 1
   };
 
   useEffect(() => {
@@ -127,48 +236,60 @@ export default function Home() {
     return () => {
       document.head.removeChild(scriptGTM);
     };
+
+    // Preload images
+    const preloadImages = () => {
+      const imagePromises = images.map(img => {
+        return new Promise((resolve, reject) => {
+          const image = new Image();
+          image.src = img.src;
+          image.onload = resolve;
+          image.onerror = reject;
+        });
+      });
+
+      Promise.all(imagePromises)
+        .then(() => setIsLoading(false))
+        .catch(console.error);
+    };
+
+    preloadImages();
   }, []);
 
   return (
-    <div className="px-24 py-8 mx-auto max-w-6xl">
-      <div className="p-4">
-        <Masonry
-          breakpointCols={breakpointColumnsObj}
-          className="my-masonry-grid"
-          columnClassName="my-masonry-grid_column"
-        >
-          {images.map((image, index) => (
-            <ImageItem
-              key={index}
-              src={image.src}
-              alt={image.alt}
-              onClick={() => openModal(image.src)}
-            />
-          ))}
-        </Masonry>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">{"Pradumna's Photography"}</h1>
+        <div className="relative">
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+            </div>
+          )}
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
+            {images.map((image, index) => (
+              <ImageItem
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                onClick={() => openModal(image.src)}
+              />
+            ))}
+          </Masonry>
+        </div>
 
         <FullScreenModal
           isOpen={isModalOpen}
           imageSrc={modalImageSrc}
           onClose={closeModal}
+          onPrev={showPrevImage}
+          onNext={showNextImage}
         />
       </div>
     </div>
   );
 }
-
-// ImageItem Component
-const ImageItem = ({ src, alt, onClick }) => {
-  const [hasError, setHasError] = useState(false);
-
-  return !hasError ? (
-    <img
-      src={src}
-      alt={alt}
-      className="w-full h-auto object-cover cursor-pointer transition-transform transform hover:scale-105 grayscale-image"
-      onClick={onClick}
-      onError={() => setHasError(true)}
-      loading="lazy"
-    />
-  ) : null;
-};

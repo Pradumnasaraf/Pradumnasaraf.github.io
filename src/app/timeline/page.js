@@ -169,9 +169,9 @@ const TimelinePage = () => {
                         <path d="M7 17l10-10M17 17V7h-7"></path>
                     </svg>
                 </Link>
-                <h2>{`"Open Source with Pradumna"`}</h2>
+                <h2>{"\"Open Source with Pradumna\""}</h2>
                 <small>April, 2022</small>
-                <p>Open Source With Pradumna started as a 15-day bootcamp of Twitter post (Threads) where I was sharing my journey of open source and how to get started with it. This was a turning point for me. Fun fact: It all started from no where. I was in the bed rest as I screwed my food with a bike accident and have nothing to do. After this my social media presence grow and a lot people started knowing me.</p>
+                <p>Open Source With Pradumna started as a 15-day bootcamp of Twitter post (Threads) where I was sharing my journey of open source and how to get started with it. This was a turning point for me. Fun fact: It all started from no where. I was in the bed rest as I screwed my food with a bike accident and have nothing to do. After this my social media presence grow and a lot of people started knowing me.</p>
                 <span class="left-container-arrow"></span>
             </div>
         </div>        
