@@ -2,6 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Masonry Grid Styles */
+.my-masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  gap: 1.5rem;
+}
+
+.my-masonry-grid_column {
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > div {
+  margin-bottom: 1.5rem;
+}
+
+/* Image Styles */
+.grayscale-image {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.3s ease;
+}
+
+.grayscale-image:hover {
+  filter: grayscale(0%);
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0% {
+    background-color: #f3f4f6;
+  }
+  50% {
+    background-color: #e5e7eb;
+  }
+  100% {
+    background-color: #f3f4f6;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  backdrop-filter: blur(5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .my-masonry-grid {
+    gap: 1rem;
+  }
+
+  .my-masonry-grid_column > div {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Image Loading Placeholder */
+.image-placeholder {
+  background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 /* Add to globals.css */
 @layer components {
     .masonry-grid-item {
@@ -27,25 +121,6 @@ body {
 }
 
 /* In your styles/globals.css or any relevant CSS file */
-.my-masonry-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: auto;
-  margin-left: -1rem; /* gutter size */
-  margin-right: -1rem; /* gutter size */
-}
-
-.my-masonry-grid_column {
-  padding-left: 0.1rem; /* gutter size */
-  padding-right: 0.65rem; /* gutter size */
-  background-clip: padding-box;
-}
-
-.my-masonry-grid_column > img {
-  margin-bottom: 0.75rem; /* gutter size */
-}
-
 .my-masonry-grid img {
   transition: filter 0.3s ease, transform 0.3s ease;
 }
