@@ -98,6 +98,9 @@ export default function Home() {
             <Link href="https://pradumnasaraf.substack.com">Newsletter</Link>
           </span>
           <span className="page-item">
+            <Link href="https://blog.pradumnasaraf.dev">Blog</Link>
+          </span>
+          <span className="page-item">
             <Link href="/timeline">Timeline</Link>
           </span>
           <span className="page-item">
@@ -121,7 +124,7 @@ export default function Home() {
             </Link>
           </div>
           <h2>{`Hello, I'm`} <span className="pradumna">Pradumna Saraf</span></h2>
-          <p>Developer Advocate. Docker Captain. Open Source evangelism. Owner <Link href="https://github.com/rebasemedia">@ rebase media</Link></p>
+          <p>Open Source Developer/DevRel. Docker Captain. Owner <Link href="https://github.com/rebasemedia">@ rebase media</Link></p>
           <div className="ibutton">
             <button className="connect" onClick={handleClickGitHub}>{`Let's Collaborate`}</button>            
             <button className="connect" onClick={handleClickService}>My Services</button>
