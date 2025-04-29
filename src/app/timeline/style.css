@@ -273,3 +273,33 @@ body {
         height: 14px;
     }
 }
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  transform: translateX(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button svg {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover svg {
+  color: #000;
+}
