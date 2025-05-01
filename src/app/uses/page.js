@@ -5,15 +5,13 @@ import Link from "next/link";
 
 const UsesPage = () => {
   useEffect(() => {
-    document.title = 'Pradumna Saraf | Uses'; // Set the document title
+    document.title = 'Pradumna Saraf | Uses';
     
-    // Add League Spartan font
     const linkElement = document.createElement('link');
     linkElement.rel = 'stylesheet';
     linkElement.href = 'https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap';
     document.head.appendChild(linkElement);
 
-    // Google Tag Manager Script
     const scriptGTM = document.createElement('script');
     scriptGTM.innerHTML = `
       (function (w, d, s, l, i) {
@@ -63,32 +61,30 @@ const UsesPage = () => {
         <div className="uses-grid">
           <div className="uses-item">
             <h3>Computer</h3>
-            <p>MacBook Pro 14" (2021)</p>
-            <p>M1 Pro, 16GB RAM, 512GB SSD</p>
+            <p>MacBook Pro 14 (M1 Pro, 16GB RAM)</p>
+            <p>MacBook Pro 14 (M2 Pro, 32GB RAM)</p>
           </div>
           
           <div className="uses-item">
             <h3>Monitor</h3>
-            <p>Dell U2720Q</p>
-            <p>27" 4K UHD Display</p>
+            <p>LG UltraWide 29 inch (IPS)</p>
           </div>
           
           <div className="uses-item">
             <h3>Keyboard</h3>
-            <p>Keychron K2</p>
-            <p>Mechanical Keyboard with Brown Switches</p>
+            <p>Logitech K345</p>
           </div>
-          
           <div className="uses-item">
             <h3>Mouse</h3>
-            <p>Logitech MX Master 3</p>
-            <p>Wireless Mouse</p>
+            <p>Logitech M275</p>
           </div>
-          
           <div className="uses-item">
             <h3>Headphones</h3>
-            <p>AirPods Pro</p>
-            <p>Wireless Earbuds</p>
+            <p>AirPods Pro 2, AirPods 2nd Gen</p>
+          </div> 
+          <div className="uses-item">
+            <h3>Mobile</h3>
+            <p>iPhone 16 Pro, iPhone 6</p>
           </div>
         </div>
       </section>
@@ -98,51 +94,49 @@ const UsesPage = () => {
         <div className="uses-grid">
           <div className="uses-item">
             <h3>Code Editor</h3>
-            <p>Visual Studio Code</p>
-            <p>With extensions: GitLens, Docker, Kubernetes</p>
+            <p>Visual Studio Code, Cursor</p>
           </div>
           
           <div className="uses-item">
             <h3>Terminal</h3>
-            <p>iTerm2</p>
-            <p>With Oh My Zsh and Powerlevel10k theme</p>
+            <p>Warp</p>
           </div>
-          
+
           <div className="uses-item">
             <h3>Browser</h3>
-            <p>Google Chrome</p>
-            <p>With extensions: uBlock Origin, Dark Reader</p>
+            <p>Arc</p>
           </div>
           
           <div className="uses-item">
             <h3>Design</h3>
-            <p>Figma</p>
-            <p>For UI/UX design and prototyping</p>
+            <p>Figma, Canva</p>
           </div>
           
           <div className="uses-item">
             <h3>Communication</h3>
             <p>Slack, Discord</p>
-            <p>For team communication and community</p>
           </div>
           
           <div className="uses-item">
             <h3>Development Tools</h3>
-            <p>Docker, Kubernetes</p>
+            <p>Docker,
+              Kubernetes</p>
             <p>For containerization and orchestration</p>
+          </div>         
+          
+          <div className="uses-item">
+            <h3>AI Tools</h3>
+            <p>LM Studio</p>
+            <p>ChatGPT</p>
           </div>
           
           <div className="uses-item">
-            <h3>Version Control</h3>
-            <p>Git, GitHub</p>
-            <p>For code versioning and collaboration</p>
-          </div>
-          
-          <div className="uses-item">
-            <h3>API Testing</h3>
-            <p>Postman</p>
+            <h3>Other</h3>
+            <p>Notion</p>
             <p>For API development and testing</p>
           </div>
+          
+
         </div>
       </section>
     </div>
