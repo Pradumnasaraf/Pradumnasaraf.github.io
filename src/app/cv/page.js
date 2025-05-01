@@ -40,7 +40,7 @@ const CVPage = () => {
         <header>
           <h1>Pradumna Saraf</h1>
           <p className="bio">
-            A dedicated open source developer and contributor with over 3 years of experience in coding, crafting technical content, community building, and delivering talks. I'm also an enthusiastic team player, skilled at effective collaboration, and capable of working independently to achieve goals.
+            {`A dedicated open source developer and contributor with over 3 years of experience in coding, crafting technical content, community building, and delivering talks. I'm also an enthusiastic team player, skilled at effective collaboration, and capable of working independently to achieve goals.`}
           </p>
           <div className="contact-info">
             <p>
@@ -86,7 +86,7 @@ const CVPage = () => {
               <span className="date">Aug 2023 - April 2024</span>
             </div>
             <ul>
-              <li>Launched a content/community-led developer advocacy effort as part of the company's go-to-market strategy.</li>
+              <li>{`Launched a content/community-led developer advocacy effort as part of the company's go-to-market strategy.`}</li>
               <li>Created various strategies and initiatives to promote and increase adoption and contribution for our open-source offerings—Prevy and Docker extension. This helped to cross 1500 GitHub stars and gain over 100 active weekly users.</li>
               <li>Delivered various in-person talks, written technical blogs, social content, talk sessions, and video guides on the Livecycle YouTube channel to educate people about the product and underlying technologies like Docker, Cloud, GitHub Actions, etc.</li>
               <li>Actively nurtured the Livecycle Slack community, resulting in a membership growth from 0 to over 300 individuals, promoting collaboration and gathering product feedback and user needs.</li>
@@ -131,7 +131,7 @@ const CVPage = () => {
 
           <div className="project">
             <h3>PullPrompt</h3>
-            <p>A GitHub Action that comments on a Pull Request with a message generated from a user-given prompt. Under the hood, it uses Google's Gemini API to generate the text.</p>
+            <p>{`A GitHub Action that comments on a Pull Request with a message generated from a user-given prompt. Under the hood, it uses Google's Gemini API to generate the text.`}</p>
             <p><strong>Tech Stack:</strong> Node.js, GitHub Actions, Google Gemini</p>
             <a href="https://github.com/pradumnasaraf/pullprompt" target="_blank" rel="noopener noreferrer">View Project →</a>
           </div>
