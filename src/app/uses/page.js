@@ -92,6 +92,22 @@ const UsesPage = () => {
       <section className="uses-section">
         <h2>Software</h2>
         <div className="uses-grid">
+
+          <div className="uses-item">
+            <h3>Development Tools</h3>
+            <p>Docker, Lens Kubernetes IDE, Postman, TablePlus, MongoDB Compass </p>
+          </div>          
+          
+          <div className="uses-item">
+            <h3>CLI Tools</h3>
+            <p>Homebrew, Oh My Zsh, nvm, yarn, git, act, gh, helm, jq, kind, kubectx, localtunnel, ngrok, zsh-autosuggestions, k9s, goreleaser, terraform </p> 
+          </div>
+
+          <div className="uses-item">
+            <h3>Mac Apps (Workflow)</h3>
+            <p>Raycast, Lunar, LocalSend, Grammarly Desktop, GPG Suite, PDFgear, VLC, Zoom, VNC Viewer </p>
+          </div>
+
           <div className="uses-item">
             <h3>Code Editor</h3>
             <p>Visual Studio Code, Cursor</p>
@@ -105,11 +121,6 @@ const UsesPage = () => {
           <div className="uses-item">
             <h3>AI Tools</h3>
             <p>LM Studio, ChatGPT, Ollama</p>
-          </div>
-          
-          <div className="uses-item">
-            <h3>Development Tools</h3>
-            <p>Docker, Lens Kubernetes IDE, Postman, TablePlus, MongoDB Compass </p>
           </div>
 
           <div className="uses-item">
