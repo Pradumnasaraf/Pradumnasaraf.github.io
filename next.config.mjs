@@ -13,12 +13,7 @@ const nextConfig = {
           permanent: true,
         },
         {
-          source: '/cv',
-          destination: 'https://www.canva.com/design/DAF_kKnj9WI/IT8NdwVQlzRK3DaMmXm18A/edit?utm_content=DAF_kKnj9WI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
-          permanent: true,
-        },
-        {
-          source: '/resume',
+          source: '/getcv',
           destination: 'https://www.canva.com/design/DAF_kKnj9WI/IT8NdwVQlzRK3DaMmXm18A/edit?utm_content=DAF_kKnj9WI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
           permanent: true,
         },

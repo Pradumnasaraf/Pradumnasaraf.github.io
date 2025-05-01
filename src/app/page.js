@@ -104,6 +104,12 @@ export default function Home() {
             <Link href="/timeline">Timeline</Link>
           </span>
           <span className="page-item">
+            <Link href="/uses">Toolkit</Link>
+          </span>
+          <span className="page-item">
+            <Link href="/resume">CV</Link>
+          </span>
+          <span className="page-item">
             <Link href="mailto:pradumnasaraf@gmail.com">Contact</Link>
           </span>
         </div>

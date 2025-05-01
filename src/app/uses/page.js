@@ -54,7 +54,7 @@ const UsesPage = () => {
         </svg>
       </Link>
       
-      <h1 className="uses-title">What I Use</h1>
+      <h1 className="uses-title">Tools & Gear I Use</h1>
       
       <section className="uses-section">
         <h2>Hardware</h2>
