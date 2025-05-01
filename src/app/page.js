@@ -21,48 +21,9 @@ export default function Home() {
     // Here you can define what happens when the button is clicked
     window.location.href = 'https://rebasemedia.com';  // Redirect to rebasemedia.com
   };
-  useEffect(() => {
-      document.title = 'Pradumna Saraf'; // Set the document
-      // Google Tag Manager Script
-      const scriptGTM = document.createElement('script');
-      scriptGTM.innerHTML = `
-        (function (w, d, s, l, i) {
-          w[l] = w[l] || [];
-          w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js',
-          });
-          var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-          j.async = true;
-          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-          f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WRGLMZCX');
-      `;
-      document.head.appendChild(scriptGTM);
-  
-      return () => {
-        document.head.removeChild(scriptGTM);
-      };
-    }, []);
 
   return (
     <>
-      {/* Google Tag Manager */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `(function (w, d, s, l, i) {
-                    w[l] = w[l] || []; w[l].push({
-                        'gtm.start': new Date().getTime(), event: 'gtm.js'
-                    }); var f = d.getElementsByTagName(s)[0],
-                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-                })(window, document, 'script', 'dataLayer', 'GTM-WRGLMZCX');`
-        }}
-      />
-      {/* End Google Tag Manager */}
-
       <Head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />

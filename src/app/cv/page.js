@@ -2,7 +2,7 @@
 import './style.css';
 import React, { useEffect } from 'react';
 import Link from "next/link";
-import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope, FaGlobe, FaRss } from 'react-icons/fa';
 
 const CVPage = () => {
   useEffect(() => {
@@ -47,13 +47,19 @@ const CVPage = () => {
               <FaEnvelope /> <a href="mailto:pradumnasaraf@gmail.com">pradumnasaraf@gmail.com</a>
             </p>
             <p>
-              <FaGithub /> <a href="https://github.com/Pradumnasaraf" target="_blank" rel="noopener noreferrer">github.com/Pradumnasaraf</a>
+              <FaGlobe /> <a href="https://pradumnasaraf.dev" target="_blank" rel="noopener noreferrer">pradumnasaraf.dev</a>
+            </p>
+            <p>
+              <FaRss /> <a href="https://blog.pradumnasaraf.dev" target="_blank" rel="noopener noreferrer">blog.pradumnasaraf.dev</a>
+            </p>
+            <p>
+              <FaLinkedin /> <a href="https://linkedin.com/in/pradumnasaraf" target="_blank" rel="noopener noreferrer">linkedin.com/in/pradumnasaraf</a>
             </p>
             <p>
               <FaTwitter /> <a href="https://twitter.com/pradumna_saraf" target="_blank" rel="noopener noreferrer">@pradumna_saraf</a>
             </p>
             <p>
-              <FaLinkedin /> <a href="https://linkedin.com/in/pradumnasaraf" target="_blank" rel="noopener noreferrer">linkedin.com/in/pradumnasaraf</a>
+              <FaGithub /> <a href="https://github.com/Pradumnasaraf" target="_blank" rel="noopener noreferrer">github.com/Pradumnasaraf</a>
             </p>
           </div>
         </header>

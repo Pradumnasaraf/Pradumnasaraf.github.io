@@ -8,10 +8,6 @@
 
 body {
     background-color: #f8f9fa;
-    background-image: 
-        radial-gradient(circle at 25px 25px, #e0e0e0 2%, transparent 0%),
-        radial-gradient(circle at 75px 75px, #e0e0e0 2%, transparent 0%);
-    background-size: 100px 100px;
 }
 
 /* Timeline Title */
