@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import React, { useState, useEffect } from 'react';
 import Masonry from 'react-masonry-css';
@@ -215,28 +216,6 @@ export default function Home() {
 
   useEffect(() => {
     document.title = 'Pradumna Saraf | Photography'; // Set the document title
-    // Google Tag Manager Script
-    const scriptGTM = document.createElement('script');
-    scriptGTM.innerHTML = `
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          'gtm.start': new Date().getTime(),
-          event: 'gtm.js',
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-WRGLMZCX');
-    `;
-    document.head.appendChild(scriptGTM);
-    return () => {
-      document.head.removeChild(scriptGTM);
-    };
-
     // Preload images
     const preloadImages = () => {
       const imagePromises = images.map(img => {
