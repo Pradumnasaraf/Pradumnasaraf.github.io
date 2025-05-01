@@ -2,8 +2,9 @@
 import './style.css';
 import React, { useEffect } from 'react';
 import Link from "next/link";
+import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
-const ResumePage = () => {
+const CVPage = () => {
   useEffect(() => {
     document.title = 'Pradumna Saraf | CV';
     
@@ -18,7 +19,7 @@ const ResumePage = () => {
   }, []);
 
   return (
-    <div className="resume-container">
+    <div className="cv-container">
       <Link href="/" className="back-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -35,22 +36,30 @@ const ResumePage = () => {
         </svg>
       </Link>
 
-      <div className="resume-content">
+      <div className="cv-content">
         <header>
-          <h1>PRADUMNA V SARAF</h1>
-          <p className="bio">A dedicated open source developer and contributor with over 3 years of experience in coding, crafting technical content, community building, and delivering talks. I'm also an enthusiastic team player, skilled at effective collaboration, and capable of working independently to achieve goals.</p>
+          <h1>Pradumna Saraf</h1>
+          <p className="bio">
+            A dedicated open source developer and contributor with over 3 years of experience in coding, crafting technical content, community building, and delivering talks. I'm also an enthusiastic team player, skilled at effective collaboration, and capable of working independently to achieve goals.
+          </p>
           <div className="contact-info">
-            <p>Email: <a href="mailto:pradumnasaraf@gmail.com">pradumnasaraf@gmail.com</a></p>
-            <p>Website: <a href="https://pradumnasaraf.dev">pradumnasaraf.dev</a></p>
-            <p>Blog: <a href="https://blog.pradumnasaraf.dev">blog.pradumnasaraf.dev</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/pradumnasaraf">linkedin.com/in/pradumnasaraf</a></p>
-            <p>X (Twitter): <a href="https://x.com/pradumna_saraf">x.com/pradumna_saraf</a></p>
-            <p>GitHub: <a href="https://github.com/Pradumnasaraf">github.com/Pradumnasaraf</a></p>
+            <p>
+              <FaEnvelope /> <a href="mailto:pradumnasaraf@gmail.com">pradumnasaraf@gmail.com</a>
+            </p>
+            <p>
+              <FaGithub /> <a href="https://github.com/Pradumnasaraf" target="_blank" rel="noopener noreferrer">github.com/Pradumnasaraf</a>
+            </p>
+            <p>
+              <FaTwitter /> <a href="https://twitter.com/pradumna_saraf" target="_blank" rel="noopener noreferrer">@pradumna_saraf</a>
+            </p>
+            <p>
+              <FaLinkedin /> <a href="https://linkedin.com/in/pradumnasaraf" target="_blank" rel="noopener noreferrer">linkedin.com/in/pradumnasaraf</a>
+            </p>
           </div>
         </header>
 
         <section className="section">
-          <h2>WORK EXPERIENCE</h2>
+          <h2>Professional Experience</h2>
           
           <div className="job">
             <div className="job-header">
@@ -72,7 +81,7 @@ const ResumePage = () => {
             </div>
             <ul>
               <li>Launched a content/community-led developer advocacy effort as part of the company's go-to-market strategy.</li>
-              <li>Created various strategies and initiatives to promote and increase adoption and contribution for our open-source offerings—<a href="https://github.com/livecycle/preevy">Preevy</a> and Docker extension. This helped to cross 1500 GitHub stars and gain over 100 active weekly users.</li>
+              <li>Created various strategies and initiatives to promote and increase adoption and contribution for our open-source offerings—Prevy and Docker extension. This helped to cross 1500 GitHub stars and gain over 100 active weekly users.</li>
               <li>Delivered various in-person talks, written technical blogs, social content, talk sessions, and video guides on the Livecycle YouTube channel to educate people about the product and underlying technologies like Docker, Cloud, GitHub Actions, etc.</li>
               <li>Actively nurtured the Livecycle Slack community, resulting in a membership growth from 0 to over 300 individuals, promoting collaboration and gathering product feedback and user needs.</li>
               <li>Planned, launched, and led the flagship Interview series—Navigating Docker With Captains, interviewing the exclusive group of people and Docker experts known as Docker Captains.</li>
@@ -90,42 +99,46 @@ const ResumePage = () => {
               <li>Hosted online talk sessions on Twitter and LinkedIn, bringing industry experts to speak and leading discussions on various topics and technologies.</li>
             </ul>
           </div>
+
+          <div className="job">
+            <div className="job-header">
+              <h3>Docker Captain</h3>
+              <span className="date">July 2024 - Present</span>
+            </div>
+            <ul>
+              <li>Active contributors and advocates for Docker and help shape the Docker ecosystem.</li>
+              <li>Contributing to Docker documentation and creating educational content.</li>
+              <li>Leading community initiatives and mentoring developers in container technologies.</li>
+            </ul>
+          </div>
         </section>
 
         <section className="section">
-          <h2>PROJECTS</h2>
+          <h2>Projects</h2>
           
           <div className="project">
-            <h3>Contributors (<a href="https://github.com/pradumnasaraf/Contributors">github.com/pradumnasaraf/Contributors</a>)</h3>
+            <h3>Contributors</h3>
             <p>A GraphQL API built with Golang to capture and manage open source contributions data. It uses MongoDB for data storage and Redis for caching and rate limiting. For monitoring, it utilizes Prometheus and Grafana.</p>
-            <ul>
-              <li>Created custom metrics for the API to instrument the application for Prometheus monitoring.</li>
-              <li>Uses Kubernetes for deployment to support orchestration and standardization.</li>
-              <li><strong>Tech Stack:</strong> Golang, GraphQL, MongoDB, Redis, Prometheus, Grafana, Kubernetes</li>
-            </ul>
+            <p><strong>Tech Stack:</strong> Golang, GraphQL, MongoDB, Redis, Prometheus, Grafana, Kubernetes</p>
+            <a href="https://github.com/pradumnasaraf/Contributors" target="_blank" rel="noopener noreferrer">View Project →</a>
           </div>
 
           <div className="project">
-            <h3>PullPrompt (<a href="https://github.com/pradumnasaraf/pullprompt">github.com/pradumnasaraf/pullprompt</a>)</h3>
+            <h3>PullPrompt</h3>
             <p>A GitHub Action that comments on a Pull Request with a message generated from a user-given prompt. Under the hood, it uses Google's Gemini API to generate the text.</p>
-            <ul>
-              <li>It includes features like model selection, temperature, output language, and other output tuning options.</li>
-              <li><strong>Tech Stack:</strong> Node.js, GitHub Actions, Google Gemini</li>
-            </ul>
+            <p><strong>Tech Stack:</strong> Node.js, GitHub Actions, Google Gemini</p>
+            <a href="https://github.com/pradumnasaraf/pullprompt" target="_blank" rel="noopener noreferrer">View Project →</a>
           </div>
 
           <div className="project">
-            <h3>DevOps (<a href="https://github.com/pradumnasaraf/DevOps">github.com/pradumnasaraf/DevOps</a>)</h3>
-            <p>Learning hub to explore various tools and technologies in DevOps.</p>
-            <ul>
-              <li>Assisting thousands of learners, practitioners, and professionals every day in their DevOps journey.</li>
-              <li>Over 2800+ GitHub stars with 1000 active visitors per week.</li>
-            </ul>
+            <h3>DevOps</h3>
+            <p>Learning hub to explore various tools and technologies in DevOps. Assisting thousands of learners, practitioners, and professionals every day in their DevOps journey. Over 2800+ GitHub stars with 1000 active visitors per week.</p>
+            <a href="https://github.com/Pradumnasaraf/DevOps" target="_blank" rel="noopener noreferrer">View Project →</a>
           </div>
         </section>
 
         <section className="section">
-          <h2>PROGRAMMING SKILLS</h2>
+          <h2>Skills</h2>
           <div className="skills">
             <p><strong>Languages:</strong> Golang, JavaScript, Node.js, Python, HTML, CSS</p>
             <p><strong>Technologies:</strong> Docker, Kubernetes, Cloud, Linux, GitHub Actions, Jenkins, Terraform, CI/CD, GraphQL, Grafana, Prometheus, GitOps, PostgreSQL, MongoDB, Redis, WebAssembly</p>
@@ -133,42 +146,54 @@ const ResumePage = () => {
         </section>
 
         <section className="section">
-          <h2>RECOGNITION/ACHIEVEMENTS</h2>
-          <ul>
-            <li><strong>Docker Captain:</strong> Active contributors and advocates for Docker and help shape the Docker ecosystem.</li>
-            <li><strong>Winner:</strong> daily.dev RSS Feed Hackathon</li>
-            <li><strong>Winner:</strong> Postman API Fest Hackathon</li>
-          </ul>
+          <h2>Recognition & Achievements</h2>
+          <div className="achievements">
+            <ul>
+              <li><strong>Docker Captain:</strong> Active contributor and advocate for Docker ecosystem</li>
+              <li><strong>Winner:</strong> daily.dev RSS Feed Hackathon</li>
+              <li><strong>Winner:</strong> Postman API Fest Hackathon</li>
+            </ul>
+          </div>
         </section>
 
         <section className="section">
-          <h2>LEADERSHIP EXPERIENCE</h2>
-          <ul>
-            <li><strong>Founder and Organiser</strong> - Cloud Native Patna</li>
-            <li><strong>Mentor</strong> - Major League Hacking</li>
-            <li><strong>Maintainer</strong> - BioDrop (5800+ GitHub stars) - open source link aggregator</li>
-          </ul>
+          <h2>Leadership Experience</h2>
+          <div className="leadership">
+            <ul>
+              <li><strong>Founder and Organiser</strong> - Cloud Native Patna</li>
+              <li><strong>Mentor</strong> - Major League Hacking</li>
+              <li><strong>Maintainer</strong> - BioDrops (5800+ GitHub stars) - open source link aggregator</li>
+            </ul>
+          </div>
         </section>
 
         <section className="section">
-          <h2>CONFERENCE TALKS</h2>
-          <ul>
-            <li>Speaker at <strong>SOSS Community Day (KubeCon)</strong>, India to share how to improve software supply chain security.</li>
-            <li>Speaker at <strong>Docker Bangalore Meet-up</strong>, to share about Docker Compose and the importance of preview environments.</li>
-            <li>Speaker at <strong>Web3Conf</strong>, India to share the importance of Open Source and how to maintain a project effectively.</li>
-          </ul>
+          <h2>Conference Talks</h2>
+          <div className="talks">
+            <ul>
+              <li>Speaker at <strong>SOSS Community Day (KubeCon)</strong>, India to share how to improve software supply chain security.</li>
+              <li>Speaker at <strong>Docker Bangalore Meet-up</strong>, to share about Docker Compose and the importance of preview environments.</li>
+              <li>Speaker at <strong>Web3Conf</strong>, India to share the importance of Open Source and how to maintain a project effectively.</li>
+            </ul>
+          </div>
         </section>
 
         <section className="section">
-          <h2>EDUCATION</h2>
+          <h2>Education</h2>
           <div className="education">
             <h3>Bachelor of Computer Applications</h3>
             <span className="date">May 2020 - June 2023</span>
           </div>
         </section>
+
+        <div className="download-cv">
+          <a href="https://www.canva.com/design/DAF_kKnj9WI/IT8NdwVQlzRK3DaMmXm18A/edit?utm_content=DAF_kKnj9WI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer" className="download-button">
+            View & Download CV (PDF)
+          </a>
+        </div>
       </div>
     </div>
   );
 };
 
-export default ResumePage; 
+export default CVPage; 

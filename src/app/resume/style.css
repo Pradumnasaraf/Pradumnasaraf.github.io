@@ -1,5 +1,5 @@
 /* Base styles */
-.resume-container {
+.cv-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
@@ -41,7 +41,7 @@
 }
 
 /* Content */
-.resume-content {
+.cv-content {
   margin-top: 2rem;
   padding: 1rem;
   border-radius: 12px;
@@ -229,7 +229,7 @@ li {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .resume-container {
+  .cv-container {
     padding: 1rem;
   }
 
@@ -312,7 +312,7 @@ li {
 
 /* Small mobile devices */
 @media (max-width: 480px) {
-  .resume-container {
+  .cv-container {
     padding: 0.5rem;
   }
 

@@ -107,7 +107,7 @@ export default function Home() {
             <Link href="/uses">Toolkit</Link>
           </span>
           <span className="page-item">
-            <Link href="/resume">CV</Link>
+            <Link href="/cv">CV</Link>
           </span>
           <span className="page-item">
             <Link href="mailto:pradumnasaraf@gmail.com">Contact</Link>
