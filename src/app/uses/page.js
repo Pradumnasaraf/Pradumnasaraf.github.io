@@ -61,8 +61,8 @@ const UsesPage = () => {
         <div className="uses-grid">
           <div className="uses-item">
             <h3>Computer</h3>
-            <p>MacBook Pro 14 (M1 Pro, 16GB RAM)</p>
-            <p>MacBook Pro 14 (M2 Pro, 32GB RAM)</p>
+            <p>MacBook Pro 14 - M1 Pro, 16GB RAM</p>
+            <p>MacBook Pro 14 - M2 Pro, 32GB RAM</p>
           </div>
           
           <div className="uses-item">
@@ -103,39 +103,34 @@ const UsesPage = () => {
           </div>
 
           <div className="uses-item">
-            <h3>Browser</h3>
-            <p>Arc</p>
+            <h3>AI Tools</h3>
+            <p>LM Studio, ChatGPT, Ollama</p>
           </div>
           
           <div className="uses-item">
-            <h3>Design</h3>
-            <p>Figma, Canva</p>
+            <h3>Development Tools</h3>
+            <p>Docker, Lens Kubernetes IDE, Postman, TablePlus, MongoDB Compass </p>
+          </div>
+
+          <div className="uses-item">
+            <h3>Browser</h3>
+            <p>Arc</p>
+          </div>
+
+          <div className="uses-item">
+            <h3>Content Creation</h3>
+            <p>Canva, Figma, Screen Studio, Buffer</p>
+          </div>         
+          
+          <div className="uses-item">
+            <h3>Productivity</h3>
+            <p>Notion</p>
           </div>
           
           <div className="uses-item">
             <h3>Communication</h3>
             <p>Slack, Discord</p>
           </div>
-          
-          <div className="uses-item">
-            <h3>Development Tools</h3>
-            <p>Docker,
-              Kubernetes</p>
-            <p>For containerization and orchestration</p>
-          </div>         
-          
-          <div className="uses-item">
-            <h3>AI Tools</h3>
-            <p>LM Studio</p>
-            <p>ChatGPT</p>
-          </div>
-          
-          <div className="uses-item">
-            <h3>Other</h3>
-            <p>Notion</p>
-            <p>For API development and testing</p>
-          </div>
-          
 
         </div>
       </section>
