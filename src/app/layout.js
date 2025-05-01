@@ -18,16 +18,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={leagueSpartan.className}>
       <head>
-        {/* GTM DataLayer init */}
+        {/* Google Tag Manager initialization */}
         <Script id="gtm-init" strategy="beforeInteractive">
-          {`window.dataLayer = window.dataLayer || []; window.dataLayer.push({ 'gtm.start': new Date().getTime(), event:'gtm.js' });`}
+          {`window.dataLayer = window.dataLayer || []; window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
         </Script>
-        {/* GTM script */}
-        <Script src="https://www.googletagmanager.com/gtm.js?id=GTM-WRGLMZCX" strategy="afterInteractive" />
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-WRGLMZCX"
+        />
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        {/* GTM no-script */}
+        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WRGLMZCX"

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-css-tags, @next/next/no-page-custom-font, @next/next/no-img-element */
 'use client';
 import Link from "next/link";
 import { useEffect, useState } from 'react';  
