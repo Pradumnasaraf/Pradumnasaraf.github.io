@@ -16,7 +16,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: 'Pradumna Saraf | Developer Advocate & Docker Captain',
+  title: 'Pradumna Saraf',
   description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
   keywords: "Pradumna Saraf, Developer Advocate, Docker Captain, Open Source, Cloud Native, DevOps, Software Development",
   authors: [{ name: 'Pradumna Saraf' }],
@@ -24,7 +24,7 @@ export const metadata = {
   publisher: 'Pradumna Saraf',
   robots: 'index, follow',
   openGraph: {
-    title: 'Pradumna Saraf | Developer Advocate & Docker Captain',
+    title: 'Pradumna Saraf',
     description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
     url: 'https://pradumnasaraf.dev',
     siteName: 'Pradumna Saraf',
@@ -41,7 +41,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pradumna Saraf | Developer Advocate & Docker Captain',
+    title: 'Pradumna Saraf',
     description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/og-image.jpg'],
