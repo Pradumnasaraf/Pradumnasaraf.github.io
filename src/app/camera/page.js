@@ -7,6 +7,8 @@ import './style.css';
 import Link from 'next/link';
 
 const images = [
+  { src: 'https://drive.google.com/thumbnail?id=16PpTEy-h9WHxZtOLYx_bVrp4KbP-SWUU&sz=w2000', alt: 'photo' },
+  { src: 'https://drive.google.com/thumbnail?id=1ZQJGrQZ9YbHP5P80xk3nju_oRyJO9Bab&sz=w2000', alt: 'photo' },
   { src: 'https://drive.google.com/thumbnail?id=1b4muPn7Ca_WFX3cgvZVpi1qLe6H39KoW&sz=w2000', alt: 'photo' },
   { src: 'https://drive.google.com/thumbnail?id=1uu0wWGmbHC0VY7BT-n5DUpWz86_ozANg&sz=w2000', alt: 'photo' },
   { src: 'https://drive.google.com/thumbnail?id=1G8IYlbeJUKvghC8FIlEmtyVo6fg_YxqZ&sz=w2000', alt: 'photo' },
