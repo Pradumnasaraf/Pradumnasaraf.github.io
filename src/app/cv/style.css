@@ -38,6 +38,25 @@
   color: #000;
 }
 
+.back-button::after {
+  content: 'Home';
+  position: absolute;
+  left: 50px;
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.back-button:hover::after {
+  opacity: 1;
+}
+
 .cv-content {
   margin-top: 2rem;
   padding: 1rem;
@@ -96,12 +115,13 @@ header h1 {
 
 .contact-info a {
   color: #0066cc;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.2s;
 }
 
 .contact-info a:hover {
   color: #004999;
+  text-decoration: underline;
 }
 
 .section {
@@ -179,7 +199,7 @@ li {
 
 .project a {
   color: #0066cc;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.2s;
   display: inline-block;
   margin-top: 0.5rem;
@@ -187,6 +207,7 @@ li {
 
 .project a:hover {
   color: #004999;
+  text-decoration: underline;
 }
 
 .skills {
@@ -275,16 +296,99 @@ li {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+.social-link {
+  color: #0066cc;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: #004999;
+  text-decoration: underline;
+}
+
+.download-cv-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download-cv-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-cv-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.download-cv-button::after {
+  content: 'View & Download CV';
+  position: absolute;
+  right: 50px;
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.download-cv-button:hover::after {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .cv-container {
     padding: 1rem;
   }
 
-  .back-button {
-    top: 10px;
-    left: 10px;
+  .back-button, .download-cv-button {
     width: 36px;
     height: 36px;
+    top: 15px;
+  }
+
+  .back-button {
+    left: 15px;
+  }
+
+  .download-cv-button {
+    right: 15px;
+  }
+
+  .back-button svg, .download-cv-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .back-button::after {
+    left: 45px;
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+
+  .download-cv-button::after {
+    right: 45px;
+    font-size: 11px;
+    padding: 3px 6px;
   }
 
   header {
@@ -367,6 +471,37 @@ li {
 @media (max-width: 480px) {
   .cv-container {
     padding: 0.5rem;
+  }
+
+  .back-button, .download-cv-button {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+  }
+
+  .back-button {
+    left: 10px;
+  }
+
+  .download-cv-button {
+    right: 10px;
+  }
+
+  .back-button svg, .download-cv-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .back-button::after {
+    left: 40px;
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+
+  .download-cv-button::after {
+    right: 40px;
+    font-size: 10px;
+    padding: 2px 5px;
   }
 
   header h1 {

@@ -1,11 +1,11 @@
 "use client";
+import './style.css';
 import React, { useEffect } from 'react';
 import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Head from 'next/head';
 import Link from "next/link";
-import './style.css';
 
-const ScheduleMeetingPage = () => {
+const ChatPage = () => {
   useEffect(() => {
     document.title = 'Pradumna Saraf | Schedule a Meeting';
     // Note: Google Tag Manager is loaded globally in layout.js, so we no longer inject it here.
@@ -67,6 +67,22 @@ const ScheduleMeetingPage = () => {
         <title>Schedule a Meeting</title>
       </Head>
 
+      <Link href="/" className="back-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </Link>
+
       {/* NAVIGATION */}
       <div className="nav">
         <div className="pages">
@@ -100,4 +116,4 @@ const ScheduleMeetingPage = () => {
   );
 };
 
-export default ScheduleMeetingPage;
+export default ChatPage;

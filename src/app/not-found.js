@@ -1,3 +1,4 @@
+'use client';
 import './not-found.css';
 import Link from "next/link";
 

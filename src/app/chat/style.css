@@ -23,4 +23,97 @@
     margin-top: 0 !important;
     height: 100vh !important;
   }
-} 
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  transform: translateX(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button svg {
+  color: #333;
+  transition: color 0.3s ease;
+  width: 24px;
+  height: 24px;
+}
+
+.back-button:hover svg {
+  color: #000;
+}
+
+.back-button::after {
+  content: 'Home';
+  position: absolute;
+  left: 50px;
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.back-button:hover::after {
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .back-button {
+    width: 36px;
+    height: 36px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .back-button::after {
+    left: 45px;
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .back-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .back-button::after {
+    left: 40px;
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+}

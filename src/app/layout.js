@@ -9,10 +9,47 @@ const leagueSpartan = League_Spartan({
   display: 'swap',
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata = {
-  title: 'Pradumna Saraf',
-  description: "Developer Advocate. Docker Captain. Open Source evangelism.",
-}
+  title: 'Pradumna Saraf | Developer Advocate & Docker Captain',
+  description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
+  keywords: "Pradumna Saraf, Developer Advocate, Docker Captain, Open Source, Cloud Native, DevOps, Software Development",
+  authors: [{ name: 'Pradumna Saraf' }],
+  creator: 'Pradumna Saraf',
+  publisher: 'Pradumna Saraf',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Pradumna Saraf | Developer Advocate & Docker Captain',
+    description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
+    url: 'https://pradumnasaraf.dev',
+    siteName: 'Pradumna Saraf',
+    images: [
+      {
+        url: 'https://pradumnasaraf.dev/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Pradumna Saraf - Developer Advocate & Docker Captain',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pradumna Saraf | Developer Advocate & Docker Captain',
+    description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
+    creator: '@pradumna_saraf',
+    images: ['https://pradumnasaraf.dev/og-image.jpg'],
+  },
+  verification: {
+    google: 'your-google-site-verification',
+  },
+};
 
 export default function RootLayout({ children }) {
   return (

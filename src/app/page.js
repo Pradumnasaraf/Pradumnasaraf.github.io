@@ -67,6 +67,9 @@ export default function Home() {
           </span>
           <span className="page-item">
             <Link href="/uses">Toolkit</Link>
+          </span>          
+          <span className="page-item">
+            <Link href="/Camera">Camera</Link>
           </span>
           <span className="page-item">
             <Link href="/cv">CV</Link>
