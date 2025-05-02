@@ -20,7 +20,7 @@ const TimelinePage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="min-h-screen">
       <Link href="/" className="back-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"

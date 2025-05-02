@@ -122,16 +122,16 @@
 
 /* In your styles/globals.css or any relevant CSS file */
 body {
-  background-color: #f0f0f0; /* Light grey background color */
-  color: #333; /* Dark grey text color for contrast */
-  font-family: Arial, sans-serif; /* Update to your preferred font */
+  background-color: #ffffff;
+  color: #333;
+  font-family: Arial, sans-serif;
 }
 
 .page-container {
-  background-color: #ffffff; /* White background for the main content */
-  padding: 2rem; /* Adjust padding as needed */
-  border-radius: 8px; /* Optional: Add rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* In your styles/globals.css or any relevant CSS file */
@@ -156,6 +156,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   z-index: 1000;
+  cursor: pointer;
 }
 
 .back-button:hover {
