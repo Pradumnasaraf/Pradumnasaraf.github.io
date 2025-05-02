@@ -66,7 +66,7 @@ export default function Home() {
             <Link href="/timeline">Timeline</Link>
           </span>
           <span className="page-item">
-            <Link href="/uses">Toolkit</Link>
+            <Link href="/toolkit">Toolkit</Link>
           </span>          
           <span className="page-item">
             <Link href="/camera">Camera</Link>

@@ -1,4 +1,4 @@
-.uses-container {
+.toolkit-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
@@ -95,18 +95,18 @@
   }
 }
 
-.uses-title {
+.toolkit-title {
   font-size: 2.5rem;
   margin-bottom: 3rem;
   color: #333;
   text-align: center;
 }
 
-.uses-section {
+.toolkit-section {
   margin-bottom: 4rem;
 }
 
-.uses-section h2 {
+.toolkit-section h2 {
   font-size: 1.8rem;
   color: #333;
   margin-bottom: 2rem;
@@ -114,13 +114,13 @@
   border-bottom: 2px solid #eee;
 }
 
-.uses-grid {
+.toolkit-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.uses-item {
+.toolkit-item {
   background: #fff;
   padding: 1.5rem;
   border-radius: 10px;
@@ -128,18 +128,18 @@
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.uses-item:hover {
+.toolkit-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.uses-item h3 {
+.toolkit-item h3 {
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 0.5rem;
 }
 
-.uses-item p {
+.toolkit-item p {
   color: #666;
   margin: 0.3rem 0;
   font-size: 1rem;
@@ -147,19 +147,19 @@
 }
 
 @media (max-width: 768px) {
-  .uses-container {
+  .toolkit-container {
     padding: 1rem;
   }
 
-  .uses-title {
+  .toolkit-title {
     font-size: 2rem;
   }
 
-  .uses-section h2 {
+  .toolkit-section h2 {
     font-size: 1.5rem;
   }
 
-  .uses-grid {
+  .toolkit-grid {
     grid-template-columns: 1fr;
   }
 } 

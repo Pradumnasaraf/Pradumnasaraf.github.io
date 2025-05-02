@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: 'Pradumna Saraf | Tools & Gear I Use',
     description: "Discover the tools, software, and gear that Pradumna Saraf uses daily as a Developer Advocate and Docker Captain. A comprehensive list of development tools, hardware, and productivity apps.",
-    url: 'https://pradumnasaraf.dev/uses',
+    url: 'https://pradumnasaraf.dev/toolkit',
   },
   twitter: {
     title: 'Pradumna Saraf | Tools & Gear I Use',
