@@ -108,7 +108,7 @@ const CVPage = () => {
               <span className="date">Aug 2023 - April 2024</span>
             </div>
             <ul>
-              <li>{`Launched a content/community-led developer advocacy effort as part of the company&#39;s go-to-market strategy.`}</li>
+              <li>{`Launched a content/community-led developer advocacy effort as part of the company's go-to-market strategy.`}</li>
               <li>{`Created various strategies and initiatives to promote and increase adoption and contribution for our open-source `}<a href="https://github.com/livecycle/preevy" target="_blank" rel="noopener noreferrer" className="social-link">Preevy</a>{` and Docker extension. This helped to cross 1500 GitHub stars and gain over 100 active weekly users.`}</li>
               <li>{`Delivered various in-person talks, written technical blogs, social content, talk sessions, and video guides on the Livecycle YouTube channel to educate people about the product and underlying technologies like Docker, Cloud, GitHub Actions, etc.`}</li>
               <li>{`Actively nurtured the Livecycle Slack community, resulting in a membership growth from 0 to over 300 individuals, promoting collaboration and gathering product feedback and user needs.`}</li>
@@ -134,7 +134,7 @@ const CVPage = () => {
               <span className="date">July 2024 - Present</span>
             </div>
             <ul>
-              <li>{`Recognised as a Docker Captain for my expertise and contributions to the Docker ecosystem. I have contributed to Docker&#39;s official documentation, created content on Docker and Docker Compose, helped open source projects adopt Docker, and more.`}</li>
+              <li>{`Recognized as a Docker Captain for my expertise and contributions to the Docker ecosystem. I have contributed to Docker's official documentation, created content on Docker and Docker Compose, helped open source projects adopt Docker, and more.`}</li>
               <li>{`Working with the official docs team to bring more content, such as how-to guides and language-specific resources, to cater to a broader audience. Collaborating with the Test Containers and Social teams.`}</li>
               <li>{`Delivering talks at conferences about various Docker technologies.`}</li>
               <li>{`Notable contributions: `}<a href="https://docs.docker.com/guides/go-prometheus-monitoring" target="_blank" rel="noopener noreferrer" className="social-link">Go Prometheus Monitoring Guide</a>{`, `}<a href="https://docs.docker.com/guides/deno" target="_blank" rel="noopener noreferrer" className="social-link">Deno Guide</a>{`, `}<a href="https://docs.docker.com/guides/bun" target="_blank" rel="noopener noreferrer" className="social-link">Bun Guide</a>{`, `}<a href="https://docs.docker.com/guides/cpp" target="_blank" rel="noopener noreferrer" className="social-link">C++ Guide</a></li>
@@ -206,9 +206,10 @@ const CVPage = () => {
           <h2>Recognition & Achievements</h2>
           <div className="achievements">
             <ul>
-              <li><strong>Docker Captain:</strong> Active contributor and advocate for Docker ecosystem</li>
-              <li><strong>Winner:</strong> daily.dev RSS Feed Hackathon</li>
-              <li><strong>Winner:</strong> Postman API Fest Hackathon</li>
+              <li><strong>Docker Captain:</strong> Recognized as a <a href="https://www.docker.com/captains/pradumna-v-saraf" target="_blank" rel="noopener noreferrer" className="social-link">Docker Captain</a> for my contributions to the Docker ecosystem.</li>
+              <li><strong>Top Author on dev.to:</strong> Recognised as a top author on dev.to for my technical content and contributions.</li>
+              <li><strong>Winner:</strong> <a href="https://github.com/dailydotdev/hackathon-participants-March-2022" target="_blank" rel="noopener noreferrer" className="social-link">daily.dev RSS Feed Hackathon</a></li>
+              <li><strong>Winner:</strong> <a href="https://blog.postman.com/highlights-of-api-fest-2022" target="_blank" rel="noopener noreferrer" className="social-link">Postman API Fest Hackathon</a></li>
             </ul>
           </div>
         </section>
@@ -228,9 +229,9 @@ const CVPage = () => {
           <h2>Conference Talks</h2>
           <div className="talks">
             <ul>
-              <li>Speaker at <strong>SOSS Community Day (KubeCon)</strong>, India to share how to improve software supply chain security.</li>
+              <li>Speaker at <strong><a href="https://youtu.be/hRp4PaZ6FS4?si=Yzjzu-dIuzwWk6q1" target="_blank" rel="noopener noreferrer" className="social-link">SOSS Community Day (KubeCon)</a></strong>, India to share how to improve software supply chain security.</li>
               <li>Speaker at <strong>Docker Bangalore Meet-up</strong>, to share about Docker Compose and the importance of preview environments.</li>
-              <li>Speaker at <strong>Web3Conf</strong>, India to share the importance of Open Source and how to maintain a project effectively.</li>
+              <li>Speaker at <strong><a href="https://youtu.be/VKPV12TpTtI?si=CRqq58LT3fL6ePVB" target="_blank" rel="noopener noreferrer" className="social-link">Web3Conf</a></strong>, India to share the importance of Open Source and how to maintain a project effectively.</li>
             </ul>
           </div>
         </section>
