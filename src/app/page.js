@@ -5,9 +5,12 @@ import { useEffect, useState } from 'react';
 import './globals.css';  
 import Head from 'next/head';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'; 
+import KonamiGame from '@/components/KonamiGame';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showGame, setShowGame] = useState(false);
+  const [keySequence, setKeySequence] = useState([]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -22,6 +25,30 @@ export default function Home() {
     // Here you can define what happens when the button is clicked
     window.location.href = 'https://rebasemedia.com';  // Redirect to rebasemedia.com
   };
+
+  useEffect(() => {
+    const konamiCode = [
+      'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+      'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'
+    ];
+    const handleKeyDown = (e) => {
+      // Only add to sequence if it's one of the Konami code keys
+      if (konamiCode.includes(e.key)) {
+        setKeySequence(prev => {
+          const newSequence = [...prev, e.key].slice(-10);
+          // Check if the sequence matches exactly
+          if (newSequence.length === konamiCode.length && 
+              newSequence.every((key, index) => key === konamiCode[index])) {
+            setShowGame(true);
+            return [];
+          }
+          return newSequence;
+        });
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   return (
     <>
@@ -121,6 +148,10 @@ export default function Home() {
           </Link>
         </div>
       </div>
+
+      <main>
+        {showGame && <KonamiGame onClose={() => setShowGame(false)} />}
+      </main>
     </>
   );
 }
