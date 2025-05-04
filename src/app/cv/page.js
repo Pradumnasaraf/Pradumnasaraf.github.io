@@ -118,7 +118,7 @@ const CVPage = () => {
 
           <div className="job">
             <div className="job-header">
-             <h3>Open Source DevRel, Vruksh Ecosystem Foundation</h3>
+              <h3>Open Source DevRel, Vruksh Ecosystem Foundation</h3>
               <span className="date">Dec 2021 - Jul 2022</span>
             </div>
             <ul>

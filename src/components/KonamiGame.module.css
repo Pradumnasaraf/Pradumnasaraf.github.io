@@ -1,0 +1,92 @@
+.gameContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.gameHeader {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: left;
+  color: white;
+}
+
+.gameArea {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  width: 600px;
+  height: 600px;
+}
+
+.snakeSegment {
+  position: absolute;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.food {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff4444;
+  font-size: 20px;
+}
+
+.gameOver {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border: 2px solid white;
+  text-align: center;
+  color: white;
+  width: 200px;
+}
+
+.gameOver button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.exitButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.exitButton:hover {
+  background-color: white;
+  color: black;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+} 
