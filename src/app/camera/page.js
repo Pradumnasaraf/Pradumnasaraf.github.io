@@ -85,10 +85,16 @@ const ImageItem = ({ src, alt, onClick }) => {
       observer.observe(currentElement);
     }
 
+    // Set a timeout to clear loading state if image takes too long
+    const timeoutId = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000); // 5 seconds maximum for individual image loading
+
     return () => {
       if (currentElement) {
         observer.unobserve(currentElement);
       }
+      clearTimeout(timeoutId);
     };
   }, [src]);
 
@@ -219,23 +225,42 @@ export default function Home() {
 
   useEffect(() => {
     document.title = 'Pradumna Saraf | Photography'; // Set the document title
-    // Preload images
-    const preloadImages = () => {
-      const imagePromises = images.map(img => {
-        return new Promise((resolve, reject) => {
+    
+    // Set a reasonable timeout to automatically clear loading state
+    const timeoutId = setTimeout(() => {
+      setIsLoading(false);
+    }, 8000); // 8 seconds maximum loading time
+    
+    // Preload just a few images first for faster initial display
+    const preloadInitialImages = () => {
+      // Only preload first 8 images for quick display
+      const initialImagePromises = images.slice(0, 8).map(img => {
+        return new Promise((resolve) => {
           const image = new Image();
           image.src = img.src;
           image.onload = resolve;
-          image.onerror = reject;
+          image.onerror = resolve;
         });
       });
 
-      Promise.all(imagePromises)
-        .then(() => setIsLoading(false))
-        .catch(console.error);
+      Promise.all(initialImagePromises)
+        .then(() => {
+          // Set loading to false after initial images load
+          setIsLoading(false);
+          
+          // Continue loading the rest in background
+          images.slice(8).forEach(img => {
+            const image = new Image();
+            image.src = img.src;
+          });
+        })
+        .catch(() => {
+          setIsLoading(false);
+        });
     };
 
-    preloadImages();
+    preloadInitialImages();
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
