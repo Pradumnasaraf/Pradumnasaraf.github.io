@@ -30,10 +30,10 @@ export const metadata = {
     siteName: 'Pradumna Saraf',
     images: [
       {
-        url: 'https://pradumnasaraf.dev/og-image.jpg',
+        url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
         width: 1200,
         height: 630,
-        alt: 'Pradumna Saraf - Developer Advocate & Docker Captain',
+        alt: 'Pradumna Saraf - Open Source Developer/DevRel. Owner @rebasemedia',
       },
     ],
     locale: 'en_US',
@@ -44,7 +44,7 @@ export const metadata = {
     title: 'Pradumna Saraf',
     description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
     creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/og-image.jpg'],
+    images: ['https://pradumnasaraf.dev/media/pradumna-saraf.png'],
   },
   verification: {
     google: 'your-google-site-verification',
