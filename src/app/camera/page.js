@@ -172,7 +172,7 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
-        <span className="modal-label">Close</span>
+        <span className="modal-label modal-label-left">Close</span>
       </div>
       {/* Previous Button */}
       <div style={{position: 'fixed', left: 20, top: '50%', transform: 'translateY(-50%)', display: 'inline-block'}}>
@@ -195,7 +195,7 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
             <path d="M15 18l-6-6 6-6" />
           </svg>
         </button>
-        <span className="modal-label">Previous</span>
+        <span className="modal-label modal-label-right">Previous</span>
       </div>
       <img
         src={imageSrc}
@@ -223,7 +223,7 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
             <path d="M9 6l6 6-6 6" />
           </svg>
         </button>
-        <span className="modal-label">Next</span>
+        <span className="modal-label modal-label-left">Next</span>
       </div>
     </div>,
     document.body
@@ -311,7 +311,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen p-4 md:p-8">
+    <div className="min-h-screen p-4 md:p-8 mx-4 md:mx-16">
       <Link href="/" className="back-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"

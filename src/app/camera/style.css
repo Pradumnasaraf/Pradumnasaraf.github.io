@@ -222,6 +222,10 @@ body {
     font-size: 11px;
     padding: 3px 6px;
   }
+
+  .camera-title {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -276,9 +280,8 @@ body {
 
 .modal-label {
   position: absolute;
-  left: 50%;
-  top: 110%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
   background-color: #333;
   color: white;
   padding: 4px 8px;
@@ -289,6 +292,16 @@ body {
   pointer-events: none;
   white-space: nowrap;
   z-index: 1001;
+}
+
+/* Tooltip to the right (for Previous button) */
+.modal-label-right {
+  left: 120%;
+}
+
+/* Tooltip to the left (for Close and Next buttons) */
+.modal-label-left {
+  right: 120%;
 }
 
 .modal-circle-button:hover + .modal-label {
