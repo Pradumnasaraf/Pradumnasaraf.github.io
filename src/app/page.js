@@ -125,7 +125,7 @@ export default function Home() {
           <p>Open Source Developer/DevRel. Docker Captain. Owner <Link href="https://github.com/rebasemedia">@ rebase media</Link></p>
           <div className="ibutton">
             <button className="connect" onClick={handleClickGitHub}>{`Let's Collaborate`}</button>            
-            <button className="connect" onClick={handleClickService}>My Services</button>
+            <button className="connect" onClick={handleClickService}>Services</button>
 
           </div>
         </div>
