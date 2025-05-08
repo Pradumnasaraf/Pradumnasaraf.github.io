@@ -222,6 +222,10 @@ body {
     font-size: 11px;
     padding: 3px 6px;
   }
+
+  .camera-title {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -239,6 +243,96 @@ body {
 
   .back-button::after {
     left: 40px;
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+}
+
+.modal-circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+  border: none;
+  position: relative;
+}
+
+.modal-circle-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f3f4f6;
+}
+
+.modal-circle-button svg {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.modal-circle-button:hover svg {
+  color: #000;
+}
+
+.modal-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1001;
+}
+
+/* Tooltip to the right (for Previous button) */
+.modal-label-right {
+  left: 120%;
+}
+
+/* Tooltip to the left (for Close and Next buttons) */
+.modal-label-left {
+  right: 120%;
+}
+
+.modal-circle-button:hover + .modal-label {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .modal-circle-button {
+    width: 36px;
+    height: 36px;
+  }
+  .modal-circle-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  .modal-label {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-circle-button {
+    width: 32px;
+    height: 32px;
+  }
+  .modal-circle-button svg {
+    width: 18px;
+    height: 18px;
+  }
+  .modal-label {
     font-size: 10px;
     padding: 2px 5px;
   }

@@ -85,10 +85,16 @@ const ImageItem = ({ src, alt, onClick }) => {
       observer.observe(currentElement);
     }
 
+    // Set a timeout to clear loading state if image takes too long
+    const timeoutId = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000); // 5 seconds maximum for individual image loading
+
     return () => {
       if (currentElement) {
         observer.unobserve(currentElement);
       }
+      clearTimeout(timeoutId);
     };
   }, [src]);
 
@@ -144,34 +150,81 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
 
   return createPortal(
     <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-      <div className="absolute top-4 right-4 flex gap-4">
+      {/* Close Button */}
+      <div style={{position: 'fixed', right: 20, top: 20, display: 'inline-block'}}>
         <button
           onClick={onClose}
-          className="flex items-center justify-center w-10 h-10 bg-white text-black rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-110"
+          className="modal-circle-button close-modal-button"
           aria-label="Close"
         >
-          &times;
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
         </button>
+        <span className="modal-label modal-label-left">Close</span>
       </div>
-      <button
-        onClick={onPrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-transform hover:scale-110"
-        aria-label="Previous image"
-      >
-        ←
-      </button>
+      {/* Previous Button */}
+      <div style={{position: 'fixed', left: 20, top: '50%', transform: 'translateY(-50%)', display: 'inline-block'}}>
+        <button
+          onClick={onPrev}
+          className="modal-circle-button modal-nav-button prev-modal-button"
+          aria-label="Previous image"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <span className="modal-label modal-label-right">Previous</span>
+      </div>
       <img
         src={imageSrc}
         alt="Full Screen"
         className="max-w-[90vw] max-h-[90vh] object-contain"
       />
-      <button
-        onClick={onNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-transform hover:scale-110"
-        aria-label="Next image"
-      >
-        →
-      </button>
+      {/* Next Button */}
+      <div style={{position: 'fixed', right: 20, top: '50%', transform: 'translateY(-50%)', display: 'inline-block'}}>
+        <button
+          onClick={onNext}
+          className="modal-circle-button modal-nav-button next-modal-button"
+          aria-label="Next image"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M9 6l6 6-6 6" />
+          </svg>
+        </button>
+        <span className="modal-label modal-label-left">Next</span>
+      </div>
     </div>,
     document.body
   );
@@ -219,27 +272,46 @@ export default function Home() {
 
   useEffect(() => {
     document.title = 'Pradumna Saraf | Photography'; // Set the document title
-    // Preload images
-    const preloadImages = () => {
-      const imagePromises = images.map(img => {
-        return new Promise((resolve, reject) => {
+    
+    // Set a reasonable timeout to automatically clear loading state
+    const timeoutId = setTimeout(() => {
+      setIsLoading(false);
+    }, 8000); // 8 seconds maximum loading time
+    
+    // Preload just a few images first for faster initial display
+    const preloadInitialImages = () => {
+      // Only preload first 8 images for quick display
+      const initialImagePromises = images.slice(0, 8).map(img => {
+        return new Promise((resolve) => {
           const image = new Image();
           image.src = img.src;
           image.onload = resolve;
-          image.onerror = reject;
+          image.onerror = resolve;
         });
       });
 
-      Promise.all(imagePromises)
-        .then(() => setIsLoading(false))
-        .catch(console.error);
+      Promise.all(initialImagePromises)
+        .then(() => {
+          // Set loading to false after initial images load
+          setIsLoading(false);
+          
+          // Continue loading the rest in background
+          images.slice(8).forEach(img => {
+            const image = new Image();
+            image.src = img.src;
+          });
+        })
+        .catch(() => {
+          setIsLoading(false);
+        });
     };
 
-    preloadImages();
+    preloadInitialImages();
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
-    <div className="min-h-screen p-4 md:p-8">
+    <div className="min-h-screen p-4 md:p-8 mx-4 md:mx-16">
       <Link href="/" className="back-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -338,6 +338,10 @@ body {
     font-size: 11px;
     padding: 3px 6px;
   }
+
+  .timeline-title {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
