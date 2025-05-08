@@ -256,7 +256,7 @@ export default function Home() {
         </svg>
       </Link>
 
-      <h1 className="camera-title">Pradumna's Photography</h1>
+      <h1 className="camera-title">Pradumna{"'"}s Photography</h1>
 
       <div className="container mx-auto">
         {isLoading && (
