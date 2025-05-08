@@ -5,6 +5,7 @@ import Masonry from 'react-masonry-css';
 import { createPortal } from 'react-dom';
 import './style.css';
 import Link from 'next/link';
+import imagesLoaded from 'imagesloaded';
 
 const images = [
   { src: 'https://drive.google.com/thumbnail?id=16PpTEy-h9WHxZtOLYx_bVrp4KbP-SWUU&sz=w2000', alt: 'photo' },
@@ -70,6 +71,13 @@ const ImageItem = ({ src, alt, onClick }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const grid = document.querySelector('.my-masonry-grid');
+    imagesLoaded(grid, () => {
+      setIsLoading(false);
+    });
+  }, []);
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -85,18 +93,21 @@ const ImageItem = ({ src, alt, onClick }) => {
       observer.observe(currentElement);
     }
 
-    // Set a timeout to clear loading state if image takes too long
-    const timeoutId = setTimeout(() => {
-      setIsLoading(false);
-    }, 5000); // 5 seconds maximum for individual image loading
-
     return () => {
       if (currentElement) {
         observer.unobserve(currentElement);
       }
-      clearTimeout(timeoutId);
     };
   }, [src]);
+
+  // Ensure images are loaded before setting loading to false
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setIsLoading(false);
+    }, 8000); // 8 seconds maximum loading time
+
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   return !hasError ? (
     <div className="relative group">
