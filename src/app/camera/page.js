@@ -150,34 +150,81 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
 
   return createPortal(
     <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-      <div className="absolute top-4 right-4 flex gap-4">
+      {/* Close Button */}
+      <div style={{position: 'fixed', right: 20, top: 20, display: 'inline-block'}}>
         <button
           onClick={onClose}
-          className="flex items-center justify-center w-10 h-10 bg-white text-black rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-110"
+          className="modal-circle-button close-modal-button"
           aria-label="Close"
         >
-          &times;
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
         </button>
+        <span className="modal-label">Close</span>
       </div>
-      <button
-        onClick={onPrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-transform hover:scale-110"
-        aria-label="Previous image"
-      >
-        ←
-      </button>
+      {/* Previous Button */}
+      <div style={{position: 'fixed', left: 20, top: '50%', transform: 'translateY(-50%)', display: 'inline-block'}}>
+        <button
+          onClick={onPrev}
+          className="modal-circle-button modal-nav-button prev-modal-button"
+          aria-label="Previous image"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <span className="modal-label">Previous</span>
+      </div>
       <img
         src={imageSrc}
         alt="Full Screen"
         className="max-w-[90vw] max-h-[90vh] object-contain"
       />
-      <button
-        onClick={onNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-transform hover:scale-110"
-        aria-label="Next image"
-      >
-        →
-      </button>
+      {/* Next Button */}
+      <div style={{position: 'fixed', right: 20, top: '50%', transform: 'translateY(-50%)', display: 'inline-block'}}>
+        <button
+          onClick={onNext}
+          className="modal-circle-button modal-nav-button next-modal-button"
+          aria-label="Next image"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M9 6l6 6-6 6" />
+          </svg>
+        </button>
+        <span className="modal-label">Next</span>
+      </div>
     </div>,
     document.body
   );
