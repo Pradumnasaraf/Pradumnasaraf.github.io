@@ -14,8 +14,10 @@ export const metadata = {
         alt: 'Pradumna Saraf - Developer Advocate & Docker Captain',
       },
     ],
+    type: 'website',
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'Pradumna Saraf | Photography Portfolio',
     description: "Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work.",
     images: ['https://pradumnasaraf.dev/media/pradumna-saraf.png'],

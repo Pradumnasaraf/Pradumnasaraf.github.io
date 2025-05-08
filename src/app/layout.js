@@ -16,6 +16,9 @@ export const viewport = {
   maximumScale: 1,
 };
 
+// Export the metadata to ensure Next.js uses it
+export { metadata };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={leagueSpartan.className}>
@@ -31,6 +34,24 @@ export default function RootLayout({ children }) {
         />
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Explicit OG tags */}
+        <meta property="og:title" content="Pradumna Saraf" />
+        <meta property="og:description" content="Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development." />
+        <meta property="og:url" content="https://pradumnasaraf.dev" />
+        <meta property="og:site_name" content="Pradumna Saraf" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://pradumnasaraf.dev/media/pradumna-saraf-og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Pradumna Saraf - Developer Advocate & Docker Captain" />
+        
+        {/* Twitter tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@pradumna_saraf" />
+        <meta name="twitter:title" content="Pradumna Saraf" />
+        <meta name="twitter:description" content="Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development." />
+        <meta name="twitter:image" content="https://pradumnasaraf.dev/media/pradumna-saraf.png" />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}
