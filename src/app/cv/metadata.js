@@ -20,6 +20,6 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Pradumna Saraf | CV',
     description: 'Professional CV and work experience of Pradumna Saraf, showcasing expertise in open source development, technical content creation, and community building.',
-    images: ['https://pradumnasaraf.dev/media/pradumna-saraf.png'],
+    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
 }; 

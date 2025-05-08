@@ -20,6 +20,6 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Page Not Found | Pradumna Saraf',
     description: "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
-    images: ['https://pradumnasaraf.dev/media/pradumna-saraf.png'],
+    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
 } 

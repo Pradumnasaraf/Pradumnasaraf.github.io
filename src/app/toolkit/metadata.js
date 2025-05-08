@@ -18,6 +18,6 @@ export const metadata = {
   twitter: {
     title: 'Pradumna Saraf | Tools & Gear I Use',
     description: "Discover the tools, software, and gear that Pradumna Saraf uses daily as a Developer Advocate and Docker Captain.",
-    images: ['https://pradumnasaraf.dev/media/pradumna-saraf.png'],
+    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
 } 

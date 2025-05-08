@@ -27,7 +27,7 @@ export const metadata = {
     title: 'Pradumna Saraf',
     description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
     creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/media/pradumna-saraf.png'],
+    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
   verification: {
     google: 'your-google-site-verification',

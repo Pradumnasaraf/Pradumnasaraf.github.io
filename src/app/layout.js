@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:creator" content="@pradumna_saraf" />
         <meta name="twitter:title" content="Pradumna Saraf" />
         <meta name="twitter:description" content="Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development." />
-        <meta name="twitter:image" content="https://pradumnasaraf.dev/media/pradumna-saraf.png" />
+        <meta name="twitter:image" content="https://pradumnasaraf.dev/media/pradumna-saraf-og.png" />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}

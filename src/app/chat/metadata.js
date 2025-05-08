@@ -20,6 +20,6 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Pradumna Saraf | Schedule a Meeting',
     description: "Schedule a meeting with Pradumna Saraf - Developer Advocate and Docker Captain.",
-    images: ['https://pradumnasaraf.dev/media/pradumna-saraf.png'],
+    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
 } 

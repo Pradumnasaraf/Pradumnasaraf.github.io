@@ -18,6 +18,6 @@ export const metadata = {
   twitter: {
     title: 'Pradumna Saraf | Professional Timeline',
     description: "Explore the professional journey of Pradumna Saraf - from early career to becoming a Developer Advocate and Docker Captain.",
-    images: ['https://pradumnasaraf.dev/media/pradumna-saraf.png'],
+    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
 } 
