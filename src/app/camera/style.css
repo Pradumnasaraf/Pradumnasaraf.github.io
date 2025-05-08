@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Page Title - Match Timeline & Toolkit style */
+.camera-title {
+  text-align: center;
+  font-size: 48px;
+  color: #1a1a1a;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
 /* Masonry Grid Styles */
 .my-masonry-grid {
   display: -webkit-box;

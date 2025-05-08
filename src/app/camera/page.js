@@ -184,6 +184,15 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Define breakpoint columns
+  const breakpointColumnsObj = {
+    default: 4,
+    1280: 3,
+    1024: 3,
+    768: 2,
+    640: 1
+  };
+
   const openModal = (src) => {
     const index = images.findIndex(img => img.src === src);
     setCurrentImageIndex(index);
@@ -208,15 +217,6 @@ export default function Home() {
     setModalImageSrc(images[newIndex].src);
   };
 
-  const breakpointColumnsObj = {
-    default: 4,
-    1536: 4,
-    1280: 3,
-    1024: 3,
-    768: 2,
-    640: 1
-  };
-
   useEffect(() => {
     document.title = 'Pradumna Saraf | Photography'; // Set the document title
     // Preload images
@@ -239,7 +239,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen p-4 md:p-8">
       <Link href="/" className="back-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -255,38 +255,38 @@ export default function Home() {
           <path d="M19 12H5M12 19l-7-7 7-7"/>
         </svg>
       </Link>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">{"Pradumna's Photography"}</h1>
-        <div className="relative">
-          {isLoading && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
-            </div>
-          )}
-          <Masonry
-            breakpointCols={breakpointColumnsObj}
-            className="my-masonry-grid"
-            columnClassName="my-masonry-grid_column"
-          >
-            {images.map((image, index) => (
-              <ImageItem
-                key={index}
-                src={image.src}
-                alt={image.alt}
-                onClick={() => openModal(image.src)}
-              />
-            ))}
-          </Masonry>
-        </div>
 
-        <FullScreenModal
-          isOpen={isModalOpen}
-          imageSrc={modalImageSrc}
-          onClose={closeModal}
-          onPrev={showPrevImage}
-          onNext={showNextImage}
-        />
+      <h1 className="camera-title">Pradumna{"'"}s Photography</h1>
+
+      <div className="container mx-auto">
+        {isLoading && (
+          <div className="flex justify-center my-8">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+          </div>
+        )}
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          {images.map((image, index) => (
+            <ImageItem 
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              onClick={() => openModal(image.src)}
+            />
+          ))}
+        </Masonry>
       </div>
+
+      <FullScreenModal
+        isOpen={isModalOpen}
+        imageSrc={modalImageSrc}
+        onClose={closeModal}
+        onPrev={showPrevImage}
+        onNext={showNextImage}
+      />
     </div>
   );
 }

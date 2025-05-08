@@ -2,6 +2,7 @@
 import './globals.css'; // Tailwind and global styles
 import Script from 'next/script';
 import { League_Spartan } from 'next/font/google';
+import { metadata } from './metadata'; // Import metadata from metadata.js
 
 const leagueSpartan = League_Spartan({
   weight: ['300','400','500'],
@@ -15,41 +16,8 @@ export const viewport = {
   maximumScale: 1,
 };
 
-export const metadata = {
-  title: 'Pradumna Saraf',
-  description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
-  keywords: "Pradumna Saraf, Developer Advocate, Docker Captain, Open Source, Cloud Native, DevOps, Software Development",
-  authors: [{ name: 'Pradumna Saraf' }],
-  creator: 'Pradumna Saraf',
-  publisher: 'Pradumna Saraf',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Pradumna Saraf',
-    description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
-    url: 'https://pradumnasaraf.dev',
-    siteName: 'Pradumna Saraf',
-    images: [
-      {
-        url: 'https://pradumnasaraf.dev/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Pradumna Saraf - Developer Advocate & Docker Captain',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Pradumna Saraf',
-    description: "Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.",
-    creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/og-image.jpg'],
-  },
-  verification: {
-    google: 'your-google-site-verification',
-  },
-};
+// Export the metadata to ensure Next.js uses it
+export { metadata };
 
 export default function RootLayout({ children }) {
   return (
@@ -66,6 +34,24 @@ export default function RootLayout({ children }) {
         />
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Explicit OG tags */}
+        <meta property="og:title" content="Pradumna Saraf" />
+        <meta property="og:description" content="Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development." />
+        <meta property="og:url" content="https://pradumnasaraf.dev" />
+        <meta property="og:site_name" content="Pradumna Saraf" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://pradumnasaraf.dev/media/pradumna-saraf-og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Pradumna Saraf - Developer Advocate & Docker Captain" />
+        
+        {/* Twitter tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@pradumna_saraf" />
+        <meta name="twitter:title" content="Pradumna Saraf" />
+        <meta name="twitter:description" content="Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development." />
+        <meta name="twitter:image" content="https://pradumnasaraf.dev/media/pradumna-saraf.png" />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}

@@ -3,6 +3,10 @@
 import './style.css';
 import React, { useEffect } from 'react';
 import Link from "next/link";
+import Head from 'next/head';
+
+// Remove export metadata since this is a client component and won't work
+// Metadata is already defined in src/app/timeline/metadata.js
 
 const TimelinePage = () => {
   useEffect(() => {
