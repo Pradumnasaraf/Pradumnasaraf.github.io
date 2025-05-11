@@ -134,21 +134,6 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="footer">
-        <div className="social-handle">
-          {/* Using React Icons */}
-          <Link href="https://github.com/Pradumnasaraf">
-            <FaGithub />
-          </Link>
-          <Link href="https://twitter.com/pradumna_saraf">
-            <FaTwitter />
-          </Link>
-          <Link href="https://www.linkedin.com/in/pradumnasaraf/">
-            <FaLinkedin />
-          </Link>
-        </div>
-      </div>
-
       <main>
         {showGame && <KonamiGame onClose={() => setShowGame(false)} />}
       </main>

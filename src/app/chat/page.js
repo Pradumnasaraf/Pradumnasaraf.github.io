@@ -98,20 +98,6 @@ const ChatPage = () => {
       {/* Calendar Section */}
       <div id="my-cal-inline" className="calendar-container"></div>
 
-      {/* FOOTER */}
-      <div className="footer">
-        <div className="social-handle">
-          <Link aria-label="Visit my Twitter profile" href="https://twitter.com/pradumna_saraf">
-            <FaTwitter className='icon-footer' />
-          </Link>
-          <Link aria-label="Visit my GitHub profile" href="https://github.com/Pradumnasaraf">
-            <FaGithub className='icon-footer' />
-          </Link>
-          <Link aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/pradumnasaraf/">
-            <FaLinkedin className='icon-footer' />
-          </Link>
-        </div>
-      </div>
     </>
   );
 };

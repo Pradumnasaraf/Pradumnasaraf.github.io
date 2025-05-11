@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --dir src/app --dir src/components",
     "prepare": "husky",
     "pre-commit": "lint-staged"
   },

@@ -163,52 +163,6 @@ body {
   border: 1px solid white;
 }
 
-.footer {
-  height: 8vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #ffffff;
-  color: #333333;
-  position: relative;
-  bottom: 0;
-}
-
-.social-handle {
-  gap: 2em;
-  height: 8vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
-}
-
-.social-handle a {
-  font-size: 1.3em;
-  color: #333333;
-  text-decoration: none;
-  transition: opacity 0.4s ease;
-  cursor: pointer;
-}
-
-.social-handle a:hover {
-  color: #0070f3;
-}
-
-#ad-line {
-  color: gold;
-  background-color: black;
-  padding: 10px;
-  text-align: center;
-}
-
-#ad-line a {
-  color: white;
-  font-style: bold;
-}
-
 /* Hamburger Menu Styles */
 .hamburger {
   display: none;
