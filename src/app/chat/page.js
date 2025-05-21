@@ -1,9 +1,9 @@
-"use client";
+'use client';
 import './style.css';
 import React, { useEffect } from 'react';
 import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Head from 'next/head';
-import Link from "next/link";
+import Link from 'next/link';
 
 const ChatPage = () => {
   useEffect(() => {
@@ -61,7 +61,10 @@ const ChatPage = () => {
   return (
     <>
       <Head>
-        <link rel="icon" href="https://user-images.githubusercontent.com/51878265/194138074-7a341083-e80e-49d9-8e58-02882b26d3d9.png" />
+        <link
+          rel="icon"
+          href="https://user-images.githubusercontent.com/51878265/194138074-7a341083-e80e-49d9-8e58-02882b26d3d9.png"
+        />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Schedule a Meeting</title>
@@ -79,7 +82,7 @@ const ChatPage = () => {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M19 12H5M12 19l-7-7 7-7"/>
+          <path d="M19 12H5M12 19l-7-7 7-7" />
         </svg>
       </Link>
 
@@ -94,10 +97,9 @@ const ChatPage = () => {
           </span>
         </div>
       </div>
-      
+
       {/* Calendar Section */}
       <div id="my-cal-inline" className="calendar-container"></div>
-
     </>
   );
 };

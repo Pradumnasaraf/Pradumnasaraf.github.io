@@ -138,7 +138,8 @@ header h1 {
   letter-spacing: -0.01em;
 }
 
-.job, .project {
+.job,
+.project {
   margin-bottom: 2rem;
   padding: 1.5rem;
   background-color: #f8f9fa;
@@ -146,7 +147,8 @@ header h1 {
   transition: all 0.2s ease;
 }
 
-.job:hover, .project:hover {
+.job:hover,
+.project:hover {
   background-color: #f1f3f5;
   transform: translateY(-2px);
 }
@@ -242,29 +244,39 @@ li {
   font-weight: 500;
 }
 
-.achievements, .leadership, .talks {
+.achievements,
+.leadership,
+.talks {
   padding: 1rem;
   background-color: #f8f9fa;
   border-radius: 6px;
   transition: all 0.2s ease;
 }
 
-.achievements:hover, .leadership:hover, .talks:hover {
+.achievements:hover,
+.leadership:hover,
+.talks:hover {
   background-color: #f1f3f5;
   transform: translateY(-2px);
 }
 
-.achievements ul, .leadership ul, .talks ul {
+.achievements ul,
+.leadership ul,
+.talks ul {
   margin: 0;
   padding-left: 1.5rem;
 }
 
-.achievements li, .leadership li, .talks li {
+.achievements li,
+.leadership li,
+.talks li {
   margin-bottom: 0.75rem;
   color: #444;
 }
 
-.achievements strong, .leadership strong, .talks strong {
+.achievements strong,
+.leadership strong,
+.talks strong {
   color: #1a1a1a;
   font-weight: 500;
 }
@@ -360,7 +372,8 @@ li {
     padding: 1rem;
   }
 
-  .back-button, .download-cv-button {
+  .back-button,
+  .download-cv-button {
     width: 36px;
     height: 36px;
     top: 15px;
@@ -374,7 +387,8 @@ li {
     right: 15px;
   }
 
-  .back-button svg, .download-cv-button svg {
+  .back-button svg,
+  .download-cv-button svg {
     width: 20px;
     height: 20px;
   }
@@ -425,7 +439,8 @@ li {
     font-size: 1.3rem;
   }
 
-  .job, .project {
+  .job,
+  .project {
     padding: 1rem;
     margin-bottom: 1rem;
   }
@@ -473,7 +488,8 @@ li {
     padding: 0.5rem;
   }
 
-  .back-button, .download-cv-button {
+  .back-button,
+  .download-cv-button {
     width: 32px;
     height: 32px;
     top: 10px;
@@ -487,7 +503,8 @@ li {
     right: 10px;
   }
 
-  .back-button svg, .download-cv-button svg {
+  .back-button svg,
+  .download-cv-button svg {
     width: 18px;
     height: 18px;
   }
@@ -527,4 +544,4 @@ li {
   li {
     font-size: 0.9rem;
   }
-} 
+}

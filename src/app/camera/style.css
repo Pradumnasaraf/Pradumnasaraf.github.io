@@ -33,7 +33,9 @@
 /* Image Styles */
 .grayscale-image {
   filter: grayscale(100%);
-  transition: filter 0.5s ease, transform 0.3s ease;
+  transition:
+    filter 0.5s ease,
+    transform 0.3s ease;
 }
 
 .grayscale-image:hover {
@@ -123,13 +125,13 @@
 
 /* Add to globals.css */
 @layer components {
-    .masonry-grid-item {
-      transition: transform 0.3s ease;
-    }
-    .masonry-grid-item:hover {
-      transform: scale(1.05);
-    }
+  .masonry-grid-item {
+    transition: transform 0.3s ease;
   }
+  .masonry-grid-item:hover {
+    transform: scale(1.05);
+  }
+}
 
 /* In your styles/globals.css or any relevant CSS file */
 body {
@@ -147,7 +149,9 @@ body {
 
 /* In your styles/globals.css or any relevant CSS file */
 .my-masonry-grid img {
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease;
 }
 
 .my-masonry-grid img:hover {

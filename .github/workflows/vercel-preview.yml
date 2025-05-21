@@ -9,7 +9,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-24.04
-    environment: 
+    environment:
       name: preview
     steps:
       - uses: actions/checkout@v4

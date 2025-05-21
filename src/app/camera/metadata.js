@@ -1,10 +1,13 @@
 export const metadata = {
   title: 'Pradumna Saraf | Photography Portfolio',
-  description: "Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work showcasing various styles and subjects.",
-  keywords: "Pradumna Saraf Photography, Photography Portfolio, Professional Photography, Personal Photography, Photo Gallery",
+  description:
+    'Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work showcasing various styles and subjects.',
+  keywords:
+    'Pradumna Saraf Photography, Photography Portfolio, Professional Photography, Personal Photography, Photo Gallery',
   openGraph: {
     title: 'Pradumna Saraf | Photography Portfolio',
-    description: "Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work showcasing various styles and subjects.",
+    description:
+      'Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work showcasing various styles and subjects.',
     url: 'https://pradumnasaraf.dev/camera',
     images: [
       {
@@ -19,7 +22,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Pradumna Saraf | Photography Portfolio',
-    description: "Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work.",
+    description:
+      'Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work.',
     images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
-} 
+};

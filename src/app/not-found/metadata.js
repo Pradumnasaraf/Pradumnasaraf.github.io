@@ -1,10 +1,12 @@
 export const metadata = {
   title: 'Page Not Found | Pradumna Saraf',
-  description: "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
+  description:
+    "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
   robots: 'noindex, nofollow',
   openGraph: {
     title: 'Page Not Found | Pradumna Saraf',
-    description: "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
+    description:
+      "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
     url: 'https://pradumnasaraf.dev/404',
     type: 'website',
     images: [
@@ -19,7 +21,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Page Not Found | Pradumna Saraf',
-    description: "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
+    description:
+      "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
     images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
-} 
+};

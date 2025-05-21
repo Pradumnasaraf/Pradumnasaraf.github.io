@@ -18,12 +18,12 @@
   .nav {
     display: none !important;
   }
-  
+
   .calendar-container {
     margin-top: 0 !important;
     height: 100vh !important;
   }
-} 
+}
 
 .back-button {
   position: fixed;
