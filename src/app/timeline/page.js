@@ -44,7 +44,7 @@ const TimelinePage = () => {
       <h1 className="timeline-title">Timeline</h1>
       <div className="timeline">
         {/* Left Container */}
-        <div className="container left-container">
+        <div className="container right-container">
           <img src="/timeline-logo/opensource.png" alt="Open Source" />
           <div className="text-box">
             <Link
@@ -72,12 +72,12 @@ const TimelinePage = () => {
               website sharing my journey, contributions I made and how I got
               started with open source.
             </p>
-            <span className="left-container-arrow"></span>
+            <span className="right-container-arrow"></span>
           </div>
         </div>
 
         {/* Right Container */}
-        <div className="container right-container">
+        <div className="container left-container">
           <img src="/timeline-logo/cncf.png" alt="CNCF" />
           <div className="text-box">
             <Link
@@ -107,11 +107,11 @@ const TimelinePage = () => {
               CI/CD pipeline. Withough any doubt, this was the best talk I have
               ever delivered.
             </p>
-            <span className="right-container-arrow"></span>
+            <span className="left-container-arrow"></span>
           </div>
         </div>
 
-        <div className="container left-container">
+        <div className="container right-container">
           <img src="/timeline-logo/freecodecamp.jpg" alt="FreeCodeCamp" />
           <div className="text-box">
             <Link
@@ -140,11 +140,11 @@ const TimelinePage = () => {
               backend development like building APIs. This is longest blog I
               have ever written with 4k words and a whopping ~ 18 min read time.
             </p>
-            <span className="left-container-arrow"></span>
+            <span className="right-container-arrow"></span>
           </div>
         </div>
 
-        <div className="container right-container">
+        <div className="container left-container">
           <img src="/timeline-logo/docker.png" alt="Docker" />
           <div className="text-box">
             <Link
@@ -172,11 +172,11 @@ const TimelinePage = () => {
               I am helping the team to improve the docs, adding
               language-specific guides, how-to guides and more.
             </p>
-            <span className="right-container-arrow"></span>
+            <span className="left-container-arrow"></span>
           </div>
         </div>
 
-        <div className="container left-container">
+        <div className="container right-container">
           <img src="/timeline-logo/docker.png" alt="Docker" />
           <div className="text-box">
             <Link
@@ -203,11 +203,11 @@ const TimelinePage = () => {
               achievement as a Docker finatic. I work closely with different
               teams at Docker to improve the product and help the community.
             </p>
-            <span className="left-container-arrow"></span>
+            <span className="right-container-arrow"></span>
           </div>
         </div>
 
-        <div className="container right-container">
+        <div className="container left-container">
           <img src="/timeline-logo/pradumnasaraf.jpg" alt="Pradumna Saraf" />
           <div className="text-box">
             <Link
@@ -235,11 +235,11 @@ const TimelinePage = () => {
               This was the place where I delivered my first in-person talk last
               year.
             </p>
-            <span className="right-container-arrow"></span>
+            <span className="left-container-arrow"></span>
           </div>
         </div>
 
-        <div className="container left-container">
+        <div className="container right-container">
           <img src="/timeline-logo/devto.png" alt="Dev.to" />
           <div className="text-box">
             <Link
@@ -270,7 +270,7 @@ const TimelinePage = () => {
           </div>
         </div>
 
-        <div className="container right-container">
+        <div className="container left-container">
           <img src="/timeline-logo/devops.png" alt="DevOps" />
           <div className="text-box">
             <Link
@@ -303,7 +303,7 @@ const TimelinePage = () => {
           </div>
         </div>
 
-        <div className="container left-container">
+        <div className="container right-container">
           <img src="/timeline-logo/devto.png" alt="Dev.to" />
           <div className="text-box">
             <Link
@@ -332,11 +332,11 @@ const TimelinePage = () => {
               source devops and everything in between. And got this many views
               just after writing 10-12 articles.{' '}
             </p>
-            <span className="left-container-arrow"></span>
+            <span className="right-container-arrow"></span>
           </div>
         </div>
 
-        <div className="container right-container">
+        <div className="container left-container">
           <img src="/timeline-logo/devto.png" alt="Dev.to" />
           <div className="text-box">
             <Link
@@ -363,11 +363,11 @@ const TimelinePage = () => {
               year 2023. I was actively writing articles and helping platform to
               moderate the content.
             </p>
-            <span className="right-container-arrow"></span>
+            <span className="left-container-arrow"></span>
           </div>
         </div>
 
-        <div className="container left-container">
+        <div className="container right-container">
           <img src="/timeline-logo/github.png" alt="GitHub" />
           <div className="text-box">
             <Link
@@ -393,11 +393,11 @@ const TimelinePage = () => {
               I reached 1000 followers on GitHub. I was actively contributing to
               open source and helping others to get started with open source.
             </p>
-            <span className="left-container-arrow"></span>
+            <span className="right-container-arrow"></span>
           </div>
         </div>
 
-        <div className="container right-container">
+        <div className="container left-container">
           <img src="/timeline-logo/web3conf.png" alt="Web3Conf" />
           <div className="text-box">
             <Link
@@ -425,11 +425,11 @@ const TimelinePage = () => {
               source software being a maintainer. Room was almost houseful and
               it was a unforgettable experience.
             </p>
-            <span className="right-container-arrow"></span>
+            <span className="left-container-arrow"></span>
           </div>
         </div>
 
-        <div className="container left-container">
+        <div className="container right-container">
           <img src="/timeline-logo/livecycle.png" alt="Livecycle" />
           <div className="text-box">
             <Link
@@ -454,11 +454,11 @@ const TimelinePage = () => {
               {' '}
               {`I joined Livecycle as a Dev Advocate. I was deeply involved in our open source offering "Preevy" and helped developers to get started with it by creating content and delivering talks.`}
             </p>
-            <span className="left-container-arrow"></span>
+            <span className="right-container-arrow"></span>
           </div>
         </div>
 
-        <div className="container right-container">
+        <div className="container left-container">
           <img src="/timeline-logo/linkedin.png" alt="LinkedIn" />
           <div className="text-box">
             <Link
@@ -484,6 +484,37 @@ const TimelinePage = () => {
               I reached 10K followers on LinkedIn. Started as diversifying my
               social media presence and people supported here as well. The
               quality of engagement was much better than Twitter.
+            </p>
+            <span className="left-container-arrow"></span>
+          </div>
+        </div>
+
+        <div className="container right-container">
+          <img src="/timeline-logo/github.png" alt="GitHub" />
+          <div className="text-box">
+            <Link
+              href="https://opensource.guide/maintaining-balance-for-open-source-maintainers/"
+              className="source-button"
+              aria-label="LinkedIn"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17l10-10M17 17V7h-7"></path>
+              </svg>
+            </Link>
+            <h2>Contributed to official GitHub Open Source Guide</h2>
+            <small>July, 2024</small>
+            <p>
+              {' '}
+              I and other maintainers came together and worked with GitHub to
+              write a guide on how to maintain balance for open source
+              maintainers and avoid burnout.
             </p>
             <span className="right-container-arrow"></span>
           </div>
