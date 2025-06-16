@@ -43,6 +43,39 @@ const TimelinePage = () => {
       </Link>
       <h1 className="timeline-title">Timeline</h1>
       <div className="timeline">
+
+         {/* Right Container */}
+         <div className="container left-container">
+          <img src="/timeline-logo/cncf.png" alt="CNCF" />
+          <div className="text-box">
+            <Link
+              href="https://youtu.be/DHaVho5cf4U?si=n-8DcHRBEVYaTQkI"
+              className="source-button"
+              aria-label="CNCF"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17l10-10M17 17V7h-7"></path>
+              </svg>
+            </Link>
+            <h2>Delivered my first talk at International Conference</h2>
+            <small>June, 2025</small>
+            <p>
+              {' '}
+              It was my first time attending and delivering a talk at an
+              international conference, KubeCon China in Hong Kong. I spoke
+              about WebAssembly and Docker development.
+            </p>
+            <span className="left-container-arrow"></span>
+          </div>
+        </div>
+
         {/* Left Container */}
         <div className="container right-container">
           <img src="/timeline-logo/opensource.png" alt="Open Source" />
