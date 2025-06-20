@@ -447,16 +447,30 @@ const CVPage = () => {
                 Speaker at{' '}
                 <strong>
                   <a
+                    href="https://www.youtube.com/watch?v=DHaVho5cf4U"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-link"
+                  >
+                    KubeCon + CloudNativeCon, China
+                  </a>
+                </strong>
+                , to talk about WebAssembly and Docker developments process.
+              </li>
+              <li>
+                Speaker at{' '}
+                <strong>
+                  <a
                     href="https://youtu.be/hRp4PaZ6FS4?si=Yzjzu-dIuzwWk6q1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link"
                   >
-                    SOSS Community Day (KubeCon)
+                    SOSS Community Day (KubeCon), India
                   </a>
                 </strong>
-                , India to share how to improve software supply chain security.
-              </li>
+                , to share how to improve software supply chain security.
+              </li>             
               <li>
                 Speaker at <strong>Docker Bangalore Meet-up</strong>, to share
                 about Docker Compose and the importance of preview environments.
