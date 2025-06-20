@@ -9,10 +9,6 @@ import imagesLoaded from 'imagesloaded';
 
 const images = [
   {
-    src: 'https://drive.google.com/thumbnail?id=17PY8PKwJGCUWog7fgyBWzcx1nvurX09q&sz=w2000',
-    alt: 'photo',
-  },
-  {
     src: 'https://drive.google.com/thumbnail?id=1-Szq73MYDvQkeNuGppJ7F-g-ofxnLDvt&sz=w2000',
     alt: 'photo',
   },
