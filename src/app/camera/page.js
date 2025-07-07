@@ -9,10 +9,6 @@ import imagesLoaded from 'imagesloaded';
 
 const images = [
   {
-    src: 'https://drive.google.com/thumbnail?id=1-Szq73MYDvQkeNuGppJ7F-g-ofxnLDvt&sz=w2000',
-    alt: 'photo',
-  },
-  {
     src: 'https://drive.google.com/thumbnail?id=1pwKmGVgrRvoMUCUKUzJh0sU1jZXSLwjw&sz=w2000',
     alt: 'photo',
   },
@@ -37,23 +33,11 @@ const images = [
     alt: 'photo',
   },
   {
-    src: 'https://drive.google.com/thumbnail?id=1pJhYe9NFytIuZX5XI2k3WAI5i37R36Z2&sz=w2000',
-    alt: 'photo',
-  },
-  {
     src: 'https://drive.google.com/thumbnail?id=1tWL6ie_M4ql5NpGNidvTLmT78BT334zS&sz=w2000',
     alt: 'photo',
   },
   {
-    src: 'https://drive.google.com/thumbnail?id=1DFRzXP6iMHDjuI_1kA8ZWdITt7H4Fo2k&sz=w2000',
-    alt: 'photo',
-  },
-  {
     src: 'https://drive.google.com/thumbnail?id=1TxlQMlmKEgA8u1JFglRbKSn5Z-g65-jX&sz=w2000',
-    alt: 'photo',
-  },
-  {
-    src: 'https://drive.google.com/thumbnail?id=1CYXMoYJ7Py4nC0bGjYvrjcsuvDc1N6wp&sz=w2000',
     alt: 'photo',
   },
   { src: 'https://drive.google.com/thumbnail?id=1KpWd-DtolaShXq_vpT55nvdalukQCKW4&sz=w2000',
@@ -64,19 +48,11 @@ const images = [
     alt: 'photo',
   },
   {
-    src: 'https://drive.google.com/thumbnail?id=1bRoYl6CBlR8yCaiWu2xra1QRjUBanAWp&sz=w2000',
-    alt: 'photo',
-  },
-  {
-    src: 'https://drive.google.com/thumbnail?id=1FL0EAFvwTB1_qLj-IJgaipd9k1Dx-uvE&sz=w2000',
-    alt: 'photo',
-  },
-  {
     src: 'https://drive.google.com/thumbnail?id=1WnkGveeS-4tbxd2DkVa3O7uHixLPeuJC&sz=w2000',
     alt: 'photo',
   },
   {
-    src: 'https://drive.google.com/thumbnail?id=1FEoOJIxeHMLUFFe1uQ_hT81aXG9b2QMQ&sz=w2000',
+    src: 'https://drive.google.com/thumbnail?id=1-Szq73MYDvQkeNuGppJ7F-g-ofxnLDvt&sz=w2000',
     alt: 'photo',
   },
   {
@@ -92,23 +68,7 @@ const images = [
     alt: 'photo',
   },
   {
-    src: 'https://drive.google.com/thumbnail?id=1oBYr_ngG1OzfnfhYlsNVmgVmQMehCcF_&sz=w2000',
-    alt: 'photo',
-  },
-  {
-    src: 'https://drive.google.com/thumbnail?id=1sL9MIu7xahCQ7axjZCgwKcXo1Xi98dmV&sz=w2000',
-    alt: 'photo',
-  },
-  {
     src: 'https://drive.google.com/thumbnail?id=1gE46wgVNfwZ9eFb-HPSOBkDfeMympeOf&sz=w2000',
-    alt: 'photo',
-  },
-  {
-    src: 'https://drive.google.com/thumbnail?id=10QNG8HDRnnTS9pHwTVF0JlNDqe1OR1S6&sz=w2000',
-    alt: 'photo',
-  },
-  {
-    src: 'https://drive.google.com/thumbnail?id=1hOL5ji5lL_7PVSWXQ4PJMorCaVXLoijd&sz=w2000',
     alt: 'photo',
   },
   {
