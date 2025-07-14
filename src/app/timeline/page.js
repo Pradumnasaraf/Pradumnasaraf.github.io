@@ -43,9 +43,43 @@ const TimelinePage = () => {
       </Link>
       <h1 className="timeline-title">Timeline</h1>
       <div className="timeline">
+        {/* Left Container */}
+        <div className="container right-container">
+          <img
+            src="/timeline-logo/maintainer-book.png"
+            alt="Maintainers Book"
+          />
+          <div className="text-box">
+            <Link
+              href="https://maintaine.rs"
+              className="source-button"
+              aria-label="Maintainers Book"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17l10-10M17 17V7h-7"></path>
+              </svg>
+            </Link>
+            <h2>Featured in Maintainers Book</h2>
+            <small>July, 2025</small>
+            <p>
+              {' '}
+              I was featured in the Maintainers Book, a collection of stories
+              from maintainers in open source world. I was featured for my work
+              as a maintainer and contributor to the open source community.
+            </p>
+            <span className="right-container-arrow"></span>
+          </div>
+        </div>
 
-         {/* Right Container */}
-         <div className="container left-container">
+        {/* Right Container */}
+        <div className="container left-container">
           <img src="/timeline-logo/cncf.png" alt="CNCF" />
           <div className="text-box">
             <Link
@@ -76,7 +110,7 @@ const TimelinePage = () => {
           </div>
         </div>
 
-        {/* Left Container */}
+        {/* Right Container */}
         <div className="container right-container">
           <img src="/timeline-logo/opensource.png" alt="Open Source" />
           <div className="text-box">

@@ -172,6 +172,9 @@ body {
 .container:nth-child(33) {
   animation-delay: 33s;
 }
+.container:nth-child(34) {
+  animation-delay: 34s;
+}
 
 /* Text Box Styles */
 .text-box {
