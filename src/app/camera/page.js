@@ -44,7 +44,8 @@ const images = [
     src: 'https://drive.google.com/thumbnail?id=1TxlQMlmKEgA8u1JFglRbKSn5Z-g65-jX&sz=w2500',
     alt: 'photo',
   },
-  { src: 'https://drive.google.com/thumbnail?id=1KpWd-DtolaShXq_vpT55nvdalukQCKW4&sz=w2500',
+  {
+    src: 'https://drive.google.com/thumbnail?id=1KpWd-DtolaShXq_vpT55nvdalukQCKW4&sz=w2500',
     alt: 'photo',
   },
   {

@@ -76,10 +76,7 @@ const CVPage = () => {
           </p>
           <div className="contact-info">
             <p>
-              <FaEnvelope />{' '}
-              <a href="/contact">
-                pradumnasaraf@gmail.com
-              </a>
+              <FaEnvelope /> <a href="/contact">pradumnasaraf@gmail.com</a>
             </p>
             <p>
               <FaGlobe />{' '}
@@ -470,7 +467,7 @@ const CVPage = () => {
                   </a>
                 </strong>
                 , to share how to improve software supply chain security.
-              </li>             
+              </li>
               <li>
                 Speaker at <strong>Docker Bangalore Meet-up</strong>, to share
                 about Docker Compose and the importance of preview environments.

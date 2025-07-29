@@ -9,4 +9,4 @@ export default function ContactPage() {
   }, []);
 
   return null; // Return null to show nothing while redirecting
-} 
+}

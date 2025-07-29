@@ -33,7 +33,6 @@ const nextConfig = {
         destination: 'https://rebasemedia.com/payment',
         permanent: true,
       },
-
     ];
   },
 };
