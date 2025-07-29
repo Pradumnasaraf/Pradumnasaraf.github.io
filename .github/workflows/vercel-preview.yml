@@ -7,7 +7,7 @@ on:
     branches-ignore:
       - main
 jobs:
-  release:
+  preview:
     runs-on: ubuntu-24.04
     environment:
       name: preview

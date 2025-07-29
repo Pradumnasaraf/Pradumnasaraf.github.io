@@ -115,7 +115,7 @@ export default function Home() {
             <Link href="/cv">CV</Link>
           </span>
           <span className="page-item">
-            <Link href="mailto:pradumnasaraf@gmail.com">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </span>
         </div>
       </div>

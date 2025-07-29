@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  release:
+  production:
     runs-on: ubuntu-24.04
     environment:
       name: production
