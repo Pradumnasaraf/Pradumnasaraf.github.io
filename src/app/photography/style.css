@@ -5,7 +5,7 @@
 /* Page Title - Match Timeline & Toolkit style */
 .photography-title {
   text-align: center;
-  font-size: 48px;
+  font-size: 3rem;
   color: #1a1a1a;
   margin-top: 20px;
   margin-bottom: 25px;
@@ -76,17 +76,6 @@
 /* Modal Styles */
 .modal-backdrop {
   backdrop-filter: blur(5px);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 640px) {
-  .my-masonry-grid {
-    gap: 1rem;
-  }
-
-  .my-masonry-grid_column > div {
-    margin-bottom: 1rem;
-  }
 }
 
 /* Custom Scrollbar */
@@ -207,51 +196,6 @@ body {
   opacity: 1;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .back-button {
-    width: 36px;
-    height: 36px;
-    top: 15px;
-    left: 15px;
-  }
-
-  .back-button svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .back-button::after {
-    left: 45px;
-    font-size: 11px;
-    padding: 3px 6px;
-  }
-
-  .photography-title {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .back-button {
-    width: 32px;
-    height: 32px;
-    top: 10px;
-    left: 10px;
-  }
-
-  .back-button svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .back-button::after {
-    left: 40px;
-    font-size: 10px;
-    padding: 2px 5px;
-  }
-}
-
 .modal-circle-button {
   display: flex;
   align-items: center;
@@ -312,30 +256,116 @@ body {
   opacity: 1;
 }
 
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .photography-title {
+    font-size: 2.5rem;
+  }
+
+  .my-masonry-grid {
+    gap: 1.25rem;
+  }
+
+  .my-masonry-grid_column > div {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+  .back-button {
+    width: 36px;
+    height: 36px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .back-button::after {
+    left: 45px;
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+
+  .photography-title {
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .my-masonry-grid {
+    gap: 1rem;
+  }
+
+  .my-masonry-grid_column > div {
+    margin-bottom: 1rem;
+  }
+
   .modal-circle-button {
     width: 36px;
     height: 36px;
   }
+
   .modal-circle-button svg {
     width: 20px;
     height: 20px;
   }
+
   .modal-label {
     font-size: 11px;
     padding: 3px 6px;
   }
 }
 
+@media (max-width: 640px) {
+  .my-masonry-grid {
+    gap: 0.75rem;
+  }
+
+  .my-masonry-grid_column > div {
+    margin-bottom: 0.75rem;
+  }
+}
+
 @media (max-width: 480px) {
+  .back-button {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .back-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .back-button::after {
+    left: 40px;
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+
+  .photography-title {
+    font-size: 1.75rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
   .modal-circle-button {
     width: 32px;
     height: 32px;
   }
+
   .modal-circle-button svg {
     width: 18px;
     height: 18px;
   }
+
   .modal-label {
     font-size: 10px;
     padding: 2px 5px;

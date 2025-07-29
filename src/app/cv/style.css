@@ -367,6 +367,30 @@ li {
   opacity: 1;
 }
 
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .cv-container {
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .bio {
+    font-size: 1.05rem;
+  }
+
+  .contact-info {
+    gap: 0.75rem;
+  }
+
+  .contact-info p {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 768px) {
   .cv-container {
     padding: 1rem;

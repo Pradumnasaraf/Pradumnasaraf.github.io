@@ -4,8 +4,6 @@ This repository contains the source code for my personal/portfolio/service websi
 
 ![website screenshot](https://github.com/user-attachments/assets/cb0bb938-6e97-4e40-9631-d4235c5021b4)
 
-
-
 ### 📜 License
 
 **Pradumnasaraf.github.io** is licensed under the GPL-3.0 License - see the [LICENSE](/LICENSE) file for details.

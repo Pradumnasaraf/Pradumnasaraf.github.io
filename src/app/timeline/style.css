@@ -13,7 +13,7 @@ body {
 /* Timeline Title */
 .timeline-title {
   text-align: center;
-  font-size: 48px;
+  font-size: 3rem;
   color: #1a1a1a;
   margin-top: 20px;
   margin-bottom: 25px;
@@ -26,6 +26,7 @@ body {
   position: relative;
   max-width: 1200px;
   margin: 100px auto;
+  padding: 0 1rem;
 }
 
 .timeline::after {
@@ -292,62 +293,6 @@ body {
   height: 16px;
 }
 
-/* Responsive Styles for Mobile Devices */
-@media screen and (max-width: 600px) {
-  .timeline {
-    margin: 50px auto;
-  }
-
-  .timeline::after {
-    left: 31px;
-  }
-
-  .container {
-    width: 100%;
-    padding-left: 80px;
-    padding-right: 25px;
-  }
-
-  .text-box {
-    padding: 20px 25px;
-    font-size: 14px;
-  }
-
-  .text-box small {
-    font-size: 12px;
-    padding: 3px 6px;
-  }
-
-  .right-container {
-    left: 0;
-  }
-
-  .left-container img,
-  .right-container img {
-    left: 10px;
-    width: 40px;
-    height: 40px;
-  }
-
-  .left-container-arrow,
-  .right-container-arrow {
-    border-right: 15px solid #f0f0f0;
-    border-left: 0;
-    left: -15px;
-    filter: drop-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));
-  }
-
-  .source-button {
-    width: 28px;
-    height: 28px;
-  }
-
-  .source-button svg {
-    width: 14px;
-    height: 14px;
-  }
-}
-
 .back-button {
   position: fixed;
   top: 20px;
@@ -397,8 +342,78 @@ body {
   opacity: 1;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .timeline-title {
+    font-size: 2.5rem;
+  }
+
+  .timeline {
+    margin: 80px auto;
+  }
+
+  .text-box {
+    padding: 20px 30px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive Styles for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .timeline {
+    margin: 60px auto;
+    padding: 0 0.75rem;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+
+  .text-box {
+    padding: 18px 22px;
+    font-size: 14px;
+  }
+
+  .text-box small {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .right-container {
+    left: 0;
+  }
+
+  .left-container img,
+  .right-container img {
+    left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #f0f0f0;
+    border-left: 0;
+    left: -15px;
+    filter: drop-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));
+  }
+
+  .source-button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .source-button svg {
+    width: 14px;
+    height: 14px;
+  }
+
   .back-button {
     width: 36px;
     height: 36px;
@@ -419,10 +434,48 @@ body {
 
   .timeline-title {
     font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 480px) {
+  .timeline {
+    margin: 50px auto;
+    padding: 0 0.5rem;
+  }
+
+  .container {
+    padding-left: 70px;
+    padding-right: 20px;
+  }
+
+  .text-box {
+    padding: 15px 20px;
+    font-size: 13px;
+  }
+
+  .text-box small {
+    font-size: 11px;
+    padding: 2px 5px;
+  }
+
+  .left-container img,
+  .right-container img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .source-button {
+    width: 26px;
+    height: 26px;
+  }
+
+  .source-button svg {
+    width: 12px;
+    height: 12px;
+  }
+
   .back-button {
     width: 32px;
     height: 32px;
@@ -439,5 +492,11 @@ body {
     left: 40px;
     font-size: 10px;
     padding: 2px 5px;
+  }
+
+  .timeline-title {
+    font-size: 1.75rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
   }
 }

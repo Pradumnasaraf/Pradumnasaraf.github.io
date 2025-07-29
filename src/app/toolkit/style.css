@@ -1,6 +1,7 @@
 .toolkit-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .back-button {
@@ -52,50 +53,9 @@
   opacity: 1;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .back-button {
-    width: 36px;
-    height: 36px;
-    top: 15px;
-    left: 15px;
-  }
-
-  .back-button svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .back-button::after {
-    left: 45px;
-    font-size: 11px;
-    padding: 3px 6px;
-  }
-}
-
-@media (max-width: 480px) {
-  .back-button {
-    width: 32px;
-    height: 32px;
-    top: 10px;
-    left: 10px;
-  }
-
-  .back-button svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .back-button::after {
-    left: 40px;
-    font-size: 10px;
-    padding: 2px 5px;
-  }
-}
-
 .toolkit-title {
   text-align: center;
-  font-size: 48px;
+  font-size: 3rem;
   color: #1a1a1a;
   margin-top: 20px;
   margin-bottom: 25px;
@@ -117,8 +77,8 @@
 
 .toolkit-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .toolkit-item {
@@ -149,13 +109,45 @@
   line-height: 1.5;
 }
 
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .toolkit-title {
+    font-size: 2.5rem;
+  }
+
+  .toolkit-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
 @media (max-width: 768px) {
   .toolkit-container {
-    padding: 1rem;
+    padding: 0 0.75rem;
+  }
+
+  .back-button {
+    width: 36px;
+    height: 36px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .back-button::after {
+    left: 45px;
+    font-size: 11px;
+    padding: 3px 6px;
   }
 
   .toolkit-title {
     font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
   }
 
   .toolkit-section h2 {
@@ -164,5 +156,61 @@
 
   .toolkit-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .toolkit-item {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolkit-container {
+    padding: 0 0.5rem;
+  }
+
+  .back-button {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .back-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .back-button::after {
+    left: 40px;
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+
+  .toolkit-title {
+    font-size: 1.75rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .toolkit-section {
+    margin-bottom: 3rem;
+  }
+
+  .toolkit-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .toolkit-item {
+    padding: 1rem;
+  }
+
+  .toolkit-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .toolkit-item p {
+    font-size: 0.95rem;
   }
 }
