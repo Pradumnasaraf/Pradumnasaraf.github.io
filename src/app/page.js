@@ -109,7 +109,7 @@ export default function Home() {
             <Link href="/toolkit">Toolkit</Link>
           </span>
           <span className="page-item">
-            <Link href="/camera">Camera</Link>
+            <Link href="/photography">Photography</Link>
           </span>
           <span className="page-item">
             <Link href="/cv">CV</Link>

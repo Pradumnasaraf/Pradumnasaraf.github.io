@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Page Title - Match Timeline & Toolkit style */
-.camera-title {
+.photography-title {
   text-align: center;
   font-size: 48px;
   color: #1a1a1a;
@@ -227,7 +227,7 @@ body {
     padding: 3px 6px;
   }
 
-  .camera-title {
+  .photography-title {
     font-size: 2rem;
   }
 }
