@@ -1,5 +1,5 @@
 {
-  "name": "pradumnasaraf.dev",
+  "name": "Pradumnasaraf.github.io",
   "version": "3.11.0",
   "private": true,
   "scripts": {
@@ -11,8 +11,23 @@
     "prepare": "husky",
     "pre-commit": "lint-staged"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pradumnasaraf/Pradumnasaraf.github.io"
+  },
+  "author": "Pradumna Saraf",
+  "license": "GNU General Public License v3.0",
+  "homepage": "https://pradumnasaraf.dev",
+  "bugs": {
+    "url": "https://github.com/Pradumnasaraf/Pradumnasaraf.github.io/issues"
+  },
+  "keywords": [
+    "pradumnasaraf",
+    "pradumna saraf",
+    "pradumnasaraf.dev"
+  ],
   "lint-staged": {
-    "*.{css,scss,html,json,md,yml,yaml}": [
+    "*.{css,scss,html}": [
       "npm run format"
     ],
     "*.{js,jsx,ts,tsx}": [

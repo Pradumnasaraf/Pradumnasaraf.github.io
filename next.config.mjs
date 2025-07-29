@@ -33,6 +33,11 @@ const nextConfig = {
         destination: 'https://rebasemedia.com/payment',
         permanent: true,
       },
+      {
+        source: '/camera',
+        destination: '/photography',
+        permanent: true,
+      },
     ];
   },
 };

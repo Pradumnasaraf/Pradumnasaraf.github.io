@@ -8,7 +8,7 @@ export const metadata = {
     title: 'Pradumna Saraf | Photography Portfolio',
     description:
       'Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work showcasing various styles and subjects.',
-    url: 'https://pradumnasaraf.dev/camera',
+    url: 'https://pradumnasaraf.dev/photography',
     images: [
       {
         url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
