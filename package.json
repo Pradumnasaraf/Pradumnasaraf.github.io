@@ -27,7 +27,7 @@
     "pradumnasaraf.dev"
   ],
   "lint-staged": {
-    "*.{css,scss,html,json,md,yml,yaml}": [
+    "*.{css,scss,html}": [
       "npm run format"
     ],
     "*.{js,jsx,ts,tsx}": [
