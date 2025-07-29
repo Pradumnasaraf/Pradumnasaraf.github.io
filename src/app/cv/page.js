@@ -77,7 +77,7 @@ const CVPage = () => {
           <div className="contact-info">
             <p>
               <FaEnvelope />{' '}
-              <a href="mailto:pradumnasaraf@gmail.com">
+              <a href="/contact">
                 pradumnasaraf@gmail.com
               </a>
             </p>

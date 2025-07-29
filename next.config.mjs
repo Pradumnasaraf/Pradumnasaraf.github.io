@@ -33,11 +33,7 @@ const nextConfig = {
         destination: 'https://rebasemedia.com/payment',
         permanent: true,
       },
-      {
-        source: '/contact',
-        destination: 'mailto:pradumnasaraf@gmail.com',
-        permanent: true,
-      },
+
     ];
   },
 };
