@@ -250,50 +250,18 @@ const CVPage = () => {
           <h2>Projects</h2>
 
           <div className="project">
+            <h3>Aviationstack MCP</h3>
+            <p>A Python-based MCP server that integrates the AviationStack API to provide real-time and historical flight data via structured endpoints. Analyzes flight delays by comparing scheduled and actual arrival/departure times. Packaged on PyPI as a server with endpoints compatible with any MCP-enabled LLM client or automation stack.</p>
+            <p><strong>Tech Stack:</strong> Python, AviationStack API, UV, MCP</p>
+            <a href="https://github.com/Pradumnasaraf/aviationstack-mcp" target="_blank" rel="noopener noreferrer">View Project →</a>
+          </div>
+
+          <div className="project">
             <h3>Permit GitHub Webhook</h3>
-            <p>{`A Node.js server that listens for GitHub organization membership events and syncs the data to Permit. Features Redis for event persistence and retry mechanisms, ensuring reliable updates even during service interruptions. Demonstrates event-driven architecture for syncing GitHub organization membership changes with Permit's permission system.`}</p>
-            <p>
-              <strong>Tech Stack:</strong> Node.js, Redis, GitHub Webhooks,
-              Permit.io
-            </p>
-            <a
-              href="https://github.com/Pradumnasaraf/permit-github-webhook"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Project →
-            </a>
-          </div>
 
-          <div className="project">
-            <h3>Go Prometheus Monitoring</h3>
-            <p>{`A Golang application that demonstrates how to monitor a Golang service using Prometheus and Grafana. This project was created for Docker's official Go Language Guide, showcasing best practices for monitoring Go applications.`}</p>
-            <p>
-              <strong>Tech Stack:</strong> Golang, Docker, Prometheus, Grafana
-            </p>
-            <a
-              href="https://github.com/Pradumnasaraf/go-prometheus-monitoring"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Project →
-            </a>
-          </div>
-
-          <div className="project">
-            <h3>PullPrompt</h3>
-            <p>{`A GitHub Action that comments on a Pull Request with a message generated from a user-given prompt. Under the hood, it uses Google's Gemini API to generate the text.`}</p>
-            <p>
-              <strong>Tech Stack:</strong> Node.js, GitHub Actions, Google
-              Gemini
-            </p>
-            <a
-              href="https://github.com/pradumnasaraf/pullprompt"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Project →
-            </a>
+            <p>A Node.js service that connects GitHub Webhooks with the Permit.io access control platform. Listens to GitHub repository events and translates them into structured data for real-time authorization management. Uses Redis to persist incoming webhook events and retries failed syncs every 5 minutes, ensuring reliability even if Permit.io or the server is temporarily unavailable.</p>
+            <p><strong>Tech Stack:</strong> Node.js, Express.js, GitHub Webhooks, Redis, Permit.io SDK/API</p>
+            <a href="https://github.com/Pradumnasaraf/permit-github-webhook" target="_blank" rel="noopener noreferrer">View Project →</a>
           </div>
 
           <div className="project">
@@ -313,14 +281,20 @@ const CVPage = () => {
           </div>
 
           <div className="project">
-            <h3>KuReDoPoGo</h3>
-            <p>{`A backend API service built with Golang and Gin Framework, featuring Redis for rate limiting and PostgreSQL for data storage. Designed for Kubernetes deployment with Docker Compose for local development.`}</p>
+            <h3>Contributors</h3>
+            <p>A GraphQL API built with Golang to capture and manage open source contribution data. Uses MongoDB for data storage and Redis for caching and rate limiting. Utilizes Prometheus and Grafana for monitoring, with custom metrics to track performance and usage. Deployed on Kubernetes for orchestration, scalability, and stateful workloads.</p>
+            <p><strong>Tech Stack:</strong> Golang, GraphQL, MongoDB, Redis, Prometheus, Grafana, Kubernetes</p>
+            <a href="https://github.com/pradumnasaraf/Contributors" target="_blank" rel="noopener noreferrer">View Project →</a>
+          </div>
+
+          <div className="project">
+            <h3>Go Prometheus Monitoring</h3>
+            <p>{`A Golang application that demonstrates how to monitor a Golang service using Prometheus and Grafana. This project was created for Docker's official Go Language Guide, showcasing best practices for monitoring Go applications.`}</p>
             <p>
-              <strong>Tech Stack:</strong> Golang, Gin, Redis, PostgreSQL,
-              Kubernetes, Docker
+              <strong>Tech Stack:</strong> Golang, Docker, Prometheus, Grafana
             </p>
             <a
-              href="https://github.com/Pradumnasaraf/KuReDoPoGo"
+              href="https://github.com/Pradumnasaraf/go-prometheus-monitoring"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -329,14 +303,30 @@ const CVPage = () => {
           </div>
 
           <div className="project">
-            <h3>Contributors</h3>
-            <p>{`A GraphQL API built with Golang to capture and manage open source contributions data. It uses MongoDB for data storage and Redis for caching and rate limiting. For monitoring, it utilizes Prometheus and Grafana.`}</p>
+            <h3>PullPrompt</h3>
+            <p>{`A GitHub Action that comments on Pull Requests with messages generated from user-given prompts. Under the hood, it uses Google's Gemini API to generate the text.`}</p>
             <p>
-              <strong>Tech Stack:</strong> Golang, GraphQL, MongoDB, Redis,
-              Prometheus, Grafana, Kubernetes
+              <strong>Tech Stack:</strong> Node.js, GitHub Actions, Google
+              Gemini
             </p>
             <a
-              href="https://github.com/pradumnasaraf/Contributors"
+              href="https://github.com/pradumnasaraf/pullprompt"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project →
+            </a>
+          </div>
+
+          <div className="project">
+            <h3>KuReDoPoGo</h3>
+            <p>{`A backend API service built with Golang and Gin Framework, featuring Redis for rate limiting and PostgreSQL for data storage. Designed for Kubernetes deployment with Docker Compose for local development.`}</p>
+            <p>
+              <strong>Tech Stack:</strong> Golang, Gin, Redis, PostgreSQL,
+              Kubernetes, Docker
+            </p>
+            <a
+              href="https://github.com/Pradumnasaraf/KuReDoPoGo"
               target="_blank"
               rel="noopener noreferrer"
             >
