@@ -439,6 +439,20 @@ const CVPage = () => {
                     rel="noopener noreferrer"
                     className="social-link"
                   >
+                    KubeCon + CloudNativeCon, India
+                  </a>
+                </strong>
+                , to talk about WebAssembly and Docker developments process.
+              </li>              
+              <li>
+                Speaker at{' '}
+                <strong>
+                  <a
+                    href="https://www.linkedin.com/posts/pradumnasaraf_kubecon-india-was-amazing-as-always-i-love-activity-7360625730226896896-aXn3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-link"
+                  >
                     KubeCon + CloudNativeCon, China
                   </a>
                 </strong>
