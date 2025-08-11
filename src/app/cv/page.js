@@ -434,7 +434,7 @@ const CVPage = () => {
                 Speaker at{' '}
                 <strong>
                   <a
-                    href="https://www.youtube.com/watch?v=DHaVho5cf4U"
+                    href="https://www.linkedin.com/posts/pradumnasaraf_kubecon-india-was-amazing-as-always-i-love-activity-7360625730226896896-aXn3"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link"
@@ -448,7 +448,7 @@ const CVPage = () => {
                 Speaker at{' '}
                 <strong>
                   <a
-                    href="https://www.linkedin.com/posts/pradumnasaraf_kubecon-india-was-amazing-as-always-i-love-activity-7360625730226896896-aXn3"
+                    href="https://www.youtube.com/watch?v=DHaVho5cf4U"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link"
