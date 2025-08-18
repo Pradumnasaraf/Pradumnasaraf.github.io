@@ -168,7 +168,7 @@ const CVPage = () => {
               </li>
               <li>{`Delivered various in-person talks, written technical blogs, social content, talk sessions, and video guides on the Livecycle YouTube channel to educate people about the product and underlying technologies like Docker, Cloud, GitHub Actions, etc.`}</li>
               <li>{`Actively nurtured the Livecycle Slack community, resulting in a membership growth from 0 to over 300 individuals, promoting collaboration and gathering product feedback and user needs.`}</li>
-              <li>{`Planned, launched, and led the flagship Interview series—Navigating Docker With Captains, interviewing the exclusive group of people and Docker experts known as Docker Captains.`}</li>
+              <li>{`Planned, launched, and led the flagship Interview series, Navigating Docker With Captains, interviewing the exclusive group of people and Docker experts known as Docker Captains.`}</li>
             </ul>
           </div>
 
@@ -180,7 +180,7 @@ const CVPage = () => {
             <ul>
               <li>{`Built a roadmap and executed it to simplify the offering and make the entire product open source, while improving messaging around it and increasing adoption.`}</li>
               <li>
-                {`Planned and hosted an online global hackathon—`}
+                {`Planned and hosted an online global hackathon, `}
                 <a
                   href="https://hackatra.com"
                   target="_blank"
@@ -202,8 +202,9 @@ const CVPage = () => {
             </div>
             <ul>
               <li>{`Recognized as a Docker Captain for my expertise and contributions to the Docker ecosystem. I have contributed to Docker's official documentation, created content on Docker and Docker Compose, helped open source projects adopt Docker, and more.`}</li>
-              <li>{`Working with the official docs team to bring more content, such as how-to guides and language-specific resources, to cater to a broader audience. Collaborating with the Test Containers and Social teams.`}</li>
-              <li>{`Delivering talks at conferences about various Docker technologies.`}</li>
+              <li>{`Working with the official docs team to bring more content, such as how-to guides and language-specific resources, to cater to a broader audience. Collaborating with the Test Containers and Social teams.`}</li>              
+              <li>{`Testing out alpha and pilot staged products and features, and providing feedback and reporting bugs to the product teams.`}</li>
+              <li>{`Delivering talks at conferences like KubeCon, OpenSFF, and more about various Docker technologies`}</li>
               <li>
                 {`Notable contributions: `}
                 <a

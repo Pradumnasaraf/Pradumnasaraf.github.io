@@ -66,11 +66,11 @@ const TimelinePage = () => {
                 <path d="M7 17l10-10M17 17V7h-7"></path>
               </svg>
             </Link>
-            <h2>Featured on maintaine.rs</h2>
+            <h2>Featured on maintaine.rs Book</h2>
             <small>July, 2025</small>
             <p>
               {' '}
-              I was featured on maintaine.rs, a collection of stories from
+              I was featured on maintaine.rs book, a collection of stories from
               maintainers in open source world. I was featured for my work as a
               maintainer and contributor to the open source community.
             </p>
