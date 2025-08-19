@@ -92,9 +92,6 @@ const ChatPage = () => {
           <span className="page-item">
             <Link href="/">Home</Link>
           </span>
-          <span className="page-item">
-            <Link href="https://rebasemedia.com">Services</Link>
-          </span>
         </div>
       </div>
 
