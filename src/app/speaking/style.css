@@ -1,0 +1,452 @@
+/* Speaking Page Styles */
+.speaking-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+  color: #333;
+}
+
+/* Header Section */
+.speaking-header {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  transform: translateX(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button svg {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover svg {
+  color: #000;
+}
+
+.header-content h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #1a1a1a;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+/* Speaking Grid */
+.speaking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.speaking-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.speaking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.category-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.talk-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.event-name {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+
+.talk-description {
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.event-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.meta-item svg {
+  color: #333;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: rgba(51, 51, 51, 0.1);
+  color: #333;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.card-actions {
+  padding: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.action-button.slides {
+  background: #333;
+  color: white;
+}
+
+.action-button.recording {
+  background: #dc2626;
+  color: white;
+}
+
+.action-button.external {
+  background: #51cf66;
+  color: white;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Call to Action Section */
+.cta-section {
+  background: #fff;
+  margin: 2rem;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cta-section h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+}
+
+.cta-section p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0 0 2rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cta-button.primary {
+  background: #333;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: #333;
+  border-color: #333;
+}
+
+.cta-button.secondary:hover {
+  background: #333;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .speaking-container {
+    padding: 0 0.75rem;
+  }
+
+  .speaking-header {
+    padding: 1rem;
+  }
+
+  .back-button {
+    width: 36px;
+    height: 36px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-content h1 {
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .speaking-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .speaking-card {
+    border-radius: 8px;
+  }
+
+  .card-content {
+    padding: 1.25rem;
+  }
+
+  .talk-title {
+    font-size: 1.1rem;
+  }
+
+  .event-name {
+    font-size: 0.95rem;
+  }
+
+  .talk-description {
+    font-size: 0.95rem;
+  }
+
+  .cta-section {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-section p {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .cta-button {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .speaking-container {
+    padding: 0 0.5rem;
+  }
+
+  .back-button {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .back-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header-content h1 {
+    font-size: 1.75rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .speaking-grid {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+
+  .speaking-card {
+    border-radius: 6px;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .talk-title {
+    font-size: 1rem;
+  }
+
+  .event-name {
+    font-size: 0.9rem;
+  }
+
+  .talk-description {
+    font-size: 0.9rem;
+  }
+
+  .event-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .meta-item {
+    font-size: 0.85rem;
+  }
+
+  .tags {
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .action-button {
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .cta-section {
+    margin: 0.75rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .cta-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-section p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
