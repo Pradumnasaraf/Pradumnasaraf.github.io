@@ -46,6 +46,7 @@ const ToolKitPage = () => {
               <h3>Computer</h3>
               <p>MacBook Pro 14 - M1 Pro, 16GB RAM</p>
               <p>MacBook Pro 14 - M2 Pro, 32GB RAM</p>
+              <p>MacBook Pro 14 - M4 Pro, 24GB RAM</p>
             </div>
 
             <div className="toolkit-item">
