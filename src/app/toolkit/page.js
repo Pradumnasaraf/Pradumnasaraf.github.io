@@ -44,9 +44,9 @@ const ToolKitPage = () => {
           <div className="toolkit-grid">
             <div className="toolkit-item">
               <h3>Computer</h3>
-              <p>MacBook Pro 14 - M1 Pro, 16GB RAM</p>
-              <p>MacBook Pro 14 - M2 Pro, 32GB RAM</p>
-              <p>MacBook Pro 14 - M4 Pro, 24GB RAM</p>
+              <p>MacBook Pro 14 M1 Pro, 8C CPU 14C GPU</p>
+              <p>MacBook Pro 14 M2 Pro, 10C CPU 16C GPU</p>
+              <p>MacBook Pro 14 M4 Pro, 14C CPU 20C GPU</p>
             </div>
 
             <div className="toolkit-item">
@@ -70,6 +70,20 @@ const ToolKitPage = () => {
             <div className="toolkit-item">
               <h3>Mobile</h3>
               <p>iPhone 16 Pro, iPhone 6, Moto G(9)</p>
+            </div>            
+          </div>
+        </section>
+
+        <section className="toolkit-section">
+          <h2>Workspace & Ergonomics</h2>
+          <div className="toolkit-grid">
+            <div className="toolkit-item">
+              <h3>Desk</h3>
+              <p>ErgoYou E3 Dual Motor (3 Stage) with Table-Top Standing Desk </p>
+            </div>
+            <div className="toolkit-item">
+              <h3>Chair</h3>
+              <p>Featherlite Helix High Back</p>
             </div>
           </div>
         </section>
@@ -139,7 +153,7 @@ const ToolKitPage = () => {
 
             <div className="toolkit-item">
               <h3>Other Tools</h3>
-              <p> GPG Suite,</p>
+              <p> GPG Suite</p>
             </div>
           </div>
         </section>
