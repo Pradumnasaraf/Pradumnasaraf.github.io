@@ -138,7 +138,7 @@ export default function Home() {
             {`Hello, I'm`} <span className="pradumna">Pradumna Saraf</span>
           </h2>
           <p>
-            Open Source Developer/DevRel. Docker Captain. Owner{' '}
+            Open Source Developer. Docker Captain. Owner{' '}
             <Link href="https://github.com/rebasemedia">@ rebase media</Link>
           </p>
           <div className="ibutton">
