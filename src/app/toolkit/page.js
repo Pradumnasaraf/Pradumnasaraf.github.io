@@ -70,7 +70,7 @@ const ToolKitPage = () => {
             <div className="toolkit-item">
               <h3>Mobile</h3>
               <p>iPhone 16 Pro, iPhone 6, Moto G(9)</p>
-            </div>            
+            </div>
           </div>
         </section>
 
@@ -79,7 +79,10 @@ const ToolKitPage = () => {
           <div className="toolkit-grid">
             <div className="toolkit-item">
               <h3>Desk</h3>
-              <p>ErgoYou E3 Dual Motor (3 Stage) with Table-Top Standing Desk </p>
+              <p>
+                ErgoYou E3 Dual Motor (3 Stage) with Table-Top Standing
+                Desk{' '}
+              </p>
             </div>
             <div className="toolkit-item">
               <h3>Chair</h3>
