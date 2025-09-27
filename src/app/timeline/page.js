@@ -108,16 +108,16 @@ const TimelinePage = () => {
         </div>
 
         {/* Right Container */}
-        <div className="container right-container">
+        <div className="container right-container" role="listitem" aria-label="Featured on maintaine.rs Book - July 2025">
           <img
             src="/timeline-logo/maintainer-book.png"
-            alt="Maintainers Book"
+            alt="Maintainers Book logo"
           />
           <div className="text-box">
             <Link
               href="https://maintaine.rs"
               className="source-button"
-              aria-label="Maintainers Book"
+              aria-label="Visit maintaine.rs website"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -143,13 +143,13 @@ const TimelinePage = () => {
         </div>
 
         {/* Right Container */}
-        <div className="container left-container">
-          <img src="/timeline-logo/cncf.png" alt="CNCF" />
+        <div className="container left-container" role="listitem" aria-label="First talk at International Conference - June 2025">
+          <img src="/timeline-logo/cncf.png" alt="CNCF Cloud Native Computing Foundation logo" />
           <div className="text-box">
             <Link
               href="https://youtu.be/DHaVho5cf4U?si=n-8DcHRBEVYaTQkI"
               className="source-button"
-              aria-label="CNCF"
+              aria-label="Watch KubeCon China talk video"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -175,13 +175,13 @@ const TimelinePage = () => {
         </div>
 
         {/* Right Container */}
-        <div className="container right-container">
-          <img src="/timeline-logo/opensource.png" alt="Open Source" />
+        <div className="container right-container" role="listitem" aria-label="Featured on Official Open Source Org Website - May 2025">
+          <img src="/timeline-logo/opensource.png" alt="Open Source Initiative logo" />
           <div className="text-box">
             <Link
               href="https://www.opensource.org/maintainers/pradumnasaraf"
               className="source-button"
-              aria-label="Open Source"
+              aria-label="Visit Open Source Org website"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -208,13 +208,13 @@ const TimelinePage = () => {
         </div>
 
         {/* Right Container */}
-        <div className="container left-container">
-          <img src="/timeline-logo/cncf.png" alt="CNCF" />
+        <div className="container left-container" role="listitem" aria-label="Delivered talk at Linux Foundation event - December 2024">
+          <img src="/timeline-logo/cncf.png" alt="CNCF Cloud Native Computing Foundation logo" />
           <div className="text-box">
             <Link
               href="https://youtu.be/hRp4PaZ6FS4?si=nCPeRiYQ2-69hUE9"
               className="source-button"
-              aria-label="CNCF"
+              aria-label="Watch SOSS Community Day talk video"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -242,13 +242,13 @@ const TimelinePage = () => {
           </div>
         </div>
 
-        <div className="container right-container">
-          <img src="/timeline-logo/freecodecamp.jpg" alt="FreeCodeCamp" />
+        <div className="container right-container" role="listitem" aria-label="Published first blog on FreeCodeCamp - November 2024">
+          <img src="/timeline-logo/freecodecamp.jpg" alt="FreeCodeCamp logo" />
           <div className="text-box">
             <Link
               href="https://www.freecodecamp.org/news/author/Pradumnasaraf"
               className="source-button"
-              aria-label="FreeCodeCamp"
+              aria-label="Visit FreeCodeCamp author page"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -275,13 +275,13 @@ const TimelinePage = () => {
           </div>
         </div>
 
-        <div className="container left-container">
-          <img src="/timeline-logo/docker.png" alt="Docker" />
+        <div className="container left-container" role="listitem" aria-label="Part of Docker Official Docs team - August 2024">
+          <img src="/timeline-logo/docker.png" alt="Docker logo" />
           <div className="text-box">
             <Link
               href="https://www.docker.com/captains/pradumna-v-saraf/"
               className="source-button"
-              aria-label="Docker docs"
+              aria-label="Visit Docker Captain profile"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -307,13 +307,13 @@ const TimelinePage = () => {
           </div>
         </div>
 
-        <div className="container right-container">
-          <img src="/timeline-logo/docker.png" alt="Docker" />
+        <div className="container right-container" role="listitem" aria-label="Docker Captain - July 2024">
+          <img src="/timeline-logo/docker.png" alt="Docker logo" />
           <div className="text-box">
             <Link
               href="https://www.docker.com/captains/pradumna-v-saraf/"
               className="source-button"
-              aria-label="Docker Captain"
+              aria-label="Visit Docker Captain profile"
             >
               <svg
                 viewBox="0 0 24 24"
