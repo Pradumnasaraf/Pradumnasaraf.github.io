@@ -94,25 +94,25 @@ export default function Home() {
         </div>
         <div className={`pages ${isMenuOpen ? 'active' : ''}`}>
           <span className="page-item">
-            <Link href="https://pradumnasaraf.substack.com">Newsletter</Link>
-          </span>
-          <span className="page-item">
             <Link href="https://blog.pradumnasaraf.dev">Blog</Link>
           </span>
           <span className="page-item">
             <Link href="/timeline">Timeline</Link>
           </span>
           <span className="page-item">
-            <Link href="/toolkit">Toolkit</Link>
-          </span>
-          <span className="page-item">
-            <Link href="/photography">Photography</Link>
-          </span>
-          <span className="page-item">
             <Link href="/cv">CV</Link>
           </span>
           <span className="page-item">
             <Link href="https://rebasemedia.com">Services</Link>
+          </span>
+          <span className="page-item">
+            <Link href="https://pradumnasaraf.substack.com">Newsletter</Link>
+          </span>
+          <span className="page-item">
+            <Link href="/toolkit">Toolkit</Link>
+          </span>
+          <span className="page-item">
+            <Link href="/photography">Photography</Link>
           </span>
           <span className="page-item">
             <Link href="/contact">Contact</Link>
