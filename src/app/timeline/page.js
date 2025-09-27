@@ -96,7 +96,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Delivered a talk at KubeCon India</h2>
-            <small>July, 2025</small>
+            <small>August, 2025</small>
             <p>
               {' '}
               I delivered a talk at KubeCon India, a premier conference focusing
