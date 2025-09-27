@@ -43,7 +43,71 @@ const TimelinePage = () => {
       </Link>
       <h1 className="timeline-title">Timeline</h1>
       <div className="timeline">
+        {/* Right Container */}
+        <div className="container right-container">
+          <img src="/timeline-logo/kestra.png" alt="Kestra" />
+          <div className="text-box">
+            <Link
+              href="https://kestra.io"
+              className="source-button"
+              aria-label="Kestra"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17l10-10M17 17V7h-7"></path>
+              </svg>
+            </Link>
+            <h2>Joined Kestra as a QAE</h2>
+            <small>September, 2025</small>
+            <p>
+              {' '}
+              I joined Kestra as a Quality Assurance Engineer. I test new
+              features, run automated checks, and identify bugs to ensure
+              software quality across both open source and enterprise editions.
+            </p>
+            <span className="right-container-arrow"></span>
+          </div>
+        </div>
+
         {/* Left Container */}
+        <div className="container left-container">
+          <img src="/timeline-logo/cncf.png" alt="CNCF" />
+          <div className="text-box">
+            <Link
+              href="https://youtu.be/J8situjchtg?si=eZved6DcEPDZg273"
+              className="source-button"
+              aria-label="KubeCon India"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17l10-10M17 17V7h-7"></path>
+              </svg>
+            </Link>
+            <h2>Delivered a talk at KubeCon India</h2>
+            <small>July, 2025</small>
+            <p>
+              {' '}
+              I delivered a talk at KubeCon India, a premier conference focusing
+              on Kubernetes and Cloud Native technologies. I spoke about
+              WebAssembly and Docker adoption and development process.
+            </p>
+            <span className="left-container-arrow"></span>
+          </div>
+        </div>
+
+        {/* Right Container */}
         <div className="container right-container">
           <img
             src="/timeline-logo/maintainer-book.png"
@@ -148,7 +212,7 @@ const TimelinePage = () => {
           <img src="/timeline-logo/cncf.png" alt="CNCF" />
           <div className="text-box">
             <Link
-              href="https://x.com/pradumna_saraf/status/1871171396589772967"
+              href="https://youtu.be/hRp4PaZ6FS4?si=nCPeRiYQ2-69hUE9"
               className="source-button"
               aria-label="CNCF"
             >

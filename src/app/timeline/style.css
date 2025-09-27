@@ -39,7 +39,7 @@ body {
   top: 0;
   margin-left: -2px;
   z-index: -1;
-  animation: moveline 33.5s linear forwards;
+  animation: moveline 35.5s linear forwards;
 }
 
 /* Keyframes for Line Animation */
@@ -150,31 +150,37 @@ body {
   animation-delay: 24s;
 }
 .container:nth-child(26) {
-  animation-delay: 26s;
+  animation-delay: 25s;
 }
 .container:nth-child(27) {
-  animation-delay: 27s;
+  animation-delay: 26s;
 }
 .container:nth-child(28) {
-  animation-delay: 28s;
+  animation-delay: 27s;
 }
 .container:nth-child(29) {
-  animation-delay: 29s;
+  animation-delay: 28s;
 }
 .container:nth-child(30) {
-  animation-delay: 30s;
+  animation-delay: 29s;
 }
 .container:nth-child(31) {
-  animation-delay: 31s;
+  animation-delay: 30s;
 }
 .container:nth-child(32) {
-  animation-delay: 32s;
+  animation-delay: 31s;
 }
 .container:nth-child(33) {
-  animation-delay: 33s;
+  animation-delay: 32s;
 }
 .container:nth-child(34) {
+  animation-delay: 33s;
+}
+.container:nth-child(35) {
   animation-delay: 34s;
+}
+.container:nth-child(36) {
+  animation-delay: 35s;
 }
 
 /* Text Box Styles */
@@ -357,7 +363,6 @@ body {
     font-size: 14px;
   }
 }
-
 /* Responsive Styles for Mobile Devices */
 @media screen and (max-width: 768px) {
   .timeline {
@@ -391,14 +396,14 @@ body {
 
   .left-container img,
   .right-container img {
-    left: 10px;
+    left: 6.2px;
     width: 40px;
     height: 40px;
   }
 
   .left-container-arrow,
   .right-container-arrow {
-    border-right: 15px solid #f0f0f0;
+    border-right: 15px solid #ffffff;
     border-left: 0;
     left: -15px;
     filter: drop-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));
