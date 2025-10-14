@@ -43,6 +43,36 @@ const TimelinePage = () => {
       </Link>
       <h1 className="timeline-title">Timeline</h1>
       <div className="timeline">
+        {/* Left Container */}
+        <div className="container left-container">
+          <img src="/timeline-logo/docker.png" alt="Docker" />
+          <div className="text-box">
+            <Link
+              href="https://www.docker.com/blog/from-the-captains-chair-pradumna-saraf/"
+              className="source-button"
+              aria-label="Docker Captain Interview"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17l10-10M17 17V7h-7"></path>
+              </svg>
+            </Link>
+            <h2>Featured in Docker Captain Interview</h2>
+            <small>October, 2025</small>
+            <p>
+              {' '}
+              {'Featured in Docker\'s official blog as part of their "From the Captain\'s Chair" series. Shared my journey from learning about databases to becoming a Docker Captain, my contributions to the community, and insights on Docker\'s latest features.'}
+            </p>
+            <span className="left-container-arrow"></span>
+          </div>
+        </div>
+
         {/* Right Container */}
         <div className="container right-container">
           <img src="/timeline-logo/kestra.png" alt="Kestra" />
