@@ -39,7 +39,7 @@ body {
   top: 0;
   margin-left: -2px;
   z-index: -1;
-  animation: moveline 35.5s linear forwards;
+  animation: moveline 36.5s linear forwards;
 }
 
 /* Keyframes for Line Animation */
@@ -181,6 +181,9 @@ body {
 }
 .container:nth-child(36) {
   animation-delay: 35s;
+}
+.container:nth-child(37) {
+  animation-delay: 36s;
 }
 
 /* Text Box Styles */
