@@ -1,0 +1,39 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap locations
+Sitemap: https://pradumnasaraf.dev/sitemap-index.xml
+Sitemap: https://pradumnasaraf.dev/sitemap.xml
+Sitemap: https://pradumnasaraf.dev/sitemap-images.xml
+Sitemap: https://pradumnasaraf.dev/sitemap-videos.xml
+
+# Crawl delay for server protection
+Crawl-delay: 1
+
+# Specific bot directives
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block problematic bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

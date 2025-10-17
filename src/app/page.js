@@ -117,6 +117,9 @@ export default function Home() {
           <span className="page-item">
             <Link href="/contact">Contact</Link>
           </span>
+          <span className="page-item">
+            <Link href="/sitemap">Sitemap</Link>
+          </span>
         </div>
       </div>
 

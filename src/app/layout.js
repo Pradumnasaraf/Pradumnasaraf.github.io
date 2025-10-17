@@ -67,6 +67,64 @@ export default function RootLayout({ children }) {
           name="twitter:image"
           content="https://pradumnasaraf.dev/media/pradumna-saraf-og.png"
         />
+
+        {/* Enhanced Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Pradumna Saraf',
+              url: 'https://pradumnasaraf.dev',
+              sameAs: [
+                'https://github.com/Pradumnasaraf',
+                'https://twitter.com/pradumna_saraf',
+                'https://linkedin.com/in/pradumnasaraf',
+                'https://blog.pradumnasaraf.dev',
+              ],
+              jobTitle: 'Developer Advocate & Docker Captain',
+              worksFor: {
+                '@type': 'Organization',
+                name: 'Kestra',
+                url: 'https://kestra.io',
+              },
+              knowsAbout: [
+                'Docker',
+                'Kubernetes',
+                'DevOps',
+                'Open Source',
+                'Developer Relations',
+                'Go',
+                'JavaScript',
+                'Cloud Native',
+                'Container Technology',
+                'CI/CD',
+                'Microservices',
+              ],
+              alumniOf: {
+                '@type': 'EducationalOrganization',
+                name: 'Bachelor of Computer Applications',
+              },
+              award: [
+                'Docker Captain',
+                'Top Author on dev.to',
+                'Winner of daily.dev RSS Feed Hackathon',
+                'Winner of Postman API Fest Hackathon',
+              ],
+              memberOf: [
+                {
+                  '@type': 'Organization',
+                  name: 'Docker Community',
+                },
+                {
+                  '@type': 'Organization',
+                  name: 'CNCF Community',
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}

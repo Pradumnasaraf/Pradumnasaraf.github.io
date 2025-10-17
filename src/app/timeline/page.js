@@ -67,7 +67,9 @@ const TimelinePage = () => {
             <small>October, 2025</small>
             <p>
               {' '}
-              {'Featured in Docker\'s official blog as part of their "From the Captain\'s Chair" series. Shared my journey from learning about databases to becoming a Docker Captain, my contributions to the community, and insights on Docker\'s latest features.'}
+              {
+                "Featured in Docker's official blog as part of their \"From the Captain's Chair\" series. Shared my journey from learning about databases to becoming a Docker Captain, my contributions to the community, and insights on Docker's latest features."
+              }
             </p>
             <span className="left-container-arrow"></span>
           </div>
@@ -138,7 +140,11 @@ const TimelinePage = () => {
         </div>
 
         {/* Right Container */}
-        <div className="container right-container" role="listitem" aria-label="Featured on maintaine.rs Book - July 2025">
+        <div
+          className="container right-container"
+          role="listitem"
+          aria-label="Featured on maintaine.rs Book - July 2025"
+        >
           <img
             src="/timeline-logo/maintainer-book.png"
             alt="Maintainers Book logo"
@@ -173,8 +179,15 @@ const TimelinePage = () => {
         </div>
 
         {/* Right Container */}
-        <div className="container left-container" role="listitem" aria-label="First talk at International Conference - June 2025">
-          <img src="/timeline-logo/cncf.png" alt="CNCF Cloud Native Computing Foundation logo" />
+        <div
+          className="container left-container"
+          role="listitem"
+          aria-label="First talk at International Conference - June 2025"
+        >
+          <img
+            src="/timeline-logo/cncf.png"
+            alt="CNCF Cloud Native Computing Foundation logo"
+          />
           <div className="text-box">
             <Link
               href="https://youtu.be/DHaVho5cf4U?si=n-8DcHRBEVYaTQkI"
@@ -205,8 +218,15 @@ const TimelinePage = () => {
         </div>
 
         {/* Right Container */}
-        <div className="container right-container" role="listitem" aria-label="Featured on Official Open Source Org Website - May 2025">
-          <img src="/timeline-logo/opensource.png" alt="Open Source Initiative logo" />
+        <div
+          className="container right-container"
+          role="listitem"
+          aria-label="Featured on Official Open Source Org Website - May 2025"
+        >
+          <img
+            src="/timeline-logo/opensource.png"
+            alt="Open Source Initiative logo"
+          />
           <div className="text-box">
             <Link
               href="https://www.opensource.org/maintainers/pradumnasaraf"
@@ -238,8 +258,15 @@ const TimelinePage = () => {
         </div>
 
         {/* Right Container */}
-        <div className="container left-container" role="listitem" aria-label="Delivered talk at Linux Foundation event - December 2024">
-          <img src="/timeline-logo/cncf.png" alt="CNCF Cloud Native Computing Foundation logo" />
+        <div
+          className="container left-container"
+          role="listitem"
+          aria-label="Delivered talk at Linux Foundation event - December 2024"
+        >
+          <img
+            src="/timeline-logo/cncf.png"
+            alt="CNCF Cloud Native Computing Foundation logo"
+          />
           <div className="text-box">
             <Link
               href="https://youtu.be/hRp4PaZ6FS4?si=nCPeRiYQ2-69hUE9"
@@ -272,7 +299,11 @@ const TimelinePage = () => {
           </div>
         </div>
 
-        <div className="container right-container" role="listitem" aria-label="Published first blog on FreeCodeCamp - November 2024">
+        <div
+          className="container right-container"
+          role="listitem"
+          aria-label="Published first blog on FreeCodeCamp - November 2024"
+        >
           <img src="/timeline-logo/freecodecamp.jpg" alt="FreeCodeCamp logo" />
           <div className="text-box">
             <Link
@@ -305,7 +336,11 @@ const TimelinePage = () => {
           </div>
         </div>
 
-        <div className="container left-container" role="listitem" aria-label="Part of Docker Official Docs team - August 2024">
+        <div
+          className="container left-container"
+          role="listitem"
+          aria-label="Part of Docker Official Docs team - August 2024"
+        >
           <img src="/timeline-logo/docker.png" alt="Docker logo" />
           <div className="text-box">
             <Link
@@ -337,7 +372,11 @@ const TimelinePage = () => {
           </div>
         </div>
 
-        <div className="container right-container" role="listitem" aria-label="Docker Captain - July 2024">
+        <div
+          className="container right-container"
+          role="listitem"
+          aria-label="Docker Captain - July 2024"
+        >
           <img src="/timeline-logo/docker.png" alt="Docker logo" />
           <div className="text-box">
             <Link
