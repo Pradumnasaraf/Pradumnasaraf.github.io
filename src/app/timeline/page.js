@@ -43,6 +43,71 @@ const TimelinePage = () => {
       </Link>
       <h1 className="timeline-title">Timeline</h1>
       <div className="timeline">
+        {/* Left Container - Microsoft MVP */}
+        <div className="container left-container">
+          <img src="/timeline-logo/mvp.jpg" alt="Microsoft MVP" />
+          <div className="text-box">
+            <Link
+              href="https://mvp.microsoft.com/en-US/MVP/profile/504ebf09-e92f-4620-82d7-67590711df58"
+              className="source-button"
+              aria-label="Microsoft MVP"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17l10-10M17 17V7h-7"></path>
+              </svg>
+            </Link>
+            <h2>Microsoft MVP</h2>
+            <small>November, 2025</small>
+            <p>
+              {' '}
+              I was recognized as a Microsoft Most Valuable Professional (MVP)
+              for DevOps category for my contributions to the developer
+              community from writing blogs, videos, and speaking at events.
+            </p>
+            <span className="left-container-arrow"></span>
+          </div>
+        </div>
+
+        {/* Right Container - Docker Captain of the Year */}
+        <div className="container right-container">
+          <img src="/timeline-logo/docker.png" alt="Docker" />
+          <div className="text-box">
+            <Link
+              href="https://www.docker.com/captains/pradumna-saraf"
+              className="source-button"
+              aria-label="Docker Captain of the Year"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17l10-10M17 17V7h-7"></path>
+              </svg>
+            </Link>
+            <h2>Docker Captain of the Year</h2>
+            <small>October, 2025</small>
+            <p>
+              {' '}
+              I was honored with the Docker Captain of the Year award,
+              recognizing my contributions to the Docker community. This award
+              was presented during Docker Captains Summit 2025 in Istanbul,
+              Turkey.
+            </p>
+            <span className="right-container-arrow"></span>
+          </div>
+        </div>
+
         {/* Left Container */}
         <div className="container left-container">
           <img src="/timeline-logo/docker.png" alt="Docker" />
@@ -426,7 +491,7 @@ const TimelinePage = () => {
                 <path d="M7 17l10-10M17 17V7h-7"></path>
               </svg>
             </Link>
-            <h2>Invited as a Guest Speaker At NIT Patna</h2>
+            <h2>Invited as a Guest Speaker at NIT Patna</h2>
             <small>April, 2024</small>
             <p>
               {' '}
@@ -708,7 +773,7 @@ const TimelinePage = () => {
                 <path d="M7 17l10-10M17 17V7h-7"></path>
               </svg>
             </Link>
-            <h2>Contributed to official GitHub Open Source Guide</h2>
+            <h2>Contributed to Official GitHub Open Source Guide</h2>
             <small>July, 2024</small>
             <p>
               {' '}
@@ -973,7 +1038,7 @@ const TimelinePage = () => {
                 <path d="M7 17l10-10M17 17V7h-7"></path>
               </svg>
             </Link>
-            <h2>Crossed 1k Followers on Twitter (X)</h2>
+            <h2>Crossed 1K Followers on Twitter (X)</h2>
             <small>April, 2022</small>
             <p>
               {' '}
