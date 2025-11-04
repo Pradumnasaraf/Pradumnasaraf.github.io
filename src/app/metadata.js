@@ -1,9 +1,9 @@
 export const metadata = {
   title: 'Pradumna Saraf',
   description:
-    'Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
+    'Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
   keywords:
-    'Pradumna Saraf, Developer Advocate, Docker Captain, Open Source, Cloud Native, DevOps, Software Development',
+    'Pradumna Saraf, Developer Advocate, Docker Captain, Microsoft MVP, Open Source, Cloud Native, DevOps, Software Development',
   authors: [{ name: 'Pradumna Saraf' }],
   creator: 'Pradumna Saraf',
   publisher: 'Pradumna Saraf',
@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: 'Pradumna Saraf',
     description:
-      'Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
+      'Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
     url: 'https://pradumnasaraf.dev',
     siteName: 'Pradumna Saraf',
     images: [
@@ -19,7 +19,7 @@ export const metadata = {
         url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
         width: 1200,
         height: 630,
-        alt: 'Pradumna Saraf - Developer Advocate & Docker Captain',
+        alt: 'Pradumna Saraf - Developer Advocate, Docker Captain & Microsoft MVP',
       },
     ],
     locale: 'en_US',
@@ -29,7 +29,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Pradumna Saraf',
     description:
-      'Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
+      'Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },

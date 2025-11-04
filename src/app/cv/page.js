@@ -431,6 +431,18 @@ const CVPage = () => {
           <div className="achievements">
             <ul>
               <li>
+                <strong>Microsoft MVP:</strong> Recognized as a{' '}
+                <a
+                  href="https://mvp.microsoft.com/en-US/MVP/profile/504ebf09-e92f-4620-82d7-67590711df58"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  Microsoft Most Valuable Professional (MVP)
+                </a>{' '}
+                for outstanding community leadership and technical contributions in the field of DevOps and Open Source.
+              </li>
+              <li>
                 <strong>Docker Captain:</strong> Recognized as a{' '}
                 <a
                   href="https://www.docker.com/captains/pradumna-v-saraf"

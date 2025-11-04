@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content="Pradumna Saraf" />
         <meta
           property="og:description"
-          content="Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development."
+          content="Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development."
         />
         <meta property="og:url" content="https://pradumnasaraf.dev" />
         <meta property="og:site_name" content="Pradumna Saraf" />
@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:title" content="Pradumna Saraf" />
         <meta
           name="twitter:description"
-          content="Developer Advocate, Docker Captain, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development."
+          content="Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development."
         />
         <meta
           name="twitter:image"
@@ -82,8 +82,9 @@ export default function RootLayout({ children }) {
                 'https://twitter.com/pradumna_saraf',
                 'https://linkedin.com/in/pradumnasaraf',
                 'https://blog.pradumnasaraf.dev',
+                'https://mvp.microsoft.com/en-US/MVP/profile/504ebf09-e92f-4620-82d7-67590711df58',
               ],
-              jobTitle: 'Developer Advocate & Docker Captain',
+              jobTitle: 'Developer Advocate, Docker Captain & Microsoft MVP',
               worksFor: {
                 '@type': 'Organization',
                 name: 'Kestra',
@@ -108,6 +109,7 @@ export default function RootLayout({ children }) {
               },
               award: [
                 'Docker Captain',
+                'Microsoft MVP',
                 'Top Author on dev.to',
                 'Winner of daily.dev RSS Feed Hackathon',
                 'Winner of Postman API Fest Hackathon',
@@ -120,6 +122,10 @@ export default function RootLayout({ children }) {
                 {
                   '@type': 'Organization',
                   name: 'CNCF Community',
+                },
+                {
+                  '@type': 'Organization',
+                  name: 'Microsoft MVP Award Program',
                 },
               ],
             }),
