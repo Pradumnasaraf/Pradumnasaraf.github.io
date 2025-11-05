@@ -72,7 +72,7 @@ const CVPage = () => {
         <header>
           <h1>Pradumna Saraf</h1>
           <p className="bio">
-            {`A dedicated open source developer and contributor with over 3 years of experience in coding, crafting technical content, community building, and delivering talks. I'm also an enthusiastic team player, skilled at effective collaboration, and capable of working independently to achieve goals.`}
+            {`A dedicated open source developer and contributor with over 4 years of experience in coding, crafting technical content, community building, and delivering talks. I'm also an enthusiastic team player, skilled at effective collaboration, and capable of working independently to achieve goals.`}
           </p>
           <div className="contact-info">
             <p>
@@ -259,6 +259,21 @@ const CVPage = () => {
                   C++ Guide
                 </a>
               </li>
+            </ul>
+          </div>
+
+          <div className="job">
+            <div className="job-header">
+              <h3>Microsoft MVP (DevOps)</h3>
+              <span className="date">Nov 2025 - Present</span>
+            </div>
+            <ul>
+              <li>
+                {' '}
+                I was recognized as a Microsoft Most Valuable Professional (MVP) in the Developer Technologies category (Technology Area: DevOps) for my contributions to the developer
+                community from writing blogs, videos, and speaking at events.
+              </li>
+              <li>{`Creating educational content and resources to help developers adopt modern DevOps practices and Microsoft tooling across CI/CD, cloud, and container workflows.`}</li>
             </ul>
           </div>
         </section>
@@ -453,6 +468,10 @@ const CVPage = () => {
                   Docker Captain
                 </a>{' '}
                 for my contributions to the Docker ecosystem.
+              </li>
+              <li>
+                <strong>Docker Captain of the Year:</strong> Awarded the title for outstanding
+                contributions and impact within the Docker community.
               </li>
               <li>
                 <strong>Top Author on dev.to:</strong> Recognised as a top

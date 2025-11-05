@@ -45,7 +45,7 @@ const TimelinePage = () => {
       <div className="timeline">
         {/* Left Container - Microsoft MVP */}
         <div className="container left-container">
-          <img src="/timeline-logo/mvp.jpg" alt="Microsoft MVP" />
+          <img src="/timeline-logo/microsoft.png" alt="Microsoft MVP" />
           <div className="text-box">
             <Link
               href="https://mvp.microsoft.com/en-US/MVP/profile/504ebf09-e92f-4620-82d7-67590711df58"
@@ -67,8 +67,7 @@ const TimelinePage = () => {
             <small>November, 2025</small>
             <p>
               {' '}
-              I was recognized as a Microsoft Most Valuable Professional (MVP)
-              for DevOps category for my contributions to the developer
+              I was recognized as a Microsoft Most Valuable Professional (MVP) in the Developer Technologies category (Technology Area: DevOps) for my contributions to the developer
               community from writing blogs, videos, and speaking at events.
             </p>
             <span className="left-container-arrow"></span>
