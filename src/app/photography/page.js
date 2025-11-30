@@ -9,6 +9,26 @@ import imagesLoaded from 'imagesloaded';
 
 const images = [
   {
+    src: 'https://drive.google.com/thumbnail?id=1RK_lf6pGbTlKtvxZzyiB0VuxyI9AipNV&sz=w2500',
+    alt: 'photo',
+  },
+  {
+    src: 'https://drive.google.com/thumbnail?id=10zE2jJN-BeVGljRjDDC5fhiRerv42Vt3&sz=w2500',
+    alt: 'photo',
+  },
+  {
+    src: 'https://drive.google.com/thumbnail?id=1pyJMGvAe3laDskv1oY7Lry1Km9MnYGkZ&sz=w2500',
+    alt: 'photo',
+  },
+  {
+    src: 'https://drive.google.com/thumbnail?id=1G9_j9kzp0ejkTNb_fsGT0J1dmWbhZKat&sz=w2500',
+    alt: 'photo',
+  },
+  {
+    src: 'https://drive.google.com/thumbnail?id=1C6YurK98vBAvHZscaR36TrjSh2sEY_UR&sz=w2500',
+    alt: 'photo',
+  },
+  {
     src: 'https://drive.google.com/thumbnail?id=1nc5clO7-WsUm6iEQ4Q56L00CfFdN2w-m&sz=w2500',
     alt: 'photo',
   },
