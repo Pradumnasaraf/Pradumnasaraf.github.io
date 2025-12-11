@@ -1,13 +1,31 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: 'League Spartan', sans-serif;
 }
 
+/* Safari-specific: Ensure images and media don't cause overflow */
+img,
+video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   overflow-x: hidden;
   width: 100%;
+  max-width: 100vw;
+  position: relative;
+  /* Safari-specific: Prevent horizontal scrolling */
+  overscroll-behavior-x: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 body {
@@ -16,17 +34,26 @@ body {
   letter-spacing: -0.01em;
   overflow-x: hidden;
   width: 100%;
+  max-width: 100vw;
+  position: relative;
+  /* Safari-specific: Prevent horizontal scrolling */
+  overscroll-behavior-x: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 main {
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
+  position: relative;
+  overscroll-behavior-x: none;
 }
 
 .nav {
   height: 10vh;
   width: 100%;
+  max-width: 100vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,7 +64,11 @@ main {
   padding: 0 2rem;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .pages {
@@ -71,12 +102,15 @@ main {
 .heading {
   height: 82vh;
   width: 100%;
+  max-width: 100vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 10vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .left {
@@ -195,6 +229,17 @@ main {
 
 /* Mobile Navigation Styles */
 @media (max-width: 800px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    position: relative;
+    overscroll-behavior-x: none !important;
+    /* Safari iOS specific: Force no horizontal scroll */
+    touch-action: pan-y pinch-zoom;
+  }
+
   .nav {
     padding: 0 1rem;
     height: auto;
@@ -203,6 +248,12 @@ main {
     justify-content: space-between;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .hamburger {
@@ -250,15 +301,22 @@ main {
     padding-top: 1rem;
     height: auto;
     min-height: 85vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .left {
     width: 100%;
+    max-width: 100%;
     padding: 1rem 1.5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .left > h2 {
@@ -299,6 +357,9 @@ main {
   .right {
     margin-top: 1.5rem;
     width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .right img {
