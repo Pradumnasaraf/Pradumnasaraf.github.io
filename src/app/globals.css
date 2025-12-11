@@ -5,10 +5,23 @@
   font-family: 'League Spartan', sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: #ffffff;
   margin: 0;
   letter-spacing: -0.01em;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+main {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .nav {
