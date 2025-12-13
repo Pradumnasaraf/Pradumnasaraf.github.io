@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-css-tags, @next/next/no-page-custom-font, @next/next/no-img-element */
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import './globals.css';
 import Head from 'next/head';
@@ -10,6 +10,7 @@ import KonamiGame from '@/components/KonamiGame';
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showGame, setShowGame] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [keySequence, setKeySequence] = useState([]);
 
   const toggleMenu = () => {
@@ -138,7 +139,8 @@ export default function Home() {
             {`Hello, I'm`} <span className="pradumna">Pradumna Saraf</span>
           </h2>
           <p>
-            Open Source Developer. Docker Captain. Microsoft MVP. Owner @ rebase media
+            Open Source Developer. Docker Captain. Microsoft MVP. Owner @ rebase
+            media
           </p>
           <div className="ibutton">
             <button
@@ -151,9 +153,14 @@ export default function Home() {
           </div>
         </div>
         <div className="right">
-          <img
+          <Image
             src="/media/pradumna-saraf.png"
             alt="Pradumna Saraf - DevOps and Go Developer"
+            width={500}
+            height={500}
+            priority
+            className="w-full h-auto"
+            style={{ objectFit: 'cover' }}
           />
         </div>
       </div>

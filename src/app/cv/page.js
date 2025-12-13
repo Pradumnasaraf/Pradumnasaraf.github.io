@@ -1,6 +1,6 @@
 'use client';
 import './style.css';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 import {
   FaGithub,
@@ -270,8 +270,10 @@ const CVPage = () => {
             <ul>
               <li>
                 {' '}
-                I was recognized as a Microsoft Most Valuable Professional (MVP) in the Developer Technologies category (Technology Area: DevOps) for my contributions to the developer
-                community from writing blogs, videos, and speaking at events.
+                I was recognized as a Microsoft Most Valuable Professional (MVP)
+                in the Developer Technologies category (Technology Area: DevOps)
+                for my contributions to the developer community from writing
+                blogs, videos, and speaking at events.
               </li>
               <li>{`Creating educational content and resources to help developers adopt modern DevOps practices and Microsoft tooling across CI/CD, cloud, and container workflows.`}</li>
             </ul>
@@ -455,7 +457,8 @@ const CVPage = () => {
                 >
                   Microsoft Most Valuable Professional (MVP)
                 </a>{' '}
-                for outstanding community leadership and technical contributions in the field of DevOps and Open Source.
+                for outstanding community leadership and technical contributions
+                in the field of DevOps and Open Source.
               </li>
               <li>
                 <strong>Docker Captain:</strong> Recognized as a{' '}
@@ -470,8 +473,9 @@ const CVPage = () => {
                 for my contributions to the Docker ecosystem.
               </li>
               <li>
-                <strong>Docker Captain of the Year:</strong> Awarded the title for outstanding
-                contributions and impact within the Docker community.
+                <strong>Docker Captain of the Year:</strong> Awarded the title
+                for outstanding contributions and impact within the Docker
+                community.
               </li>
               <li>
                 <strong>Top Author on dev.to:</strong> Recognised as a top

@@ -1,9 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 import './style.css';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
+import Image from 'next/image';
 
 // Remove export metadata since this is a client component and won't work
 // Metadata is already defined in src/app/timeline/metadata.js
@@ -45,7 +44,12 @@ const TimelinePage = () => {
       <div className="timeline">
         {/* Left Container - Microsoft MVP */}
         <div className="container left-container">
-          <img src="/timeline-logo/microsoft.png" alt="Microsoft MVP" />
+          <Image
+            src="/timeline-logo/microsoft.png"
+            alt="Microsoft MVP"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://mvp.microsoft.com/en-US/MVP/profile/504ebf09-e92f-4620-82d7-67590711df58"
@@ -67,8 +71,10 @@ const TimelinePage = () => {
             <small>November, 2025</small>
             <p>
               {' '}
-              I was recognized as a Microsoft Most Valuable Professional (MVP) in the Developer Technologies category (Technology Area: DevOps) for my contributions to the developer
-              community from writing blogs, videos, and speaking at events.
+              I was recognized as a Microsoft Most Valuable Professional (MVP)
+              in the Developer Technologies category (Technology Area: DevOps)
+              for my contributions to the developer community from writing
+              blogs, videos, and speaking at events.
             </p>
             <span className="left-container-arrow"></span>
           </div>
@@ -76,7 +82,12 @@ const TimelinePage = () => {
 
         {/* Right Container - Docker Captain of the Year */}
         <div className="container right-container">
-          <img src="/timeline-logo/docker.png" alt="Docker" />
+          <Image
+            src="/timeline-logo/docker.png"
+            alt="Docker"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://www.docker.com/captains/pradumna-saraf"
@@ -109,7 +120,12 @@ const TimelinePage = () => {
 
         {/* Left Container */}
         <div className="container left-container">
-          <img src="/timeline-logo/docker.png" alt="Docker" />
+          <Image
+            src="/timeline-logo/docker.png"
+            alt="Docker"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://www.docker.com/blog/from-the-captains-chair-pradumna-saraf/"
@@ -141,7 +157,12 @@ const TimelinePage = () => {
 
         {/* Right Container */}
         <div className="container right-container">
-          <img src="/timeline-logo/kestra.png" alt="Kestra" />
+          <Image
+            src="/timeline-logo/kestra.png"
+            alt="Kestra"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://kestra.io"
@@ -173,7 +194,12 @@ const TimelinePage = () => {
 
         {/* Left Container */}
         <div className="container left-container">
-          <img src="/timeline-logo/cncf.png" alt="CNCF" />
+          <Image
+            src="/timeline-logo/cncf.png"
+            alt="CNCF"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://youtu.be/J8situjchtg?si=eZved6DcEPDZg273"
@@ -368,7 +394,12 @@ const TimelinePage = () => {
           role="listitem"
           aria-label="Published first blog on FreeCodeCamp - November 2024"
         >
-          <img src="/timeline-logo/freecodecamp.jpg" alt="FreeCodeCamp logo" />
+          <Image
+            src="/timeline-logo/freecodecamp.jpg"
+            alt="FreeCodeCamp logo"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://www.freecodecamp.org/news/author/Pradumnasaraf"
@@ -405,7 +436,12 @@ const TimelinePage = () => {
           role="listitem"
           aria-label="Part of Docker Official Docs team - August 2024"
         >
-          <img src="/timeline-logo/docker.png" alt="Docker logo" />
+          <Image
+            src="/timeline-logo/docker.png"
+            alt="Docker logo"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://www.docker.com/captains/pradumna-v-saraf/"
@@ -441,7 +477,12 @@ const TimelinePage = () => {
           role="listitem"
           aria-label="Docker Captain - July 2024"
         >
-          <img src="/timeline-logo/docker.png" alt="Docker logo" />
+          <Image
+            src="/timeline-logo/docker.png"
+            alt="Docker logo"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://www.docker.com/captains/pradumna-v-saraf/"
@@ -472,7 +513,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/pradumnasaraf.jpg" alt="Pradumna Saraf" />
+          <Image
+            src="/timeline-logo/pradumnasaraf.jpg"
+            alt="Pradumna Saraf"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://x.com/pradumna_saraf/status/1777279785594741098"
@@ -504,7 +550,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/devto.png" alt="Dev.to" />
+          <Image
+            src="/timeline-logo/devto.png"
+            alt="Dev.to"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://dev.to/pradumnasaraf"
@@ -535,7 +586,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/devops.png" alt="DevOps" />
+          <Image
+            src="/timeline-logo/devops.png"
+            alt="DevOps"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https:/github.com/Pradumnasaraf/DevOps"
@@ -568,7 +624,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/devto.png" alt="Dev.to" />
+          <Image
+            src="/timeline-logo/devto.png"
+            alt="Dev.to"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://dev.to/pradumnasaraf"
@@ -601,7 +662,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/devto.png" alt="Dev.to" />
+          <Image
+            src="/timeline-logo/devto.png"
+            alt="Dev.to"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://dev.to/pradumnasaraf"
@@ -632,7 +698,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/github.png" alt="GitHub" />
+          <Image
+            src="/timeline-logo/github.png"
+            alt="GitHub"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://github.com/Pradumnasaraf"
@@ -662,7 +733,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/web3conf.png" alt="Web3Conf" />
+          <Image
+            src="/timeline-logo/web3conf.png"
+            alt="Web3Conf"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://youtu.be/VKPV12TpTtI?si=B2fb43rpXumPo4ZL6J9J8w"
@@ -694,7 +770,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/livecycle.png" alt="Livecycle" />
+          <Image
+            src="/timeline-logo/livecycle.png"
+            alt="Livecycle"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://livecycle.io/"
@@ -723,7 +804,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/linkedin.png" alt="LinkedIn" />
+          <Image
+            src="/timeline-logo/linkedin.png"
+            alt="LinkedIn"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://x.com/pradumna_saraf/status/1688376664445612032"
@@ -754,7 +840,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/github.png" alt="GitHub" />
+          <Image
+            src="/timeline-logo/github.png"
+            alt="GitHub"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://opensource.guide/maintaining-balance-for-open-source-maintainers/"
@@ -785,7 +876,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/pradumnasaraf.jpg" alt="Pradumna Saraf" />
+          <Image
+            src="/timeline-logo/pradumnasaraf.jpg"
+            alt="Pradumna Saraf"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://github.com/Pradumnasaraf"
@@ -818,7 +914,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/kubernetes.png" alt="Kubernetes" />
+          <Image
+            src="/timeline-logo/kubernetes.png"
+            alt="Kubernetes"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://github.com/Pradumnasaraf"
@@ -849,7 +950,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/twitter.png" alt="Twitter" />
+          <Image
+            src="/timeline-logo/twitter.png"
+            alt="Twitter"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://twitter.com/pradumna_saraf"
@@ -880,7 +986,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/dollar.png" alt="Illacloud" />
+          <Image
+            src="/timeline-logo/dollar.png"
+            alt="Illacloud"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <h2>First Freelancing Gig</h2>
             <small>Oct, 2022</small>
@@ -896,7 +1007,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/github.png" alt="GitHub" />
+          <Image
+            src="/timeline-logo/github.png"
+            alt="GitHub"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://github.com/sponsors/Pradumnasaraf"
@@ -927,7 +1043,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/postman.png" alt="Postman" />
+          <Image
+            src="/timeline-logo/postman.png"
+            alt="Postman"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://badgr.com/public/assertions/pwl4EICMTQm-YJwDCpKAGQ"
@@ -957,7 +1078,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/github.png" alt="GitHub" />
+          <Image
+            src="/timeline-logo/github.png"
+            alt="GitHub"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://github.com/Pradumnasaraf/open-source-with-pradumna"
@@ -987,7 +1113,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/eddiehub.png" alt="EddieHub" />
+          <Image
+            src="/timeline-logo/eddiehub.png"
+            alt="EddieHub"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://x.com/eddiejaoude/status/1515295717811957761"
@@ -1019,7 +1150,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/twitter.png" alt="Twitter" />
+          <Image
+            src="/timeline-logo/twitter.png"
+            alt="Twitter"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://x.com/pradumna_saraf/status/1520025075139121152"
@@ -1050,7 +1186,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/twitter.png" alt="Twitter" />
+          <Image
+            src="/timeline-logo/twitter.png"
+            alt="Twitter"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://x.com/pradumna_saraf/status/1508363401214717953"
@@ -1084,7 +1225,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/dailydev.png" alt="Daily.dev" />
+          <Image
+            src="/timeline-logo/dailydev.png"
+            alt="Daily.dev"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://github.com/dailydotdev/hackathon-participants-March-2022"
@@ -1116,7 +1262,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/postman.png" alt="Postman" />
+          <Image
+            src="/timeline-logo/postman.png"
+            alt="Postman"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://blog.postman.com/highlights-of-api-fest-2022/"
@@ -1148,7 +1299,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/opensource.png" alt="Postman" />
+          <Image
+            src="/timeline-logo/opensource.png"
+            alt="Postman"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://x.com/pradumna_saraf/status/1483392694361952259"
@@ -1177,7 +1333,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/eddiehub.png" alt="EddieHub" />
+          <Image
+            src="/timeline-logo/eddiehub.png"
+            alt="EddieHub"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://x.com/pradumna_saraf/status/1469933850566422531"
@@ -1207,7 +1368,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/eddiehub.png" alt="EddieHub" />
+          <Image
+            src="/timeline-logo/eddiehub.png"
+            alt="EddieHub"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://github.com/EddieHubCommunity"
@@ -1238,7 +1404,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container right-container">
-          <img src="/timeline-logo/github.png" alt="GitHub" />
+          <Image
+            src="/timeline-logo/github.png"
+            alt="GitHub"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://github.com/Pradumnasaraf"
@@ -1264,7 +1435,12 @@ const TimelinePage = () => {
         </div>
 
         <div className="container left-container">
-          <img src="/timeline-logo/shareit.png" alt="ShareIt" />
+          <Image
+            src="/timeline-logo/shareit.png"
+            alt="ShareIt"
+            width={40}
+            height={40}
+          />
           <div className="text-box">
             <Link
               href="https://drive.google.com/file/d/1zc31p85KIFo39Yr-ILD3KnBA95ITAL0Y/view?usp=drive_link"

@@ -1,19 +1,29 @@
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import { FlatCompat } from '@eslint/eslintrc';
+import globals from 'globals';
+import js from '@eslint/js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname, // Base directory for resolving extends
-});
-
-const eslintConfig = [
-  ...compat.extends('next/core-web-vitals'), // Use the Next.js recommended ESLint rules
+export default [
   {
-    ignores: ['node_modules', 'dist'], // Ensure these directories are ignored
+    ignores: ['node_modules/**', '.next/**', 'dist/**', 'build/**'],
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.js', '**/*.jsx'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'no-console': 'off',
+    },
   },
 ];
-
-export default eslintConfig;
