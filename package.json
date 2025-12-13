@@ -6,8 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write .",
-    "lint": "next lint --dir src/app --dir src/components",
+    "format": "prettier --write",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "prepare": "husky",
     "pre-commit": "lint-staged"
   },
@@ -28,10 +29,10 @@
   ],
   "lint-staged": {
     "*.{css,scss,html}": [
-      "npm run format"
+      "prettier --write"
     ],
     "*.{js,jsx,ts,tsx}": [
-      "npm run lint"
+      "prettier --write"
     ]
   },
   "dependencies": {

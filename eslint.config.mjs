@@ -13,6 +13,9 @@ const eslintConfig = [
   ...compat.extends('next/core-web-vitals'), // Use the Next.js recommended ESLint rules
   {
     ignores: ['node_modules', 'dist'], // Ensure these directories are ignored
+    rules: {
+      '@next/next/no-img-element': 'off', // Allow img tags (we use Next.js Image component)
+    },
   },
 ];
 

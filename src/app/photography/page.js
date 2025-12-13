@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Masonry from 'react-masonry-css';
 import { createPortal } from 'react-dom';
 import './style.css';
@@ -368,25 +368,37 @@ const ImageItem = ({ src, alt, onClick }) => {
   }, []);
 
   return !hasError ? (
-    <div className="relative group">
+    <div className="relative group w-full" style={{ marginBottom: '0.75rem' }}>
       <div
         id={`image-${src}`}
-        className={`w-full aspect-auto overflow-hidden rounded-lg shadow-md transition-all duration-300 ${
+        className={`w-full overflow-hidden rounded-lg shadow-md transition-all duration-300 ${
           isLoading ? 'animate-pulse bg-gray-200' : ''
         }`}
+        style={{ position: 'relative', width: '100%' }}
       >
         {isVisible && (
-          <img
-            src={src}
-            alt={alt}
-            className={`w-full h-auto object-cover cursor-pointer transition-all duration-500 transform group-hover:scale-105 grayscale-image ${
-              isLoading ? 'opacity-0' : 'opacity-100'
-            }`}
-            onClick={onClick}
-            onError={() => setHasError(true)}
-            onLoad={() => setIsLoading(false)}
-            loading="lazy"
-          />
+          <div style={{ position: 'relative', width: '100%' }}>
+            <Image
+              src={src}
+              alt={alt}
+              width={800}
+              height={1200}
+              unoptimized
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              className={`w-full h-auto cursor-pointer transition-all duration-500 transform group-hover:scale-105 grayscale-image ${
+                isLoading ? 'opacity-0' : 'opacity-100'
+              }`}
+              onClick={onClick}
+              onError={() => setHasError(true)}
+              onLoad={() => setIsLoading(false)}
+              style={{
+                display: 'block',
+                width: '100%',
+                height: 'auto',
+                maxWidth: '100%',
+              }}
+            />
+          </div>
         )}
       </div>
       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
@@ -481,10 +493,14 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
         </button>
         <span className="modal-label modal-label-right">Previous</span>
       </div>
-      <img
+      <Image
         src={imageSrc}
         alt="Full Screen"
+        width={1920}
+        height={1080}
+        unoptimized
         className="max-w-[90vw] max-h-[90vh] object-contain"
+        style={{ objectFit: 'contain' }}
       />
       {/* Next Button */}
       <div
