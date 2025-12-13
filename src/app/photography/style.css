@@ -81,11 +81,6 @@
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Modal Styles */
-.modal-backdrop {
-  backdrop-filter: blur(5px);
-}
-
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -104,54 +99,11 @@
   background: #555;
 }
 
-/* Image Loading Placeholder */
-.image-placeholder {
-  background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
-  background-size: 200% 100%;
-  animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
-
-/* Add to globals.css */
-@layer components {
-  .masonry-grid-item {
-    transition: transform 0.3s ease;
-  }
-  .masonry-grid-item:hover {
-    transform: scale(1.05);
-  }
-}
-
-/* In your styles/globals.css or any relevant CSS file */
-body {
-  background-color: #ffffff;
-  color: #333;
-  font-family: Arial, sans-serif;
-}
-
-.page-container {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /* In your styles/globals.css or any relevant CSS file */
 .my-masonry-grid img {
   transition:
     filter 0.3s ease,
     transform 0.3s ease;
-}
-
-.my-masonry-grid img:hover {
 }
 
 .back-button {
