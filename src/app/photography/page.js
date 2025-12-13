@@ -538,12 +538,68 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
   );
 };
 
+// Welcome Pop-up Component
+const WelcomePopup = ({ isOpen, onClose }) => {
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (isOpen && e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+    return () => document.removeEventListener('keydown', handleKeyPress);
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  return createPortal(
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 popup-backdrop">
+      <div className="welcome-popup">
+        <button
+          onClick={onClose}
+          className="popup-close-button"
+          aria-label="Close"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <div className="popup-content">
+          <h2 className="popup-title">Welcome to My Photography Gallery!</h2>
+          <p className="popup-message">
+            Hover over any image to see it in full color! The images start in
+            grayscale and reveal their vibrant colors when you interact with
+            them.
+          </p>
+          <button onClick={onClose} className="popup-ok-button">
+            Got it!
+          </button>
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
+};
+
 // Main Home Component
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageSrc, setModalImageSrc] = useState('');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [showWelcomePopup, setShowWelcomePopup] = useState(false);
 
   // Define breakpoint columns
   const breakpointColumnsObj = {
@@ -580,6 +636,9 @@ export default function Home() {
 
   useEffect(() => {
     document.title = 'Pradumna Saraf | Photography'; // Set the document title
+
+    // Show welcome popup when page loads
+    setShowWelcomePopup(true);
 
     // Set a reasonable timeout to automatically clear loading state
     const timeoutId = setTimeout(() => {
@@ -666,6 +725,11 @@ export default function Home() {
         onClose={closeModal}
         onPrev={showPrevImage}
         onNext={showNextImage}
+      />
+
+      <WelcomePopup
+        isOpen={showWelcomePopup}
+        onClose={() => setShowWelcomePopup(false)}
       />
     </div>
   );

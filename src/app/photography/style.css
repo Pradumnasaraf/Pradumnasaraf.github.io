@@ -391,3 +391,171 @@ body {
     padding: 2px 5px;
   }
 }
+
+/* Welcome Popup Styles */
+.popup-backdrop {
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.welcome-popup {
+  background: white;
+  border-radius: 16px;
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.popup-close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.popup-close-button:hover {
+  background: #e5e7eb;
+  transform: scale(1.1);
+}
+
+.popup-close-button svg {
+  color: #333;
+  width: 16px;
+  height: 16px;
+}
+
+.popup-content {
+  padding: 40px 32px 32px;
+  text-align: center;
+}
+
+.popup-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.popup-message {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.popup-ok-button {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.popup-ok-button:hover {
+  background: #333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.popup-ok-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Popup Styles */
+@media (max-width: 768px) {
+  .welcome-popup {
+    max-width: 90%;
+    width: 90%;
+  }
+
+  .popup-content {
+    padding: 32px 24px 24px;
+  }
+
+  .popup-title {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
+
+  .popup-message {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .popup-ok-button {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  .popup-close-button {
+    top: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .popup-close-button svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-content {
+    padding: 28px 20px 20px;
+  }
+
+  .popup-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .popup-message {
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+
+  .popup-ok-button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
