@@ -1,7 +1,6 @@
 'use client';
 import './style.css';
-import React, { useEffect } from 'react';
-import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 

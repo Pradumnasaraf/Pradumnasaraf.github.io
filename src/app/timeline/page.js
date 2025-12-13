@@ -1,9 +1,8 @@
 'use client';
 import './style.css';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Head from 'next/head';
 
 // Remove export metadata since this is a client component and won't work
 // Metadata is already defined in src/app/timeline/metadata.js

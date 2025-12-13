@@ -1,5 +1,3 @@
-import { sitemapPages } from '../sitemap/data.js';
-
 export async function GET() {
   const baseUrl = 'https://pradumnasaraf.dev';
   const currentDate = new Date().toISOString().split('T')[0];

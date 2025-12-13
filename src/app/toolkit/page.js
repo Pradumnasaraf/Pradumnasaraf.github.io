@@ -1,6 +1,6 @@
 'use client';
 import './style.css';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 
 const ToolKitPage = () => {

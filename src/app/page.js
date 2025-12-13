@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-css-tags, @next/next/no-page-custom-font */
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,6 +10,7 @@ import KonamiGame from '@/components/KonamiGame';
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showGame, setShowGame] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [keySequence, setKeySequence] = useState([]);
 
   const toggleMenu = () => {
