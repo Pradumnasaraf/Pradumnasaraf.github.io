@@ -56,11 +56,12 @@ const ToolKitPage = () => {
 
             <div className="toolkit-item">
               <h3>Keyboard</h3>
+              <p>Logitech Mx Keys S</p>
               <p>Logitech K345</p>
             </div>
             <div className="toolkit-item">
               <h3>Mouse</h3>
-              <p>Logitech M275</p>
+              <p>Logitech Master 4</p>
               <p>Logitech M331</p>
             </div>
             <div className="toolkit-item">
