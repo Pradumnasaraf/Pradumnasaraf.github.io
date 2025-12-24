@@ -42,8 +42,45 @@ const TimelinePage = () => {
       </Link>
       <h1 className="timeline-title">Timeline</h1>
       <div className="timeline">
-        {/* Left Container - Microsoft MVP */}
-        <div className="container left-container">
+        {/* Left Container - Lens K8s Champion (Mirantis) */}
+        <div className="container right-container">
+          <Image
+            src="/timeline-logo/mirantis.png"
+            alt="Lens K8s Champion (Mirantis)"
+            width={40}
+            height={40}
+          />
+          <div className="text-box">
+            <Link
+              href="https://k8slens.dev"
+              className="source-button"
+              aria-label="Lens K8s Champion (Mirantis)"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17l10-10M17 17V7h-7"></path>
+              </svg>
+            </Link>
+            <h2>Lens K8s Champion (Mirantis)</h2>
+            <small>Dec, 2025</small>
+            <p>
+              Recognized as a Lens K8s Champion for actively supporting the
+              Kubernetes and cloud-native community, sharing feedback with the
+              Lens team, and creating practical content around Kubernetes
+              tooling and developer workflows.
+            </p>
+            <span className="right-container-arrow"></span>
+          </div>
+        </div>
+
+        {/* Right Container - Microsoft MVP */}
+        <div className="container lens-container">
           <Image
             src="/timeline-logo/microsoft.png"
             alt="Microsoft MVP"
