@@ -68,7 +68,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Lens K8s Champion (Mirantis)</h2>
-            <small>Dec, 2025</small>
+            <small>December, 2025</small>
             <p>
               Recognized as a Lens K8s Champion for actively supporting the
               Kubernetes and cloud-native community and creating practical
@@ -79,7 +79,7 @@ const TimelinePage = () => {
         </div>
 
         {/* Right Container - Microsoft MVP */}
-        <div className="container lens-container">
+        <div className="container left-container">
           <Image
             src="/timeline-logo/microsoft.png"
             alt="Microsoft MVP"
@@ -411,7 +411,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Delivered a talk at Linux Foundation event</h2>
-            <small>Dec, 2024</small>
+            <small>December, 2024</small>
             <p>
               {' '}
               I delivered a talk at the SOSS Community Day, India (KubeCon
@@ -617,7 +617,7 @@ const TimelinePage = () => {
               and helping others to get started with open source and devops. At
               this time my total views were around 150K.
             </p>
-            <span className="left-container-arrow"></span>
+            <span className="right-container-arrow"></span>
           </div>
         </div>
 
@@ -646,7 +646,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>DevOps repo crossed 2.5K Stars</h2>
-            <small>Feb, 2024</small>
+            <small>February, 2024</small>
             <p>
               {' '}
               DevOps repository crossed 2.5K stars on GitHub. Every week
@@ -655,7 +655,7 @@ const TimelinePage = () => {
               from companies like Google, Microsoft, Amazon and more. Even some
               are using it as a reference in their interviews.
             </p>
-            <span className="right-container-arrow"></span>
+            <span className="left-container-arrow"></span>
           </div>
         </div>
 
@@ -684,7 +684,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>100K Views on dev.to My Articles</h2>
-            <small>Jan, 2024</small>
+            <small>January, 2024</small>
             <p>
               {' '}
               I never though people would be interested in reading my articles.
@@ -722,7 +722,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Top Author and Mod 2023 at Dev.to</h2>
-            <small>Dec, 2023</small>
+            <small>December, 2023</small>
             <p>
               {' '}
               I was recognized as the top author and moderator at Dev.to for the
@@ -758,7 +758,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>1000 GitHub Followers</h2>
-            <small>Sep, 2023</small>
+            <small>September, 2023</small>
             <p>
               {' '}
               I reached 1000 followers on GitHub. I was actively contributing to
@@ -793,7 +793,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Delivered my first conference talk</h2>
-            <small>Aug, 2023</small>
+            <small>August, 2023</small>
             <p>
               {' '}
               I delivered my first conference talk at Web3Conf. I talked about
@@ -830,7 +830,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Dev Advocate at Livecycle</h2>
-            <small>Aug, 2023</small>
+            <small>August, 2023</small>
             <p>
               {' '}
               {`I joined Livecycle as a Dev Advocate. I was deeply involved in our open source offering "Preevy" and helped developers to get started with it by creating content and delivering talks.`}
@@ -864,7 +864,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>10K Followers on LinkedIn</h2>
-            <small>Aug, 2023</small>
+            <small>August, 2023</small>
             <p>
               {' '}
               I reached 10K followers on LinkedIn. Started as diversifying my
@@ -974,7 +974,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Kubernetes and SIGs Org Member</h2>
-            <small>Dec, 2022</small>
+            <small>December, 2022</small>
             <p>
               {' '}
               I became a member of Kubernetes and Kubernetes SIGs GitHub Org. I
@@ -1010,7 +1010,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>10K Followers on Twitter</h2>
-            <small>Oct, 2022</small>
+            <small>October, 2022</small>
             <p>
               {' '}
               I reached 10K followers on Twitter. I was regularly posting about
@@ -1030,7 +1030,7 @@ const TimelinePage = () => {
           />
           <div className="text-box">
             <h2>First Freelancing Gig</h2>
-            <small>Oct, 2022</small>
+            <small>October, 2022</small>
             <p>
               {' '}
               I got my first freelancing gig from a open source cloud company.
@@ -1322,7 +1322,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Won Postman Hackathon</h2>
-            <small>Jan, 2022</small>
+            <small>January, 2022</small>
             <p>
               {' '}
               Postman Hosted a hackathon called API Fest 2022. I with a team of
@@ -1359,7 +1359,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Delivered my first talk</h2>
-            <small>Jan, 2022</small>
+            <small>January, 2022</small>
             <p>
               {' '}
               {`First time I got invite to deliver a talk. It was on open source and how to get started with it. It was virtually and the fact that I delivered the talk via my $100 phone because laptop mic and camera was broken and battery don't work. Check the link for the phone screenshot I posted on Twitter.`}
@@ -1393,7 +1393,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Got mentioned in a Newsletter</h2>
-            <small>Dec, 2021</small>
+            <small>December, 2021</small>
             <p>
               First time I got a mention in a Newsletter. It was from EddieHub.
               I was mentioned for congratulating me becoming a Postman Student
@@ -1428,7 +1428,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Open Source Maintainer</h2>
-            <small>Aug, 2021</small>
+            <small>August, 2021</small>
             <p>
               {' '}
               This was my first experience as a maintainer. I became a
@@ -1495,7 +1495,7 @@ const TimelinePage = () => {
               </svg>
             </Link>
             <h2>Featured on an Article with ShareIT COO</h2>
-            <small>Sep, 2018</small>
+            <small>September, 2018</small>
             <p>
               {`
                     One of China's leading publishers of tech news, Tiger sniffing group wrote an article on ShareIT and I was featured in that with the COO (Json Wang) of ShareIt. The article was about how ShareIT is helping people to share files without internet. The main article was published in China in Mandarin language.`}

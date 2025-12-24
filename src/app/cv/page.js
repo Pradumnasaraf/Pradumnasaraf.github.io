@@ -137,7 +137,7 @@ const CVPage = () => {
           <div className="job">
             <div className="job-header">
               <h3>Quality Assurance Engineer, Kestra</h3>
-              <span className="date">Sep 2025 - Present</span>
+              <span className="date">September 2025 - Present</span>
             </div>
             <p className="location">Paris, Île-de-France, France · Remote</p>
             <ul>
@@ -150,7 +150,7 @@ const CVPage = () => {
           <div className="job">
             <div className="job-header">
               <h3>DevRel as a Service, Freelance</h3>
-              <span className="date">Feb 2024 - Present</span>
+              <span className="date">February 2024 - Present</span>
             </div>
             <p className="location">Worldwide · Remote</p>
             <ul>
@@ -164,7 +164,7 @@ const CVPage = () => {
           <div className="job">
             <div className="job-header">
               <h3>Developer Advocate, Livecycle</h3>
-              <span className="date">Aug 2023 - April 2024</span>
+              <span className="date">August 2023 - April 2024</span>
             </div>
             <p className="location">Tel Aviv, Israel · Remote</p>
             <ul>
@@ -190,7 +190,7 @@ const CVPage = () => {
           <div className="job">
             <div className="job-header">
               <h3>Open Source DevRel, Vruksh Ecosystem Foundation</h3>
-              <span className="date">Dec 2021 - Jul 2022</span>
+              <span className="date">December 2021 - July 2022</span>
             </div>
             <p className="location">India · Remote</p>
             <ul>
@@ -265,7 +265,7 @@ const CVPage = () => {
           <div className="job">
             <div className="job-header">
               <h3>Microsoft MVP (DevOps)</h3>
-              <span className="date">Nov 2025 - Present</span>
+              <span className="date">November 2025 - Present</span>
             </div>
             <ul>
               <li>
@@ -282,7 +282,7 @@ const CVPage = () => {
           <div className="job">
             <div className="job-header">
               <h3>Lens K8s Champion (Mirantis)</h3>
-              <span className="date">Dec 2025 - Present</span>
+              <span className="date">December 2025 - Present</span>
             </div>
             <ul>
               <li>
