@@ -80,6 +80,47 @@ const TimelinePage = () => {
           </div>
         </div>
 
+        {/* Right Container - Lens K8s Champion */}
+        <div className="container right-container">
+          <Image
+            src="/timeline-logo/mirantis.png"
+            alt="Mirantis"
+            width={40}
+            height={40}
+          />
+          <div className="text-box">
+            <Link
+              href="https://k8slens.dev"
+              className="source-button"
+              aria-label="Lens K8s Champion"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17l10-10M17 17V7h-7"></path>
+              </svg>
+            </Link>
+            <h2>Lens K8s Champion</h2>
+            <small>December, 2025</small>
+            <p>
+              {' '}
+              I was recognized as a Lens K8s Champion for actively contributing
+              to the Kubernetes and cloud-native community. I collaborate with
+              the Lens team by providing practical product feedback and testing
+              early features. I create and share educational content around
+              Kubernetes and developer tooling, and support the community
+              through discussions, best practices, and hands-on guidance on
+              Kubernetes using Lens.
+            </p>
+            <span className="right-container-arrow"></span>
+          </div>
+        </div>
+
         {/* Right Container - Docker Captain of the Year */}
         <div className="container right-container">
           <Image
