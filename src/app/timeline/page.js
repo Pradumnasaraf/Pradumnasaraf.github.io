@@ -71,9 +71,8 @@ const TimelinePage = () => {
             <small>Dec, 2025</small>
             <p>
               Recognized as a Lens K8s Champion for actively supporting the
-              Kubernetes and cloud-native community, sharing feedback with the
-              Lens team, and creating practical content around Kubernetes
-              tooling and developer workflows.
+              Kubernetes and cloud-native community and creating practical
+              content.
             </p>
             <span className="right-container-arrow"></span>
           </div>
