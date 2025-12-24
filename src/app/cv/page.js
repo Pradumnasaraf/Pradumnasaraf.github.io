@@ -278,6 +278,19 @@ const CVPage = () => {
               <li>{`Creating educational content and resources to help developers adopt modern DevOps practices and Microsoft tooling across CI/CD, cloud, and container workflows.`}</li>
             </ul>
           </div>
+
+          <div className="job">
+            <div className="job-header">
+              <h3>Lens K8s Champion (Mirantis)</h3>
+              <span className="date">Dec 2025 - Present</span>
+            </div>
+            <ul>
+              <li>
+                {`Recognized as a Lens K8s Champion for actively supporting the Kubernetes and cloud-native community and creating practical content.`}
+              </li>
+              <li>{`Creating and sharing educational content around Kubernetes and developer tooling, and supporting the community through discussions, best practices, and hands-on guidance.`}</li>
+            </ul>
+          </div>
         </section>
 
         <section className="section">
@@ -476,6 +489,20 @@ const CVPage = () => {
                 <strong>Docker Captain of the Year:</strong> Awarded the title
                 for outstanding contributions and impact within the Docker
                 community.
+              </li>
+              <li>
+                <strong>Lens K8s Champion (Mirantis):</strong> Recognized as a{' '}
+                <a
+                  href="https://k8slens.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  Lens K8s Champion
+                </a>{' '}
+                for actively supporting the Kubernetes and cloud-native
+                community, sharing feedback, and creating practical content
+                around Kubernetes tooling and developer workflows.
               </li>
               <li>
                 <strong>Top Author on dev.to:</strong> Recognised as a top
