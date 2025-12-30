@@ -47,6 +47,7 @@ const ToolKitPage = () => {
               <p>MacBook Pro 14 M1 Pro, 8C CPU 14C GPU</p>
               <p>MacBook Pro 14 M2 Pro, 10C CPU 16C GPU</p>
               <p>MacBook Pro 14 M4 Pro, 14C CPU 20C GPU</p>
+              <p>MacBook Air 13 i5 2C CPU - mid 2013</p>
             </div>
 
             <div className="toolkit-item">
