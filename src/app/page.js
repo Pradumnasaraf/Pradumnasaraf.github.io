@@ -101,9 +101,6 @@ export default function Home() {
             <Link href="/timeline">Timeline</Link>
           </span>
           <span className="page-item">
-            <Link href="/cv">CV</Link>
-          </span>
-          <span className="page-item">
             <Link href="https://rebasemedia.com">Services</Link>
           </span>
           <span className="page-item">
