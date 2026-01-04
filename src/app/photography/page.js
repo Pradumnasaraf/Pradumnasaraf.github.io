@@ -554,7 +554,10 @@ const WelcomePopup = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return createPortal(
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 popup-backdrop">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 popup-backdrop"
+      style={{ paddingLeft: '16px', paddingRight: '16px' }}
+    >
       <div className="welcome-popup">
         <button
           onClick={onClose}
@@ -577,7 +580,7 @@ const WelcomePopup = ({ isOpen, onClose }) => {
           </svg>
         </button>
         <div className="popup-content">
-          <h2 className="popup-title">Welcome to my Photography page!</h2>
+          <h2 className="popup-title">Welcome to Photography page!</h2>
           <p className="popup-message">
             Hover over any image to see it in full color! The images start in
             grayscale and reveal their vibrant colors when you interact with

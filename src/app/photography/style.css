@@ -410,7 +410,7 @@
 }
 
 .popup-content {
-  padding: 40px 32px 32px;
+  padding: 50px 32px 32px; /* Increased top padding to account for close button */
   text-align: center;
 }
 
@@ -459,7 +459,7 @@
   }
 
   .popup-content {
-    padding: 32px 24px 24px;
+    padding: 40px 24px 24px; /* Increased top padding for mobile */
   }
 
   .popup-title {
@@ -492,7 +492,7 @@
 
 @media (max-width: 480px) {
   .popup-content {
-    padding: 28px 20px 20px;
+    padding: 36px 20px 20px; /* Increased top padding for small mobile */
   }
 
   .popup-title {
