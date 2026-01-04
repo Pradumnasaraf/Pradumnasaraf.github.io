@@ -577,7 +577,7 @@ const WelcomePopup = ({ isOpen, onClose }) => {
           </svg>
         </button>
         <div className="popup-content">
-          <h2 className="popup-title">Welcome to My Photography Gallery!</h2>
+          <h2 className="popup-title">Welcome to my Photography page!</h2>
           <p className="popup-message">
             Hover over any image to see it in full color! The images start in
             grayscale and reveal their vibrant colors when you interact with
