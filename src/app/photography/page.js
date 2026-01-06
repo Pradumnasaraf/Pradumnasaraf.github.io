@@ -5,7 +5,6 @@ import Masonry from 'react-masonry-css';
 import { createPortal } from 'react-dom';
 import './style.css';
 import Link from 'next/link';
-import imagesLoaded from 'imagesloaded';
 
 const images = [
   {
@@ -329,13 +328,8 @@ const ImageItem = ({ src, alt, onClick }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const grid = document.querySelector('.my-masonry-grid');
-    imagesLoaded(grid, () => {
-      setIsLoading(false);
-    });
-  }, []);
-
-  useEffect(() => {
+    // Use a more lenient IntersectionObserver to prevent scroll blocking
+    // Safari-specific: Delay observer setup to prevent blocking initial render
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -343,68 +337,80 @@ const ImageItem = ({ src, alt, onClick }) => {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.01, // Lower threshold for earlier loading
+        rootMargin: '50px', // Start loading images before they're visible
+      }
     );
 
     const currentElement = document.getElementById(`image-${src}`);
     if (currentElement) {
-      observer.observe(currentElement);
+      // Safari-specific: Use requestAnimationFrame to prevent blocking scroll
+      // This ensures the observer setup doesn't interfere with Safari's scroll handling
+      let timeoutId;
+      const rafId = requestAnimationFrame(() => {
+        timeoutId = setTimeout(() => {
+          const element = document.getElementById(`image-${src}`);
+          if (element) {
+            observer.observe(element);
+          }
+        }, 0);
+      });
+
+      return () => {
+        cancelAnimationFrame(rafId);
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
+        if (currentElement) {
+          observer.unobserve(currentElement);
+        }
+      };
     }
-
-    return () => {
-      if (currentElement) {
-        observer.unobserve(currentElement);
-      }
-    };
   }, [src]);
-
-  // Ensure images are loaded before setting loading to false
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsLoading(false);
-    }, 8000); // 8 seconds maximum loading time
-
-    return () => clearTimeout(timeoutId);
-  }, []);
 
   return !hasError ? (
     <div className="relative group w-full" style={{ marginBottom: '0.75rem' }}>
       <div
         id={`image-${src}`}
-        className={`w-full overflow-hidden rounded-lg shadow-md transition-all duration-300 ${
+        className={`w-full overflow-hidden rounded-lg transition-all duration-300 image-container ${
           isLoading ? 'animate-pulse bg-gray-200' : ''
         }`}
-        style={{ position: 'relative', width: '100%' }}
       >
         {isVisible && (
-          <div style={{ position: 'relative', width: '100%' }}>
-            <Image
-              src={src}
-              alt={alt}
-              width={800}
-              height={1200}
-              unoptimized
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              className={`w-full h-auto cursor-pointer transition-all duration-500 transform group-hover:scale-105 grayscale-image ${
-                isLoading ? 'opacity-0' : 'opacity-100'
-              }`}
-              onClick={onClick}
-              onError={() => setHasError(true)}
-              onLoad={() => setIsLoading(false)}
-              style={{
-                display: 'block',
-                width: '100%',
-                height: 'auto',
-                maxWidth: '100%',
-              }}
-            />
-          </div>
+          <Image
+            src={src}
+            alt={alt}
+            width={800}
+            height={1200}
+            unoptimized
+            loading="lazy"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className={`w-full h-auto cursor-pointer transition-all duration-500 transform group-hover:scale-105 grayscale-image rounded-lg ${
+              isLoading ? 'opacity-0' : 'opacity-100'
+            }`}
+            onClick={onClick}
+            onError={() => setHasError(true)}
+            onLoad={() => {
+              setIsLoading(false);
+              // Safari-specific: Force layout recalculation after image loads
+              requestAnimationFrame(() => {
+                const container = document.querySelector(
+                  '.photography-page-container'
+                );
+                if (container) {
+                  // Trigger a reflow to ensure scroll works
+                  void container.offsetHeight;
+                }
+              });
+            }}
+          />
         )}
       </div>
-      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center rounded-lg pointer-events-none">
         <button
           onClick={onClick}
-          className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white text-black px-4 py-2 rounded-full font-medium shadow-lg hover:bg-gray-100"
+          className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white text-black px-4 py-2 rounded-full font-medium shadow-lg hover:bg-gray-100 pointer-events-auto"
         >
           View Photo
         </button>
@@ -681,7 +687,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen p-4 md:p-8 mx-4 md:mx-16">
+    <div className="min-h-screen p-4 md:p-8 mx-4 md:mx-16 photography-page-container">
       <Link href="/" className="back-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
