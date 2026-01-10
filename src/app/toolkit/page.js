@@ -47,7 +47,7 @@ const ToolKitPage = () => {
               <p>MacBook Pro 14 M1 Pro, 8C CPU 14C GPU</p>
               <p>MacBook Pro 14 M2 Pro, 10C CPU 16C GPU</p>
               <p>MacBook Pro 14 M4 Pro, 14C CPU 20C GPU</p>
-              <p>MacBook Air 13 i5 2C CPU - mid 2013</p>
+              <p>MacBook Air 13 i5 2C CPU - Mid 2013</p>
             </div>
 
             <div className="toolkit-item">
@@ -57,12 +57,12 @@ const ToolKitPage = () => {
 
             <div className="toolkit-item">
               <h3>Keyboard</h3>
-              <p>Logitech Mx Keys S</p>
+              <p>Logitech MX Keys S</p>
               <p>Logitech K345</p>
             </div>
             <div className="toolkit-item">
               <h3>Mouse</h3>
-              <p>Logitech Master 4</p>
+              <p>Logitech MXMaster 4</p>
               <p>Logitech M331</p>
             </div>
             <div className="toolkit-item">
