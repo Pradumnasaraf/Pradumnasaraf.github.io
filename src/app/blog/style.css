@@ -503,14 +503,17 @@
   border-radius: 6px;
   color: #e0e0e0;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   transition: all 0.2s ease;
   z-index: 10;
-  width: 32px;
-  height: 32px;
+  min-height: 32px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: inherit;
 }
 
 .code-copy-button:hover {
@@ -529,11 +532,23 @@
   color: #fff;
 }
 
-.code-copy-button svg {
+.code-copy-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.code-copy-icon svg {
   width: 16px;
   height: 16px;
   stroke: currentColor;
   fill: none;
+}
+
+.code-copy-text {
+  white-space: nowrap;
+  line-height: 1;
 }
 
 /* Syntax Highlighting Styles */

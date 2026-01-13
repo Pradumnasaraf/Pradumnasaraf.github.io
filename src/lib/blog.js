@@ -86,10 +86,16 @@ export async function getPostBySlug(slug) {
   const readingTime = Math.max(1, Math.ceil(wordCount / wordsPerMinute)); // Minimum 1 minute
 
   // Use remark to convert markdown to HTML, then rehype for syntax highlighting
+  // Configure rehype-highlight to support more languages including dockerfile
+  // rehype-highlight uses highlight.js which supports dockerfile by default
   const processedContent = await remark()
-    .use(remarkRehype)
-    .use(rehypeHighlight)
-    .use(rehypeStringify)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeHighlight, {
+      detect: true, // Auto-detect language
+      ignoreMissing: true, // Don't throw errors for unknown languages
+      subset: false, // Include all languages (not just a subset)
+    })
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content);
   const contentHtml = processedContent.toString();
 
