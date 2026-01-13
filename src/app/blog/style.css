@@ -225,7 +225,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #666;
   flex-wrap: wrap;
   font-weight: 300;
@@ -272,7 +272,7 @@
 .blog-post-excerpt {
   color: #666;
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: 1rem;
   flex: 1;
   font-weight: 300;
   letter-spacing: -0.01em;
@@ -553,9 +553,9 @@
   overflow-x: auto;
   overflow-y: hidden;
   margin-bottom: 1.5rem;
-  line-height: 1.4;
+  line-height: 1.5;
   border: 1px solid #333;
-  font-size: 0.85rem;
+  font-size: 1rem;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: #444 #1a1a1a;
@@ -566,7 +566,7 @@
   padding: 0;
   border: none;
   color: inherit;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-family: 'Courier New', monospace;
   font-weight: 400;
 }
@@ -578,8 +578,9 @@
 
 .code-copy-button {
   position: absolute;
-  top: 0.75rem;
+  top: 50%;
   right: 0.75rem;
+  transform: translateY(-50%);
   background: #2d2d2d;
   border: 1px solid #444;
   border-radius: 6px;
@@ -605,7 +606,7 @@
 }
 
 .code-copy-button:active {
-  transform: scale(0.95);
+  transform: translateY(-50%) scale(0.95);
 }
 
 .code-copy-button.copied {
@@ -638,21 +639,21 @@
   display: block;
   overflow-x: auto;
   padding: 0;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
   font-family: 'Courier New', monospace !important;
 }
 
 .blog-post-content code.hljs {
   padding: 0;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
 }
 
 .blog-post-content .hljs {
   background: #1a1a1a;
   color: #e0e0e0;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
 }
 
@@ -660,7 +661,7 @@
 .blog-post-content .hljs-quote {
   color: #6a9955;
   font-style: italic;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
 }
 
@@ -670,7 +671,7 @@
 .blog-post-content .hljs-name,
 .blog-post-content .hljs-tag {
   color: #569cd6;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
 }
 
@@ -684,7 +685,7 @@
 .blog-post-content .hljs-type,
 .blog-post-content .hljs-addition {
   color: #ce9178;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
 }
 
@@ -694,19 +695,19 @@
 .blog-post-content .hljs-meta,
 .blog-post-content .hljs-subst {
   color: #dcdcaa;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-doctag {
   color: #808080;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-attr {
   color: #9cdcfe;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
 }
 
@@ -714,19 +715,19 @@
 .blog-post-content .hljs-bullet,
 .blog-post-content .hljs-link {
   color: #569cd6;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-emphasis {
   font-style: italic;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-strong {
   font-weight: 400 !important;
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
 }
 
 .blog-post-content blockquote {
@@ -945,13 +946,13 @@
 
   .blog-post-content pre {
     padding: 0.875rem;
-    font-size: 0.8rem;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    line-height: 1.5;
     overflow-x: auto;
   }
 
   .blog-post-content pre code {
-    font-size: 0.8rem !important;
+    font-size: 0.95rem !important;
     font-weight: 400 !important;
   }
 
@@ -1147,14 +1148,14 @@
 
   .blog-post-content pre {
     padding: 0.75rem;
-    font-size: 0.75rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: 1.5;
     border-radius: 6px;
     margin-bottom: 1.25rem;
   }
 
   .blog-post-content pre code {
-    font-size: 0.75rem !important;
+    font-size: 0.9rem !important;
     font-weight: 400 !important;
   }
 

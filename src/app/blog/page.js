@@ -72,6 +72,11 @@ export default function BlogPage() {
                       {format(new Date(post.date), 'MMMM dd, yyyy')}
                     </time>
                   )}
+                  {post.readingTime && (
+                    <span className="blog-post-reading-time">
+                      {post.readingTime} min read
+                    </span>
+                  )}
                 </div>
                 <Link href={`/blog/${post.slug}`} className="blog-post-link">
                   <h2 className="blog-post-title">{post.title}</h2>

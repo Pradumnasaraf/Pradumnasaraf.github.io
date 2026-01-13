@@ -70,10 +70,25 @@ export function getAllPosts() {
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         const { data, content } = matter(fileContents);
 
+        const wordsPerMinute = 200;
+        const textContent = content
+          .replace(/```[\s\S]*?```/g, '')
+          .replace(/`[^`]+`/g, '')
+          .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+          .replace(/[#*[\]!]/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+        const wordCount = textContent
+          ? textContent.split(/\s+/).filter((word) => word.length > 0).length
+          : 0;
+        const readingTime = Math.max(1, Math.ceil(wordCount / wordsPerMinute));
+
         return {
           slug,
           ...data,
           content,
+          wordCount,
+          readingTime,
         };
       } catch (error) {
         console.warn(`Error reading post file ${fileName}:`, error);
