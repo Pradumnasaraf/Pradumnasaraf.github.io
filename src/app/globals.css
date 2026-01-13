@@ -204,14 +204,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 300px;
+  max-width: 250px;
   width: 100%;
 }
 
 .right img {
   width: 100%;
   height: auto;
-  max-width: 300px;
+  max-width: 250px;
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid white;
@@ -378,7 +378,7 @@ main {
     width: 75%;
     height: auto;
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 250px;
   }
 
   .pages {
