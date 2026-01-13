@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import Image from 'next/image';
 import { getPostBySlug, getAllPostSlugs } from '@/lib/blog';
 import { getThumbnailUrl } from '@/lib/blog-utils';
@@ -9,6 +8,7 @@ import CodeBlockCopy from '@/components/CodeBlockCopy';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogBackButton from '@/components/BlogBackButton';
 import ImageLightbox from '@/components/ImageLightbox';
+import TableOfContents from '@/components/TableOfContents';
 import '../style.css';
 
 export async function generateStaticParams() {
@@ -147,6 +147,8 @@ export default async function BlogPost({ params }) {
           </div>
         )}
 
+        <TableOfContents />
+
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
@@ -156,9 +158,6 @@ export default async function BlogPost({ params }) {
         <footer className="blog-post-footer">
           <div className="blog-post-footer-content">
             <BlogShareButtons url={postUrl} title={post.title} />
-            <Link href="/blog" className="blog-post-back-link">
-              ← Back to Blog
-            </Link>
           </div>
         </footer>
       </article>

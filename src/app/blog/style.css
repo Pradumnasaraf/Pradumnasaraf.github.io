@@ -423,7 +423,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
+  padding: 10px;
   border-radius: 8px;
   border: 1px solid #333;
   background: #fff;
@@ -431,7 +431,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
-  font-size: 1.6em;
+  font-size: 1.2em;
 }
 
 .blog-share-button svg {
@@ -1193,8 +1193,8 @@
   }
 
   .blog-share-button {
-    padding: 12px;
-    font-size: 1.5em;
+    padding: 8px;
+    font-size: 1.1em;
   }
 
   .blog-post-back-link {
@@ -1388,5 +1388,115 @@
 
   .blog-title {
     font-size: 2.75rem;
+  }
+}
+
+/* Table of Contents */
+.table-of-contents {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin: 2.5rem 0;
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  align-self: start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.table-of-contents-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.table-of-contents-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.table-of-contents-item {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.table-of-contents-item-nested {
+  margin-left: 1.25rem;
+  margin-bottom: 0.4rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid #f0f0f0;
+}
+
+.table-of-contents-link {
+  color: #444;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  transition: color 0.2s ease;
+  display: block;
+  font-weight: 300;
+  padding: 0.25rem 0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.table-of-contents-link:hover {
+  color: #000;
+}
+
+.table-of-contents::-webkit-scrollbar {
+  width: 4px;
+}
+
+.table-of-contents::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table-of-contents::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 2px;
+}
+
+.table-of-contents::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+@media (max-width: 1024px) {
+  .table-of-contents {
+    position: static;
+    max-height: none;
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-of-contents {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+  }
+
+  .table-of-contents-title {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.625rem;
+  }
+
+  .table-of-contents-link {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .table-of-contents-item-nested {
+    margin-left: 1rem;
+    padding-left: 0.5rem;
   }
 }
