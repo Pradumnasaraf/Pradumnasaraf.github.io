@@ -80,7 +80,7 @@ main {
 }
 
 .pages a {
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-decoration: none;
   color: #333333;
   font-weight: 300;
@@ -108,6 +108,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 4rem;
   margin-top: 10vh;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -115,6 +116,8 @@ main {
 
 .left {
   width: 35%;
+  max-width: 500px;
+  padding-right: 2rem;
 }
 
 .socialmedia {
@@ -128,7 +131,7 @@ main {
   padding: 14px;
   border-radius: 8px;
   border: 1px solid #333333;
-  font-size: 1.6em;
+  font-size: 1.7em;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -147,7 +150,7 @@ main {
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 2rem;
+  font-size: 2.2rem;
   letter-spacing: -0.02em;
 }
 
@@ -156,8 +159,9 @@ main {
   font-weight: 300;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   letter-spacing: -0.01em;
+  max-width: 100%;
 }
 
 .left > p > a {
@@ -180,7 +184,7 @@ main {
   color: #000000;
   font-weight: 300;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
   white-space: nowrap;
   letter-spacing: 0;
@@ -203,8 +207,9 @@ main {
 }
 
 .right img {
-  width: 55%;
-  height: 55%;
+  width: 100%;
+  height: auto;
+  max-width: 650px;
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid white;
@@ -329,6 +334,10 @@ main {
     font-size: 1.05rem;
     margin: 8px 0;
     letter-spacing: -0.01em;
+  }
+
+  .left > p .desktop-break {
+    display: none;
   }
 
   .socialmedia {

@@ -136,8 +136,9 @@ export default function Home() {
             {`Hello, I'm`} <span className="pradumna">Pradumna Saraf</span>
           </h2>
           <p>
-            Open Source Developer. Docker Captain. Microsoft MVP. Owner @ rebase
-            media
+            Open Source Developer. Docker Captain. Microsoft MVP.
+            <br className="desktop-break" />
+            Owner @ rebase media
           </p>
           <div className="ibutton">
             <button
