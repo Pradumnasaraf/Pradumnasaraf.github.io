@@ -1,13 +1,45 @@
+import { getAllPosts } from '@/lib/blog';
+
 export async function GET() {
   const baseUrl = 'https://pradumnasaraf.dev';
   const currentDate = new Date().toISOString();
+  
+  // Get all blog posts (excluding drafts and reposted content with canonical URLs)
+  const allPosts = getAllPosts();
+  
+  // Filter out reposted content (posts with canonical URLs pointing elsewhere)
+  const originalPosts = allPosts.filter((post) => {
+    // Only include posts that don't have a canonical URL, or have canonical pointing to this site
+    if (!post.canonical) return true;
+    return post.canonical.startsWith(baseUrl);
+  });
+
+  // Generate RSS items for blog posts
+  const rssItems = originalPosts
+    .slice(0, 50) // Limit to latest 50 posts
+    .map((post) => {
+      const postUrl = `${baseUrl}/blog/${post.slug}`;
+      const pubDate = post.date ? new Date(post.date).toISOString() : new Date().toISOString();
+      const description = post.excerpt || post.title || '';
+      const categories = post.tags ? post.tags.map((tag) => `<category>${escapeXml(tag)}</category>`).join('\n      ') : '';
+      
+      return `    <item>
+      <title>${escapeXml(post.title)}</title>
+      <link>${postUrl}</link>
+      <description>${escapeXml(description)}</description>
+      <pubDate>${pubDate}</pubDate>
+      <guid isPermaLink="true">${postUrl}</guid>
+      ${categories ? categories : ''}
+    </item>`;
+    })
+    .join('\n');
 
   // RSS feed for blog posts
   const rssFeed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pradumna Saraf - Blog</title>
-    <link>https://pradumnasaraf.dev/blog</link>
+    <link>${baseUrl}/blog</link>
     <description>Technical articles and tutorials about Docker, Kubernetes, DevOps, and Open Source</description>
     <language>en-us</language>
     <lastBuildDate>${currentDate}</lastBuildDate>
@@ -18,37 +50,7 @@ export async function GET() {
       <link>${baseUrl}</link>
     </image>
     
-    <item>
-      <title>Feature Flags in Backend Development</title>
-      <link>https://www.freecodecamp.org/news/feature-flags-backend-development/</link>
-      <description>How Feature Flags can be helpful in backend development like building APIs</description>
-      <pubDate>2024-11-01T00:00:00+00:00</pubDate>
-      <guid>https://www.freecodecamp.org/news/feature-flags-backend-development/</guid>
-      <category>Backend Development</category>
-      <category>Feature Flags</category>
-    </item>
-    
-    <item>
-      <title>Docker Scout in CI/CD for Safer Software Supply Chains</title>
-      <link>https://youtu.be/hRp4PaZ6FS4</link>
-      <description>Automating Container Security: Docker Scout in CI/CD for Safer Software Supply Chains</description>
-      <pubDate>2024-12-01T00:00:00+00:00</pubDate>
-      <guid>https://youtu.be/hRp4PaZ6FS4</guid>
-      <category>Docker</category>
-      <category>Security</category>
-      <category>CI/CD</category>
-    </item>
-    
-    <item>
-      <title>WASM vs Docker: Partners, Not Rivals</title>
-      <link>https://youtu.be/DHaVho5cf4U</link>
-      <description>Conference talk about WebAssembly and Docker development process</description>
-      <pubDate>2025-06-01T00:00:00+00:00</pubDate>
-      <guid>https://youtu.be/DHaVho5cf4U</guid>
-      <category>WebAssembly</category>
-      <category>Docker</category>
-      <category>Conference</category>
-    </item>
+${rssItems}
   </channel>
 </rss>`;
 
@@ -58,4 +60,15 @@ export async function GET() {
       'Cache-Control': 'public, max-age=3600, s-maxage=3600', // Cache for 1 hour
     },
   });
+}
+
+// Helper function to escape XML special characters
+function escapeXml(unsafe) {
+  if (!unsafe) return '';
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
 }
