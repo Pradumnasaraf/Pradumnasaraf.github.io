@@ -1,8 +1,10 @@
 // src/app/layout.js
 import './globals.css'; // Tailwind and global styles
 import Script from 'next/script';
+import { Suspense } from 'react';
 import { League_Spartan } from 'next/font/google';
 import { metadata } from './metadata'; // Import metadata from metadata.js
+import GTMPageView from '@/components/GTMPageView';
 
 const leagueSpartan = League_Spartan({
   weight: ['300', '400', '500'],
@@ -142,6 +144,9 @@ export default function RootLayout({ children }) {
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+        <Suspense fallback={null}>
+          <GTMPageView />
+        </Suspense>
         <main>{children}</main>
       </body>
     </html>

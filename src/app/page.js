@@ -158,8 +158,8 @@ export default function Home() {
           <Image
             src="/media/pradumna-saraf.png"
             alt="Pradumna Saraf - DevOps and Go Developer"
-            width={300}
-            height={300}
+            width={250}
+            height={250}
             priority
           />
         </div>

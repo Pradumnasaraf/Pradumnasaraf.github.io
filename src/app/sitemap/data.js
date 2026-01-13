@@ -82,6 +82,16 @@ export const sitemapPages = [
     priorityLabel: 'Medium',
   },
   {
+    url: '/blog',
+    href: '/blog',
+    title: 'Blog',
+    priority: '0.9',
+    changefreq: 'weekly',
+    description: 'Technical articles and tutorials about Docker, Kubernetes, DevOps, and Open Source',
+    category: 'Content',
+    priorityLabel: 'High',
+  },
+  {
     url: '/sitemap',
     href: '/sitemap',
     title: 'Sitemap',
@@ -94,11 +104,6 @@ export const sitemapPages = [
 ];
 
 export const externalLinks = [
-  {
-    href: '/blog',
-    title: 'Blog',
-    description: 'Technical articles and tutorials',
-  },
   {
     href: 'https://pradumnasaraf.substack.com',
     title: 'Newsletter',
