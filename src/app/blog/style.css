@@ -175,7 +175,7 @@
 
 /* Blog Post Card - Modern design matching theme */
 .blog-post-card {
-  background: #fff;
+  background: #fafafa;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   overflow: visible;
@@ -183,10 +183,11 @@
   flex-direction: column;
   height: 100%;
   position: relative;
+  transition: background-color 0.2s ease;
 }
 
 .blog-post-card:hover {
-  background: #fcfcfc;
+  background: #f0f0f0;
 }
 
 /* Blog Post Thumbnail */
@@ -195,7 +196,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
-  background: #fff;
+  background: transparent;
   display: block;
   margin: 1rem 1rem 0 1rem;
   padding: 0;
