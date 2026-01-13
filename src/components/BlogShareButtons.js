@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { FaTwitter, FaLinkedin, FaFacebook, FaLink } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaLink } from 'react-icons/fa';
 
 export default function BlogShareButtons({ url, title }) {
   const copyButtonRef = useRef(null);
@@ -13,7 +13,6 @@ export default function BlogShareButtons({ url, title }) {
   const shareLinks = {
     twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
   };
 
   const copyToClipboard = async () => {
@@ -67,15 +66,6 @@ export default function BlogShareButtons({ url, title }) {
           aria-label="Share on LinkedIn"
         >
           <FaLinkedin />
-        </a>
-        <a
-          href={shareLinks.facebook}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="blog-share-button facebook"
-          aria-label="Share on Facebook"
-        >
-          <FaFacebook />
         </a>
         <button
           ref={copyButtonRef}

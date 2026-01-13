@@ -325,42 +325,25 @@
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  border: 1px solid #eaeaea;
+  border: 1px solid #333;
   background: #fff;
   color: #333;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.4rem;
+  padding: 0;
+}
+
+.blog-share-button svg {
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .blog-share-button:hover {
+  background-color: #333;
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.blog-share-button.twitter:hover {
-  background: #1da1f2;
-  color: #fff;
-  border-color: #1da1f2;
-}
-
-.blog-share-button.linkedin:hover {
-  background: #0077b5;
-  color: #fff;
-  border-color: #0077b5;
-}
-
-.blog-share-button.facebook:hover {
-  background: #1877f2;
-  color: #fff;
-  border-color: #1877f2;
-}
-
-.blog-share-button.copy:hover {
-  background: #333;
-  color: #fff;
-  border-color: #333;
 }
 
 .blog-post-back-link {
