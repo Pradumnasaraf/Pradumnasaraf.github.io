@@ -3,9 +3,19 @@ node_modules
 .pnp
 .pnp.*
 .yarn
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # Build outputs
-.next
+# Exclude source maps and unnecessary files from .next
+.next/**/*.map
+.next/cache
+.next/trace
+.next/server/**/*.map
+.next/server/**/node_modules
+.next/server/**/package.json
+.next/server/**/package-lock.json
 out
 dist
 build
