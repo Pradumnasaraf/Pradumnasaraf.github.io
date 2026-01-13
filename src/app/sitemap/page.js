@@ -11,6 +11,7 @@ import {
   FaCalendarAlt,
   FaSitemap,
   FaExternalLinkAlt,
+  FaBlog,
 } from 'react-icons/fa';
 import { sitemapPages, externalLinks } from './data.js';
 import './style.css';
@@ -26,6 +27,7 @@ const SitemapPage = () => {
     Photography: FaCamera,
     Contact: FaEnvelope,
     'Schedule Meeting': FaCalendarAlt,
+    Blog: FaBlog,
     Sitemap: FaSitemap,
   };
 
@@ -84,7 +86,7 @@ const SitemapPage = () => {
                 {pagesWithIcons
                   .filter((page) => page.category === category)
                   .map((page) => {
-                    const IconComponent = page.icon;
+                    const IconComponent = page.icon || FaSitemap; // Fallback icon
                     return (
                       <Link
                         key={page.href}

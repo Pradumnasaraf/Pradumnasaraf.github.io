@@ -80,9 +80,6 @@ export default async function BlogPost({ params }) {
 
   const postUrl = `https://pradumnasaraf.dev/blog/${slug}`;
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
-  
-  // Use canonical URL for structured data if available (for reposted content)
-  const canonicalUrl = post.canonical || postUrl;
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -91,7 +88,7 @@ export default async function BlogPost({ params }) {
     description: post.excerpt || post.title,
     image: thumbnailUrl,
     datePublished: post.date,
-    dateModified: post.dateModified || post.date,
+    dateModified: post.date,
     author: {
       '@type': 'Person',
       name: post.author || 'Pradumna Saraf',
@@ -107,11 +104,8 @@ export default async function BlogPost({ params }) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': canonicalUrl,
+      '@id': postUrl,
     },
-    ...(post.category && { articleSection: post.category }),
-    ...(post.tags && post.tags.length > 0 && { keywords: post.tags.join(', ') }),
-    url: postUrl,
   };
 
   return (
