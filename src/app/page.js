@@ -1,11 +1,11 @@
 'use client';
-import Link from 'next/link'; // eslint-disable-line no-unused-vars
-import Image from 'next/image'; // eslint-disable-line no-unused-vars
+import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import './globals.css';
-import Head from 'next/head'; // eslint-disable-line no-unused-vars
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'; // eslint-disable-line no-unused-vars
-import KonamiGame from '@/components/KonamiGame'; // eslint-disable-line no-unused-vars
+import Head from 'next/head';
+import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import KonamiGame from '@/components/KonamiGame';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,8 +64,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="Pradumna Saraf Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="style.css" />
@@ -76,11 +76,15 @@ export default function Home() {
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer"
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap"
           rel="stylesheet"

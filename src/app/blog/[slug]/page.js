@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-// eslint-disable-next-line no-unused-vars
 import Link from 'next/link';
 import { getPostBySlug, getAllPostSlugs } from '@/lib/blog';
 import { format } from 'date-fns';

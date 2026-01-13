@@ -7,7 +7,7 @@ export async function GET() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pradumna Saraf - Blog</title>
-    <link>https://blog.pradumnasaraf.dev</link>
+    <link>https://pradumnasaraf.dev/blog</link>
     <description>Technical articles and tutorials about Docker, Kubernetes, DevOps, and Open Source</description>
     <language>en-us</language>
     <lastBuildDate>${currentDate}</lastBuildDate>

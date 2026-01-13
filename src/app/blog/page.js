@@ -1,8 +1,6 @@
 import { getAllPosts } from '@/lib/blog';
 import { format } from 'date-fns';
-// eslint-disable-next-line no-unused-vars
 import Image from 'next/image';
-// eslint-disable-next-line no-unused-vars
 import Link from 'next/link';
 import './style.css';
 import { metadata } from './metadata';

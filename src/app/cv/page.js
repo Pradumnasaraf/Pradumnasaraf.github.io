@@ -90,11 +90,7 @@ const CVPage = () => {
             </p>
             <p>
               <FaRss />{' '}
-              <a
-                href="https://blog.pradumnasaraf.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="/blog" target="_blank" rel="noopener noreferrer">
                 blog.pradumnasaraf.dev
               </a>
             </p>
