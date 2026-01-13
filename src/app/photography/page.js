@@ -647,6 +647,7 @@ export default function Home() {
     document.title = 'Pradumna Saraf | Photography'; // Set the document title
 
     // Show welcome popup when page loads
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShowWelcomePopup(true);
 
     // Set a reasonable timeout to automatically clear loading state
