@@ -23,17 +23,29 @@ export function getAllPosts() {
     .map((fileName) => {
       const slug = fileName.replace(/\.(md|mdx)$/, '');
       const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
-      const { data, content } = matter(fileContents);
 
-      return {
-        slug,
-        ...data,
-        content,
-      };
+      try {
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const { data, content } = matter(fileContents);
+
+        return {
+          slug,
+          ...data,
+          content,
+        };
+      } catch (error) {
+        // Log error but continue processing other files
+        console.warn(`Error reading post file ${fileName}:`, error);
+        return null;
+      }
     })
-    .filter((post) => !post.draft)
-    .sort((a, b) => (a.date < b.date ? 1 : -1));
+    .filter((post) => post && !post.draft)
+    .sort((a, b) => {
+      // Handle missing dates by putting them at the end
+      if (!a.date) return 1;
+      if (!b.date) return -1;
+      return a.date < b.date ? 1 : -1;
+    });
 
   return allPostsData;
 }

@@ -1,10 +1,9 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { FaTwitter, FaLinkedin, FaLink } from 'react-icons/fa';
 
 export default function BlogShareButtons({ url, title }) {
-  const copyButtonRef = useRef(null);
   const [copied, setCopied] = useState(false);
 
   const encodedUrl = encodeURIComponent(url);
@@ -37,8 +36,8 @@ export default function BlogShareButtons({ url, title }) {
           setTimeout(() => {
             setCopied(false);
           }, 2000);
-        } catch (fallbackErr) {
-          console.error('Failed to copy:', fallbackErr);
+        } catch {
+          // Silently fail for older browsers without clipboard support
         }
         document.body.removeChild(textArea);
       }
@@ -68,7 +67,6 @@ export default function BlogShareButtons({ url, title }) {
           <FaLinkedin />
         </a>
         <button
-          ref={copyButtonRef}
           onClick={copyToClipboard}
           className="blog-share-button copy"
           aria-label={copied ? 'Link copied!' : 'Copy link'}

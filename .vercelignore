@@ -1,0 +1,52 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.*
+.yarn
+
+# Build outputs
+.next
+out
+dist
+build
+
+# Testing
+coverage
+.nyc_output
+
+# Misc
+.DS_Store
+*.pem
+*.log
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel
+
+# Development files
+scripts
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+
+# Documentation (not needed for build)
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+SECURITY.md
+README.md
+LICENSE
+
+# Docker files (not needed for Vercel)
+Dockerfile
+compose.yaml
+docker-compose.yml
+
+# Git
+.git
+.gitignore

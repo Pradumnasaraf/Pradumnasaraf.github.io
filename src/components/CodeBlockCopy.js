@@ -69,8 +69,8 @@ export default function CodeBlockCopy() {
                   copyButton.classList.remove('copied');
                 }, 2000);
               }
-            } catch (fallbackErr) {
-              console.error('Failed to copy:', fallbackErr);
+            } catch {
+              // Silently fail if copy command is not supported
             }
             document.body.removeChild(textArea);
           }

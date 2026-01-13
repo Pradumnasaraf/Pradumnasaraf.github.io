@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getPostBySlug, getAllPostSlugs } from '@/lib/blog';
+import { getThumbnailUrl } from '@/lib/blog-utils';
 import { format } from 'date-fns';
 import BlogShareButtons from '@/components/BlogShareButtons';
 import CodeBlockCopy from '@/components/CodeBlockCopy';
@@ -24,23 +25,7 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  // Get the thumbnail URL - ensure it's absolute
-  const getThumbnailUrl = () => {
-    if (!post.thumbnail) {
-      return 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png';
-    }
-    // If thumbnail is already absolute URL, use it
-    if (
-      post.thumbnail.startsWith('http://') ||
-      post.thumbnail.startsWith('https://')
-    ) {
-      return post.thumbnail;
-    }
-    // If thumbnail is relative, make it absolute
-    return `https://pradumnasaraf.dev${post.thumbnail.startsWith('/') ? post.thumbnail : `/${post.thumbnail}`}`;
-  };
-
-  const thumbnailUrl = getThumbnailUrl();
+  const thumbnailUrl = getThumbnailUrl(post.thumbnail);
 
   return {
     title: `${post.title} | Pradumna Saraf Blog`,
@@ -87,24 +72,7 @@ export default async function BlogPost({ params }) {
   }
 
   const postUrl = `https://pradumnasaraf.dev/blog/${slug}`;
-
-  // Get the thumbnail URL - ensure it's absolute
-  const getThumbnailUrl = () => {
-    if (!post.thumbnail) {
-      return 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png';
-    }
-    // If thumbnail is already absolute URL, use it
-    if (
-      post.thumbnail.startsWith('http://') ||
-      post.thumbnail.startsWith('https://')
-    ) {
-      return post.thumbnail;
-    }
-    // If thumbnail is relative, make it absolute
-    return `https://pradumnasaraf.dev${post.thumbnail.startsWith('/') ? post.thumbnail : `/${post.thumbnail}`}`;
-  };
-
-  const thumbnailUrl = getThumbnailUrl();
+  const thumbnailUrl = getThumbnailUrl(post.thumbnail);
 
   // Generate structured data for SEO
   const structuredData = {
