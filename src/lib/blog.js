@@ -70,6 +70,21 @@ export async function getPostBySlug(slug) {
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
 
+  // Calculate reading time (average reading speed: 200 words per minute)
+  const wordsPerMinute = 200;
+  // Remove markdown syntax and normalize whitespace more efficiently
+  const textContent = content
+    .replace(/```[\s\S]*?```/g, '') // Remove code blocks
+    .replace(/`[^`]+`/g, '') // Remove inline code
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Convert links to text
+    .replace(/[#*[\]!]/g, '') // Remove markdown syntax
+    .replace(/\s+/g, ' ') // Normalize whitespace
+    .trim();
+  const wordCount = textContent
+    ? textContent.split(/\s+/).filter((word) => word.length > 0).length
+    : 0;
+  const readingTime = Math.max(1, Math.ceil(wordCount / wordsPerMinute)); // Minimum 1 minute
+
   // Use remark to convert markdown to HTML, then rehype for syntax highlighting
   const processedContent = await remark()
     .use(remarkRehype)
@@ -81,6 +96,8 @@ export async function getPostBySlug(slug) {
   return {
     slug,
     contentHtml,
+    wordCount,
+    readingTime,
     ...data,
   };
 }

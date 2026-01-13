@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getPostBySlug, getAllPostSlugs } from '@/lib/blog';
 import { format } from 'date-fns';
+import BlogShareButtons from '@/components/BlogShareButtons';
 import '../style.css';
 
 export async function generateStaticParams() {
@@ -69,55 +71,91 @@ export default async function BlogPost({ params }) {
     notFound();
   }
 
+  const postUrl = `https://pradumnasaraf.dev/blog/${slug}`;
+
+  // Generate structured data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt || post.title,
+    image: post.thumbnail
+      ? `https://pradumnasaraf.dev${post.thumbnail}`
+      : 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Person',
+      name: post.author || 'Pradumna Saraf',
+      url: 'https://pradumnasaraf.dev',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Pradumna Saraf',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': postUrl,
+    },
+  };
+
   return (
     <div className="blog-post-container">
-      <Link href="/blog" className="back-button">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
-        Back to Blog
-      </Link>
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <article className="blog-post">
         <header className="blog-post-header">
+          <h1 className="blog-post-title">{post.title}</h1>
           <div className="blog-post-meta">
-            <time className="blog-post-date">
+            <time className="blog-post-date" dateTime={post.date || ''}>
               {post.date ? format(new Date(post.date), 'MMMM dd, yyyy') : ''}
             </time>
-            {post.category && (
-              <span className="blog-post-category">{post.category}</span>
+            {post.readingTime && (
+              <span className="blog-post-reading-time">
+                {post.readingTime} min read
+              </span>
             )}
-            {post.author && (
-              <span className="blog-post-author">By {post.author}</span>
+            {post.wordCount && (
+              <span className="blog-post-word-count">
+                {post.wordCount.toLocaleString()} words
+              </span>
             )}
           </div>
-          <h1 className="blog-post-title">{post.title}</h1>
-          {post.excerpt && <p className="blog-post-excerpt">{post.excerpt}</p>}
-          {post.tags && post.tags.length > 0 && (
-            <div className="blog-post-tags">
-              {post.tags.map((tag, index) => (
-                <span key={index} className="blog-post-tag">
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          )}
         </header>
+
+        {post.thumbnail && (
+          <div className="blog-post-featured-image">
+            <Image
+              src={post.thumbnail}
+              alt={post.title}
+              width={1200}
+              height={630}
+              className="blog-featured-image"
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 800px"
+            />
+          </div>
+        )}
 
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
+
+        <footer className="blog-post-footer">
+          <div className="blog-post-footer-content">
+            <BlogShareButtons url={postUrl} title={post.title} />
+            <Link href="/blog" className="blog-post-back-link">
+              ← Back to Blog
+            </Link>
+          </div>
+        </footer>
       </article>
     </div>
   );

@@ -56,13 +56,15 @@ export default function BlogPage() {
                     height={240}
                     className="blog-thumbnail-image"
                     priority={false}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
                   />
                 </Link>
               )}
               <div className="blog-post-content-wrapper">
                 <div className="blog-post-meta">
                   {post.date && (
-                    <time className="blog-post-date">
+                    <time className="blog-post-date" dateTime={post.date}>
                       {format(new Date(post.date), 'MMMM dd, yyyy')}
                     </time>
                   )}
