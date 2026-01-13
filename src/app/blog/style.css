@@ -37,8 +37,39 @@
   box-shadow: 0 0 10px rgba(51, 51, 51, 0.3);
 }
 
-/* Fixed Back Button - Shared styles for both blog post and listing pages */
-.blog-post-back-button,
+.blog-post-back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.blog-post-back-button:hover {
+  transform: translateX(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post-back-button svg {
+  width: 24px;
+  height: 24px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.blog-post-back-button:hover svg {
+  color: #000;
+}
+
 .blog-listing-back-button {
   position: fixed;
   top: 20px;
@@ -46,68 +77,61 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   background-color: #fff;
-  border: 1px solid #333;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   z-index: 1000;
   text-decoration: none;
-  color: #333;
 }
 
-.blog-post-back-button:hover,
 .blog-listing-back-button:hover {
-  background-color: #333;
-  color: #fff;
   transform: translateX(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.blog-post-back-button svg,
 .blog-listing-back-button svg {
-  width: 20px;
-  height: 20px;
-  stroke: currentColor;
+  width: 24px;
+  height: 24px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.blog-listing-back-button:hover svg {
+  color: #000;
 }
 
 /* Tooltip styles - different content for each button */
 .blog-post-back-button::after {
   content: 'Back to Blog';
   position: absolute;
-  left: 55px;
+  left: 50px;
   background-color: #333;
   color: white;
-  padding: 6px 10px;
-  border-radius: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
   font-size: 12px;
-  font-weight: 300;
   opacity: 0;
   transition: opacity 0.2s ease;
   pointer-events: none;
   white-space: nowrap;
-  font-family: 'League Spartan', sans-serif;
-  letter-spacing: -0.01em;
 }
 
 .blog-listing-back-button::after {
-  content: 'Back to Home';
+  content: 'Home';
   position: absolute;
-  left: 55px;
+  left: 50px;
   background-color: #333;
   color: white;
-  padding: 6px 10px;
-  border-radius: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
   font-size: 12px;
-  font-weight: 300;
   opacity: 0;
   transition: opacity 0.2s ease;
   pointer-events: none;
   white-space: nowrap;
-  font-family: 'League Spartan', sans-serif;
-  letter-spacing: -0.01em;
 }
 
 .blog-post-back-button:hover::after,
@@ -789,25 +813,40 @@
     max-width: 100%;
   }
 
-  .blog-post-back-button,
-  .blog-listing-back-button {
-    width: 40px;
-    height: 40px;
+  .blog-post-back-button {
+    width: 36px;
+    height: 36px;
     top: 15px;
     left: 15px;
   }
 
-  .blog-post-back-button svg,
-  .blog-listing-back-button svg {
-    width: 18px;
-    height: 18px;
+  .blog-listing-back-button {
+    width: 36px;
+    height: 36px;
+    top: 15px;
+    left: 15px;
   }
 
-  .blog-post-back-button::after,
-  .blog-listing-back-button::after {
-    left: 50px;
+  .blog-post-back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .blog-post-back-button::after {
+    left: 45px;
     font-size: 11px;
-    padding: 5px 8px;
+    padding: 3px 6px;
+  }
+
+  .blog-listing-back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .blog-listing-back-button::after {
+    left: 45px;
+    font-size: 11px;
+    padding: 3px 6px;
   }
 
   .reading-progress-container {
@@ -948,25 +987,40 @@
     padding-top: 1rem;
   }
 
-  .blog-post-back-button,
+  .blog-post-back-button {
+    width: 36px;
+    height: 36px;
+    top: 15px;
+    left: 15px;
+  }
+
   .blog-listing-back-button {
-    width: 38px;
-    height: 38px;
-    top: 12px;
-    left: 12px;
+    width: 36px;
+    height: 36px;
+    top: 15px;
+    left: 15px;
   }
 
-  .blog-post-back-button svg,
+  .blog-post-back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .blog-post-back-button::after {
+    left: 45px;
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+
   .blog-listing-back-button svg {
-    width: 17px;
-    height: 17px;
+    width: 20px;
+    height: 20px;
   }
 
-  .blog-post-back-button::after,
   .blog-listing-back-button::after {
-    left: 48px;
-    font-size: 10px;
-    padding: 4px 7px;
+    left: 45px;
+    font-size: 11px;
+    padding: 3px 6px;
   }
 
   .back-button svg {
@@ -1148,25 +1202,40 @@
     padding-top: 0.75rem;
   }
 
-  .blog-post-back-button,
+  .blog-post-back-button {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    left: 10px;
+  }
+
   .blog-listing-back-button {
-    width: 36px;
-    height: 36px;
-    top: 12px;
-    left: 12px;
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    left: 10px;
   }
 
-  .blog-post-back-button svg,
-  .blog-listing-back-button svg {
-    width: 16px;
-    height: 16px;
+  .blog-post-back-button svg {
+    width: 18px;
+    height: 18px;
   }
 
-  .blog-post-back-button::after,
-  .blog-listing-back-button::after {
-    left: 45px;
+  .blog-post-back-button::after {
+    left: 40px;
     font-size: 10px;
-    padding: 4px 6px;
+    padding: 2px 5px;
+  }
+
+  .blog-listing-back-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .blog-listing-back-button::after {
+    left: 40px;
+    font-size: 10px;
+    padding: 2px 5px;
   }
 
   .blog-title {
