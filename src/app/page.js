@@ -1,11 +1,11 @@
 'use client';
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from 'next/link'; // eslint-disable-line no-unused-vars
+import Image from 'next/image'; // eslint-disable-line no-unused-vars
 import { useEffect, useState } from 'react';
 import './globals.css';
-import Head from 'next/head';
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import KonamiGame from '@/components/KonamiGame';
+import Head from 'next/head'; // eslint-disable-line no-unused-vars
+import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'; // eslint-disable-line no-unused-vars
+import KonamiGame from '@/components/KonamiGame'; // eslint-disable-line no-unused-vars
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -95,7 +95,7 @@ export default function Home() {
         </div>
         <div className={`pages ${isMenuOpen ? 'active' : ''}`}>
           <span className="page-item">
-            <Link href="https://blog.pradumnasaraf.dev">Blog</Link>
+            <Link href="/blog">Blog</Link>
           </span>
           <span className="page-item">
             <Link href="/timeline">Timeline</Link>
