@@ -13,7 +13,7 @@ import '../style.css';
 export async function generateStaticParams() {
   const slugs = getAllPostSlugs();
   return slugs.map((slug) => ({
-    slug: slug,
+    slug,
   }));
 }
 
@@ -76,7 +76,6 @@ export default async function BlogPost({ params }) {
   const postUrl = `https://pradumnasaraf.dev/blog/${slug}`;
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
 
-  // Generate structured data for SEO
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',

@@ -19,11 +19,8 @@ export default function BlogShareButtons({ url, title }) {
       try {
         await navigator.clipboard.writeText(url);
         setCopied(true);
-        setTimeout(() => {
-          setCopied(false);
-        }, 2000);
+        setTimeout(() => setCopied(false), 2000);
       } catch {
-        // Fallback for older browsers
         const textArea = document.createElement('textarea');
         textArea.value = url;
         textArea.style.position = 'fixed';
@@ -33,11 +30,9 @@ export default function BlogShareButtons({ url, title }) {
         try {
           document.execCommand('copy');
           setCopied(true);
-          setTimeout(() => {
-            setCopied(false);
-          }, 2000);
+          setTimeout(() => setCopied(false), 2000);
         } catch {
-          // Silently fail for older browsers without clipboard support
+          // Clipboard not supported
         }
         document.body.removeChild(textArea);
       }

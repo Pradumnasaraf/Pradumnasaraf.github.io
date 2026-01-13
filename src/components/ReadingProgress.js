@@ -16,10 +16,8 @@ export default function ReadingProgress() {
       setProgress(Math.min(100, Math.max(0, scrollProgress)));
     };
 
-    // Initial calculation
     updateProgress();
 
-    // Update on scroll
     window.addEventListener('scroll', updateProgress, { passive: true });
     window.addEventListener('resize', updateProgress, { passive: true });
 
