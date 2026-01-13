@@ -15,36 +15,104 @@
   min-height: 100vh;
   padding-top: 2rem;
   box-sizing: border-box;
+  position: relative;
 }
 
-/* Back Button - Matches website theme */
-.back-button {
-  display: inline-flex;
+/* Reading Progress Bar */
+.reading-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #f0f0f0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: #333;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.3);
+}
+
+/* Fixed Back Button - Shared styles for both blog post and listing pages */
+.blog-post-back-button,
+.blog-listing-back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  background: #fff;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
   border: 1px solid #333;
-  border-radius: 8px;
-  color: #333;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 300;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  margin-bottom: 2rem;
+  z-index: 1000;
+  text-decoration: none;
+  color: #333;
+}
+
+.blog-post-back-button:hover,
+.blog-listing-back-button:hover {
+  background-color: #333;
+  color: #fff;
+  transform: translateX(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post-back-button svg,
+.blog-listing-back-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+/* Tooltip styles - different content for each button */
+.blog-post-back-button::after {
+  content: 'Back to Blog';
+  position: absolute;
+  left: 55px;
+  background-color: #333;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
   font-family: 'League Spartan', sans-serif;
   letter-spacing: -0.01em;
 }
 
-.back-button:hover {
-  background: #333;
-  color: #fff;
-  transform: translateX(-4px);
+.blog-listing-back-button::after {
+  content: 'Back to Home';
+  position: absolute;
+  left: 55px;
+  background-color: #333;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: 'League Spartan', sans-serif;
+  letter-spacing: -0.01em;
 }
 
-.back-button svg {
-  width: 18px;
-  height: 18px;
+.blog-post-back-button:hover::after,
+.blog-listing-back-button:hover::after {
+  opacity: 1;
 }
 
 /* Blog Header */
@@ -170,6 +238,7 @@
   letter-spacing: -0.02em;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 0.5rem;
@@ -184,6 +253,7 @@
   letter-spacing: -0.01em;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin: 0;
@@ -322,8 +392,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  padding: 14px;
   border-radius: 8px;
   border: 1px solid #333;
   background: #fff;
@@ -331,13 +400,12 @@
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
-  font-size: 1.4rem;
-  padding: 0;
+  font-size: 1.6em;
 }
 
 .blog-share-button svg {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1em;
+  height: 1em;
 }
 
 .blog-share-button:hover {
@@ -721,10 +789,29 @@
     max-width: 100%;
   }
 
-  .back-button {
-    margin-bottom: 1.5rem;
-    font-size: 13px;
-    padding: 8px 16px;
+  .blog-post-back-button,
+  .blog-listing-back-button {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .blog-post-back-button svg,
+  .blog-listing-back-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .blog-post-back-button::after,
+  .blog-listing-back-button::after {
+    left: 50px;
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .reading-progress-container {
+    height: 2px;
   }
 
   .back-button svg {
@@ -861,10 +948,25 @@
     padding-top: 1rem;
   }
 
-  .back-button {
-    font-size: 12px;
-    padding: 6px 14px;
-    margin-bottom: 1rem;
+  .blog-post-back-button,
+  .blog-listing-back-button {
+    width: 38px;
+    height: 38px;
+    top: 12px;
+    left: 12px;
+  }
+
+  .blog-post-back-button svg,
+  .blog-listing-back-button svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .blog-post-back-button::after,
+  .blog-listing-back-button::after {
+    left: 48px;
+    font-size: 10px;
+    padding: 4px 7px;
   }
 
   .back-button svg {
@@ -1024,9 +1126,8 @@
   }
 
   .blog-share-button {
-    width: 32px;
-    height: 32px;
-    font-size: 0.85rem;
+    padding: 12px;
+    font-size: 1.5em;
   }
 
   .blog-post-back-link {
@@ -1045,6 +1146,27 @@
   .blog-post-container {
     padding: 0.75rem 0.75rem;
     padding-top: 0.75rem;
+  }
+
+  .blog-post-back-button,
+  .blog-listing-back-button {
+    width: 36px;
+    height: 36px;
+    top: 12px;
+    left: 12px;
+  }
+
+  .blog-post-back-button svg,
+  .blog-listing-back-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .blog-post-back-button::after,
+  .blog-listing-back-button::after {
+    left: 45px;
+    font-size: 10px;
+    padding: 4px 6px;
   }
 
   .blog-title {

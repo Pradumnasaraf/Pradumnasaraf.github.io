@@ -2,6 +2,13 @@
 
 import { useEffect } from 'react';
 
+// SVG icons as constants to avoid duplication
+const COPY_ICON =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+
+const CHECK_ICON =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
 export default function CodeBlockCopy() {
   useEffect(() => {
     const addCopyButtons = () => {
@@ -24,9 +31,7 @@ export default function CodeBlockCopy() {
         copyButton.setAttribute('aria-label', 'Copy code');
         copyButton.setAttribute('type', 'button');
 
-        const copyIcon =
-          '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-        copyButton.innerHTML = `<span class="code-copy-icon">${copyIcon}</span><span class="code-copy-text">Copy</span>`;
+        copyButton.innerHTML = `<span class="code-copy-icon">${COPY_ICON}</span><span class="code-copy-text">Copy</span>`;
 
         // Add click handler
         const handleCopy = async (e) => {
@@ -39,13 +44,12 @@ export default function CodeBlockCopy() {
             await navigator.clipboard.writeText(codeText);
 
             // Show success state
-            copyButton.innerHTML =
-              '<span class="code-copy-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="code-copy-text">Copied!</span>';
+            copyButton.innerHTML = `<span class="code-copy-icon">${CHECK_ICON}</span><span class="code-copy-text">Copied!</span>`;
             copyButton.classList.add('copied');
 
             // Reset after 2 seconds
             setTimeout(() => {
-              copyButton.innerHTML = `<span class="code-copy-icon">${copyIcon}</span><span class="code-copy-text">Copy</span>`;
+              copyButton.innerHTML = `<span class="code-copy-icon">${COPY_ICON}</span><span class="code-copy-text">Copy</span>`;
               copyButton.classList.remove('copied');
             }, 2000);
           } catch {
@@ -61,11 +65,10 @@ export default function CodeBlockCopy() {
             try {
               const successful = document.execCommand('copy');
               if (successful) {
-                copyButton.innerHTML =
-                  '<span class="code-copy-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="code-copy-text">Copied!</span>';
+                copyButton.innerHTML = `<span class="code-copy-icon">${CHECK_ICON}</span><span class="code-copy-text">Copied!</span>`;
                 copyButton.classList.add('copied');
                 setTimeout(() => {
-                  copyButton.innerHTML = `<span class="code-copy-icon">${copyIcon}</span><span class="code-copy-text">Copy</span>`;
+                  copyButton.innerHTML = `<span class="code-copy-icon">${COPY_ICON}</span><span class="code-copy-text">Copy</span>`;
                   copyButton.classList.remove('copied');
                 }, 2000);
               }

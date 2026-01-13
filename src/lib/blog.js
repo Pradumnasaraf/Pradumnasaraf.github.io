@@ -6,6 +6,48 @@ import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeHighlight from 'rehype-highlight';
 import dockerfile from 'highlight.js/lib/languages/dockerfile';
+import javascript from 'highlight.js/lib/languages/javascript';
+import json from 'highlight.js/lib/languages/json';
+import typescript from 'highlight.js/lib/languages/typescript';
+import python from 'highlight.js/lib/languages/python';
+import bash from 'highlight.js/lib/languages/bash';
+import shell from 'highlight.js/lib/languages/shell';
+import yaml from 'highlight.js/lib/languages/yaml';
+import xml from 'highlight.js/lib/languages/xml';
+import css from 'highlight.js/lib/languages/css';
+import go from 'highlight.js/lib/languages/go';
+import rust from 'highlight.js/lib/languages/rust';
+import java from 'highlight.js/lib/languages/java';
+import sql from 'highlight.js/lib/languages/sql';
+import markdown from 'highlight.js/lib/languages/markdown';
+import html from 'highlight.js/lib/languages/xml';
+
+const allLanguages = {
+  dockerfile: dockerfile,
+  Dockerfile: dockerfile,
+  javascript: javascript,
+  js: javascript,
+  json: json,
+  typescript: typescript,
+  ts: typescript,
+  python: python,
+  py: python,
+  bash: bash,
+  shell: shell,
+  sh: shell,
+  yaml: yaml,
+  yml: yaml,
+  xml: xml,
+  html: html,
+  css: css,
+  go: go,
+  rust: rust,
+  rs: rust,
+  java: java,
+  sql: sql,
+  markdown: markdown,
+  md: markdown,
+};
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
@@ -34,14 +76,12 @@ export function getAllPosts() {
           content,
         };
       } catch (error) {
-        // Log error but continue processing other files
         console.warn(`Error reading post file ${fileName}:`, error);
         return null;
       }
     })
     .filter((post) => post && !post.draft)
     .sort((a, b) => {
-      // Handle missing dates by putting them at the end
       if (!a.date) return 1;
       if (!b.date) return -1;
       return a.date < b.date ? 1 : -1;
@@ -83,39 +123,33 @@ export async function getPostBySlug(slug) {
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  // Calculate reading time (average reading speed: 200 words per minute)
   const wordsPerMinute = 200;
-  // Remove markdown syntax and normalize whitespace more efficiently
   const textContent = content
-    .replace(/```[\s\S]*?```/g, '') // Remove code blocks
-    .replace(/`[^`]+`/g, '') // Remove inline code
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Convert links to text
-    .replace(/[#*[\]!]/g, '') // Remove markdown syntax
-    .replace(/\s+/g, ' ') // Normalize whitespace
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`]+`/g, '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[#*[\]!]/g, '')
+    .replace(/\s+/g, ' ')
     .trim();
   const wordCount = textContent
     ? textContent.split(/\s+/).filter((word) => word.length > 0).length
     : 0;
-  const readingTime = Math.max(1, Math.ceil(wordCount / wordsPerMinute)); // Minimum 1 minute
+  const readingTime = Math.max(1, Math.ceil(wordCount / wordsPerMinute));
 
-  // Use remark to convert markdown to HTML, then rehype for syntax highlighting
-  // Configure rehype-highlight to support ALL languages from highlight.js
-  // subset: false loads all available languages automatically
-  // We explicitly register dockerfile to handle both lowercase and capitalized versions
   const processedContent = await remark()
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeHighlight, {
-      detect: true, // Auto-detect language when not specified
-      ignoreMissing: true, // Don't throw errors for unknown languages
-      subset: false, // Include ALL languages from highlight.js (not just a subset)
-      // Explicitly register dockerfile variants to handle capitalization
-      languages: {
-        dockerfile: dockerfile,
-        Dockerfile: dockerfile, // Support capitalized version
-      },
-      // Add aliases for common variations
+      detect: true,
+      ignoreMissing: true,
+      subset: false,
+      languages: allLanguages,
       aliases: {
         dockerfile: ['docker', 'Dockerfile', 'DOCKERFILE'],
+        javascript: ['js', 'node', 'nodejs'],
+        typescript: ['ts'],
+        python: ['py'],
+        shell: ['sh', 'bash', 'zsh'],
+        yaml: ['yml'],
       },
     })
     .use(rehypeStringify, { allowDangerousHtml: true })
