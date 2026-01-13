@@ -5,6 +5,7 @@ import { remark } from 'remark';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeHighlight from 'rehype-highlight';
+import dockerfile from 'highlight.js/lib/languages/dockerfile';
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
@@ -86,14 +87,24 @@ export async function getPostBySlug(slug) {
   const readingTime = Math.max(1, Math.ceil(wordCount / wordsPerMinute)); // Minimum 1 minute
 
   // Use remark to convert markdown to HTML, then rehype for syntax highlighting
-  // Configure rehype-highlight to support more languages including dockerfile
-  // rehype-highlight uses highlight.js which supports dockerfile by default
+  // Configure rehype-highlight to support ALL languages from highlight.js
+  // subset: false loads all available languages automatically
+  // We explicitly register dockerfile to handle both lowercase and capitalized versions
   const processedContent = await remark()
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeHighlight, {
-      detect: true, // Auto-detect language
+      detect: true, // Auto-detect language when not specified
       ignoreMissing: true, // Don't throw errors for unknown languages
-      subset: false, // Include all languages (not just a subset)
+      subset: false, // Include ALL languages from highlight.js (not just a subset)
+      // Explicitly register dockerfile variants to handle capitalization
+      languages: {
+        dockerfile: dockerfile,
+        Dockerfile: dockerfile, // Support capitalized version
+      },
+      // Add aliases for common variations
+      aliases: {
+        dockerfile: ['docker', 'Dockerfile', 'DOCKERFILE'],
+      },
     })
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content);

@@ -449,14 +449,14 @@
 .blog-post-content pre {
   background: #1a1a1a;
   color: #e0e0e0;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 8px;
   overflow-x: auto;
   overflow-y: hidden;
   margin-bottom: 1.5rem;
-  line-height: 1.7;
+  line-height: 1.4;
   border: 1px solid #333;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: #444 #1a1a1a;
@@ -467,9 +467,9 @@
   padding: 0;
   border: none;
   color: inherit;
-  font-size: 0.95rem;
-  font-family:
-    'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+  font-weight: 400;
 }
 
 /* Code Copy Button */
@@ -534,26 +534,35 @@
   line-height: 1;
 }
 
-/* Syntax Highlighting Styles */
+/* Syntax Highlighting Styles - Uniform sizing */
 .blog-post-content pre code.hljs {
   display: block;
   overflow-x: auto;
   padding: 0;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  font-family: 'Courier New', monospace !important;
 }
 
 .blog-post-content code.hljs {
   padding: 0;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
 }
 
 .blog-post-content .hljs {
   background: #1a1a1a;
   color: #e0e0e0;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-comment,
 .blog-post-content .hljs-quote {
   color: #6a9955;
   font-style: italic;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-keyword,
@@ -562,6 +571,8 @@
 .blog-post-content .hljs-name,
 .blog-post-content .hljs-tag {
   color: #569cd6;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-string,
@@ -574,6 +585,8 @@
 .blog-post-content .hljs-type,
 .blog-post-content .hljs-addition {
   color: #ce9178;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-deletion,
@@ -582,28 +595,39 @@
 .blog-post-content .hljs-meta,
 .blog-post-content .hljs-subst {
   color: #dcdcaa;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-doctag {
   color: #808080;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-attr {
   color: #9cdcfe;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-symbol,
 .blog-post-content .hljs-bullet,
 .blog-post-content .hljs-link {
   color: #569cd6;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-emphasis {
   font-style: italic;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
 }
 
 .blog-post-content .hljs-strong {
-  font-weight: bold;
+  font-weight: 400 !important;
+  font-size: 0.85rem !important;
 }
 
 .blog-post-content blockquote {
@@ -781,13 +805,15 @@
   }
 
   .blog-post-content pre {
-    padding: 1rem;
-    font-size: 0.875rem;
+    padding: 0.875rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
     overflow-x: auto;
   }
 
   .blog-post-content pre code {
-    font-size: 0.875rem;
+    font-size: 0.8rem !important;
+    font-weight: 400 !important;
   }
 
   .blog-post-content table {
@@ -952,13 +978,15 @@
 
   .blog-post-content pre {
     padding: 0.75rem;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
     border-radius: 6px;
     margin-bottom: 1.25rem;
   }
 
   .blog-post-content pre code {
-    font-size: 0.8rem;
+    font-size: 0.75rem !important;
+    font-weight: 400 !important;
   }
 
   .blog-post-content blockquote {
