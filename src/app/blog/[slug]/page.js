@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { getPostBySlug, getAllPostSlugs } from '@/lib/blog';
 import { format } from 'date-fns';
 import BlogShareButtons from '@/components/BlogShareButtons';
+import CodeBlockCopy from '@/components/CodeBlockCopy';
 import '../style.css';
 
 export async function generateStaticParams() {
@@ -23,6 +24,24 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  // Get the thumbnail URL - ensure it's absolute
+  const getThumbnailUrl = () => {
+    if (!post.thumbnail) {
+      return 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png';
+    }
+    // If thumbnail is already absolute URL, use it
+    if (
+      post.thumbnail.startsWith('http://') ||
+      post.thumbnail.startsWith('https://')
+    ) {
+      return post.thumbnail;
+    }
+    // If thumbnail is relative, make it absolute
+    return `https://pradumnasaraf.dev${post.thumbnail.startsWith('/') ? post.thumbnail : `/${post.thumbnail}`}`;
+  };
+
+  const thumbnailUrl = getThumbnailUrl();
+
   return {
     title: `${post.title} | Pradumna Saraf Blog`,
     description: post.excerpt || post.title,
@@ -39,9 +58,7 @@ export async function generateMetadata({ params }) {
       tags: post.tags || [],
       images: [
         {
-          url:
-            post.image ||
-            'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
+          url: thumbnailUrl,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -53,9 +70,7 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.excerpt || post.title,
       creator: '@pradumna_saraf',
-      images: [
-        post.image || 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
-      ],
+      images: [thumbnailUrl],
     },
     alternates: {
       canonical: `https://pradumnasaraf.dev/blog/${slug}`,
@@ -73,15 +88,31 @@ export default async function BlogPost({ params }) {
 
   const postUrl = `https://pradumnasaraf.dev/blog/${slug}`;
 
+  // Get the thumbnail URL - ensure it's absolute
+  const getThumbnailUrl = () => {
+    if (!post.thumbnail) {
+      return 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png';
+    }
+    // If thumbnail is already absolute URL, use it
+    if (
+      post.thumbnail.startsWith('http://') ||
+      post.thumbnail.startsWith('https://')
+    ) {
+      return post.thumbnail;
+    }
+    // If thumbnail is relative, make it absolute
+    return `https://pradumnasaraf.dev${post.thumbnail.startsWith('/') ? post.thumbnail : `/${post.thumbnail}`}`;
+  };
+
+  const thumbnailUrl = getThumbnailUrl();
+
   // Generate structured data for SEO
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt || post.title,
-    image: post.thumbnail
-      ? `https://pradumnasaraf.dev${post.thumbnail}`
-      : 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
+    image: thumbnailUrl,
     datePublished: post.date,
     dateModified: post.date,
     author: {
@@ -147,6 +178,7 @@ export default async function BlogPost({ params }) {
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
+        <CodeBlockCopy />
 
         <footer className="blog-post-footer">
           <div className="blog-post-footer-content">

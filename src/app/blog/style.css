@@ -489,6 +489,53 @@
     'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
 
+/* Code Copy Button */
+.blog-post-content pre {
+  position: relative;
+}
+
+.code-copy-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: #2d2d2d;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #e0e0e0;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+}
+
+.code-copy-button:hover {
+  background: #3d3d3d;
+  border-color: #555;
+  color: #fff;
+}
+
+.code-copy-button:active {
+  transform: scale(0.95);
+}
+
+.code-copy-button.copied {
+  background: #4caf50;
+  border-color: #4caf50;
+  color: #fff;
+}
+
+.code-copy-button svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+}
+
 /* Syntax Highlighting Styles */
 .blog-post-content pre code.hljs {
   display: block;
