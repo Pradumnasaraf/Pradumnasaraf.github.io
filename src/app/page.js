@@ -158,11 +158,9 @@ export default function Home() {
           <Image
             src="/media/pradumna-saraf.png"
             alt="Pradumna Saraf - DevOps and Go Developer"
-            width={500}
-            height={500}
+            width={300}
+            height={300}
             priority
-            className="w-full h-auto"
-            style={{ objectFit: 'cover' }}
           />
         </div>
       </div>

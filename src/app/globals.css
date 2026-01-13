@@ -204,12 +204,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 300px;
+  width: 100%;
 }
 
 .right img {
   width: 100%;
   height: auto;
-  max-width: 650px;
+  max-width: 300px;
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid white;
@@ -353,7 +355,8 @@ main {
 
   .ibutton {
     gap: 12px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 0.5rem;
     justify-content: center;
   }
 
@@ -364,7 +367,7 @@ main {
   }
 
   .right {
-    margin-top: 1.5rem;
+    margin-top: -0.5rem;
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
