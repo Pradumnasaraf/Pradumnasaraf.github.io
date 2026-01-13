@@ -378,6 +378,12 @@
   height: auto;
   display: block;
   object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.blog-featured-image:hover {
+  opacity: 0.9;
 }
 
 /* Blog Post Footer */
@@ -736,6 +742,12 @@
   border-radius: 8px;
   margin: 2rem 0;
   border: 1px solid #eaeaea;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.blog-post-content img:hover {
+  opacity: 0.9;
 }
 
 .blog-post-content table {
@@ -1252,6 +1264,117 @@
 
   .blog-post-content {
     font-size: 0.9rem;
+  }
+}
+
+/* Image Lightbox Styles */
+.image-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.image-lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.image-lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.image-lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10001;
+  backdrop-filter: blur(10px);
+}
+
+.image-lightbox-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: rotate(90deg);
+}
+
+.image-lightbox-close svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+@media (max-width: 768px) {
+  .image-lightbox-overlay {
+    padding: 1rem;
+  }
+
+  .image-lightbox-close {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .image-lightbox-close svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .image-lightbox-image {
+    max-height: 85vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-lightbox-overlay {
+    padding: 0.5rem;
+  }
+
+  .image-lightbox-close {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .image-lightbox-close svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .image-lightbox-image {
+    max-height: 80vh;
   }
 }
 

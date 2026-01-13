@@ -8,6 +8,7 @@ import BlogShareButtons from '@/components/BlogShareButtons';
 import CodeBlockCopy from '@/components/CodeBlockCopy';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogBackButton from '@/components/BlogBackButton';
+import ImageLightbox from '@/components/ImageLightbox';
 import '../style.css';
 
 export async function generateStaticParams() {
@@ -107,6 +108,7 @@ export default async function BlogPost({ params }) {
     <div className="blog-post-container">
       <ReadingProgress />
       <BlogBackButton />
+      <ImageLightbox />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
