@@ -64,7 +64,7 @@ const ChatPage = () => {
           rel="icon"
           href="https://user-images.githubusercontent.com/51878265/194138074-7a341083-e80e-49d9-8e58-02882b26d3d9.png"
         />
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Schedule a Meeting</title>
       </Head>

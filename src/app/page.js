@@ -64,8 +64,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="Pradumna Saraf Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="style.css" />
@@ -76,11 +76,15 @@ export default function Home() {
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer"
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap"
           rel="stylesheet"
@@ -95,7 +99,7 @@ export default function Home() {
         </div>
         <div className={`pages ${isMenuOpen ? 'active' : ''}`}>
           <span className="page-item">
-            <Link href="https://blog.pradumnasaraf.dev">Blog</Link>
+            <Link href="/blog">Blog</Link>
           </span>
           <span className="page-item">
             <Link href="/timeline">Timeline</Link>
@@ -154,11 +158,9 @@ export default function Home() {
           <Image
             src="/media/pradumna-saraf.png"
             alt="Pradumna Saraf - DevOps and Go Developer"
-            width={500}
-            height={500}
+            width={300}
+            height={300}
             priority
-            className="w-full h-auto"
-            style={{ objectFit: 'cover' }}
           />
         </div>
       </div>

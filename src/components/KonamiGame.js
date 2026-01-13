@@ -270,6 +270,7 @@ const KonamiGame = ({ onClose }) => {
   // Save high score when game ends
   useEffect(() => {
     if (gameOver && score > highScore) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setHighScore(score);
       saveHighScore(score);
     }

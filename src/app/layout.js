@@ -81,7 +81,7 @@ export default function RootLayout({ children }) {
                 'https://github.com/Pradumnasaraf',
                 'https://twitter.com/pradumna_saraf',
                 'https://linkedin.com/in/pradumnasaraf',
-                'https://blog.pradumnasaraf.dev',
+                'https://pradumnasaraf.dev/blog',
                 'https://mvp.microsoft.com/en-US/MVP/profile/504ebf09-e92f-4620-82d7-67590711df58',
               ],
               jobTitle: 'Developer Advocate, Docker Captain & Microsoft MVP',
@@ -132,7 +132,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

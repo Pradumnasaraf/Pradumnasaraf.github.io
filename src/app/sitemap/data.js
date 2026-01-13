@@ -95,7 +95,7 @@ export const sitemapPages = [
 
 export const externalLinks = [
   {
-    href: 'https://blog.pradumnasaraf.dev',
+    href: '/blog',
     title: 'Blog',
     description: 'Technical articles and tutorials',
   },
