@@ -29,6 +29,10 @@ export async function generateMetadata({ params }) {
   }
 
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
+  
+  // If post has a canonical URL in frontmatter (for reposted content),
+  // use that. Otherwise, use this site as the canonical URL.
+  const canonicalUrl = post.canonical || `https://pradumnasaraf.dev/blog/${slug}`;
 
   return {
     title: `${post.title} | Pradumna Saraf Blog`,
@@ -61,7 +65,7 @@ export async function generateMetadata({ params }) {
       images: [thumbnailUrl],
     },
     alternates: {
-      canonical: `https://pradumnasaraf.dev/blog/${slug}`,
+      canonical: canonicalUrl,
     },
   };
 }
@@ -76,6 +80,9 @@ export default async function BlogPost({ params }) {
 
   const postUrl = `https://pradumnasaraf.dev/blog/${slug}`;
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
+  
+  // Use canonical URL for structured data if available (for reposted content)
+  const canonicalUrl = post.canonical || postUrl;
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -84,7 +91,7 @@ export default async function BlogPost({ params }) {
     description: post.excerpt || post.title,
     image: thumbnailUrl,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.dateModified || post.date,
     author: {
       '@type': 'Person',
       name: post.author || 'Pradumna Saraf',
@@ -100,8 +107,11 @@ export default async function BlogPost({ params }) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': postUrl,
+      '@id': canonicalUrl,
     },
+    ...(post.category && { articleSection: post.category }),
+    ...(post.tags && post.tags.length > 0 && { keywords: post.tags.join(', ') }),
+    url: postUrl,
   };
 
   return (
