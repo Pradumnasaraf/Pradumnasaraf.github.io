@@ -3,17 +3,25 @@ import { NextResponse } from 'next/server';
 export function proxy(request) {
   const url = request.nextUrl.clone();
   const hostname = request.headers.get('host') || '';
+  let pathname = url.pathname;
+
+  // Remove trailing slash for consistency (except root)
+  if (pathname !== '/' && pathname.endsWith('/')) {
+    pathname = pathname.slice(0, -1);
+  }
 
   // Check if the request is coming from blog.pradumnasaraf.dev subdomain
-  if (hostname === 'blog.pradumnasaraf.dev' || hostname.startsWith('blog.pradumnasaraf.dev:')) {
-    // Get the pathname and clean it up
-    let pathname = url.pathname;
-
-    // Remove trailing slash for consistency (except root)
-    if (pathname !== '/' && pathname.endsWith('/')) {
-      pathname = pathname.slice(0, -1);
+  if (
+    hostname === 'blog.pradumnasaraf.dev' ||
+    hostname.startsWith('blog.pradumnasaraf.dev:')
+  ) {
+    // Handle specific series redirects to main blog page
+    if (pathname === '/series/open-source' || pathname === '/series/devops') {
+      return NextResponse.redirect(
+        new URL('https://pradumnasaraf.dev/blog', request.url),
+        301
+      );
     }
-
     // Handle Hashnode URL patterns that might include @username
     // e.g., /@pradumnasaraf/some-post -> /some-post
     if (pathname.startsWith('/@')) {
@@ -26,13 +34,19 @@ export function proxy(request) {
 
     // If it's the root or empty, redirect to the main blog page
     if (pathname === '/' || pathname === '') {
-      return NextResponse.redirect(new URL('https://pradumnasaraf.dev/blog', request.url), 301);
+      return NextResponse.redirect(
+        new URL('https://pradumnasaraf.dev/blog', request.url),
+        301
+      );
     }
 
     // For any other path, redirect to the same path on the main domain's blog
     // e.g., blog.pradumnasaraf.dev/some-post -> pradumnasaraf.dev/blog/some-post
     // Preserve query parameters if any
-    const newUrl = new URL(`https://pradumnasaraf.dev/blog${pathname}`, request.url);
+    const newUrl = new URL(
+      `https://pradumnasaraf.dev/blog${pathname}`,
+      request.url
+    );
     if (url.search) {
       newUrl.search = url.search;
     }
