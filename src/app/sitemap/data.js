@@ -1,4 +1,4 @@
-// Shared sitemap data - single source of truth
+// Shared sitemap data
 export const sitemapPages = [
   {
     url: '',
@@ -87,7 +87,8 @@ export const sitemapPages = [
     title: 'Blog',
     priority: '0.9',
     changefreq: 'weekly',
-    description: 'Technical articles and tutorials about Docker, Kubernetes, DevOps, and Open Source',
+    description:
+      'Technical articles and tutorials about Docker, Kubernetes, DevOps, and Open Source',
     category: 'Content',
     priorityLabel: 'High',
   },

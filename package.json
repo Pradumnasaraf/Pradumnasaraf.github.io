@@ -40,10 +40,8 @@
   },
   "dependencies": {
     "date-fns": "^4.1.0",
-    "ev-emitter": "^2.1.2",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
-    "imagesloaded": "^5.0.0",
     "next": "^16.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
