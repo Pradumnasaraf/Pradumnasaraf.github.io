@@ -29,10 +29,11 @@ export async function generateMetadata({ params }) {
   }
 
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
-  
+
   // If post has a canonical URL in frontmatter (for reposted content),
   // use that. Otherwise, use this site as the canonical URL.
-  const canonicalUrl = post.canonical || `https://pradumnasaraf.dev/blog/${slug}`;
+  const canonicalUrl =
+    post.canonical || `https://pradumnasaraf.dev/blog/${slug}`;
 
   return {
     title: `${post.title} | Pradumna Saraf Blog`,
@@ -143,7 +144,7 @@ export default async function BlogPost({ params }) {
               src={post.thumbnail}
               alt={post.title}
               width={1200}
-              height={630}
+              height={900}
               className="blog-featured-image"
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 800px"

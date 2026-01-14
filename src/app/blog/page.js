@@ -57,7 +57,7 @@ export default function BlogPage() {
                     src={post.thumbnail}
                     alt={post.title}
                     width={1200}
-                    height={675}
+                    height={900}
                     className="blog-thumbnail-image"
                     priority={false}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
