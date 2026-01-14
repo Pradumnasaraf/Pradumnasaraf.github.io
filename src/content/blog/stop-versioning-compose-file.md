@@ -5,14 +5,14 @@ date: '2024-08-09'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'development', 'devops', 'containers', 'docker-compose']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1723108982416/e16b250e-e946-455a-a978-a7f8cb0e6af1.png'
+thumbnail: '/blog-images/stop-versioning-compose-file/thumbnail.png'
 draft: false
 ---
 
 
 Docker Compose is one of the best inventions, it makes local development so easy and friction-free. If you are a long-term Docker Compose fanatic like me, you know we have come a long way. Currently, we are using version 2 of Compose, which is written in Golang. Version 1 of Compose was written in Python and has been deprecated. The last update was on **May 10, 2021**. Since then, the packages haven't received any security updates and it's not recommended to use it due to security reasons. You can read more about Compose history [here](https://docs.docker.com/compose/intro/history/).
 
-![v1 vs v2 comparison](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n95zze02y3ikvzd2g8uw.png)
+![v1 vs v2 comparison](/blog-images/stop-versioning-compose-file/v1-vs-v2-comparison.png)
 
 > Image credit: Docker docs
 
@@ -22,17 +22,17 @@ For instance, to trigger the binary for Compose v1, we used \`docker-compose up\
 
 But, there is one more big change: **no further need to version the compose file** like we used to do. Interestingly, a lot of people didn't pay attention to this (including me), as the compose file with a version was still compatible. Also, I think the messaging was not strong enough to remove the version when people were migrating from v1 to v2, and is the whole purpose of this blog to make people aware.
 
-![sample compose file](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ih17jsvy5s2twycxyzny.png)
+![sample compose file](/blog-images/stop-versioning-compose-file/sample-compose-file.png)
 
 Now, Docker is more active in getting this version form out of compose files by giving you a warning in the terminal.
 
-![terminal warring screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/030bban7gt7o2jse8xy8.png)
+![terminal warring screenshot](/blog-images/stop-versioning-compose-file/terminal-warring-screenshot.png)
 
 At this point, it's just a warning, not an error, because the majority of people are still using versions, and changing this at once by throwing an error can lead to breaking a lot of apps.
 
 If you don't believe me, I searched on GitHub and found around a MILLION projects (usually it's one compose file per project) still use versions in their compose files.
 
-![github search result screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qlwtrx8kziu0pkdqhdnp.png)
+![github search result screenshot](/blog-images/stop-versioning-compose-file/github-search-result-screenshot.png)
 
 Btw, here is one more tip, if you still using the old convention of naming a compose file - `docker-compose.yaml`, start using `compose.yaml`.
 

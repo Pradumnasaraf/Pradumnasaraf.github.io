@@ -5,7 +5,7 @@ date: '2023-11-28'
 author: 'Pradumna Saraf'
 category: 'microservices'
 tags: ['microservices', 'docker', 'devops', 'containers', 'docker-compose']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1701171368269/a080e932-2876-495e-8e71-275e3cc51474.png'
+thumbnail: '/blog-images/dockerize-app-with-docker-init/thumbnail.png'
 draft: false
 ---
 
@@ -75,14 +75,14 @@ app.listen(port, () => {
 
 Run the `docker init` command and select the language of your project. You'll then be prompted with a series of questions tailored to your project and its structure.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n6p2qse6w7348el5wj0f.png)
+![Image description](/blog-images/dockerize-app-with-docker-init/image-description.png)
 
 1. **Running the App**:
     
 
 After the setup, execute the command `docker compose up --build` to construct the images and launch the application.
 
-![Terminal Screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xqsv215ou5v5w8ck8oyi.png)
+![Terminal Screenshot](/blog-images/dockerize-app-with-docker-init/terminal-screenshot.png)
 
 That's it. I hope you learned something from this. As the world moves towards containerizing applications, this can be instrumental in accelerating tasks and transitioning from monoliths to microservices.  
   

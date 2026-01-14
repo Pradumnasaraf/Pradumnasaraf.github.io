@@ -5,7 +5,7 @@ date: '2022-04-01'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591872629/edd8b4dd-a33b-49dd-88a9-0e44ceaa07b1.png'
+thumbnail: '/blog-images/what-is-open-source/thumbnail.png'
 draft: false
 ---
 
@@ -24,7 +24,7 @@ Open Source or Open source software is software with source code publically avai
 
 In recent years companies are shunning closed-source software due to the slow innovation pace that takes place.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nrwlbkixf41guby723zw.png)
+![Image description](/blog-images/what-is-open-source/image-description.png)
 
 ## Popular Open Source software/App.
 
@@ -38,7 +38,7 @@ In recent years companies are shunning closed-source software due to the slow in
 
 Some more category-wise.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s1ae3sozaf6orvpvbmae.png)
+![Image description](/blog-images/what-is-open-source/image-description-1.png)
 
 ## Big org involved in the Open Source (Name - GitHub org.):
 

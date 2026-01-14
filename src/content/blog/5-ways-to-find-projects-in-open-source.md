@@ -5,7 +5,7 @@ date: '2022-09-16'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591051089/c08be495-1f9c-4a73-ba71-17fb38a51b68.png'
+thumbnail: '/blog-images/5-ways-to-find-projects-in-open-source/thumbnail.png'
 draft: false
 ---
 
@@ -19,13 +19,13 @@ In the blog, we will explore some of the built-in GitHub functionalities to find
     
     > Link - [finder.eddiehub.io](http://finder.eddiehub.io)
     
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1675673854400/54b3d580-6954-495b-b43b-970acd52cb49.png)
+    ![](/blog-images/5-ways-to-find-projects-in-open-source/image-01.png)
     
 2. GitHub's advanced search. GitHub advanced search provides tons of filters to find repos and issues according to our preferences. We can filter by language, extension, Issue labels, no. of stars/forks, etc.
     
     > Link - [github.com/search/advanced](https://github.com/search/advanced)
     
-    ![Screenshot from 2022-09-15 00-09-46.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1663180798012/uK39K0P_o.png)
+    ![Screenshot from 2022-09-15 00-09-46.png](/blog-images/5-ways-to-find-projects-in-open-source/screenshot-from-2022-09-15-00-09-46-png.png)
     
 3. GitHub Topics
     
@@ -33,13 +33,13 @@ In the blog, we will explore some of the built-in GitHub functionalities to find
     
     > Link - [github.com/topics/javascript](http://github.com/topics/JavaScript)
     
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671169894510/4oMjgSznB.png)
+    ![](/blog-images/5-ways-to-find-projects-in-open-source/image-03.png)
     
 4. Good First Issue label `good first issue` is the best way to start your Open Source journey. We can find all of those on GitHub by doing a label search.
     
     > Link - [github.com/issues....](https://github.com/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
     
-    ![Screenshot from 2022-09-15 00-26-30.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1663181805171/B6fmpsmQ9.png)
+    ![Screenshot from 2022-09-15 00-26-30.png](/blog-images/5-ways-to-find-projects-in-open-source/screenshot-from-2022-09-15-00-26-30-png.png)
     
 5. OSWC
     
@@ -47,13 +47,13 @@ In the blog, we will explore some of the built-in GitHub functionalities to find
     
     > Link - [oswc.is/search-projects](https://www.oswc.is/search-projects)
     
-    ![Screenshot from 2022-09-15 23-11-54.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1663264110827/96Gj3jAFF.png)
+    ![Screenshot from 2022-09-15 23-11-54.png](/blog-images/5-ways-to-find-projects-in-open-source/screenshot-from-2022-09-15-23-11-54-png.png)
     
 6. Quine  
       
     > Link - [https://quine.sh/contribute](https://quine.sh/contribute)  
     
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693651249531/672a6f01-3f2f-4c75-aff1-4f72cc684fc9.png)
+    ![](/blog-images/5-ways-to-find-projects-in-open-source/image-06.png)
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. Thanks for reading and have a great day!
 

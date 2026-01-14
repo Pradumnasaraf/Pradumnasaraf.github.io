@@ -5,7 +5,7 @@ date: '2022-04-02'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591894086/e69b8709-f33b-4045-abb0-04d7f90462e4.png'
+thumbnail: '/blog-images/what-is-a-version-control-system-vcs/thumbnail.png'
 draft: false
 ---
 
@@ -41,7 +41,7 @@ Among them, git is the most preferred, also Github (The most popular code hostin
 
 Some companies and projects use git.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j5vnnq4p89ru3qvg3y0n.png)
+![Image description](/blog-images/what-is-a-version-control-system-vcs/image-description.png)
 
 ## Using the git.
 

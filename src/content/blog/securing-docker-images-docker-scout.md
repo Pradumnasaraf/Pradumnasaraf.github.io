@@ -5,7 +5,7 @@ date: '2025-01-08'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'security', 'ci-cd', 'docker-images', 'github-actions-1']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1705865281162/e9d87b59-faed-4725-bd4e-3163a40e7831.png'
+thumbnail: '/blog-images/securing-docker-images-docker-scout/thumbnail.png'
 draft: false
 ---
 
@@ -27,7 +27,7 @@ EXPOSE 80
 
 Also, this is **really important**. In Docker Scout, we perform comparisons to check how vulnerable the image version is compared to another version of the same image coming in the PR, etc. For that purpose, we need an already existing image to make comparisons. Therefore, we need build and push an image to DockerHub beforehand via CLI or other methods so that it is available when GitHub Actions run. In this case, I have pushed an image called `pradumnasaraf/demo:main`. It follows the format {github repo name}:{tag}. The tag is crucial as it helps identify the version, and we will add this tag in the Github Workflow as well.
 
-![DockerHub Image Dashboard](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9kl6nl20u0lggk8f8nio.png)
+![DockerHub Image Dashboard](/blog-images/securing-docker-images-docker-scout/dockerhub-image-dashboard.png)
 
 Now, let's create a GitHub Actions workflow. Create a `.github` folder, and inside that, create a `workflows` folder. Inside the `workflows` folder, create a `docker.yml` file and paste the configuration below. I will explain the entire configuration below.
 
@@ -207,21 +207,21 @@ That was the whole gist of the workflow. Before committing and pushing it to the
 
 `DOCKER_PAT` is the DockerHub Access token. To get that, head over to [DockerHub.com](http://DockerHub.com) and generate a Personal Access Token with read and write permissions. The window will look something like this:
 
-![DockerHub Personal Dashboard](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j07gmyksj37dlnahc19n.png)
+![DockerHub Personal Dashboard](/blog-images/securing-docker-images-docker-scout/dockerhub-personal-dashboard.png)
 
 Now, go to the repository on GitHub on which you want to run this action. Go to settings and add two repository secrets under **Actions secrets and variables**. Add `DOCKER_USER` with the value as your DockerHub username, and add `DOCKER_PAT` with the value as the personal token generated from DockerHub. After adding, it will look something like this:
 
-![Github Settings](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kqzksnjj86c6nchis90m.png)
+![Github Settings](/blog-images/securing-docker-images-docker-scout/github-settings.png)
 
 Once you have added both secrets, commit and push the workflow you have written. Once you push it to GitHub, the workflow will run, and it should pass all the tests. You can check this by going to the Actions tab.
 
 Now, let's test if this workflow is working as intended by comparing the vulnerabilities of the incoming image to our image. For that, create a branch and modify the image version in the Dockerfile from `nginx:1.23.3-alpine` to `nginx:1.25.3-alpine`, then create a PR to the main branch. It will look something like this:
 
-![GitHub](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e5qyt55v871f62pflj1h.png)
+![GitHub](/blog-images/securing-docker-images-docker-scout/github.png)
 
 As soon as you create a PR, the workflow will get triggered and start running those steps. When the workflow completes, a GitHub bot will drop a comment with a comparison, something like shown in the image below:
 
-![GitHub](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t26jnbct1513cxnc2r7e.png)
+![GitHub](/blog-images/securing-docker-images-docker-scout/github-1.png)
 
 As you can see, our image with the main tag on the left has some serious issues, such as 1 serious and 14 high vulnerabilities. In contrast, the image built with the incoming changes from the PR on the right has no vulnerabilities. Thus, this PR is good to merge, as it has identified and resolved those issues.
 

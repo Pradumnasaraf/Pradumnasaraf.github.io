@@ -5,7 +5,7 @@ date: '2022-07-09'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git', 'github-actions-1']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731590827624/073c5fb9-049a-461e-9d00-39e61aee6a00.png'
+thumbnail: '/blog-images/getting-started-with-conventional-commits/thumbnail.png'
 draft: false
 ---
 
@@ -22,7 +22,7 @@ The commit message should follow a structure like this:
 
 **For Eg: If we are improving documentation in the README**
 
-![Commit message (2).png](https://cdn.hashnode.com/res/hashnode/image/upload/v1657076433603/HWkgzToj6.png)
+![Commit message (2).png](/blog-images/getting-started-with-conventional-commits/commit-message-2-png.png)
 
 ## Use of Conventional Commits
 
@@ -31,7 +31,7 @@ The commit message should follow a structure like this:
 - Auto trigger builds.
 - Get a more structured and understandable commit history.
 
-![Untitled design.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1657080466833/vCo7pc2Qj.png)
+![Untitled design.png](/blog-images/getting-started-with-conventional-commits/untitled-design-png.png)
 
 Commit history of [EddieHub's LinkFree project](https://github.com/Pradumnasaraf/open-source-with-pradumna)
 

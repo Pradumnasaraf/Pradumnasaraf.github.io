@@ -5,7 +5,7 @@ date: '2023-03-23'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'github', 'opensource', 'github-actions-1', 'dockerhub']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591537693/744deeb1-1b1d-4284-a3a3-cc35a0c0de30.png'
+thumbnail: '/blog-images/dockerhub-githubactions/thumbnail.png'
 draft: false
 ---
 
@@ -27,7 +27,7 @@ In this tutorial, we will learn how to automate the process of building and push
 
 Create a GitHub repository and place a Dockerfile in the root directory. While you can store the file anywhere, it is advisable to keep it in the root directory.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1679083462132/5ab905f6-cd16-45c0-8486-8174e838c89f.png)
+![](/blog-images/dockerhub-githubactions/image-01.png)
 
 For this demo, we will use a very simple `Dockerfile` that prints "Hello World" by running an echo command on an Alpine image. Here is the syntax for it:
 
@@ -38,7 +38,7 @@ CMD ["echo", "Hello World!"]
 
 To store our Docker image, we need to create a new repository on **DockerHub**. To do this, log into your DockerHub account and click on the "Create Repository" button. Choose a name for your repository and select whether it will be public or private. In this example, we will create a public repository called "hello-world".
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1679083953565/0b6d3fd7-f4fd-4554-8fda-fedecdf27767.gif)
+![](/blog-images/dockerhub-githubactions/image-02.gif)
 
 Now, let's use a GitHub Workflow (a set of GitHub Actions) to automate the process of building and pushing our Docker image to Docker Hub.
 
@@ -46,7 +46,7 @@ However, before we do that, we need to create two **Actions Repo Secrets** on Gi
 
 To do this, go to **Settings** -&gt; **Actions** -&gt; **New repository secret**.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1679332998299/ad50bbcf-8af1-4dbd-b4b5-dd611239036a.png)
+![](/blog-images/dockerhub-githubactions/image-03.png)
 
 Create two secrets with the following names:
 
@@ -55,11 +55,11 @@ Create two secrets with the following names:
 * `DOCKERHUB_PASSWORD` - Add your Docker Hub password or personal access token in the secret section.
     
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1679334518307/e1c0cfc2-bd63-4e3a-a5e1-f98ccf2c641c.png)
+![](/blog-images/dockerhub-githubactions/image-04.png)
 
 After creating both secrets, your Actions window should look like this. Make sure you have entered the correct credentials.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1679334935505/db73bf3f-7e81-4139-8cd9-0bcab38ed11a.png)
+![](/blog-images/dockerhub-githubactions/image-05.png)
 
 Now let's write the configuration for your GitHub Workflow which will build and push the Dockerfile.
 
@@ -152,11 +152,11 @@ Now let's commit the changes. As soon as you commit the file, the workflow will 
 
 To check if the workflow is running, head over to the **Actions** tab. In my case, the workflow ran so fast that it already completed all the steps and pushed our Docker image to DockerHub.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1679510844693/c49408d4-2aad-4a71-866e-91bcb63afa2f.png)
+![](/blog-images/dockerhub-githubactions/image-06.png)
 
 Now, go to DockerHub to see your image. Its name will be `{DOCKERHUB_USERNAME}/hello-world`.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1679511534474/ac37ef18-db13-44a2-8836-e52f04d1c8ed.png)
+![](/blog-images/dockerhub-githubactions/image-07.png)
 
 We can test our Docker image locally by running the following command in the terminal:
 
@@ -166,7 +166,7 @@ Replace `{DOCKERHUB_USERNAME}` with your actual DockerHub username. This command
 docker run {DOCKERHUB_USERNAME}/hello-world
 ```
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1679512223295/cb3316b1-c378-4621-993a-bc58c6fcc27d.png)
+![](/blog-images/dockerhub-githubactions/image-08.png)
 
 **Congratulations on successfully building and pushing a Docker image to DockerHub using GitHub Actions!** **🎉**
 

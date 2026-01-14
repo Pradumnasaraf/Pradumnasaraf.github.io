@@ -5,7 +5,7 @@ date: '2022-05-25'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'community']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731590759773/7a776815-c726-4db0-b7c6-649e75e782e5.png'
+thumbnail: '/blog-images/community-in-diversity/thumbnail.png'
 draft: false
 ---
 
@@ -16,7 +16,7 @@ A community is a group of people who share an identity-forming narrative and UNI
 
 **E.g.:** [**Eddiehub**](https://www.eddiehub.org/) **- An inclusive community that is spreading literacy about Open Source and helping beginners get started.**
 
-![people](https://cdn.hashnode.com/res/hashnode/image/upload/v1652769640101/q8c_WBlMj.png)
+![people](/blog-images/community-in-diversity/people.png)
 
 ## 🤝 Why get involved in the community?
 
@@ -50,7 +50,7 @@ Every person should allow in the community and also take part in the activities 
 
 My first ever community was **EddieHub** (Founded by @[Eddie Jaoude](@eddiejaoude)), and it's the closest to me.
 
-![Untitled design.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1652784173059/L94a_a0KL.png)
+![Untitled design.png](/blog-images/community-in-diversity/untitled-design-png.png)
 
 When I first entered the community, I was having very least knowledge about **Open Source, collaboration, community**, etc. But having the great ambiance of supper supportive and talented people around me, helps me nurture those skills.
 

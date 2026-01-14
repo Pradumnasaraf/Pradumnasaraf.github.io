@@ -37,6 +37,14 @@ export default function RootLayout({ children }) {
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
 
+        {/* RSS Feed */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          href="https://pradumnasaraf.dev/rss.xml"
+          title="Pradumna Saraf - Blog RSS Feed"
+        />
+
         {/* Explicit OG tags */}
         <meta property="og:title" content="Pradumna Saraf" />
         <meta

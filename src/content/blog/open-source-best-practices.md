@@ -5,7 +5,7 @@ date: '2022-04-14'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731592021968/72f26497-dd60-49f2-adf4-5f231db621ec.png'
+thumbnail: '/blog-images/open-source-best-practices/thumbnail.png'
 draft: false
 ---
 

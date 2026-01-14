@@ -5,7 +5,7 @@ date: '2024-08-27'
 author: 'Pradumna Saraf'
 category: 'ai'
 tags: ['ai', 'go', 'golang', 'google-gemini']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1724687461679/9fe91573-1626-4de9-a4e4-2d0dad7f2a9a.png'
+thumbnail: '/blog-images/ai-cli-with-golang/thumbnail.png'
 draft: false
 ---
 
@@ -31,7 +31,7 @@ Create a folder and open it in your favourite IDE/Editor. I am using VS Code and
 
 Once you are done with that a `go.mod` will be created.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r5lf3rwm8nz4yz32rsig.png)
+![Image description](/blog-images/ai-cli-with-golang/image-description.png)
 
 Although we can create and do everything manually for building CLI. But the great thing about Cobra Package is that it has its CLI that generates structure, generates files and installs packages for the CLI. This will help us speed up the process and less errors. To install the Cobra CLI tool use the below command:
 
@@ -41,7 +41,7 @@ Although we can create and do everything manually for building CLI. But the grea
 
 Once you have done that, you can check if the tool is installed by tying `cobra-cli` in the terminal and you will get a list of available. Now run `cobra-cli init` to set up the project. After running it will automatically create a `cmd` folder, `go.sum`, and `main.go` file. To test if it's working or not run `go run main.go`. You will see an output in the terminal about the CLI (like the screenshot below)
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j7d603r0n6i8zfpzz8vh.png)
+![Image description](/blog-images/ai-cli-with-golang/image-description-1.png)
 
 To communicate and use Google's Gemini API first we need to install the Gemini Golang SKD package, to do that execute the below command.
 
@@ -186,11 +186,11 @@ func getResponse() {
 
 If you getting a red squiggly line under the imported package names run `go mod tidy`. It will install the missing package and do a cleanup. Now, again execute the `go run main.go search`. This time you will get a response from the API for the Prompt we hardcoded, i.e, "Write a story about a AI and magic"
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3zec813988mnmcuxkrhx.png)
+![Image description](/blog-images/ai-cli-with-golang/image-description-2.png)
 
 In case you are encountering the below error check if your environment variable is set properly with the right name. You can check by executing the `printenv` command in your terminal and see if it's present there or not.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zqp61ccwtkvbmm1baj09.png)
+![Image description](/blog-images/ai-cli-with-golang/image-description-3.png)
 
 Once everything is working, let’s make the prompt dynamic so that we don’t have to hardcode the prompt directly into the code and we provide it via the terminal.
 
@@ -251,17 +251,17 @@ func getResponse(args []string) {
 
 If you execute the `go run main search` now, it will give you an error message in the terminal saying at least one arg is required. This means our code is working perfectly.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ynpemexdoy4mgk79ljxw.png)
+![Image description](/blog-images/ai-cli-with-golang/image-description-4.png)
 
 Now let's execute the command the right way giving it an argument - a prompt/question.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pxtvo82sifu6qrscnk5g.png)
+![Image description](/blog-images/ai-cli-with-golang/image-description-5.png)
 
 As you can see, it provided us with the answer. We pass the prompt in quotes so that we can add special characters like "?", ".", etc. So here it is, a fully functional AI-powered CLI.
 
 Now, if you want to publish the package so that your CLI can directly execute commands and be used from anywhere in the system, it’s very simple to do that. First, push your changes to GitHub and then head over to the URL [`https://pkg.go.dev/github.com/<repo-url>`](https://pkg.go.dev/github.com/<repo-url>). In my case, it would be [`https://pkg.go.dev/github.com/Pradumnasaraf/go-ai`](https://pkg.go.dev/github.com/Pradumnasaraf/go-ai). When you visit, you will see a request button; click on that to request adding the package to [`pkg.go.dev`](http://pkg.go.dev). Once you’re done, after a few hours, it will be on the website.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ph7rye15fgyttehdxv77.png)
+![Image description](/blog-images/ai-cli-with-golang/image-description-6.png)
 
 Once it’s live, you can simply download the CLI by using the `go install` command:
 

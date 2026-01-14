@@ -5,7 +5,7 @@ date: '2022-04-12'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591990644/7760574e-2596-4974-a5c9-1e1c35ad7b89.png'
+thumbnail: '/blog-images/github-profile/thumbnail.png'
 draft: false
 ---
 
@@ -39,9 +39,9 @@ The profile is based on the README file, it supports Markdown and some HTML elem
 
 Some awesome profile 👇
 
-![Screenshot from 2022-04-09 19-27-13.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1649747160351/JIFVW7rwL.png)
+![Screenshot from 2022-04-09 19-27-13.png](/blog-images/github-profile/screenshot-from-2022-04-09-19-27-13-png.png)
 
-![Screenshot from 2022-04-09 19-28-16.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1649747169243/amp9xcY7m.png)
+![Screenshot from 2022-04-09 19-28-16.png](/blog-images/github-profile/screenshot-from-2022-04-09-19-28-16-png.png)
 
 ## The only course you need
 
@@ -51,7 +51,7 @@ Couse Link - https://www.eddiejaoude.io/course-github-profile-landing
 
 (Course content)
 
-![Screenshot from 2022-04-12 08-56-03.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1649747223713/yST1SrA0e.png)
+![Screenshot from 2022-04-12 08-56-03.png](/blog-images/github-profile/screenshot-from-2022-04-12-08-56-03-png.png)
 
 ## "The only repo you need"
 

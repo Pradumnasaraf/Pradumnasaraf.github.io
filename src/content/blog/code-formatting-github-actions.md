@@ -5,7 +5,7 @@ date: '2023-05-24'
 author: 'Pradumna Saraf'
 category: 'javascript'
 tags: ['javascript', 'automation', 'prettier', 'github-actions']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1684651944128/e4c5da57-d579-4f11-9137-6d99878f7430.png'
+thumbnail: '/blog-images/code-formatting-github-actions/thumbnail.png'
 draft: false
 ---
 
@@ -83,7 +83,7 @@ In the final step, we automatically commit the formatted changes in the JavaScri
 
 To enable the Auto-commit Action for creating a commit with formatted changes, we need to have the appropriate write permissions. By default, it is set to read-only. To verify this, navigate to `Settings` -&gt; `Actions` -&gt; `General` and ensure that the workflow has both read and write permissions enabled.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1677262680057/74f1f50b-d9fe-4934-acd3-deafc5e0ab21.png)
+![](/blog-images/code-formatting-github-actions/image-01.png)
 
 ### Working
 
@@ -91,7 +91,7 @@ Now, whenever there is a push (either through commit or direct push) or a pull r
 
 ### Demo
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1684649713169/cdd255fa-3304-4e76-9417-82af276fcabb.gif)
+![](/blog-images/code-formatting-github-actions/image-02.gif)
 
 Congratulations on successfully automating JavaScript Code Formatting Using GitHub Actions and Prettier**🎉**
 

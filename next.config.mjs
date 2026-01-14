@@ -7,16 +7,6 @@ const nextConfig = {
         hostname: 'drive.google.com',
         pathname: '/thumbnail/**',
       },
-      {
-        protocol: 'https',
-        hostname: 'cdn.hashnode.com',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'dev-to-uploads.s3.amazonaws.com',
-        pathname: '/**',
-      },
     ],
   },
   async redirects() {

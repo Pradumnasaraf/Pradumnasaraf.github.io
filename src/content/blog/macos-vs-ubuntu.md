@@ -5,7 +5,7 @@ date: '2024-04-05'
 author: 'Pradumna Saraf'
 category: 'operating-system'
 tags: ['operating-system', 'github', 'opensource', 'git', 'githubaction']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1712163686280/539a8082-6412-4aa8-8141-e222e9dace05.png'
+thumbnail: '/blog-images/macos-vs-ubuntu/thumbnail.png'
 draft: false
 ---
 
@@ -44,11 +44,11 @@ The results were as I expected: Ubuntu took the lead. For this workflow to run (
 
 macOS Runner:
 
-![macos workflow result](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/40cognswgmb1mrspgboh.png)
+![macos workflow result](/blog-images/macos-vs-ubuntu/macos-workflow-result.png)
 
 Ubuntu Runner:
 
-![Ubuntu workflow result](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j1ugrf7htf3h5qsldk00.png)
+![Ubuntu workflow result](/blog-images/macos-vs-ubuntu/ubuntu-workflow-result.png)
 
 I tested multiple workflows, and not once did the macOS runner take the lead. So, the point I am trying to make is not that macOS is slow and not useful, but rather, going back to my original point and why I performed this test: Is it worth switching all my workflows to macOS, now that we have two runner options? The answer is NO.
 

@@ -54,5 +54,8 @@ export const metadata = {
   },
   alternates: {
     canonical: 'https://pradumnasaraf.dev/blog',
+    types: {
+      'application/rss+xml': 'https://pradumnasaraf.dev/rss.xml',
+    },
   },
 };

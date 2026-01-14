@@ -5,7 +5,7 @@ date: '2023-12-04'
 author: 'Pradumna Saraf'
 category: 'productivity'
 tags: ['productivity', 'docker', 'developer', 'devops', 'docker-compose']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1701669861995/9e4b7acb-cc87-4aef-82c6-ddac82e6427d.png'
+thumbnail: '/blog-images/top-docker-extensions/thumbnail.png'
 draft: false
 ---
 
@@ -22,7 +22,7 @@ Link: [https://open.docker.com/extensions/marketplace?extensionId=livecycle/dock
 
 Imagine you're working on a project, and you want your team to see what you've done. The Livecycle extension is like a magic button that lets you instantly share your work with your team. Quick feedback and easy collaboration make your development journey smoother.
 
-![Livecycle Extension](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jjasqlqneb9xzvzlrjld.png)
+![Livecycle Extension](/blog-images/top-docker-extensions/livecycle-extension.png)
 
 ## 2) **Portainer Extension**
 
@@ -30,7 +30,7 @@ Imagine you're working on a project, and you want your team to see what you've d
 
 Managing Docker containers can be a bit tricky, especially when there are many of them. It helps you manage all of them from a single place, not only Docker containers but also Kubernetes clusters and much more.
 
-![Portainer Extension](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3io7vginxv0ybkomschi.png)
+![Portainer Extension](/blog-images/top-docker-extensions/portainer-extension.png)
 
 ## 3) **Snyk Extension**
 
@@ -38,7 +38,7 @@ Link: [https://open.docker.com/extensions/marketplace?extensionId=snyk/snyk-dock
 
 Security is crucial, even in the Docker world. Snyk is your superhero. It checks your Docker images for vulnerabilities and gives you tips on how to fix them.
 
-![Snyk Extension](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f9f6nr8fa1oirvqne5go.png)
+![Snyk Extension](/blog-images/top-docker-extensions/snyk-extension.png)
 
 ## 4) **Ddosify Extension**
 
@@ -46,7 +46,7 @@ Link: [https://open.docker.com/extensions/marketplace?extensionId=ddosify/ddosif
 
 Ddosify lets you load test your application to check how it will handle a person when there is an actual DDoS attack on your application. It's good to have an application ready for that.
 
-![Ddosify Extension](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/iu221o8qqgk2tihyojm8.png)
+![Ddosify Extension](/blog-images/top-docker-extensions/ddosify-extension.png)
 
 ## 5) **Excalidraw Extension**
 
@@ -54,7 +54,7 @@ Link: [https://open.docker.com/extensions/marketplace?extensionId=ivancurkovic04
 
 This is my personal pick. Sometimes, we developers need to explain ideas better. So, this is a pretty good canvas to draw your ideas. The best thing is, sometimes we have no internet, and this saves a lot, as it runs on the local machine.
 
-![Excalidraw Extension](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0ch5loho2rdspyfmjpjb.png)
+![Excalidraw Extension](/blog-images/top-docker-extensions/excalidraw-extension.png)
 
 So there you have it – five awesome Docker Extensions to make your development life easier. Happy coding!
 

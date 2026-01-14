@@ -5,7 +5,7 @@ date: '2025-08-19'
 author: 'Pradumna Saraf'
 category: 'ai'
 tags: ['ai', 'docker', 'devops', 'containers', 'docker-compose', 'llm']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1755068741052/418442a0-f208-4801-ab83-f22d2052567e.png'
+thumbnail: '/blog-images/running-ai-models-with-docker-compose/thumbnail.png'
 draft: false
 ---
 
@@ -233,13 +233,13 @@ Above is the complete **Dockerfile** code. We have taken a couple of best practi
 
 Once we are done with that, now, let’s run the Compose application by executing the `docker compose up` command in the terminal. You will see a similar output in the terminal as shown in the screenshot.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1755015760413/2f67289e-a408-4b91-8600-b791157886d9.png)
+![](/blog-images/running-ai-models-with-docker-compose/image-01.png)
 
 Now, we can head over `localhost:3000` in our browser and test out the application. You will have a chat window like ChatGPT, type your prompt and ask questions.
 
 Here is a short demo:
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1755022613140/3f7e7e4a-de76-4f8e-83aa-ed6ad2d87afd.gif)
+![](/blog-images/running-ai-models-with-docker-compose/image-02.gif)
 
 That was it. That’s how you can run Running AI Models with Docker Compose.
 

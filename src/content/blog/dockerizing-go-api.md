@@ -5,7 +5,7 @@ date: '2024-09-05'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'go', 'mysql', 'golang', 'docker-compose']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1724572635234/6f583c9d-84b9-4679-88b6-97c5136a92a9.png'
+thumbnail: '/blog-images/dockerizing-go-api/thumbnail.png'
 draft: false
 ---
 
@@ -111,11 +111,11 @@ Another point, it often happens when working with Docker Compose where we have t
 
 Now when we do Docker compose for 1st time, we might encounter an error saying permission denied because it doesn't have permission as well as a database with the name `my_database`, so we need to both by execing into the container.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f4ty68bfiuz6nkgviy3i.png)
+![Image description](/blog-images/dockerizing-go-api/image-description.png)
 
 Even though our app has crashed the DB is still up and running. We can check by doing `docker ps`.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k5jn38wmb9oxdhafafjr.png)
+![Image description](/blog-images/dockerizing-go-api/image-description-1.png)
 
 Now exec into the container by doing `docker exec -it <container-id> sh`. Container ID can be copied from the output after executing `docker ps`. Once we exec into the container, now log into the `mysql` by the below command:
 
@@ -138,6 +138,6 @@ FLUSH PRIVILEGES;
 
 Once we are done, we need to stop the running compose service and restart again by doing `docker compose up`
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yhy1fhckjcmdbb4b0vx2.png)
+![Image description](/blog-images/dockerizing-go-api/image-description-2.png)
 
 That's it for this blog. I'm glad you're still reading and made it to the end—thank you so much for your support and reading. I sometimes share tips on Golang on [Twitter](https://x.com/pradumna_saraf). You can connect with me there.

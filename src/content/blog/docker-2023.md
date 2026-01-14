@@ -5,7 +5,7 @@ date: '2023-10-29'
 author: 'Pradumna Saraf'
 category: 'ai'
 tags: ['ai', 'docker', 'security', 'devops', 'containers', 'docker-compose']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1724688191450/b274e734-c555-4891-81b5-c14887a06ef2.png'
+thumbnail: '/blog-images/docker-2023/thumbnail.png'
 draft: false
 ---
 
@@ -16,7 +16,7 @@ Here are some of the highlights:
 
 ### Docker AI
 
-![Docker AI Poster](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ia4pbrjymqof103a12zd.png)
+![Docker AI Poster](/blog-images/docker-2023/docker-ai-poster.png)
 
 With Docker AI, Docker aims to eliminate repetitive, mundane configuration tasks. It is employed throughout the development lifecycle for fast, easy, and portable application development.
 
@@ -35,7 +35,7 @@ Their focus is on 4 pillars:
 
 ### Docker Compose Watch
 
-![Compose Watch Banner](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/raw1cs9f3fhiw05c2p7r.png)
+![Compose Watch Banner](/blog-images/docker-2023/compose-watch-banner.png)
 
 Hot reloading has become feasible in the Docker Compose application. In the past, the process of rebuilding and recreating the container was tedious and disrupted the workflow.
 
@@ -61,7 +61,7 @@ services:
 
 ### Docker Debug
 
-![Docker Debug Poster](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xcgh7naozxiksnbhw98f.jpeg)
+![Docker Debug Poster](/blog-images/docker-2023/docker-debug-poster.jpeg)
 
 Docker Debug offers an integrated toolbox to debug containerized apps both locally and remotely. It allows users to view logs, run commands, check files, and so much more. It aids in debugging and quickly resolving problems.
 
@@ -69,7 +69,7 @@ Docker Debug offers an integrated toolbox to debug containerized apps both local
 
 ### Next-Gen Docker Build
 
-![Docker Next-Gen Docker Build Poster](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tkbch49ofqkh4wgc0czl.jpeg)
+![Docker Next-Gen Docker Build Poster](/blog-images/docker-2023/docker-next-gen-docker-build-poster.jpeg)
 
 Docker images are now being constructed 39x faster with the next-gen Docker Build. The building process takes place in the cloud, and users can share the build cache with their teammates. The primary emphasis is on reducing waiting time and honing in on development.
 
@@ -81,7 +81,7 @@ Docker Scout offers insights into the security of container images, enabling use
 
 The core focus is on bolstering security throughout the entire SDLC.
 
-![Docker Scout Poster](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/usreq076wmel8pfn2quy.png)
+![Docker Scout Poster](/blog-images/docker-2023/docker-scout-poster.png)
 
 ---
 

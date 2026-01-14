@@ -5,7 +5,7 @@ date: '2024-12-21'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'github', 'developer', 'devops', 'ci-cd', 'github-actions-1']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1738211791720/6569d37b-3506-4fd2-95b6-47a6c809a8cd.png'
+thumbnail: '/blog-images/multi-arch-docker-images-ghcr-buildx-github-actions/thumbnail.png'
 draft: false
 ---
 
@@ -140,19 +140,19 @@ That's it, that was all about the explanation workflow. Now commit the changes. 
 
 I have created a release on my DevOps repo with `v2.3.3`. Now, It will push an image with the `latest` as well as `2.3.3`. It gets the version number from the `package.json` using an action to extract it. You can do this kind of workaround to make it more seamless and powerful.
 
-![GitHub Actions bar](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lj3fb0ci609cdzcqb9jm.png)
+![GitHub Actions bar](/blog-images/multi-arch-docker-images-ghcr-buildx-github-actions/github-actions-bar.png)
 
 Now, go back to your repo and under the **Packages** section you will see your package (image) got published with the name you provided, with a little container icon.
 
-![GitHub repo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jlf9flln06wfqku5l7us.png)
+![GitHub repo](/blog-images/multi-arch-docker-images-ghcr-buildx-github-actions/github-repo.png)
 
 If you not now seeing the **Packages** section, turn it on from the **About** setting of the repo. And if it's turned on, the workflow runs successfully and you get a message **No packages published**, head over to your GitHub profile page, click on the **Packages** tab then click on the package name. It will ask you to link with a repo and link it with the repo you use to create the workflow. Sometimes due to mismatching of the repo and image name the package doesn't show automatically on the repo.
 
-![Pradumna's GitHub Packages section](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/61kldg14955u7nsdejxg.png)
+![Pradumna's GitHub Packages section](/blog-images/multi-arch-docker-images-ghcr-buildx-github-actions/pradumna-s-github-packages-section.png)
 
 Once you get the package linked to your repo, click on the package name, now you see will the image with all the architecture we provided.
 
-![Pradumna's DevOps repo image](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gay74rsz2f07u2t11qns.png)
+![Pradumna's DevOps repo image](/blog-images/multi-arch-docker-images-ghcr-buildx-github-actions/pradumna-s-devops-repo-image.png)
 
 Now the great part is that if someone pulls an image, for eg `docker pull` [`ghcr.io/pradumnasaraf/devops:2.3.3`](http://ghcr.io/pradumnasaraf/devops:2.3.3) docker will pull the image for that architecture only we don't need to explicitly mention it.
 
