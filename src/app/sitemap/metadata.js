@@ -31,12 +31,14 @@ export const metadata = {
         alt: 'Pradumna Saraf - Site Map',
       },
     ],
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Site Map | Pradumna Saraf',
     description:
       'Navigate through all pages and resources on pradumnasaraf.dev',
+    creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
   robots: {
@@ -49,5 +51,8 @@ export const metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  alternates: {
+    canonical: 'https://pradumnasaraf.dev/sitemap',
   },
 };

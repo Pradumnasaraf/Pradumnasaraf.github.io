@@ -38,6 +38,7 @@ export const metadata = {
     title: "Pradumna's Speaking",
     description:
       "Explore Pradumna Saraf's speaking engagements, conferences, meetups, and webinars.",
+    creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/speaking-og.png'],
   },
   robots: {

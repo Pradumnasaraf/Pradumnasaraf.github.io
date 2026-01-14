@@ -2,12 +2,16 @@ export const metadata = {
   title: 'Page Not Found | Pradumna Saraf',
   description:
     "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
-  robots: 'noindex, nofollow',
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: 'Page Not Found | Pradumna Saraf',
     description:
       "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
     url: 'https://pradumnasaraf.dev/404',
+    siteName: 'Pradumna Saraf',
     type: 'website',
     images: [
       {
@@ -17,12 +21,14 @@ export const metadata = {
         alt: 'Pradumna Saraf - Developer Advocate & Docker Captain',
       },
     ],
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Page Not Found | Pradumna Saraf',
     description:
       "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
+    creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
 };
