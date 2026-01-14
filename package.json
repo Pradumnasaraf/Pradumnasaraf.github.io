@@ -11,8 +11,6 @@
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prepare": "husky",
     "pre-commit": "lint-staged",
-    "migrate:images": "node scripts/migrate-hashnode-images.js",
-    "organize:images": "node scripts/organize-blog-images.js",
     "validate:images": "node scripts/validate-blog-images.js",
     "prebuild": "npm run validate:images"
   },

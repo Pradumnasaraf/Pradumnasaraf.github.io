@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Speaking & Events | Pradumna Saraf',
+  title: "Pradumna's Speaking",
   description:
     "Explore Pradumna Saraf's speaking engagements, conferences, meetups, and webinars. Docker Captain, CNCF contributor, and DevRel professional sharing knowledge worldwide.",
   keywords: [
@@ -17,14 +17,14 @@ export const metadata = {
     'Community Building',
   ],
   openGraph: {
-    title: 'Speaking & Events | Pradumna Saraf',
+    title: "Pradumna's Speaking",
     description:
       "Explore Pradumna Saraf's speaking engagements, conferences, meetups, and webinars. Docker Captain, CNCF contributor, and DevRel professional.",
     url: 'https://pradumnasaraf.dev/speaking',
     siteName: 'Pradumna Saraf',
     images: [
       {
-        url: '/media/pradumna-saraf-og.png',
+        url: 'https://pradumnasaraf.dev/media/speaking-og.png',
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Speaking & Events',
@@ -35,10 +35,10 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Speaking & Events | Pradumna Saraf',
+    title: "Pradumna's Speaking",
     description:
       "Explore Pradumna Saraf's speaking engagements, conferences, meetups, and webinars.",
-    images: ['/media/pradumna-saraf-og.png'],
+    images: ['https://pradumnasaraf.dev/media/speaking-og.png'],
   },
   robots: {
     index: true,
