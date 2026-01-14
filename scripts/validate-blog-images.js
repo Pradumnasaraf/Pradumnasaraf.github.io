@@ -140,8 +140,12 @@ function validateImages() {
     console.log('⚠️  Build will fail until all images are present.\n');
     console.log('💡 To fix:');
     console.log('   1. Check if images were moved or renamed');
-    console.log('   2. Run: npm run migrate:images (if images are on CDN)');
-    console.log('   3. Run: npm run organize:images (to reorganize images)\n');
+    console.log(
+      '   2. Ensure the referenced file exists under public/ at the same path'
+    );
+    console.log(
+      '   3. Update the blog markdown frontmatter/content to point to the correct local path\n'
+    );
 
     process.exit(1);
   }
