@@ -7,6 +7,7 @@ export const metadata = {
     description:
       "All of Pradumna Saraf's important links in one place: website, blog, social media, and more.",
     url: 'https://pradumnasaraf.dev/links',
+    siteName: 'Pradumna Saraf',
     images: [
       {
         url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
@@ -15,6 +16,8 @@ export const metadata = {
         alt: 'Pradumna Saraf - Links',
       },
     ],
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
@@ -22,5 +25,12 @@ export const metadata = {
     description:
       "All of Pradumna Saraf's important links in one place: website, blog, social media, and more.",
     images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://pradumnasaraf.dev/links',
   },
 };

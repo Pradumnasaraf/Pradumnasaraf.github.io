@@ -229,9 +229,8 @@
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
   margin-top: 0.35rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -321,7 +320,7 @@
   color: #000000;
   font-size: 1.25rem;
   font-weight: 400;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: none;
   width: 100%;
   cursor: pointer;
@@ -482,13 +481,14 @@
 
   .link-button {
     padding: 0.8rem 0.875rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     min-height: 50px;
-    border: 2px solid #000000;
+    border: 1.5px solid #000000;
+    border-radius: 10px;
   }
 
   .link-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
@@ -514,18 +514,9 @@
   user-select: none;
 }
 
-/* Smooth scrolling */
-@media (prefers-reduced-motion: no-preference) {
-  .link-button {
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
-
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .link-button,
-  .link-arrow,
-  .back-link {
+  .link-button {
     transition: none;
   }
 

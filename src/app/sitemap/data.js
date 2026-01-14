@@ -93,6 +93,17 @@ export const sitemapPages = [
     priorityLabel: 'High',
   },
   {
+    url: '/links',
+    href: '/links',
+    title: 'Links',
+    priority: '0.8',
+    changefreq: 'monthly',
+    description:
+      'All important links in one place: website, blog, social media, and more',
+    category: 'Communication',
+    priorityLabel: 'High',
+  },
+  {
     url: '/sitemap',
     href: '/sitemap',
     title: 'Sitemap',

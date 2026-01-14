@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import {
   FiGithub,
   FiTwitter,
@@ -18,7 +18,6 @@ import './style.css';
 export default function LinksPage() {
   const [showQRCode, setShowQRCode] = useState(false);
   const [copied, setCopied] = useState(false);
-  const shareButtonRef = useRef(null);
 
   const profileData = {
     name: 'Pradumna Saraf',
@@ -167,7 +166,6 @@ export default function LinksPage() {
         <div className="profile-section">
           {/* Share Button */}
           <button
-            ref={shareButtonRef}
             className="share-button"
             onClick={handleShareClick}
             aria-label="Share"
