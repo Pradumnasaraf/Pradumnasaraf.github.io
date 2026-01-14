@@ -21,7 +21,6 @@ export const metadata = {
     description:
       "Explore Pradumna Saraf's speaking engagements, conferences, meetups, and webinars. Docker Captain, CNCF contributor, and DevRel professional.",
     url: 'https://pradumnasaraf.dev/speaking',
-    siteName: 'Pradumna Saraf',
     images: [
       {
         url: 'https://pradumnasaraf.dev/media/speaking-og.png',

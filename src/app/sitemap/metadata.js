@@ -21,7 +21,6 @@ export const metadata = {
     description:
       'Navigate through all pages and resources on pradumnasaraf.dev',
     url: 'https://pradumnasaraf.dev/sitemap',
-    siteName: 'Pradumna Saraf',
     type: 'website',
     images: [
       {

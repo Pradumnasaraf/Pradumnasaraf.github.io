@@ -9,7 +9,6 @@ export const metadata = {
     description:
       'Professional CV and work experience of Pradumna Saraf, showcasing expertise in open source development, technical content creation, and community building.',
     url: 'https://pradumnasaraf.dev/cv',
-    siteName: 'Pradumna Saraf',
     type: 'website',
     images: [
       {

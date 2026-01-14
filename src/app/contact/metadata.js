@@ -11,7 +11,6 @@ export const metadata = {
     description:
       'Contact Pradumna Saraf - Developer Advocate, Docker Captain, and Microsoft MVP.',
     url: 'https://pradumnasaraf.dev/contact',
-    siteName: 'Pradumna Saraf',
     type: 'website',
     images: [
       {

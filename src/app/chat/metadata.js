@@ -9,7 +9,6 @@ export const metadata = {
     description:
       'Schedule a meeting with Pradumna Saraf - Developer Advocate and Docker Captain. Book a time for consulting, speaking engagements, or general discussions.',
     url: 'https://pradumnasaraf.dev/chat',
-    siteName: 'Pradumna Saraf',
     type: 'website',
     images: [
       {

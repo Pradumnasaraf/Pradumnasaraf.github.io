@@ -9,7 +9,6 @@ export const metadata = {
     description:
       'Discover the tools, software, and gear that Pradumna Saraf uses daily as a Developer Advocate and Docker Captain. A comprehensive list of development tools, hardware, and productivity apps.',
     url: 'https://pradumnasaraf.dev/toolkit',
-    siteName: 'Pradumna Saraf',
     images: [
       {
         url: 'https://pradumnasaraf.dev/media/toolkit-og.png',

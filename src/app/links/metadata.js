@@ -7,7 +7,6 @@ export const metadata = {
     description:
       "All of Pradumna Saraf's important links in one place: website, blog, social media, and more.",
     url: 'https://pradumnasaraf.dev/links',
-    siteName: 'Pradumna Saraf',
     images: [
       {
         url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',

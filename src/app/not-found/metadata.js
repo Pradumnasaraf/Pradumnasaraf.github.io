@@ -11,7 +11,6 @@ export const metadata = {
     description:
       "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
     url: 'https://pradumnasaraf.dev/404',
-    siteName: 'Pradumna Saraf',
     type: 'website',
     images: [
       {

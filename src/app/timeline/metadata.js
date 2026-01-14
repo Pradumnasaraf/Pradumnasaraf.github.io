@@ -9,7 +9,6 @@ export const metadata = {
     description:
       'Explore the professional journey of Pradumna Saraf - from early career to becoming a Developer Advocate and Docker Captain. A chronological timeline of achievements and milestones.',
     url: 'https://pradumnasaraf.dev/timeline',
-    siteName: 'Pradumna Saraf',
     images: [
       {
         url: 'https://pradumnasaraf.dev/media/timeline-og.png',

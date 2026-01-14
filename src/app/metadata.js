@@ -12,7 +12,6 @@ export const metadata = {
     description:
       'Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
     url: 'https://pradumnasaraf.dev',
-    siteName: 'Pradumna Saraf',
     images: [
       {
         url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
