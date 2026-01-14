@@ -216,11 +216,10 @@
 }
 
 .profile-bio {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   color: #000000;
   line-height: 1.5;
   margin: 0 0 1rem 0;
-  max-width: 500px;
   font-weight: 400;
 }
 
@@ -231,7 +230,8 @@
   justify-content: center;
   gap: 1.25rem;
   margin-top: 0;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.35rem;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -286,11 +286,11 @@
   justify-content: center;
   padding: 0.875rem 1rem;
   background: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 8px;
+  border: 1.5px solid #000000;
+  border-radius: 10px;
   text-decoration: none;
   color: #000000;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   transition: background-color 0.2s ease;
   box-shadow: none;
@@ -315,7 +315,7 @@
   width: 100%;
   text-align: center;
   line-height: 1.4;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #000000;
 }
 
@@ -374,17 +374,16 @@
   }
 
   .profile-bio {
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.4;
     padding: 0;
     margin-bottom: 1rem;
-    max-width: 100%;
   }
 
   .social-icons {
     gap: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 2rem;
+    margin-top: 0.35rem;
+    margin-bottom: 1.5rem;
     max-width: 100%;
     justify-content: center;
     row-gap: 1.25rem;
@@ -408,14 +407,14 @@
 
   .link-button {
     padding: 0.875rem 1rem;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     min-height: 52px;
-    border-radius: 8px;
-    border: 2px solid #000000;
+    border-radius: 10px;
+    border: 1.5px solid #000000;
   }
 
   .link-title {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.4;
   }
 }
@@ -432,14 +431,14 @@
   }
 
   .profile-bio {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     margin-bottom: 0.875rem;
   }
 
   .social-icons {
     gap: 1.25rem;
-    margin-top: 0;
-    margin-bottom: 1.75rem;
+    margin-top: 0.35rem;
+    margin-bottom: 1.5rem;
     row-gap: 1rem;
   }
 
