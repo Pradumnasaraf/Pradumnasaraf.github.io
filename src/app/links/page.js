@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import {
   FiGithub,
   FiTwitter,
@@ -11,16 +11,13 @@ import {
   FiShare2,
   FiCopy,
   FiX,
-  FiGrid,
 } from 'react-icons/fi';
 import { SiBluesky, SiThreads } from 'react-icons/si';
 import './style.css';
 
 export default function LinksPage() {
-  const [showShareMenu, setShowShareMenu] = useState(false);
   const [showQRCode, setShowQRCode] = useState(false);
   const [copied, setCopied] = useState(false);
-  const shareMenuRef = useRef(null);
   const shareButtonRef = useRef(null);
 
   const profileData = {
@@ -31,46 +28,25 @@ export default function LinksPage() {
 
   const qrCodeUrl = 'https://pradumnasaraf.dev/links';
 
-  // Close share menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        showShareMenu &&
-        shareMenuRef.current &&
-        !shareMenuRef.current.contains(event.target) &&
-        shareButtonRef.current &&
-        !shareButtonRef.current.contains(event.target)
-      ) {
-        setShowShareMenu(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [showShareMenu]);
-
   const handleCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(qrCodeUrl);
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
-        setShowShareMenu(false);
       }, 1500);
     } catch (err) {
       console.error('Failed to copy:', err);
     }
   };
 
-  const handleShowQRCode = () => {
-    setShowQRCode(true);
-    setShowShareMenu(false);
-  };
-
   const handleCloseQRCode = () => {
     setShowQRCode(false);
+  };
+
+  const handleShareClick = () => {
+    // Directly open QR code modal for all devices
+    setShowQRCode(true);
   };
 
   // Social media icons - displayed below name (all black/monochrome)
@@ -148,38 +124,6 @@ export default function LinksPage() {
 
   return (
     <div className="links-container">
-      {/* Share Button */}
-      <button
-        ref={shareButtonRef}
-        className="share-button"
-        onClick={() => setShowShareMenu(!showShareMenu)}
-        aria-label="Share"
-      >
-        <FiShare2 />
-      </button>
-
-      {/* Share Menu */}
-      {showShareMenu && (
-        <div ref={shareMenuRef} className="share-menu">
-          <button
-            className="share-menu-item"
-            onClick={handleCopyLink}
-            aria-label="Copy link"
-          >
-            <FiCopy />
-            <span>{copied ? 'Copied!' : 'Copy Link'}</span>
-          </button>
-          <button
-            className="share-menu-item"
-            onClick={handleShowQRCode}
-            aria-label="Show QR code"
-          >
-            <FiGrid />
-            <span>QR Code</span>
-          </button>
-        </div>
-      )}
-
       {/* QR Code Modal */}
       {showQRCode && (
         <div className="qr-modal" onClick={handleCloseQRCode}>
@@ -194,7 +138,7 @@ export default function LinksPage() {
             >
               <FiX />
             </button>
-            <h3>Scan QR Code</h3>
+            <h3>Share</h3>
             <Image
               src="/media/qr-code.png"
               alt="QR Code"
@@ -203,6 +147,17 @@ export default function LinksPage() {
               className="qr-code-image"
             />
             <p className="qr-code-url">{qrCodeUrl}</p>
+            <button
+              className="qr-copy-button"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCopyLink();
+              }}
+              aria-label="Copy link"
+            >
+              <FiCopy />
+              <span>{copied ? 'Copied!' : 'Copy Link'}</span>
+            </button>
           </div>
         </div>
       )}
@@ -210,6 +165,17 @@ export default function LinksPage() {
       <div className="links-content">
         {/* Profile Section */}
         <div className="profile-section">
+          {/* Share Button */}
+          <button
+            ref={shareButtonRef}
+            className="share-button"
+            onClick={handleShareClick}
+            aria-label="Share"
+            title="Share"
+          >
+            <FiShare2 />
+          </button>
+
           {profileData.avatar && (
             <div className="avatar-wrapper">
               <Image

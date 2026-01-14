@@ -12,9 +12,9 @@
 
 /* Share Button */
 .share-button {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -32,6 +32,34 @@
   box-shadow: none;
 }
 
+.share-button::before {
+  content: 'Share';
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000000;
+  color: #ffffff;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  font-weight: 400;
+}
+
+.share-button:hover::before {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .share-button::before {
+    display: none;
+  }
+}
+
 .share-button:hover {
   background: #f5f5f5;
   transform: scale(1.05);
@@ -39,54 +67,6 @@
 
 .share-button:active {
   transform: scale(0.95);
-}
-
-/* Share Menu */
-.share-menu {
-  position: fixed;
-  top: 3.5rem;
-  right: 1rem;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 99;
-  min-width: 160px;
-  overflow: hidden;
-}
-
-.share-menu-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: 100%;
-  padding: 0.875rem 1rem;
-  background: #ffffff;
-  border: none;
-  border-bottom: 1px solid #f0f0f0;
-  text-align: left;
-  cursor: pointer;
-  font-size: 0.95rem;
-  color: #000000;
-  transition: background-color 0.2s ease;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.share-menu-item:last-child {
-  border-bottom: none;
-}
-
-.share-menu-item:hover {
-  background: #f5f5f5;
-}
-
-.share-menu-item:active {
-  background: #eeeeee;
-}
-
-.share-menu-item svg {
-  font-size: 1rem;
-  flex-shrink: 0;
 }
 
 /* QR Code Modal */
@@ -155,7 +135,37 @@
   font-size: 0.875rem;
   color: #666666;
   word-break: break-all;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.qr-copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.qr-copy-button:hover {
+  background: #333333;
+}
+
+.qr-copy-button:active {
+  background: #1a1a1a;
+}
+
+.qr-copy-button svg {
+  font-size: 1rem;
 }
 
 .links-content {
@@ -178,6 +188,7 @@
   width: 100%;
   padding: 0;
   margin-bottom: 1.75rem;
+  position: relative;
 }
 
 .avatar-wrapper {
@@ -318,23 +329,18 @@
   }
 
   .share-button {
-    top: 0.75rem;
-    right: 0.75rem;
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    transform: none;
     width: 36px;
     height: 36px;
     font-size: 0.9rem;
     border: 1px solid #000000;
   }
 
-  .share-menu {
-    top: 3rem;
-    right: 0.75rem;
-    min-width: 140px;
-  }
-
-  .share-menu-item {
-    padding: 0.75rem 0.875rem;
-    font-size: 0.9rem;
+  .share-button:hover {
+    transform: scale(1.05);
   }
 
   .links-content {
@@ -347,6 +353,7 @@
   .profile-section {
     gap: 0;
     padding: 0;
+    padding-top: 0.75rem;
     margin-bottom: 1.75rem;
     width: 100%;
   }
