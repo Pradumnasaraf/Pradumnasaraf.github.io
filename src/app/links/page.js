@@ -2,18 +2,18 @@
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import {
-  FaGithub,
-  FaTwitter,
-  FaLinkedin,
-  FaEnvelope,
-  FaYoutube,
-  FaInstagram,
-  FaShare,
-  FaCopy,
-  FaQrcode,
-  FaTimes,
-} from 'react-icons/fa';
-import { SiHashnode, SiGoogle } from 'react-icons/si';
+  FiGithub,
+  FiTwitter,
+  FiLinkedin,
+  FiMail,
+  FiYoutube,
+  FiInstagram,
+  FiShare2,
+  FiCopy,
+  FiX,
+  FiGrid,
+} from 'react-icons/fi';
+import { SiBluesky, SiThreads } from 'react-icons/si';
 import './style.css';
 
 export default function LinksPage() {
@@ -73,47 +73,47 @@ export default function LinksPage() {
     setShowQRCode(false);
   };
 
-  // Social media icons - displayed below name (exact order from bio.link, all black/monochrome)
+  // Social media icons - displayed below name (all black/monochrome)
   const socialLinks = [
     {
       id: 'twitter',
       url: 'https://twitter.com/pradumna_saraf',
-      icon: FaTwitter,
+      icon: FiTwitter,
     },
     {
       id: 'linkedin',
       url: 'https://linkedin.com/in/pradumnasaraf',
-      icon: FaLinkedin,
+      icon: FiLinkedin,
     },
     {
       id: 'github',
       url: 'https://github.com/Pradumnasaraf',
-      icon: FaGithub,
+      icon: FiGithub,
     },
     {
-      id: 'hashnode',
-      url: 'https://hashnode.com/@pradumnasaraf',
-      icon: SiHashnode,
+      id: 'bluesky',
+      url: 'https://bsky.app/profile/pradumnasaraf.bsky.social',
+      icon: SiBluesky,
     },
     {
-      id: 'google',
-      url: 'https://g.dev/pradumnasaraf',
-      icon: SiGoogle,
+      id: 'threads',
+      url: 'https://threads.net/@pradumnasaraf',
+      icon: SiThreads,
     },
     {
       id: 'instagram',
       url: 'https://instagram.com/pradumnasaraf',
-      icon: FaInstagram,
+      icon: FiInstagram,
     },
     {
       id: 'youtube',
       url: 'https://youtube.com/@pradumnasaraf',
-      icon: FaYoutube,
+      icon: FiYoutube,
     },
     {
       id: 'email',
       url: 'mailto:pradumnasaraf@gmail.com',
-      icon: FaEnvelope,
+      icon: FiMail,
     },
   ];
 
@@ -155,7 +155,7 @@ export default function LinksPage() {
         onClick={() => setShowShareMenu(!showShareMenu)}
         aria-label="Share"
       >
-        <FaShare />
+        <FiShare2 />
       </button>
 
       {/* Share Menu */}
@@ -166,7 +166,7 @@ export default function LinksPage() {
             onClick={handleCopyLink}
             aria-label="Copy link"
           >
-            <FaCopy />
+            <FiCopy />
             <span>{copied ? 'Copied!' : 'Copy Link'}</span>
           </button>
           <button
@@ -174,7 +174,7 @@ export default function LinksPage() {
             onClick={handleShowQRCode}
             aria-label="Show QR code"
           >
-            <FaQrcode />
+            <FiGrid />
             <span>QR Code</span>
           </button>
         </div>
@@ -192,7 +192,7 @@ export default function LinksPage() {
               onClick={handleCloseQRCode}
               aria-label="Close"
             >
-              <FaTimes />
+              <FiX />
             </button>
             <h3>Scan QR Code</h3>
             <Image
