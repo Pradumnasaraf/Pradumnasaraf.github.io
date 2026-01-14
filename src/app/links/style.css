@@ -270,6 +270,35 @@
   color: inherit;
 }
 
+/* Feather icons (stroke-based) - make strokes thinner */
+.social-icon-stroke svg,
+.social-icon-stroke svg path {
+  stroke-width: 1.5 !important;
+  stroke: currentColor;
+  fill: none !important;
+}
+
+.social-icon-stroke svg circle,
+.social-icon-stroke svg rect,
+.social-icon-stroke svg line,
+.social-icon-stroke svg polyline,
+.social-icon-stroke svg polygon {
+  stroke-width: 1.5 !important;
+}
+
+/* Simple Icons (fill-based) - make them appear thinner using scale */
+.social-icon-filled svg {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.social-icon-filled svg path,
+.social-icon-filled svg circle,
+.social-icon-filled svg rect,
+.social-icon-filled svg polygon {
+  fill: currentColor;
+}
+
 /* Links Section */
 .links-section {
   width: 100%;

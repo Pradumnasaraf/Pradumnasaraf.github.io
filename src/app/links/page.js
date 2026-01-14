@@ -202,7 +202,7 @@ export default function LinksPage() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-icon-link"
+                    className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' ? 'social-icon-filled' : 'social-icon-stroke'}`}
                     aria-label={social.id}
                   >
                     <IconComponent className="social-icon" />
