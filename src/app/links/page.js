@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import {
   FiGithub,
-  FiLinkedin,
   FiMail,
   FiYoutube,
   FiInstagram,
@@ -11,7 +10,7 @@ import {
   FiCopy,
   FiX,
 } from 'react-icons/fi';
-import { SiBluesky, SiThreads, SiX } from 'react-icons/si';
+import { SiBluesky, SiThreads, SiX, SiLinkedin } from 'react-icons/si';
 import './style.css';
 
 export default function LinksPage() {
@@ -57,7 +56,7 @@ export default function LinksPage() {
     {
       id: 'linkedin',
       url: 'https://linkedin.com/in/pradumnasaraf',
-      icon: FiLinkedin,
+      icon: SiLinkedin,
     },
     {
       id: 'github',
@@ -199,7 +198,7 @@ export default function LinksPage() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' || social.id === 'twitter' ? 'social-icon-filled' : 'social-icon-stroke'}`}
+                    className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' || social.id === 'twitter' || social.id === 'linkedin' ? 'social-icon-filled' : 'social-icon-stroke'}`}
                     aria-label={social.id}
                   >
                     <IconComponent className="social-icon" />
