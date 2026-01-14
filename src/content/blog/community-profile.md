@@ -5,7 +5,7 @@ date: '2022-04-10'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591969595/d993a29b-6aff-4663-b431-0369dd488984.png'
+thumbnail: '/blog-images/community-profile/thumbnail.png'
 draft: false
 ---
 
@@ -20,7 +20,7 @@ A project includes recommended community health files, such as `README`, `CODE_O
 
 ## ▶️ Steps to check the checklist:
 
-![Click on Insights.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1649571764732/nIMQUAoRP.png)
+![Click on Insights.png](/blog-images/community-profile/click-on-insights-png.png)
 
 ## Checklist elements:
 

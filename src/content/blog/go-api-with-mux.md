@@ -5,7 +5,7 @@ date: '2023-12-31'
 author: 'Pradumna Saraf'
 category: 'go'
 tags: ['go', 'opensource', 'apis', 'mux']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591378704/243d21c1-2b50-404e-aefa-60d9dbaffba2.png'
+thumbnail: '/blog-images/go-api-with-mux/thumbnail.png'
 draft: false
 ---
 
@@ -56,7 +56,7 @@ After you execute the above command it will add the dependencies to `go.mod` the
 
 Now your file/folder structure will look something like this (If you are in VSCode)
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1677307422592/7fdf7ade-7da4-4733-8ded-17d84c46e2a7.png)
+![](/blog-images/go-api-with-mux/image-01.png)
 
 ### Writing the logic
 
@@ -131,11 +131,11 @@ go run ./
 
 You will get promoted with a message in the terminal. Something like this
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1677310005990/2fd324c2-63b8-4cab-b421-9e15bd47b4e7.png)
+![](/blog-images/go-api-with-mux/image-02.png)
 
 Now, open a web browser and navigate to **http://localhost:8080**\*\*.\*\* You will welcome with a **Hello World!** message.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1677310218527/ee72a65c-c1dd-4302-9602-373212b83069.png)
+![](/blog-images/go-api-with-mux/image-03.png)
 
 **Congratulations to you for building your own "Hello, World!" API using Mux! 🎉**
 

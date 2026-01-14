@@ -5,7 +5,7 @@ date: '2024-09-20'
 author: 'Pradumna Saraf'
 category: 'golang'
 tags: ['golang', 'opensource', 'package', 'cli']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1724571994026/5271d331-cceb-4a2e-933f-6f785e0f1d3f.png'
+thumbnail: '/blog-images/how-to-publish-a-golang-package/thumbnail.png'
 draft: false
 ---
 
@@ -45,7 +45,7 @@ Once you push the code to GitHub now it's time to publish your package, but befo
 
 Now to publish the package head over to the URL [`https://pkg.go.dev/github.com/<repo-url>`](https://pkg.go.dev/github.com/<repo-url>). In my case, it would be [`https://pkg.go.dev/github.com/Pradumnasaraf/go-ai`](https://pkg.go.dev/github.com/Pradumnasaraf/go-ai). When you visit, you will see a request button; click on that to request adding the package to [`pkg.go.dev`](http://pkg.go.dev). I will not because I don't want to publish this tool as it was just for a demo.
 
-![Screenshot of go dev package website](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i2jpp776zoudsy1wf6vh.png)
+![Screenshot of go dev package website](/blog-images/how-to-publish-a-golang-package/screenshot-of-go-dev-package-website.png)
 
 Once you’re done, after a few hours, it will be on the website. Once it’s live, you can download the CLI by using the `go install` command:
 

@@ -5,7 +5,7 @@ date: '2024-11-13'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'redis', 'golang', 'apis', 'developer']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731336219303/4788dfc2-5946-41fb-b9d6-6f3fe3ebd41d.png'
+thumbnail: '/blog-images/rate-limit-go-app-redis/thumbnail.png'
 draft: false
 ---
 
@@ -51,11 +51,11 @@ func main() {
 
 We can run the server by executing `go run main.go` in the terminal and see this message in the terminal.
 
-![VS code screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vv244p4x4j3iafcu689d.png)
+![VS code screenshot](/blog-images/rate-limit-go-app-redis/vs-code-screenshot.png)
 
 To test it, we can go to [`localhost:8081/message`](http://localhost:8081/message) we will see this message in the browser.
 
-![browser screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/80xtx0vtzmjg0wmphc35.png)
+![browser screenshot](/blog-images/rate-limit-go-app-redis/browser-screenshot.png)
 
 Now our server is running, let's set up a rate limit functionality for the `/message` route. We will use the `go-redis/redis_rate` package. Thanks to the creator of this package, we don't need to write the logic for handling and checking the limit from scratch. It will do all the heavy lifting for us.
 
@@ -164,10 +164,10 @@ Everything is almost the same in the `main()` function. We called the `initRedis
 
 That was all the explanation. Let's now test the working. Re-run the server by executing the same command. For the 1st time, we will see the same message we got earlier. Now refresh your browser 10 times (As we set a limit of 10 per minute), and you will see the error message in the browser.
 
-![browser screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dnbdliigxtb7v63jvb8y.png)
+![browser screenshot](/blog-images/rate-limit-go-app-redis/browser-screenshot-1.png)
 
 We can also verify this by seeing the logs in the terminal. Gin offers great logging out of the box. After a minute it will restore our limit quota.
 
-![terminal logs](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s6xphoy1vszg6bnqc1fe.png)
+![terminal logs](/blog-images/rate-limit-go-app-redis/terminal-logs.png)
 
 That's come to the end of this blog, I hope you enjoy reading as much as I enjoy writing. I am glad you made it to the end—thank you so much for your support. I also talk regularly about Golang and other stuff like Open Source and Docker on [X (Twitter)](https://x.com/pradumna_saraf). You can connect me over there.

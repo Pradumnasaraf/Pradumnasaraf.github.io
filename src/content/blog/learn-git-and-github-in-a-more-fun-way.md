@@ -5,7 +5,7 @@ date: '2022-01-23'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731590462509/639ba0c9-abfa-472c-8854-f98c9b07a625.png'
+thumbnail: '/blog-images/learn-git-and-github-in-a-more-fun-way/thumbnail.png'
 draft: false
 ---
 
@@ -22,13 +22,13 @@ But you know you can learn git and GitHub in a more fun way like playing games o
 
 This is game made by [Twilio](https://www.twilio.com/), you will learn about git and GitHub while playing games and doing tasks. Also, you will XP after every task you complete. [`Link`](https://www.twilio.com/quest/learn/open-source)
 
-![TwilioQuest](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/29rrdxad8gcd9g25qzn6.png)
+![TwilioQuest](/blog-images/learn-git-and-github-in-a-more-fun-way/twilioquest.png)
 
 ### 2) Oh My Git!:
 
 It will let you visualize the internal structures of Git repositories in real-time. [`Link`](https://ohmygit.org/)
 
-![Oh My Git!](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/04a7nkg3909j2e2ek4hw.png)
+![Oh My Git!](/blog-images/learn-git-and-github-in-a-more-fun-way/oh-my-git.png)
 ---
 
 ### 3) Learn Git Branching:
@@ -36,7 +36,7 @@ It will let you visualize the internal structures of Git repositories in real-ti
 You can master your git branching concept by visualizing, playing, and doing certain tasks. [`Link`](https://learngitbranching.js.org/)
 
 
-![Learn Git Branching](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e98kprjz06zicjqgor0s.png)
+![Learn Git Branching](/blog-images/learn-git-and-github-in-a-more-fun-way/learn-git-branching.png)
 ---
 
 ### 4) GitHub Learning Lab:
@@ -44,6 +44,6 @@ You can master your git branching concept by visualizing, playing, and doing cer
 [GitHub](https://github.com/) itself provides a learning track, which grows your skills by completing fun, realistic projects. [`Link`](https://lab.github.com/)
 
 
-![GitHub Learning Lab](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/05zocn7jdwya01di467p.png)
+![GitHub Learning Lab](/blog-images/learn-git-and-github-in-a-more-fun-way/github-learning-lab.png)
 
 For Support and Reachout: <a href="https://twitter.com/intent/follow?screen_name=pradumna_saraf" target="blank">Twitter</a>     <a href="https://linkedin.com/in/pradumnasaraf" target="blank">LinkedIn</a>

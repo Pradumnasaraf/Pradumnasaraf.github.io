@@ -5,7 +5,7 @@ date: '2025-04-21'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'go', 'golang', 'opensource', 'monitoring', 'devops', 'prometheus', 'grafana']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1745227815830/f4ea4999-ef5c-4b30-be56-f3e6dc17ef95.png'
+thumbnail: '/blog-images/monitoring-go-app-with-grafana-prometheus/thumbnail.png'
 draft: false
 ---
 
@@ -572,11 +572,11 @@ Now that we have our application running, head over to the Grafana dashboard to 
 
 Once we are logged in, we can create a new dashboard. While creating a dashboard, you will notice that the default data source is `Prometheus`. This is because we have already configured the data source in the `grafana.yml` file.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1744956852983/0cd196e1-f4bf-4f2d-aac7-869d8c855d31.png)
+![](/blog-images/monitoring-go-app-with-grafana-prometheus/image-01.png)
 
 We can use different panels to visualise the metrics. This guide doesn't go into details of Grafana. We can refer to the [Grafana documentation](https://grafana.com/docs/grafana/latest/) for more information. There is a Bar Gauge panel to visualise the total number of requests from different endpoints. We used the `api_http_request_total` and `api_http_request_error_total` metrics to get the data.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1744956856755/ccb9ccdd-e8f8-4fed-a471-5913fba4c6a3.png)
+![](/blog-images/monitoring-go-app-with-grafana-prometheus/image-02.png)
 
 We created this panel to visualise the total number of requests from different endpoints to compare the successful and failed requests. For all the good requests, the bar will be green, and for all the failed requests, the bar will be red. Plus, it will also show from which endpoint the request is coming, whether it's a successful request or a failed request. If you want to get the dashboard JSON, you can visit this repo [here](https://github.com/Pradumnasaraf/Blog-Demo/tree/main/go-prometheus-monitoring). You will also find the complete code for the Golang application, Dockerfile and Docker Compose file we created in this blog.
 

@@ -5,7 +5,7 @@ date: '2022-08-18'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'git', 'github-actions-1', 'semantic-versioning', 'conventional-commits']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731590966520/06228645-3e61-4d18-a9dd-a906d59ed56c.png'
+thumbnail: '/blog-images/automate-your-releases-on-github/thumbnail.png'
 draft: false
 ---
 
@@ -31,7 +31,7 @@ Packaging/bundling software and making it available for a broader audience for d
 
 Creating a release manually can be a little tricky and challenging at the same time. Using a GitHub workflow with a few lines of the YAML, we can automate that task and focus more on development. Alongside, it also generates a changelog file (`CHANGELOG.md`) and tags.
 
-![linkfree.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1660733593553/T04BNIovm.png)
+![linkfree.png](/blog-images/automate-your-releases-on-github/linkfree-png.png)
 
 Picture - [EddieHubCommunity/LinkFree](https://github.com/EddieHubCommunity/LinkFree) repo.
 
@@ -131,7 +131,7 @@ It will auto-set the body and the release commit naming.
 
 To make the workflow create the automated releases. We need to follow some commit conventions - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Depending upon the convention used, it will version the new release.
 
-![semanticversioning-vZLYjPBL.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1660731677868/Xw7NChXOT.png)
+![semanticversioning-vZLYjPBL.png](/blog-images/automate-your-releases-on-github/semanticversioning-vzlyjpbl-png.png)
 
 * `fix:` Will bump the last digit - patch.
     

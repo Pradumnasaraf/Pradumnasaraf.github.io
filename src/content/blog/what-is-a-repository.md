@@ -5,7 +5,7 @@ date: '2022-04-04'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591910711/46f0e31f-d23b-4dd1-b9e4-cd520f38c217.png'
+thumbnail: '/blog-images/what-is-a-repository/thumbnail.png'
 draft: false
 ---
 
@@ -17,7 +17,7 @@ A repository is usually used to organize a single project. Repositories can cont
 For ease, I made a graphic, on how to create a Repo from scratch.
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ysq5eq3karqjpf2kabh0.png)
+![Image description](/blog-images/what-is-a-repository/image-description.png)
 
 ## General elements a repo should contain:
 (Some are already present)
@@ -30,7 +30,7 @@ For ease, I made a graphic, on how to create a Repo from scratch.
 
 After creating a new repo, it will look something like this.👇
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5lanb0zwtjqnsflr8ezg.png)
+![Image description](/blog-images/what-is-a-repository/image-description-1.png)
 
 ▶️ **LICENSE**
 

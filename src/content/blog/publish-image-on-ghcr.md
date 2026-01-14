@@ -5,7 +5,7 @@ date: '2023-05-03'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'opensource', 'devops', 'github-actions-1']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1682789593354/3031cbc3-8f9f-47d7-8673-97b5f2cd24a0.png'
+thumbnail: '/blog-images/publish-image-on-ghcr/thumbnail.png'
 draft: false
 ---
 
@@ -25,7 +25,7 @@ Throughout the blog, GHCR will be used instead of the complete name.
 
 Create a GitHub repository and place a Dockerfile in the root directory. While you can store the file anywhere, it is advisable to keep it in the root directory.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1680031596654/95dc9936-b5be-4dc7-a221-970affebe20f.png)
+![](/blog-images/publish-image-on-ghcr/image-01.png)
 
 For this demo, we will use a very simple `Dockerfile` that prints "Hello World" by running an echo command on an Alpine image. Here is the syntax for it:
 
@@ -165,15 +165,15 @@ Now, let's commit the changes. As soon as you commit the file, the workflow will
 
 To check if the workflow is running, go to the "Actions" tab. In my case, the workflow ran so fast that it already completed all the steps to publish an image to GHCR and publish a package.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1680032109858/86bc2a55-6db8-4c84-849c-dee8342cbd72.png)
+![](/blog-images/publish-image-on-ghcr/image-02.png)
 
 To check if the package has been released, navigate to the root of your GitHub repository. Under the **Packages** section, you should find a package named **hello-world**. This package indicates that the Docker image has been successfully built and published to the container registry.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1681414581962/5c7bc887-054e-4fbc-9ef8-a18ca41e664a.png)
+![](/blog-images/publish-image-on-ghcr/image-03.png)
 
 Next, click on the `hello-world` package to retrieve the image URL and other relevant details.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1681414971012/42a3206f-3fc0-4f68-b182-c167ef88988b.png)
+![](/blog-images/publish-image-on-ghcr/image-04.png)
 
 To test our Docker image locally, we can run the following command. Instead of using **pull**, we will replace it with the **run** and use the copied URL.
 
@@ -185,7 +185,7 @@ docker run ghcr.io/pradumnasaraf/hello-world:latest
 
 This command will download the Docker image from GHCR and run it in a container. You should see the "Hello World" message printed in the terminal.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1681415850861/32903a12-3145-4737-9630-98e9b04a71df.png)
+![](/blog-images/publish-image-on-ghcr/image-05.png)
 
 **Congratulations on successfully building and pushing a Docker image to GHCR using GitHub Actions!** **🎉**
 

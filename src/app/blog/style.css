@@ -634,6 +634,35 @@
   line-height: 1;
 }
 
+/* Mobile: Hide text, show only icon, position at top-right */
+@media (max-width: 768px) {
+  .code-copy-button {
+    top: 0.5rem;
+    right: 0.5rem;
+    transform: none;
+    padding: 0.375rem;
+    min-height: 28px;
+    min-width: 28px;
+  }
+
+  .code-copy-button:active {
+    transform: scale(0.95);
+  }
+
+  .code-copy-text {
+    display: none;
+  }
+
+  .code-copy-icon {
+    margin: 0;
+  }
+
+  /* Add padding to code block to prevent overlap */
+  .blog-post-content pre {
+    padding-right: 3rem;
+  }
+}
+
 /* Syntax Highlighting Styles - Uniform sizing */
 .blog-post-content pre code.hljs {
   display: block;

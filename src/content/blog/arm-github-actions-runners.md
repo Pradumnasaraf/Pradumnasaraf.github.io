@@ -5,7 +5,7 @@ date: '2025-01-30'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'devops', 'cicd', 'arm', 'github-actions-1']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1744966882641/05b2a2da-2c53-4bfb-9117-cba1b518ded7.png'
+thumbnail: '/blog-images/arm-github-actions-runners/thumbnail.png'
 draft: false
 ---
 
@@ -36,7 +36,7 @@ jobs:
 
 Now, let's commit the changes and head to the Actions tab to check the progress.
 
-![github actions tab](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s43aoujqzo2ae21l85bn.png)
+![github actions tab](/blog-images/arm-github-actions-runners/github-actions-tab.png)
 
 As we can see, our action ran successfully without any issues. For more real-world workflows we can switch the runner label and it will use arm base runners.
 

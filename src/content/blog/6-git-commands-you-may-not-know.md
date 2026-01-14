@@ -5,7 +5,7 @@ date: '2022-01-30'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git', 'beginners']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731592458307/6645cbe6-012f-45c5-8de5-751791bd7f04.png'
+thumbnail: '/blog-images/6-git-commands-you-may-not-know/thumbnail.png'
 draft: false
 ---
 

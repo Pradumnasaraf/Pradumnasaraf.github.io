@@ -5,7 +5,7 @@ date: '2024-10-24'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'github', 'developer', 'devops', 'github-actions-1']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1729659263567/415bddd2-5388-457d-afd5-c7160a1d74d7.png'
+thumbnail: '/blog-images/multi-arch-docker-image-dockerhub-buildx-github-actions/thumbnail.png'
 draft: false
 ---
 
@@ -36,11 +36,11 @@ CMD ["echo", "Hello World!"]
 
 For the GitHub Workflow to have the privilege to push the Docker image to DockerHub we need to add a Docker username and Personal Access Token to GitHub Secrets. For that go into the repo settings then **Secrets and Variables**, and select the secret type **Actions** (as shown in the image below). Now create a secret name `DOCKERHUB_USERNAME` and the secret value as your DockerHub username.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/q0tsmg1358fc6vkxicwf.png)
+![Image description](/blog-images/multi-arch-docker-image-dockerhub-buildx-github-actions/image-description.png)
 
 Now, we need to generate a DockerHub Personal Access Token, for that head over to your DockerHub Account, go to settings, then click on **Personal Access Token** and then click on the **Generate new Token** button. A new window will open (as shown in the image below. Give a token name and **Access permissions** to **Read & Write** (It may vary according to your use case). Copy the generated token and create a GitHub Secret (like we did above) with the name `DOCKERHUB_TOKEN`, and paste the copied token value into the secret value.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jtvyujx2b90zemozhl8f.png)
+![Image description](/blog-images/multi-arch-docker-image-dockerhub-buildx-github-actions/image-description-1.png)
 
 Once done we are all set to create a workflow. Make sure you are on the root of the project, create a dir name `.github` inside that create a dir called `workflows` and inside that create a YAML file with any name, we will name it `dockerhub.yaml`. The complete file path will look like this `.github/workflows/dockerhub.yaml`. Now paste the below configuration. Don't commit it yet, first, we break down and understand the below configuration.
 
@@ -126,11 +126,11 @@ That's it, that was all about the explanation workflow. Now commit the changes. 
 
 I have created a release on my DevOps repo with `v2.3.3`. Now, It will push an image with the `latest` as well as `2.3.3`. It gets the version number from the `package.json` using an action to extract it. You can do this kind of workaround to make it more seamless and powerful.
 
-![GitHub Action section](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lj3fb0ci609cdzcqb9jm.png)
+![GitHub Action section](/blog-images/multi-arch-docker-image-dockerhub-buildx-github-actions/github-action-section.png)
 
 Now, let's head over to DockerHub to check the pushed image. We can see it we have our image published on DockerHub with the `OS/ARCH` we have provided.
 
-![DockerHub Images](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vkm25yabl86sdq1w4x6k.png)
+![DockerHub Images](/blog-images/multi-arch-docker-image-dockerhub-buildx-github-actions/dockerhub-images.png)
 
 Now the great part is that if someone pulls an image, for eg `docker pull pradumnasaraf/devops` docker will pull the image for that architecture only we don't need to explicitly mention it.
 

@@ -5,7 +5,7 @@ date: '2022-04-03'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731592262405/3e4f6784-826d-4208-8a8f-93d18d6ed027.png'
+thumbnail: '/blog-images/what-is-a-code-hosting-platform/thumbnail.png'
 draft: false
 ---
 
@@ -28,7 +28,7 @@ It's a web hosting facility for the source code of the software, documentation, 
 
 ▪️ GitHub
 
-![1_Y4KRqQD_579hS4bwGq-8Kg.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1648969229558/CvSB_lLHt.png)
+![1_Y4KRqQD_579hS4bwGq-8Kg.png](/blog-images/what-is-a-code-hosting-platform/1-y4krqqd-579hs4bwgq-8kg-png.png)
 
 📌In this Bootcamp, we will prefer GitHub to explain the elements and concepts
 
@@ -60,7 +60,7 @@ This is a basic Infertface of GitHub, contains: ▪️ Profile Bio
 
 (We will go through each part in the upcoming days)
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/76lobde9ix1jv5telv9d.png)
+![Image description](/blog-images/what-is-a-code-hosting-platform/image-description.png)
 
 ## Official Docs:
 

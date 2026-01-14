@@ -5,7 +5,7 @@ date: '2022-04-09'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591962478/64788519-bade-424d-a6d4-7364f942e46a.png'
+thumbnail: '/blog-images/github-gist/thumbnail.png'
 draft: false
 ---
 
@@ -17,7 +17,7 @@ It is a feature added to GitHub that allows the sharing of code snippets, notes,
 "Well-organized code snippets."
 
 
-![Untitled design.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1649489597342/HhMqV_naB.png)
+![Untitled design.png](/blog-images/github-gist/untitled-design-png.png)
 
 ## Creating a Gist:
 

@@ -10,7 +10,9 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prepare": "husky",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "validate:images": "node scripts/validate-blog-images.js",
+    "prebuild": "npm run validate:images"
   },
   "repository": {
     "type": "git",
@@ -38,10 +40,8 @@
   },
   "dependencies": {
     "date-fns": "^4.1.0",
-    "ev-emitter": "^2.1.2",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
-    "imagesloaded": "^5.0.0",
     "next": "^16.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",

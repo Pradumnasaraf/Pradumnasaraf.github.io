@@ -5,7 +5,7 @@ date: '2024-09-29'
 author: 'Pradumna Saraf'
 category: 'postgresql'
 tags: ['postgresql', 'opensource', 'databases', 'monitoring', 'devops', 'opentelemetry']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1724426422919/c512dee7-bb2b-4c5f-ae0f-35212e7eca9b.png'
+thumbnail: '/blog-images/monitor-your-postgresql/thumbnail.png'
 draft: false
 ---
 
@@ -56,11 +56,11 @@ sudo systemctl status otelcol-contrib
 
 You will get an output similar to the screenshot below:
 
-![terminal screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ml9d4g5ojygkq2kmujp1.png)
+![terminal screenshot](/blog-images/monitor-your-postgresql/terminal-screenshot.png)
 
 Now, the above logs are for the default configuration, which can be found in `/etc/otelcol-contrib/config.yaml`.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3u8vknunbp7ib1wjcqym.png)
+![Image description](/blog-images/monitor-your-postgresql/image-description.png)
 
 We have to change the default configuration accordingly so that we can export all the data to OpenObserve to analyze it. We will use the configuration below. Let's break it down and understand it:
 
@@ -136,7 +136,7 @@ processors:
 
 Under the **exporters** section, we are going to use the `otlphttp/openobserve` exporter. This will send all the telemetry data to OpenObserve. To get the endpoint and the token, head over to OpenObserve. Once you log in and your dashboard is open, click on the Ingestion button from the sidebar and click on Traces (OpenTelemetry).
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jp8lj03zv5wp8hj78tzs.png)
+![Image description](/blog-images/monitor-your-postgresql/image-description-1.png)
 
 The **service** section is pretty standard: it concludes which components are enabled in the Collector based on the configuration found in the receivers, processors, exporters, and extensions sections. If a component is configured but not defined within the service section, then it’s not enabled.
 
@@ -170,19 +170,19 @@ sudo systemctl status otelcol-contrib
 
 Now we are done with all the technical setup, and we can head over to the OpenObserve Dashboard to monitor the collected data by creating the dashboard. Once you are on the dashboard, click on the Streams button from the right sidebar. If everything is set up and running, you will get all your streams of collected data on the screen. If you don't see it, click the **Refresh Stats** button. In case you have multiple ingestions, you can search for `postgres` from the search bar.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vpkurtgsdigxof9b61dt.png)
+![Image description](/blog-images/monitor-your-postgresql/image-description-2.png)
 
 To set up a Dashboard, click on the dashboard button just below the Streams button, then click on "New Dashboard" and give it a name and description.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uop3yb35tret3qftpmdc.png)
+![Image description](/blog-images/monitor-your-postgresql/image-description-3.png)
 
 After this, a new window will open up. Click on **Add Panel** and this page will open. Now you can add a variety of panels to your dashboard depending on the type of data (in the stream we have) and the way you want to plot them.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/c5x3wpdh6uwmc8oanit8.png)
+![Image description](/blog-images/monitor-your-postgresql/image-description-4.png)
 
 This is what my dashboard looks like now after I have added some panels.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2f1ycusaq4p8xssgsl18.png)
+![Image description](/blog-images/monitor-your-postgresql/image-description-5.png)
 
 There is a lot more you can do with the dashboard. Check out [this video](https://www.youtube.com/watch?v=kjUvXQdL798) on how to create great OpenObserve dashboards.
 

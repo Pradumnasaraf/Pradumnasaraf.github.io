@@ -23,12 +23,21 @@ export const metadata = {
     url: 'https://pradumnasaraf.dev/sitemap',
     siteName: 'Pradumna Saraf',
     type: 'website',
+    images: [
+      {
+        url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Pradumna Saraf - Site Map',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Site Map | Pradumna Saraf',
     description:
       'Navigate through all pages and resources on pradumnasaraf.dev',
+    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
   robots: {
     index: true,

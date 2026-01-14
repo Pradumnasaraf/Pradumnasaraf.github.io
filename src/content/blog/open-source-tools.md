@@ -5,7 +5,7 @@ date: '2022-04-13'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731592013591/41954735-4f06-44d5-9bf7-77092a6b059a.png'
+thumbnail: '/blog-images/open-source-tools/thumbnail.png'
 draft: false
 ---
 
@@ -18,7 +18,7 @@ Gitpod is a ready-to-code developer environment automated dev environment for ea
 
 Link - https://www.gitpod.io/
 
-![media-image.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1649832263668/yv864a8mz.jpg)
+![media-image.jpg](/blog-images/open-source-tools/media-image-jpg.jpg)
 
 ### ▶️ VSCode.dev
 
@@ -26,7 +26,7 @@ It's a full-blown VSCode in your browser, it comes in handy when your PC isn't p
 
 Link - https://vscode.dev/
 
-![Untitled design.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1649834463991/UQqHmm5Ve.png)
+![Untitled design.png](/blog-images/open-source-tools/untitled-design-png.png)
 
 ### ▶️ Good First Issue Finder
 
@@ -34,7 +34,7 @@ Good First Issue finder is a EddieHub's project that helps new open source contr
 
 Link - http://finder.eddiehub.org/
 
-![Untitled design (1).png](https://cdn.hashnode.com/res/hashnode/image/upload/v1649834474107/CDrXlhz4P.png)
+![Untitled design (1).png](/blog-images/open-source-tools/untitled-design-1-png.png)
 
 ## ➤ "The only repo you need"
 

@@ -5,7 +5,7 @@ date: '2024-01-11'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'opensource', 'devops', 'docker-compose']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1704965574688/98637723-1ab4-4766-8ece-b307896ec331.png'
+thumbnail: '/blog-images/share-your-docker-compose-app-logs-remotely/thumbnail.png'
 draft: false
 ---
 
@@ -20,27 +20,27 @@ Is that too much to digest? Let me show you a quick demo.
 
 Make sure you have Docker Desktop installed. Go to the extension marketplace, search for Livecycle, and install it. Or click [here](https://hub.docker.com/extensions/livecycle/docker-extension)
 
-![Docker Desktop](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h7guq1p6kuu3ri8o639v.png)
+![Docker Desktop](/blog-images/share-your-docker-compose-app-logs-remotely/docker-desktop.png)
 
 Once the extension is installed, open it, and you'll get the option to log in with GitHub or Google. It creates a profile that helps you add collaborators. After that, you'll see a screen like this.
 
-![Docker Desktop](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d8827qcn9nmffrv10liu.png)
+![Docker Desktop](/blog-images/share-your-docker-compose-app-logs-remotely/docker-desktop-1.png)
 
 Now, run a Docker Compose application on your system. As soon as you do, it'll pop up in the extension. Turn on the toggle as shown in the screenshot below to get the preview URL. You can choose between public and private based on your needs.
 
-![Docker Desktop](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y3g1g0j7vba0nl0hrdzo.png)
+![Docker Desktop](/blog-images/share-your-docker-compose-app-logs-remotely/docker-desktop-2.png)
 
 Now, once you are done with the above steps and you have the URL, you can invite people to your teammates so that they can access the terminal. You can invite them by clicking on the Invite (visible in point 1). Once you invite the people, you can click the open window button visible in point 2) to access the dashboard where you have all the terminal logs, etc.
 
-![Docker Desktop](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zrwiwh80axd749playv1.png)
+![Docker Desktop](/blog-images/share-your-docker-compose-app-logs-remotely/docker-desktop-3.png)
 
 Once you open the Livecycle Dashboard, select your environment (in my case, DevOps), and you will see the "Logs" option. Click on it to access logs for each service. Additionally, next to the logs, you will find a terminal to help in debugging your application. You can invite more people directly from the Dashboard itself.
 
-![Livecycle Dashboard](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qd7pzj3haf6qoaacmw4e.png)
+![Livecycle Dashboard](/blog-images/share-your-docker-compose-app-logs-remotely/livecycle-dashboard.png)
 
 Now, you can easily debug and collaborate with any number of people around the world. We are also soon adding the commenting feature (like the screen below) so that you can have a conversation in one place to involve non-technical people like designers and marketers, enabling them to provide feedback and bring more transparency. This way, a senior can never blame a junior if they asked for something and it hasn't been done.
 
 
-![Livecycle Dashboard message feature](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/x6x4azyxhmik747kcp93.png)
+![Livecycle Dashboard message feature](/blog-images/share-your-docker-compose-app-logs-remotely/livecycle-dashboard-message-feature.png)
 
 Join our [Livecycle community](https://community.livecycle.io/?utm_source=hashnode&utm_medium=article&utm_campaign=livecycle) to stay informed

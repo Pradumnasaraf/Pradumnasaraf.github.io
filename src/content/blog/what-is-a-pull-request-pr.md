@@ -5,7 +5,7 @@ date: '2022-04-06'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591932537/20432201-d2a9-46d4-8756-4fe02fedd0d4.png'
+thumbnail: '/blog-images/what-is-a-pull-request-pr/thumbnail.png'
 draft: false
 ---
 
@@ -43,7 +43,7 @@ Steps:
 
 Here is the [Video](https://user-images.githubusercontent.com/51878265/161928950-ebf44127-cc5d-4a76-97df-ec7a40c717bf.mp4)
 
-![Click on Fork.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1649231803097/JXBuAt51A.png)
+![Click on Fork.png](/blog-images/what-is-a-pull-request-pr/click-on-fork-png.png)
 
 ## Creating a Pull Request:
 
@@ -59,7 +59,7 @@ Steps:
 
 Here is the [Video](https://user-images.githubusercontent.com/51878265/161928972-d33da192-9fc1-4a57-98a2-0bba4067883e.mp4)
 
-![Untitled design.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1649232992189/oQBbCVTOb.png)
+![Untitled design.png](/blog-images/what-is-a-pull-request-pr/untitled-design-png.png)
 
 
 ## Creating a good PR

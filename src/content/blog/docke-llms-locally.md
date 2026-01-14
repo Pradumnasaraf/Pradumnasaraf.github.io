@@ -5,7 +5,7 @@ date: '2025-04-07'
 author: 'Pradumna Saraf'
 category: 'ai'
 tags: ['ai', 'software-development', 'docker', 'devops', 'gpu', 'llms']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1744966825193/33858590-e1bd-4e0f-9dc1-d0c0471617b0.png'
+thumbnail: '/blog-images/docke-llms-locally/thumbnail.png'
 draft: false
 ---
 
@@ -31,7 +31,7 @@ In this blog, we will explore the benefits of the Docker Model Runner and how to
 
 Make sure you have Docker Desktop v4.40 or above installed in your system. Once you have that, make sure you have enabled the **Enable Docker Model Runner** by going to **settings &gt; Features in development**. You can also check **Enable host-side TCP support** to communicate form your localhost (we will see a demo below for that).
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1743494733916/142a9f06-5536-4fa7-ad61-3672311f9bb7.png)
+![](/blog-images/docke-llms-locally/image-01.png)
 
 Once you are done. Click on **Apply & restart,** and we are all set. To test it’s working, open any terminal any type `docker model`, you will see the output of all the available commands and this verifies everything is working as expected.
 
@@ -43,11 +43,11 @@ If you have used docker cli (which almost every developer has who ever worked wi
 
 Here are all the commands that are currently supported. Some more are coming soon (some are my favourites, too). Stay tuned!
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1743495822560/3e35287b-89eb-4422-9f9d-08f004d8d341.png)
+![](/blog-images/docke-llms-locally/image-02.png)
 
 Now, to run a mode, we first need to pull it. So, for example, we will run `llama3.2`. You will find all available models on the [Docker Hub’s GenAI Catalog](https://hub.docker.com/catalogs/gen-ai). So, open the terminal and run `docker model pull ai/llama3.2`. It will take some time to pull it depending on the Model size and your internet bandwidth. Once you pull it, run the `docker model run ai/llama3.2`, and it will start an inactive chat like you have a normal chatbot or ChatGPT, and once you are done, you can use `/bye` it to exit the interactive chat mode. Here is a screenshot:
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1743503292122/310827b4-246b-49c7-9c2c-0ef4a9884aca.png)
+![](/blog-images/docke-llms-locally/image-03.png)
 
 ### From the API (OpenAI)
 
@@ -93,7 +93,7 @@ So, to test it out, that it works from inside the running container, I am runnin
 
 As you can see, below is the response I got. The response is in JSON format, including the generated message, token usage, model details, and response timing. Just like the standard.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1743505495381/8939f656-db9a-4673-af6a-bc6872bee6d4.png)
+![](/blog-images/docke-llms-locally/image-04.png)
 
 **From the Host**
 
@@ -123,7 +123,7 @@ Let’s try it out by running it in our terminal:
 
 It will return the same JSON format response as the other one, including the generated message, token usage, model details, and response timing.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1743504929534/0501a324-7c34-4dd7-aed3-9e6979b6eded.png)
+![](/blog-images/docke-llms-locally/image-05.png)
 
 With this TCP support, we are not just limited to interacting with the applications that are running inside our container but anywhere.
 

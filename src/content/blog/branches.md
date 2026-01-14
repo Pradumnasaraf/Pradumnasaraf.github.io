@@ -5,7 +5,7 @@ date: '2022-04-08'
 author: 'Pradumna Saraf'
 category: 'github'
 tags: ['github', 'opensource', 'git']
-thumbnail: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1731591949933/8ec096f6-e64c-41ca-8ecd-8f6f5c0780e8.png'
+thumbnail: '/blog-images/branches/thumbnail.png'
 draft: false
 ---
 
@@ -24,7 +24,7 @@ In simple words, with branches, we a taking a copy of the code to work and exper
 
 📌By default the project is on the main or master branch, depending on the project setting.
 
-![Pradumna Saraf branch.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1649402264032/9VnBXJSVA.png)
+![Pradumna Saraf branch.png](/blog-images/branches/pradumna-saraf-branch-png.png)
 
 ## Creating a Branch.
 
