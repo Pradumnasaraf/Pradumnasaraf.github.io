@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import {
   FiGithub,
-  FiTwitter,
   FiLinkedin,
   FiMail,
   FiYoutube,
@@ -12,7 +11,7 @@ import {
   FiCopy,
   FiX,
 } from 'react-icons/fi';
-import { SiBluesky, SiThreads } from 'react-icons/si';
+import { SiBluesky, SiThreads, SiX } from 'react-icons/si';
 import './style.css';
 
 export default function LinksPage() {
@@ -52,8 +51,8 @@ export default function LinksPage() {
   const socialLinks = [
     {
       id: 'twitter',
-      url: 'https://twitter.com/pradumna_saraf',
-      icon: FiTwitter,
+      url: 'https://x.com/pradumna_saraf',
+      icon: SiX,
     },
     {
       id: 'linkedin',
@@ -67,7 +66,7 @@ export default function LinksPage() {
     },
     {
       id: 'bluesky',
-      url: 'https://bsky.app/profile/pradumnasaraf.bsky.social',
+      url: 'https://bsky.app/profile/pradumnasaraf.dev',
       icon: SiBluesky,
     },
     {
@@ -107,7 +106,7 @@ export default function LinksPage() {
     {
       id: 3,
       title: 'Newsletter',
-      url: 'https://pradumnasaraf.substack.com',
+      url: 'https://newsletter.pradumnasaraf.dev',
     },
     {
       id: 4,
@@ -117,7 +116,7 @@ export default function LinksPage() {
     {
       id: 5,
       title: 'Twitter (X)',
-      url: 'https://twitter.com/pradumna_saraf',
+      url: 'https://x.com/pradumna_saraf',
     },
   ];
 
@@ -200,7 +199,7 @@ export default function LinksPage() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' ? 'social-icon-filled' : 'social-icon-stroke'}`}
+                    className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' || social.id === 'twitter' ? 'social-icon-filled' : 'social-icon-stroke'}`}
                     aria-label={social.id}
                   >
                     <IconComponent className="social-icon" />
