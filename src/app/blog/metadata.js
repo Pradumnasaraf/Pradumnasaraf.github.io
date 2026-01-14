@@ -21,7 +21,6 @@ export const metadata = {
     description:
       'Read technical articles, tutorials, and insights about Docker, Kubernetes, DevOps, and Cloud Native technologies.',
     url: 'https://pradumnasaraf.dev/blog',
-    siteName: 'Pradumna Saraf',
     images: [
       {
         url: 'https://pradumnasaraf.dev/media/blog-og.png',

@@ -1,0 +1,528 @@
+.links-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem 1rem 2rem;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* Share Button */
+.share-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 100;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: none;
+}
+
+.share-button::before {
+  content: 'Share';
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000000;
+  color: #ffffff;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  font-weight: 400;
+}
+
+.share-button:hover::before {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .share-button::before {
+    display: none;
+  }
+}
+
+.share-button:hover {
+  background: #f5f5f5;
+  transform: scale(1.05);
+}
+
+.share-button:active {
+  transform: scale(0.95);
+}
+
+/* QR Code Modal */
+.qr-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.qr-modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.qr-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #000000;
+  transition: background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.qr-close-button:hover {
+  background: #e0e0e0;
+}
+
+.qr-modal-content h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.qr-code-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+}
+
+.qr-code-url {
+  font-size: 0.875rem;
+  color: #666666;
+  word-break: break-all;
+  margin: 0 0 1.5rem 0;
+}
+
+.qr-copy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.qr-copy-button:hover {
+  background: #333333;
+}
+
+.qr-copy-button:active {
+  background: #1a1a1a;
+}
+
+.qr-copy-button svg {
+  font-size: 1rem;
+}
+
+.links-content {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding-top: 0;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1.75rem;
+  position: relative;
+}
+
+.avatar-wrapper {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+  box-shadow: none;
+  display: block;
+}
+
+.profile-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.profile-bio {
+  font-size: 1.12rem;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Social Icons Section */
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 0.35rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.social-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: transparent;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  color: #000000;
+}
+
+.social-icon-link:hover {
+  opacity: 0.7;
+}
+
+.social-icon-link:active {
+  opacity: 0.5;
+}
+
+.social-icon {
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+/* Feather icons (stroke-based) - make strokes thinner */
+.social-icon-stroke svg,
+.social-icon-stroke svg path {
+  stroke-width: 1.5 !important;
+  stroke: currentColor;
+  fill: none !important;
+}
+
+.social-icon-stroke svg circle,
+.social-icon-stroke svg rect,
+.social-icon-stroke svg line,
+.social-icon-stroke svg polyline,
+.social-icon-stroke svg polygon {
+  stroke-width: 1.5 !important;
+}
+
+/* Simple Icons (fill-based) - make them appear thinner using scale */
+.social-icon-filled svg {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.social-icon-filled svg path,
+.social-icon-filled svg circle,
+.social-icon-filled svg rect,
+.social-icon-filled svg polygon {
+  fill: currentColor;
+}
+
+/* Links Section */
+.links-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
+  margin-top: 0;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1rem;
+  background: #ffffff;
+  border: 1.5px solid #000000;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 48px;
+  text-align: center;
+}
+
+.link-button:hover {
+  background: #f5f5f5;
+}
+
+.link-button:active {
+  background: #eeeeee;
+}
+
+.link-title {
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+/* Responsive Design - Mobile First */
+@media (max-width: 640px) {
+  .links-container {
+    padding: 5rem 1rem 2rem;
+    min-height: 100vh;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .share-button {
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    transform: none;
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    border: 1px solid #000000;
+  }
+
+  .share-button:hover {
+    transform: scale(1.05);
+  }
+
+  .links-content {
+    gap: 0;
+    padding-top: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-section {
+    gap: 0;
+    padding: 0;
+    padding-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    width: 100%;
+  }
+
+  .avatar-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 0.625rem;
+  }
+
+  .profile-bio {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    padding: 0;
+    margin-bottom: 1rem;
+    white-space: normal;
+  }
+
+  .social-icons {
+    gap: 1.5rem;
+    margin-top: 0.35rem;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    justify-content: center;
+    row-gap: 1.25rem;
+  }
+
+  .social-icon-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-icon {
+    font-size: 1.125rem;
+  }
+
+  .links-section {
+    gap: 0.875rem;
+    padding: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .link-button {
+    padding: 0.875rem 1rem;
+    font-size: 1.1rem;
+    min-height: 52px;
+    border-radius: 10px;
+    border: 1.5px solid #000000;
+  }
+
+  .link-title {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  .links-container {
+    padding: 1.25rem 0.875rem 1.75rem;
+  }
+
+  .profile-name {
+    font-size: 1.375rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-bio {
+    font-size: 0.9rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .social-icons {
+    gap: 1.25rem;
+    margin-top: 0.35rem;
+    margin-bottom: 1.5rem;
+    row-gap: 1rem;
+  }
+
+  .social-icon-link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icon {
+    font-size: 1rem;
+  }
+
+  .link-button {
+    padding: 0.8rem 0.875rem;
+    font-size: 1rem;
+    min-height: 50px;
+    border: 1.5px solid #000000;
+    border-radius: 10px;
+  }
+
+  .link-title {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet and larger */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .links-content {
+    max-width: 550px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .links-content {
+    max-width: 600px;
+  }
+}
+
+/* Prevent text selection on buttons for better mobile UX */
+.link-button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .link-button {
+    transition: none;
+  }
+
+  .link-button:hover {
+    transform: none;
+  }
+}

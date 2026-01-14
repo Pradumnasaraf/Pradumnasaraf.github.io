@@ -1,0 +1,231 @@
+'use client';
+import Image from 'next/image';
+import { useState } from 'react';
+import {
+  FiGithub,
+  FiMail,
+  FiYoutube,
+  FiInstagram,
+  FiShare2,
+  FiCopy,
+  FiX,
+} from 'react-icons/fi';
+import { SiBluesky, SiThreads, SiX, SiLinkedin } from 'react-icons/si';
+import './style.css';
+
+export default function LinksPage() {
+  const [showQRCode, setShowQRCode] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const profileData = {
+    name: 'Pradumna Saraf',
+    bio: 'Open Source Developer | Docker Captain | Microsoft MVP | Owner @rebasemedia',
+    avatar: '/media/pradumnasaraf.png',
+  };
+
+  const qrCodeUrl = 'https://pradumnasaraf.dev/links';
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(qrCodeUrl);
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 1500);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
+  const handleCloseQRCode = () => {
+    setShowQRCode(false);
+  };
+
+  const handleShareClick = () => {
+    // Directly open QR code modal for all devices
+    setShowQRCode(true);
+  };
+
+  // Social media icons - displayed below name (all black/monochrome)
+  const socialLinks = [
+    {
+      id: 'twitter',
+      url: 'https://x.com/pradumna_saraf',
+      icon: SiX,
+    },
+    {
+      id: 'linkedin',
+      url: 'https://linkedin.com/in/pradumnasaraf',
+      icon: SiLinkedin,
+    },
+    {
+      id: 'github',
+      url: 'https://github.com/Pradumnasaraf',
+      icon: FiGithub,
+    },
+    {
+      id: 'bluesky',
+      url: 'https://bsky.app/profile/pradumnasaraf.dev',
+      icon: SiBluesky,
+    },
+    {
+      id: 'threads',
+      url: 'https://threads.net/@pradumnasaraf',
+      icon: SiThreads,
+    },
+    {
+      id: 'instagram',
+      url: 'https://instagram.com/pradumnasaraf',
+      icon: FiInstagram,
+    },
+    {
+      id: 'youtube',
+      url: 'https://youtube.com/@pradumnasaraf',
+      icon: FiYoutube,
+    },
+    {
+      id: 'email',
+      url: 'mailto:pradumnasaraf@gmail.com',
+      icon: FiMail,
+    },
+  ];
+
+  // Main links - displayed as buttons below social icons (exact from bio.link)
+  const links = [
+    {
+      id: 1,
+      title: 'Personal Website',
+      url: 'https://pradumnasaraf.dev',
+    },
+    {
+      id: 2,
+      title: 'My Services - Freelance and content creation',
+      url: 'https://rebasemedia.com',
+    },
+    {
+      id: 3,
+      title: 'Newsletter',
+      url: 'https://newsletter.pradumnasaraf.dev',
+    },
+    {
+      id: 4,
+      title: 'Blog',
+      url: 'https://pradumnasaraf.dev/blog',
+    },
+    {
+      id: 5,
+      title: 'Twitter (X)',
+      url: 'https://x.com/pradumna_saraf',
+    },
+  ];
+
+  return (
+    <div className="links-container">
+      {/* QR Code Modal */}
+      {showQRCode && (
+        <div className="qr-modal" onClick={handleCloseQRCode}>
+          <div
+            className="qr-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="qr-close-button"
+              onClick={handleCloseQRCode}
+              aria-label="Close"
+            >
+              <FiX />
+            </button>
+            <h3>Share</h3>
+            <Image
+              src="/media/qr-code.png"
+              alt="QR Code"
+              width={200}
+              height={200}
+              className="qr-code-image"
+            />
+            <p className="qr-code-url">{qrCodeUrl}</p>
+            <button
+              className="qr-copy-button"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCopyLink();
+              }}
+              aria-label="Copy link"
+            >
+              <FiCopy />
+              <span>{copied ? 'Copied!' : 'Copy Link'}</span>
+            </button>
+          </div>
+        </div>
+      )}
+
+      <div className="links-content">
+        {/* Profile Section */}
+        <div className="profile-section">
+          {/* Share Button */}
+          <button
+            className="share-button"
+            onClick={handleShareClick}
+            aria-label="Share"
+            title="Share"
+          >
+            <FiShare2 />
+          </button>
+
+          {profileData.avatar && (
+            <div className="avatar-wrapper">
+              <Image
+                src={profileData.avatar}
+                alt={profileData.name}
+                width={120}
+                height={120}
+                className="avatar"
+                priority
+              />
+            </div>
+          )}
+          <h1 className="profile-name">{profileData.name}</h1>
+          {profileData.bio && <p className="profile-bio">{profileData.bio}</p>}
+
+          {/* Social Icons - displayed below name/bio */}
+          {socialLinks.length > 0 && (
+            <div className="social-icons">
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={social.id}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' || social.id === 'twitter' || social.id === 'linkedin' ? 'social-icon-filled' : 'social-icon-stroke'}`}
+                    aria-label={social.id}
+                  >
+                    <IconComponent className="social-icon" />
+                  </a>
+                );
+              })}
+            </div>
+          )}
+        </div>
+
+        {/* Links Section */}
+        <div className="links-section">
+          {links.map((link) => {
+            return (
+              <a
+                key={link.id}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-button"
+              >
+                <span className="link-title">{link.title}</span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}

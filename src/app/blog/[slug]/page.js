@@ -44,7 +44,6 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.excerpt || post.title,
       url: `https://pradumnasaraf.dev/blog/${slug}`,
-      siteName: 'Pradumna Saraf',
       type: 'article',
       publishedTime: post.date,
       authors: [post.author || 'Pradumna Saraf'],

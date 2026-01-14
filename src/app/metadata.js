@@ -7,13 +7,11 @@ export const metadata = {
   authors: [{ name: 'Pradumna Saraf' }],
   creator: 'Pradumna Saraf',
   publisher: 'Pradumna Saraf',
-  robots: 'index, follow',
   openGraph: {
     title: 'Pradumna Saraf',
     description:
       'Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
     url: 'https://pradumnasaraf.dev',
-    siteName: 'Pradumna Saraf',
     images: [
       {
         url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
@@ -32,6 +30,20 @@ export const metadata = {
       'Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://pradumnasaraf.dev',
   },
   verification: {
     google: 'your-google-site-verification',

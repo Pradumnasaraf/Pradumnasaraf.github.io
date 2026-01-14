@@ -28,6 +28,7 @@ const SitemapPage = () => {
     Contact: FaEnvelope,
     'Schedule Meeting': FaCalendarAlt,
     Blog: FaBlog,
+    Links: FaExternalLinkAlt,
     Sitemap: FaSitemap,
   };
 
