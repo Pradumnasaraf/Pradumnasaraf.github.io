@@ -1,0 +1,497 @@
+.links-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem 1rem 2rem;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* Share Button */
+.share-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 100;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: none;
+}
+
+.share-button:hover {
+  background: #333333;
+  transform: scale(1.05);
+}
+
+.share-button:active {
+  transform: scale(0.95);
+}
+
+/* Share Menu */
+.share-menu {
+  position: fixed;
+  top: 3.5rem;
+  left: 1rem;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 99;
+  min-width: 160px;
+  overflow: hidden;
+}
+
+.share-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: #ffffff;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #000000;
+  transition: background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.share-menu-item:last-child {
+  border-bottom: none;
+}
+
+.share-menu-item:hover {
+  background: #f5f5f5;
+}
+
+.share-menu-item:active {
+  background: #eeeeee;
+}
+
+.share-menu-item svg {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* QR Code Modal */
+.qr-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.qr-modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.qr-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #000000;
+  transition: background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.qr-close-button:hover {
+  background: #e0e0e0;
+}
+
+.qr-modal-content h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.qr-code-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+}
+
+.qr-code-url {
+  font-size: 0.875rem;
+  color: #666666;
+  word-break: break-all;
+  margin: 0;
+}
+
+.links-content {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding-top: 0;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1.75rem;
+}
+
+.avatar-wrapper {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+  box-shadow: none;
+  display: block;
+}
+
+.profile-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.profile-bio {
+  font-size: 0.95rem;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  max-width: 500px;
+  font-weight: 400;
+}
+
+/* Social Icons Section */
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.social-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: transparent;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  color: #000000;
+}
+
+.social-icon-link:hover {
+  opacity: 0.7;
+}
+
+.social-icon-link:active {
+  opacity: 0.5;
+}
+
+.social-icon {
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+/* Links Section */
+.links-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
+  margin-top: 0;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1rem;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: background-color 0.2s ease;
+  box-shadow: none;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 48px;
+  text-align: center;
+}
+
+.link-button:hover {
+  background: #f5f5f5;
+}
+
+.link-button:active {
+  background: #eeeeee;
+}
+
+.link-title {
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+/* Responsive Design - Mobile First */
+@media (max-width: 640px) {
+  .links-container {
+    padding: 5rem 1rem 2rem;
+    min-height: 100vh;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .share-button {
+    top: 0.75rem;
+    left: 0.75rem;
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .share-menu {
+    top: 3rem;
+    left: 0.75rem;
+    min-width: 140px;
+  }
+
+  .share-menu-item {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9rem;
+  }
+
+  .links-content {
+    gap: 0;
+    padding-top: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-section {
+    gap: 0;
+    padding: 0;
+    margin-bottom: 1.75rem;
+    width: 100%;
+  }
+
+  .avatar-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-name {
+    font-size: 2.625rem;
+    line-height: 1.3;
+    margin-bottom: 0.625rem;
+  }
+
+  .profile-bio {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    padding: 0;
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+
+  .social-icons {
+    gap: 1rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    justify-content: center;
+    row-gap: 0.875rem;
+  }
+
+  .social-icon-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-icon {
+    font-size: 1.125rem;
+  }
+
+  .links-section {
+    gap: 0.875rem;
+    padding: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .link-button {
+    padding: 0.875rem 1rem;
+    font-size: 1.5rem;
+    min-height: 52px;
+    border-radius: 8px;
+  }
+
+  .link-title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  .links-container {
+    padding: 1.25rem 0.875rem 1.75rem;
+  }
+
+  .profile-name {
+    font-size: 1.375rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-bio {
+    font-size: 0.85rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .social-icons {
+    gap: 0.875rem;
+    margin-top: 0;
+    margin-bottom: 1.75rem;
+    row-gap: 0.75rem;
+  }
+
+  .social-icon-link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icon {
+    font-size: 1rem;
+  }
+
+  .link-button {
+    padding: 0.8rem 0.875rem;
+    font-size: 1.425rem;
+    min-height: 50px;
+  }
+
+  .link-title {
+    font-size: 1.425rem;
+  }
+}
+
+/* Tablet and larger */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .links-content {
+    max-width: 550px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .links-content {
+    max-width: 600px;
+  }
+}
+
+/* Prevent text selection on buttons for better mobile UX */
+.link-button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  .link-button {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .link-button,
+  .link-arrow,
+  .back-link {
+    transition: none;
+  }
+
+  .link-button:hover {
+    transform: none;
+  }
+}
