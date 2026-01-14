@@ -221,6 +221,7 @@
   line-height: 1.5;
   margin: 0 0 1rem 0;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 /* Social Icons Section */
@@ -406,6 +407,7 @@
     line-height: 1.4;
     padding: 0;
     margin-bottom: 1rem;
+    white-space: normal;
   }
 
   .social-icons {
