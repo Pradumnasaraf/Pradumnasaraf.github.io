@@ -1,13 +1,13 @@
 export const metadata = {
   title: "Pradumna's Toolkit",
   description:
-    'Discover the tools, software, and gear that Pradumna Saraf uses daily as a Developer Advocate and Docker Captain. A comprehensive list of development tools, hardware, and productivity apps.',
+    'Tools, software, and gear I use daily for development and productivity.',
   keywords:
     'Pradumna Saraf Tools, Developer Tools, Docker Captain Tools, Development Setup, Productivity Tools, Software Stack, Hardware Setup',
   openGraph: {
     title: "Pradumna's Toolkit",
     description:
-      'Discover the tools, software, and gear that Pradumna Saraf uses daily as a Developer Advocate and Docker Captain. A comprehensive list of development tools, hardware, and productivity apps.',
+      'Tools, software, and gear I use daily for development and productivity.',
     url: 'https://pradumnasaraf.dev/toolkit',
     images: [
       {
@@ -24,7 +24,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: "Pradumna's Toolkit",
     description:
-      'Discover the tools, software, and gear that Pradumna Saraf uses daily as a Developer Advocate and Docker Captain.',
+      'Tools, software, and gear I use daily for development and productivity.',
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/toolkit-og.png'],
   },

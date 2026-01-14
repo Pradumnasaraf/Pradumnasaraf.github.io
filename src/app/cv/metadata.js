@@ -1,13 +1,13 @@
 export const metadata = {
   title: "Pradumna's CV",
   description:
-    'Professional CV and work experience of Pradumna Saraf, showcasing expertise in open source development, technical content creation, and community building.',
+    'My CV and work experience in open source, content creation, and community building.',
   keywords:
     'Pradumna Saraf CV, Professional Experience, Open Source Developer, Technical Content Creator, Community Builder',
   openGraph: {
     title: "Pradumna's CV",
     description:
-      'Professional CV and work experience of Pradumna Saraf, showcasing expertise in open source development, technical content creation, and community building.',
+      'My CV and work experience in open source, content creation, and community building.',
     url: 'https://pradumnasaraf.dev/cv',
     type: 'website',
     images: [
@@ -24,7 +24,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: "Pradumna's CV",
     description:
-      'Professional CV and work experience of Pradumna Saraf, showcasing expertise in open source development, technical content creation, and community building.',
+      'My CV and work experience in open source, content creation, and community building.',
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/cv-og.png'],
   },

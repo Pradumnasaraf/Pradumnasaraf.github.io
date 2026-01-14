@@ -1,13 +1,11 @@
 export const metadata = {
   title: "Pradumna's Professional Timeline",
-  description:
-    'Explore the professional journey of Pradumna Saraf - from early career to becoming a Developer Advocate and Docker Captain. A chronological timeline of achievements and milestones.',
+  description: 'My professional journey - from early career to now.',
   keywords:
     'Pradumna Saraf Timeline, Professional Journey, Career Timeline, Developer Advocate Journey, Docker Captain Journey, Career Milestones',
   openGraph: {
     title: "Pradumna's Professional Timeline",
-    description:
-      'Explore the professional journey of Pradumna Saraf - from early career to becoming a Developer Advocate and Docker Captain. A chronological timeline of achievements and milestones.',
+    description: 'My professional journey - from early career to now.',
     url: 'https://pradumnasaraf.dev/timeline',
     images: [
       {
@@ -23,8 +21,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Pradumna's Professional Timeline",
-    description:
-      'Explore the professional journey of Pradumna Saraf - from early career to becoming a Developer Advocate and Docker Captain.',
+    description: 'My professional journey - from early career to now.',
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/timeline-og.png'],
   },

@@ -1,13 +1,13 @@
 export const metadata = {
   title: "Pradumna's Photography",
   description:
-    'Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work showcasing various styles and subjects.',
+    'My mobile photography shots - a mix of personal and professional shots.',
   keywords:
     'Pradumna Saraf Photography, Photography Portfolio, Professional Photography, Personal Photography, Photo Gallery',
   openGraph: {
     title: "Pradumna's Photography",
     description:
-      'Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work showcasing various styles and subjects.',
+      'My mobile photography shots - a mix of personal and professional shots.',
     url: 'https://pradumnasaraf.dev/photography',
     images: [
       {
@@ -24,7 +24,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: "Pradumna's Photography",
     description:
-      'Explore the photography portfolio of Pradumna Saraf. A collection of professional and personal photography work.',
+      'My mobile photography shots - a mix of personal and professional shots.',
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/photography-og.png'],
   },

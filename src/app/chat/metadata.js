@@ -1,13 +1,13 @@
 export const metadata = {
   title: 'Chat with Pradumna',
   description:
-    'Schedule a meeting with Pradumna Saraf - Developer Advocate and Docker Captain. Book a time for consulting, speaking engagements, or general discussions.',
+    'Schedule a meeting with me for consulting, speaking, or just to chat.',
   keywords:
     'Schedule Meeting, Book Meeting, Pradumna Saraf Meeting, Developer Advocate Consultation, Docker Captain Consultation',
   openGraph: {
     title: 'Chat with Pradumna',
     description:
-      'Schedule a meeting with Pradumna Saraf - Developer Advocate and Docker Captain. Book a time for consulting, speaking engagements, or general discussions.',
+      'Schedule a meeting with me for consulting, speaking, or just to chat.',
     url: 'https://pradumnasaraf.dev/chat',
     type: 'website',
     images: [
@@ -24,7 +24,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Chat with Pradumna',
     description:
-      'Schedule a meeting with Pradumna Saraf - Developer Advocate and Docker Captain.',
+      'Schedule a meeting with me for consulting, speaking, or just to chat.',
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/chat-og.png'],
   },

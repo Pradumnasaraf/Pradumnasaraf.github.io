@@ -1,18 +1,18 @@
 export const metadata = {
-  title: 'Pradumna Saraf | Links',
+  title: 'Connect with Pradumna',
   description:
-    "All of Pradumna Saraf's important links in one place: website, blog, social media, and more.",
+    'Find all my links in one place - website, blog, and social media.',
   openGraph: {
-    title: 'Pradumna Saraf | Links',
+    title: 'Connect with Pradumna',
     description:
-      "All of Pradumna Saraf's important links in one place: website, blog, social media, and more.",
+      'Find all my links in one place - website, blog, and social media.',
     url: 'https://pradumnasaraf.dev/links',
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
+        url: 'https://pradumnasaraf.dev/media/links-og.png',
         width: 1200,
         height: 630,
-        alt: 'Pradumna Saraf - Links',
+        alt: 'Connect with Pradumna',
       },
     ],
     locale: 'en_US',
@@ -20,10 +20,10 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pradumna Saraf | Links',
+    title: 'Connect with Pradumna',
     description:
-      "All of Pradumna Saraf's important links in one place: website, blog, social media, and more.",
-    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
+      'Find all my links in one place - website, blog, and social media.',
+    images: ['https://pradumnasaraf.dev/media/links-og.png'],
   },
   robots: {
     index: true,

@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Pradumna Saraf',
   description:
-    'Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
+    'Developer Advocate, Docker Captain, and Microsoft MVP. I work with cloud-native tech, DevOps, and open source.',
   keywords:
     'Pradumna Saraf, Developer Advocate, Docker Captain, Microsoft MVP, Open Source, Cloud Native, DevOps, Software Development',
   authors: [{ name: 'Pradumna Saraf' }],
@@ -10,7 +10,7 @@ export const metadata = {
   openGraph: {
     title: 'Pradumna Saraf',
     description:
-      'Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
+      'Developer Advocate, Docker Captain, and Microsoft MVP. I work with cloud-native tech, DevOps, and open source.',
     url: 'https://pradumnasaraf.dev',
     images: [
       {
@@ -27,7 +27,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Pradumna Saraf',
     description:
-      'Developer Advocate, Docker Captain, Microsoft MVP, and Open Source evangelist. Sharing knowledge about cloud-native technologies, DevOps, and software development.',
+      'Developer Advocate, Docker Captain, and Microsoft MVP. I work with cloud-native tech, DevOps, and open source.',
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },

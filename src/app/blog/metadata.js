@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Pradumna's Blog",
   description:
-    'Read technical articles, tutorials, and insights about Docker, Kubernetes, DevOps, Cloud Native technologies, and Open Source from Pradumna Saraf.',
+    'Technical articles and tutorials about Docker, Kubernetes, DevOps, and cloud-native tech.',
   keywords: [
     'Pradumna Saraf Blog',
     'Docker Blog',
@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: "Pradumna's Blog",
     description:
-      'Read technical articles, tutorials, and insights about Docker, Kubernetes, DevOps, and Cloud Native technologies.',
+      'Technical articles and tutorials about Docker, Kubernetes, DevOps, and cloud-native tech.',
     url: 'https://pradumnasaraf.dev/blog',
     images: [
       {
@@ -36,7 +36,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: "Pradumna's Blog",
     description:
-      'Read technical articles, tutorials, and insights about Docker, Kubernetes, DevOps, and Cloud Native technologies.',
+      'Technical articles and tutorials about Docker, Kubernetes, DevOps, and cloud-native tech.',
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/blog-og.png'],
   },
