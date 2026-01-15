@@ -330,6 +330,10 @@
   touch-action: manipulation;
   min-height: 48px;
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .link-button:hover {
@@ -351,25 +355,16 @@
 /* Responsive Design - Mobile First */
 @media (max-width: 640px) {
   .links-container {
-    padding: 5rem 1rem 2rem;
+    padding: 0;
+    padding-top: max(1rem, calc(env(safe-area-inset-top, 0px) + 1rem));
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     align-items: flex-start;
     justify-content: center;
-  }
-
-  .share-button {
-    position: absolute;
-    top: -2.5rem;
-    left: 0;
-    transform: none;
-    width: 36px;
-    height: 36px;
-    font-size: 0.9rem;
-    border: 1px solid #000000;
-  }
-
-  .share-button:hover {
-    transform: scale(1.05);
+    overflow-x: hidden;
   }
 
   .links-content {
@@ -382,13 +377,27 @@
   .profile-section {
     gap: 0;
     padding: 0;
-    padding-top: 0.75rem;
     margin-bottom: 1.75rem;
     width: 100%;
+    position: relative;
+  }
+
+  .share-button {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    transform: none;
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    border: 1px solid #000000;
+    margin: 0;
+    z-index: 100;
   }
 
   .avatar-wrapper {
     margin-bottom: 1rem;
+    margin-top: calc(36px + 1rem);
   }
 
   .avatar {
@@ -452,7 +461,26 @@
 /* Extra small devices */
 @media (max-width: 375px) {
   .links-container {
-    padding: 1.25rem 0.875rem 1.75rem;
+    padding: 0;
+    padding-top: max(1rem, calc(env(safe-area-inset-top, 0px) + 1rem));
+    padding-bottom: 1.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .share-button {
+    top: 1rem;
+    left: 0;
+  }
+
+  .qr-modal-content {
+    padding: 1.25rem;
+    max-width: calc(100% - 1.5rem);
+  }
+
+  .qr-code-image {
+    width: 160px;
+    height: 160px;
   }
 
   .profile-name {
@@ -496,6 +524,10 @@
 
 /* Tablet and larger */
 @media (min-width: 641px) and (max-width: 1024px) {
+  .links-container {
+    padding: 4rem 1.5rem 2rem;
+  }
+
   .links-content {
     max-width: 550px;
   }
@@ -503,17 +535,13 @@
 
 /* Large screens */
 @media (min-width: 1025px) {
+  .links-container {
+    padding: 5rem 2rem 2rem;
+  }
+
   .links-content {
     max-width: 600px;
   }
-}
-
-/* Prevent text selection on buttons for better mobile UX */
-.link-button {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 /* Reduced motion */
@@ -522,7 +550,15 @@
     transition: none;
   }
 
-  .link-button:hover {
+  .share-button {
+    transition: none;
+  }
+
+  .share-button:hover {
+    transform: none;
+  }
+
+  .share-button:active {
     transform: none;
   }
 }
