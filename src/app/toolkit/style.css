@@ -1,7 +1,10 @@
 .toolkit-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 5rem 1rem 2rem;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .back-button {
@@ -18,6 +21,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   z-index: 1000;
+  cursor: pointer;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .back-button:hover {
@@ -47,6 +54,12 @@
   transition: opacity 0.2s ease;
   pointer-events: none;
   white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .back-button::after {
+    display: none;
+  }
 }
 
 .back-button:hover::after {
@@ -89,6 +102,8 @@
   transition:
     transform 0.2s,
     box-shadow 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .toolkit-item:hover {
@@ -121,9 +136,10 @@
   }
 }
 
+/* Mobile First - Responsive Design */
 @media (max-width: 768px) {
   .toolkit-container {
-    padding: 0 0.75rem;
+    padding: 4rem 1.5rem 2rem;
   }
 
   .back-button {
@@ -164,27 +180,23 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .toolkit-container {
-    padding: 0 0.5rem;
+    padding: 0;
+    padding-top: max(1rem, calc(env(safe-area-inset-top, 0px) + 1rem));
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    overflow-x: hidden;
   }
 
   .back-button {
-    width: 32px;
-    height: 32px;
-    top: 10px;
-    left: 10px;
-  }
-
-  .back-button svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .back-button::after {
-    left: 40px;
-    font-size: 10px;
-    padding: 2px 5px;
+    width: 36px;
+    height: 36px;
+    top: max(1rem, calc(env(safe-area-inset-top, 0px) + 1rem));
+    left: 1.5rem;
   }
 
   .toolkit-title {
@@ -212,5 +224,58 @@
 
   .toolkit-item p {
     font-size: 0.95rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  .toolkit-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .back-button {
+    width: 32px;
+    height: 32px;
+    left: 1.25rem;
+  }
+
+  .back-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Tablet and larger */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .toolkit-container {
+    padding: 4rem 1.5rem 2rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .toolkit-container {
+    padding: 5rem 2rem 2rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .back-button {
+    transition: none;
+  }
+
+  .back-button:hover {
+    transform: none;
+  }
+
+  .toolkit-item {
+    transition: none;
+  }
+
+  .toolkit-item:hover {
+    transform: none;
   }
 }
