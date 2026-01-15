@@ -355,9 +355,11 @@
 /* Responsive Design - Mobile First */
 @media (max-width: 640px) {
   .links-container {
-    padding: 1rem;
+    padding: 0;
     padding-top: max(1rem, calc(env(safe-area-inset-top, 0px) + 1rem));
     padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     align-items: flex-start;
@@ -383,7 +385,7 @@
   .share-button {
     position: absolute;
     top: 1rem;
-    left: 1rem;
+    left: 0;
     transform: none;
     width: 36px;
     height: 36px;
@@ -459,13 +461,26 @@
 /* Extra small devices */
 @media (max-width: 375px) {
   .links-container {
-    padding: 1rem 0.875rem 1.75rem;
+    padding: 0;
     padding-top: max(1rem, calc(env(safe-area-inset-top, 0px) + 1rem));
+    padding-bottom: 1.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .share-button {
     top: 1rem;
-    left: 0.875rem;
+    left: 0;
+  }
+
+  .qr-modal-content {
+    padding: 1.25rem;
+    max-width: calc(100% - 1.5rem);
+  }
+
+  .qr-code-image {
+    width: 160px;
+    height: 160px;
   }
 
   .profile-name {
@@ -509,6 +524,10 @@
 
 /* Tablet and larger */
 @media (min-width: 641px) and (max-width: 1024px) {
+  .links-container {
+    padding: 4rem 1.5rem 2rem;
+  }
+
   .links-content {
     max-width: 550px;
   }
@@ -516,6 +535,10 @@
 
 /* Large screens */
 @media (min-width: 1025px) {
+  .links-container {
+    padding: 5rem 2rem 2rem;
+  }
+
   .links-content {
     max-width: 600px;
   }
