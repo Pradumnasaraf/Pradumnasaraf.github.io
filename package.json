@@ -1,6 +1,7 @@
 {
   "name": "Pradumnasaraf.github.io",
   "version": "4.4.0",
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
