@@ -1381,7 +1381,6 @@
 .image-lightbox-close:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.5);
-  transform: rotate(90deg);
 }
 
 .image-lightbox-close svg {
@@ -1390,7 +1389,7 @@
   stroke: currentColor;
 }
 
-/* Tooltip for image lightbox close button (left of button) */
+/* Tooltip for image lightbox close button */
 .image-lightbox-close::after {
   content: attr(title);
   position: absolute;

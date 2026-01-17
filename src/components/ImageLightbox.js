@@ -121,6 +121,7 @@ export default function ImageLightbox() {
         className="image-lightbox-close"
         onClick={closeLightbox}
         aria-label="Close lightbox"
+        title="Close"
         type="button"
       >
         <svg
@@ -138,11 +139,7 @@ export default function ImageLightbox() {
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
-      <div
-        className="image-lightbox-content"
-        aria-label="Close lightbox"
-        title="Close"
-      >
+      <div className="image-lightbox-content">
         <img
           src={imageSrc}
           alt={imageAlt}

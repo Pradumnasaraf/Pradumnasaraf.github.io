@@ -1,4 +1,4 @@
-/* Shared button styles for search and close buttons */
+/* Shared button styles for search and close buttons - identical to back button */
 .blog-search-button,
 .blog-search-close-button {
   position: fixed;
@@ -6,7 +6,7 @@
   top: 20px;
   width: 40px;
   height: 40px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: none;
   border-radius: 50%;
   display: flex;
@@ -15,7 +15,8 @@
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  color: #333;
+  z-index: 1000;
+  text-decoration: none;
   padding: 0;
 }
 
@@ -46,35 +47,8 @@
   color: #000;
 }
 
-.blog-search-button:active {
-  transform: translateX(-2px);
-}
-
-/* Tooltip for search button */
-.blog-search-button::after {
-  content: attr(title);
-  position: absolute;
-  top: 50%;
-  right: 120%;
-  transform: translateY(-50%);
-  background-color: #333;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-  white-space: nowrap;
-  z-index: 1001;
-}
-
-.blog-search-button:hover::after,
-.blog-search-button:focus::after {
-  opacity: 1;
-}
-
-/* Close button tooltip (left side, consistent style) */
+/* Tooltip for search and close buttons - shared styles */
+.blog-search-button::after,
 .blog-search-close-button::after {
   content: attr(title);
   position: absolute;
@@ -90,9 +64,18 @@
   transition: opacity 0.2s ease;
   pointer-events: none;
   white-space: nowrap;
+}
+
+.blog-search-button::after {
+  z-index: 1001;
+}
+
+.blog-search-close-button::after {
   z-index: 10001;
 }
 
+.blog-search-button:hover::after,
+.blog-search-button:focus::after,
 .blog-search-close-button:hover::after,
 .blog-search-close-button:focus::after {
   opacity: 1;
