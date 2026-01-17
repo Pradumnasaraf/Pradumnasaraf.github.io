@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import './globals.css';
-import Head from 'next/head';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import KonamiGame from '@/components/KonamiGame';
 
@@ -63,34 +62,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="Pradumna Saraf Portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="style.css" />
-        <link
-          rel="icon"
-          href="https://user-images.githubusercontent.com/51878265/194138074-7a341083-e80e-49d9-8e58-02882b26d3d9.png"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-
       <div className="nav">
         <div className="hamburger" onClick={toggleMenu}>
           <span></span>

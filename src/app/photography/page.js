@@ -9,315 +9,315 @@ import Link from 'next/link';
 const images = [
   {
     src: 'https://drive.google.com/thumbnail?id=1RK_lf6pGbTlKtvxZzyiB0VuxyI9AipNV&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=10zE2jJN-BeVGljRjDDC5fhiRerv42Vt3&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1pyJMGvAe3laDskv1oY7Lry1Km9MnYGkZ&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1G9_j9kzp0ejkTNb_fsGT0J1dmWbhZKat&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1C6YurK98vBAvHZscaR36TrjSh2sEY_UR&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1nc5clO7-WsUm6iEQ4Q56L00CfFdN2w-m&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1rqxh4l9E9dyIRLDWDoU_K3jUnn29tvcO&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1pwKmGVgrRvoMUCUKUzJh0sU1jZXSLwjw&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1ZW8fzpdkxbca3f72X0OFXOq0y9DC6ClM&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1jISzYVovLy9_uGiscHguxiPt7UsK-kqT&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1aP_3EKnbdPaIDztlL7Ks8jzbOcjZLFtm&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1Ykm6VsSf-bE9682cQU5OnpJJXojlBm3T&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1zXFFlk6kySQLwijUTeIlIIqW0PoLVyDU&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1tWL6ie_M4ql5NpGNidvTLmT78BT334zS&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1TxlQMlmKEgA8u1JFglRbKSn5Z-g65-jX&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1KpWd-DtolaShXq_vpT55nvdalukQCKW4&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=10f1qtXXX8gNAQkA-Xr6NcqPInotAy56B&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1WnkGveeS-4tbxd2DkVa3O7uHixLPeuJC&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1-Szq73MYDvQkeNuGppJ7F-g-ofxnLDvt&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1DZ8H4r31LUxCD_VtLkT56Agu3R-1viyj&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1Cvoki5hEGB3OZxF4xxtDJ5LO2Y-EcN7A&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1vY-kM_AVp6R07Bk5cE4ywlgYwSfvMWxq&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1gE46wgVNfwZ9eFb-HPSOBkDfeMympeOf&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1G1LY1kjtBt-7nyu8G_9Qie9CRQ7fbcGX&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=16PpTEy-h9WHxZtOLYx_bVrp4KbP-SWUU&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1ZQJGrQZ9YbHP5P80xk3nju_oRyJO9Bab&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1b4muPn7Ca_WFX3cgvZVpi1qLe6H39KoW&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1uu0wWGmbHC0VY7BT-n5DUpWz86_ozANg&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1G8IYlbeJUKvghC8FIlEmtyVo6fg_YxqZ&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=16L3ofu41chPDGxq_RW731LJivhIeVxUq&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1Ei5tA5Yyr_a3MowFocGEjI18MXW9HNB9&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1oJ7Mwt8_3l4x0lHlGjhBBzGIJGtMw-mb&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1MHCmoSxTZzn12CF0049i6aGCGHBymgNi&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1TkFT7Ltq-2WBiad2rSWf6HCzR4TlJHct&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1ZANWi4xPKnBl33ZzKNQ33Wut3Q_PvhzZ&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1_MfsKjvfoXEfnHShs9xfGCZBblqx6-Ys&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1W3O99xQPuWHqsoXgJIEhqlezGM9fKBS7&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1uDQWBVkYMfIM1zkqLEgfVp0LybMHbrON&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=10y1eKKToLn6r5YoTuAmygY2trfGSpnCG&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1Je8FZim_4Yv4HpbHXo4QfeVJwAdXtRCT&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1aSjqoUAatD6z2Y2aqDjGzIY-cgw0M4yS&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1PpJmIfi7jOYkS3c1zIFcH4PhoGM3byY0&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1FvJkbkKc9pGBQUsbL6xVe2zNpvhW17wP&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=13eCs2HwT_tE6OeEpyQIWejqj33DTiJji&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1BkYTYmkOloOoRVSb-bJ_8QhpVLjXmoFC&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1JWOvh9KtvBnHAw82hyRZo6Phf9ea1FQP&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1MeFiCdT438uGjRJuApQ-jXhcuXUY9OM9&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1m03fXOLcWTsFrWzKoXqB9vV2fl0ByijA&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1UzdC2ZNdDrkUo3aOG5tYW7j-28uHpZNV&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1nZOT0l-clGWfkdThQtJW3A_cz18pSNpB&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=18Koqchl7s-weaiq5LYN5B9J48Tcva47d&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1kqL8Ns3FQAHwb2YOz_iYtUS6N__T6smr&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1G_wdf3-Qon9B-aAQfzu2rTYBylLhl6AL&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=15FLX2bCpBOL13gdoVvId7m0fCi83qcrE&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1wG3VNkz8Skx_pNULWeCHllpLujLaSnd5&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1S77toNTIBy9pkJnHq9rgdxP2_a119MHk&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1XVTlPdldc5eN7e40qCh4PbaapLZ6mfk3&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1-5Zv3b-9yZkq9lU5E4Ls3eZqJqO7bPAv&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1-_sVLUuvlL6omwexd1yBpwUKHe32RwI-&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1ZypyRj1j-GjwddXWAaAKt5oCM4zSU9Pc&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1ISysXMTEBkqwt3-wCN0jFRNATZTWKi26&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1bifEZJm_rIx_Xs4pORmfXCCIVFuMH_DY&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=11VG8uzX2vUMSRtEnHsDxDMT3fcletqsY&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1YbOEXGJfIOXvRW6akB1HVmaIOOF2Jk1h&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1JANNc-kNawn7jUGRs4MUZc9ib0wQ8JBP&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1ko_WLnJ2SNNEO13WkKmRhpvobDQ6Q_Ko&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1b3CqP5Hn0xI2m6d2jH9_uWrfn3z8rkI0&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1ruE0RqOwTPK0AR17ap4hwfGDgWboP52p&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1O83nNCKCUZ4McHO1nlZXvo1OKqzLldyw&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1MxtU3yWE8BkSi-1gessGGaTKGKzO8SO6&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1nTQlYnaHPsy-kCrlV1bJocKgwlvqmyQc&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1K_Iteo-Rqrxi0ayMMAjOgsBSocg81Wmx&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1FEQMnHybHi1TDvCHweOsB7ODeC06VjIs&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1P60hz5FIkEhoyxEJOtHCVprzm8sP4tt-&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1dD4-Qrc2Hk4dCFQKcBB4GRbsvrcJOt0Q&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1sVamXny-K2Tfb_m_PGxQEdTiV99_r8q8&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=16ujZfroa5zjL09-UJWPyeRK0NUu1VkBi&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
   {
     src: 'https://drive.google.com/thumbnail?id=1-umcEA-0sefXkCVXtpEFxvVAWqtnw2y1&sz=w2500',
-    alt: 'photo',
+    alt: 'Photography by Pradumna Saraf',
   },
 ];
 
