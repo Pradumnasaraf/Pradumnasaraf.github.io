@@ -49,6 +49,7 @@ export default function BlogShareButtons({ url, title }) {
           rel="noopener noreferrer"
           className="blog-share-button twitter"
           aria-label="Share on Twitter"
+          title="Share on Twitter"
         >
           <FaTwitter />
         </a>
@@ -58,6 +59,7 @@ export default function BlogShareButtons({ url, title }) {
           rel="noopener noreferrer"
           className="blog-share-button linkedin"
           aria-label="Share on LinkedIn"
+          title="Share on LinkedIn"
         >
           <FaLinkedin />
         </a>
@@ -65,6 +67,7 @@ export default function BlogShareButtons({ url, title }) {
           onClick={copyToClipboard}
           className="blog-share-button copy"
           aria-label={copied ? 'Link copied!' : 'Copy link'}
+          title={copied ? 'Link copied!' : 'Copy link'}
           type="button"
         >
           {copied ? '✓' : <FaLink />}
