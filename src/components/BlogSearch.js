@@ -88,6 +88,7 @@ export default function BlogSearch({ posts }) {
           className="blog-search-close-button"
           onClick={handleClose}
           aria-label="Close search"
+          title="Close search"
         >
           <FiX />
         </button>
@@ -117,6 +118,7 @@ export default function BlogSearch({ posts }) {
                     className="blog-search-clear"
                     onClick={() => setSearchQuery('')}
                     aria-label="Clear search"
+                    title="Clear search"
                   >
                     <FiX />
                   </button>

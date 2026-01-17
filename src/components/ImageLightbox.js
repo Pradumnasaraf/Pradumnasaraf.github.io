@@ -140,7 +140,8 @@ export default function ImageLightbox() {
       </button>
       <div
         className="image-lightbox-content"
-        onClick={(e) => e.stopPropagation()}
+        aria-label="Close lightbox"
+        title="Close"
       >
         <img
           src={imageSrc}

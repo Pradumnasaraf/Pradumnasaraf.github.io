@@ -50,6 +50,63 @@
   transform: translateX(-2px);
 }
 
+/* Tooltip for search button */
+.blog-search-button::after {
+  content: attr(title);
+  position: absolute;
+  top: 50%;
+  right: 120%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1001;
+}
+
+.blog-search-button:hover::after,
+.blog-search-button:focus::after {
+  opacity: 1;
+}
+
+/* Close button tooltip (left side, consistent style) */
+.blog-search-close-button::after {
+  content: attr(title);
+  position: absolute;
+  top: 50%;
+  right: 120%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 10001;
+}
+
+.blog-search-close-button:hover::after,
+.blog-search-close-button:focus::after {
+  opacity: 1;
+}
+
+/* Slightly smaller tooltip on small screens */
+@media (max-width: 480px) {
+  .blog-search-button::after,
+  .blog-search-close-button::after {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+}
+
 /* Mobile: Match back button positioning and sizing */
 @media (max-width: 768px) {
   .blog-search-button,

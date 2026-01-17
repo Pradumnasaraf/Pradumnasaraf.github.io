@@ -432,6 +432,7 @@
   transition: all 0.3s ease;
   cursor: pointer;
   font-size: 1.2em;
+  position: relative;
 }
 
 .blog-share-button svg {
@@ -443,6 +444,30 @@
   background-color: #333;
   color: #fff;
   transform: translateY(-2px);
+}
+
+/* Tooltip for share buttons (above center, consistent style) */
+.blog-share-button::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1001;
+}
+
+.blog-share-button:hover::after,
+.blog-share-button:focus::after {
+  opacity: 1;
 }
 
 .blog-post-back-link {
@@ -1363,6 +1388,30 @@
   width: 20px;
   height: 20px;
   stroke: currentColor;
+}
+
+/* Tooltip for image lightbox close button (left of button) */
+.image-lightbox-close::after {
+  content: attr(title);
+  position: absolute;
+  top: 50%;
+  right: 120%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 10001;
+}
+
+.image-lightbox-close:hover::after,
+.image-lightbox-close:focus::after {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
