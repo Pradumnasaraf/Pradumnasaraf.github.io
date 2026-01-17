@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import './style.css';
 import { metadata } from './metadata';
+import BlogSearch from '@/components/BlogSearch';
 
 export { metadata };
 
@@ -12,6 +13,7 @@ export default function BlogPage() {
 
   return (
     <div className="blog-container">
+      <BlogSearch posts={posts} />
       <Link
         href="/"
         className="blog-listing-back-button"
