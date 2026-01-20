@@ -111,7 +111,11 @@ export default async function BlogPost({ params }) {
   return (
     <div className="blog-post-container">
       <ReadingProgress />
-      <BlogBackButton />
+      <div className="blog-topbar" role="banner">
+        <div className="blog-topbar-inner">
+          <BlogBackButton />
+        </div>
+      </div>
       <ImageLightbox />
       <script
         type="application/ld+json"

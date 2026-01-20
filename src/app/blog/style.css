@@ -18,6 +18,44 @@
   position: relative;
 }
 
+/* Fixed top bar for blog actions (Back/Search) */
+.blog-topbar {
+  position: static;
+  background: #fff;
+  z-index: auto;
+  border-bottom: none;
+}
+
+.blog-topbar-inner {
+  position: relative;
+  /* Match the old fixed-button geometry:
+     top (20) + button (40) + bottom (20) */
+  height: calc(env(safe-area-inset-top) + 80px);
+  box-sizing: border-box;
+}
+
+/* Place buttons inside the bar (not fixed) */
+.blog-topbar .blog-listing-back-button,
+.blog-topbar .blog-post-back-button {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 20px);
+  left: 20px;
+}
+
+.blog-topbar .blog-search-trigger {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 20px);
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: auto;
+}
+
+.blog-topbar .blog-search-button,
+.blog-topbar .blog-search-close-button {
+  position: absolute; /* stays within trigger */
+}
+
 /* Reading Progress Bar */
 .reading-progress-container {
   position: fixed;
@@ -871,14 +909,32 @@
 @media (max-width: 768px) {
   .blog-container {
     padding: 1.25rem 1.25rem;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     max-width: 100%;
   }
 
   .blog-post-container {
     padding: 1.25rem 1.25rem;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     max-width: 100%;
+  }
+
+  .blog-topbar-inner {
+    /* top (12) + button (36) + bottom (12) */
+    height: calc(env(safe-area-inset-top) + 60px);
+  }
+
+  .blog-topbar .blog-listing-back-button,
+  .blog-topbar .blog-post-back-button {
+    top: calc(env(safe-area-inset-top) + 12px);
+    left: 12px;
+  }
+
+  .blog-topbar .blog-search-trigger {
+    top: calc(env(safe-area-inset-top) + 12px);
+    right: 12px;
+    width: 36px;
+    height: 36px;
   }
 
   .blog-post-back-button {
@@ -1022,12 +1078,12 @@
 @media (max-width: 640px) {
   .blog-container {
     padding: 1rem 1rem;
-    padding-top: 1.25rem;
+    padding-top: 0.85rem;
   }
 
   .blog-post-container {
     padding: 1rem 1rem;
-    padding-top: 1.25rem;
+    padding-top: 0.85rem;
   }
 
   .blog-title {
@@ -1047,12 +1103,12 @@
 @media (max-width: 480px) {
   .blog-container {
     padding: 1rem 1rem;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
   }
 
   .blog-post-container {
     padding: 1rem 1rem;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
   }
 
   .blog-post-back-button {
@@ -1262,12 +1318,12 @@
 @media (max-width: 360px) {
   .blog-container {
     padding: 0.75rem 0.75rem;
-    padding-top: 0.75rem;
+    padding-top: 0.5rem;
   }
 
   .blog-post-container {
     padding: 0.75rem 0.75rem;
-    padding-top: 0.75rem;
+    padding-top: 0.5rem;
   }
 
   .blog-post-back-button {
@@ -1282,6 +1338,30 @@
     height: 32px;
     top: 10px;
     left: 10px;
+  }
+
+  .blog-topbar-inner {
+    /* top (8) + button (32) + bottom (8) */
+    height: calc(env(safe-area-inset-top) + 48px);
+  }
+
+  .blog-topbar .blog-listing-back-button,
+  .blog-topbar .blog-post-back-button {
+    top: calc(env(safe-area-inset-top) + 8px);
+    left: 8px;
+  }
+
+  .blog-topbar .blog-search-trigger {
+    top: calc(env(safe-area-inset-top) + 8px);
+    right: 8px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .blog-topbar .blog-search-button svg,
+  .blog-topbar .blog-search-close-button svg {
+    width: 18px;
+    height: 18px;
   }
 
   .blog-post-back-button svg {

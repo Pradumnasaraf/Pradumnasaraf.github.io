@@ -1,9 +1,8 @@
 /* Shared button styles for search and close buttons - identical to back button */
 .blog-search-button,
 .blog-search-close-button {
-  position: fixed;
-  right: 20px;
-  top: 20px;
+  position: absolute;
+  inset: 0;
   width: 40px;
   height: 40px;
   background-color: #fff;
@@ -20,12 +19,27 @@
   padding: 0;
 }
 
+.blog-search-trigger {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+}
+
 .blog-search-button {
   z-index: 1000;
 }
 
 .blog-search-close-button {
   z-index: 10000;
+}
+
+/* Explicitly remove any tooltip for close button */
+.blog-search-close-button::after {
+  display: none !important;
+  content: none !important;
 }
 
 .blog-search-button svg,
@@ -47,9 +61,8 @@
   color: #000;
 }
 
-/* Tooltip for search and close buttons - shared styles */
-.blog-search-button::after,
-.blog-search-close-button::after {
+/* Tooltip for search button */
+.blog-search-button::after {
   content: attr(title);
   position: absolute;
   top: 50%;
@@ -64,27 +77,17 @@
   transition: opacity 0.2s ease;
   pointer-events: none;
   white-space: nowrap;
-}
-
-.blog-search-button::after {
   z-index: 1001;
 }
 
-.blog-search-close-button::after {
-  z-index: 10001;
-}
-
 .blog-search-button:hover::after,
-.blog-search-button:focus::after,
-.blog-search-close-button:hover::after,
-.blog-search-close-button:focus::after {
+.blog-search-button:focus::after {
   opacity: 1;
 }
 
 /* Slightly smaller tooltip on small screens */
 @media (max-width: 480px) {
-  .blog-search-button::after,
-  .blog-search-close-button::after {
+  .blog-search-button::after {
     font-size: 11px;
     padding: 3px 6px;
   }
@@ -92,17 +95,29 @@
 
 /* Mobile: Match back button positioning and sizing */
 @media (max-width: 768px) {
-  .blog-search-button,
-  .blog-search-close-button {
+  .blog-search-trigger {
     right: 16px;
     top: 16px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .blog-search-button,
+  .blog-search-close-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .blog-search-button svg,
+  .blog-search-close-button svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
 /* Small mobile: Match back button smaller size */
 @media (max-width: 480px) {
-  .blog-search-button,
-  .blog-search-close-button {
+  .blog-search-trigger {
     width: 36px;
     height: 36px;
     top: 15px;
@@ -132,6 +147,10 @@
   padding: 2rem;
   overflow-y: auto;
   animation: fadeIn 0.2s ease;
+  /* Prevent scroll events from reaching background */
+  overscroll-behavior: contain;
+  /* Allow scrolling within modal but prevent background scroll */
+  touch-action: pan-y;
 }
 
 @keyframes fadeIn {
