@@ -41,13 +41,29 @@ export default function BlogSearch({ posts }) {
   // Prevent body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
+      // Save current scroll position
+      const scrollY = window.scrollY;
+
+      // Lock body scroll - works on both desktop and mobile
+      // Using position: fixed prevents all scrolling (touch, wheel, etc.)
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+      document.body.style.width = '100%';
+
+      return () => {
+        // Restore scroll position and unlock body
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.overflow = '';
+        document.body.style.width = '';
+        window.scrollTo(0, scrollY);
+      };
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   const handleSearchClick = () => {
@@ -72,27 +88,31 @@ export default function BlogSearch({ posts }) {
 
   return (
     <>
-      {/* Search Icon Button */}
-      <button
-        className="blog-search-button"
-        onClick={handleSearchClick}
-        aria-label="Search blog posts"
-        title="Search blog posts"
-      >
-        <FiSearch />
-      </button>
-
-      {/* Close Button - Shows when modal is open */}
-      {isOpen && (
+      <div className="blog-search-trigger">
+        {/* Search Icon Button */}
         <button
-          className="blog-search-close-button"
-          onClick={handleClose}
-          aria-label="Close search"
-          title="Close search"
+          className="blog-search-button"
+          onClick={handleSearchClick}
+          aria-label="Search blog posts"
+          title="Search blog posts"
+          type="button"
         >
-          <FiX />
+          <FiSearch />
         </button>
-      )}
+
+        {/* Close Button - Shows when modal is open */}
+        {isOpen && (
+          <button
+            className="blog-search-close-button"
+            onClick={handleClose}
+            aria-label="Close search"
+            title="Close search"
+            type="button"
+          >
+            <FiX />
+          </button>
+        )}
+      </div>
 
       {/* Search Modal */}
       {isOpen && (
