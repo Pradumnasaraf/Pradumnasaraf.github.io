@@ -50,6 +50,24 @@
   transition: color 0.3s ease;
 }
 
+/* Ensure consistent sizing even with Safari/prod CSS ordering quirks */
+.blog-topbar .blog-search-trigger {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.blog-topbar .blog-search-button,
+.blog-topbar .blog-search-close-button {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.blog-topbar .blog-search-button svg,
+.blog-topbar .blog-search-close-button svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
 .blog-search-button:hover,
 .blog-search-close-button:hover {
   transform: translateX(-4px);
@@ -113,6 +131,17 @@
     width: 20px;
     height: 20px;
   }
+
+  .blog-topbar .blog-search-trigger {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .blog-topbar .blog-search-button svg,
+  .blog-topbar .blog-search-close-button svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
 }
 
 /* Small mobile: Match back button smaller size */
@@ -151,6 +180,15 @@
   overscroll-behavior: contain;
   /* Allow scrolling within modal but prevent background scroll */
   touch-action: pan-y;
+}
+
+/* iOS Safari: make sure modal header never sits under the top-right close button */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    .blog-search-modal-content {
+      margin-top: calc(env(safe-area-inset-top) + 64px);
+    }
+  }
 }
 
 @keyframes fadeIn {
