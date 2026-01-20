@@ -40,6 +40,11 @@
   position: absolute;
   top: calc(env(safe-area-inset-top) + 20px);
   left: 20px;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .blog-topbar .blog-search-trigger {
@@ -928,6 +933,8 @@
   .blog-topbar .blog-post-back-button {
     top: calc(env(safe-area-inset-top) + 12px);
     left: 12px;
+    width: 36px !important;
+    height: 36px !important;
   }
 
   .blog-topbar .blog-search-trigger {
@@ -1349,6 +1356,8 @@
   .blog-topbar .blog-post-back-button {
     top: calc(env(safe-area-inset-top) + 8px);
     left: 8px;
+    width: 32px !important;
+    height: 32px !important;
   }
 
   .blog-topbar .blog-search-trigger {

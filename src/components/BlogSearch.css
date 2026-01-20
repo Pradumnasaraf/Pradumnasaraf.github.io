@@ -206,7 +206,8 @@
   border-radius: 12px;
   width: 100%;
   max-width: 600px;
-  margin-top: 5vh;
+  /* Prevent iOS Safari (esp. prod) from placing modal under top buttons */
+  margin-top: max(5vh, calc(env(safe-area-inset-top) + 80px));
   max-height: 85vh;
   display: flex;
   flex-direction: column;
@@ -235,7 +236,7 @@
   }
 
   .blog-search-modal-content {
-    margin-top: 10vh;
+    margin-top: max(10vh, calc(env(safe-area-inset-top) + 72px));
     max-height: 80vh;
     border-radius: 12px;
     max-width: 100%;
