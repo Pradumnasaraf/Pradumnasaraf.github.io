@@ -3,8 +3,50 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FiSearch, FiX } from 'react-icons/fi';
 import './BlogSearch.css';
+
+// Use inline SVG icons so Safari renders them exactly like the back button SVG
+function SearchIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="11" cy="11" r="7" />
+      <line x1="16.65" y1="16.65" x2="21" y2="21" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}
 
 export default function BlogSearch({ posts }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,7 +139,7 @@ export default function BlogSearch({ posts }) {
           title="Search blog posts"
           type="button"
         >
-          <FiSearch />
+          <SearchIcon />
         </button>
 
         {/* Close Button - Shows when modal is open */}
@@ -108,7 +150,7 @@ export default function BlogSearch({ posts }) {
             aria-label="Close search"
             type="button"
           >
-            <FiX />
+            <CloseIcon />
           </button>
         )}
       </div>
@@ -123,7 +165,9 @@ export default function BlogSearch({ posts }) {
             {/* Header */}
             <div className="blog-search-header">
               <div className="blog-search-input-wrapper">
-                <FiSearch className="blog-search-input-icon" />
+                <span className="blog-search-input-icon" aria-hidden="true">
+                  <SearchIcon />
+                </span>
                 <input
                   ref={inputRef}
                   type="text"
@@ -138,8 +182,9 @@ export default function BlogSearch({ posts }) {
                     onClick={() => setSearchQuery('')}
                     aria-label="Clear search"
                     title="Clear search"
+                    type="button"
                   >
-                    <FiX />
+                    <CloseIcon />
                   </button>
                 )}
               </div>
