@@ -106,7 +106,6 @@ export default function BlogSearch({ posts }) {
             className="blog-search-close-button"
             onClick={handleClose}
             aria-label="Close search"
-            title="Close search"
             type="button"
           >
             <FiX />
