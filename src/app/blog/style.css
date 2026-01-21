@@ -24,6 +24,8 @@
   background: #fff;
   z-index: auto;
   border-bottom: none;
+  --blog-topbar-button-size: 40px;
+  --blog-topbar-icon-size: 24px;
 }
 
 .blog-topbar-inner {
@@ -40,8 +42,8 @@
   position: absolute;
   top: calc(env(safe-area-inset-top) + 20px);
   left: 20px;
-  width: 40px !important;
-  height: 40px !important;
+  width: var(--blog-topbar-button-size) !important;
+  height: var(--blog-topbar-button-size) !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,14 +53,22 @@
   position: absolute;
   top: calc(env(safe-area-inset-top) + 20px);
   right: 20px;
-  width: 40px;
-  height: 40px;
+  width: var(--blog-topbar-button-size);
+  height: var(--blog-topbar-button-size);
   z-index: auto;
 }
 
 .blog-topbar .blog-search-button,
 .blog-topbar .blog-search-close-button {
   position: absolute; /* stays within trigger */
+}
+
+.blog-topbar .blog-listing-back-button svg,
+.blog-topbar .blog-post-back-button svg,
+.blog-topbar .blog-search-button svg,
+.blog-topbar .blog-search-close-button svg {
+  width: var(--blog-topbar-icon-size);
+  height: var(--blog-topbar-icon-size);
 }
 
 /* Reading Progress Bar */
@@ -929,19 +939,24 @@
     height: calc(env(safe-area-inset-top) + 60px);
   }
 
+  .blog-topbar {
+    --blog-topbar-button-size: 36px;
+    --blog-topbar-icon-size: 20px;
+  }
+
   .blog-topbar .blog-listing-back-button,
   .blog-topbar .blog-post-back-button {
     top: calc(env(safe-area-inset-top) + 12px);
     left: 12px;
-    width: 36px !important;
-    height: 36px !important;
+    width: var(--blog-topbar-button-size) !important;
+    height: var(--blog-topbar-button-size) !important;
   }
 
   .blog-topbar .blog-search-trigger {
     top: calc(env(safe-area-inset-top) + 12px);
     right: 12px;
-    width: 36px;
-    height: 36px;
+    width: var(--blog-topbar-button-size);
+    height: var(--blog-topbar-button-size);
   }
 
   .blog-post-back-button {
@@ -1352,19 +1367,24 @@
     height: calc(env(safe-area-inset-top) + 48px);
   }
 
+  .blog-topbar {
+    --blog-topbar-button-size: 32px;
+    --blog-topbar-icon-size: 18px;
+  }
+
   .blog-topbar .blog-listing-back-button,
   .blog-topbar .blog-post-back-button {
     top: calc(env(safe-area-inset-top) + 8px);
     left: 8px;
-    width: 32px !important;
-    height: 32px !important;
+    width: var(--blog-topbar-button-size) !important;
+    height: var(--blog-topbar-button-size) !important;
   }
 
   .blog-topbar .blog-search-trigger {
     top: calc(env(safe-area-inset-top) + 8px);
     right: 8px;
-    width: 32px;
-    height: 32px;
+    width: var(--blog-topbar-button-size);
+    height: var(--blog-topbar-button-size);
   }
 
   .blog-topbar .blog-search-button svg,

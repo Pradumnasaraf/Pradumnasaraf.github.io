@@ -65,8 +65,8 @@
 
 .blog-topbar .blog-search-button svg,
 .blog-topbar .blog-search-close-button svg {
-  width: 24px !important;
-  height: 24px !important;
+  width: var(--blog-topbar-icon-size, 24px) !important;
+  height: var(--blog-topbar-icon-size, 24px) !important;
 }
 
 .blog-search-button:hover,
@@ -140,8 +140,8 @@
 
   .blog-topbar .blog-search-button svg,
   .blog-topbar .blog-search-close-button svg {
-    width: 20px !important;
-    height: 20px !important;
+    width: var(--blog-topbar-icon-size, 20px) !important;
+    height: var(--blog-topbar-icon-size, 20px) !important;
   }
 }
 
@@ -285,6 +285,24 @@
     padding: 0.75rem;
   }
 
+  .blog-search-trigger {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .blog-search-button,
+  .blog-search-close-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .blog-topbar .blog-search-trigger {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
   .blog-search-modal-content {
     margin-top: max(6vh, calc(env(safe-area-inset-top) + 48px));
     max-height: 90vh;
@@ -303,6 +321,11 @@
   .blog-topbar .blog-search-close-button svg {
     width: 18px !important;
     height: 18px !important;
+  }
+
+  .blog-search-clear svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -413,6 +436,11 @@
   transition: color 0.2s ease;
   font-size: 1.2rem;
   z-index: 1;
+}
+
+.blog-search-clear svg {
+  width: 20px;
+  height: 20px;
 }
 
 .blog-search-clear:hover {
