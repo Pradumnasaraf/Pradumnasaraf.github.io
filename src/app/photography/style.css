@@ -522,7 +522,7 @@
 
 @media (max-width: 480px) {
   .popup-content {
-    padding: 36px 20px 20px; /* Increased top padding for small mobile */
+    padding: 50px 20px 20px; /* Increased top padding for small mobile */
   }
 
   .popup-title {
