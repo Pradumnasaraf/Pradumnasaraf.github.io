@@ -50,6 +50,110 @@ main {
   overscroll-behavior-x: none;
 }
 
+.page-topbar {
+  position: static;
+  background: #ffffff;
+  z-index: auto;
+  border-bottom: none;
+}
+
+.page-topbar-inner {
+  position: relative;
+  height: calc(env(safe-area-inset-top) + 80px);
+  box-sizing: border-box;
+}
+
+.page-topbar .back-button {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 20px);
+  left: 20px;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: auto;
+}
+
+.page-topbar .back-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.page-topbar .download-cv-button {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 20px);
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: auto;
+}
+
+.page-topbar .download-cv-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .page-topbar-inner {
+    height: calc(env(safe-area-inset-top) + 60px);
+  }
+
+  .page-topbar .back-button {
+    top: calc(env(safe-area-inset-top) + 12px);
+    left: 12px;
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .page-topbar .back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .page-topbar .download-cv-button {
+    top: calc(env(safe-area-inset-top) + 12px);
+    right: 12px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .page-topbar .download-cv-button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .page-topbar-inner {
+    height: calc(env(safe-area-inset-top) + 48px);
+  }
+
+  .page-topbar .back-button {
+    top: calc(env(safe-area-inset-top) + 8px);
+    left: 8px;
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .page-topbar .back-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .page-topbar .download-cv-button {
+    top: calc(env(safe-area-inset-top) + 8px);
+    right: 8px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .page-topbar .download-cv-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .nav {
   height: 10vh;
   width: 100%;

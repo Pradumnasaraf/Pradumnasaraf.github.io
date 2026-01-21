@@ -223,127 +223,133 @@ const SpeakingPage = () => {
   ];
 
   return (
-    <div className="speaking-container">
-      {/* Header */}
-      <div className="speaking-header">
-        <Link href="/" className="back-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M19 12H5M12 19l-7-7 7-7" />
-          </svg>
-        </Link>
-
-        <div className="header-content">
-          <h1>Speaking & Events</h1>
-        </div>
-      </div>
-
-      {/* Speaking Grid */}
-      <div className="speaking-grid">
-        {speakingData.map((item) => (
-          <div key={item.id} className="speaking-card">
-            <div className="card-header">
-              <span className="category-badge">{item.category}</span>
-            </div>
-
-            <div className="card-content">
-              <h3 className="talk-title">{item.title}</h3>
-              <p className="event-name">{item.event}</p>
-              <p className="talk-description">{item.description}</p>
-
-              <div className="event-meta">
-                <div className="meta-item">
-                  <FaCalendarAlt />
-                  <span>{item.date}</span>
-                </div>
-                <div className="meta-item">
-                  <FaMapMarkerAlt />
-                  <span>{item.location}</span>
-                </div>
-              </div>
-
-              <div className="tags">
-                {item.tags.map((tag, index) => (
-                  <span key={index} className="tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="card-actions">
-              {item.slides && (
-                <a
-                  href={item.slides}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="action-button slides"
-                >
-                  <FaSlideshare />
-                  <span>Slides</span>
-                </a>
-              )}
-
-              {item.recording && (
-                <a
-                  href={item.recording}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="action-button recording"
-                >
-                  <FaYoutube />
-                  <span>Recording</span>
-                </a>
-              )}
-
-              {item.external && (
-                <a
-                  href={item.external}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="action-button external"
-                >
-                  <FaExternalLinkAlt />
-                  <span>Event</span>
-                </a>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Call to Action */}
-      <div className="cta-section">
-        <h2>Interested in having me speak at your event?</h2>
-        <p>
-          I&apos;m always excited to share knowledge and learn from the
-          community. Check out my speaking rider for details.
-        </p>
-        <div className="cta-buttons">
-          <a
-            href="https://github.com/Pradumnasaraf/Speaking/blob/main/RIDER.md"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-button primary"
-          >
-            <FaGithub />
-            View Speaking Rider
-          </a>
-          <Link href="/contact" className="cta-button secondary">
-            Get in Touch
+    <>
+      <div className="page-topbar" role="banner">
+        <div className="page-topbar-inner">
+          <Link href="/" className="back-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
           </Link>
         </div>
       </div>
-    </div>
+
+      <div className="speaking-container">
+        {/* Header */}
+        <div className="speaking-header">
+          <div className="header-content">
+            <h1>Speaking & Events</h1>
+          </div>
+        </div>
+
+        {/* Speaking Grid */}
+        <div className="speaking-grid">
+          {speakingData.map((item) => (
+            <div key={item.id} className="speaking-card">
+              <div className="card-header">
+                <span className="category-badge">{item.category}</span>
+              </div>
+
+              <div className="card-content">
+                <h3 className="talk-title">{item.title}</h3>
+                <p className="event-name">{item.event}</p>
+                <p className="talk-description">{item.description}</p>
+
+                <div className="event-meta">
+                  <div className="meta-item">
+                    <FaCalendarAlt />
+                    <span>{item.date}</span>
+                  </div>
+                  <div className="meta-item">
+                    <FaMapMarkerAlt />
+                    <span>{item.location}</span>
+                  </div>
+                </div>
+
+                <div className="tags">
+                  {item.tags.map((tag, index) => (
+                    <span key={index} className="tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="card-actions">
+                {item.slides && (
+                  <a
+                    href={item.slides}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="action-button slides"
+                  >
+                    <FaSlideshare />
+                    <span>Slides</span>
+                  </a>
+                )}
+
+                {item.recording && (
+                  <a
+                    href={item.recording}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="action-button recording"
+                  >
+                    <FaYoutube />
+                    <span>Recording</span>
+                  </a>
+                )}
+
+                {item.external && (
+                  <a
+                    href={item.external}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="action-button external"
+                  >
+                    <FaExternalLinkAlt />
+                    <span>Event</span>
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="cta-section">
+          <h2>Interested in having me speak at your event?</h2>
+          <p>
+            I&apos;m always excited to share knowledge and learn from the
+            community. Check out my speaking rider for details.
+          </p>
+          <div className="cta-buttons">
+            <a
+              href="https://github.com/Pradumnasaraf/Speaking/blob/main/RIDER.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button primary"
+            >
+              <FaGithub />
+              View Speaking Rider
+            </a>
+            <Link href="/contact" className="cta-button secondary">
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -109,66 +109,68 @@ export default async function BlogPost({ params }) {
   };
 
   return (
-    <div className="blog-post-container">
+    <>
       <ReadingProgress />
       <div className="blog-topbar" role="banner">
         <div className="blog-topbar-inner">
           <BlogBackButton />
         </div>
       </div>
-      <ImageLightbox />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <article className="blog-post">
-        <header className="blog-post-header">
-          <h1 className="blog-post-title">{post.title}</h1>
-          <div className="blog-post-meta">
-            <time className="blog-post-date" dateTime={post.date || ''}>
-              {post.date ? format(new Date(post.date), 'MMMM dd, yyyy') : ''}
-            </time>
-            {post.readingTime && (
-              <span className="blog-post-reading-time">
-                {post.readingTime} min read
-              </span>
-            )}
-            {post.wordCount && (
-              <span className="blog-post-word-count">
-                {post.wordCount.toLocaleString()} words
-              </span>
-            )}
-          </div>
-        </header>
-
-        {post.thumbnail && (
-          <div className="blog-post-featured-image">
-            <Image
-              src={post.thumbnail}
-              alt={post.title}
-              width={1200}
-              height={900}
-              className="blog-featured-image"
-              priority
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 800px"
-            />
-          </div>
-        )}
-
-        <TableOfContents />
-
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+      <div className="blog-post-container">
+        <ImageLightbox />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        <CodeBlockCopy />
+        <article className="blog-post">
+          <header className="blog-post-header">
+            <h1 className="blog-post-title">{post.title}</h1>
+            <div className="blog-post-meta">
+              <time className="blog-post-date" dateTime={post.date || ''}>
+                {post.date ? format(new Date(post.date), 'MMMM dd, yyyy') : ''}
+              </time>
+              {post.readingTime && (
+                <span className="blog-post-reading-time">
+                  {post.readingTime} min read
+                </span>
+              )}
+              {post.wordCount && (
+                <span className="blog-post-word-count">
+                  {post.wordCount.toLocaleString()} words
+                </span>
+              )}
+            </div>
+          </header>
 
-        <footer className="blog-post-footer">
-          <div className="blog-post-footer-content">
-            <BlogShareButtons url={postUrl} title={post.title} />
-          </div>
-        </footer>
-      </article>
-    </div>
+          {post.thumbnail && (
+            <div className="blog-post-featured-image">
+              <Image
+                src={post.thumbnail}
+                alt={post.title}
+                width={1200}
+                height={900}
+                className="blog-featured-image"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 800px"
+              />
+            </div>
+          )}
+
+          <TableOfContents />
+
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+          />
+          <CodeBlockCopy />
+
+          <footer className="blog-post-footer">
+            <div className="blog-post-footer-content">
+              <BlogShareButtons url={postUrl} title={post.title} />
+            </div>
+          </footer>
+        </article>
+      </div>
+    </>
   );
 }

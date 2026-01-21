@@ -313,7 +313,7 @@ body {
 
 .back-button {
   position: fixed;
-  top: 20px;
+  top: calc(env(safe-area-inset-top, 0px) + 20px);
   left: 20px;
   display: flex;
   align-items: center;
@@ -335,6 +335,8 @@ body {
 .back-button svg {
   color: #333;
   transition: color 0.3s ease;
+  width: 24px;
+  height: 24px;
 }
 
 .back-button:hover svg {
@@ -434,7 +436,7 @@ body {
   .back-button {
     width: 36px;
     height: 36px;
-    top: 15px;
+    top: calc(env(safe-area-inset-top, 0px) + 15px);
     left: 15px;
   }
 
@@ -496,7 +498,7 @@ body {
   .back-button {
     width: 32px;
     height: 32px;
-    top: 10px;
+    top: calc(env(safe-area-inset-top, 0px) + 10px);
     left: 10px;
   }
 

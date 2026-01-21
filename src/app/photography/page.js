@@ -688,59 +688,65 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen p-4 md:p-8 mx-4 md:mx-16 photography-page-container">
-      <Link href="/" className="back-button">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
-      </Link>
-
-      <h1 className="photography-title">Photography</h1>
-
-      <div className="container mx-auto">
-        {isLoading && (
-          <div className="flex justify-center my-8">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
-          </div>
-        )}
-        <Masonry
-          breakpointCols={breakpointColumnsObj}
-          className="my-masonry-grid"
-          columnClassName="my-masonry-grid_column"
-        >
-          {images.map((image, index) => (
-            <ImageItem
-              key={index}
-              src={image.src}
-              alt={image.alt}
-              onClick={() => openModal(image.src)}
-            />
-          ))}
-        </Masonry>
+    <>
+      <div className="page-topbar" role="banner">
+        <div className="page-topbar-inner">
+          <Link href="/" className="back-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+          </Link>
+        </div>
       </div>
 
-      <FullScreenModal
-        isOpen={isModalOpen}
-        imageSrc={modalImageSrc}
-        onClose={closeModal}
-        onPrev={showPrevImage}
-        onNext={showNextImage}
-      />
+      <div className="min-h-screen p-4 md:p-8 mx-4 md:mx-16 photography-page-container">
+        <h1 className="photography-title">Photography</h1>
 
-      <WelcomePopup
-        isOpen={showWelcomePopup}
-        onClose={() => setShowWelcomePopup(false)}
-      />
-    </div>
+        <div className="container mx-auto">
+          {isLoading && (
+            <div className="flex justify-center my-8">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+            </div>
+          )}
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
+            {images.map((image, index) => (
+              <ImageItem
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                onClick={() => openModal(image.src)}
+              />
+            ))}
+          </Masonry>
+        </div>
+
+        <FullScreenModal
+          isOpen={isModalOpen}
+          imageSrc={modalImageSrc}
+          onClose={closeModal}
+          onPrev={showPrevImage}
+          onNext={showNextImage}
+        />
+
+        <WelcomePopup
+          isOpen={showWelcomePopup}
+          onClose={() => setShowWelcomePopup(false)}
+        />
+      </div>
+    </>
   );
 }

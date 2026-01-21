@@ -18,6 +18,7 @@
   overflow-x: hidden;
   overflow-y: visible;
   position: relative;
+  padding-top: 0;
   /* Ensure touch scrolling works on mobile - Safari specific */
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
@@ -148,7 +149,7 @@
 
 .back-button {
   position: fixed;
-  top: 20px;
+  top: calc(env(safe-area-inset-top, 0px) + 20px);
   left: 20px;
   display: flex;
   align-items: center;
@@ -171,6 +172,8 @@
 .back-button svg {
   color: #333;
   transition: color 0.3s ease;
+  width: 24px;
+  height: 24px;
 }
 
 .back-button:hover svg {
@@ -280,7 +283,7 @@
   .back-button {
     width: 36px;
     height: 36px;
-    top: 15px;
+    top: calc(env(safe-area-inset-top, 0px) + 15px);
     left: 15px;
   }
 
@@ -333,7 +336,7 @@
   .back-button {
     width: 32px;
     height: 32px;
-    top: 10px;
+    top: calc(env(safe-area-inset-top, 0px) + 10px);
     left: 10px;
   }
 

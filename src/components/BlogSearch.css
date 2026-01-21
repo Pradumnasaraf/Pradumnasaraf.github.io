@@ -53,8 +53,8 @@
 /* Ensure consistent sizing even with Safari/prod CSS ordering quirks */
 .blog-topbar .blog-search-trigger {
   position: absolute !important;
-  width: 40px !important;
-  height: 40px !important;
+  width: var(--blog-topbar-button-size, 40px) !important;
+  height: var(--blog-topbar-button-size, 40px) !important;
 }
 
 .blog-topbar .blog-search-button,
@@ -134,14 +134,8 @@
   }
 
   .blog-topbar .blog-search-trigger {
-    width: 36px !important;
-    height: 36px !important;
-  }
-
-  .blog-topbar .blog-search-button svg,
-  .blog-topbar .blog-search-close-button svg {
-    width: var(--blog-topbar-icon-size, 20px) !important;
-    height: var(--blog-topbar-icon-size, 20px) !important;
+    width: var(--blog-topbar-button-size, 36px) !important;
+    height: var(--blog-topbar-button-size, 36px) !important;
   }
 }
 
@@ -298,11 +292,6 @@
     height: 32px;
   }
 
-  .blog-topbar .blog-search-trigger {
-    width: 32px !important;
-    height: 32px !important;
-  }
-
   .blog-search-modal-content {
     margin-top: max(6vh, calc(env(safe-area-inset-top) + 48px));
     max-height: 90vh;
@@ -315,12 +304,6 @@
   .blog-search-close-button svg {
     width: 18px;
     height: 18px;
-  }
-
-  .blog-topbar .blog-search-button svg,
-  .blog-topbar .blog-search-close-button svg {
-    width: 18px !important;
-    height: 18px !important;
   }
 
   .blog-search-clear svg {
