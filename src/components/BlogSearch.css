@@ -52,6 +52,7 @@
 
 /* Ensure consistent sizing even with Safari/prod CSS ordering quirks */
 .blog-topbar .blog-search-trigger {
+  position: absolute !important;
   width: 40px !important;
   height: 40px !important;
 }
@@ -182,11 +183,27 @@
   touch-action: pan-y;
 }
 
-/* iOS Safari: make sure modal header never sits under the top-right close button */
+/* iOS Safari: keep modal clear of the top-right close button and address bar */
 @supports (-webkit-touch-callout: none) {
+  .blog-search-modal-content {
+    margin-top: calc(env(safe-area-inset-top) + 96px) !important;
+  }
+
   @media (max-width: 768px) {
     .blog-search-modal-content {
-      margin-top: calc(env(safe-area-inset-top) + 64px);
+      margin-top: calc(env(safe-area-inset-top) + 80px) !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .blog-search-modal-content {
+      margin-top: calc(env(safe-area-inset-top) + 72px) !important;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .blog-search-modal-content {
+      margin-top: calc(env(safe-area-inset-top) + 64px) !important;
     }
   }
 }
@@ -253,7 +270,7 @@
   }
 
   .blog-search-modal-content {
-    margin-top: 8vh;
+    margin-top: max(8vh, calc(env(safe-area-inset-top) + 56px));
     max-height: 84vh;
     border-radius: 10px;
     width: calc(100% - 2rem);
@@ -269,11 +286,23 @@
   }
 
   .blog-search-modal-content {
-    margin-top: 5vh;
+    margin-top: max(6vh, calc(env(safe-area-inset-top) + 48px));
     max-height: 90vh;
     width: calc(100% - 1.5rem);
     margin-left: 0.75rem;
     margin-right: 0.75rem;
+  }
+
+  .blog-search-button svg,
+  .blog-search-close-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .blog-topbar .blog-search-button svg,
+  .blog-topbar .blog-search-close-button svg {
+    width: 18px !important;
+    height: 18px !important;
   }
 }
 
