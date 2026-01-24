@@ -312,13 +312,16 @@ main {
   html,
   body {
     overflow-x: hidden !important;
-    overflow-y: hidden;
     width: 100% !important;
     max-width: 100vw !important;
     position: relative;
     overscroll-behavior-x: none !important;
     /* Safari iOS specific: Force no horizontal scroll */
     touch-action: pan-y pinch-zoom;
+  }
+
+  body.route-home {
+    overflow-y: hidden;
     height: 100%;
   }
 
