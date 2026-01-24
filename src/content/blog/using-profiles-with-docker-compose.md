@@ -4,10 +4,10 @@ excerpt: 'Learn how to use profiles with Docker Compose to manage different envi
 date: '2026-01-24'
 author: 'Pradumna Saraf'
 category: 'docker'
-tags: ['docker', 'docker-compose', 'profiles']
+tags: ['docker', 'docker-compose']
 thumbnail: '/blog-images/using-profiles-with-docker-compose/thumbnail.png'
 canonical: ''
-draft: true
+draft: false
 ---
 
 Most applications don’t need all Docker Compose services running all the time with the core application, such as development tools, like monitoring and debugging. For example, in a full-stack application, we want the backend, database, and maybe a frontend running by default, and keep monitoring and debugging tools turned off until we need them.  
