@@ -52,7 +52,7 @@ const ToolKitPage = () => {
                 <p>MacBook Pro 14 M1 Pro, 8C CPU 14C GPU</p>
                 <p>MacBook Pro 14 M2 Pro, 10C CPU 16C GPU</p>
                 <p>MacBook Pro 14 M4 Pro, 14C CPU 20C GPU</p>
-                <p>MacBook Air 13 i5 2C CPU - Mid 2013</p>
+                <p>MacBook Air 13 i5 (Mid 2013), 2C CPU</p>
               </div>
 
               <div className="toolkit-item">
@@ -82,7 +82,7 @@ const ToolKitPage = () => {
           </section>
 
           <section className="toolkit-section">
-            <h2>Workspace & Ergonomics</h2>
+            <h2>Workspace & Ergonomics & Accessories</h2>
             <div className="toolkit-grid">
               <div className="toolkit-item">
                 <h3>Desk</h3>
@@ -94,6 +94,10 @@ const ToolKitPage = () => {
               <div className="toolkit-item">
                 <h3>Chair</h3>
                 <p>Featherlite Helix High Back</p>
+              </div>
+              <div className="toolkit-item">
+                <h3>Backpack</h3>
+                <p>Samsonite Open Road</p>
               </div>
             </div>
           </section>
