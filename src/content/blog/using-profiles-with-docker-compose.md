@@ -6,7 +6,7 @@ author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'docker-compose']
 thumbnail: '/blog-images/using-profiles-with-docker-compose/thumbnail.png'
-canonical: ''
+canonical: 'https://dev.to/pradumnasaraf/using-profiles-with-docker-compose-238l'
 draft: false
 ---
 
