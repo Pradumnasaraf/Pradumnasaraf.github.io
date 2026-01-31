@@ -1,7 +1,7 @@
 ---
 title: 'Using Profiles with Docker Compose'
 excerpt: 'Learn how to use profiles with Docker Compose to manage different environments and configurations.'
-date: '2026-01-24'
+date: '2026-01-30'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'docker-compose']
