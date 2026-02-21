@@ -12,8 +12,9 @@
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prepare": "husky",
     "pre-commit": "lint-staged",
+    "validate:tags": "node scripts/validate-blog-tags.js",
     "validate:images": "node scripts/validate-blog-images.js",
-    "prebuild": "npm run validate:images"
+    "prebuild": "npm run validate:images && npm run validate:tags"
   },
   "repository": {
     "type": "git",
