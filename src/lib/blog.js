@@ -5,6 +5,8 @@ import { remark } from 'remark';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeHighlight from 'rehype-highlight';
+import rehypeRaw from 'rehype-raw';
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import dockerfile from 'highlight.js/lib/languages/dockerfile';
 import javascript from 'highlight.js/lib/languages/javascript';
 import json from 'highlight.js/lib/languages/json';
@@ -50,6 +52,27 @@ const allLanguages = {
 };
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
+
+const sanitizeSchema = {
+  ...defaultSchema,
+  attributes: {
+    ...defaultSchema.attributes,
+    a: [...(defaultSchema.attributes?.a || []), 'target', 'rel'],
+    img: [
+      ...(defaultSchema.attributes?.img || []),
+      'loading',
+      'decoding',
+      'width',
+      'height',
+    ],
+    code: [
+      ...(defaultSchema.attributes?.code || []),
+      ['className', /^language-./, /^hljs.*/],
+    ],
+    span: [...(defaultSchema.attributes?.span || []), ['className', /^hljs.*/]],
+    pre: [...(defaultSchema.attributes?.pre || []), ['className', /^hljs.*/]],
+  },
+};
 
 /**
  * Get all blog posts sorted by date
@@ -153,6 +176,7 @@ export async function getPostBySlug(slug) {
 
   const processedContent = await remark()
     .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(rehypeHighlight, {
       detect: true,
       ignoreMissing: true,
@@ -167,7 +191,8 @@ export async function getPostBySlug(slug) {
         yaml: ['yml'],
       },
     })
-    .use(rehypeStringify, { allowDangerousHtml: true })
+    .use(rehypeSanitize, sanitizeSchema)
+    .use(rehypeStringify)
     .process(content);
   const contentHtml = processedContent.toString();
 
