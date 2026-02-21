@@ -1,0 +1,2 @@
+# Run tests before pushing to catch regressions early
+npm test || { echo "Tests failed. Please fix test failures before pushing."; exit 1; }

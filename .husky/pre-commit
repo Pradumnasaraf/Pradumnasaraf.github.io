@@ -1,6 +1,2 @@
 # Run lint-staged to check linting rules on staged files
 npx lint-staged
-
-# Run build to check if the application builds successfully
-echo "Running build to verify it passes before committing..."
-npm run build || { echo "Build failed. Please fix the build issues before committing."; exit 1; }
