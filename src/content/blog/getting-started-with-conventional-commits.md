@@ -4,7 +4,7 @@ excerpt: 'Learn how to optimize commit messages with Conventional Commits - a li
 date: '2022-07-09'
 author: 'Pradumna Saraf'
 category: 'github'
-tags: ['github', 'opensource', 'git', 'github-actions-1']
+tags: ['github', 'opensource', 'git', 'github-actions', 'conventional-commits']
 thumbnail: '/blog-images/getting-started-with-conventional-commits/thumbnail.png'
 draft: false
 ---

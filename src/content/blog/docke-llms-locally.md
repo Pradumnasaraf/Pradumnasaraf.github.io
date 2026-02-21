@@ -4,7 +4,7 @@ excerpt: 'Run Large Language Models (LLMs) locally with Docker Model Runner. Exp
 date: '2025-04-07'
 author: 'Pradumna Saraf'
 category: 'ai'
-tags: ['ai', 'software-development', 'docker', 'devops', 'gpu', 'llms']
+tags: ['ai', 'software-development', 'docker', 'devops', 'gpu', 'llm', 'docker-compose']
 thumbnail: '/blog-images/docke-llms-locally/thumbnail.png'
 draft: false
 ---

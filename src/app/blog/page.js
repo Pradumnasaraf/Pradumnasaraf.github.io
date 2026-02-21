@@ -10,6 +10,14 @@ export { metadata };
 
 export default function BlogPage() {
   const posts = getAllPosts();
+  const searchPosts = posts.map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    description: post.description || post.excerpt,
+    excerpt: post.excerpt,
+    thumbnail: post.thumbnail,
+    tags: post.tags || [],
+  }));
 
   return (
     <>
@@ -36,7 +44,7 @@ export default function BlogPage() {
             </svg>
           </Link>
 
-          <BlogSearch posts={posts} />
+          <BlogSearch posts={searchPosts} />
         </div>
       </div>
 

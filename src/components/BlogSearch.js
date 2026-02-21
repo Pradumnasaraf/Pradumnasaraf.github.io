@@ -60,11 +60,13 @@ export default function BlogSearch({ posts }) {
     const query = searchQuery.toLowerCase().trim();
     return posts.filter((post) => {
       const titleMatch = post.title?.toLowerCase().includes(query);
+      const descriptionMatch = post.description?.toLowerCase().includes(query);
       const excerptMatch = post.excerpt?.toLowerCase().includes(query);
-      // Search in full content
-      const contentMatch = post.content?.toLowerCase().includes(query);
+      const tagsMatch = post.tags?.some((tag) =>
+        tag?.toLowerCase().includes(query)
+      );
 
-      return titleMatch || excerptMatch || contentMatch;
+      return titleMatch || descriptionMatch || excerptMatch || tagsMatch;
     });
   }, [searchQuery, posts]);
 
@@ -246,7 +248,7 @@ export default function BlogSearch({ posts }) {
                 <div className="blog-search-empty">
                   <p>Start typing to search blog posts</p>
                   <p className="blog-search-empty-hint">
-                    Search by title, excerpt, or content
+                    Search by title, excerpt, or tags
                   </p>
                 </div>
               )}

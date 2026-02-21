@@ -4,7 +4,7 @@ excerpt: 'Learn to automate the process of building and pushing a Docker image t
 date: '2023-03-23'
 author: 'Pradumna Saraf'
 category: 'docker'
-tags: ['docker', 'github', 'opensource', 'github-actions-1', 'dockerhub']
+tags: ['docker', 'github', 'opensource', 'github-actions', 'dockerhub']
 thumbnail: '/blog-images/dockerhub-githubactions/thumbnail.png'
 draft: false
 ---

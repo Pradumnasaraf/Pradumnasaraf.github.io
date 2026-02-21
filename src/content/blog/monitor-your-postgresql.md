@@ -4,7 +4,7 @@ excerpt: 'Monitor PostgreSQL with OpenTelemetry and OpenObserve for streamlined 
 date: '2024-09-29'
 author: 'Pradumna Saraf'
 category: 'postgresql'
-tags: ['postgresql', 'opensource', 'databases', 'monitoring', 'devops', 'opentelemetry']
+tags: ['postgresql', 'opensource', 'databases', 'monitoring', 'devops', 'opentelemetry', 'prometheus', 'grafana']
 thumbnail: '/blog-images/monitor-your-postgresql/thumbnail.png'
 draft: false
 ---

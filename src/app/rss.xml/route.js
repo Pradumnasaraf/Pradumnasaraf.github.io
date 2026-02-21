@@ -1,12 +1,12 @@
-import { getAllPosts } from '@/lib/blog';
+import { getAllPosts } from '../../lib/blog.js';
 
 export async function GET() {
   const baseUrl = 'https://pradumnasaraf.dev';
   const currentDate = new Date().toISOString();
-  
+
   // Get all blog posts (excluding drafts and reposted content with canonical URLs)
   const allPosts = getAllPosts();
-  
+
   // Filter out reposted content (posts with canonical URLs pointing elsewhere)
   const originalPosts = allPosts.filter((post) => {
     // Only include posts that don't have a canonical URL, or have canonical pointing to this site
@@ -19,10 +19,16 @@ export async function GET() {
     .slice(0, 50) // Limit to latest 50 posts
     .map((post) => {
       const postUrl = `${baseUrl}/blog/${post.slug}`;
-      const pubDate = post.date ? new Date(post.date).toISOString() : new Date().toISOString();
+      const pubDate = post.date
+        ? new Date(post.date).toISOString()
+        : new Date().toISOString();
       const description = post.excerpt || post.title || '';
-      const categories = post.tags ? post.tags.map((tag) => `<category>${escapeXml(tag)}</category>`).join('\n      ') : '';
-      
+      const categories = post.tags
+        ? post.tags
+            .map((tag) => `<category>${escapeXml(tag)}</category>`)
+            .join('\n      ')
+        : '';
+
       return `    <item>
       <title>${escapeXml(post.title)}</title>
       <link>${postUrl}</link>

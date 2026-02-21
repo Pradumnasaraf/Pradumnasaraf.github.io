@@ -4,7 +4,7 @@ excerpt: 'Learn how to automate Multi-Arch Docker image builds and publishing to
 date: '2024-12-21'
 author: 'Pradumna Saraf'
 category: 'docker'
-tags: ['docker', 'github', 'developer', 'devops', 'ci-cd', 'github-actions-1']
+tags: ['docker', 'github', 'developer', 'devops', 'ci-cd', 'github-actions']
 thumbnail: '/blog-images/multi-arch-docker-images-ghcr-buildx-github-actions/thumbnail.png'
 draft: false
 ---
