@@ -4,7 +4,7 @@ excerpt: 'Automate GitHub releases for software packaging and distribution with 
 date: '2022-08-18'
 author: 'Pradumna Saraf'
 category: 'github'
-tags: ['github', 'git', 'github-actions-1', 'semantic-versioning', 'conventional-commits']
+tags: ['github', 'git', 'github-actions', 'semantic-versioning', 'conventional-commits']
 thumbnail: '/blog-images/automate-your-releases-on-github/thumbnail.png'
 draft: false
 ---

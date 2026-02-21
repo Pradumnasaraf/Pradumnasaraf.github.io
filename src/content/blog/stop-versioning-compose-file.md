@@ -4,7 +4,7 @@ excerpt: 'Avoid versioning Docker Compose files to enhance compatibility, follow
 date: '2024-08-09'
 author: 'Pradumna Saraf'
 category: 'docker'
-tags: ['docker', 'development', 'devops', 'containers', 'docker-compose']
+tags: ['docker', 'development', 'devops', 'containers', 'docker-compose', 'security']
 thumbnail: '/blog-images/stop-versioning-compose-file/thumbnail.png'
 draft: false
 ---

@@ -4,7 +4,7 @@ excerpt: 'Monitor Golang applications using custom Prometheus metrics and Grafan
 date: '2025-04-21'
 author: 'Pradumna Saraf'
 category: 'docker'
-tags: ['docker', 'go', 'golang', 'opensource', 'monitoring', 'devops', 'prometheus', 'grafana']
+tags: ['docker', 'go', 'golang', 'opensource', 'monitoring', 'devops', 'prometheus', 'grafana', 'docker-compose']
 thumbnail: '/blog-images/monitoring-go-app-with-grafana-prometheus/thumbnail.png'
 draft: false
 ---

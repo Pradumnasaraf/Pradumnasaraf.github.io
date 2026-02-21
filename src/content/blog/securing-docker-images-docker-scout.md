@@ -4,7 +4,7 @@ excerpt: 'In this blog post, we''ll guide you to integrate Docker Scout into our
 date: '2025-01-08'
 author: 'Pradumna Saraf'
 category: 'docker'
-tags: ['docker', 'security', 'ci-cd', 'docker-images', 'github-actions-1']
+tags: ['docker', 'security', 'ci-cd', 'docker-images', 'github-actions', 'semantic-versioning']
 thumbnail: '/blog-images/securing-docker-images-docker-scout/thumbnail.png'
 draft: false
 ---

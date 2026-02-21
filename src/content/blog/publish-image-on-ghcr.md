@@ -4,7 +4,7 @@ excerpt: 'Build and publish Docker images on GHCR using GitHub Actions with this
 date: '2023-05-03'
 author: 'Pradumna Saraf'
 category: 'docker'
-tags: ['docker', 'opensource', 'devops', 'github-actions-1']
+tags: ['docker', 'opensource', 'devops', 'github-actions']
 thumbnail: '/blog-images/publish-image-on-ghcr/thumbnail.png'
 draft: false
 ---

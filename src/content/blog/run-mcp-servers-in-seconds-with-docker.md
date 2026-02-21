@@ -4,7 +4,7 @@ excerpt: 'Run MCP servers effortlessly with Docker. Discover Docker MCP Catalog 
 date: '2025-06-23'
 author: 'Pradumna Saraf'
 category: 'ai'
-tags: ['ai', 'docker', 'opensource', 'llm', 'llms', 'mcp', 'mcp-server']
+tags: ['ai', 'docker', 'opensource', 'llm', 'mcp', 'mcp-server']
 thumbnail: '/blog-images/run-mcp-servers-in-seconds-with-docker/thumbnail.png'
 draft: false
 ---

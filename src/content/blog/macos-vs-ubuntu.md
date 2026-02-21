@@ -4,7 +4,7 @@ excerpt: 'macOS vs Ubuntu: GitHub Actions Runners'
 date: '2024-04-05'
 author: 'Pradumna Saraf'
 category: 'operating-system'
-tags: ['operating-system', 'github', 'opensource', 'git', 'githubaction']
+tags: ['operating-system', 'github', 'opensource', 'git', 'github-actions']
 thumbnail: '/blog-images/macos-vs-ubuntu/thumbnail.png'
 draft: false
 ---

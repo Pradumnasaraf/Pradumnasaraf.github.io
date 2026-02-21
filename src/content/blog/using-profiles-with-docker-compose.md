@@ -4,7 +4,7 @@ excerpt: 'Learn how to use profiles with Docker Compose to manage different envi
 date: '2026-01-30'
 author: 'Pradumna Saraf'
 category: 'docker'
-tags: ['docker', 'docker-compose']
+tags: ['docker', 'docker-compose', 'prometheus', 'grafana', 'monitoring']
 thumbnail: '/blog-images/using-profiles-with-docker-compose/thumbnail.png'
 canonical: 'https://dev.to/pradumnasaraf/using-profiles-with-docker-compose-238l'
 draft: false

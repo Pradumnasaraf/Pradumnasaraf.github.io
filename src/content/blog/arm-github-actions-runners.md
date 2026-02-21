@@ -4,7 +4,7 @@ excerpt: 'Use ARM-based GitHub Actions runners for efficient multi-architecture 
 date: '2025-01-30'
 author: 'Pradumna Saraf'
 category: 'github'
-tags: ['github', 'opensource', 'devops', 'cicd', 'arm', 'github-actions-1']
+tags: ['github', 'opensource', 'devops', 'ci-cd', 'arm', 'github-actions']
 thumbnail: '/blog-images/arm-github-actions-runners/thumbnail.png'
 draft: false
 ---
