@@ -255,6 +255,7 @@ main {
   border: 1px solid #000000;
   background-color: #ffffff;
   color: #000000;
+  text-decoration: none;
   font-weight: 300;
   border-radius: 8px;
   font-size: 1.2rem;

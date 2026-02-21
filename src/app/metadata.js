@@ -45,7 +45,4 @@ export const metadata = {
   alternates: {
     canonical: 'https://pradumnasaraf.dev',
   },
-  verification: {
-    google: 'your-google-site-verification',
-  },
 };

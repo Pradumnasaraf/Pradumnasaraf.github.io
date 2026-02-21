@@ -16,16 +16,6 @@ export default function Home() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Define the handleClick function
-  const handleClickGitHub = () => {
-    // Here you can define what happens when the button is clicked
-    window.location.href = 'https://github.com/Pradumnasaraf'; // Example: redirect to GitHub
-  };
-  const handleClickService = () => {
-    // Here you can define what happens when the button is clicked
-    window.location.href = 'https://rebasemedia.com'; // Redirect to rebasemedia.com
-  };
-
   useEffect(() => {
     const konamiCode = [
       'ArrowUp',
@@ -116,13 +106,13 @@ export default function Home() {
             Owner @ rebase media
           </p>
           <div className="ibutton">
-            <button
+            <a
               className="connect"
-              onClick={handleClickGitHub}
-            >{`Let's Collaborate`}</button>
-            <button className="connect" onClick={handleClickService}>
+              href="https://github.com/Pradumnasaraf"
+            >{`Let's Collaborate`}</a>
+            <a className="connect" href="https://rebasemedia.com">
               Services
-            </button>
+            </a>
           </div>
         </div>
         <div className="right">

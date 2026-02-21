@@ -1,5 +1,5 @@
 import { sitemapPages } from '../sitemap/data.js';
-import { getAllPosts } from '@/lib/blog';
+import { getAllPosts } from '../../lib/blog.js';
 
 export async function GET() {
   const baseUrl = 'https://pradumnasaraf.dev';
@@ -7,7 +7,7 @@ export async function GET() {
 
   // Get all blog posts (excluding drafts and reposted content with canonical URLs)
   const allPosts = getAllPosts();
-  
+
   // Filter out reposted content (posts with canonical URLs pointing elsewhere)
   const originalPosts = allPosts.filter((post) => {
     // Only include posts that don't have a canonical URL, or have canonical pointing to this site
@@ -30,7 +30,9 @@ export async function GET() {
   // Generate sitemap entries for blog posts
   const blogPages = originalPosts
     .map((post) => {
-      const postDate = post.date ? new Date(post.date).toISOString().split('T')[0] : currentDate;
+      const postDate = post.date
+        ? new Date(post.date).toISOString().split('T')[0]
+        : currentDate;
       return `  <url>
     <loc>${baseUrl}/blog/${post.slug}</loc>
     <lastmod>${postDate}</lastmod>
