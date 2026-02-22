@@ -1,10 +1,9 @@
 import { getAllPosts } from '@/lib/blog';
-import { format } from 'date-fns';
-import Image from 'next/image';
 import Link from 'next/link';
 import './style.css';
 import { metadata } from './metadata';
 import BlogSearch from '@/components/BlogSearch';
+import BlogPostExplorer from '@/components/BlogPostExplorer';
 
 export { metadata };
 
@@ -62,49 +61,7 @@ export default function BlogPage() {
             <p>No blog posts yet. Check back soon!</p>
           </div>
         ) : (
-          <div className="blog-posts">
-            {posts.map((post) => (
-              <article key={post.slug} className="blog-post-card">
-                {post.thumbnail && (
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="blog-post-thumbnail"
-                  >
-                    <Image
-                      src={post.thumbnail}
-                      alt={post.title}
-                      width={1200}
-                      height={900}
-                      className="blog-thumbnail-image"
-                      priority={false}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      loading="lazy"
-                    />
-                  </Link>
-                )}
-                <div className="blog-post-content-wrapper">
-                  <div className="blog-post-meta">
-                    {post.date && (
-                      <time className="blog-post-date" dateTime={post.date}>
-                        {format(new Date(post.date), 'MMMM dd, yyyy')}
-                      </time>
-                    )}
-                    {post.readingTime && (
-                      <span className="blog-post-reading-time">
-                        {post.readingTime} min read
-                      </span>
-                    )}
-                  </div>
-                  <Link href={`/blog/${post.slug}`} className="blog-post-link">
-                    <h2 className="blog-post-title">{post.title}</h2>
-                    {post.excerpt && (
-                      <p className="blog-post-excerpt">{post.excerpt}</p>
-                    )}
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+          <BlogPostExplorer posts={posts} />
         )}
       </div>
     </>

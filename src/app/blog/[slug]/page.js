@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { getPostBySlug, getAllPostSlugs } from '@/lib/blog';
+import Link from 'next/link';
+import { getPostBySlug, getAllPostSlugs, getAllPosts } from '@/lib/blog';
 import { getThumbnailUrl } from '@/lib/blog-utils';
 import { format } from 'date-fns';
 import BlogShareButtons from '@/components/BlogShareButtons';
@@ -9,6 +10,7 @@ import ReadingProgress from '@/components/ReadingProgress';
 import BlogBackButton from '@/components/BlogBackButton';
 import ImageLightbox from '@/components/ImageLightbox';
 import TableOfContents from '@/components/TableOfContents';
+import BackToTopButton from '@/components/BackToTopButton';
 import '../style.css';
 
 export async function generateStaticParams() {
@@ -80,6 +82,41 @@ export default async function BlogPost({ params }) {
 
   const postUrl = `https://pradumnasaraf.dev/blog/${slug}`;
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
+  const allPosts = getAllPosts();
+
+  const currentTags = Array.isArray(post.tags) ? post.tags : [];
+  const normalizedCurrentTags = currentTags.map((tag) => tag.toLowerCase());
+
+  let relatedPosts = allPosts
+    .filter((item) => item.slug !== post.slug)
+    .map((item) => {
+      const itemTags = Array.isArray(item.tags) ? item.tags : [];
+      const overlapCount = itemTags.filter((tag) =>
+        normalizedCurrentTags.includes(tag.toLowerCase())
+      ).length;
+      const dateValue = item.date ? new Date(item.date).getTime() : 0;
+
+      return {
+        ...item,
+        overlapCount,
+        dateValue: Number.isNaN(dateValue) ? 0 : dateValue,
+      };
+    })
+    .filter((item) => (currentTags.length > 0 ? item.overlapCount > 0 : true))
+    .sort((a, b) => {
+      if (b.overlapCount !== a.overlapCount) {
+        return b.overlapCount - a.overlapCount;
+      }
+      return b.dateValue - a.dateValue;
+    })
+    .slice(0, 3);
+
+  if (relatedPosts.length === 0) {
+    relatedPosts = allPosts
+      .filter((item) => item.slug !== post.slug)
+      .slice(0, 3)
+      .map((item) => ({ ...item, overlapCount: 0, dateValue: 0 }));
+  }
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -111,6 +148,7 @@ export default async function BlogPost({ params }) {
   return (
     <>
       <ReadingProgress />
+      <BackToTopButton />
       <div className="blog-topbar" role="banner">
         <div className="blog-topbar-inner">
           <BlogBackButton />
@@ -167,6 +205,47 @@ export default async function BlogPost({ params }) {
           <footer className="blog-post-footer">
             <div className="blog-post-footer-content">
               <BlogShareButtons url={postUrl} title={post.title} />
+
+              {relatedPosts.length > 0 && (
+                <section className="related-posts" aria-label="Related posts">
+                  <h2 className="related-posts-title">Continue Reading</h2>
+                  <div className="related-posts-grid">
+                    {relatedPosts.map((relatedPost) => (
+                      <article
+                        key={relatedPost.slug}
+                        className="related-post-card"
+                      >
+                        <Link
+                          href={`/blog/${relatedPost.slug}`}
+                          className="related-post-link"
+                        >
+                          <h3 className="related-post-card-title">
+                            {relatedPost.title}
+                          </h3>
+                          {relatedPost.excerpt && (
+                            <p className="related-post-card-excerpt">
+                              {relatedPost.excerpt}
+                            </p>
+                          )}
+                          <div className="related-post-card-meta">
+                            {relatedPost.date && (
+                              <time dateTime={relatedPost.date}>
+                                {format(
+                                  new Date(relatedPost.date),
+                                  'MMMM dd, yyyy'
+                                )}
+                              </time>
+                            )}
+                            {relatedPost.readingTime && (
+                              <span>{relatedPost.readingTime} min read</span>
+                            )}
+                          </div>
+                        </Link>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              )}
             </div>
           </footer>
         </article>

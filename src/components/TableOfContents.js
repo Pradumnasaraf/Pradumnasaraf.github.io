@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function TableOfContents() {
   const [headings, setHeadings] = useState([]);
+  const tocRef = useRef(null);
 
   useEffect(() => {
     const blogContent = document.querySelector('.blog-post-content');
@@ -47,9 +48,42 @@ export default function TableOfContents() {
     }
   };
 
+  const isMobile = () =>
+    window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+
   return (
-    <nav className="table-of-contents" aria-label="Table of contents">
-      <h3 className="table-of-contents-title">Table of Contents</h3>
+    <details
+      className="table-of-contents"
+      open
+      ref={tocRef}
+      aria-label="Table of contents"
+    >
+      <summary
+        className="table-of-contents-summary"
+        onClick={(event) => {
+          // Keep desktop TOC always open; collapse/expand only on mobile.
+          if (!isMobile()) {
+            event.preventDefault();
+          }
+        }}
+      >
+        <span className="table-of-contents-title">On this page</span>
+        <span className="table-of-contents-chevron" aria-hidden="true">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </span>
+      </summary>
       <ul className="table-of-contents-list">
         {headings.map((heading) => (
           <li
@@ -61,6 +95,9 @@ export default function TableOfContents() {
               onClick={(e) => {
                 e.preventDefault();
                 scrollToHeading(heading.id);
+                if (isMobile() && tocRef.current) {
+                  tocRef.current.open = false;
+                }
               }}
               className="table-of-contents-link"
             >
@@ -69,6 +106,6 @@ export default function TableOfContents() {
           </li>
         ))}
       </ul>
-    </nav>
+    </details>
   );
 }
