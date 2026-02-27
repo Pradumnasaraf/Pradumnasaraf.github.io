@@ -1,0 +1,254 @@
+[
+  {
+    "id": "saraf-ai",
+    "name": "Saraf-AI",
+    "stars": 6,
+    "repoUrl": "https://github.com/Pradumnasaraf/Saraf-AI",
+    "url": "https://github.com/Pradumnasaraf/Saraf-AI",
+    "problem": "Saraf AI is a fully local assistant built with Next.js and Docker. It connects seamlessly to LLMs via Docker Model Runner using Docker Compose.",
+    "technologies": ["TypeScript", "Next.js", "Docker"]
+  },
+  {
+    "id": "aviationstack-mcp",
+    "name": "aviationstack-mcp",
+    "stars": 16,
+    "repoUrl": "https://github.com/Pradumnasaraf/aviationstack-mcp",
+    "url": "https://pypi.org/project/aviationstack-mcp",
+    "problem": "An MCP server using the AviationStack API to fetch real-time flight data including airline flights, airport schedules, future flights and aircraft types.",
+    "technologies": ["Python"]
+  },
+  {
+    "id": "go-prometheus-monitoring",
+    "name": "go-prometheus-monitoring",
+    "stars": 1,
+    "repoUrl": "https://github.com/Pradumnasaraf/go-prometheus-monitoring",
+    "url": "https://docs.docker.com/guides/go-prometheus-monitoring",
+    "problem": "A Golang application that demonstrates how to monitor a Golang service using Prometheus and Grafana. This is for Docker's official Deno Language Guide.",
+    "technologies": ["Go", "Prometheus", "Grafana", "Docker"]
+  },
+  {
+    "id": "permihook",
+    "name": "PermiHook",
+    "stars": 0,
+    "repoUrl": "https://github.com/Pradumnasaraf/PermiHook",
+    "url": "https://github.com/Pradumnasaraf/PermiHook",
+    "problem": "A GitHub webhook integration using Permit.io to manage permissions and authorization logic.",
+    "technologies": ["JavaScript", "Node"]
+  },
+  {
+    "id": "pullprompt",
+    "name": "pullprompt",
+    "stars": 4,
+    "repoUrl": "https://github.com/Pradumnasaraf/pullprompt",
+    "url": "https://github.com/marketplace/actions/pullprompt",
+    "problem": "PullPrompt is a GitHub Action that comments on a Pull Request with a message generated from a user-given prompt. Under the hood, it uses Google's Gemini API to generate the text.",
+    "technologies": ["JavaScript", "GitHub Actions", "Node"]
+  },
+  {
+    "id": "kuredopogo",
+    "name": "KuReDoPoGo",
+    "stars": 7,
+    "repoUrl": "https://github.com/Pradumnasaraf/KuReDoPoGo",
+    "url": "https://github.com/Pradumnasaraf/KuReDoPoGo",
+    "problem": "Kubernetes Redis Docker Postgres Golang - KuReDoPoGo, is a backend API service that is built using Golang and Gin Framework. It uses Redis for rate limiting and Postgres for storing data. It is deployed on Kubernetes. For local development it uses Docker Compose.",
+    "technologies": ["Go", "Kubernetes", "Redis", "Docker", "PostgreSQL"]
+  },
+  {
+    "id": "gencli",
+    "name": "gencli",
+    "stars": 34,
+    "repoUrl": "https://github.com/Pradumnasaraf/gencli",
+    "url": "https://pkg.go.dev/github.com/Pradumnasaraf/gencli",
+    "problem": "GenCLI is an AI-powered CLI tool built with Golang that answers your questions using the Google Gemini API. It is developed with Cobra and Viper libraries.",
+    "technologies": ["Go", "Redis", "Docker"]
+  },
+  {
+    "id": "scrapy",
+    "name": "scrapy",
+    "stars": 4,
+    "repoUrl": "https://github.com/Pradumnasaraf/scrapy",
+    "url": "https://pkg.go.dev/github.com/Pradumnasaraf/scrapy",
+    "problem": "Scrapy is a CLI tool used to scrape data from various websites.",
+    "technologies": ["Go", "MongoDB", "Redis", "Prometheus", "Grafana"]
+  },
+  {
+    "id": "shortify",
+    "name": "Shortify",
+    "stars": 9,
+    "repoUrl": "https://github.com/Pradumnasaraf/Shortify",
+    "url": "https://github.com/Pradumnasaraf/Shortify",
+    "problem": "Shortify is a fast and reliable URL shortener written in Go, using Redis as a database and built with the Fiber web framework.",
+    "technologies": ["Go"]
+  },
+  {
+    "id": "candy",
+    "name": "candy",
+    "stars": 61,
+    "repoUrl": "https://github.com/Pradumnasaraf/candy",
+    "url": "https://pkg.go.dev/github.com/Pradumnasaraf/candy",
+    "problem": "Candy is a CLI tool that offers a fundamental set of commands to streamline your DevOps processes.",
+    "technologies": ["Go"]
+  },
+  {
+    "id": "taskit",
+    "name": "taskit",
+    "stars": 9,
+    "repoUrl": "https://github.com/Pradumnasaraf/taskit",
+    "url": "https://github.com/Pradumnasaraf/taskit",
+    "problem": "Task manager that allows you to create, edit, delete and list tasks from the command line.",
+    "technologies": ["Go"]
+  },
+  {
+    "id": "contributors",
+    "name": "Contributors",
+    "stars": 24,
+    "repoUrl": "https://github.com/Pradumnasaraf/Contributors",
+    "url": "https://github.com/Pradumnasaraf/Contributors",
+    "problem": "Contributors is a GraphQL API written in Go. It stores data in MongoDB and uses Redis to cache and rate-limit requests. For monitoring, it uses Prometheus (Custom Metrics) and Grafana.",
+    "technologies": ["Go"]
+  },
+  {
+    "id": "devops",
+    "name": "DevOps",
+    "stars": 3143,
+    "repoUrl": "https://github.com/Pradumnasaraf/DevOps",
+    "url": "https://devops.pradumnasaraf.dev",
+    "problem": "I created this repository to keep my learning, notes, and code in one place for various tools in DevOps. Now, it's helping thousands of learners, practitioners, and professionals every day in their DevOps journey.",
+    "technologies": ["JavaScript", "Docker", "Kubernetes", "GitHub Actions"]
+  },
+  {
+    "id": "biodrop-cli",
+    "name": "BioDrop-CLI",
+    "stars": 76,
+    "repoUrl": "https://github.com/Pradumnasaraf/BioDrop-CLI",
+    "url": "https://www.npmjs.com/package/biodrop-cli",
+    "problem": "BioDrop CLI is a command-line tool for creating, updating, and managing your LinkFree profile. Easily add testimonials and events with simplicity.",
+    "technologies": ["JavaScript", "Node"]
+  },
+  {
+    "id": "post-my-message",
+    "name": "Post-My-Message",
+    "stars": 24,
+    "repoUrl": "https://github.com/Pradumnasaraf/Post-My-Message",
+    "url": "https://post-my-message.vercel.app",
+    "problem": "Send sms or a beautiful quote to your friend by a simple POST request.",
+    "technologies": ["JavaScript", "Node"]
+  },
+  {
+    "id": "octouser",
+    "name": "OctoUser",
+    "stars": 5,
+    "repoUrl": "https://github.com/Pradumnasaraf/OctoUser",
+    "url": "https://pradumnasaraf.dev/OctoUser",
+    "problem": "Find info about a GitHub user.",
+    "technologies": ["CSS"]
+  },
+  {
+    "id": "monitoring",
+    "name": "Monitoring",
+    "stars": 7,
+    "repoUrl": "https://github.com/Pradumnasaraf/Monitoring",
+    "url": "https://pradumnasaraf.dev/Monitoring",
+    "problem": "Monitoring page for Pradumna's Domains and Sub-domains.",
+    "technologies": ["Markdown"]
+  },
+  {
+    "id": "socialslash",
+    "name": "SocialSlash",
+    "stars": 15,
+    "repoUrl": "https://github.com/Pradumnasaraf/SocialSlash",
+    "url": "https://socialslash.vercel.app",
+    "problem": "Access all your social media handles by endpoints.",
+    "technologies": ["JavaScript", "Node"]
+  },
+  {
+    "id": "opensource-api",
+    "name": "OpenSource-API",
+    "stars": 31,
+    "repoUrl": "https://github.com/Pradumnasaraf/OpenSource-API",
+    "url": "https://opensourceapi.vercel.app",
+    "problem": "A free and public Open Source API.",
+    "technologies": ["JavaScript", "Node"]
+  },
+  {
+    "id": "open-source-with-pradumna",
+    "name": "open-source-with-pradumna",
+    "stars": 834,
+    "repoUrl": "https://github.com/Pradumnasaraf/open-source-with-pradumna",
+    "url": "https://os.pradumnasaraf.dev",
+    "problem": "Open Source guide - Contains resources and materials to learn and get yourself started with Open Source, Git, and GitHub.",
+    "technologies": ["JavaScript", "Node"]
+  },
+  {
+    "id": "ddrss",
+    "name": "DDRSS",
+    "stars": 16,
+    "repoUrl": "https://github.com/Pradumnasaraf/DDRSS",
+    "url": "https://discord.com/oauth2/authorize?client_id=950398355853430824&permissions=414464661568&scope=bot%20applications.commands",
+    "problem": "DDRSS Bot is a Discord Bot, which help user to get all bookmarks and the latest bookmark on their discord chat.",
+    "technologies": ["Python"]
+  },
+  {
+    "id": "team-moon-api",
+    "name": "Team-Moon-API",
+    "stars": 9,
+    "repoUrl": "https://github.com/Pradumnasaraf/Team-Moon-API",
+    "url": "https://teammoonapi.vercel.app",
+    "problem": "Team Moon API (CRUD) is made using Express and MongoDB and fully deployed on Deta. It is used for taking notes. This project was made for Postman API Fest 22' and also won that.",
+    "technologies": ["Kotlin", "MongoDB", "Node"]
+  },
+  {
+    "id": "snippets",
+    "name": "Snippets",
+    "stars": 3,
+    "repoUrl": "https://github.com/Pradumnasaraf/Snippets",
+    "url": "http://snippets.pradumnasaraf.dev",
+    "problem": "Contains code and commands.",
+    "technologies": ["JavaScript", "Next.js", "React"]
+  },
+  {
+    "id": "cryptogram",
+    "name": "CryptoGram",
+    "stars": 0,
+    "repoUrl": "https://github.com/Pradumnasaraf/CryptoGram",
+    "url": "https://t.me/Iamcryptogrambot",
+    "problem": "CyptoGram is a Telegram Bot, which gives you the latest price of the crypto currency you want to know about.",
+    "technologies": ["Python"]
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "stars": 4,
+    "repoUrl": "https://github.com/Pradumnasaraf/Python",
+    "url": "https://github.com/Pradumnasaraf/Python",
+    "problem": "Notes for learning Python.",
+    "technologies": ["Python"]
+  },
+  {
+    "id": "compounding-calculator-app",
+    "name": "Compounding-calculator-app",
+    "stars": 0,
+    "repoUrl": "https://github.com/Pradumnasaraf/Compounding-calculator-app",
+    "url": "https://github.com/Pradumnasaraf/Compounding-calculator-app",
+    "problem": "Compounding calculator, made by using JAVA.",
+    "technologies": ["Java"]
+  },
+  {
+    "id": "botchain",
+    "name": "Botchain",
+    "stars": 18,
+    "repoUrl": "https://github.com/Pradumnasaraf/Botchain",
+    "url": "https://twitter.com/IAmDogeBot",
+    "problem": "Botchain is a financial Twitter bot, tweets out latest ticker price after a fixed interval of time. Build using Python and Tweepy.",
+    "technologies": ["Python"]
+  },
+  {
+    "id": "pradumnasaraf-github-io",
+    "name": "Pradumnasaraf.github.io",
+    "stars": 19,
+    "repoUrl": "https://github.com/Pradumnasaraf/Pradumnasaraf.github.io",
+    "url": "https://pradumnasaraf.dev",
+    "problem": "Pradumna's personal website repo.",
+    "technologies": ["JavaScript"]
+  }
+]

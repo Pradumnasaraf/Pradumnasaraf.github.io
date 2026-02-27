@@ -1,17 +1,18 @@
-.speaking-container {
+.projects-page {
   min-height: calc(100vh - 80px);
-  background: linear-gradient(to bottom, #ffffff 0%, #fcfcfc 100%);
+  background: #ffffff;
   padding: 1.25rem 1.25rem 3.5rem;
-  color: #333333;
 }
 
-.speaking-header {
+.projects-header {
   max-width: 860px;
   margin: 0 auto 25px;
   text-align: center;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.speaking-header h1 {
+.projects-header h1 {
   text-align: center;
   font-size: 3rem;
   color: #1a1a1a;
@@ -21,34 +22,34 @@
   letter-spacing: -0.02em;
 }
 
-.speaking-timeline {
+.projects-timeline {
   max-width: 860px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  border-left: 2px dashed #d9d9d9;
+  gap: 1.1rem;
+  border-left: 2px solid #e7e7e7;
   padding-left: 1.25rem;
 }
 
-.speaking-timeline-item {
+.project-timeline-item {
   position: relative;
 }
 
-.speaking-timeline-item::before {
+.project-timeline-item::before {
   content: '';
   position: absolute;
   left: -1.75rem;
   top: 1.15rem;
   width: 11px;
   height: 11px;
-  background: #f2f2f2;
-  border: 2px solid #9d9d9d;
+  background: #ffffff;
+  border: 2px solid #bdbdbd;
   border-radius: 999px;
 }
 
-.speaking-card {
-  background: #fdfdfd;
+.project-card {
+  background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 14px;
   padding: 1rem;
@@ -61,106 +62,85 @@
     border-color 0.2s ease;
 }
 
-.speaking-card:hover {
+.project-card:hover {
   transform: translateY(-3px);
   border-color: #bfbfbf;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
 }
 
-.speaking-card-top {
+.project-card-top {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
 }
 
-.speaking-card-top h2 {
+.project-card-top h2 {
   margin: 0;
   font-size: 1.2rem;
   color: #111111;
   font-weight: 500;
   line-height: 1.2;
   word-break: break-word;
-  width: 100%;
 }
 
-.speaking-date-chip {
+.project-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
   border: 1px solid #d6d6d6;
   border-radius: 999px;
   padding: 0.28rem 0.5rem;
   color: #1a1a1a;
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   font-weight: 400;
   background: #ffffff;
-  white-space: nowrap;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease;
 }
 
-.speaking-meta-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.55rem;
+.project-stars:hover {
+  border-color: #bdbdbd;
 }
 
-.speaking-location-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #555555;
-  font-size: 0.88rem;
-  border: 1px solid #e1e1e1;
-  border-radius: 999px;
-  padding: 0.28rem 0.54rem;
-  background: #ffffff;
-  line-height: 1;
+.project-stars svg {
+  color: #111111;
 }
 
-.speaking-event-name {
+.project-problem {
   margin: 0;
   color: #565656;
   line-height: 1.5;
   font-size: 0.98rem;
 }
 
-.speaking-event-name span {
+.project-problem span {
   color: #222222;
   font-weight: 500;
 }
 
-.speaking-topic {
-  margin: 0;
-  color: #565656;
-  line-height: 1.5;
-  font-size: 0.98rem;
-}
-
-.speaking-topic span {
-  color: #222222;
-  font-weight: 500;
-}
-
-.speaking-tech-list {
+.project-tech-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-left: auto;
+  gap: 0.65rem;
 }
 
-.speaking-tech-icon {
+.project-tech-icon {
   position: relative;
   border: 1px solid #e1e1e1;
   border-radius: 999px;
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
   background: #ffffff;
   color: #444444;
-  font-size: 1rem;
+  font-size: 1.2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.speaking-tech-icon::after {
+.project-tech-icon::after {
   content: attr(data-tech);
   position: absolute;
   bottom: calc(100% + 8px);
@@ -181,33 +161,26 @@
   z-index: 5;
 }
 
-.speaking-tech-icon:hover::after,
-.speaking-tech-icon:focus-visible::after {
+.project-tech-icon:hover::after,
+.project-tech-icon:focus-visible::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
-.speaking-tech-fallback {
+.project-tech-fallback {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
 
-.speaking-tech-mark {
-  font-size: 0.56rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-.speaking-actions {
+.project-actions {
   margin-top: auto;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.speaking-action-button {
+.open-project-button {
   text-decoration: none;
   border: 1px solid #1a1a1a;
   background: #ffffff;
@@ -216,6 +189,7 @@
   padding: 0.46rem 0.68rem;
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.35rem;
   width: fit-content;
   font-size: 0.86rem;
@@ -227,49 +201,60 @@
     transform 0.2s ease;
 }
 
-.speaking-action-button:hover {
+.open-project-button:hover {
   border-color: #1a1a1a;
   background: #1a1a1a;
   color: #ffffff;
   transform: translateY(-1px);
 }
 
-.speaking-action-button:active {
+.open-project-button:active {
   transform: translateY(0);
 }
 
-.speaking-cta {
-  max-width: 860px;
-  margin: 1.35rem auto 0;
-  display: flex;
-  flex-wrap: wrap;
+.star-project-button {
+  text-decoration: none;
+  border: 1px solid #1a1a1a;
+  background: #ffffff;
+  color: #1a1a1a;
+  border-radius: 8px;
+  padding: 0.46rem 0.62rem;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.55rem;
+  gap: 0.32rem;
+  width: fit-content;
+  font-size: 0.84rem;
+  font-weight: 500;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.star-project-button:hover {
+  border-color: #1a1a1a;
+  background: #1a1a1a;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.star-project-button:active {
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {
-  .speaking-container {
+  .projects-page {
     padding: 0.5rem 0.9rem 2rem;
   }
 
-  .speaking-header h1 {
+  .projects-header h1 {
     font-size: 2rem;
     margin-top: 15px;
     margin-bottom: 20px;
   }
 
-  .speaking-timeline-item::before {
+  .project-timeline-item::before {
     left: -1.58rem;
-  }
-
-  .speaking-card-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .speaking-tech-list {
-    margin-left: 0;
-    display: none;
   }
 }
