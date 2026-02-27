@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaSlideshare, FaYoutube } from 'react-icons/fa';
-import { FaDiagramProject } from 'react-icons/fa6';
+import { RiOpenSourceFill } from 'react-icons/ri';
 import {
   SiDocker,
   SiGithubactions,
@@ -11,7 +11,6 @@ import {
   SiKubernetes,
   SiMongodb,
   SiNodedotjs,
-  SiOpensourceinitiative,
   SiOpenai,
   SiPostman,
   SiPostgresql,
@@ -25,7 +24,6 @@ import './style.css';
 
 const techIconMap = {
   docker: SiDocker,
-  'docker compose': FaDiagramProject,
   'github actions': SiGithubactions,
   go: SiGo,
   'google gemini': SiGooglegemini,
@@ -35,7 +33,7 @@ const techIconMap = {
   kubernetes: SiKubernetes,
   mongodb: SiMongodb,
   node: SiNodedotjs,
-  'open source': SiOpensourceinitiative,
+  'open source': RiOpenSourceFill,
   openai: SiOpenai,
   postman: SiPostman,
   postgresql: SiPostgresql,
@@ -125,8 +123,7 @@ const SpeakingPage = () => {
                   >
                     {inferTechnologies(item).map((tech) => {
                       const normalizedTech = String(tech).toLowerCase();
-                      const Icon =
-                        techIconMap[String(tech).toLowerCase()] || null;
+                      const Icon = techIconMap[normalizedTech] || null;
                       return (
                         <span
                           key={`${item.id}-${tech}`}

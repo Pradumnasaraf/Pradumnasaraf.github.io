@@ -135,7 +135,7 @@
     "date": "15th April 2023",
     "location": "NIT Patna, Patna, India",
     "topic": "Securely Package and Deploy your APIs with Docker and Docker Compose.",
-    "technologies": ["Docker", "Docker Compose"],
+    "technologies": ["Docker"],
     "slides": "https://github.com/Pradumnasaraf/Speaking/tree/main/API%20Days%20NIT%20Patna%20-%202023/api-days-nit-patna.pdf",
     "recording": null,
     "eventUrl": "https://github.com/Pradumnasaraf/Speaking/tree/main/API%20Days%20NIT%20Patna%20-%202023"
