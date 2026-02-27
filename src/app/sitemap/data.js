@@ -42,6 +42,16 @@ export const sitemapPages = [
     priorityLabel: 'High',
   },
   {
+    url: '/projects',
+    href: '/projects',
+    title: 'Projects',
+    priority: '0.8',
+    changefreq: 'weekly',
+    description: 'Project portfolio with live GitHub repositories and stars',
+    category: 'Professional',
+    priorityLabel: 'High',
+  },
+  {
     url: '/toolkit',
     href: '/toolkit',
     title: 'Toolkit',
