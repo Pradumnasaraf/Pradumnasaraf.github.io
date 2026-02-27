@@ -23,7 +23,7 @@ const SitemapPage = () => {
     Home: FaHome,
     Timeline: FaHistory,
     CV: FaFileAlt,
-    'Speaking & Events': FaMicrophone,
+    Speaking: FaMicrophone,
     Projects: FaFolderOpen,
     Toolkit: FaTools,
     Photography: FaCamera,

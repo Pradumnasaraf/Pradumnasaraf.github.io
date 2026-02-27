@@ -34,7 +34,7 @@ export const sitemapPages = [
   {
     url: '/speaking',
     href: '/speaking',
-    title: 'Speaking & Events',
+    title: 'Speaking',
     priority: '0.8',
     changefreq: 'monthly',
     description: 'Speaking engagements and conference talks',
@@ -47,7 +47,8 @@ export const sitemapPages = [
     title: 'Projects',
     priority: '0.8',
     changefreq: 'weekly',
-    description: 'Project portfolio with live GitHub repositories and stars',
+    description:
+      'Project portfolio with stars, problem statements, and tech stack',
     category: 'Professional',
     priorityLabel: 'High',
   },

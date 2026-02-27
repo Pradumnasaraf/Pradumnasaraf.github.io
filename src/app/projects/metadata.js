@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Pradumna's Projects",
   description:
-    'A live list of my public GitHub projects with star counts and quick launch links.',
+    'A curated list of my projects with star counts, tech stack, and quick links.',
   keywords: [
     'Pradumna Saraf projects',
     'GitHub repositories',
@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: "Pradumna's Projects",
     description:
-      'A live list of my public GitHub projects with star counts and quick launch links.',
+      'A curated list of my projects with star counts, tech stack, and quick links.',
     url: 'https://pradumnasaraf.dev/projects',
     images: [
       {
@@ -29,7 +29,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: "Pradumna's Projects",
     description:
-      'A live list of my public GitHub projects with star counts and quick launch links.',
+      'A curated list of my projects with star counts, tech stack, and quick links.',
     creator: '@pradumna_saraf',
     images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
   },
