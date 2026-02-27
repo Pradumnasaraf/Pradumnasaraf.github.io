@@ -18,6 +18,7 @@ import {
   SiPython,
   SiRedis,
   SiTypescript,
+  SiWebassembly,
 } from 'react-icons/si';
 import speakingData from './speaking.json';
 import './style.css';
@@ -41,6 +42,8 @@ const techIconMap = {
   python: SiPython,
   redis: SiRedis,
   typescript: SiTypescript,
+  webassembly: SiWebassembly,
+  wasm: SiWebassembly,
   chatgpt: SiOpenai,
 };
 
@@ -65,7 +68,7 @@ function inferTechnologies(item) {
     ['JavaScript', ['javascript']],
     ['Node', ['node']],
     ['MongoDB', ['mongodb']],
-    ['WASM', ['wasm', 'webassembly']],
+    ['WebAssembly', ['wasm', 'webassembly']],
   ];
 
   const detected = pairs

@@ -87,7 +87,7 @@
     "date": "16th December 2023",
     "location": "Bangalore, India",
     "topic": "Review Cycles Are Broken. Here's How To Fix Them",
-    "technologies": ["Kubernetes"],
+    "technologies": ["Docker", "Kubernetes"],
     "slides": "https://github.com/Pradumnasaraf/Speaking/tree/main/Docker%20Meetup%20Bangalore%20-2023/review-cycle.pdf",
     "recording": null,
     "eventUrl": "https://github.com/Pradumnasaraf/Speaking/tree/main/Docker%20Meetup%20Bangalore%20-2023"
