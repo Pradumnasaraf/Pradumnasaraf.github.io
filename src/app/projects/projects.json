@@ -216,24 +216,6 @@
     "technologies": ["Python"]
   },
   {
-    "id": "python",
-    "name": "Python",
-    "stars": 4,
-    "repoUrl": "https://github.com/Pradumnasaraf/Python",
-    "url": "https://github.com/Pradumnasaraf/Python",
-    "problem": "Notes for learning Python.",
-    "technologies": ["Python"]
-  },
-  {
-    "id": "compounding-calculator-app",
-    "name": "Compounding-calculator-app",
-    "stars": 0,
-    "repoUrl": "https://github.com/Pradumnasaraf/Compounding-calculator-app",
-    "url": "https://github.com/Pradumnasaraf/Compounding-calculator-app",
-    "problem": "Compounding calculator, made by using JAVA.",
-    "technologies": ["Java"]
-  },
-  {
     "id": "botchain",
     "name": "Botchain",
     "stars": 18,
