@@ -108,11 +108,8 @@ export default function Home() {
               </Link>
             </span>
             <span className="page-item">
-              <Link
-                href="https://pradumnasaraf.substack.com"
-                onClick={closeAllMenus}
-              >
-                Newsletter
+              <Link href="/projects" onClick={closeAllMenus}>
+                Projects
               </Link>
             </span>
             <span className="page-item">
@@ -156,15 +153,18 @@ export default function Home() {
             <span
               className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
             >
-              <Link href="/projects" onClick={closeAllMenus}>
-                Projects
+              <Link href="/speaking" onClick={closeAllMenus}>
+                Speaking
               </Link>
             </span>
             <span
               className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
             >
-              <Link href="/speaking" onClick={closeAllMenus}>
-                Speaking
+              <Link
+                href="https://pradumnasaraf.substack.com"
+                onClick={closeAllMenus}
+              >
+                Newsletter
               </Link>
             </span>
           </div>
@@ -194,11 +194,14 @@ export default function Home() {
             <div
               className={`extra-menu-dropdown ${isExtraMenuOpen ? 'active' : ''}`}
             >
-              <Link href="/projects" onClick={closeAllMenus}>
-                Projects
-              </Link>
               <Link href="/speaking" onClick={closeAllMenus}>
                 Speaking
+              </Link>
+              <Link
+                href="https://pradumnasaraf.substack.com"
+                onClick={closeAllMenus}
+              >
+                Newsletter
               </Link>
             </div>
           </div>
