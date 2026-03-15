@@ -1,0 +1,30 @@
+# Pradumna Saraf
+
+> Personal website of Pradumna Saraf with technical writing, projects, speaking, and profile information.
+
+## Canonical
+
+- https://pradumnasaraf.dev/
+
+## Primary Content
+
+- Blog: https://pradumnasaraf.dev/blog
+- Projects: https://pradumnasaraf.dev/projects
+- Speaking: https://pradumnasaraf.dev/speaking
+- Toolkit: https://pradumnasaraf.dev/toolkit
+- Timeline: https://pradumnasaraf.dev/timeline
+- CV: https://pradumnasaraf.dev/cv
+- Links: https://pradumnasaraf.dev/links
+- Photography: https://pradumnasaraf.dev/photography
+
+## Feeds And Discovery
+
+- Sitemap index: https://pradumnasaraf.dev/sitemap-index.xml
+- XML sitemap: https://pradumnasaraf.dev/sitemap.xml
+- RSS feed: https://pradumnasaraf.dev/rss.xml
+
+## Notes
+
+- The main authored long-form content is published under `/blog`.
+- Some reposted articles may point to an external canonical URL.
+- The `/contact` route opens an email client and is not intended to be indexed as a content page.

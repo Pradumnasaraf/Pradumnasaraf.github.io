@@ -73,16 +73,6 @@ export const sitemapPages = [
     priorityLabel: 'Medium',
   },
   {
-    url: '/contact',
-    href: '/contact',
-    title: 'Contact',
-    priority: '0.6',
-    changefreq: 'monthly',
-    description: 'Contact information and ways to reach me',
-    category: 'Communication',
-    priorityLabel: 'Medium',
-  },
-  {
     url: '/chat',
     href: '/chat',
     title: 'Schedule Meeting',
