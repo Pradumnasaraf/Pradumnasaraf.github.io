@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaGithub, FaJava, FaStar } from 'react-icons/fa';
+import { FaCss3Alt, FaGithub, FaJava, FaStar } from 'react-icons/fa';
 import {
   SiDocker,
   SiGithubactions,
@@ -18,7 +18,6 @@ import {
   SiReact,
   SiRedis,
   SiTypescript,
-  SiCss3,
 } from 'react-icons/si';
 import projects from './projects.json';
 import './style.css';
@@ -42,7 +41,7 @@ const techIconMap = {
   react: SiReact,
   redis: SiRedis,
   typescript: SiTypescript,
-  css: SiCss3,
+  css: FaCss3Alt,
 };
 
 export default function ProjectsPage() {

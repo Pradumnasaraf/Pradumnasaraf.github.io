@@ -10,7 +10,8 @@ import {
   FiCopy,
   FiX,
 } from 'react-icons/fi';
-import { SiBluesky, SiThreads, SiX, SiLinkedin } from 'react-icons/si';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { SiBluesky, SiThreads, SiX } from 'react-icons/si';
 import './style.css';
 
 export default function LinksPage() {
@@ -56,7 +57,7 @@ export default function LinksPage() {
     {
       id: 'linkedin',
       url: 'https://linkedin.com/in/pradumnasaraf',
-      icon: SiLinkedin,
+      icon: FaLinkedinIn,
     },
     {
       id: 'github',
