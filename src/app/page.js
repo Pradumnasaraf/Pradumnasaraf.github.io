@@ -212,14 +212,23 @@ export default function Home() {
         <div className="left">
           <div className="socialmedia">
             {/* Using React Icons */}
-            <Link href="https://github.com/Pradumnasaraf">
-              <FaGithub />
+            <Link
+              href="https://github.com/Pradumnasaraf"
+              aria-label="Visit Pradumna Saraf on GitHub"
+            >
+              <FaGithub aria-hidden="true" focusable="false" />
             </Link>
-            <Link href="https://twitter.com/pradumna_saraf">
-              <FaTwitter />
+            <Link
+              href="https://twitter.com/pradumna_saraf"
+              aria-label="Visit Pradumna Saraf on X"
+            >
+              <FaTwitter aria-hidden="true" focusable="false" />
             </Link>
-            <Link href="https://www.linkedin.com/in/pradumnasaraf/">
-              <FaLinkedin />
+            <Link
+              href="https://www.linkedin.com/in/pradumnasaraf/"
+              aria-label="Visit Pradumna Saraf on LinkedIn"
+            >
+              <FaLinkedin aria-hidden="true" focusable="false" />
             </Link>
           </div>
           <h2>
