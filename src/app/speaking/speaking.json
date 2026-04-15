@@ -1,5 +1,17 @@
 [
   {
+    "id": "byteverse-nit-patna-2026",
+    "title": "ByteVerse NIT Patna",
+    "event": "ByteVerse NIT Patna - 2026",
+    "date": "4th April 2026",
+    "location": "NIT Patna, Bihta, India",
+    "topic": "Open Source in the Age of AI",
+    "technologies": ["Open Source", "AI"],
+    "slides": "https://github.com/Pradumnasaraf/Speaking/tree/main/ByteVerse%20NIT%20Patna%20-%202026/opensource-ai.pdf",
+    "recording": null,
+    "eventUrl": "https://github.com/Pradumnasaraf/Speaking/tree/main/ByteVerse%20NIT%20Patna%20-%202026"
+  },
+  {
     "id": "ai-for-everyone-2026",
     "title": "AI For Everyone - 2026",
     "event": "AI For Everyone - 2026",
