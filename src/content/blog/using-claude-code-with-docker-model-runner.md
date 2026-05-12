@@ -6,7 +6,7 @@ author: 'Pradumna Saraf'
 category: 'ai'
 tags: ['ai', 'docker']
 thumbnail: '/blog-images/using-claude-code-with-docker-model-runner/thumbnail.png'
-canonical: 'https://dev.to/pradumnasaraf/using-claude-code-with-docker-model-runner-36eo'
+canonical: 'https://dev.to/pradumnasaraf/run-claude-code-locally-for-free-with-docker-model-runner-3o27'
 draft: false
 ---
 
