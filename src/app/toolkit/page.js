@@ -118,7 +118,7 @@ const ToolKitPage = () => {
                 <p>
                   Homebrew, Oh My Zsh, nvm, yarn, git, act, gh, helm, jq, kind,
                   kubectl, localtunnel, ngrok, zsh-autosuggestions, k9s,
-                  goreleaser, UV, k9s, helm, go, terraform{' '}
+                  goreleaser, UV, go, terraform, tree, speedtest{' '}
                 </p>
               </div>
 
@@ -126,14 +126,14 @@ const ToolKitPage = () => {
                 <h3>Mac Apps (Workflow)</h3>
                 <p>
                   Raycast, Lunar, LocalSend, Grammarly Desktop, GPG Suite,
-                  PDFgear, VLC, Zoom, VNC Viewer, AnySwitch, OneMenu,
-                  Launchy{' '}
+                  PDFgear, VLC, Zoom, VNC Viewer, AnySwitch, OneMenu, Launchy,
+                  Logi Options+{' '}
                 </p>
               </div>
 
               <div className="toolkit-item">
                 <h3>Code Editor</h3>
-                <p>Cursor, Visual Studio Code</p>
+                <p>Cursor</p>
               </div>
 
               <div className="toolkit-item">
@@ -143,7 +143,10 @@ const ToolKitPage = () => {
 
               <div className="toolkit-item">
                 <h3>AI Tools</h3>
-                <p>Claude, LM Studio, ChatGPT, Perplexity</p>
+                <p>
+                  Claude, ChatGPT, Perplexity, LM Studio, Claude Code, Codex,
+                  OpenCode, Agent Browser
+                </p>
               </div>
 
               <div className="toolkit-item">
@@ -158,17 +161,12 @@ const ToolKitPage = () => {
 
               <div className="toolkit-item">
                 <h3>Productivity</h3>
-                <p>Notion, Google Calendar, LocalSend</p>
+                <p>Notion, Google Calendar</p>
               </div>
 
               <div className="toolkit-item">
                 <h3>Communication and Collaboration</h3>
-                <p>GitHub, Slack, Discord</p>
-              </div>
-
-              <div className="toolkit-item">
-                <h3>Other Tools</h3>
-                <p> GPG Suite</p>
+                <p>GitHub, Slack, Discord, Microsoft Teams</p>
               </div>
             </div>
           </section>
