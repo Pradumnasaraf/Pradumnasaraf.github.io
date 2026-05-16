@@ -1,7 +1,7 @@
 ---
 title: 'Using Claude Code with Docker Model Runner'
 excerpt: 'Run Claude Code with local LLMs using Docker Model Runner. Keep your code private, work offline, and avoid burning through tokens.'
-date: '2026-05-08'
+date: '2026-05-12'
 author: 'Pradumna Saraf'
 category: 'ai'
 tags: ['ai', 'docker']
