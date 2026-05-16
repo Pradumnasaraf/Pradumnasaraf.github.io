@@ -140,4 +140,4 @@ Once we are done, we need to stop the running compose service and restart again 
 
 ![Image description](/blog-images/dockerizing-go-api/image-description-2.png)
 
-That's it for this blog. I'm glad you're still reading and made it to the end—thank you so much for your support and reading. I sometimes share tips on Golang on [Twitter](https://x.com/pradumna_saraf). You can connect with me there.
+That's it for this blog. I'm glad you're still reading and made it to the end - thank you so much for your support and reading. I sometimes share tips on Golang on [Twitter](https://x.com/pradumna_saraf). You can connect with me there.

@@ -16,7 +16,7 @@ In this blog, we will see how, by using OpenTelemetry and OpenObserve, we can ea
 
 [OpenTelemetry](https://opentelemetry.io/) is a collection of APIs, SDKs, and tools. Use it to instrument, generate, collect, and export telemetry data like metrics, logs, and traces. To make it simpler: In general, when we have to get metrics, we use Prometheus, Elasticsearch for logs, Jaeger for traces, etc. So, OpenTelemetry has streamlined this process by providing a single set of APIs that can handle all these tasks.
 
-Now, what will we do with all of the telemetry data we collected if we can't analyze them? This is where [OpenObserve](https://openobserve.ai/) comes into the picture. I can say it's Grafana on steroids. It provides a user-friendly UI (unlike Grafana) supporting SQL as its primary query language. Additionally, we support PromQL for querying metrics data, extending its versatility. One of the great features of OpenObserve is its built-in alerting mechanism, so you don't have to set it up yourself! Also, OpenObserve significantly lowers storage costs—reducing them to about 140 times less than Elasticsearch.
+Now, what will we do with all of the telemetry data we collected if we can't analyze them? This is where [OpenObserve](https://openobserve.ai/) comes into the picture. I can say it's Grafana on steroids. It provides a user-friendly UI (unlike Grafana) supporting SQL as its primary query language. Additionally, we support PromQL for querying metrics data, extending its versatility. One of the great features of OpenObserve is its built-in alerting mechanism, so you don't have to set it up yourself! Also, OpenObserve significantly lowers storage costs - reducing them to about 140 times less than Elasticsearch.
 
 ### Prerequisite
 
@@ -103,9 +103,9 @@ service:
       exporters: [otlphttp/openobserve]
 ```
 
-If you have worked with OpenTelemetry before, you know in general that you will have four sections in every configuration file—Receivers, Processors, Exporters, and Connectors—and then enable it using the pipelines within the Service section.
+If you have worked with OpenTelemetry before, you know in general that you will have four sections in every configuration file - Receivers, Processors, Exporters, and Connectors - and then enable it using the pipelines within the Service section.
 
-Under the **receivers** section, we are using `postgresql`. There can be other receivers too. Make sure you change the `endpoint`, `username`, and `password` accordingly to the ones you created. In the `databases` section, I am using the default one that comes with it—`postgres`. If you have something different or multiple databases, list them. Also, we are hardcoding the credentials, but you can use the security measures you prefer to access them.
+Under the **receivers** section, we are using `postgresql`. There can be other receivers too. Make sure you change the `endpoint`, `username`, and `password` accordingly to the ones you created. In the `databases` section, I am using the default one that comes with it - `postgres`. If you have something different or multiple databases, list them. Also, we are hardcoding the credentials, but you can use the security measures you prefer to access them.
 
 The **processors** section is pretty simple. Its role is to take the data collected by receivers and then modify, transform, and process the data according to the rules or settings defined before sending it to the exporters. Data processing happens according to the rules or settings defined for each processor:
 

@@ -40,4 +40,4 @@ Now, let's commit the changes and head to the Actions tab to check the progress.
 
 As we can see, our action ran successfully without any issues. For more real-world workflows we can switch the runner label and it will use arm base runners.
 
-On a personal note, I find ARM-based runners much faster, complementing their nature. It may vary depending on the task and the computation power it needs. That's come to the end of this blog. As usual, glad you made it to the end—thank you so much for your support. I regularly share tips on [Twitter](https://x.com/pradumna_saraf). You can connect with me there.
+On a personal note, I find ARM-based runners much faster, complementing their nature. It may vary depending on the task and the computation power it needs. That's come to the end of this blog. As usual, glad you made it to the end - thank you so much for your support. I regularly share tips on [Twitter](https://x.com/pradumna_saraf). You can connect with me there.

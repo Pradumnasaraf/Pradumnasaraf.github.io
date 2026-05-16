@@ -582,4 +582,4 @@ We created this panel to visualise the total number of requests from different e
 
 That's it! You have successfully created a Golang application that is monitored using Prometheus and Grafana. You have also learned how to Dockerize the application and run it using Docker Compose. You can now use this setup to monitor your Golang applications in production.
 
-That’s it about the Blog. As always, I'm glad you made it to the end—thank you so much for your support. I regularly share tips on [**Twitter**](https://x.com/pradumna_saraf). You can connect with me there.
+That’s it about the Blog. As always, I'm glad you made it to the end - thank you so much for your support. I regularly share tips on [**Twitter**](https://x.com/pradumna_saraf). You can connect with me there.

@@ -272,4 +272,4 @@ go install github.com/Pradumnasaraf/go-ai@latest
 
 And directly use the CLI with commands like `go-ai`, `go-ai search`, etc. If you encounter the error saying `command not found: go-ai` after running it, you need to add `$GOPATH/bin` to your `$PATH` environment variable. Refer to [this guide](https://gist.github.com/Pradumnasaraf/ca6f9a0507089a4c44881446cdda4aa3) for that.
 
-That's it for this blog. This was a little longer than the blogs I usually write. I'm glad you're still reading and made it to the end—thank you so much for your support. I sometimes share tips on [Twitter](https://x.com/pradumna_saraf). You can connect with me there.
+That's it for this blog. This was a little longer than the blogs I usually write. I'm glad you're still reading and made it to the end - thank you so much for your support. I sometimes share tips on [Twitter](https://x.com/pradumna_saraf). You can connect with me there.

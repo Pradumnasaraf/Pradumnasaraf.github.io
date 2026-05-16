@@ -16,7 +16,7 @@ Version control helps in recording changes made to files by keeping a track of m
 
 Team Collaboration - Many developers can work on different parts of software at a single time.
 
-Tracked Changes — Who, What, When, Why has done that.
+Tracked Changes - Who, What, When, Why has done that.
 
 Automation -  Automated builds and code reviews with  Continuous Integration (CI). 
 
@@ -49,11 +49,11 @@ git can be used through bash/terminal and also through GUI.
 
 ▶️ Some Basic commands of a git:
 
-▪️ git init — initializes a repository
+▪️ git init - initializes a repository
 
-▪️ git add <file> — adding/staging changes of a file.
+▪️ git add <file> - adding/staging changes of a file.
 
-▪️ git commit — committing or writing a history of a file. 
+▪️ git commit - committing or writing a history of a file. 
 
 ## Resources to learn git.
 

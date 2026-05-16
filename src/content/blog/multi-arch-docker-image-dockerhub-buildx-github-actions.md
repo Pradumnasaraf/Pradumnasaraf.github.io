@@ -134,4 +134,4 @@ Now, let's head over to DockerHub to check the pushed image. We can see it we ha
 
 Now the great part is that if someone pulls an image, for eg `docker pull pradumnasaraf/devops` docker will pull the image for that architecture only we don't need to explicitly mention it.
 
-That's come to the end of this blog. As usual, glad you made it to the end—thank you so much for your support. I regularly share Docker tips on [Twitter](https://x.com/pradumna_saraf). You can connect with me there.
+That's come to the end of this blog. As usual, glad you made it to the end - thank you so much for your support. I regularly share Docker tips on [Twitter](https://x.com/pradumna_saraf). You can connect with me there.

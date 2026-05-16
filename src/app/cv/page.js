@@ -142,9 +142,13 @@ const CVPage = () => {
               </div>
               <p className="location">Paris, Île-de-France, France · Remote</p>
               <ul>
-                <li>{`Test new features before release to ensure they meet company standards and work as expected across both open source and enterprise editions.`}</li>
-                <li>{`Create and run automated tests (sanity checks) to maintain software stability and prevent recurring issues.`}</li>
-                <li>{`Find and report bugs, usability issues, and unexpected problems with clear details for the product and engineering teams.`}</li>
+                <li>{`Assuring the quality of new features, releases, and migrations across Open Source and Enterprise editions through pre-release, release candidate, and post-release QA.`}</li>
+                <li>{`Designing, maintaining, and improving automated sanity checks and regression tests to keep the platform stable across releases.`}</li>
+                <li>{`Performing functional and integration testing across SDKs, CLI tools, APIs, plugins, and core platform components, and identifying, reproducing, and documenting issues with clear technical reproducers.`}</li>
+                <li>{`Validating workflows across multiple environments, cloud providers, and integrations to reproduce customer-reported issues.`}</li>
+                <li>{`Working closely with engineering and product teams to review fixes, verify pull requests through re-QA, and provide technical and usability feedback on new features.`}</li>
+                <li>{`Improving test coverage, validating migrations and new features, and contributing fixes, examples, improvements to the codebase.`}</li>
+                <li>{`Helping the support team reproduce reported issues, confirm whether they exist in current versions, and hand engineers clear reproducers for the fix.`}</li>
               </ul>
             </div>
 

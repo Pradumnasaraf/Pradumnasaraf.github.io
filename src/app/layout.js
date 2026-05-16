@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
         {/*
           Blog dark-mode pre-paint: applies the user's stored blog theme to
           <html> before first paint to avoid a flash. The attribute is harmless
-          on non-blog routes — dark CSS is scoped under .blog-theme-root, which
+          on non-blog routes - dark CSS is scoped under .blog-theme-root, which
           only exists inside /blog.
         */}
         <Script id="blog-theme-init" strategy="beforeInteractive">

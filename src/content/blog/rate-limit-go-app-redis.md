@@ -170,4 +170,4 @@ We can also verify this by seeing the logs in the terminal. Gin offers great log
 
 ![terminal logs](/blog-images/rate-limit-go-app-redis/terminal-logs.png)
 
-That's come to the end of this blog, I hope you enjoy reading as much as I enjoy writing. I am glad you made it to the end—thank you so much for your support. I also talk regularly about Golang and other stuff like Open Source and Docker on [X (Twitter)](https://x.com/pradumna_saraf). You can connect me over there.
+That's come to the end of this blog, I hope you enjoy reading as much as I enjoy writing. I am glad you made it to the end - thank you so much for your support. I also talk regularly about Golang and other stuff like Open Source and Docker on [X (Twitter)](https://x.com/pradumna_saraf). You can connect me over there.

@@ -1,5 +1,5 @@
 ---
-title: 'Docker Can Run LLMs Locally—Wait, What!?'
+title: 'Docker Can Run LLMs Locally - Wait, What!?'
 excerpt: 'Run Large Language Models (LLMs) locally with Docker Model Runner. Explore benefits, setup, and usage for AI development using Docker Desktop'
 date: '2025-04-07'
 author: 'Pradumna Saraf'
@@ -12,7 +12,7 @@ draft: false
 
 Using Docker to run Large Language Models (LLMs) locally? Yes, you heard that right. Docker is now much more than just running a container image. With **Docker Model Runner**, you can run and interact with LLMs locally.
 
-It’s a no-brainer that we’ve seen a huge shift in development towards AI and GenAI. And it’s not easy to develop a GenAI-powered application, considering all the hassle—from cost to setup. As always, Docker steps in and does what it’s known for: making GenAI development easier so developers can build and ship products and projects faster. We can run AI models on our machines natively! Yes, it runs models outside of containers. Right now, Docker Model Runner is in Beta and available for Docker Desktop for Mac with Apple Silicon, requiring Docker Desktop version 4.40 or later.
+It’s a no-brainer that we’ve seen a huge shift in development towards AI and GenAI. And it’s not easy to develop a GenAI-powered application, considering all the hassle - from cost to setup. As always, Docker steps in and does what it’s known for: making GenAI development easier so developers can build and ship products and projects faster. We can run AI models on our machines natively! Yes, it runs models outside of containers. Right now, Docker Model Runner is in Beta and available for Docker Desktop for Mac with Apple Silicon, requiring Docker Desktop version 4.40 or later.
 
 In this blog, we will explore the benefits of the Docker Model Runner and how to use it in various forms. Let’s get straight in!
 
@@ -127,4 +127,4 @@ It will return the same JSON format response as the other one, including the gen
 
 With this TCP support, we are not just limited to interacting with the applications that are running inside our container but anywhere.
 
-That’s it about the Blog. You can learn more about the Docker Model Runner from the official docs [here](https://docs.docker.com/desktop/features/model-runner/). And keep an eye out for the Docker announcements; there will be a lot more coming. As always, I'm glad you made it to the end—thank you so much for your support. I regularly share tips on [**Twitter**](https://x.com/pradumna_saraf) (It will always be Twitter ;)). You can connect with me there.
+That’s it about the Blog. You can learn more about the Docker Model Runner from the official docs [here](https://docs.docker.com/desktop/features/model-runner/). And keep an eye out for the Docker announcements; there will be a lot more coming. As always, I'm glad you made it to the end - thank you so much for your support. I regularly share tips on [**Twitter**](https://x.com/pradumna_saraf) (It will always be Twitter ;)). You can connect with me there.

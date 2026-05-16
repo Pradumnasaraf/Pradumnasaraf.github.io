@@ -36,4 +36,4 @@ If you don't believe me, I searched on GitHub and found around a MILLION project
 
 Btw, here is one more tip, if you still using the old convention of naming a compose file - `docker-compose.yaml`, start using `compose.yaml`.
 
-That's it for this blog. I hope you enjoyed this style of writing, which is more like short storytelling and freestyle. I'm glad you're still reading and made it to the end—thank you so much for your support. Before you go, I want to share that I was recently recognized as a Docker Captain. You can check out the announcement post [here](https://x.com/pradumna_saraf/status/1820286128299163993).
+That's it for this blog. I hope you enjoyed this style of writing, which is more like short storytelling and freestyle. I'm glad you're still reading and made it to the end - thank you so much for your support. Before you go, I want to share that I was recently recognized as a Docker Captain. You can check out the announcement post [here](https://x.com/pradumna_saraf/status/1820286128299163993).
