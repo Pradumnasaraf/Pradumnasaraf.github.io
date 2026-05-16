@@ -8,6 +8,7 @@ import BlogShareButtons from '@/components/BlogShareButtons';
 import CodeBlockCopy from '@/components/CodeBlockCopy';
 import ReadingProgress from '@/components/ReadingProgress';
 import BlogBackButton from '@/components/BlogBackButton';
+import BlogThemeToggle from '@/components/BlogThemeToggle';
 import ImageLightbox from '@/components/ImageLightbox';
 import TableOfContents from '@/components/TableOfContents';
 import BackToTopButton from '@/components/BackToTopButton';
@@ -152,6 +153,7 @@ export default async function BlogPost({ params }) {
       <div className="blog-topbar" role="banner">
         <div className="blog-topbar-inner">
           <BlogBackButton />
+          <BlogThemeToggle />
         </div>
       </div>
       <div className="blog-post-container">
