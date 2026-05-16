@@ -4,6 +4,7 @@ import './style.css';
 import { metadata } from './metadata';
 import BlogSearch from '@/components/BlogSearch';
 import BlogPostExplorer from '@/components/BlogPostExplorer';
+import BlogThemeToggle from '@/components/BlogThemeToggle';
 
 export { metadata };
 
@@ -43,6 +44,7 @@ export default function BlogPage() {
             </svg>
           </Link>
 
+          <BlogThemeToggle />
           <BlogSearch posts={searchPosts} />
         </div>
       </div>

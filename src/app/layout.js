@@ -24,11 +24,24 @@ export { metadata };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={leagueSpartan.className}>
+    <html
+      lang="en"
+      className={leagueSpartan.className}
+      suppressHydrationWarning
+    >
       <head>
         {/* Google Tag Manager initialization */}
         <Script id="gtm-init" strategy="beforeInteractive">
           {`window.dataLayer = window.dataLayer || []; window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
+        </Script>
+        {/*
+          Blog dark-mode pre-paint: applies the user's stored blog theme to
+          <html> before first paint to avoid a flash. The attribute is harmless
+          on non-blog routes — dark CSS is scoped under .blog-theme-root, which
+          only exists inside /blog.
+        */}
+        <Script id="blog-theme-init" strategy="beforeInteractive">
+          {`(function(){try{var s=localStorage.getItem('blog-theme');var t=(s==='dark'||s==='light')?s:(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-blog-theme',t);}catch(e){}})();`}
         </Script>
         <Script
           id="gtm-script"

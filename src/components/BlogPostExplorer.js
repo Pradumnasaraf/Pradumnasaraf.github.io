@@ -86,7 +86,11 @@ export default function BlogPostExplorer({ posts }) {
     return sorted;
   }, [normalizedPosts, activeTag, sortBy]);
 
-  const visiblePosts = filteredPosts.slice(0, visibleCount);
+  const isDefaultView =
+    activeTag === 'all' && sortBy === 'latest' && filteredPosts.length > 1;
+  const featuredPost = isDefaultView ? filteredPosts[0] : null;
+  const gridStartIndex = featuredPost ? 1 : 0;
+  const visiblePosts = filteredPosts.slice(gridStartIndex, visibleCount);
   const hasMore = visibleCount < filteredPosts.length;
   const hasActiveFilters = activeTag !== 'all';
 
@@ -162,6 +166,81 @@ export default function BlogPostExplorer({ posts }) {
         >
           Clear filters
         </button>
+      )}
+
+      {featuredPost && (
+        <article
+          className="blog-post-card blog-post-card-featured"
+          aria-label="Latest post"
+        >
+          <span className="blog-post-featured-label" aria-hidden="true">
+            Latest
+          </span>
+          {featuredPost.thumbnail && (
+            <Link
+              href={`/blog/${featuredPost.slug}`}
+              className="blog-post-thumbnail blog-post-thumbnail-featured"
+            >
+              <Image
+                src={featuredPost.thumbnail}
+                alt={featuredPost.title}
+                width={1600}
+                height={900}
+                className="blog-thumbnail-image"
+                priority
+                sizes="(max-width: 768px) 100vw, 60vw"
+              />
+            </Link>
+          )}
+          <div className="blog-post-content-wrapper">
+            <div className="blog-post-meta">
+              {featuredPost.date && (
+                <time className="blog-post-date" dateTime={featuredPost.date}>
+                  {formatPostDate(featuredPost.date)}
+                </time>
+              )}
+              {featuredPost.readingTime && (
+                <span className="blog-post-reading-time">
+                  {featuredPost.readingTime} min read
+                </span>
+              )}
+            </div>
+            <Link
+              href={`/blog/${featuredPost.slug}`}
+              className="blog-post-link"
+            >
+              <h2 className="blog-post-title">{featuredPost.title}</h2>
+              {featuredPost.excerpt && (
+                <p className="blog-post-excerpt">{featuredPost.excerpt}</p>
+              )}
+            </Link>
+
+            {featuredPost.tags.length > 0 && (
+              <div className="blog-post-tags" aria-label="Post topics">
+                {featuredPost.tags.slice(0, 3).map((tag) => (
+                  <button
+                    key={`${featuredPost.slug}-${tag}`}
+                    type="button"
+                    className="blog-post-tag-button"
+                    onClick={() => {
+                      setActiveTag(tag);
+                      setVisibleCount(INITIAL_VISIBLE_POSTS);
+                    }}
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            <Link
+              href={`/blog/${featuredPost.slug}`}
+              className="blog-post-read-more"
+            >
+              Read article
+            </Link>
+          </div>
+        </article>
       )}
 
       {visiblePosts.length > 0 ? (
