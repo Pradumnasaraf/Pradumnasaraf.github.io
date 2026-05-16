@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  border-left: 2px dashed #d9d9d9;
+  border-left: 2px solid #e7e7e7;
   padding-left: 1.25rem;
 }
 
@@ -42,8 +42,8 @@
   top: 1.15rem;
   width: 11px;
   height: 11px;
-  background: #f2f2f2;
-  border: 2px solid #9d9d9d;
+  background: #ffffff;
+  border: 2px solid #bdbdbd;
   border-radius: 999px;
 }
 
