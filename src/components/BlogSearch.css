@@ -371,6 +371,10 @@
   border-color: #333;
 }
 
+.blog-search-input:focus::placeholder {
+  color: transparent;
+}
+
 @media (max-width: 768px) {
   .blog-search-input {
     padding: 10px 36px 10px 36px;
