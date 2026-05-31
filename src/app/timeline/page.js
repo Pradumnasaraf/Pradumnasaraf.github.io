@@ -1,29 +1,12 @@
 import './style.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import PageTopbar from '@/components/PageTopbar';
 
 const TimelinePage = () => {
   return (
     <>
-      <div className="page-topbar" role="banner">
-        <div className="page-topbar-inner">
-          <Link href="/" className="back-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-          </Link>
-        </div>
-      </div>
+      <PageTopbar />
 
       <div className="min-h-screen">
         <h1 className="timeline-title">Timeline</h1>
@@ -662,7 +645,7 @@ const TimelinePage = () => {
               <h2>100K Views on dev.to My Articles</h2>
               <small>January, 2024</small>
               <p>
-                I never though people would be interested in reading my
+                I never thought people would be interested in reading my
                 articles. I reached 100K views on my articles on Dev.to. Total
                 views including other platforms are 135K. I mostly write about
                 open source devops and everything in between. And got this many

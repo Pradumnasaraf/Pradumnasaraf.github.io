@@ -2,6 +2,7 @@
 import './style.css';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import PageTopbar from '@/components/PageTopbar';
 
 const ChatPage = () => {
   useEffect(() => {
@@ -56,25 +57,7 @@ const ChatPage = () => {
   return (
     <>
       <div className="chat-page">
-        <div className="page-topbar" role="banner">
-          <div className="page-topbar-inner">
-            <Link href="/" className="back-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-              </svg>
-            </Link>
-          </div>
-        </div>
+        <PageTopbar />
 
         {/* NAVIGATION */}
         <div className="nav">
