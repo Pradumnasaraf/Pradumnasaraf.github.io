@@ -1,6 +1,4 @@
-'use client';
 import './style.css';
-import { useEffect } from 'react';
 import Link from 'next/link';
 import {
   FaGithub,
@@ -12,20 +10,6 @@ import {
 } from 'react-icons/fa';
 
 const CVPage = () => {
-  useEffect(() => {
-    document.title = 'Pradumna Saraf | CV';
-
-    const linkElement = document.createElement('link');
-    linkElement.rel = 'stylesheet';
-    linkElement.href =
-      'https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap';
-    document.head.appendChild(linkElement);
-
-    return () => {
-      document.head.removeChild(linkElement);
-    };
-  }, []);
-
   return (
     <>
       <div className="page-topbar" role="banner">
@@ -274,7 +258,6 @@ const CVPage = () => {
               </div>
               <ul>
                 <li>
-                  {' '}
                   I was recognized as a Microsoft Most Valuable Professional
                   (MVP) in the Developer Technologies category (Technology Area:
                   DevOps) for my contributions to the developer community from

@@ -644,8 +644,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    document.title = 'Pradumna Saraf | Photography'; // Set the document title
-
     // Show welcome popup when page loads
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setShowWelcomePopup(true);
