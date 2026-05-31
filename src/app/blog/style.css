@@ -110,7 +110,9 @@
   background-color: #fff;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   z-index: 1000;
   text-decoration: none;
 }
@@ -124,7 +126,6 @@
   width: 24px;
   height: 24px;
   color: #333;
-  transition: color 0.3s ease;
 }
 
 .blog-post-back-button:hover svg {
@@ -143,7 +144,9 @@
   background-color: #fff;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   z-index: 1000;
   text-decoration: none;
 }
@@ -157,7 +160,6 @@
   width: 24px;
   height: 24px;
   color: #333;
-  transition: color 0.3s ease;
 }
 
 .blog-listing-back-button:hover svg {
@@ -2271,9 +2273,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.2s ease,
-    color 0.2s ease;
+    box-shadow 0.3s ease;
   padding: 0;
   color: #333;
 }
@@ -2297,17 +2297,11 @@
    Dark mode — strictly scoped to html[data-blog-theme='dark'] .blog-theme-root.
    Body/html are never touched, so the theme cannot leak past the blog routes.
    ========================================================================= */
-.blog-theme-root {
-  --blog-transition:
-    background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
 html[data-blog-theme='dark'] .blog-theme-root .blog-container,
 html[data-blog-theme='dark'] .blog-theme-root .blog-post-container,
 html[data-blog-theme='dark'] .blog-theme-root .blog-topbar {
   background: #0f1115;
   color: #e6e8eb;
-  transition: var(--blog-transition);
 }
 
 html[data-blog-theme='dark'] .blog-theme-root {

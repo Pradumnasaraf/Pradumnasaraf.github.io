@@ -13,7 +13,9 @@
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   z-index: 1000;
   text-decoration: none;
   padding: 0;
@@ -47,7 +49,6 @@
   width: 24px;
   height: 24px;
   color: #333;
-  transition: color 0.3s ease;
 }
 
 /* Ensure consistent sizing even with Safari/prod CSS ordering quirks */
