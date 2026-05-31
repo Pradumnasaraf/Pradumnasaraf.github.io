@@ -58,6 +58,7 @@ const ToolKitPage = () => {
               <div className="toolkit-item">
                 <h3>Monitor</h3>
                 <p>LG UltraWide 29 inch (IPS)</p>
+                <p>LG UltraWide 34 inch (IPS)</p>
               </div>
 
               <div className="toolkit-item">
