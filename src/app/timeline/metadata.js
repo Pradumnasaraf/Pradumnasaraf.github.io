@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Pradumna's Professional Timeline",
+  title: 'Pradumna Saraf | Timeline',
   description: 'My professional journey - from early career to now.',
   keywords:
     'Pradumna Saraf Timeline, Professional Journey, Career Timeline, Developer Advocate Journey, Docker Captain Journey, Career Milestones',

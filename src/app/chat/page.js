@@ -1,14 +1,10 @@
 'use client';
 import './style.css';
 import { useEffect } from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 
 const ChatPage = () => {
   useEffect(() => {
-    document.title = 'Pradumna Saraf | Schedule a Meeting';
-    // Note: Google Tag Manager is loaded globally in layout.js, so we no longer inject it here.
-
     // Cal inline embed code
     const calScript = document.createElement('script');
     calScript.type = 'text/javascript';
@@ -59,16 +55,6 @@ const ChatPage = () => {
 
   return (
     <>
-      <Head>
-        <link
-          rel="icon"
-          href="https://user-images.githubusercontent.com/51878265/194138074-7a341083-e80e-49d9-8e58-02882b26d3d9.png"
-        />
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Schedule a Meeting</title>
-      </Head>
-
       <div className="chat-page">
         <div className="page-topbar" role="banner">
           <div className="page-topbar-inner">

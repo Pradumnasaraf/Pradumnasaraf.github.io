@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Chat with Pradumna',
+  title: 'Pradumna Saraf | Schedule a Meeting',
   description:
     'Schedule a meeting with me for consulting, speaking, or just to chat.',
   keywords:

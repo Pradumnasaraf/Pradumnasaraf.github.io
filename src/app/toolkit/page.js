@@ -1,23 +1,7 @@
-'use client';
 import './style.css';
-import { useEffect } from 'react';
 import Link from 'next/link';
 
 const ToolKitPage = () => {
-  useEffect(() => {
-    document.title = 'Pradumna Saraf | Toolkit';
-
-    const linkElement = document.createElement('link');
-    linkElement.rel = 'stylesheet';
-    linkElement.href =
-      'https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500&display=swap';
-    document.head.appendChild(linkElement);
-
-    return () => {
-      document.head.removeChild(linkElement);
-    };
-  }, []);
-
   return (
     <>
       <div className="page-topbar" role="banner">
@@ -68,7 +52,7 @@ const ToolKitPage = () => {
               </div>
               <div className="toolkit-item">
                 <h3>Mouse</h3>
-                <p>Logitech MXMaster 4</p>
+                <p>Logitech MX Master 4</p>
                 <p>Logitech M331</p>
               </div>
               <div className="toolkit-item">
@@ -83,13 +67,12 @@ const ToolKitPage = () => {
           </section>
 
           <section className="toolkit-section">
-            <h2>Workspace & Ergonomics & Accessories</h2>
+            <h2>Workspace, Ergonomics & Accessories</h2>
             <div className="toolkit-grid">
               <div className="toolkit-item">
                 <h3>Desk</h3>
                 <p>
-                  ErgoYou E3 Dual Motor (3 Stage) with Table-Top Standing
-                  Desk{' '}
+                  ErgoYou E3 Dual Motor (3 Stage) with Table-Top Standing Desk
                 </p>
               </div>
               <div className="toolkit-item">
@@ -110,7 +93,7 @@ const ToolKitPage = () => {
                 <h3>Development Tools</h3>
                 <p>
                   Docker, Lens Kubernetes IDE, Postman, TablePlus, MongoDB
-                  Compass{' '}
+                  Compass
                 </p>
               </div>
 
@@ -119,7 +102,7 @@ const ToolKitPage = () => {
                 <p>
                   Homebrew, Oh My Zsh, nvm, yarn, git, act, gh, helm, jq, kind,
                   kubectl, localtunnel, ngrok, zsh-autosuggestions, k9s,
-                  goreleaser, UV, go, terraform, tree, speedtest{' '}
+                  goreleaser, UV, go, terraform, tree, speedtest
                 </p>
               </div>
 
@@ -128,7 +111,7 @@ const ToolKitPage = () => {
                 <p>
                   Raycast, Lunar, LocalSend, Grammarly Desktop, GPG Suite,
                   PDFgear, VLC, Zoom, VNC Viewer, AnySwitch, OneMenu, Launchy,
-                  Logi Options+{' '}
+                  Logi Options+
                 </p>
               </div>
 
@@ -152,7 +135,7 @@ const ToolKitPage = () => {
 
               <div className="toolkit-item">
                 <h3>Browser</h3>
-                <p>Arc</p>
+                <p>Arc, Safari</p>
               </div>
 
               <div className="toolkit-item">

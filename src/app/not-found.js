@@ -1,13 +1,11 @@
-'use client';
 import './not-found.css';
 import Link from 'next/link';
-import { useEffect } from 'react';
+
+export const metadata = {
+  title: '404 - Page Not Found | Pradumna Saraf',
+};
 
 export default function NotFound() {
-  useEffect(() => {
-    document.title = '404 - Page Not Found | Pradumna Saraf';
-  }, []);
-
   return (
     <div className="not-found-container">
       <div className="not-found-content">

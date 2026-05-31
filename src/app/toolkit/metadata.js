@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Pradumna's Toolkit",
+  title: 'Pradumna Saraf | Toolkit',
   description:
     'Tools, software, and gear I use daily for development and productivity.',
   keywords:

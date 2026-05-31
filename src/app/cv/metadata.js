@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Pradumna's CV",
+  title: 'Pradumna Saraf | CV',
   description:
     'My CV and work experience in open source, content creation, and community building.',
   keywords:

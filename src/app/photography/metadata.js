@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Pradumna's Photography",
+  title: 'Pradumna Saraf | Photography',
   description:
     'My mobile photography shots - a mix of personal and professional shots.',
   keywords:
