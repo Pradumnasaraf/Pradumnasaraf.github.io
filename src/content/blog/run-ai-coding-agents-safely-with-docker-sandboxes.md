@@ -6,7 +6,7 @@ author: 'Pradumna Saraf'
 category: 'ai'
 tags: ['ai', 'docker', 'security', 'containers', 'cli']
 thumbnail: '/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/thumbnail.png'
-canonical: 'https://dev.to/pradumnasaraf/sbx-56b3-temp-slug-2882751'
+canonical: 'https://dev.to/pradumnasaraf/run-ai-coding-agents-safely-with-docker-sandboxes-81g'
 draft: false
 ---
 
