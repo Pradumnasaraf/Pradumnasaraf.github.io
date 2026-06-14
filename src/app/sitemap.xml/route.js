@@ -1,8 +1,9 @@
+import { SITE_URL } from '../../lib/constants.js';
 import { sitemapPages } from '../sitemap/data.js';
 import { getAllPosts } from '../../lib/blog.js';
 
 export async function GET() {
-  const baseUrl = 'https://pradumnasaraf.dev';
+  const baseUrl = SITE_URL;
   const currentDate = new Date().toISOString().split('T')[0];
 
   // Get all blog posts (excluding drafts and reposted content with canonical URLs)

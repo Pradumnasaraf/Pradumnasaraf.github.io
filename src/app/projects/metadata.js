@@ -1,3 +1,5 @@
+import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+
 export const metadata = {
   title: "Pradumna's Projects",
   description:
@@ -13,10 +15,10 @@ export const metadata = {
     title: "Pradumna's Projects",
     description:
       'A curated list of my projects with star counts, tech stack, and quick links.',
-    url: 'https://pradumnasaraf.dev/projects',
+    url: `${SITE_URL}/projects`,
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Projects',
@@ -30,8 +32,8 @@ export const metadata = {
     title: "Pradumna's Projects",
     description:
       'A curated list of my projects with star counts, tech stack, and quick links.',
-    creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
+    creator: TWITTER_HANDLE,
+    images: [OG_IMAGE_URL],
   },
   robots: {
     index: true,
@@ -45,6 +47,6 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://pradumnasaraf.dev/projects',
+    canonical: `${SITE_URL}/projects`,
   },
 };

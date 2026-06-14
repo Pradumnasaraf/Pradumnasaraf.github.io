@@ -1,3 +1,5 @@
+import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+
 export const metadata = {
   title: 'Pradumna Saraf | CV',
   description:
@@ -8,11 +10,11 @@ export const metadata = {
     title: "Pradumna's CV",
     description:
       'My CV and work experience in open source, content creation, and community building.',
-    url: 'https://pradumnasaraf.dev/cv',
+    url: `${SITE_URL}/cv`,
     type: 'website',
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/cv-og.png',
+        url: `${SITE_URL}/media/cv-og.png`,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - CV',
@@ -25,8 +27,8 @@ export const metadata = {
     title: "Pradumna's CV",
     description:
       'My CV and work experience in open source, content creation, and community building.',
-    creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/media/cv-og.png'],
+    creator: TWITTER_HANDLE,
+    images: [`${SITE_URL}/media/cv-og.png`],
   },
   robots: {
     index: true,
@@ -40,6 +42,6 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://pradumnasaraf.dev/cv',
+    canonical: `${SITE_URL}/cv`,
   },
 };

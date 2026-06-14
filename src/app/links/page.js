@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
+import { SITE_URL } from '@/lib/constants';
 import {
   FiGithub,
   FiMail,
@@ -24,7 +25,7 @@ export default function LinksPage() {
     avatar: '/media/pradumnasaraf.png',
   };
 
-  const qrCodeUrl = 'https://pradumnasaraf.dev/links';
+  const qrCodeUrl = `${SITE_URL}/links`;
 
   const handleCopyLink = async () => {
     try {
@@ -96,7 +97,7 @@ export default function LinksPage() {
     {
       id: 1,
       title: 'Personal Website',
-      url: 'https://pradumnasaraf.dev',
+      url: SITE_URL,
     },
     {
       id: 2,
@@ -111,7 +112,7 @@ export default function LinksPage() {
     {
       id: 4,
       title: 'Blog',
-      url: 'https://pradumnasaraf.dev/blog',
+      url: `/blog`,
     },
     {
       id: 5,

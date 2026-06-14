@@ -1,5 +1,6 @@
+import { SITE_URL } from '../../lib/constants.js';
 export async function GET() {
-  const baseUrl = 'https://pradumnasaraf.dev';
+  const baseUrl = SITE_URL;
   const currentDate = new Date().toISOString().split('T')[0];
 
   // Comprehensive sitemap index

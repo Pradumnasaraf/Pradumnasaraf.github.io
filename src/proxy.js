@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server.js';
+import { BLOG_SUBDOMAIN_HOST, SITE_URL } from './lib/constants.js';
 
 export function proxy(request) {
   const url = request.nextUrl.clone();
@@ -10,15 +11,15 @@ export function proxy(request) {
     pathname = pathname.slice(0, -1);
   }
 
-  // Check if the request is coming from blog.pradumnasaraf.dev subdomain
+  // Check if the request is coming from the blog subdomain
   if (
-    hostname === 'blog.pradumnasaraf.dev' ||
-    hostname.startsWith('blog.pradumnasaraf.dev:')
+    hostname === BLOG_SUBDOMAIN_HOST ||
+    hostname.startsWith(`${BLOG_SUBDOMAIN_HOST}:`)
   ) {
     // Handle specific series redirects to main blog page
     if (pathname === '/series/open-source' || pathname === '/series/devops') {
       return NextResponse.redirect(
-        new URL('https://pradumnasaraf.dev/blog', request.url),
+        new URL(`${SITE_URL}/blog`, request.url),
         301
       );
     }
@@ -35,7 +36,7 @@ export function proxy(request) {
     // If it's the root or empty, redirect to the main blog page
     if (pathname === '/' || pathname === '') {
       return NextResponse.redirect(
-        new URL('https://pradumnasaraf.dev/blog', request.url),
+        new URL(`${SITE_URL}/blog`, request.url),
         301
       );
     }
@@ -43,10 +44,7 @@ export function proxy(request) {
     // For any other path, redirect to the same path on the main domain's blog
     // e.g., blog.pradumnasaraf.dev/some-post -> pradumnasaraf.dev/blog/some-post
     // Preserve query parameters if any
-    const newUrl = new URL(
-      `https://pradumnasaraf.dev/blog${pathname}`,
-      request.url
-    );
+    const newUrl = new URL(`${SITE_URL}/blog${pathname}`, request.url);
     if (url.search) {
       newUrl.search = url.search;
     }

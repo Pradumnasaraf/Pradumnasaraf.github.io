@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPostBySlug, getAllPostSlugs, getAllPosts } from '@/lib/blog';
 import { getThumbnailUrl } from '@/lib/blog-utils';
+import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
 import { format } from 'date-fns';
 import BlogShareButtons from '@/components/BlogShareButtons';
 import CodeBlockCopy from '@/components/CodeBlockCopy';
@@ -35,8 +36,7 @@ export async function generateMetadata({ params }) {
 
   // If post has a canonical URL in frontmatter (for reposted content),
   // use that. Otherwise, use this site as the canonical URL.
-  const canonicalUrl =
-    post.canonical || `https://pradumnasaraf.dev/blog/${slug}`;
+  const canonicalUrl = post.canonical || `${SITE_URL}/blog/${slug}`;
 
   return {
     title: `${post.title} | Pradumna Saraf Blog`,
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: post.title,
       description: post.excerpt || post.title,
-      url: `https://pradumnasaraf.dev/blog/${slug}`,
+      url: `${SITE_URL}/blog/${slug}`,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author || 'Pradumna Saraf'],
@@ -64,7 +64,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: post.title,
       description: post.excerpt || post.title,
-      creator: '@pradumna_saraf',
+      creator: TWITTER_HANDLE,
       images: [thumbnailUrl],
     },
     alternates: {
@@ -81,7 +81,7 @@ export default async function BlogPost({ params }) {
     notFound();
   }
 
-  const postUrl = `https://pradumnasaraf.dev/blog/${slug}`;
+  const postUrl = `${SITE_URL}/blog/${slug}`;
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
   const allPosts = getAllPosts();
 
@@ -130,14 +130,14 @@ export default async function BlogPost({ params }) {
     author: {
       '@type': 'Person',
       name: post.author || 'Pradumna Saraf',
-      url: 'https://pradumnasaraf.dev',
+      url: SITE_URL,
     },
     publisher: {
       '@type': 'Organization',
       name: 'Pradumna Saraf',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
+        url: OG_IMAGE_URL,
       },
     },
     mainEntityOfPage: {

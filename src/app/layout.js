@@ -6,6 +6,7 @@ import { League_Spartan } from 'next/font/google';
 import { metadata } from './metadata'; // Import metadata from metadata.js
 import GTMPageView from '@/components/GTMPageView';
 import BodyRouteClass from '@/components/BodyRouteClass';
+import { GTM_ID, SITE_URL } from '@/lib/constants';
 
 const leagueSpartan = League_Spartan({
   weight: ['300', '400', '500'],
@@ -46,7 +47,7 @@ export default function RootLayout({ children }) {
         <Script
           id="gtm-script"
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-WRGLMZCX"
+          src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
         />
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
@@ -55,7 +56,7 @@ export default function RootLayout({ children }) {
         <link
           rel="alternate"
           type="application/rss+xml"
-          href="https://pradumnasaraf.dev/rss.xml"
+          href={`${SITE_URL}/rss.xml`}
           title="Pradumna Saraf - Blog RSS Feed"
         />
 
@@ -69,12 +70,12 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Pradumna Saraf',
-              url: 'https://pradumnasaraf.dev',
+              url: SITE_URL,
               sameAs: [
                 'https://github.com/Pradumnasaraf',
                 'https://twitter.com/pradumna_saraf',
                 'https://linkedin.com/in/pradumnasaraf',
-                'https://pradumnasaraf.dev/blog',
+                `${SITE_URL}/blog`,
                 'https://mvp.microsoft.com/en-US/MVP/profile/504ebf09-e92f-4620-82d7-67590711df58',
               ],
               jobTitle: 'Developer Advocate, Docker Captain & Microsoft MVP',
@@ -129,7 +130,7 @@ export default function RootLayout({ children }) {
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WRGLMZCX"
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}

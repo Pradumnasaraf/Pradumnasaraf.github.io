@@ -1,3 +1,5 @@
+import { OG_IMAGE_URL, SITE_URL } from './constants.js';
+
 /**
  * Utility functions for blog-related operations
  */
@@ -9,12 +11,12 @@
  */
 export function getThumbnailUrl(thumbnail) {
   if (!thumbnail) {
-    return 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png';
+    return OG_IMAGE_URL;
   }
   // If thumbnail is already absolute URL, use it
   if (thumbnail.startsWith('http://') || thumbnail.startsWith('https://')) {
     return thumbnail;
   }
   // If thumbnail is relative, make it absolute
-  return `https://pradumnasaraf.dev${thumbnail.startsWith('/') ? thumbnail : `/${thumbnail}`}`;
+  return `${SITE_URL}${thumbnail.startsWith('/') ? thumbnail : `/${thumbnail}`}`;
 }
