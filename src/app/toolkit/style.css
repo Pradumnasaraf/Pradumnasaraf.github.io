@@ -99,6 +99,27 @@
   gap: 1.5rem;
 }
 
+/*
+  Container queries for .toolkit-grid. Thresholds correspond to the
+  inner content width of .toolkit-container at the original viewport
+  breakpoints (~viewport - 32-48px of padding):
+    container <= 992px  ~~  viewport <= 1024px  =>  smaller minmax
+    container <= 720px  ~~  viewport <= 768px   =>  single column
+*/
+@container toolkit (max-width: 992px) {
+  .toolkit-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@container toolkit (max-width: 720px) {
+  .toolkit-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 .toolkit-item {
   background: var(--color-surface);
   padding: 1.5rem;
@@ -135,10 +156,7 @@
     font-size: 2.5rem;
   }
 
-  .toolkit-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.25rem;
-  }
+  /* .toolkit-grid rule moved to @container toolkit (max-width: 992px). */
 }
 
 /* Mobile First - Responsive Design */
@@ -175,10 +193,7 @@
     font-size: 1.5rem;
   }
 
-  .toolkit-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+  /* .toolkit-grid 1-col rule moved to @container toolkit (max-width: 720px). */
 
   .toolkit-item {
     padding: 1.25rem;
