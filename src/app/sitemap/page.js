@@ -46,7 +46,7 @@ const SitemapPage = () => {
     <div className="min-h-screen bg-gray-50">
       <PageTopbar />
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
+      <div className="bg-white shadow-xs border-b">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center gap-3 mb-2">
             <FaSitemap className="text-2xl text-gray-700" />
@@ -82,7 +82,7 @@ const SitemapPage = () => {
                         className="group bg-white rounded-lg border border-gray-200 p-6 hover:shadow-md hover:border-gray-300 transition-all duration-200"
                       >
                         <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0">
+                          <div className="shrink-0">
                             <IconComponent className="text-2xl text-gray-600 group-hover:text-blue-600 transition-colors" />
                           </div>
                           <div className="flex-1">
@@ -136,7 +136,7 @@ const SitemapPage = () => {
                   className="group bg-white rounded-lg border border-gray-200 p-6 hover:shadow-md hover:border-gray-300 transition-all duration-200"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                       <FaExternalLinkAlt className="text-2xl text-gray-600 group-hover:text-blue-600 transition-colors" />
                     </div>
                     <div className="flex-1">
