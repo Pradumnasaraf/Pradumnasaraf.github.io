@@ -276,13 +276,19 @@
 }
 
 .blog-explorer-select {
+  appearance: none;
+  -webkit-appearance: none;
   border: 1px solid #dcdcdc;
-  background: var(--color-surface);
+  background-color: var(--color-surface);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%23666666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  background-size: 12px 8px;
   color: var(--color-fg-secondary);
   border-radius: 8px;
-  padding: 0.55rem 0.75rem;
+  padding: 0.55rem 2.25rem 0.55rem 0.75rem;
   font-size: 0.9rem;
-  min-width: 180px;
+  min-width: 140px;
 }
 
 .blog-explorer-select:focus-visible {
@@ -2454,7 +2460,8 @@ html[data-blog-theme='dark'] .blog-theme-root .blog-topic-chip-active {
 
 /* Sort select */
 html[data-blog-theme='dark'] .blog-theme-root .blog-explorer-select {
-  background: #1c1f26;
+  background-color: #1c1f26;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%23d4d8de' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
   border-color: #2c313b;
   color: #e6e8eb;
 }
