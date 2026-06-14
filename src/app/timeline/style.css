@@ -7,14 +7,14 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--color-surface);
 }
 
 /* Timeline Title */
 .timeline-title {
   text-align: center;
   font-size: 3rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-top: 20px;
   margin-bottom: 25px;
   font-weight: 300;
@@ -198,7 +198,7 @@ body {
 /* Text Box Styles */
 .text-box {
   padding: 25px 35px;
-  background: #ffffff;
+  background: var(--color-surface);
   position: relative;
   border-radius: 12px;
   font-size: 15px;
@@ -209,7 +209,7 @@ body {
 .text-box h2 {
   font-weight: 400;
   margin-bottom: 15px;
-  color: #1a1a1a;
+  color: var(--color-fg);
   letter-spacing: -0.01em;
 }
 
@@ -217,7 +217,7 @@ body {
   display: inline;
   font-size: 14px;
   font-weight: 300;
-  color: #666666;
+  color: var(--color-fg-muted);
   background-color: #f0f0f0;
   padding: 4px 8px;
   border-radius: 4px;
@@ -248,7 +248,7 @@ body {
   right: -22px;
   top: 32px;
   z-index: 10;
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   border: 2px solid #e0e0e0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -291,19 +291,19 @@ body {
   right: 10px;
   width: 32px;
   height: 32px;
-  background-color: #ffffff;
-  border: 1px solid #1a1a1a;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-fg);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #1a1a1a;
+  color: var(--color-fg);
 }
 
 .source-button:hover {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: var(--color-fg);
+  color: var(--color-surface);
 }
 
 .source-button svg {
@@ -320,7 +320,7 @@ body {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: var(--color-surface);
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -333,21 +333,21 @@ body {
 }
 
 .back-button svg {
-  color: #333;
+  color: var(--color-fg-secondary);
   transition: color 0.3s ease;
   width: 24px;
   height: 24px;
 }
 
 .back-button:hover svg {
-  color: #000;
+  color: var(--color-fg-strong);
 }
 
 .back-button::after {
   content: 'Home';
   position: absolute;
   left: 50px;
-  background-color: #333;
+  background-color: var(--color-fg-secondary);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -417,7 +417,7 @@ body {
 
   .left-container-arrow,
   .right-container-arrow {
-    border-right: 15px solid #ffffff;
+    border-right: 15px solid var(--color-surface);
     border-left: 0;
     left: -15px;
     filter: drop-shadow(-1px 0 1px rgba(0, 0, 0, 0.1));

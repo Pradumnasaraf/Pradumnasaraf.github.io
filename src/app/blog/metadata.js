@@ -1,3 +1,5 @@
+import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+
 export const metadata = {
   title: "Pradumna's Blog",
   description:
@@ -20,10 +22,10 @@ export const metadata = {
     title: "Pradumna's Blog",
     description:
       'Technical articles and tutorials about Docker, Kubernetes, DevOps, and cloud-native tech.',
-    url: 'https://pradumnasaraf.dev/blog',
+    url: `${SITE_URL}/blog`,
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/blog-og.png',
+        url: `${SITE_URL}/media/blog-og.png`,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Blog',
@@ -37,8 +39,8 @@ export const metadata = {
     title: "Pradumna's Blog",
     description:
       'Technical articles and tutorials about Docker, Kubernetes, DevOps, and cloud-native tech.',
-    creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/media/blog-og.png'],
+    creator: TWITTER_HANDLE,
+    images: [`${SITE_URL}/media/blog-og.png`],
   },
   robots: {
     index: true,
@@ -52,9 +54,9 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://pradumnasaraf.dev/blog',
+    canonical: `${SITE_URL}/blog`,
     types: {
-      'application/rss+xml': 'https://pradumnasaraf.dev/rss.xml',
+      'application/rss+xml': `${SITE_URL}/rss.xml`,
     },
   },
 };

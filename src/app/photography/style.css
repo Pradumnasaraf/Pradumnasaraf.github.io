@@ -1,12 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Page Title - Match Timeline & Toolkit style */
 .photography-title {
   text-align: center;
   font-size: 3rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-top: 20px;
   margin-bottom: 25px;
   font-weight: 300;
@@ -15,6 +11,11 @@
 
 /* Photography Page Container - Ensure scrolling works */
 .photography-page-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
   overflow-x: hidden;
   overflow-y: visible;
   position: relative;
@@ -87,21 +88,60 @@
 /* Image Styles */
 .grayscale-image {
   filter: grayscale(100%);
+  transform: scale(1);
   transition:
-    filter 0.5s ease,
-    transform 0.3s ease;
+    filter 500ms ease,
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 300ms ease;
 }
 
 /* Update hover effect to show both color and button */
 .group:hover .grayscale-image {
   filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
-.group:hover .bg-opacity-0 {
+.photo-hover-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background-color 300ms ease;
+}
+
+.group:hover .photo-hover-overlay {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.group:hover .opacity-0 {
+.photo-view-button {
+  background-color: var(--color-surface);
+  color: var(--color-fg-strong);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(1rem);
+  pointer-events: auto;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease,
+    background-color 200ms ease;
+}
+
+.photo-view-button:hover {
+  background-color: #f3f4f6;
+}
+
+.group:hover .photo-view-button {
   opacity: 1;
   transform: translateY(0);
 }
@@ -156,7 +196,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: var(--color-surface);
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -170,21 +210,21 @@
 }
 
 .back-button svg {
-  color: #333;
+  color: var(--color-fg-secondary);
   transition: color 0.3s ease;
   width: 24px;
   height: 24px;
 }
 
 .back-button:hover svg {
-  color: #000;
+  color: var(--color-fg-strong);
 }
 
 .back-button::after {
   content: 'Home';
   position: absolute;
   left: 50px;
-  background-color: #333;
+  background-color: var(--color-fg-secondary);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -205,7 +245,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: var(--color-surface);
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -221,19 +261,19 @@
 }
 
 .modal-circle-button svg {
-  color: #333;
+  color: var(--color-fg-secondary);
   transition: color 0.3s ease;
 }
 
 .modal-circle-button:hover svg {
-  color: #000;
+  color: var(--color-fg-strong);
 }
 
 .modal-label {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #333;
+  background-color: var(--color-fg-secondary);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -257,6 +297,14 @@
 
 .modal-circle-button:hover + .modal-label {
   opacity: 1;
+}
+
+/* Wider breathing room at desktop sizes (matches v3's p-8 + mx-16 = 6rem) */
+@media (min-width: 768px) {
+  .photography-page-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 /* Tablet styles */
@@ -434,7 +482,7 @@
 }
 
 .popup-close-button svg {
-  color: #333;
+  color: var(--color-fg-secondary);
   width: 16px;
   height: 16px;
 }
@@ -447,7 +495,7 @@
 .popup-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-bottom: 16px;
   line-height: 1.4;
 }
@@ -460,7 +508,7 @@
 }
 
 .popup-ok-button {
-  background: #1a1a1a;
+  background: var(--color-fg);
   color: white;
   border: none;
   padding: 12px 32px;
@@ -472,7 +520,7 @@
 }
 
 .popup-ok-button:hover {
-  background: #333;
+  background: var(--color-fg-secondary);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

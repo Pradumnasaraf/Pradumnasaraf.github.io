@@ -1,3 +1,5 @@
+import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+
 export const metadata = {
   title: 'Page Not Found | Pradumna Saraf',
   description:
@@ -10,11 +12,11 @@ export const metadata = {
     title: 'Page Not Found | Pradumna Saraf',
     description:
       "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
-    url: 'https://pradumnasaraf.dev/404',
+    url: `${SITE_URL}/404`,
     type: 'website',
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Developer Advocate & Docker Captain',
@@ -27,7 +29,7 @@ export const metadata = {
     title: 'Page Not Found | Pradumna Saraf',
     description:
       "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
-    creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
+    creator: TWITTER_HANDLE,
+    images: [OG_IMAGE_URL],
   },
 };

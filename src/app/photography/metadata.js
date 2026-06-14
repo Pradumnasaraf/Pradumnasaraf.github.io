@@ -1,3 +1,5 @@
+import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+
 export const metadata = {
   title: 'Pradumna Saraf | Photography',
   description:
@@ -8,10 +10,10 @@ export const metadata = {
     title: "Pradumna's Photography",
     description:
       'My mobile photography shots - a mix of personal and professional shots.',
-    url: 'https://pradumnasaraf.dev/photography',
+    url: `${SITE_URL}/photography`,
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/photography-og.png',
+        url: `${SITE_URL}/media/photography-og.png`,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Photography Portfolio',
@@ -25,8 +27,8 @@ export const metadata = {
     title: "Pradumna's Photography",
     description:
       'My mobile photography shots - a mix of personal and professional shots.',
-    creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/media/photography-og.png'],
+    creator: TWITTER_HANDLE,
+    images: [`${SITE_URL}/media/photography-og.png`],
   },
   robots: {
     index: true,
@@ -40,6 +42,6 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://pradumnasaraf.dev/photography',
+    canonical: `${SITE_URL}/photography`,
   },
 };

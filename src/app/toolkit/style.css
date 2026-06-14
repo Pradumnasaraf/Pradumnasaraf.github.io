@@ -5,6 +5,9 @@
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Container-query context for .toolkit-grid. */
+  container-type: inline-size;
+  container-name: toolkit;
 }
 
 .back-button {
@@ -16,7 +19,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: var(--color-surface);
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -33,21 +36,21 @@
 }
 
 .back-button svg {
-  color: #333;
+  color: var(--color-fg-secondary);
   transition: color 0.3s ease;
   width: 24px;
   height: 24px;
 }
 
 .back-button:hover svg {
-  color: #000;
+  color: var(--color-fg-strong);
 }
 
 .back-button::after {
   content: 'Home';
   position: absolute;
   left: 50px;
-  background-color: #333;
+  background-color: var(--color-fg-secondary);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -71,7 +74,7 @@
 .toolkit-title {
   text-align: center;
   font-size: 3rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-top: 20px;
   margin-bottom: 25px;
   font-weight: 300;
@@ -84,7 +87,7 @@
 
 .toolkit-section h2 {
   font-size: 1.8rem;
-  color: #333;
+  color: var(--color-fg-secondary);
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #eee;
@@ -97,7 +100,7 @@
 }
 
 .toolkit-item {
-  background: #fff;
+  background: var(--color-surface);
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -115,12 +118,12 @@
 
 .toolkit-item h3 {
   font-size: 1.2rem;
-  color: #333;
+  color: var(--color-fg-secondary);
   margin-bottom: 0.5rem;
 }
 
 .toolkit-item p {
-  color: #666;
+  color: var(--color-fg-muted);
   margin: 0.3rem 0;
   font-size: 1rem;
   line-height: 1.5;

@@ -1,8 +1,8 @@
 .speaking-container {
   min-height: calc(100vh - 80px);
-  background: linear-gradient(to bottom, #ffffff 0%, #fcfcfc 100%);
+  background: linear-gradient(to bottom, var(--color-surface) 0%, #fcfcfc 100%);
   padding: 1.25rem 1.25rem 3.5rem;
-  color: #333333;
+  color: var(--color-fg-secondary);
 }
 
 .speaking-header {
@@ -14,7 +14,7 @@
 .speaking-header h1 {
   text-align: center;
   font-size: 3rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-top: 20px;
   margin-bottom: 25px;
   font-weight: 300;
@@ -42,7 +42,7 @@
   top: 1.15rem;
   width: 11px;
   height: 11px;
-  background: #ffffff;
+  background: var(--color-surface);
   border: 2px solid #bdbdbd;
   border-radius: 999px;
 }
@@ -88,10 +88,10 @@
   border: 1px solid #d6d6d6;
   border-radius: 999px;
   padding: 0.28rem 0.5rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   font-size: 0.84rem;
   font-weight: 400;
-  background: #ffffff;
+  background: var(--color-surface);
   white-space: nowrap;
 }
 
@@ -111,7 +111,7 @@
   border: 1px solid #e1e1e1;
   border-radius: 999px;
   padding: 0.28rem 0.54rem;
-  background: #ffffff;
+  background: var(--color-surface);
   line-height: 1;
 }
 
@@ -152,7 +152,7 @@
   border-radius: 999px;
   width: 34px;
   height: 34px;
-  background: #ffffff;
+  background: var(--color-surface);
   color: #444444;
   font-size: 1rem;
   display: inline-flex;
@@ -166,8 +166,8 @@
   bottom: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%) translateY(4px);
-  background: #1a1a1a;
-  color: #ffffff;
+  background: var(--color-fg);
+  color: var(--color-surface);
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
@@ -209,9 +209,9 @@
 
 .speaking-action-button {
   text-decoration: none;
-  border: 1px solid #1a1a1a;
-  background: #ffffff;
-  color: #1a1a1a;
+  border: 1px solid var(--color-fg);
+  background: var(--color-surface);
+  color: var(--color-fg);
   border-radius: 8px;
   padding: 0.46rem 0.68rem;
   display: inline-flex;
@@ -228,9 +228,9 @@
 }
 
 .speaking-action-button:hover {
-  border-color: #1a1a1a;
-  background: #1a1a1a;
-  color: #ffffff;
+  border-color: var(--color-fg);
+  background: var(--color-fg);
+  color: var(--color-surface);
   transform: translateY(-1px);
 }
 

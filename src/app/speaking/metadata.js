@@ -1,3 +1,5 @@
+import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+
 export const metadata = {
   title: "Pradumna's Speaking",
   description:
@@ -20,10 +22,10 @@ export const metadata = {
     title: "Pradumna's Speaking",
     description:
       "My speaking engagements - conferences, meetups, and webinars I've been part of.",
-    url: 'https://pradumnasaraf.dev/speaking',
+    url: `${SITE_URL}/speaking`,
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/speaking-og.png',
+        url: `${SITE_URL}/media/speaking-og.png`,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Speaking & Events',
@@ -37,8 +39,8 @@ export const metadata = {
     title: "Pradumna's Speaking",
     description:
       "My speaking engagements - conferences, meetups, and webinars I've been part of.",
-    creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/media/speaking-og.png'],
+    creator: TWITTER_HANDLE,
+    images: [`${SITE_URL}/media/speaking-og.png`],
   },
   robots: {
     index: true,
@@ -52,6 +54,6 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://pradumnasaraf.dev/speaking',
+    canonical: `${SITE_URL}/speaking`,
   },
 };

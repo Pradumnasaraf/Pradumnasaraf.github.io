@@ -1,3 +1,5 @@
+import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+
 export const metadata = {
   title: 'Pradumna Saraf | Schedule a Meeting',
   description:
@@ -8,11 +10,11 @@ export const metadata = {
     title: 'Chat with Pradumna',
     description:
       'Schedule a meeting with me for consulting, speaking, or just to chat.',
-    url: 'https://pradumnasaraf.dev/chat',
+    url: `${SITE_URL}/chat`,
     type: 'website',
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/chat-og.png',
+        url: `${SITE_URL}/media/chat-og.png`,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Schedule a Meeting',
@@ -25,8 +27,8 @@ export const metadata = {
     title: 'Chat with Pradumna',
     description:
       'Schedule a meeting with me for consulting, speaking, or just to chat.',
-    creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/media/chat-og.png'],
+    creator: TWITTER_HANDLE,
+    images: [`${SITE_URL}/media/chat-og.png`],
   },
   robots: {
     index: true,
@@ -40,6 +42,6 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://pradumnasaraf.dev/chat',
+    canonical: `${SITE_URL}/chat`,
   },
 };

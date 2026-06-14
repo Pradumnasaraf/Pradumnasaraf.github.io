@@ -1,3 +1,5 @@
+import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+
 export const metadata = {
   title: 'Pradumna Saraf',
   description:
@@ -11,10 +13,10 @@ export const metadata = {
     title: 'Pradumna Saraf',
     description:
       'Developer Advocate, Docker Captain, and Microsoft MVP. I work with cloud-native tech, DevOps, and open source.',
-    url: 'https://pradumnasaraf.dev',
+    url: SITE_URL,
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/pradumna-saraf-og.png',
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Developer Advocate, Docker Captain & Microsoft MVP',
@@ -28,8 +30,8 @@ export const metadata = {
     title: 'Pradumna Saraf',
     description:
       'Developer Advocate, Docker Captain, and Microsoft MVP. I work with cloud-native tech, DevOps, and open source.',
-    creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/media/pradumna-saraf-og.png'],
+    creator: TWITTER_HANDLE,
+    images: [OG_IMAGE_URL],
   },
   robots: {
     index: true,
@@ -43,6 +45,6 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://pradumnasaraf.dev',
+    canonical: SITE_URL,
   },
 };

@@ -6,6 +6,11 @@
   min-height: 100vh;
   padding-top: 1rem;
   box-sizing: border-box;
+  /* Establish a container-query context for descendant grids (.blog-posts,
+     the explorer, etc.) so future rules can use @container (...) instead
+     of viewport-based @media queries. */
+  container-type: inline-size;
+  container-name: blog-list;
 }
 
 .blog-post-container {
@@ -703,6 +708,9 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  /* Container-query context for .related-posts-grid. */
+  container-type: inline-size;
+  container-name: blog-post-footer;
 }
 
 .blog-post-share {

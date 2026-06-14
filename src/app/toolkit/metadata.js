@@ -1,3 +1,5 @@
+import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+
 export const metadata = {
   title: 'Pradumna Saraf | Toolkit',
   description:
@@ -8,10 +10,10 @@ export const metadata = {
     title: "Pradumna's Toolkit",
     description:
       'Tools, software, and gear I use daily for development and productivity.',
-    url: 'https://pradumnasaraf.dev/toolkit',
+    url: `${SITE_URL}/toolkit`,
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/toolkit-og.png',
+        url: `${SITE_URL}/media/toolkit-og.png`,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Tools & Gear',
@@ -25,8 +27,8 @@ export const metadata = {
     title: "Pradumna's Toolkit",
     description:
       'Tools, software, and gear I use daily for development and productivity.',
-    creator: '@pradumna_saraf',
-    images: ['https://pradumnasaraf.dev/media/toolkit-og.png'],
+    creator: TWITTER_HANDLE,
+    images: [`${SITE_URL}/media/toolkit-og.png`],
   },
   robots: {
     index: true,
@@ -40,6 +42,6 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://pradumnasaraf.dev/toolkit',
+    canonical: `${SITE_URL}/toolkit`,
   },
 };

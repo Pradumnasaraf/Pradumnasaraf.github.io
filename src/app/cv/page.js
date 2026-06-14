@@ -1,5 +1,6 @@
 import './style.css';
 import PageTopbar from '@/components/PageTopbar';
+import { SITE_URL } from '@/lib/constants';
 import {
   FaGithub,
   FaTwitter,
@@ -51,11 +52,7 @@ const CVPage = () => {
               </p>
               <p>
                 <FaGlobe />{' '}
-                <a
-                  href="https://pradumnasaraf.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={SITE_URL} target="_blank" rel="noopener noreferrer">
                   pradumnasaraf.dev
                 </a>
               </p>

@@ -1,3 +1,5 @@
+import { SITE_URL } from '@/lib/constants';
+
 export const metadata = {
   title: 'Connect with Pradumna',
   description:
@@ -6,10 +8,10 @@ export const metadata = {
     title: 'Connect with Pradumna',
     description:
       'Find all my links in one place - website, blog, and social media.',
-    url: 'https://pradumnasaraf.dev/links',
+    url: `${SITE_URL}/links`,
     images: [
       {
-        url: 'https://pradumnasaraf.dev/media/links-og.png',
+        url: `${SITE_URL}/media/links-og.png`,
         width: 1200,
         height: 630,
         alt: 'Connect with Pradumna',
@@ -23,13 +25,13 @@ export const metadata = {
     title: 'Connect with Pradumna',
     description:
       'Find all my links in one place - website, blog, and social media.',
-    images: ['https://pradumnasaraf.dev/media/links-og.png'],
+    images: [`${SITE_URL}/media/links-og.png`],
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: 'https://pradumnasaraf.dev/links',
+    canonical: `${SITE_URL}/links`,
   },
 };

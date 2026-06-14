@@ -41,12 +41,12 @@
     ]
   },
   "dependencies": {
-    "date-fns": "^4.1.0",
+    "date-fns": "^4.4.0",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
-    "next": "^16.2.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "react-icons": "^5.6.0",
     "react-masonry-css": "^1.0.16",
     "rehype": "^13.0.2",
@@ -59,15 +59,16 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
+    "@tailwindcss/postcss": "^4.3.1",
     "eslint": "^9.39.4",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "globals": "^17.4.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
-    "postcss": "^8.5.14",
-    "prettier": "^3.8.1",
-    "tailwindcss": "^3.4.19"
+    "lint-staged": "^17.0.7",
+    "postcss": "^8.5.15",
+    "prettier": "^3.8.4",
+    "tailwindcss": "^4.3.1"
   },
   "overrides": {
     "postcss": "$postcss"
