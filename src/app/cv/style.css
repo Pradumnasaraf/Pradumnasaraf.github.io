@@ -3,8 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   font-family: 'League Spartan', sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  background-color: var(--color-surface);
+  color: var(--color-fg-secondary);
   line-height: 1.6;
 }
 
@@ -17,7 +17,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: var(--color-surface);
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -30,21 +30,21 @@
 }
 
 .back-button svg {
-  color: #333;
+  color: var(--color-fg-secondary);
   transition: color 0.3s ease;
   width: 24px;
   height: 24px;
 }
 
 .back-button:hover svg {
-  color: #000;
+  color: var(--color-fg-strong);
 }
 
 .back-button::after {
   content: 'Home';
   position: absolute;
   left: 50px;
-  background-color: #333;
+  background-color: var(--color-fg-secondary);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -63,7 +63,7 @@
   margin-top: 2rem;
   padding: 1rem;
   border-radius: 12px;
-  background-color: #fff;
+  background-color: var(--color-surface);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -77,7 +77,7 @@ header h1 {
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   letter-spacing: -0.02em;
 }
 
@@ -85,7 +85,7 @@ header h1 {
   max-width: 800px;
   margin: 0 auto 1.5rem;
   font-size: 1.1rem;
-  color: #666;
+  color: var(--color-fg-muted);
   line-height: 1.6;
   padding: 0 1rem;
 }
@@ -133,7 +133,7 @@ header h1 {
 
 .section h2 {
   font-size: 1.5rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #eee;
@@ -166,15 +166,15 @@ header h1 {
 
 .job-header h3 {
   font-size: 1.2rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   font-weight: 500;
 }
 
 .date {
-  color: #666;
+  color: var(--color-fg-muted);
   font-size: 0.9rem;
   padding: 0.25rem 0.75rem;
-  background-color: #fff;
+  background-color: var(--color-surface);
   border-radius: 4px;
 }
 
@@ -192,12 +192,12 @@ li {
 
 .project h3 {
   font-size: 1.2rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-bottom: 0.75rem;
 }
 
 .project p {
-  color: #666;
+  color: var(--color-fg-muted);
   margin-bottom: 1rem;
 }
 
@@ -227,7 +227,7 @@ li {
 }
 
 .skills strong {
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-right: 0.5rem;
 }
 
@@ -242,7 +242,7 @@ li {
 
 .education h3 {
   font-size: 1.2rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   font-weight: 500;
 }
 
@@ -279,7 +279,7 @@ li {
 .achievements strong,
 .leadership strong,
 .talks strong {
-  color: #1a1a1a;
+  color: var(--color-fg);
   font-weight: 500;
 }
 
@@ -293,7 +293,7 @@ li {
 .download-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #1a1a1a;
+  background-color: var(--color-fg);
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -305,7 +305,7 @@ li {
 }
 
 .download-button:hover {
-  background-color: #333;
+  background-color: var(--color-fg-secondary);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -330,7 +330,7 @@ li {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #1a1a1a;
+  background-color: var(--color-fg);
   color: white;
   border-radius: 50%;
   text-decoration: none;
@@ -340,7 +340,7 @@ li {
 }
 
 .download-cv-button:hover {
-  background-color: #333;
+  background-color: var(--color-fg-secondary);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -354,7 +354,7 @@ li {
   content: 'View & Download CV';
   position: absolute;
   right: 50px;
-  background-color: #333;
+  background-color: var(--color-fg-secondary);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;

@@ -1,6 +1,6 @@
 .projects-page {
   min-height: calc(100vh - 80px);
-  background: #ffffff;
+  background: var(--color-surface);
   padding: 1.25rem 1.25rem 3.5rem;
 }
 
@@ -15,7 +15,7 @@
 .projects-header h1 {
   text-align: center;
   font-size: 3rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-top: 20px;
   margin-bottom: 25px;
   font-weight: 300;
@@ -43,13 +43,13 @@
   top: 1.15rem;
   width: 11px;
   height: 11px;
-  background: #ffffff;
+  background: var(--color-surface);
   border: 2px solid #bdbdbd;
   border-radius: 999px;
 }
 
 .project-card {
-  background: #ffffff;
+  background: var(--color-surface);
   border: 1px solid #dddddd;
   border-radius: 14px;
   padding: 1rem;
@@ -92,10 +92,10 @@
   border: 1px solid #d6d6d6;
   border-radius: 999px;
   padding: 0.28rem 0.5rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   font-size: 0.9rem;
   font-weight: 400;
-  background: #ffffff;
+  background: var(--color-surface);
   flex-shrink: 0;
   transition: border-color 0.2s ease;
 }
@@ -132,7 +132,7 @@
   border-radius: 999px;
   width: 42px;
   height: 42px;
-  background: #ffffff;
+  background: var(--color-surface);
   color: #444444;
   font-size: 1.2rem;
   display: inline-flex;
@@ -146,8 +146,8 @@
   bottom: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%) translateY(4px);
-  background: #1a1a1a;
-  color: #ffffff;
+  background: var(--color-fg);
+  color: var(--color-surface);
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
@@ -182,9 +182,9 @@
 
 .open-project-button {
   text-decoration: none;
-  border: 1px solid #1a1a1a;
-  background: #ffffff;
-  color: #1a1a1a;
+  border: 1px solid var(--color-fg);
+  background: var(--color-surface);
+  color: var(--color-fg);
   border-radius: 8px;
   padding: 0.46rem 0.68rem;
   display: inline-flex;
@@ -202,9 +202,9 @@
 }
 
 .open-project-button:hover {
-  border-color: #1a1a1a;
-  background: #1a1a1a;
-  color: #ffffff;
+  border-color: var(--color-fg);
+  background: var(--color-fg);
+  color: var(--color-surface);
   transform: translateY(-1px);
 }
 
@@ -214,9 +214,9 @@
 
 .star-project-button {
   text-decoration: none;
-  border: 1px solid #1a1a1a;
-  background: #ffffff;
-  color: #1a1a1a;
+  border: 1px solid var(--color-fg);
+  background: var(--color-surface);
+  color: var(--color-fg);
   border-radius: 8px;
   padding: 0.46rem 0.62rem;
   display: inline-flex;
@@ -233,9 +233,9 @@
 }
 
 .star-project-button:hover {
-  border-color: #1a1a1a;
-  background: #1a1a1a;
-  color: #ffffff;
+  border-color: var(--color-fg);
+  background: var(--color-fg);
+  color: var(--color-surface);
   transform: translateY(-1px);
 }
 

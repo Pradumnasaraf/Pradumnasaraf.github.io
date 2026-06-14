@@ -1,5 +1,20 @@
 @import 'tailwindcss';
 
+/*
+  Design tokens. Defined via @theme so they're available as CSS variables
+  (var(--color-fg)) and as Tailwind utility classes (text-fg, bg-surface, ...).
+  Values match the high-frequency literals that were previously hardcoded
+  across per-route style.css files -- no visual change, single source of
+  truth for future palette tweaks.
+*/
+@theme {
+  --color-surface: #ffffff;
+  --color-fg: #1a1a1a;
+  --color-fg-secondary: #333333;
+  --color-fg-muted: #666666;
+  --color-fg-strong: #000000;
+}
+
 *,
 *::before,
 *::after {

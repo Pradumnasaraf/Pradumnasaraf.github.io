@@ -2,7 +2,7 @@
 .photography-title {
   text-align: center;
   font-size: 3rem;
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-top: 20px;
   margin-bottom: 25px;
   font-weight: 300;
@@ -118,8 +118,8 @@
 }
 
 .photo-view-button {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--color-surface);
+  color: var(--color-fg-strong);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   font-weight: 500;
@@ -196,7 +196,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: var(--color-surface);
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -210,21 +210,21 @@
 }
 
 .back-button svg {
-  color: #333;
+  color: var(--color-fg-secondary);
   transition: color 0.3s ease;
   width: 24px;
   height: 24px;
 }
 
 .back-button:hover svg {
-  color: #000;
+  color: var(--color-fg-strong);
 }
 
 .back-button::after {
   content: 'Home';
   position: absolute;
   left: 50px;
-  background-color: #333;
+  background-color: var(--color-fg-secondary);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -245,7 +245,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: var(--color-surface);
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -261,19 +261,19 @@
 }
 
 .modal-circle-button svg {
-  color: #333;
+  color: var(--color-fg-secondary);
   transition: color 0.3s ease;
 }
 
 .modal-circle-button:hover svg {
-  color: #000;
+  color: var(--color-fg-strong);
 }
 
 .modal-label {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #333;
+  background-color: var(--color-fg-secondary);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -482,7 +482,7 @@
 }
 
 .popup-close-button svg {
-  color: #333;
+  color: var(--color-fg-secondary);
   width: 16px;
   height: 16px;
 }
@@ -495,7 +495,7 @@
 .popup-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--color-fg);
   margin-bottom: 16px;
   line-height: 1.4;
 }
@@ -508,7 +508,7 @@
 }
 
 .popup-ok-button {
-  background: #1a1a1a;
+  background: var(--color-fg);
   color: white;
   border: none;
   padding: 12px 32px;
@@ -520,7 +520,7 @@
 }
 
 .popup-ok-button:hover {
-  background: #333;
+  background: var(--color-fg-secondary);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

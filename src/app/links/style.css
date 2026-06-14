@@ -4,7 +4,7 @@
   align-items: flex-start;
   justify-content: center;
   padding: 5rem 1rem 2rem;
-  background: #ffffff;
+  background: var(--color-surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -18,9 +18,9 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #ffffff;
-  color: #000000;
-  border: 1px solid #000000;
+  background: var(--color-surface);
+  color: var(--color-fg-strong);
+  border: 1px solid var(--color-fg-strong);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,8 +38,8 @@
   bottom: calc(100% + 0.5rem);
   left: 50%;
   transform: translateX(-50%);
-  background: #000000;
-  color: #ffffff;
+  background: var(--color-fg-strong);
+  color: var(--color-surface);
   padding: 0.375rem 0.75rem;
   border-radius: 4px;
   font-size: 0.75rem;
@@ -85,7 +85,7 @@
 }
 
 .qr-modal-content {
-  background: #ffffff;
+  background: var(--color-surface);
   border-radius: 12px;
   padding: 2rem;
   max-width: 300px;
@@ -108,7 +108,7 @@
   justify-content: center;
   cursor: pointer;
   font-size: 1rem;
-  color: #000000;
+  color: var(--color-fg-strong);
   transition: background-color 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
@@ -121,7 +121,7 @@
   margin: 0 0 1.5rem 0;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #000000;
+  color: var(--color-fg-strong);
 }
 
 .qr-code-image {
@@ -133,7 +133,7 @@
 
 .qr-code-url {
   font-size: 0.875rem;
-  color: #666666;
+  color: var(--color-fg-muted);
   word-break: break-all;
   margin: 0 0 1.5rem 0;
 }
@@ -145,8 +145,8 @@
   gap: 0.5rem;
   width: 100%;
   padding: 0.875rem 1rem;
-  background: #000000;
-  color: #ffffff;
+  background: var(--color-fg-strong);
+  color: var(--color-surface);
   border: none;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -157,11 +157,11 @@
 }
 
 .qr-copy-button:hover {
-  background: #333333;
+  background: var(--color-fg-secondary);
 }
 
 .qr-copy-button:active {
-  background: #1a1a1a;
+  background: var(--color-fg);
 }
 
 .qr-copy-button svg {
@@ -209,7 +209,7 @@
 .profile-name {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #000000;
+  color: var(--color-fg-strong);
   margin: 0 0 0.5rem 0;
   letter-spacing: -0.01em;
   line-height: 1.3;
@@ -217,7 +217,7 @@
 
 .profile-bio {
   font-size: 1.12rem;
-  color: #000000;
+  color: var(--color-fg-strong);
   line-height: 1.5;
   margin: 0 0 1rem 0;
   font-weight: 400;
@@ -249,7 +249,7 @@
   border: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  color: #000000;
+  color: var(--color-fg-strong);
 }
 
 .social-icon-link:hover {
@@ -314,11 +314,11 @@
   align-items: center;
   justify-content: center;
   padding: 0.875rem 1rem;
-  background: #ffffff;
-  border: 1.5px solid #000000;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-fg-strong);
   border-radius: 10px;
   text-decoration: none;
-  color: #000000;
+  color: var(--color-fg-strong);
   font-size: 1.25rem;
   font-weight: 400;
   transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -349,7 +349,7 @@
   text-align: center;
   line-height: 1.4;
   font-size: 1.1rem;
-  color: #000000;
+  color: var(--color-fg-strong);
 }
 
 /* Responsive Design - Mobile First */
@@ -390,7 +390,7 @@
     width: 36px;
     height: 36px;
     font-size: 0.9rem;
-    border: 1px solid #000000;
+    border: 1px solid var(--color-fg-strong);
     margin: 0;
     z-index: 100;
   }
@@ -449,7 +449,7 @@
     font-size: 1.1rem;
     min-height: 52px;
     border-radius: 10px;
-    border: 1.5px solid #000000;
+    border: 1.5px solid var(--color-fg-strong);
   }
 
   .link-title {
@@ -513,7 +513,7 @@
     padding: 0.8rem 0.875rem;
     font-size: 1rem;
     min-height: 50px;
-    border: 1.5px solid #000000;
+    border: 1.5px solid var(--color-fg-strong);
     border-radius: 10px;
   }
 
