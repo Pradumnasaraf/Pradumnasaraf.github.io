@@ -7,6 +7,7 @@ import rehypeStringify from 'rehype-stringify';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
+import rehypeSlug from 'rehype-slug';
 import dockerfile from 'highlight.js/lib/languages/dockerfile';
 import javascript from 'highlight.js/lib/languages/javascript';
 import json from 'highlight.js/lib/languages/json';
@@ -55,6 +56,11 @@ const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
 const sanitizeSchema = {
   ...defaultSchema,
+  // Disable the default user-content- prefix on ids. Blog markdown is
+  // author-owned (not third-party content), so collision-prevention isn't
+  // a concern, and clean ids give nicer anchor URLs that match what
+  // rehype-slug generates.
+  clobberPrefix: '',
   attributes: {
     ...defaultSchema.attributes,
     a: [...(defaultSchema.attributes?.a || []), 'target', 'rel'],
@@ -71,6 +77,14 @@ const sanitizeSchema = {
     ],
     span: [...(defaultSchema.attributes?.span || []), ['className', /^hljs.*/]],
     pre: [...(defaultSchema.attributes?.pre || []), ['className', /^hljs.*/]],
+    // Preserve the id attribute rehype-slug adds to headings so anchors
+    // and "jump to section" rich-results work for crawlers and direct links.
+    h1: [...(defaultSchema.attributes?.h1 || []), 'id'],
+    h2: [...(defaultSchema.attributes?.h2 || []), 'id'],
+    h3: [...(defaultSchema.attributes?.h3 || []), 'id'],
+    h4: [...(defaultSchema.attributes?.h4 || []), 'id'],
+    h5: [...(defaultSchema.attributes?.h5 || []), 'id'],
+    h6: [...(defaultSchema.attributes?.h6 || []), 'id'],
   },
 };
 
@@ -155,6 +169,7 @@ export async function processMarkdown(content) {
   const processedContent = await remark()
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
+    .use(rehypeSlug)
     .use(rehypeHighlight, {
       detect: true,
       ignoreMissing: true,
