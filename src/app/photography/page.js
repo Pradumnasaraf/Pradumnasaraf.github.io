@@ -607,13 +607,13 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [showWelcomePopup, setShowWelcomePopup] = useState(false);
 
-  // Define breakpoint columns
+  // Define breakpoint columns (react-masonry-css uses max-width semantics:
+  // smaller keys override larger ones).
   const breakpointColumnsObj = {
     default: 4,
     1280: 3,
-    1024: 3,
     768: 2,
-    640: 1,
+    480: 1,
   };
 
   const openModal = (src) => {
