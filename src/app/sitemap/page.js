@@ -15,7 +15,6 @@ import {
 } from 'react-icons/fa';
 import { sitemapPages, externalLinks } from './data.js';
 import PageTopbar from '@/components/PageTopbar';
-import './style.css';
 
 const SitemapPage = () => {
   // Icon mapping for pages
