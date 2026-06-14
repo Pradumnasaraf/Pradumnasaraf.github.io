@@ -144,6 +144,38 @@ export default async function BlogPost({ params }) {
       '@type': 'WebPage',
       '@id': postUrl,
     },
+    ...(post.wordCount ? { wordCount: post.wordCount } : {}),
+    ...(Array.isArray(post.tags) && post.tags.length
+      ? { keywords: post.tags.join(', ') }
+      : {}),
+    ...(post.category ? { articleSection: post.category } : {}),
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+  };
+
+  const breadcrumbData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: SITE_URL,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: `${SITE_URL}/blog`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: postUrl,
+      },
+    ],
   };
 
   return (
@@ -158,6 +190,10 @@ export default async function BlogPost({ params }) {
       </div>
       <div className="blog-post-container">
         <ImageLightbox />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
