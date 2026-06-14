@@ -145,6 +145,36 @@ export function getAllPostSlugs() {
 /**
  * Get a single post by slug
  */
+/**
+ * Process a Markdown string through the same pipeline used by getPostBySlug.
+ * Pure function — no filesystem access. Suitable for unit testing the
+ * sanitize/highlight behavior without writing fixture files into the
+ * content directory.
+ */
+export async function processMarkdown(content) {
+  const processedContent = await remark()
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeHighlight, {
+      detect: true,
+      ignoreMissing: true,
+      subset: false,
+      languages: allLanguages,
+      aliases: {
+        dockerfile: ['docker', 'Dockerfile', 'DOCKERFILE'],
+        javascript: ['js', 'node', 'nodejs'],
+        typescript: ['ts'],
+        python: ['py'],
+        shell: ['sh', 'bash', 'zsh'],
+        yaml: ['yml'],
+      },
+    })
+    .use(rehypeSanitize, sanitizeSchema)
+    .use(rehypeStringify)
+    .process(content);
+  return processedContent.toString();
+}
+
 export async function getPostBySlug(slug) {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const mdxPath = path.join(postsDirectory, `${slug}.mdx`);
@@ -174,27 +204,7 @@ export async function getPostBySlug(slug) {
     : 0;
   const readingTime = Math.max(1, Math.ceil(wordCount / wordsPerMinute));
 
-  const processedContent = await remark()
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rehypeHighlight, {
-      detect: true,
-      ignoreMissing: true,
-      subset: false,
-      languages: allLanguages,
-      aliases: {
-        dockerfile: ['docker', 'Dockerfile', 'DOCKERFILE'],
-        javascript: ['js', 'node', 'nodejs'],
-        typescript: ['ts'],
-        python: ['py'],
-        shell: ['sh', 'bash', 'zsh'],
-        yaml: ['yml'],
-      },
-    })
-    .use(rehypeSanitize, sanitizeSchema)
-    .use(rehypeStringify)
-    .process(content);
-  const contentHtml = processedContent.toString();
+  const contentHtml = await processMarkdown(content);
 
   return {
     slug,
