@@ -14,8 +14,8 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   overflow-x: hidden;
   overflow-y: visible;
   position: relative;
@@ -299,11 +299,11 @@
   opacity: 1;
 }
 
-/* Wider breathing room at desktop sizes */
+/* Wider breathing room at desktop sizes (matches v3's p-8 + mx-16 = 6rem) */
 @media (min-width: 768px) {
   .photography-page-container {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
