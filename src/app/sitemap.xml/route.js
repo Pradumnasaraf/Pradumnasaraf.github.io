@@ -1,6 +1,6 @@
 import { SITE_URL } from '../../lib/constants.js';
 import { sitemapPages } from '../sitemap/data.js';
-import { getAllPosts } from '../../lib/blog.js';
+import { getAllPosts, getAllTags } from '../../lib/blog.js';
 
 export async function GET() {
   const baseUrl = SITE_URL;
@@ -45,11 +45,26 @@ export async function GET() {
     })
     .join('\n');
 
+  // Generate sitemap entries for blog tag landing pages. Each surfaces a
+  // topical archive (e.g. /blog/tag/docker) and is a real ranking surface
+  // for tag-named queries.
+  const tagPages = getAllTags()
+    .map(
+      ({ tag }) => `  <url>
+    <loc>${baseUrl}/blog/tag/${tag}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>`
+    )
+    .join('\n');
+
   // Generate clean XML sitemap
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${staticPages}
 ${blogPages}
+${tagPages}
 </urlset>`;
 
   return new Response(sitemap, {
