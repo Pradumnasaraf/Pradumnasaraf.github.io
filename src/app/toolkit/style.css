@@ -5,6 +5,9 @@
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Container-query context for .toolkit-grid. */
+  container-type: inline-size;
+  container-name: toolkit;
 }
 
 .back-button {
