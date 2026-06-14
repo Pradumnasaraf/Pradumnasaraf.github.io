@@ -152,7 +152,7 @@ export default async function TagPage({ params }) {
           </p>
         </header>
 
-        <BlogPostExplorer posts={posts} />
+        <BlogPostExplorer posts={posts} hideTopicChips />
       </div>
     </>
   );

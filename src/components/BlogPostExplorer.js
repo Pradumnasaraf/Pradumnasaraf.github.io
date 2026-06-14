@@ -45,7 +45,7 @@ function formatPostDate(date) {
   return format(parsed, 'MMMM dd, yyyy');
 }
 
-export default function BlogPostExplorer({ posts }) {
+export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
   const [activeTag, setActiveTag] = useState('all');
   const [sortBy, setSortBy] = useState('latest');
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_POSTS);
@@ -121,7 +121,7 @@ export default function BlogPostExplorer({ posts }) {
         </div>
       </div>
 
-      {topTags.length > 0 && (
+      {!hideTopicChips && topTags.length > 0 && (
         <div
           className="blog-explorer-tags"
           role="group"
@@ -155,7 +155,7 @@ export default function BlogPostExplorer({ posts }) {
         </div>
       )}
 
-      {hasActiveFilters && (
+      {!hideTopicChips && hasActiveFilters && (
         <button
           type="button"
           className="blog-explorer-clear"
