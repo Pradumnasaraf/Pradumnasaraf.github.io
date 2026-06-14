@@ -218,17 +218,13 @@ export default function BlogPostExplorer({ posts }) {
             {featuredPost.tags.length > 0 && (
               <div className="blog-post-tags" aria-label="Post topics">
                 {featuredPost.tags.slice(0, 3).map((tag) => (
-                  <button
+                  <Link
                     key={`${featuredPost.slug}-${tag}`}
-                    type="button"
+                    href={`/blog/tag/${tag}`}
                     className="blog-post-tag-button"
-                    onClick={() => {
-                      setActiveTag(tag);
-                      setVisibleCount(INITIAL_VISIBLE_POSTS);
-                    }}
                   >
                     {tag}
-                  </button>
+                  </Link>
                 ))}
               </div>
             )}
@@ -288,17 +284,13 @@ export default function BlogPostExplorer({ posts }) {
                   {post.tags.length > 0 && (
                     <div className="blog-post-tags" aria-label="Post topics">
                       {post.tags.slice(0, 3).map((tag) => (
-                        <button
+                        <Link
                           key={`${post.slug}-${tag}`}
-                          type="button"
+                          href={`/blog/tag/${tag}`}
                           className="blog-post-tag-button"
-                          onClick={() => {
-                            setActiveTag(tag);
-                            setVisibleCount(INITIAL_VISIBLE_POSTS);
-                          }}
                         >
                           {tag}
-                        </button>
+                        </Link>
                       ))}
                     </div>
                   )}

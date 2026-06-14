@@ -245,3 +245,25 @@ export function getPostsByTag(tag) {
   const allPosts = getAllPosts();
   return allPosts.filter((post) => post.tags && post.tags.includes(tag));
 }
+
+/**
+ * Get every unique tag that appears on at least one published post.
+ * Result is sorted by post count desc, then alphabetically.
+ */
+export function getAllTags() {
+  const allPosts = getAllPosts();
+  const counts = new Map();
+  for (const post of allPosts) {
+    if (!Array.isArray(post.tags)) continue;
+    for (const tag of post.tags) {
+      if (!tag) continue;
+      counts.set(tag, (counts.get(tag) || 0) + 1);
+    }
+  }
+  return Array.from(counts.entries())
+    .sort((a, b) => {
+      if (b[1] !== a[1]) return b[1] - a[1];
+      return a[0].localeCompare(b[0]);
+    })
+    .map(([tag, count]) => ({ tag, count }));
+}
