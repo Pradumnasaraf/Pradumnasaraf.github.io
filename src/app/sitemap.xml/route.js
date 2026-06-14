@@ -15,12 +15,14 @@ export async function GET() {
     return post.canonical.startsWith(baseUrl);
   });
 
-  // Generate sitemap entries for static pages
+  // Generate sitemap entries for static pages. Pages can pin an explicit
+  // lastmod via sitemap/data.js; otherwise we report the current build date
+  // (the sitemap regenerates on every deploy).
   const staticPages = sitemapPages
     .map(
       (page) => `  <url>
     <loc>${baseUrl}${page.url}</loc>
-    <lastmod>${page.url === '' ? currentDate : '2025-01-27'}</lastmod>
+    <lastmod>${page.lastmod || currentDate}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`
