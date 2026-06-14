@@ -36,6 +36,9 @@
 
 /* Photography Page Container - Ensure scrolling works */
 .photography-page-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   overflow-x: hidden;
   overflow-y: visible;
   position: relative;
@@ -108,21 +111,60 @@
 /* Image Styles */
 .grayscale-image {
   filter: grayscale(100%);
+  transform: scale(1);
   transition:
-    filter 0.5s ease,
-    transform 0.3s ease;
+    filter 500ms ease,
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 300ms ease;
 }
 
 /* Update hover effect to show both color and button */
 .group:hover .grayscale-image {
   filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
-.group:hover .bg-opacity-0 {
+.photo-hover-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background-color 300ms ease;
+}
+
+.group:hover .photo-hover-overlay {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.group:hover .opacity-0 {
+.photo-view-button {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(1rem);
+  pointer-events: auto;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease,
+    background-color 200ms ease;
+}
+
+.photo-view-button:hover {
+  background-color: #f3f4f6;
+}
+
+.group:hover .photo-view-button {
   opacity: 1;
   transform: translateY(0);
 }

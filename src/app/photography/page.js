@@ -386,7 +386,7 @@ const ImageItem = ({ src, alt, onClick }) => {
             unoptimized
             loading="lazy"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className={`w-full h-auto cursor-pointer transition-all duration-500 transform group-hover:scale-105 grayscale-image rounded-lg ${
+            className={`w-full h-auto cursor-pointer grayscale-image rounded-lg ${
               isLoading ? 'opacity-0' : 'opacity-100'
             }`}
             onClick={onClick}
@@ -407,11 +407,8 @@ const ImageItem = ({ src, alt, onClick }) => {
           />
         )}
       </div>
-      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center rounded-lg pointer-events-none">
-        <button
-          onClick={onClick}
-          className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white text-black px-4 py-2 rounded-full font-medium shadow-lg hover:bg-gray-100 pointer-events-auto"
-        >
+      <div className="photo-hover-overlay">
+        <button onClick={onClick} className="photo-view-button">
           View Photo
         </button>
       </div>
@@ -436,7 +433,7 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
   if (!isOpen) return null;
 
   return createPortal(
-    <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
       {/* Close Button */}
       <div
         style={{
@@ -561,7 +558,7 @@ const WelcomePopup = ({ isOpen, onClose }) => {
 
   return createPortal(
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 popup-backdrop"
+      className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 popup-backdrop"
       style={{ paddingLeft: '16px', paddingRight: '16px' }}
     >
       <div className="welcome-popup">
@@ -689,7 +686,7 @@ export default function Home() {
     <>
       <PageTopbar />
 
-      <div className="min-h-screen p-4 md:p-8 mx-4 md:mx-16 photography-page-container">
+      <div className="min-h-screen p-4 md:p-8 photography-page-container">
         <h1 className="photography-title">Photography</h1>
 
         <div className="container mx-auto">
