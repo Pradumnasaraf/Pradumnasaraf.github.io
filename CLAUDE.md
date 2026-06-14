@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-Personal site at `pradumnasaraf.dev` — Next.js 16 (App Router) + Tailwind CSS, JavaScript (no TypeScript). Blog posts are file-based Markdown in `src/content/blog/`. Node `>=24` is required.
+Personal site at `pradumnasaraf.dev` — Next.js 16 (App Router) + Tailwind CSS v4, JavaScript (no TypeScript). Blog posts are file-based Markdown in `src/content/blog/`. Node `>=24` is required.
 
-Path alias: `@/*` resolves to `./src/*` (see `jsconfig.json`).
+Path alias: `@/*` resolves to `./src/*` (see `jsconfig.json`). **Caveat:** the alias is resolved by Next.js at compile time only. Files imported by `node --test` (anything reachable from `tests/**`, which includes `src/proxy.js`, every `src/app/**/route.js`, and modules under `src/lib/`) must use relative imports. Files used exclusively by Next.js (pages, layouts, components, metadata) can use `@/`.
 
 ## Commands
 
@@ -33,9 +33,40 @@ CI (`.github/workflows/quality-build.yml`) runs lint → validate:images → val
 
 **Blog pipeline (`src/lib/blog.js`).** Reads `src/content/blog/*.md(x)`, parses frontmatter with `gray-matter`, sorts by `date` desc, filters out `draft: true`. Markdown → HTML uses `remark` → `remark-rehype` (with `allowDangerousHtml`) → `rehype-raw` → `rehype-highlight` (explicit language registry — only languages listed in `allLanguages` will highlight; add new ones there) → `rehype-sanitize` (custom schema permits `hljs-*` class names on `code`/`span`/`pre`, and `target`/`rel` on `a`, plus `loading`/`decoding`/`width`/`height` on `img`) → `rehype-stringify`. Reading time = `ceil(words/200)` minutes, computed off the raw markdown with code/links/markdown punctuation stripped.
 
+The HTML transformation is exposed separately as `processMarkdown(content)` — a pure function that takes a markdown string and returns the sanitized/highlighted HTML. Use it for testing the pipeline without writing fixture files into `src/content/blog/` (test temp files there would be picked up by `validate:tags`/`validate:images`).
+
+**Site constants (`src/lib/constants.js`).** Exports `SITE_URL`, `BLOG_SUBDOMAIN_HOST`, `OG_IMAGE_URL`, `TWITTER_HANDLE`, `GTM_ID`. Used by every metadata file, route handler, the proxy, the layout (GTM tags, JSON-LD), and the blog post page. **Never hardcode any of these** — a rebrand or analytics swap should be a single-file edit.
+
+**Tailwind CSS v4.** Imported once globally via `@import 'tailwindcss'` in `src/app/globals.css` (which is loaded from `layout.js`). There is no `tailwind.config.mjs`; design tokens live in a `@theme` block at the top of `globals.css`:
+
+- `--color-surface` (`#ffffff`)
+- `--color-fg` (`#1a1a1a`)
+- `--color-fg-secondary` (`#333333`)
+- `--color-fg-muted` (`#666666`)
+- `--color-fg-strong` (`#000000`)
+
+v4 makes each token available both as a CSS variable (`var(--color-fg)`) and as a Tailwind utility (`text-fg`, `bg-surface`, etc.). Per-route `style.css` files use the variables; JSX can use either. `src/app/blog/style.css` keeps its own (dark-mode-aware) palette and is not part of this token system.
+
+**Container-query foundation.** Three grid wrappers declare `container-type: inline-size` and a `container-name`: `.blog-container` (parent of `.blog-posts`), `.blog-post-footer-content` (parent of `.related-posts-grid`), `.toolkit-container` (parent of `.toolkit-grid`). The existing `@media` rules are deliberately viewport-driven and were left intact; new responsive rules on these grids can use `@container (name <op> ...)` queries.
+
 **Redirects.** Persistent route redirects (`/monitoring`, `/newsletter`, `/getcv`, `/services*`, `/camera`) live in `next.config.mjs` `redirects()`. Host-based subdomain redirects live in `src/proxy.js`. Pick the right layer when adding a new one.
 
-**Releases.** `.github/workflows/releases.yml` runs `conventional-changelog-action` on every push to `main`, bumps `package.json` + `package-lock.json`, and cuts a GitHub release. Commit messages **must** follow Conventional Commits (`feat:`, `fix:`, `chore:`, `refactor:`, `docs:`, …) — otherwise the version bump and changelog will be wrong.
+**Releases.** `.github/workflows/releases.yml` runs `conventional-changelog-action` on every push to `main`, bumps `package.json` + `package-lock.json`, and cuts a GitHub release. Commit messages **must** follow Conventional Commits (`feat:`, `fix:`, `chore:`, `refactor:`, `docs:`, …). Major version bumps require a `!` after the type (e.g. `chore!:`) or a `BREAKING CHANGE:` footer somewhere in the commit range — otherwise even a Tailwind major upgrade will only bump as minor/patch.
+
+## Page-local data sources
+
+These pages are data-driven. Edit the data file, not the component:
+
+- `src/app/projects/projects.json` — projects grid. Each entry has `stars` (cached count). **Stars go stale.** When touching projects (adding, removing, or just before a release), refresh from GitHub:
+  ```js
+  // For each entry, fetch via `gh api repos/<owner>/<repo> --jq .stargazers_count`
+  // and overwrite `stars`. The owner/repo can be parsed from `repoUrl`.
+  ```
+  See the script in this CLAUDE.md history if you need a starting point.
+- `src/app/timeline/timeline.json` — career timeline.
+- `src/app/speaking/speaking.json` — speaking entries. Talks with a `recording` URL automatically appear in `sitemap-videos.xml` (the route handler parses YouTube IDs from any common URL shape and derives a publication date from the `date` string).
+- `src/app/photography/images.json` — gallery image list (Google Drive thumbnail URLs).
+- `src/app/sitemap/data.js` — static-page list driving both `/sitemap` (UI) and `sitemap.xml` (XML). A `lastmod` field per entry is optional; falls back to the current build date.
 
 ## Blog content
 
@@ -55,11 +86,14 @@ draft: false
 
 The slug is the filename. Images go under `public/blog-images/<slug>/`.
 
+**Canonical rule.** `rss.xml` and `sitemap.xml` include a post only if `canonical` is unset or starts with `SITE_URL`. A cross-posted article whose canonical points elsewhere (dev.to, hashnode, etc.) is intentionally hidden from the on-site feeds.
+
 **Tag taxonomy is closed.** `scripts/validate-blog-tags.js` defines an `ALLOWED_TAGS` set; tags must be lowercase kebab-case and must exist in that set. Reuse existing tags — do not expand `ALLOWED_TAGS` for a new post unless the user explicitly asks. The validator also rejects duplicates and empty values.
 
 ## Conventions
 
 - ESLint flat config (`eslint.config.mjs`): React + react-hooks recommended rules, `no-unused-vars` ignores `_`-prefixed identifiers, `react/prop-types` off, `react-hooks/set-state-in-effect` is a warning (and CI runs `--max-warnings 0`, so a warning fails the build).
 - Prettier governs formatting; `.prettierignore` and `.prettierrc` are committed. lint-staged runs `eslint --fix` + `prettier --write` on staged `.js/.jsx/.ts/.tsx` and `prettier --write` on `.css/.scss/.html`.
-- Import internal modules via `@/...` (e.g. `@/components/GTMPageView`) rather than long relative paths.
+- Import internal modules via `@/...` for files compiled by Next.js. Use relative paths for anything reachable from `tests/**` (see the alias caveat in "Project overview").
 - The codebase is plain `.js` with ES modules (`"type": "module"`). Don't introduce TypeScript without asking.
+- `eslint-plugin-react`'s peer-deps cap ESLint at `^9.7`, so ESLint v10 is intentionally not upgraded. Revisit when the plugin ships v10 support.

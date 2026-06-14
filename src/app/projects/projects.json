@@ -15,7 +15,7 @@
   {
     "id": "aviationstack-mcp",
     "name": "aviationstack-mcp",
-    "stars": 18,
+    "stars": 23,
     "repoUrl": "https://github.com/Pradumnasaraf/aviationstack-mcp",
     "url": "https://pypi.org/project/aviationstack-mcp",
     "problem": "An MCP server using the AviationStack API to fetch real-time flight data including airline flights, airport schedules, future flights and aircraft types.",
@@ -152,7 +152,7 @@
   {
     "id": "devops",
     "name": "DevOps",
-    "stars": 3168,
+    "stars": 3217,
     "repoUrl": "https://github.com/Pradumnasaraf/DevOps",
     "url": "https://devops.pradumnasaraf.dev",
     "problem": "I created this repository to keep my learning, notes, and code in one place for various tools in DevOps. Now, it's helping thousands of learners, practitioners, and professionals every day in their DevOps journey.",
@@ -236,7 +236,7 @@
   {
     "id": "open-source-with-pradumna",
     "name": "open-source-with-pradumna",
-    "stars": 834,
+    "stars": 833,
     "repoUrl": "https://github.com/Pradumnasaraf/open-source-with-pradumna",
     "url": "https://os.pradumnasaraf.dev",
     "problem": "Open Source guide - Contains resources and materials to learn and get yourself started with Open Source, Git, and GitHub.",

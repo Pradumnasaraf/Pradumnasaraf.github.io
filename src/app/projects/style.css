@@ -95,6 +95,7 @@
   color: var(--color-fg);
   font-size: 0.9rem;
   font-weight: 400;
+  line-height: 1;
   background: var(--color-surface);
   flex-shrink: 0;
   transition: border-color 0.2s ease;
@@ -105,7 +106,18 @@
 }
 
 .project-stars svg {
+  width: 0.85em;
+  height: 0.85em;
+  flex-shrink: 0;
   color: #111111;
+}
+
+/* The digit glyphs in League Spartan sit visually higher in their em box
+   than the geometric center of the FaStar icon, so push the number down
+   one device pixel to make the visual centers line up inside the pill. */
+.project-stars > span {
+  display: inline-block;
+  transform: translateY(1px);
 }
 
 .project-problem {
