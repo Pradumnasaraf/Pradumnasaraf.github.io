@@ -12,7 +12,7 @@ import {
   FiX,
 } from 'react-icons/fi';
 import { FaLinkedinIn } from 'react-icons/fa';
-import { SiBluesky, SiThreads, SiX } from 'react-icons/si';
+import { SiBluesky, SiSessionize, SiThreads, SiX } from 'react-icons/si';
 import './style.css';
 
 export default function LinksPage() {
@@ -84,6 +84,11 @@ export default function LinksPage() {
       id: 'youtube',
       url: 'https://youtube.com/@pradumnasaraf',
       icon: FiYoutube,
+    },
+    {
+      id: 'sessionize',
+      url: 'https://sessionize.com/pradumnasaraf/',
+      icon: SiSessionize,
     },
     {
       id: 'email',
@@ -200,7 +205,7 @@ export default function LinksPage() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' || social.id === 'twitter' || social.id === 'linkedin' ? 'social-icon-filled' : 'social-icon-stroke'}`}
+                    className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' || social.id === 'twitter' || social.id === 'linkedin' || social.id === 'sessionize' ? 'social-icon-filled' : 'social-icon-stroke'}`}
                     aria-label={social.id}
                   >
                     <IconComponent className="social-icon" />
