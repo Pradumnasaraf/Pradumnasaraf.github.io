@@ -3,7 +3,6 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './KonamiGame.module.css';
 
 const GRID_SIZE = 30;
-const CELL_SIZE = 20;
 const INITIAL_SNAKE = [
   { x: 15, y: 15 },
   { x: 14, y: 15 },
@@ -13,6 +12,9 @@ const INITIAL_SPEED = 150;
 const MIN_SPEED = 50;
 const SPEED_DECREASE = 5;
 const SCORE_INCREMENT = 10;
+const MAX_QUEUED_DIRECTIONS = 2;
+const CELL_PCT = 100 / GRID_SIZE;
+const OPPOSITES = { UP: 'DOWN', DOWN: 'UP', LEFT: 'RIGHT', RIGHT: 'LEFT' };
 
 const getHighScore = () => {
   if (typeof window !== 'undefined') {
@@ -30,7 +32,6 @@ const saveHighScore = (score) => {
 const KonamiGame = ({ onClose }) => {
   const [snake, setSnake] = useState(INITIAL_SNAKE);
   const [food, setFood] = useState({ x: 5, y: 5 });
-  const [direction, setDirection] = useState('RIGHT');
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(getHighScore());
   const [gameOver, setGameOver] = useState(false);
@@ -38,19 +39,43 @@ const KonamiGame = ({ onClose }) => {
   const [gameStarted, setGameStarted] = useState(false);
   const [speed, setSpeed] = useState(INITIAL_SPEED);
   const gameLoopRef = useRef(null);
-  const lastDirectionRef = useRef('RIGHT');
+  const directionRef = useRef('RIGHT');
+  const directionQueueRef = useRef([]);
   const snakeRef = useRef(INITIAL_SNAKE);
+  const touchStartRef = useRef({ x: 0, y: 0 });
 
-  // Keep snake ref in sync
   useEffect(() => {
     snakeRef.current = snake;
   }, [snake]);
 
+  // Lock background scroll while the modal is open
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, []);
+
+  // Buffer direction changes; only one is consumed per tick so a fast
+  // double-press (e.g. while moving RIGHT: DOWN then LEFT) can't skip
+  // the intermediate move and walk the snake straight into itself.
+  const enqueueDirection = useCallback((newDir) => {
+    const queue = directionQueueRef.current;
+    const last =
+      queue.length > 0 ? queue[queue.length - 1] : directionRef.current;
+    if (
+      newDir !== last &&
+      OPPOSITES[newDir] !== last &&
+      queue.length < MAX_QUEUED_DIRECTIONS
+    ) {
+      queue.push(newDir);
+    }
+  }, []);
+
   const generateFood = useCallback(() => {
     const maxAttempts = 100;
-    let attempts = 0;
-
-    while (attempts < maxAttempts) {
+    for (let attempts = 0; attempts < maxAttempts; attempts++) {
       const newFood = {
         x: Math.floor(Math.random() * GRID_SIZE),
         y: Math.floor(Math.random() * GRID_SIZE),
@@ -58,12 +83,8 @@ const KonamiGame = ({ onClose }) => {
       const isOnSnake = snakeRef.current.some(
         (segment) => segment.x === newFood.x && segment.y === newFood.y
       );
-      if (!isOnSnake) {
-        return newFood;
-      }
-      attempts++;
+      if (!isOnSnake) return newFood;
     }
-    // Fallback: return a safe position if all attempts fail
     return { x: 0, y: 0 };
   }, []);
 
@@ -71,8 +92,12 @@ const KonamiGame = ({ onClose }) => {
     if (gameOver || isPaused) return;
 
     setSnake((prevSnake) => {
+      if (directionQueueRef.current.length > 0) {
+        directionRef.current = directionQueueRef.current.shift();
+      }
+
       const head = { ...prevSnake[0] };
-      switch (direction) {
+      switch (directionRef.current) {
         case 'UP':
           head.y -= 1;
           break;
@@ -87,7 +112,6 @@ const KonamiGame = ({ onClose }) => {
           break;
       }
 
-      // Check collision with walls
       if (
         head.x < 0 ||
         head.x >= GRID_SIZE ||
@@ -98,7 +122,6 @@ const KonamiGame = ({ onClose }) => {
         return prevSnake;
       }
 
-      // Check collision with self
       if (
         prevSnake.some(
           (segment) => segment.x === head.x && segment.y === head.y
@@ -114,18 +137,13 @@ const KonamiGame = ({ onClose }) => {
       if (ateFood) {
         const newScore = score + SCORE_INCREMENT;
         setScore(newScore);
-
-        // Update high score
         if (newScore > highScore) {
           setHighScore(newScore);
           saveHighScore(newScore);
         }
-
-        // Increase speed (decrease interval) with each food eaten
         setSpeed((prevSpeed) =>
           Math.max(MIN_SPEED, prevSpeed - SPEED_DECREASE)
         );
-
         setFood(generateFood());
         newSnake.push(...prevSnake);
       } else {
@@ -134,7 +152,7 @@ const KonamiGame = ({ onClose }) => {
 
       return newSnake;
     });
-  }, [direction, food, gameOver, isPaused, score, highScore, generateFood]);
+  }, [food, gameOver, isPaused, score, highScore, generateFood]);
 
   const togglePause = useCallback(() => {
     setIsPaused((prev) => !prev);
@@ -145,53 +163,79 @@ const KonamiGame = ({ onClose }) => {
     setFood(generateFood());
   }, [generateFood]);
 
+  const restartGame = useCallback(() => {
+    setSnake(INITIAL_SNAKE);
+    directionRef.current = 'RIGHT';
+    directionQueueRef.current = [];
+    setScore(0);
+    setSpeed(INITIAL_SPEED);
+    setGameOver(false);
+    setIsPaused(false);
+    setGameStarted(true);
+    setFood(generateFood());
+  }, [generateFood]);
+
   useEffect(() => {
+    const KEY_TO_DIR = {
+      ArrowUp: 'UP',
+      ArrowDown: 'DOWN',
+      ArrowLeft: 'LEFT',
+      ArrowRight: 'RIGHT',
+      w: 'UP',
+      W: 'UP',
+      s: 'DOWN',
+      S: 'DOWN',
+      a: 'LEFT',
+      A: 'LEFT',
+      d: 'RIGHT',
+      D: 'RIGHT',
+    };
     const handleKeyDown = (e) => {
-      if (e.key === ' ' || e.key === 'Space') {
+      if (e.key === 'Escape') {
         e.preventDefault();
-        if (gameStarted && !gameOver) {
-          togglePause();
-        } else if (!gameStarted) {
-          startGame();
-        }
+        onClose();
         return;
       }
-
-      if (gameOver || isPaused || !gameStarted) return;
-
-      const newDirection = {
-        ArrowUp: 'UP',
-        ArrowDown: 'DOWN',
-        ArrowLeft: 'LEFT',
-        ArrowRight: 'RIGHT',
-        w: 'UP',
-        W: 'UP',
-        s: 'DOWN',
-        S: 'DOWN',
-        a: 'LEFT',
-        A: 'LEFT',
-        d: 'RIGHT',
-        D: 'RIGHT',
-      }[e.key];
-
-      if (
-        newDirection &&
-        !(newDirection === 'UP' && lastDirectionRef.current === 'DOWN') &&
-        !(newDirection === 'DOWN' && lastDirectionRef.current === 'UP') &&
-        !(newDirection === 'LEFT' && lastDirectionRef.current === 'RIGHT') &&
-        !(newDirection === 'RIGHT' && lastDirectionRef.current === 'LEFT')
-      ) {
-        setDirection(newDirection);
-        lastDirectionRef.current = newDirection;
+      if (e.key === ' ' || e.key === 'Space') {
+        e.preventDefault();
+        if (gameOver) restartGame();
+        else if (gameStarted) togglePause();
+        else startGame();
+        return;
       }
+      if (e.key === 'Enter' && gameOver) {
+        e.preventDefault();
+        restartGame();
+        return;
+      }
+      if (gameOver || isPaused || !gameStarted) return;
+      const dir = KEY_TO_DIR[e.key];
+      if (dir) enqueueDirection(dir);
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [gameOver, isPaused, gameStarted, togglePause, startGame]);
+  }, [
+    gameOver,
+    isPaused,
+    gameStarted,
+    togglePause,
+    startGame,
+    restartGame,
+    onClose,
+    enqueueDirection,
+  ]);
 
-  // Touch controls for mobile
-  const touchStartRef = useRef({ x: 0, y: 0 });
+  // Pause when the tab becomes hidden mid-game
+  useEffect(() => {
+    const handleVisChange = () => {
+      if (document.hidden && gameStarted && !gameOver && !isPaused) {
+        setIsPaused(true);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisChange);
+    return () =>
+      document.removeEventListener('visibilitychange', handleVisChange);
+  }, [gameStarted, gameOver, isPaused]);
 
   const handleTouchStart = (e) => {
     const touch = e.touches[0];
@@ -200,34 +244,17 @@ const KonamiGame = ({ onClose }) => {
 
   const handleTouchEnd = (e) => {
     if (!gameStarted || gameOver || isPaused) return;
-
     const touch = e.changedTouches[0];
     const deltaX = touch.clientX - touchStartRef.current.x;
     const deltaY = touch.clientY - touchStartRef.current.y;
     const minSwipeDistance = 30;
 
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      // Horizontal swipe
       if (Math.abs(deltaX) > minSwipeDistance) {
-        if (deltaX > 0 && lastDirectionRef.current !== 'LEFT') {
-          setDirection('RIGHT');
-          lastDirectionRef.current = 'RIGHT';
-        } else if (deltaX < 0 && lastDirectionRef.current !== 'RIGHT') {
-          setDirection('LEFT');
-          lastDirectionRef.current = 'LEFT';
-        }
+        enqueueDirection(deltaX > 0 ? 'RIGHT' : 'LEFT');
       }
-    } else {
-      // Vertical swipe
-      if (Math.abs(deltaY) > minSwipeDistance) {
-        if (deltaY > 0 && lastDirectionRef.current !== 'UP') {
-          setDirection('DOWN');
-          lastDirectionRef.current = 'DOWN';
-        } else if (deltaY < 0 && lastDirectionRef.current !== 'DOWN') {
-          setDirection('UP');
-          lastDirectionRef.current = 'UP';
-        }
-      }
+    } else if (Math.abs(deltaY) > minSwipeDistance) {
+      enqueueDirection(deltaY > 0 ? 'DOWN' : 'UP');
     }
   };
 
@@ -239,42 +266,12 @@ const KonamiGame = ({ onClose }) => {
       }
       return;
     }
-
-    // Clear existing interval
-    if (gameLoopRef.current) {
-      clearInterval(gameLoopRef.current);
-    }
-
-    // Set new interval with current speed
+    if (gameLoopRef.current) clearInterval(gameLoopRef.current);
     gameLoopRef.current = setInterval(moveSnake, speed);
-
     return () => {
-      if (gameLoopRef.current) {
-        clearInterval(gameLoopRef.current);
-      }
+      if (gameLoopRef.current) clearInterval(gameLoopRef.current);
     };
   }, [speed, gameOver, isPaused, gameStarted, moveSnake]);
-
-  const restartGame = () => {
-    setSnake(INITIAL_SNAKE);
-    setDirection('RIGHT');
-    lastDirectionRef.current = 'RIGHT';
-    setScore(0);
-    setSpeed(INITIAL_SPEED);
-    setGameOver(false);
-    setIsPaused(false);
-    setGameStarted(true);
-    setFood(generateFood());
-  };
-
-  // Save high score when game ends
-  useEffect(() => {
-    if (gameOver && score > highScore) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setHighScore(score);
-      saveHighScore(score);
-    }
-  }, [gameOver, score, highScore]);
 
   return (
     <div className={styles.gameContainer}>
@@ -308,8 +305,8 @@ const KonamiGame = ({ onClose }) => {
               </>
             ) : (
               <>
-                Use arrow keys or <kbd>WASD</kbd> to move • Press{' '}
-                <kbd>Space</kbd> to pause
+                Arrows / <kbd>WASD</kbd> to move • <kbd>Space</kbd> to pause •{' '}
+                <kbd>Esc</kbd> to exit
               </>
             )}
           </p>
@@ -329,20 +326,20 @@ const KonamiGame = ({ onClose }) => {
               index === 0 ? styles.snakeHead : ''
             }`}
             style={{
-              left: segment.x * CELL_SIZE,
-              top: segment.y * CELL_SIZE,
-              width: CELL_SIZE,
-              height: CELL_SIZE,
+              left: `${segment.x * CELL_PCT}%`,
+              top: `${segment.y * CELL_PCT}%`,
+              width: `${CELL_PCT}%`,
+              height: `${CELL_PCT}%`,
             }}
           />
         ))}
         <div
           className={styles.food}
           style={{
-            left: food.x * CELL_SIZE,
-            top: food.y * CELL_SIZE,
-            width: CELL_SIZE,
-            height: CELL_SIZE,
+            left: `${food.x * CELL_PCT}%`,
+            top: `${food.y * CELL_PCT}%`,
+            width: `${CELL_PCT}%`,
+            height: `${CELL_PCT}%`,
           }}
         >
           🍎
@@ -387,6 +384,10 @@ const KonamiGame = ({ onClose }) => {
                 Exit
               </button>
             </div>
+            <p className={styles.gameOverHint}>
+              <kbd>Space</kbd> / <kbd>Enter</kbd> to play again • <kbd>Esc</kbd>{' '}
+              to exit
+            </p>
           </div>
         </div>
       )}

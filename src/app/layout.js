@@ -17,7 +17,6 @@ const leagueSpartan = League_Spartan({
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 };
 
 // Export the metadata to ensure Next.js uses it
@@ -32,7 +31,7 @@ export default function RootLayout({ children }) {
     >
       <head>
         {/* Google Tag Manager initialization */}
-        <Script id="gtm-init" strategy="beforeInteractive">
+        <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || []; window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
         </Script>
         {/*

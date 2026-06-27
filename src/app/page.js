@@ -12,8 +12,8 @@ export default function Home() {
   const [isMobileMoreOpen, setIsMobileMoreOpen] = useState(false);
   const [showGame, setShowGame] = useState(false);
   const extraMenuRef = useRef(null);
-  // eslint-disable-next-line no-unused-vars
-  const [keySequence, setKeySequence] = useState([]);
+  const keySequenceRef = useRef([]);
+  const avatarTapsRef = useRef([]);
 
   const toggleMenu = () => {
     const nextState = !isMenuOpen;
@@ -34,6 +34,19 @@ export default function Home() {
     setIsMobileMoreOpen(false);
   };
 
+  const handleAvatarTap = () => {
+    const TAP_COUNT_NEEDED = 5;
+    const TAP_WINDOW_MS = 2000;
+    const now = Date.now();
+    const recent = avatarTapsRef.current.filter((t) => now - t < TAP_WINDOW_MS);
+    recent.push(now);
+    avatarTapsRef.current = recent;
+    if (recent.length >= TAP_COUNT_NEEDED) {
+      avatarTapsRef.current = [];
+      setShowGame(true);
+    }
+  };
+
   useEffect(() => {
     const konamiCode = [
       'ArrowUp',
@@ -48,20 +61,15 @@ export default function Home() {
       'a',
     ];
     const handleKeyDown = (e) => {
-      // Only add to sequence if it's one of the Konami code keys
-      if (konamiCode.includes(e.key)) {
-        setKeySequence((prev) => {
-          const newSequence = [...prev, e.key].slice(-10);
-          // Check if the sequence matches exactly
-          if (
-            newSequence.length === konamiCode.length &&
-            newSequence.every((key, index) => key === konamiCode[index])
-          ) {
-            setShowGame(true);
-            return [];
-          }
-          return newSequence;
-        });
+      if (!konamiCode.includes(e.key)) return;
+      const next = [...keySequenceRef.current, e.key].slice(-konamiCode.length);
+      keySequenceRef.current = next;
+      if (
+        next.length === konamiCode.length &&
+        next.every((key, index) => key === konamiCode[index])
+      ) {
+        keySequenceRef.current = [];
+        setShowGame(true);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -85,11 +93,17 @@ export default function Home() {
   return (
     <>
       <div className="nav">
-        <div className="hamburger" onClick={toggleMenu}>
+        <button
+          type="button"
+          className="hamburger"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+        >
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
         <div className="nav-links-group">
           <div className={`pages ${isMenuOpen ? 'active' : ''}`}>
             <span className="page-item">
@@ -103,7 +117,11 @@ export default function Home() {
               </Link>
             </span>
             <span className="page-item">
-              <Link href="https://rebasemedia.com" onClick={closeAllMenus}>
+              <Link
+                href="https://rebasemedia.com"
+                rel="noopener noreferrer"
+                onClick={closeAllMenus}
+              >
                 Services
               </Link>
             </span>
@@ -162,6 +180,7 @@ export default function Home() {
             >
               <Link
                 href="https://pradumnasaraf.substack.com"
+                rel="noopener noreferrer"
                 onClick={closeAllMenus}
               >
                 Newsletter
@@ -199,6 +218,7 @@ export default function Home() {
               </Link>
               <Link
                 href="https://pradumnasaraf.substack.com"
+                rel="noopener noreferrer"
                 onClick={closeAllMenus}
               >
                 Newsletter
@@ -214,18 +234,21 @@ export default function Home() {
             {/* Using React Icons */}
             <Link
               href="https://github.com/Pradumnasaraf"
+              rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on GitHub"
             >
               <FaGithub aria-hidden="true" focusable="false" />
             </Link>
             <Link
               href="https://twitter.com/pradumna_saraf"
+              rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on X"
             >
               <FaTwitter aria-hidden="true" focusable="false" />
             </Link>
             <Link
               href="https://www.linkedin.com/in/pradumnasaraf/"
+              rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on LinkedIn"
             >
               <FaLinkedin aria-hidden="true" focusable="false" />
@@ -243,8 +266,13 @@ export default function Home() {
             <a
               className="connect"
               href="https://github.com/Pradumnasaraf"
+              rel="noopener noreferrer"
             >{`Let's Collaborate`}</a>
-            <a className="connect" href="https://rebasemedia.com">
+            <a
+              className="connect"
+              href="https://rebasemedia.com"
+              rel="noopener noreferrer"
+            >
               Services
             </a>
           </div>
@@ -256,6 +284,7 @@ export default function Home() {
             width={250}
             height={250}
             priority
+            onClick={handleAvatarTap}
           />
         </div>
       </div>
