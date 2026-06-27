@@ -178,6 +178,13 @@ export default function Home() {
             <span
               className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
             >
+              <Link href="/travel" onClick={closeAllMenus}>
+                Travel
+              </Link>
+            </span>
+            <span
+              className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
+            >
               <Link
                 href="https://pradumnasaraf.substack.com"
                 rel="noopener noreferrer"
@@ -215,6 +222,9 @@ export default function Home() {
             >
               <Link href="/speaking" onClick={closeAllMenus}>
                 Speaking
+              </Link>
+              <Link href="/travel" onClick={closeAllMenus}>
+                Travel
               </Link>
               <Link
                 href="https://pradumnasaraf.substack.com"

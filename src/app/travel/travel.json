@@ -1,0 +1,123 @@
+[
+  {
+    "id": "istanbul",
+    "place": "Istanbul",
+    "country": "Turkey",
+    "flag": "🇹🇷",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 41.0082,
+    "lng": 28.9784
+  },
+  {
+    "id": "hong-kong",
+    "place": "Hong Kong",
+    "country": "",
+    "flag": "🇭🇰",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 22.3193,
+    "lng": 114.1694
+  },
+  {
+    "id": "macau",
+    "place": "Macau",
+    "country": "",
+    "flag": "🇲🇴",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 22.1987,
+    "lng": 113.5439
+  },
+  {
+    "id": "mumbai",
+    "place": "Mumbai",
+    "country": "India",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 19.076,
+    "lng": 72.8777
+  },
+  {
+    "id": "hyderabad",
+    "place": "Hyderabad",
+    "country": "India",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 17.385,
+    "lng": 78.4867
+  },
+  {
+    "id": "kolkata",
+    "place": "Kolkata",
+    "country": "India",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 22.5726,
+    "lng": 88.3639
+  },
+  {
+    "id": "agra",
+    "place": "Agra",
+    "country": "India",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 27.1767,
+    "lng": 78.0081
+  },
+  {
+    "id": "new-delhi",
+    "place": "New Delhi",
+    "country": "India",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 28.6139,
+    "lng": 77.209
+  },
+  {
+    "id": "goa",
+    "place": "Goa",
+    "country": "India",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 15.2993,
+    "lng": 74.124
+  },
+  {
+    "id": "fatehpur-sikri",
+    "place": "Fatehpur Sikri",
+    "country": "India",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 27.0937,
+    "lng": 77.6611
+  },
+  {
+    "id": "sikar",
+    "place": "Sikar",
+    "country": "India",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 27.6094,
+    "lng": 75.1399
+  }
+]

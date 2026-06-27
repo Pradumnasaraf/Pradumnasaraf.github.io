@@ -73,6 +73,16 @@ export const sitemapPages = [
     priorityLabel: 'Medium',
   },
   {
+    url: '/travel',
+    href: '/travel',
+    title: 'Travel',
+    priority: '0.6',
+    changefreq: 'monthly',
+    description: 'Places I have travelled to, shown on an interactive globe',
+    category: 'Creative',
+    priorityLabel: 'Medium',
+  },
+  {
     url: '/chat',
     href: '/chat',
     title: 'Schedule Meeting',

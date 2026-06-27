@@ -41,6 +41,7 @@
     ]
   },
   "dependencies": {
+    "cobe": "^2.0.1",
     "date-fns": "^4.4.0",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
