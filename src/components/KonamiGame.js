@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import styles from './KonamiGame.module.css';
 
 const GRID_SIZE = 30;
@@ -38,6 +39,13 @@ const KonamiGame = ({ onClose }) => {
   const [isPaused, setIsPaused] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
   const [speed, setSpeed] = useState(INITIAL_SPEED);
+  // Coarse pointer = touch device: show tap/swipe hints instead of keyboard
+  // keys. Computed once on mount (this component only renders client-side).
+  const [isTouch] = useState(
+    () =>
+      typeof window !== 'undefined' &&
+      window.matchMedia('(pointer: coarse)').matches
+  );
   const gameLoopRef = useRef(null);
   const directionRef = useRef('RIGHT');
   const directionQueueRef = useRef([]);
@@ -243,17 +251,25 @@ const KonamiGame = ({ onClose }) => {
   };
 
   const handleTouchEnd = (e) => {
-    if (!gameStarted || gameOver || isPaused) return;
+    if (!gameStarted || gameOver) return;
     const touch = e.changedTouches[0];
     const deltaX = touch.clientX - touchStartRef.current.x;
     const deltaY = touch.clientY - touchStartRef.current.y;
+    const absX = Math.abs(deltaX);
+    const absY = Math.abs(deltaY);
     const minSwipeDistance = 30;
 
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      if (Math.abs(deltaX) > minSwipeDistance) {
-        enqueueDirection(deltaX > 0 ? 'RIGHT' : 'LEFT');
-      }
-    } else if (Math.abs(deltaY) > minSwipeDistance) {
+    // A tap (no real movement) toggles pause/resume — the touch equivalent of
+    // pressing Space, including resuming from the pause overlay.
+    if (absX < minSwipeDistance && absY < minSwipeDistance) {
+      togglePause();
+      return;
+    }
+    // Swipes only steer while actively playing.
+    if (isPaused) return;
+    if (absX > absY) {
+      enqueueDirection(deltaX > 0 ? 'RIGHT' : 'LEFT');
+    } else {
       enqueueDirection(deltaY > 0 ? 'DOWN' : 'UP');
     }
   };
@@ -273,7 +289,9 @@ const KonamiGame = ({ onClose }) => {
     };
   }, [speed, gameOver, isPaused, gameStarted, moveSnake]);
 
-  return (
+  if (typeof document === 'undefined') return null;
+
+  return createPortal(
     <div className={styles.gameContainer}>
       <button className={styles.exitButton} onClick={onClose}>
         ✕ Exit
@@ -293,16 +311,30 @@ const KonamiGame = ({ onClose }) => {
         </div>
         {!gameStarted && (
           <p className={styles.instruction}>
-            Press <kbd>Space</kbd> or tap to start!
+            {isTouch ? (
+              <>Tap Start to play!</>
+            ) : (
+              <>
+                Press <kbd>Space</kbd> or tap to start!
+              </>
+            )}
           </p>
         )}
         {gameStarted && !gameOver && (
           <p className={styles.instruction}>
             {isPaused ? (
               <>
-                <span className={styles.paused}>⏸ Paused</span> - Press{' '}
-                <kbd>Space</kbd> to resume
+                <span className={styles.paused}>⏸ Paused</span> -{' '}
+                {isTouch ? (
+                  <>tap to resume</>
+                ) : (
+                  <>
+                    Press <kbd>Space</kbd> to resume
+                  </>
+                )}
               </>
+            ) : isTouch ? (
+              <>Swipe to move • tap to pause</>
             ) : (
               <>
                 Arrows / <kbd>WASD</kbd> to move • <kbd>Space</kbd> to pause •{' '}
@@ -354,7 +386,9 @@ const KonamiGame = ({ onClose }) => {
         {isPaused && gameStarted && (
           <div className={styles.pauseOverlay}>
             <div className={styles.pauseText}>⏸ Paused</div>
-            <div className={styles.pauseHint}>Press Space to resume</div>
+            <div className={styles.pauseHint}>
+              {isTouch ? 'Tap to resume' : 'Press Space to resume'}
+            </div>
           </div>
         )}
       </div>
@@ -384,14 +418,17 @@ const KonamiGame = ({ onClose }) => {
                 Exit
               </button>
             </div>
-            <p className={styles.gameOverHint}>
-              <kbd>Space</kbd> / <kbd>Enter</kbd> to play again • <kbd>Esc</kbd>{' '}
-              to exit
-            </p>
+            {!isTouch && (
+              <p className={styles.gameOverHint}>
+                <kbd>Space</kbd> / <kbd>Enter</kbd> to play again •{' '}
+                <kbd>Esc</kbd> to exit
+              </p>
+            )}
           </div>
         </div>
       )}
-    </div>
+    </div>,
+    document.body
   );
 };
 
