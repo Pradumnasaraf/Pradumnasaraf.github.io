@@ -10,8 +10,10 @@ export default function GTMPageView() {
   useEffect(() => {
     // Track page views for client-side navigation in Next.js App Router
     if (typeof window !== 'undefined' && window.dataLayer) {
-      const pagePath = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
-      
+      const pagePath =
+        pathname +
+        (searchParams?.toString() ? `?${searchParams.toString()}` : '');
+
       window.dataLayer.push({
         event: 'page_view',
         page_path: pagePath,
