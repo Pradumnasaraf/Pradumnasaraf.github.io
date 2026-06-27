@@ -66,6 +66,7 @@ These pages are data-driven. Edit the data file, not the component:
 - `src/app/timeline/timeline.json` — career timeline.
 - `src/app/speaking/speaking.json` — speaking entries. Talks with a `recording` URL automatically appear in `sitemap-videos.xml` (the route handler parses YouTube IDs from any common URL shape and derives a publication date from the `date` string).
 - `src/app/photography/images.json` — gallery image list (Google Drive thumbnail URLs).
+- `src/app/travel/travel.json` — places plotted on the interactive 3D globe (`cobe`) plus the SSR fallback list. Each entry: `id`, `place`, `country`, `flag`, `date`, `note`, `photo`, `lat`, `lng`. Conventions: an entry only becomes a globe marker if both `lat` and `lng` are numbers (others still show in the screen-reader list); `place` may carry the region inline (e.g. `"Mumbai, Maharashtra"`); leave `country` empty when the `flag` already conveys it (the callout reads `place` then `, country` only if set). The globe (`Globe.js`) auto-rotates with delta-time easing, pauses on hover/touch with a grace period, runs an ambient "spotlight" that highlights a random front-facing place, and latches the callout on tap for touch devices — animation/timing knobs are the constants at the top of `Globe.js` and its effect.
 - `src/app/sitemap/data.js` — static-page list driving both `/sitemap` (UI) and `sitemap.xml` (XML). A `lastmod` field per entry is optional; falls back to the current build date.
 
 ## Blog content

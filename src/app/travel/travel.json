@@ -34,8 +34,8 @@
   },
   {
     "id": "mumbai",
-    "place": "Mumbai",
-    "country": "India",
+    "place": "Mumbai, Maharashtra",
+    "country": "",
     "flag": "🇮🇳",
     "date": "",
     "note": "",
@@ -45,8 +45,8 @@
   },
   {
     "id": "hyderabad",
-    "place": "Hyderabad",
-    "country": "India",
+    "place": "Hyderabad, Telangana",
+    "country": "",
     "flag": "🇮🇳",
     "date": "",
     "note": "",
@@ -56,8 +56,8 @@
   },
   {
     "id": "kolkata",
-    "place": "Kolkata",
-    "country": "India",
+    "place": "Kolkata, West Bengal",
+    "country": "",
     "flag": "🇮🇳",
     "date": "",
     "note": "",
@@ -67,8 +67,8 @@
   },
   {
     "id": "agra",
-    "place": "Agra",
-    "country": "India",
+    "place": "Agra, Uttar Pradesh",
+    "country": "",
     "flag": "🇮🇳",
     "date": "",
     "note": "",
@@ -79,7 +79,7 @@
   {
     "id": "new-delhi",
     "place": "New Delhi",
-    "country": "India",
+    "country": "",
     "flag": "🇮🇳",
     "date": "",
     "note": "",
@@ -90,7 +90,7 @@
   {
     "id": "goa",
     "place": "Goa",
-    "country": "India",
+    "country": "",
     "flag": "🇮🇳",
     "date": "",
     "note": "",
@@ -100,8 +100,8 @@
   },
   {
     "id": "fatehpur-sikri",
-    "place": "Fatehpur Sikri",
-    "country": "India",
+    "place": "Fatehpur Sikri, Uttar Pradesh",
+    "country": "",
     "flag": "🇮🇳",
     "date": "",
     "note": "",
@@ -111,13 +111,57 @@
   },
   {
     "id": "sikar",
-    "place": "Sikar",
-    "country": "India",
+    "place": "Sikar, Rajasthan",
+    "country": "",
     "flag": "🇮🇳",
     "date": "",
     "note": "",
     "photo": "",
     "lat": 27.6094,
     "lng": 75.1399
+  },
+  {
+    "id": "bengaluru",
+    "place": "Bengaluru, Karnataka",
+    "country": "",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 12.9716,
+    "lng": 77.5946
+  },
+  {
+    "id": "patna",
+    "place": "Patna, Bihar",
+    "country": "",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 25.5941,
+    "lng": 85.1376
+  },
+  {
+    "id": "gaya",
+    "place": "Gaya, Bihar",
+    "country": "",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 24.7914,
+    "lng": 84.9994
+  },
+  {
+    "id": "rajgir",
+    "place": "Rajgir, Bihar",
+    "country": "",
+    "flag": "🇮🇳",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 25.0269,
+    "lng": 85.4209
   }
 ]
