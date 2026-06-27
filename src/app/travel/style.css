@@ -193,7 +193,8 @@
   box-shadow:
     0 14px 34px rgba(0, 0, 0, 0.12),
     0 2px 6px rgba(0, 0, 0, 0.06);
-  max-width: 240px;
+  /* Single line; the card shrink-wraps to its label (no max-width cap, since
+     there's room) so the full place name always shows without clipping. */
   white-space: nowrap;
   pointer-events: none;
   opacity: 0;
