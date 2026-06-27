@@ -16,6 +16,7 @@ const TravelPage = () => {
         <div className="travel-globe-section">
           <TravelGlobe />
           <p className="travel-caption">
+            <span className="travel-caption-dot" aria-hidden="true" />
             Places I&apos;ve travelled. Drag to spin the globe.
           </p>
         </div>

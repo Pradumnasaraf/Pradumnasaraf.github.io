@@ -6,6 +6,15 @@ import travelData from './travel.json';
 
 const DEG = Math.PI / 180;
 
+// Frame-rate-independent exponential smoothing: nudges `current` toward `target`
+// by an amount set by the elapsed time `dt` and a time constant `tau` (seconds),
+// so animations settle at the same real-world rate regardless of refresh rate.
+const approach = (current, target, tau, dt) =>
+  current + (target - current) * (1 - Math.exp(-dt / tau));
+
+// How long a tapped marker's callout stays latched on touch devices (no hover).
+const STICKY_CALLOUT_MS = 3000;
+
 const places = travelData.filter(
   (p) => typeof p.lat === 'number' && typeof p.lng === 'number'
 );
@@ -46,10 +55,12 @@ const Globe = () => {
   const cardRef = useRef(null);
   const cardFlagRef = useRef(null);
   const cardLabelRef = useRef(null);
+  const highlightRef = useRef(null);
   const pointerInteracting = useRef(null);
   const pointerInteractionMovement = useRef(0);
   const hoveredId = useRef(null);
   const globeHovered = useRef(false);
+  const stickyTimer = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -65,6 +76,11 @@ const Globe = () => {
     const measureWidth = () =>
       wrap.clientWidth || canvas.offsetWidth || canvas.clientWidth || 0;
     width = measureWidth();
+
+    // Auto-rotate speed in radians/second. Applied via delta-time below so the
+    // globe spins at the same real-world rate on every device, regardless of
+    // refresh rate or dropped frames. (~0.24 ≈ the old 0.004/frame at 60fps.)
+    const ROTATION_PER_SEC = 0.24;
 
     // cobe writes a live-positioned <div> per marker (id-keyed). Cache those so
     // we can mirror their position onto our own hit areas.
@@ -146,26 +162,60 @@ const Globe = () => {
         3000 + Math.random() * 1500 // switch every ~3–4.5s
       );
     };
-    reselect();
-    scheduleReselect();
+    // Don't run the auto-spotlight for reduced-motion users — the globe is
+    // static for them, so popping callouts would be unwanted motion. They can
+    // still hover a marker to see its callout.
+    if (!reduceMotion) {
+      reselect();
+      scheduleReselect();
+    }
 
     let raf;
-    const render = () => {
-      if (
-        !reduceMotion &&
-        pointerInteracting.current === null &&
-        !globeHovered.current
-      ) {
-        phi += 0.004; // auto-rotate unless hovering the globe, dragging, or reduced motion
-      }
+    let lastTime = performance.now();
+    // Once the user touches/hovers the globe, keep auto-rotate AND the
+    // auto-spotlight paused until this long after they let go. The grace period
+    // makes a tap or swipe visibly stop the globe (instead of it spinning
+    // straight through the gesture) and stops a random callout from popping the
+    // instant a finger lifts. We push it forward every frame while interacting.
+    const RESUME_DELAY_MS = 1500;
+    let resumeAt = 0;
+    // Eased auto-rotate speed (rad/s). We ease this toward the target each frame
+    // so the globe glides to a stop when touched and gently spins back up after
+    // the grace period, instead of snapping between full speed and zero.
+    let spinSpeed = 0;
+    const SPIN_TAU = 0.25; // ease time constant (seconds)
+
+    // Callout/highlight crossfade state. `displayedId` is what's currently on
+    // screen; when the desired marker changes we fade the old one out, swap, and
+    // fade the new one in — a smooth hand-off instead of a hard jump between dots.
+    let displayedId = null;
+    let calloutOpacity = 0;
+    const FADE_TAU = 0.16; // ease time constant (seconds)
+    const render = (now) => {
+      // Time-based step: seconds since the last frame, clamped so a backgrounded
+      // tab (or a long stall) can't jump the globe forward on return.
+      const dt = Math.min((now - lastTime) / 1000, 0.1);
+      lastTime = now;
+
+      // Engaging the globe = mouse over it, or an active touch/drag.
+      const interacting =
+        globeHovered.current || pointerInteracting.current !== null;
+      if (interacting) resumeAt = now + RESUME_DELAY_MS;
+      const settled = now >= resumeAt; // true once the grace period has elapsed
+
+      // Ease the spin speed toward its target (full when settled, 0 otherwise).
+      const targetSpeed = !reduceMotion && settled ? ROTATION_PER_SEC : 0;
+      spinSpeed = approach(spinSpeed, targetSpeed, SPIN_TAU, dt);
+      phi += spinSpeed * dt;
       // movement is stored in pixels; convert to radians here (drag damping).
       currentPhi = phi + pointerInteractionMovement.current / 200;
       const f = currentPhi % doublePi;
       // width/height are fixed at build time (resize rebuilds), so only phi changes.
       globe.update({ phi: f });
 
-      // Hover wins over the spotlight; otherwise show the spotlight pick.
-      const activeId = hoveredId.current || spotlightId;
+      // A deliberate marker hover always wins; the ambient spotlight only shows
+      // once settled, so it never fires mid-interaction or right after release.
+      const activeId = hoveredId.current || (settled ? spotlightId : null);
 
       // Keep our (transparent) hit areas over each front-facing surface marker.
       for (const m of markers) {
@@ -181,25 +231,49 @@ const Globe = () => {
         }
       }
 
-      // Card floats just above the active pin and follows it; it shows only
-      // while that pin is front-facing.
-      const card = cardRef.current;
-      const activeMarker = activeId ? markerById[activeId] : null;
-      const activeAnchor = activeId ? getAnchor(activeId) : null;
-      const showCallout =
-        activeMarker && activeAnchor && depthOf(activeMarker, f) >= 0;
+      // What we'd like on screen this frame: the active marker, but only while
+      // it's front-facing and has a live anchor.
+      const desiredMarker = activeId ? markerById[activeId] : null;
+      const desiredId =
+        desiredMarker && getAnchor(activeId) && depthOf(desiredMarker, f) >= 0
+          ? activeId
+          : null;
 
-      if (showCallout) {
-        if (cardLabelRef.current.textContent !== nameOf[activeId]) {
-          cardLabelRef.current.textContent = nameOf[activeId];
-          cardFlagRef.current.textContent = flagOf[activeId];
+      // Crossfade: ease toward the current target's opacity; when the target
+      // changes, fade out first, then swap `displayedId` at the bottom of the
+      // fade so the new dot/card fades in cleanly rather than teleporting.
+      if (desiredId === displayedId) {
+        calloutOpacity = approach(
+          calloutOpacity,
+          displayedId ? 1 : 0,
+          FADE_TAU,
+          dt
+        );
+      } else {
+        calloutOpacity = approach(calloutOpacity, 0, FADE_TAU, dt);
+        if (calloutOpacity < 0.05) {
+          displayedId = desiredId;
+          calloutOpacity = 0;
+        }
+      }
+
+      const card = cardRef.current;
+      const dot = highlightRef.current;
+      card.style.opacity = `${calloutOpacity}`;
+      dot.style.opacity = `${calloutOpacity}`;
+
+      const anchor = displayedId ? getAnchor(displayedId) : null;
+      if (displayedId && anchor) {
+        if (cardLabelRef.current.textContent !== nameOf[displayedId]) {
+          cardLabelRef.current.textContent = nameOf[displayedId];
+          cardFlagRef.current.textContent = flagOf[displayedId];
         }
         // Position above the pin, but clamp inside the globe box so the card
         // never runs off the screen (and flip below if there's no room above).
         const wrapW = wrap.clientWidth;
         const wrapH = wrap.clientHeight;
-        const pinX = (parseFloat(activeAnchor.style.left) / 100) * wrapW;
-        const pinY = (parseFloat(activeAnchor.style.top) / 100) * wrapH;
+        const pinX = (parseFloat(anchor.style.left) / 100) * wrapW;
+        const pinY = (parseFloat(anchor.style.top) / 100) * wrapH;
         const cw = card.offsetWidth;
         const ch = card.offsetHeight;
         const pad = 8;
@@ -210,14 +284,14 @@ const Globe = () => {
         card.style.left = `${cx}px`;
         card.style.top = `${top}px`;
         card.style.transform = 'translateX(-50%)';
-        card.style.opacity = '1';
-      } else {
-        card.style.opacity = '0';
+        // Highlight dot sits right on the pin to mark the active place.
+        dot.style.left = `${pinX}px`;
+        dot.style.top = `${pinY}px`;
       }
 
       raf = requestAnimationFrame(render);
     };
-    render();
+    raf = requestAnimationFrame(render);
 
     requestAnimationFrame(() => {
       canvas.style.opacity = '1';
@@ -226,6 +300,7 @@ const Globe = () => {
     return () => {
       cancelAnimationFrame(raf);
       clearTimeout(reselectTimer);
+      clearTimeout(stickyTimer.current);
       resizeObserver.disconnect();
       window.removeEventListener('resize', onResize);
       if (globe) globe.destroy();
@@ -275,16 +350,33 @@ const Globe = () => {
             ref={(el) => {
               markerRefs.current[p.id] = el;
             }}
-            onPointerEnter={() => {
-              hoveredId.current = p.id;
+            onPointerEnter={(e) => {
+              // Mouse hover shows the callout while the cursor is over the pin.
+              if (e.pointerType === 'mouse') hoveredId.current = p.id;
             }}
-            onPointerLeave={() => {
-              hoveredId.current = null;
+            onPointerLeave={(e) => {
+              if (e.pointerType === 'mouse') hoveredId.current = null;
+            }}
+            onPointerDown={(e) => {
+              // Touch/pen have no hover, so a tap latches the callout for a few
+              // seconds (then it fades), instead of vanishing on finger release.
+              if (e.pointerType === 'mouse') return;
+              hoveredId.current = p.id;
+              clearTimeout(stickyTimer.current);
+              stickyTimer.current = setTimeout(() => {
+                if (hoveredId.current === p.id) hoveredId.current = null;
+              }, STICKY_CALLOUT_MS);
             }}
             aria-label={nameOf[p.id]}
           />
         ))}
       </div>
+
+      <div
+        className="travel-marker-highlight"
+        ref={highlightRef}
+        aria-hidden="true"
+      />
 
       <div className="travel-callout" ref={cardRef} aria-hidden="true">
         <span ref={cardFlagRef} className="travel-callout-flag" />

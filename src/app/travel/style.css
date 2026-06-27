@@ -42,7 +42,29 @@
   margin: 0.75rem 0 0;
   color: var(--color-fg-muted);
   font-size: 0.95rem;
-  text-align: center;
+  /* Flex centering keeps the legend dot aligned with the text. line-height: 1
+     tightens the line box to the text so the dot centers on the glyphs rather
+     than on a tall inherited line box. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  line-height: 1;
+}
+
+/* Inline legend dot: matches the globe's blue markers so it's clear the caption
+   refers to the blue places dotted across the map. */
+.travel-caption-dot {
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #00a8ff;
+  box-shadow: 0 0 6px rgba(0, 168, 255, 0.6);
+  /* League Spartan rides low in its line box, so even with a tight line box the
+     dot looks a hair high; nudge it down to optically center it. Use px (not
+     em) — at this font size an em step is sub-pixel and rounds to no change. */
+  transform: translateY(0.01px);
 }
 
 /* Visually hidden, but available to screen readers and crawlers. */
@@ -65,8 +87,10 @@
   margin: 0 auto;
   aspect-ratio: 1 / 1;
   position: relative;
-  /* Let vertical page scroll stay smooth on touch; horizontal drag rotates. */
-  touch-action: pan-y;
+  /* The globe owns its touch surface: a touch pauses auto-rotate and drags
+     rotate it, instead of the browser claiming the gesture to scroll the page
+     (which left the globe spinning and unresponsive on phones). */
+  touch-action: none;
 }
 
 .travel-globe {
@@ -77,7 +101,7 @@
   contain: layout paint size;
   opacity: 0;
   transition: opacity 0.6s ease;
-  touch-action: pan-y;
+  touch-action: none;
 }
 
 .travel-globe-loading {
@@ -109,6 +133,49 @@
   opacity: 0;
 }
 
+/* Highlighted active place: a standout red dot (vs the neutral-blue pins) that
+   sits on the pin under the callout. Opacity is driven in JS for the crossfade;
+   the pulse is a CSS ring animation that doesn't touch transform. */
+.travel-marker-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #ff3b30;
+  box-shadow: 0 0 10px rgba(255, 59, 48, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  animation: travel-marker-pulse 1.8s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travel-marker-highlight {
+    animation: none;
+  }
+}
+
+@keyframes travel-marker-pulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(255, 59, 48, 0.5),
+      0 0 10px rgba(255, 59, 48, 0.7);
+  }
+  70% {
+    box-shadow:
+      0 0 0 11px rgba(255, 59, 48, 0),
+      0 0 10px rgba(255, 59, 48, 0.7);
+  }
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(255, 59, 48, 0),
+      0 0 10px rgba(255, 59, 48, 0.7);
+  }
+}
+
 /* Card floats just above the active pin and follows it (left/top set in JS) */
 .travel-callout {
   position: absolute;
@@ -121,7 +188,7 @@
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
   background: var(--color-surface);
-  border: 1.5px solid #00a8ff;
+  border: 1.5px solid #ff3b30;
   border-radius: 12px;
   box-shadow:
     0 14px 34px rgba(0, 0, 0, 0.12),
