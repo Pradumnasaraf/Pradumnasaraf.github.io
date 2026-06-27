@@ -141,6 +141,11 @@ export default function Home() {
               </Link>
             </span>
             <span className="page-item">
+              <Link href="/travel" onClick={closeAllMenus}>
+                Travel
+              </Link>
+            </span>
+            <span className="page-item">
               <Link href="/contact" onClick={closeAllMenus}>
                 Contact
               </Link>
@@ -173,13 +178,6 @@ export default function Home() {
             >
               <Link href="/speaking" onClick={closeAllMenus}>
                 Speaking
-              </Link>
-            </span>
-            <span
-              className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
-            >
-              <Link href="/travel" onClick={closeAllMenus}>
-                Travel
               </Link>
             </span>
             <span
@@ -222,9 +220,6 @@ export default function Home() {
             >
               <Link href="/speaking" onClick={closeAllMenus}>
                 Speaking
-              </Link>
-              <Link href="/travel" onClick={closeAllMenus}>
-                Travel
               </Link>
               <Link
                 href="https://pradumnasaraf.substack.com"

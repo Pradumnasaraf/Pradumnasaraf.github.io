@@ -317,6 +317,19 @@ main {
   display: flex;
 }
 
+/* Narrow-desktop / landscape-tablet band (above the 800px mobile breakpoint):
+   tighten the inline nav so the full set of primary links — including Travel —
+   fits comfortably without crowding or overflow. */
+@media (min-width: 801px) and (max-width: 1024px) {
+  .pages {
+    gap: 1.25rem;
+  }
+
+  .pages a {
+    font-size: 1rem;
+  }
+}
+
 .extra-menu-dropdown a {
   text-decoration: none;
   color: #333333;
