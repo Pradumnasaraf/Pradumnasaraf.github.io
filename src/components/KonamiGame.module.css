@@ -413,8 +413,9 @@
   }
 
   .gameHeader {
-    top: 10px;
-    left: 10px;
+    top: max(14px, env(safe-area-inset-top));
+    left: max(16px, env(safe-area-inset-left));
+    right: max(64px, env(safe-area-inset-right));
     font-size: 14px;
   }
 
@@ -446,8 +447,8 @@
   }
 
   .exitButton {
-    top: 10px;
-    right: 10px;
+    top: max(10px, env(safe-area-inset-top));
+    right: max(10px, env(safe-area-inset-right));
     padding: 8px 14px;
     font-size: 12px;
   }
