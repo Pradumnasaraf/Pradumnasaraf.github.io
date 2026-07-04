@@ -137,7 +137,7 @@ On the dashboard, you will see all the details related to your deployment, like 
 
 ![The Vercel project dashboard showing the deployment domain, source, and a Ready status](/blog-images/dockerfile-on-vercel/vercel-dashboard.png)
 
-Click and visit the Domain to verify if the app is working or not
+Click and visit the Domain to verify if the app is working or not. In my case, it is [dockerfile-on-vercel.vercel.app](https://dockerfile-on-vercel.vercel.app). You can see the greeting message. You can also check the health endpoint by visiting [dockerfile-on-vercel.vercel.app/health](https://dockerfile-on-vercel.vercel.app/health).
 
 ![The deployed app in a browser showing "Hello from a Go app running as a container on Vercel!"](/blog-images/dockerfile-on-vercel/app-running.png)
 
