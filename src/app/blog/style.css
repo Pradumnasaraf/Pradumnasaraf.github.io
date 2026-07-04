@@ -992,6 +992,12 @@
   line-height: 1.7;
 }
 
+.blog-post-content strong,
+.blog-post-content b {
+  font-weight: 600;
+  color: var(--color-fg-strong);
+}
+
 .blog-post-content a {
   color: var(--color-fg-secondary);
   text-decoration: underline;
