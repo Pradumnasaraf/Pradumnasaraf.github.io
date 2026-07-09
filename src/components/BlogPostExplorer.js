@@ -90,8 +90,11 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
     activeTag === 'all' && sortBy === 'latest' && filteredPosts.length > 1;
   const featuredPost = isDefaultView ? filteredPosts[0] : null;
   const gridStartIndex = featuredPost ? 1 : 0;
-  const visiblePosts = filteredPosts.slice(gridStartIndex, visibleCount);
-  const hasMore = visibleCount < filteredPosts.length;
+  const visiblePosts = filteredPosts.slice(
+    gridStartIndex,
+    gridStartIndex + visibleCount
+  );
+  const hasMore = gridStartIndex + visibleCount < filteredPosts.length;
   const hasActiveFilters = activeTag !== 'all';
 
   return (
