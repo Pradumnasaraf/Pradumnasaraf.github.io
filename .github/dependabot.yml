@@ -10,6 +10,15 @@ updates:
     commit-message:
       prefix: 'chore'
       include: 'scope'
+    # Hold ESLint on v9. eslint-plugin-react caps its ESLint peer dep at
+    # ^9.7 and has not shipped a release supporting v10, so bumping eslint
+    # (or its lockstep @eslint/js) to v10 fails install with ERESOLVE.
+    # Remove these ignores once eslint-plugin-react declares ^10 support.
+    ignore:
+      - dependency-name: 'eslint'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@eslint/js'
+        update-types: ['version-update:semver-major']
 
   - package-ecosystem: 'github-actions'
     directory: '/'
