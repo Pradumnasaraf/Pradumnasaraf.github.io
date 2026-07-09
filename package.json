@@ -62,7 +62,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.4",
     "@tailwindcss/postcss": "^4.3.1",
-    "eslint": "^9.39.4",
+    "eslint": "^10.6.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "globals": "^17.4.0",
