@@ -10,7 +10,6 @@ import {
   SiKubernetes,
   SiMongodb,
   SiNodedotjs,
-  SiOpenai,
   SiPostman,
   SiPostgresql,
   SiPrometheus,
@@ -19,6 +18,7 @@ import {
   SiTypescript,
   SiWebassembly,
 } from 'react-icons/si';
+import { TbBrandOpenai } from 'react-icons/tb';
 import speakingData from './speaking.json';
 import PageTopbar from '@/components/PageTopbar';
 import './style.css';
@@ -35,7 +35,7 @@ const techIconMap = {
   mongodb: SiMongodb,
   node: SiNodedotjs,
   'open source': RiOpenSourceFill,
-  openai: SiOpenai,
+  openai: TbBrandOpenai,
   postman: SiPostman,
   postgresql: SiPostgresql,
   prometheus: SiPrometheus,
@@ -44,7 +44,7 @@ const techIconMap = {
   typescript: SiTypescript,
   webassembly: SiWebassembly,
   wasm: SiWebassembly,
-  chatgpt: SiOpenai,
+  chatgpt: TbBrandOpenai,
 };
 
 function inferTechnologies(item) {
