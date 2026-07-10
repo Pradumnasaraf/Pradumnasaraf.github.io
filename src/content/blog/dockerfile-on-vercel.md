@@ -98,6 +98,8 @@ We have taken a multi-stage Docker build approach to make the final image simple
 
 The first stage compiles the binary with the Go toolchain on a Golang Alpine image. And in the second stage, the runtime, we have used a distroless image. The reason we used the distroless images is that they have no shell and no package manager, so there is almost nothing to attack. Good for security.
 
+To test you can build the image locally and run the container from the image. We will straight away go to deployment as it's pretty simple app.
+
 ### Deploying the App
 
 Now everything is done. We have all the files and app in place; we can deploy our app on Vercel. We can use the Vercel CLI (which only needs a single command: `vercel deploy` to deploy) or the UI to deploy the app. We will intentionally take the UI route to see what the new Dockerfile Deployment experience looks like. 
