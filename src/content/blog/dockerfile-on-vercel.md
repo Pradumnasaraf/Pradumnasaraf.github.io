@@ -10,7 +10,7 @@ canonical: 'https://dev.to/pradumnasaraf/dockerfile-on-vercel'
 draft: false
 ---
 
-Yes, you heard it right, you can now run a Dockerfile on Vercel. Vercel was the go-to place where people went to ship and host their frontend and serverless functions without worrying about the infrastructure, but things have changed now.
+Yes, you heard it right, you can now run a [Dockerfile on Vercel](https://vercel.com/blog/dockerfile-on-vercel). Vercel was the go-to place where people went to ship and host their frontend and serverless functions without worrying about the infrastructure, but things have changed now.
 
 With the Dockerfile support, you can deploy any stack on it: GO, Rails, Spring Boot, Laravel, etc. And it's very easy to deploy as well, and it has the same experience as deploying a frontend application. Will see in this blog by creating a simple Golang server and deploying to Vercel.
 
