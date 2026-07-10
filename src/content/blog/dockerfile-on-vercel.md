@@ -1,12 +1,12 @@
 ---
 title: 'How to Run a Dockerfile on Vercel'
 excerpt: 'Vercel now supports Dockerfile deployments. Learn how to build a simple Golang server and deploy it to Vercel using a Dockerfile.'
-date: '2026-07-04'
+date: '2026-07-10'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'go', 'golang', 'containers', 'devops']
 thumbnail: '/blog-images/dockerfile-on-vercel/thumbnail.png'
-canonical: 'https://dev.to/pradumnasaraf/dockerfile-on-vercel'
+canonical: 'https://dev.to/pradumnasaraf/deploy-a-dockerfile-on-vercel-5abn'
 draft: false
 ---
 
