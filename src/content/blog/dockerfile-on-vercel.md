@@ -12,7 +12,7 @@ draft: false
 
 Yes, you heard it right, you can now run a [Dockerfile on Vercel](https://vercel.com/blog/dockerfile-on-vercel). Vercel was the go-to place where people went to ship and host their frontend and serverless functions without worrying about the infrastructure, but things have changed now.
 
-With the Dockerfile support, you can deploy any stack on it: GO, Rails, Spring Boot, Laravel, etc. And it's very easy to deploy as well, and it has the same experience as deploying a frontend application. Will see in this blog by creating a simple Golang server and deploying to Vercel.
+With the Dockerfile support, you can deploy any stack on it: GO, Rails, Spring Boot, Laravel, etc. And it's very easy to deploy as well, and it has the same experience as deploying a frontend application. Will see in this blog by creating a simple [Golang](https://go.dev) server and deploying to Vercel.
 
 ## Prerequisite
 
@@ -76,7 +76,7 @@ The PORT falls back to 8080 for local runs, since binding to 80 on the machine n
 
 ### The Dockerfile
 
-To make Vercel pick the Dockerfile, we should use the `Dockerfile.vercel` naming convention.
+To make Vercel pick the Dockerfile, we should use the [`Dockerfile.vercel` naming convention](https://vercel.com/docs/functions/container-images).
 
 Let's create a `Dockerfile.vercel` and paste the code below:
 
@@ -94,15 +94,15 @@ COPY --from=build /app /app
 ENTRYPOINT ["/app"]
 ```
 
-We have taken a multi-stage Docker build approach to make the final image simple and small. 
+We have taken a [multi-stage Docker build](https://docs.docker.com/build/building/multi-stage/) approach to make the final image simple and small. 
 
-The first stage compiles the binary with the Go toolchain on a Golang Alpine image. And in the second stage, the runtime, we have used a distroless image. The reason we used the distroless images is that they have no shell and no package manager, so there is almost nothing to attack. Good for security.
+The first stage compiles the binary with the Go toolchain on a Golang Alpine image. And in the second stage, the runtime, we have used a [distroless](https://github.com/GoogleContainerTools/distroless) image. The reason we used the distroless images is that they have no shell and no package manager, so there is almost nothing to attack. Good for security.
 
 To test you can build the image locally and run the container from the image. We will straight away go to deployment as it's pretty simple app.
 
 ### Deploying the App
 
-Now everything is done. We have all the files and app in place; we can deploy our app on Vercel. We can use the Vercel CLI (which only needs a single command: `vercel deploy` to deploy) or the UI to deploy the app. We will intentionally take the UI route to see what the new Dockerfile Deployment experience looks like. 
+Now everything is done. We have all the files and app in place; we can deploy our app on Vercel. We can use the [Vercel CLI](https://vercel.com/docs/cli) (which only needs a single command: `vercel deploy` to deploy) or the UI to deploy the app. We will intentionally take the UI route to see what the new Dockerfile Deployment experience looks like. 
 
 Before that, we need to push the code to a repo on GitHub. Before pushing, you can add all the supporting files like CI checks, LICENCE, etc. I will name my repo **Dockerfile-On-Vercel**. This is how mine looks: [Pradumnasaraf/Dockerfile-On-Vercel](https://github.com/Pradumnasaraf/Dockerfile-On-Vercel).
 
