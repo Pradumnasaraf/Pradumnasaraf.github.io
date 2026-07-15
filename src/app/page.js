@@ -264,8 +264,7 @@ export default function Home() {
           </h2>
           <p>
             Open Source Developer. Docker Captain. Microsoft MVP.
-            <br className="desktop-break" />
-            Owner @ rebase media
+            <br className="desktop-break" /> Owner @ rebase media
           </p>
           <div className="ibutton">
             <a

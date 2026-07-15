@@ -87,7 +87,7 @@ models:
     model: ai/all-minilm
 ```
 
-Now, instead of the default `LLM_Model` and `LLM_URL`, the application will be injected with `AI_MODEL_URL` and `AI_MODEL_NAME`. And for `embedding-model`, it will inject `EMBEDDING_URL` and `EMBEDDING_NAME`.
+Now, instead of the default `LLM_MODEL` and `LLM_URL`, the application will be injected with `AI_MODEL_URL` and `AI_MODEL_NAME`. And for `embedding-model`, it will inject `EMBEDDING_URL` and `EMBEDDING_NAME`.
 
 Now, let’s look at our Next.js application.
 
@@ -95,7 +95,7 @@ Now, let’s look at our Next.js application.
 
 We have created a Next.js application and are using the OpenAI framework (which is standard in the industry) to communicate with the Docker AI model. And it will automatically pick up those environment variables that Docker injected into the application.
 
-We don’t need `apiKey`, as it’s not a cloud LLM and quota kind of thing.
+We don’t need an API key here, since this is a local model, not a cloud LLM with quotas.
 
 Below is the complete code. You will also find the complete code in the `src/app/api/chat/route.ts` file.
 
@@ -193,8 +193,8 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci --only=production
+# Install dependencies (including devDependencies needed to build)
+RUN npm ci
 
 # Copy source code
 COPY . .
@@ -229,7 +229,7 @@ ENV HOSTNAME "0.0.0.0"
 CMD ["node", "server.js"]
 ```
 
-Above is the complete **Dockerfile** code. We have taken a couple of best practices, like multi-stage builds, a non-root user, to make the container image smaller, faster and secure.
+Above is the complete **Dockerfile** code. We have taken a couple of best practices, like multi-stage builds and a non-root user, to make the container image smaller, faster, and more secure. Note that the build stage runs `npm ci` (not `--only=production`), because the Next.js build needs the devDependencies like Tailwind CSS and TypeScript. The final image stays small because the runner stage only copies Next.js's standalone output, not `node_modules`.
 
 Once we are done with that, now, let’s run the Compose application by executing the `docker compose up` command in the terminal. You will see a similar output in the terminal as shown in the screenshot.
 
@@ -241,6 +241,6 @@ Here is a short demo:
 
 ![](/blog-images/running-ai-models-with-docker-compose/image-02.gif)
 
-That was it. That’s how you can run Running AI Models with Docker Compose.
+That was it. That’s how you can run AI models with Docker Compose.
 
 As always, I'm glad you made it to the end. Thank you for your support and reading. I regularly share tips on [**Twitter**](https://x.com/pradumna_saraf) (It will always be Twitter ;)). You can connect with me there.
