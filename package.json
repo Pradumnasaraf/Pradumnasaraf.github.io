@@ -1,6 +1,6 @@
 {
   "name": "Pradumnasaraf.github.io",
-  "version": "5.5.1",
+  "version": "5.5.2",
   "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
