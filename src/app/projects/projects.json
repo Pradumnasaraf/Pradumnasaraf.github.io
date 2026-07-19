@@ -1,7 +1,7 @@
 [
   {
     "id": "agent-pr-police",
-    "name": "agent-pr-police",
+    "name": "Agent PR Police",
     "stars": 2,
     "repoUrl": "https://github.com/Pradumnasaraf/agent-pr-police",
     "url": "https://github.com/marketplace/actions/agent-pr-police",
@@ -10,7 +10,7 @@
   },
   {
     "id": "aviationincidents",
-    "name": "aviationincidents",
+    "name": "Aviation Incidents",
     "stars": 2,
     "repoUrl": "https://github.com/Pradumnasaraf/aviationincidents",
     "url": "https://aviationincidents.xyz",
@@ -19,7 +19,7 @@
   },
   {
     "id": "dockerfile-on-vercel",
-    "name": "Dockerfile-On-Vercel",
+    "name": "Dockerfile on Vercel",
     "stars": 2,
     "repoUrl": "https://github.com/Pradumnasaraf/Dockerfile-On-Vercel",
     "url": "https://dockerfile-on-vercel.vercel.app",
