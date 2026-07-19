@@ -393,7 +393,7 @@ main {
   transform: translateY(-2px);
 }
 
-.left > h2 {
+.left > h1 {
   color: #333333;
   font-weight: 400;
   margin-top: 10px;
@@ -650,7 +650,7 @@ main {
     overflow-x: hidden;
   }
 
-  .left > h2 {
+  .left > h1 {
     font-size: 1.6rem;
     margin: 6px 0;
     letter-spacing: -0.02em;

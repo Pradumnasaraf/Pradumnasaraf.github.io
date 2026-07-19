@@ -3,7 +3,7 @@ import { getAllPosts } from '../../lib/blog.js';
 
 export async function GET() {
   const baseUrl = SITE_URL;
-  const currentDate = new Date().toISOString();
+  const currentDate = new Date().toUTCString();
 
   // Get all blog posts (excluding drafts and reposted content with canonical URLs)
   const allPosts = getAllPosts();
@@ -21,8 +21,8 @@ export async function GET() {
     .map((post) => {
       const postUrl = `${baseUrl}/blog/${post.slug}`;
       const pubDate = post.date
-        ? new Date(post.date).toISOString()
-        : new Date().toISOString();
+        ? new Date(post.date).toUTCString()
+        : new Date().toUTCString();
       const description = post.excerpt || post.title || '';
       const categories = post.tags
         ? post.tags

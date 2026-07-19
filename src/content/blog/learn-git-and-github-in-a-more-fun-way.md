@@ -46,4 +46,4 @@ You can master your git branching concept by visualizing, playing, and doing cer
 
 ![GitHub Learning Lab](/blog-images/learn-git-and-github-in-a-more-fun-way/github-learning-lab.png)
 
-For Support and Reachout: <a href="https://twitter.com/intent/follow?screen_name=pradumna_saraf" target="blank">Twitter</a>     <a href="https://linkedin.com/in/pradumnasaraf" target="blank">LinkedIn</a>
+For Support and Reachout: <a href="https://twitter.com/intent/follow?screen_name=pradumna_saraf" target="_blank" rel="noopener noreferrer">Twitter</a>     <a href="https://linkedin.com/in/pradumnasaraf" target="_blank" rel="noopener noreferrer">LinkedIn</a>

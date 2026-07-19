@@ -119,6 +119,7 @@ export default function Home() {
             <span className="page-item">
               <Link
                 href="https://rebasemedia.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeAllMenus}
               >
@@ -185,6 +186,7 @@ export default function Home() {
             >
               <Link
                 href="https://pradumnasaraf.substack.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeAllMenus}
               >
@@ -223,6 +225,7 @@ export default function Home() {
               </Link>
               <Link
                 href="https://pradumnasaraf.substack.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeAllMenus}
               >
@@ -239,6 +242,7 @@ export default function Home() {
             {/* Using React Icons */}
             <Link
               href="https://github.com/Pradumnasaraf"
+              target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on GitHub"
             >
@@ -246,6 +250,7 @@ export default function Home() {
             </Link>
             <Link
               href="https://twitter.com/pradumna_saraf"
+              target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on X"
             >
@@ -253,15 +258,16 @@ export default function Home() {
             </Link>
             <Link
               href="https://www.linkedin.com/in/pradumnasaraf/"
+              target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on LinkedIn"
             >
               <FaLinkedin aria-hidden="true" focusable="false" />
             </Link>
           </div>
-          <h2>
+          <h1>
             {`Hello, I'm`} <span className="pradumna">Pradumna Saraf</span>
-          </h2>
+          </h1>
           <p>
             Open Source Developer. Docker Captain. Microsoft MVP.
             <br className="desktop-break" /> Owner @ rebase media
@@ -270,11 +276,13 @@ export default function Home() {
             <a
               className="connect"
               href="https://github.com/Pradumnasaraf"
+              target="_blank"
               rel="noopener noreferrer"
             >{`Let's Collaborate`}</a>
             <a
               className="connect"
               href="https://rebasemedia.com"
+              target="_blank"
               rel="noopener noreferrer"
             >
               Services
