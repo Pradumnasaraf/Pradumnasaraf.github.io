@@ -119,7 +119,13 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
   if (!isOpen) return null;
 
   return createPortal(
-    <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+    <div
+      className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Full screen image viewer"
+      tabIndex={-1}
+    >
       {/* Close Button */}
       <div
         style={{
@@ -341,7 +347,7 @@ export default function Home() {
       // Only preload first 8 images for quick display
       const initialImagePromises = images.slice(0, 8).map((img) => {
         return new Promise((resolve) => {
-          const image = new Image();
+          const image = new window.Image();
           image.src = img.src;
           image.onload = resolve;
           image.onerror = resolve;
@@ -355,7 +361,7 @@ export default function Home() {
 
           // Continue loading the rest in background
           images.slice(8).forEach((img) => {
-            const image = new Image();
+            const image = new window.Image();
             image.src = img.src;
           });
         })
