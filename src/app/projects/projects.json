@@ -91,7 +91,7 @@
   },
   {
     "id": "pullprompt",
-    "name": "pullprompt",
+    "name": "PullPrompt",
     "stars": 4,
     "repoUrl": "https://github.com/Pradumnasaraf/pullprompt",
     "url": "https://github.com/marketplace/actions/pullprompt",
@@ -145,7 +145,7 @@
   },
   {
     "id": "taskit",
-    "name": "taskit",
+    "name": "TaskIT",
     "stars": 9,
     "repoUrl": "https://github.com/Pradumnasaraf/taskit",
     "url": "https://github.com/Pradumnasaraf/taskit",
