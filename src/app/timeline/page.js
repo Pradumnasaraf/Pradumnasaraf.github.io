@@ -18,6 +18,11 @@ const ArrowIcon = () => (
 );
 
 const TimelinePage = () => {
+  // Must match the moveline animation duration in style.css so the last card
+  // fades in as the line finishes drawing.
+  const LINE_DURATION = 39.5;
+  const step = entries.length > 1 ? LINE_DURATION / (entries.length - 1) : 0;
+
   return (
     <>
       <PageTopbar />
@@ -28,7 +33,11 @@ const TimelinePage = () => {
           {entries.map((entry, index) => {
             const side = index % 2 === 0 ? 'right' : 'left';
             return (
-              <div key={index} className={`container ${side}-container`}>
+              <div
+                key={index}
+                className={`container ${side}-container`}
+                style={{ animationDelay: `${(index * step).toFixed(2)}s` }}
+              >
                 <Image
                   src={entry.image.src}
                   alt={entry.image.alt}
