@@ -217,7 +217,7 @@
   },
   {
     "id": "opensource-api",
-    "name": "OpenSource-API",
+    "name": "OpenSource API",
     "stars": 31,
     "repoUrl": "https://github.com/Pradumnasaraf/OpenSource-API",
     "url": "https://opensourceapi.vercel.app",
