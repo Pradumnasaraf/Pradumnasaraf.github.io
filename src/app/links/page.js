@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { SITE_URL } from '@/lib/constants';
 import {
-  FiGithub,
   FiMail,
   FiYoutube,
   FiInstagram,
@@ -11,8 +10,8 @@ import {
   FiCopy,
   FiX,
 } from 'react-icons/fi';
-import { FaLinkedinIn } from 'react-icons/fa';
-import { SiBluesky, SiSessionize, SiThreads, SiX } from 'react-icons/si';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { SiBluesky, SiSessionize, SiThreads } from 'react-icons/si';
 import './style.css';
 
 export default function LinksPage() {
@@ -22,7 +21,7 @@ export default function LinksPage() {
   const profileData = {
     name: 'Pradumna Saraf',
     bio: 'Open Source Developer | Docker Captain | Microsoft MVP | Owner @rebasemedia',
-    avatar: '/media/pradumnasaraf.png',
+    avatar: '/media/pradumna-saraf.png',
   };
 
   const qrCodeUrl = `${SITE_URL}/links`;
@@ -53,17 +52,17 @@ export default function LinksPage() {
     {
       id: 'twitter',
       url: 'https://x.com/pradumna_saraf',
-      icon: SiX,
+      icon: FaTwitter,
     },
     {
       id: 'linkedin',
       url: 'https://linkedin.com/in/pradumnasaraf',
-      icon: FaLinkedinIn,
+      icon: FaLinkedin,
     },
     {
       id: 'github',
       url: 'https://github.com/Pradumnasaraf',
-      icon: FiGithub,
+      icon: FaGithub,
     },
     {
       id: 'bluesky',
@@ -130,7 +129,17 @@ export default function LinksPage() {
     <div className="links-container">
       {/* QR Code Modal */}
       {showQRCode && (
-        <div className="qr-modal" onClick={handleCloseQRCode}>
+        <div
+          className="qr-modal"
+          onClick={handleCloseQRCode}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') handleCloseQRCode();
+          }}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Share this page"
+          tabIndex={-1}
+        >
           <div
             className="qr-modal-content"
             onClick={(e) => e.stopPropagation()}
@@ -205,7 +214,7 @@ export default function LinksPage() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' || social.id === 'twitter' || social.id === 'linkedin' || social.id === 'sessionize' ? 'social-icon-filled' : 'social-icon-stroke'}`}
+                    className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' || social.id === 'twitter' || social.id === 'linkedin' || social.id === 'sessionize' || social.id === 'github' ? 'social-icon-filled' : 'social-icon-stroke'}`}
                     aria-label={social.id}
                   >
                     <IconComponent className="social-icon" />
