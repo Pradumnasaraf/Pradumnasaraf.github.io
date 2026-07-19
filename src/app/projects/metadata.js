@@ -1,9 +1,10 @@
-import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Pradumna's Projects",
   description:
     'A curated list of my projects with star counts, tech stack, and quick links.',
+  path: '/projects',
   keywords: [
     'Pradumna Saraf projects',
     'GitHub repositories',
@@ -11,42 +12,6 @@ export const metadata = {
     'Developer portfolio',
     'Project showcase',
   ],
-  openGraph: {
-    title: "Pradumna's Projects",
-    description:
-      'A curated list of my projects with star counts, tech stack, and quick links.',
-    url: `${SITE_URL}/projects`,
-    images: [
-      {
-        url: `${SITE_URL}/media/projects-og.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Pradumna Saraf - Projects',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Pradumna's Projects",
-    description:
-      'A curated list of my projects with star counts, tech stack, and quick links.',
-    creator: TWITTER_HANDLE,
-    images: [`${SITE_URL}/media/projects-og.png`],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: `${SITE_URL}/projects`,
-  },
-};
+  ogImage: 'projects-og.png',
+  imageAlt: 'Pradumna Saraf - Projects',
+});

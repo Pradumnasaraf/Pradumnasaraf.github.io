@@ -1,47 +1,13 @@
-import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: 'Pradumna Saraf | Photography',
   description:
     'My mobile photography shots - a mix of personal and professional shots.',
+  path: '/photography',
   keywords:
     'Pradumna Saraf Photography, Photography Portfolio, Professional Photography, Personal Photography, Photo Gallery',
-  openGraph: {
-    title: "Pradumna's Photography",
-    description:
-      'My mobile photography shots - a mix of personal and professional shots.',
-    url: `${SITE_URL}/photography`,
-    images: [
-      {
-        url: `${SITE_URL}/media/photography-og.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Pradumna Saraf - Photography Portfolio',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Pradumna's Photography",
-    description:
-      'My mobile photography shots - a mix of personal and professional shots.',
-    creator: TWITTER_HANDLE,
-    images: [`${SITE_URL}/media/photography-og.png`],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: `${SITE_URL}/photography`,
-  },
-};
+  ogTitle: "Pradumna's Photography",
+  ogImage: 'photography-og.png',
+  imageAlt: 'Pradumna Saraf - Photography Portfolio',
+});

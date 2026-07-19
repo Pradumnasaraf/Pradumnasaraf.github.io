@@ -1,47 +1,13 @@
-import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: 'Pradumna Saraf | Schedule a Meeting',
   description:
     'Schedule a meeting with me for consulting, speaking, or just to chat.',
+  path: '/chat',
   keywords:
     'Schedule Meeting, Book Meeting, Pradumna Saraf Meeting, Developer Advocate Consultation, Docker Captain Consultation',
-  openGraph: {
-    title: 'Chat with Pradumna',
-    description:
-      'Schedule a meeting with me for consulting, speaking, or just to chat.',
-    url: `${SITE_URL}/chat`,
-    type: 'website',
-    images: [
-      {
-        url: `${SITE_URL}/media/chat-og.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Pradumna Saraf - Schedule a Meeting',
-      },
-    ],
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Chat with Pradumna',
-    description:
-      'Schedule a meeting with me for consulting, speaking, or just to chat.',
-    creator: TWITTER_HANDLE,
-    images: [`${SITE_URL}/media/chat-og.png`],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: `${SITE_URL}/chat`,
-  },
-};
+  ogTitle: 'Chat with Pradumna',
+  ogImage: 'chat-og.png',
+  imageAlt: 'Pradumna Saraf - Schedule a Meeting',
+});
