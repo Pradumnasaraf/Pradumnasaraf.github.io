@@ -10,7 +10,7 @@ export const metadata = {
     url: `${SITE_URL}/travel`,
     images: [
       {
-        url: `${SITE_URL}/media/speaking-og.png`,
+        url: `${SITE_URL}/media/travel-og.png`,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Travel',
@@ -24,7 +24,7 @@ export const metadata = {
     title: "Pradumna's Travel",
     description: "Places I've travelled to, shown on an interactive globe.",
     creator: TWITTER_HANDLE,
-    images: [`${SITE_URL}/media/speaking-og.png`],
+    images: [`${SITE_URL}/media/travel-og.png`],
   },
   robots: {
     index: true,

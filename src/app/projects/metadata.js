@@ -1,4 +1,4 @@
-import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
 
 export const metadata = {
   title: "Pradumna's Projects",
@@ -18,7 +18,7 @@ export const metadata = {
     url: `${SITE_URL}/projects`,
     images: [
       {
-        url: OG_IMAGE_URL,
+        url: `${SITE_URL}/media/projects-og.png`,
         width: 1200,
         height: 630,
         alt: 'Pradumna Saraf - Projects',
@@ -33,7 +33,7 @@ export const metadata = {
     description:
       'A curated list of my projects with star counts, tech stack, and quick links.',
     creator: TWITTER_HANDLE,
-    images: [OG_IMAGE_URL],
+    images: [`${SITE_URL}/media/projects-og.png`],
   },
   robots: {
     index: true,
