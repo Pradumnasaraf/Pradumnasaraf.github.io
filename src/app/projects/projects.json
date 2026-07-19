@@ -55,7 +55,7 @@
   },
   {
     "id": "saraf-ai",
-    "name": "Saraf-AI",
+    "name": "Saraf AI",
     "stars": 6,
     "repoUrl": "https://github.com/Pradumnasaraf/Saraf-AI",
     "url": "https://github.com/Pradumnasaraf/Saraf-AI",
@@ -64,7 +64,7 @@
   },
   {
     "id": "aviationstack-mcp",
-    "name": "aviationstack-mcp",
+    "name": "AviationStack MCP",
     "stars": 24,
     "repoUrl": "https://github.com/Pradumnasaraf/aviationstack-mcp",
     "url": "https://pypi.org/project/aviationstack-mcp",
@@ -73,7 +73,7 @@
   },
   {
     "id": "go-prometheus-monitoring",
-    "name": "go-prometheus-monitoring",
+    "name": "Go Prometheus Monitoring",
     "stars": 1,
     "repoUrl": "https://github.com/Pradumnasaraf/go-prometheus-monitoring",
     "url": "https://docs.docker.com/guides/go-prometheus-monitoring",
@@ -109,7 +109,7 @@
   },
   {
     "id": "gencli",
-    "name": "gencli",
+    "name": "GenCLI",
     "stars": 34,
     "repoUrl": "https://github.com/Pradumnasaraf/gencli",
     "url": "https://pkg.go.dev/github.com/Pradumnasaraf/gencli",
@@ -118,7 +118,7 @@
   },
   {
     "id": "scrapy",
-    "name": "scrapy",
+    "name": "Scrapy",
     "stars": 4,
     "repoUrl": "https://github.com/Pradumnasaraf/scrapy",
     "url": "https://pkg.go.dev/github.com/Pradumnasaraf/scrapy",
@@ -136,7 +136,7 @@
   },
   {
     "id": "candy",
-    "name": "candy",
+    "name": "Candy",
     "stars": 61,
     "repoUrl": "https://github.com/Pradumnasaraf/candy",
     "url": "https://pkg.go.dev/github.com/Pradumnasaraf/candy",
@@ -172,7 +172,7 @@
   },
   {
     "id": "biodrop-cli",
-    "name": "BioDrop-CLI",
+    "name": "BioDrop CLI",
     "stars": 76,
     "repoUrl": "https://github.com/Pradumnasaraf/BioDrop-CLI",
     "url": "https://www.npmjs.com/package/biodrop-cli",
@@ -181,7 +181,7 @@
   },
   {
     "id": "post-my-message",
-    "name": "Post-My-Message",
+    "name": "Post My Message",
     "stars": 24,
     "repoUrl": "https://github.com/Pradumnasaraf/Post-My-Message",
     "url": "https://post-my-message.vercel.app",
@@ -226,7 +226,7 @@
   },
   {
     "id": "open-source-with-pradumna",
-    "name": "open-source-with-pradumna",
+    "name": "Open Source with Pradumna",
     "stars": 832,
     "repoUrl": "https://github.com/Pradumnasaraf/open-source-with-pradumna",
     "url": "https://os.pradumnasaraf.dev",
@@ -244,7 +244,7 @@
   },
   {
     "id": "team-moon-api",
-    "name": "Team-Moon-API",
+    "name": "Team Moon API",
     "stars": 9,
     "repoUrl": "https://github.com/Pradumnasaraf/Team-Moon-API",
     "url": "https://teammoonapi.vercel.app",
