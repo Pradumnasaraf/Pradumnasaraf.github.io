@@ -22,16 +22,6 @@ export const sitemapPages = [
     priorityLabel: 'High',
   },
   {
-    url: '/cv',
-    href: '/cv',
-    title: 'CV',
-    priority: '0.9',
-    changefreq: 'monthly',
-    description: 'Professional CV and experience',
-    category: 'Professional',
-    priorityLabel: 'High',
-  },
-  {
     url: '/speaking',
     href: '/speaking',
     title: 'Speaking',
