@@ -1,5 +1,44 @@
 [
   {
+    "title": "Technical Reviewer for a Packt Book",
+    "date": "July, 2026",
+    "description": "I was one of the technical reviewers for a book by Packt on running AI in production with Docker. It was my first time reviewing a book, and I enjoyed being part of it from the early stages to seeing it published. Now I want to write one of my own.",
+    "image": {
+      "src": "/timeline-logo/packt.jpg",
+      "alt": "Packt"
+    },
+    "link": {
+      "href": "https://www.amazon.com/Operational-AI-Docker-services-Kubernetes/dp/1807301095",
+      "ariaLabel": "Operational AI with Docker book"
+    }
+  },
+  {
+    "title": "Renewed as a Docker Captain",
+    "date": "June, 2026",
+    "description": "I was renewed as a Docker Captain for another year. It has been a great journey so far, I learned a lot and made some good friends along the way. Looking forward to another year of working with the Docker team and community.",
+    "image": {
+      "src": "/timeline-logo/docker.png",
+      "alt": "Docker"
+    },
+    "link": {
+      "href": "https://x.com/pradumna_saraf/status/2063844267156758552",
+      "ariaLabel": "Docker Captain renewal"
+    }
+  },
+  {
+    "title": "Sessionize Speaker of the Day",
+    "date": "March, 2026",
+    "description": "Sessionize featured me as the Speaker of the Day on their homepage. A nice recognition for the talks I have given at KubeCon and other events.",
+    "image": {
+      "src": "/timeline-logo/sessionize.png",
+      "alt": "Sessionize"
+    },
+    "link": {
+      "href": "https://x.com/pradumna_saraf/status/2037753213580132391",
+      "ariaLabel": "Sessionize Speaker of the Day"
+    }
+  },
+  {
     "title": "Lens K8s Champion (Mirantis)",
     "date": "December, 2025",
     "description": "Recognized as a Lens K8s Champion for actively supporting the Kubernetes and cloud-native community and creating practical content.",
