@@ -16,6 +16,7 @@ import {
   SiPython,
   SiReact,
   SiRedis,
+  SiSwift,
   SiTypescript,
 } from 'react-icons/si';
 import projects from './projects.json';
@@ -40,6 +41,7 @@ const techIconMap = {
   python: SiPython,
   react: SiReact,
   redis: SiRedis,
+  swift: SiSwift,
   typescript: SiTypescript,
   css: FaCss3Alt,
 };
