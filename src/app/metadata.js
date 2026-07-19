@@ -1,6 +1,7 @@
 import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'Pradumna Saraf',
   description:
     'Developer Advocate, Docker Captain, and Microsoft MVP. I work with cloud-native tech, DevOps, and open source.',
