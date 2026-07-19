@@ -1,7 +1,6 @@
 'use client';
 import './style.css';
 import { useEffect } from 'react';
-import Link from 'next/link';
 import PageTopbar from '@/components/PageTopbar';
 
 const ChatPage = () => {
@@ -58,15 +57,6 @@ const ChatPage = () => {
     <>
       <div className="chat-page">
         <PageTopbar />
-
-        {/* NAVIGATION */}
-        <div className="nav">
-          <div className="pages">
-            <span className="page-item">
-              <Link href="/">Home</Link>
-            </span>
-          </div>
-        </div>
 
         {/* Calendar Section */}
         <div id="my-cal-inline" className="calendar-container"></div>
