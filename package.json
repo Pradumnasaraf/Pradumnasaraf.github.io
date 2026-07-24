@@ -69,7 +69,7 @@
     "globals": "^17.4.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.2.0",
-    "postcss": "^8.5.15",
+    "postcss": "^8.5.22",
     "prettier": "^3.9.6",
     "tailwindcss": "^4.3.3"
   },
