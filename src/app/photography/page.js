@@ -24,34 +24,17 @@ const ImageItem = ({ src, alt, onClick }) => {
         }
       },
       {
-        threshold: 0.01, // Lower threshold for earlier loading
-        rootMargin: '50px', // Start loading images before they're visible
+        threshold: 0.01,
+        // Start fetching ~1.5 screens ahead so images are ready by the time
+        // they scroll into view (paces requests with scroll, not all at once).
+        rootMargin: '1200px 0px',
       }
     );
 
     const currentElement = document.getElementById(`image-${src}`);
     if (currentElement) {
-      // Safari-specific: Use requestAnimationFrame to prevent blocking scroll
-      // This ensures the observer setup doesn't interfere with Safari's scroll handling
-      let timeoutId;
-      const rafId = requestAnimationFrame(() => {
-        timeoutId = setTimeout(() => {
-          const element = document.getElementById(`image-${src}`);
-          if (element) {
-            observer.observe(element);
-          }
-        }, 0);
-      });
-
-      return () => {
-        cancelAnimationFrame(rafId);
-        if (timeoutId) {
-          clearTimeout(timeoutId);
-        }
-        if (currentElement) {
-          observer.unobserve(currentElement);
-        }
-      };
+      observer.observe(currentElement);
+      return () => observer.unobserve(currentElement);
     }
   }, [src]);
 
