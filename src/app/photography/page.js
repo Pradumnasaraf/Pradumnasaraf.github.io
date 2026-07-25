@@ -62,6 +62,9 @@ const ImageItem = ({ src, alt, onClick }) => {
         className={`w-full overflow-hidden rounded-lg transition-all duration-300 image-container ${
           isLoading ? 'animate-pulse bg-gray-200' : ''
         }`}
+        // Reserve space before the image loads so lazy-loading doesn't shift
+        // the page and jank the scroll on mobile.
+        style={isLoading ? { aspectRatio: '2 / 3' } : undefined}
       >
         {isVisible && (
           <Image
@@ -77,19 +80,7 @@ const ImageItem = ({ src, alt, onClick }) => {
             }`}
             onClick={onClick}
             onError={() => setHasError(true)}
-            onLoad={() => {
-              setIsLoading(false);
-              // Safari-specific: Force layout recalculation after image loads
-              requestAnimationFrame(() => {
-                const container = document.querySelector(
-                  '.photography-page-container'
-                );
-                if (container) {
-                  // Trigger a reflow to ensure scroll works
-                  void container.offsetHeight;
-                }
-              });
-            }}
+            onLoad={() => setIsLoading(false)}
           />
         )}
       </div>
@@ -277,9 +268,8 @@ const WelcomePopup = ({ isOpen, onClose }) => {
         <div className="popup-content">
           <h2 className="popup-title">Welcome to Photography page!</h2>
           <p className="popup-message">
-            Hover over any image to see it in full color! The images start in
-            grayscale and reveal their vibrant colors when you interact with
-            them.
+            Tap any image to view it full screen. Images start in grayscale and,
+            on desktop, reveal their full color on hover.
           </p>
           <button onClick={onClose} className="popup-ok-button">
             Got it!
@@ -296,7 +286,6 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageSrc, setModalImageSrc] = useState('');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
   const [showWelcomePopup, setShowWelcomePopup] = useState(false);
 
   // Define breakpoint columns (react-masonry-css uses max-width semantics:
@@ -333,45 +322,11 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // Show welcome popup when page loads
+    // Client-only so it doesn't cause an SSR/hydration mismatch. Images load
+    // lazily per-item via IntersectionObserver, so there's no global preload
+    // (mass-preloading every Drive image at once triggered rate-limit 403s).
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setShowWelcomePopup(true);
-
-    // Set a reasonable timeout to automatically clear loading state
-    const timeoutId = setTimeout(() => {
-      setIsLoading(false);
-    }, 8000); // 8 seconds maximum loading time
-
-    // Preload just a few images first for faster initial display
-    const preloadInitialImages = () => {
-      // Only preload first 8 images for quick display
-      const initialImagePromises = images.slice(0, 8).map((img) => {
-        return new Promise((resolve) => {
-          const image = new window.Image();
-          image.src = img.src;
-          image.onload = resolve;
-          image.onerror = resolve;
-        });
-      });
-
-      Promise.all(initialImagePromises)
-        .then(() => {
-          // Set loading to false after initial images load
-          setIsLoading(false);
-
-          // Continue loading the rest in background
-          images.slice(8).forEach((img) => {
-            const image = new window.Image();
-            image.src = img.src;
-          });
-        })
-        .catch(() => {
-          setIsLoading(false);
-        });
-    };
-
-    preloadInitialImages();
-    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
@@ -382,11 +337,6 @@ export default function Home() {
         <h1 className="photography-title">Photography</h1>
 
         <div className="container mx-auto">
-          {isLoading && (
-            <div className="flex justify-center my-8">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
-            </div>
-          )}
           <Masonry
             breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"
