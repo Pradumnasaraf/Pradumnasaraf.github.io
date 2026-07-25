@@ -74,7 +74,8 @@
     "tailwindcss": "^4.3.3"
   },
   "overrides": {
-    "postcss": "$postcss"
+    "postcss": "$postcss",
+    "sharp": "^0.35.0"
   },
   "engines": {
     "node": ">=24.0.0"
