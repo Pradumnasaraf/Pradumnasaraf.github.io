@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
               url: SITE_URL,
               sameAs: [
                 'https://github.com/Pradumnasaraf',
-                'https://twitter.com/pradumna_saraf',
+                'https://x.com/pradumna_saraf',
                 'https://linkedin.com/in/pradumnasaraf',
                 `${SITE_URL}/blog`,
                 'https://mvp.microsoft.com/en-US/MVP/profile/504ebf09-e92f-4620-82d7-67590711df58',

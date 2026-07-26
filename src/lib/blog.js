@@ -249,14 +249,6 @@ export async function getPostBySlug(slug) {
 }
 
 /**
- * Get posts by category
- */
-export function getPostsByCategory(category) {
-  const allPosts = getAllPosts();
-  return allPosts.filter((post) => post.category === category);
-}
-
-/**
  * Get posts by tag
  */
 export function getPostsByTag(tag) {
