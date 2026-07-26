@@ -8,6 +8,7 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import rehypeSlug from 'rehype-slug';
+import { SITE_URL } from './constants.js';
 import dockerfile from 'highlight.js/lib/languages/dockerfile';
 import javascript from 'highlight.js/lib/languages/javascript';
 import json from 'highlight.js/lib/languages/json';
@@ -140,6 +141,23 @@ export function getAllPosts() {
     });
 
   return allPostsData;
+}
+
+/**
+ * Filter posts down to those eligible for the on-site feeds (rss.xml and
+ * sitemap.xml). A cross-posted article whose `canonical` points to another
+ * domain (dev.to, hashnode, ...) is intentionally excluded so the feeds only
+ * advertise content this site is the canonical source for. Drafts are already
+ * removed by getAllPosts().
+ *
+ * Accepts an explicit list so it can be unit-tested without the filesystem;
+ * defaults to getAllPosts() for the route handlers.
+ */
+export function getFeedEligiblePosts(posts = getAllPosts()) {
+  return posts.filter((post) => {
+    if (!post.canonical) return true;
+    return post.canonical.startsWith(SITE_URL);
+  });
 }
 
 /**

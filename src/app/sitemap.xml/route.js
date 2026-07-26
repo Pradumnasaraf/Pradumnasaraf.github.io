@@ -1,20 +1,14 @@
 import { SITE_URL } from '../../lib/constants.js';
 import { sitemapPages } from '../sitemap/data.js';
-import { getAllPosts, getAllTags } from '../../lib/blog.js';
+import { getFeedEligiblePosts, getAllTags } from '../../lib/blog.js';
 
 export async function GET() {
   const baseUrl = SITE_URL;
   const currentDate = new Date().toISOString().split('T')[0];
 
-  // Get all blog posts (excluding drafts and reposted content with canonical URLs)
-  const allPosts = getAllPosts();
-
-  // Filter out reposted content (posts with canonical URLs pointing elsewhere)
-  const originalPosts = allPosts.filter((post) => {
-    // Only include posts that don't have a canonical URL, or have canonical pointing to this site
-    if (!post.canonical) return true;
-    return post.canonical.startsWith(baseUrl);
-  });
+  // Drafts and articles canonicalized to another domain are excluded here
+  // (see getFeedEligiblePosts).
+  const originalPosts = getFeedEligiblePosts();
 
   // Generate sitemap entries for static pages. Pages can pin an explicit
   // lastmod via sitemap/data.js; otherwise we report the current build date
