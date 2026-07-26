@@ -3,7 +3,7 @@ title: 'Build a Hello World API with Go and Mux'
 excerpt: 'Learn how to build a simple Hello World API using Mux in Go. Follow step-by-step instructions to create your own API'
 date: '2023-12-31'
 author: 'Pradumna Saraf'
-category: 'go'
+category: 'golang'
 tags: ['go', 'opensource', 'apis', 'mux']
 thumbnail: '/blog-images/go-api-with-mux/thumbnail.png'
 draft: false

@@ -164,7 +164,7 @@
   {
     "id": "devops",
     "name": "DevOps",
-    "stars": 3238,
+    "stars": 3249,
     "repoUrl": "https://github.com/Pradumnasaraf/DevOps",
     "url": "https://devops.pradumnasaraf.dev",
     "problem": "I created this repository to keep my learning, notes, and code in one place for various tools in DevOps. Now, it's helping thousands of learners, practitioners, and professionals every day in their DevOps journey.",
@@ -193,7 +193,7 @@
     "name": "OctoUser",
     "stars": 5,
     "repoUrl": "https://github.com/Pradumnasaraf/OctoUser",
-    "url": "https://pradumnasaraf.dev/OctoUser",
+    "url": "https://pradumnasaraf.github.io/OctoUser",
     "problem": "Find info about a GitHub user.",
     "technologies": ["CSS"]
   },
