@@ -75,7 +75,7 @@ const CVPage = () => {
               <p>
                 <FaTwitter />{' '}
                 <a
-                  href="https://twitter.com/pradumna_saraf"
+                  href="https://x.com/pradumna_saraf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

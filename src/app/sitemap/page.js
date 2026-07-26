@@ -139,9 +139,9 @@ const SitemapPage = () => {
                       <FaExternalLinkAlt className="text-2xl text-gray-600 group-hover:text-blue-600 transition-colors" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+                      <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                         {link.title}
-                      </h4>
+                      </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
                         {link.description}
                       </p>
@@ -158,12 +158,12 @@ const SitemapPage = () => {
 
         {/* Technical Information */}
         <div className="bg-white rounded-lg border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">
             Technical Information
-          </h3>
+          </h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 text-sm">
             <div>
-              <h4 className="font-medium text-gray-800 mb-2">Main Sitemap</h4>
+              <h3 className="font-medium text-gray-800 mb-2">Main Sitemap</h3>
               <p className="text-gray-600 mb-2">
                 XML sitemap for search engines:
               </p>
@@ -177,7 +177,7 @@ const SitemapPage = () => {
               </a>
             </div>
             <div>
-              <h4 className="font-medium text-gray-800 mb-2">Sitemap Index</h4>
+              <h3 className="font-medium text-gray-800 mb-2">Sitemap Index</h3>
               <p className="text-gray-600 mb-2">Comprehensive sitemap index:</p>
               <a
                 href="/sitemap-index.xml"
@@ -189,7 +189,7 @@ const SitemapPage = () => {
               </a>
             </div>
             <div>
-              <h4 className="font-medium text-gray-800 mb-2">Image Sitemap</h4>
+              <h3 className="font-medium text-gray-800 mb-2">Image Sitemap</h3>
               <p className="text-gray-600 mb-2">Photography and images:</p>
               <a
                 href="/sitemap-images.xml"
@@ -201,7 +201,7 @@ const SitemapPage = () => {
               </a>
             </div>
             <div>
-              <h4 className="font-medium text-gray-800 mb-2">Video Sitemap</h4>
+              <h3 className="font-medium text-gray-800 mb-2">Video Sitemap</h3>
               <p className="text-gray-600 mb-2">Speaking recordings:</p>
               <a
                 href="/sitemap-videos.xml"
@@ -213,7 +213,7 @@ const SitemapPage = () => {
               </a>
             </div>
             <div>
-              <h4 className="font-medium text-gray-800 mb-2">RSS Feed</h4>
+              <h3 className="font-medium text-gray-800 mb-2">RSS Feed</h3>
               <p className="text-gray-600 mb-2">Blog posts and content:</p>
               <a
                 href="/rss.xml"
@@ -225,7 +225,7 @@ const SitemapPage = () => {
               </a>
             </div>
             <div>
-              <h4 className="font-medium text-gray-800 mb-2">Robots.txt</h4>
+              <h3 className="font-medium text-gray-800 mb-2">Robots.txt</h3>
               <p className="text-gray-600 mb-2">Search engine directives:</p>
               <a
                 href="/robots.txt"
