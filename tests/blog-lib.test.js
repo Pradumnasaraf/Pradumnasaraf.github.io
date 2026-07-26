@@ -7,7 +7,8 @@ import {
   getFeedEligiblePosts,
   processMarkdown,
 } from '../src/lib/blog.js';
-import { SITE_URL } from '../src/lib/constants.js';
+import { getThumbnailUrl } from '../src/lib/blog-utils.js';
+import { OG_IMAGE_URL, SITE_URL } from '../src/lib/constants.js';
 
 test('getAllPosts returns sorted, non-empty blog post list', () => {
   const posts = getAllPosts();
@@ -74,6 +75,32 @@ test('getFeedEligiblePosts on real content excludes any cross-posted articles', 
       );
     }
   }
+});
+
+test('getThumbnailUrl falls back to the generic OG image when unset', () => {
+  assert.equal(getThumbnailUrl(), OG_IMAGE_URL);
+  assert.equal(getThumbnailUrl(''), OG_IMAGE_URL);
+});
+
+test('getThumbnailUrl returns absolute URLs unchanged', () => {
+  const abs = 'https://cdn.example.com/a.png';
+  assert.equal(getThumbnailUrl(abs), abs);
+  assert.equal(
+    getThumbnailUrl('http://example.com/b.png'),
+    'http://example.com/b.png'
+  );
+});
+
+test('getThumbnailUrl makes relative paths absolute against SITE_URL', () => {
+  // Leading-slash and bare paths both resolve to a single-slash absolute URL.
+  assert.equal(
+    getThumbnailUrl('/blog-images/x/thumbnail.png'),
+    `${SITE_URL}/blog-images/x/thumbnail.png`
+  );
+  assert.equal(
+    getThumbnailUrl('blog-images/x/thumbnail.png'),
+    `${SITE_URL}/blog-images/x/thumbnail.png`
+  );
 });
 
 test('processMarkdown sanitizes unsafe HTML while preserving safe HTML', async () => {
