@@ -51,46 +51,55 @@ export default function LinksPage() {
   const socialLinks = [
     {
       id: 'twitter',
+      label: 'X',
       url: 'https://x.com/pradumna_saraf',
       icon: FaTwitter,
     },
     {
       id: 'linkedin',
+      label: 'LinkedIn',
       url: 'https://linkedin.com/in/pradumnasaraf',
       icon: FaLinkedin,
     },
     {
       id: 'github',
+      label: 'GitHub',
       url: 'https://github.com/Pradumnasaraf',
       icon: FaGithub,
     },
     {
       id: 'bluesky',
+      label: 'Bluesky',
       url: 'https://bsky.app/profile/pradumnasaraf.dev',
       icon: SiBluesky,
     },
     {
       id: 'threads',
+      label: 'Threads',
       url: 'https://threads.net/@pradumnasaraf',
       icon: SiThreads,
     },
     {
       id: 'instagram',
+      label: 'Instagram',
       url: 'https://instagram.com/pradumnasaraf',
       icon: FiInstagram,
     },
     {
       id: 'youtube',
+      label: 'YouTube',
       url: 'https://youtube.com/@pradumnasaraf',
       icon: FiYoutube,
     },
     {
       id: 'sessionize',
+      label: 'Sessionize',
       url: 'https://sessionize.com/pradumnasaraf/',
       icon: SiSessionize,
     },
     {
       id: 'email',
+      label: 'Email',
       url: 'mailto:pradumnasaraf@gmail.com',
       icon: FiMail,
     },
@@ -215,7 +224,11 @@ export default function LinksPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`social-icon-link ${social.id === 'bluesky' || social.id === 'threads' || social.id === 'twitter' || social.id === 'linkedin' || social.id === 'sessionize' || social.id === 'github' ? 'social-icon-filled' : 'social-icon-stroke'}`}
-                    aria-label={social.id}
+                    aria-label={
+                      social.id === 'email'
+                        ? 'Email Pradumna Saraf'
+                        : `Visit Pradumna Saraf on ${social.label}`
+                    }
                   >
                     <IconComponent className="social-icon" />
                   </a>
