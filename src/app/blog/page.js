@@ -5,6 +5,7 @@ import { metadata } from './metadata';
 import BlogSearch from '@/components/BlogSearch';
 import BlogPostExplorer from '@/components/BlogPostExplorer';
 import BlogThemeToggle from '@/components/BlogThemeToggle';
+import BackToTopButton from '@/components/BackToTopButton';
 
 export { metadata };
 
@@ -66,6 +67,8 @@ export default function BlogPage() {
           <BlogPostExplorer posts={posts} />
         )}
       </div>
+
+      <BackToTopButton />
     </>
   );
 }

@@ -898,36 +898,7 @@
   flex-wrap: wrap;
 }
 
-/* Back-to-top button */
-.back-to-top-button {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 42px;
-  height: 42px;
-  border: 1px solid var(--color-fg-secondary);
-  border-radius: 50%;
-  background: var(--color-surface);
-  color: var(--color-fg-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  transition: all 0.2s ease;
-}
-
-.back-to-top-button:hover {
-  background: var(--color-fg-secondary);
-  color: var(--color-surface);
-  transform: translateY(-2px);
-}
-
-.back-to-top-button:focus-visible {
-  outline: 2px solid var(--color-fg-secondary);
-  outline-offset: 2px;
-}
+/* Base back-to-top styles (incl. the scroll-progress ring) live in globals.css. */
 
 .blog-post-content {
   font-size: 1.125rem;
@@ -2256,15 +2227,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .back-to-top-button {
-    right: 14px;
-    bottom: 14px;
-    width: 40px;
-    height: 40px;
-  }
-}
-
 @media (max-width: 480px) {
   .related-post-link {
     padding: 0.9rem;
@@ -2272,13 +2234,6 @@
 
   .related-post-card-title {
     font-size: 0.95rem;
-  }
-
-  .back-to-top-button {
-    right: 12px;
-    bottom: 12px;
-    width: 38px;
-    height: 38px;
   }
 }
 
@@ -2812,7 +2767,12 @@ html[data-blog-theme='dark'] .blog-theme-root .back-to-top-button {
 }
 
 html[data-blog-theme='dark'] .blog-theme-root .back-to-top-button:hover {
-  background-color: #262a33;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+html[data-blog-theme='dark'] .blog-theme-root .back-to-top-progress-track,
+html[data-blog-theme='dark'] .blog-theme-root .back-to-top-progress-bar {
+  stroke: #e6e8eb;
 }
 
 /* Smooth transitions for the most visible surfaces */

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import './globals.css';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import KonamiGame from '@/components/KonamiGame';
+import BackToTopButton from '@/components/BackToTopButton';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -304,6 +305,8 @@ export default function Home() {
       <main>
         {showGame && <KonamiGame onClose={() => setShowGame(false)} />}
       </main>
+
+      <BackToTopButton />
     </>
   );
 }
