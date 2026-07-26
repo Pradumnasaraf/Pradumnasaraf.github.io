@@ -77,7 +77,14 @@ const ImageItem = ({ src, alt, onClick }) => {
 };
 
 // Enhanced FullScreenModal Component
-const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
+const FullScreenModal = ({
+  isOpen,
+  imageSrc,
+  imageAlt,
+  onClose,
+  onPrev,
+  onNext,
+}) => {
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (!isOpen) return;
@@ -164,7 +171,7 @@ const FullScreenModal = ({ isOpen, imageSrc, onClose, onPrev, onNext }) => {
       </div>
       <Image
         src={imageSrc}
-        alt="Full Screen"
+        alt={imageAlt || 'Full screen photograph'}
         width={1920}
         height={1080}
         unoptimized
@@ -339,6 +346,7 @@ export default function Home() {
         <FullScreenModal
           isOpen={isModalOpen}
           imageSrc={modalImageSrc}
+          imageAlt={images[currentImageIndex]?.alt}
           onClose={closeModal}
           onPrev={showPrevImage}
           onNext={showNextImage}
