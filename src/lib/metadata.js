@@ -1,4 +1,4 @@
-import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from './constants';
+import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from './constants.js';
 
 const ROBOTS = {
   full: {
