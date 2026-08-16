@@ -1,5 +1,14 @@
 [
   {
+    "title": "Logitech Luminary",
+    "date": "August, 2026",
+    "description": "I was named a Logitech Luminary for my work in the developer community. I create content around developer tooling, workflows, and the setups people use to build software. Looking forward to working with the Logitech team.",
+    "image": {
+      "src": "/timeline-logo/logitech.png",
+      "alt": "Logitech"
+    }
+  },
+  {
     "title": "Technical Reviewer for a Packt Book",
     "date": "July, 2026",
     "description": "I was one of the technical reviewers for a book by Packt on running AI in production with Docker. It was my first time reviewing a book, and I enjoyed being part of it from the early stages to seeing it published. Now I want to write one of my own.",
