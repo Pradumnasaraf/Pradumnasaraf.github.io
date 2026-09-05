@@ -1,7 +1,7 @@
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
-  title: 'Site Map | Pradumna Saraf',
+  title: 'Pradumna Saraf | Sitemap',
   description:
     'Navigate through all pages and resources on pradumnasaraf.dev. Find CV, timeline, speaking engagements, toolkit, photography, and more.',
   path: '/sitemap',

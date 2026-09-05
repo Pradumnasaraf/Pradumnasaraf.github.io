@@ -1,7 +1,7 @@
 import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
 
 export const metadata = {
-  title: 'Page Not Found | Pradumna Saraf',
+  title: 'Pradumna Saraf | Page Not Found',
   description:
     "The page you're looking for doesn't exist. Please check the URL or return to the homepage.",
   robots: {

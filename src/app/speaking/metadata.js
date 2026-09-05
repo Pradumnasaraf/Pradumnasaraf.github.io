@@ -1,7 +1,7 @@
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
-  title: "Pradumna's Speaking",
+  title: 'Pradumna Saraf | Speaking',
   description:
     "My speaking engagements - conferences, meetups, and webinars I've been part of.",
   path: '/speaking',

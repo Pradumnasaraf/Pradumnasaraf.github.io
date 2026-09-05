@@ -1,7 +1,7 @@
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
-  title: "Pradumna's Blog",
+  title: 'Pradumna Saraf | Blog',
   description:
     'Technical articles and tutorials about Docker, Kubernetes, DevOps, and cloud-native tech.',
   path: '/blog',
