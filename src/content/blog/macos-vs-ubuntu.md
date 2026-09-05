@@ -1,6 +1,6 @@
 ---
 title: 'macOS vs Ubuntu: GitHub Actions Runners'
-excerpt: 'macOS vs Ubuntu: GitHub Actions Runners'
+excerpt: 'GitHub made macOS runners free for public repos. I ran the same workflow on both to see whether switching is actually worth it.'
 date: '2024-04-05'
 author: 'Pradumna Saraf'
 category: 'operating-system'

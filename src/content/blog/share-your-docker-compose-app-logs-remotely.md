@@ -1,6 +1,6 @@
 ---
 title: 'Share your Docker Compose app logs remotely'
-excerpt: 'Share your Docker Compose app logs remotely'
+excerpt: 'Stop trading terminal screenshots when a teammate hits a bug. Share your local Compose app logs over a URL with the Livecycle Docker extension.'
 date: '2024-01-11'
 author: 'Pradumna Saraf'
 category: 'docker'

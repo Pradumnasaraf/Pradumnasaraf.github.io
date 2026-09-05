@@ -1,6 +1,6 @@
 ---
 title: 'Share your Docker Compose app terminal remotely'
-excerpt: 'Share your Docker Compose app terminal remotely'
+excerpt: 'Hand someone a real terminal into your local Compose app instead of dictating commands over a call, using the Livecycle Docker extension.'
 date: '2023-12-28'
 author: 'Pradumna Saraf'
 category: 'docker'
