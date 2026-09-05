@@ -3,3 +3,6 @@ dist/
 *.min.js
 *.lock
 node_modules/
+# Blog posts are hand-formatted; Prettier rewrites list indentation
+# and would churn every published post.
+src/content/blog/
