@@ -1,9 +1,10 @@
 User-agent: *
 Allow: /
 
-# Disallow admin and API routes
+# Disallow admin and API routes.
+# /_next/ is deliberately left crawlable: it serves the CSS and JS Google needs
+# to render the page, and /_next/image serves every optimized image.
 Disallow: /api/
-Disallow: /_next/
 Disallow: /admin/
 
 # Sitemap locations

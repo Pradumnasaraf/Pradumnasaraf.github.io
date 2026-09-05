@@ -13,9 +13,9 @@
 - Speaking: https://pradumnasaraf.dev/speaking
 - Toolkit: https://pradumnasaraf.dev/toolkit
 - Timeline: https://pradumnasaraf.dev/timeline
-- CV: https://pradumnasaraf.dev/cv
 - Links: https://pradumnasaraf.dev/links
 - Photography: https://pradumnasaraf.dev/photography
+- Travel: https://pradumnasaraf.dev/travel
 
 ## Feeds And Discovery
 
@@ -28,3 +28,4 @@
 - The main authored long-form content is published under `/blog`.
 - Some reposted articles may point to an external canonical URL.
 - The `/contact` route opens an email client and is not intended to be indexed as a content page.
+- The `/cv` route is served with `noindex` on purpose and is deliberately left out of the list above.

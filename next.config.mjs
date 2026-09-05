@@ -52,6 +52,17 @@ const nextConfig = {
   },
   async headers() {
     return [
+      // /cv and /contact already send `noindex` in their metadata. The header
+      // repeats it so the directive also applies to non-HTML fetches and to
+      // crawlers that never parse the document head.
+      {
+        source: '/cv',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+      {
+        source: '/contact',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
       {
         source: '/(.*)',
         headers: [
