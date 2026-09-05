@@ -9,7 +9,6 @@ thumbnail: '/blog-images/5-ways-to-find-projects-in-open-source/thumbnail.png'
 draft: false
 ---
 
-
 One of the challenges beginners face is finding an Open Source project to contribute to. The best way to start contributing is by participating in friends and community projects.
 
 In the blog, we will explore some of the built-in GitHub functionalities to find great projects. We will also look at tools developed by **EddieHub**.
@@ -56,7 +55,3 @@ In the blog, we will explore some of the built-in GitHub functionalities to find
     ![Quine contributor dashboard listing repositories ranked by how many good starter issues they have](/blog-images/5-ways-to-find-projects-in-open-source/image-06.png)
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. Thanks for reading and have a great day!
-
-%[https://hashnode.com/@Pradumnasaraf] 
-
-%[https://blog.pradumnasaraf.dev/newsletter]

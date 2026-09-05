@@ -9,7 +9,6 @@ thumbnail: '/blog-images/go-api-with-mux/thumbnail.png'
 draft: false
 ---
 
-
 Are you looking to learn how to build a simple API using Mux in Go? Look no further! In this blog post, we will walk through step-by-step instructions on how to create your own "Hello, World!" API using Mux in Go. We will cover the prerequisites you need, setting up the project, writing the logic, and finally running and testing the API. By the end of this tutorial, you will have a good understanding of how to use Mux in Go to build simple APIs. So, let's get started!
 
 ### **Prerequisites**
@@ -140,7 +139,3 @@ Now, open a web browser and navigate to **http://localhost:8080**\*\*.\*\* You w
 **Congratulations to you for building your own "Hello, World!" API using Mux! 🎉**
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. If you have any questions or feedback, feel free to leave a comment below. Thanks for reading and have a great day!
-
-%[https://hashnode.com/@Pradumnasaraf] 
-
-%[https://blog.pradumnasaraf.dev/newsletter]

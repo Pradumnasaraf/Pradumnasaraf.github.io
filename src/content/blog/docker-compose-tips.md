@@ -9,7 +9,6 @@ thumbnail: '/blog-images/docker-compose-tips/thumbnail.png'
 draft: false
 ---
 
-
 In this post, you will learn how to make the most of Docker Compose. Discover the art of customizing Dockerfiles, keeping your environment variables secure, and building images with ease.
 
 1. **Customizing Dockerfile Name and Path:** We can easily customize the name and directory of our Dockerfile using the context and Dockerfile options in Docker Compose. By default, Docker Compose looks for a Dockerfile named Dockerfile in the root directory of the context.
@@ -48,7 +47,3 @@ In this post, you will learn how to make the most of Docker Compose. Discover th
     
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. If you have any questions or feedback, feel free to leave a comment below. Thanks for reading and have a great day!
-
-%[https://hashnode.com/@Pradumnasaraf] 
-
-%[https://blog.pradumnasaraf.dev/newsletter]

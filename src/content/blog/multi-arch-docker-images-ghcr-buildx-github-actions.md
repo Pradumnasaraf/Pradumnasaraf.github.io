@@ -9,14 +9,13 @@ thumbnail: '/blog-images/multi-arch-docker-images-ghcr-buildx-github-actions/thu
 draft: false
 ---
 
-
 The industry has seen a huge shift in machines towards using ARM base CPUs like Apple Silicon to Snapdragon X from X86, and it's become essential to build images that support multiple architectures and run containers that are compatible and aligned with that architecture without facing any bottlenecks.
 
 Using Docker Buildx, we can very easily build multi-platform container images. All builds are executed via `buildx` run with the Moby Buildkit builder engine. You can read more in detail [here](https://www.docker.com/blog/faster-multi-platform-builds-dockerfile-cross-compilation-guide).
 
 In the blog, we will learn how to automate the process of building a Multi-Arch image and pushing it to GitHub Container Registry (GHCR) using a GitHub workflow/Actions when there is a change in the repo. Also, I recently published a similar blog for publishing the image to GHCR. You can read it here:
 
-%[https://blog.pradumnasaraf.dev/how-to-publish-a-golang-package] 
+[How to Publish a Golang Package](/blog/how-to-publish-a-golang-package)
 
 ### Prerequisite
 

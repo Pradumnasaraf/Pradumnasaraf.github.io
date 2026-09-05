@@ -9,7 +9,6 @@ thumbnail: '/blog-images/6-must-know-docker-commands/thumbnail.png'
 draft: false
 ---
 
-
 Docker is an amazing piece of technology. There are tons of commands to remember, and using the right set of commands can ease down and optimize the workflow.
 
 In this blog post, we will share Docker tips and tricks to make your container management easier.
@@ -52,7 +51,3 @@ In this blog post, we will share Docker tips and tricks to make your container m
     
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. If you have any questions or feedback, feel free to leave a comment below. Thanks for reading and have a great day!
-
-%[https://hashnode.com/@Pradumnasaraf] 
-
-%[https://blog.pradumnasaraf.dev/newsletter]

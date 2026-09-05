@@ -9,7 +9,6 @@ thumbnail: '/blog-images/ways-to-get-more-contributors-to-your-open-source-proje
 draft: false
 ---
 
-
 One of the issues faced by Open Source project owners/maintainers is not getting enough contributors to their projects. The problem is not that there are fewer contributors, but the project's presentation and structure need to be improved to attract more new contributors.
 
 In this blog, we will see how we can follow some good practices and use GitHub inbuild functionality to make the project more visible, inclusive, and welcoming for new contributors
@@ -78,7 +77,3 @@ In this blog, we will see how we can follow some good practices and use GitHub i
 **In the end, if your project adds value and is inclusive, people will continue to show up. Don't focus solely on stars, as having more stars doesn't necessarily mean more contributors. Instead, focus on improving the quality of your project, and as a byproduct, people will naturally be more inclined to contribute to it, as well as Star it.**
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. Thanks for reading and have a great day!
-
-%[https://hashnode.com/@Pradumnasaraf] 
-
-%[https://blog.pradumnasaraf.dev/newsletter]

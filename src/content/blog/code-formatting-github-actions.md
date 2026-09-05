@@ -9,7 +9,6 @@ thumbnail: '/blog-images/code-formatting-github-actions/thumbnail.png'
 draft: false
 ---
 
-
 Checking the format manually can be a tedious task, so automating this process can be highly beneficial. In this blog post, we will explore how to use GitHub Actions to automatically format your JavaScript code after every change.
 
 This will work for projects with a simple `index.js` file, and there is no requirement for a Node.js application with a package.json file.
@@ -96,7 +95,3 @@ Now, whenever there is a push (either through commit or direct push) or a pull r
 Congratulations on successfully automating JavaScript Code Formatting Using GitHub Actions and Prettier**🎉**
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. If you have any questions or feedback, feel free to leave a comment below. Thanks for reading and have a great day!
-
-%[https://hashnode.com/@Pradumnasaraf] 
-
-%[https://blog.pradumnasaraf.dev/newsletter]

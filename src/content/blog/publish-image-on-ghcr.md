@@ -9,7 +9,6 @@ thumbnail: '/blog-images/publish-image-on-ghcr/thumbnail.png'
 draft: false
 ---
 
-
 GitHub provides a registry called GitHub Container Registry (GHCR) to host your Docker images, which is a great alternative to DockerHub. The blog post offers a tutorial on how to build and publish Docker images to the registry using GitHub Actions.
 
 Throughout the blog, GHCR will be used instead of the complete name.
@@ -190,7 +189,3 @@ This command will download the Docker image from GHCR and run it in a container.
 **Congratulations on successfully building and pushing a Docker image to GHCR using GitHub Actions!** **🎉**
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. If you have any questions or feedback, feel free to leave a comment below. Thanks for reading and have a great day!
-
-%[https://hashnode.com/@Pradumnasaraf] 
-
-%[https://blog.pradumnasaraf.dev/newsletter]

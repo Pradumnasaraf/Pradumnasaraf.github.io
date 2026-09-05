@@ -9,7 +9,6 @@ thumbnail: '/blog-images/dockerhub-githubactions/thumbnail.png'
 draft: false
 ---
 
-
 Automating Docker image building and pushing to DockerHub can bring significant benefits to your development process, including increased consistency, efficiency, version control, ease of deployment, and scalability.  
   
 In this tutorial, we will learn how to automate the process of building and pushing a Docker image to DockerHub using GitHub Actions.
@@ -171,7 +170,3 @@ docker run {DOCKERHUB_USERNAME}/hello-world
 **Congratulations on successfully building and pushing a Docker image to DockerHub using GitHub Actions!** **🎉**
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. If you have any questions or feedback, feel free to leave a comment below. Thanks for reading and have a great day!
-
-%[https://hashnode.com/@Pradumnasaraf] 
-
-%[https://blog.pradumnasaraf.dev/newsletter]

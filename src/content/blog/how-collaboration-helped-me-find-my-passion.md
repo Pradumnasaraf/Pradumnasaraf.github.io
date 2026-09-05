@@ -9,7 +9,6 @@ thumbnail: '/blog-images/how-collaboration-helped-me-find-my-passion/thumbnail.p
 draft: false
 ---
 
-
 Collaboration is all about growing and learning together. Everyone has their expertise, and by collaborating, we can share our knowledge and experiences so that other people can learn and grow. In this Blog, I have taken a storytelling approach to connect more with the audience and unleash how collaboration helps me connect with amazing people and find passion like Open Source, building API, and CLI tools. Before we begin with the story, let's first understand collaboration with an example.
 
 Let's talk about an Open Source project. It's a pure collaboration of different minds. Somebody is good at the frontend, some at the backend part, and some are great at designing. When people from different niches come and work together and contribute, that is what makes a project complete.
@@ -65,5 +64,3 @@ Collaboration can happen in any place. It can be via email or with some person y
 > "Collaboration First, Code Second" - **EddieHub**
 
 Thank you so much for reading. Do [Follow](https://hashnode.com/@Pradumnasaraf) and [Subscribe](https://blog.pradumnasaraf.dev/newsletter) to the Newsletter (Blog) to get notified when I post.
-
-%[https://hashnode.com/@Pradumnasaraf]
