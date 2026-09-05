@@ -160,7 +160,7 @@
     "location": "Virtual",
     "topic": "Getting started with Postman Flows and visualising the response better.",
     "technologies": ["Postman"],
-    "slides": "https://github.com/Pradumnasaraf/Speaking/tree/main/API%20Week%20Postman%20-%202023/soss.pdf",
+    "slides": null,
     "recording": "https://www.youtube.com/live/GadKONBY3l8?si=O4j3I3ut2nfMgG6K",
     "eventUrl": "https://github.com/Pradumnasaraf/Speaking/tree/main/API%20Week%20Postman%20-%202023"
   },

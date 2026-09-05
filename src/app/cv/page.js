@@ -163,18 +163,7 @@ const CVPage = () => {
               <p className="location">India · Remote</p>
               <ul>
                 <li>{`Built a roadmap and executed it to simplify the offering and make the entire product open source, while improving messaging around it and increasing adoption.`}</li>
-                <li>
-                  {`Planned and hosted an online global hackathon, `}
-                  <a
-                    href="https://hackatra.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-link"
-                  >
-                    Hackatra
-                  </a>
-                  {`, with over 300 participants, and partnered with companies like OpenAI, AI Future Labs, etc.`}
-                </li>
+                <li>{`Planned and hosted Hackatra, an online global hackathon, with over 300 participants, and partnered with companies like OpenAI, AI Future Labs, etc.`}</li>
                 <li>{`Hosted online talk sessions on Twitter and LinkedIn, bringing industry experts to speak and leading discussions on various topics and technologies.`}</li>
               </ul>
             </div>

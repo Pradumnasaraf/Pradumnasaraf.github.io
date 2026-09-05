@@ -13,7 +13,7 @@
     "name": "Aviation Incidents",
     "stars": 2,
     "repoUrl": "https://github.com/Pradumnasaraf/aviationincidents",
-    "url": "https://aviationincidents.xyz",
+    "url": null,
     "problem": "Aviation Incidents helps track and share aviation-related incidents from across the globe, with the goal of making air travel safer and more transparent for everyone.",
     "technologies": ["TypeScript"]
   },
@@ -47,7 +47,7 @@
   {
     "id": "cardvault",
     "name": "CardVault",
-    "stars": 0,
+    "stars": 1,
     "repoUrl": "https://github.com/Pradumnasaraf/CardVault",
     "url": "https://github.com/Pradumnasaraf/CardVault",
     "problem": "CardVault is a clean, secure iOS card wallet built for local-first privacy. Your card data stays on your iPhone and is never uploaded to a backend or cloud service.",
@@ -65,7 +65,7 @@
   {
     "id": "aviationstack-mcp",
     "name": "AviationStack MCP",
-    "stars": 24,
+    "stars": 25,
     "repoUrl": "https://github.com/Pradumnasaraf/aviationstack-mcp",
     "url": "https://pypi.org/project/aviationstack-mcp",
     "problem": "An MCP server using the AviationStack API to fetch real-time flight data including airline flights, airport schedules, future flights and aircraft types.",
@@ -146,7 +146,7 @@
   {
     "id": "taskit",
     "name": "TaskIT",
-    "stars": 9,
+    "stars": 8,
     "repoUrl": "https://github.com/Pradumnasaraf/taskit",
     "url": "https://github.com/Pradumnasaraf/taskit",
     "problem": "Task manager that allows you to create, edit, delete and list tasks from the command line.",
@@ -164,7 +164,7 @@
   {
     "id": "devops",
     "name": "DevOps",
-    "stars": 3249,
+    "stars": 3260,
     "repoUrl": "https://github.com/Pradumnasaraf/DevOps",
     "url": "https://devops.pradumnasaraf.dev",
     "problem": "I created this repository to keep my learning, notes, and code in one place for various tools in DevOps. Now, it's helping thousands of learners, practitioners, and professionals every day in their DevOps journey.",
@@ -218,7 +218,7 @@
   {
     "id": "opensource-api",
     "name": "OpenSource API",
-    "stars": 31,
+    "stars": 32,
     "repoUrl": "https://github.com/Pradumnasaraf/OpenSource-API",
     "url": "https://opensourceapi.vercel.app",
     "problem": "A free and public Open Source API.",
@@ -227,7 +227,7 @@
   {
     "id": "open-source-with-pradumna",
     "name": "Open Source with Pradumna",
-    "stars": 832,
+    "stars": 833,
     "repoUrl": "https://github.com/Pradumnasaraf/open-source-with-pradumna",
     "url": "https://os.pradumnasaraf.dev",
     "problem": "Open Source guide - Contains resources and materials to learn and get yourself started with Open Source, Git, and GitHub.",
@@ -256,7 +256,7 @@
     "name": "Snippets",
     "stars": 3,
     "repoUrl": "https://github.com/Pradumnasaraf/Snippets",
-    "url": "http://snippets.pradumnasaraf.dev",
+    "url": "https://snippets.pradumnasaraf.dev",
     "problem": "Contains code and commands.",
     "technologies": ["JavaScript", "Next.js", "React"]
   },
@@ -274,7 +274,7 @@
     "name": "Botchain",
     "stars": 18,
     "repoUrl": "https://github.com/Pradumnasaraf/Botchain",
-    "url": "https://twitter.com/IAmDogeBot",
+    "url": null,
     "problem": "Botchain is a financial Twitter bot, tweets out latest ticker price after a fixed interval of time. Build using Python and Tweepy.",
     "technologies": ["Python"]
   },
