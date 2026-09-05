@@ -56,7 +56,7 @@ After you execute the above command it will add the dependencies to `go.mod` the
 
 Now your file/folder structure will look something like this (If you are in VSCode)
 
-![](/blog-images/go-api-with-mux/image-01.png)
+![Editor showing the go.sum file after running go get for the gorilla/mux package in the terminal](/blog-images/go-api-with-mux/image-01.png)
 
 ### Writing the logic
 
@@ -131,11 +131,11 @@ go run ./
 
 You will get promoted with a message in the terminal. Something like this
 
-![](/blog-images/go-api-with-mux/image-02.png)
+![Editor showing main.go with a mux router and a root handler, and the terminal output confirming the server started on port 8080](/blog-images/go-api-with-mux/image-02.png)
 
 Now, open a web browser and navigate to **http://localhost:8080**\*\*.\*\* You will welcome with a **Hello World!** message.
 
-![](/blog-images/go-api-with-mux/image-03.png)
+![Browser at localhost:8080 displaying the plain text response Hello World](/blog-images/go-api-with-mux/image-03.png)
 
 **Congratulations to you for building your own "Hello, World!" API using Mux! 🎉**
 

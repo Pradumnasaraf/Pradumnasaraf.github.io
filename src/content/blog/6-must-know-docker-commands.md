@@ -18,37 +18,37 @@ In this blog post, we will share Docker tips and tricks to make your container m
     
     To remove all images at once, you can use the following command. Please note that this command will not remove any images that are currently being used by running containers.
     
-    ![](/blog-images/6-must-know-docker-commands/image-01.png)
+    ![Code snippet of the docker rmi command combined with docker images to remove all images at once](/blog-images/6-must-know-docker-commands/image-01.png)
     
 2. **Cleaning up Containers**
     
     By using the `--rm` flag while running a container, it automatically cleans up the container and removes the file system when the container exits. It also removes the anonymous volumes associated with that container.
     
-    ![](/blog-images/6-must-know-docker-commands/image-02.png)
+    ![Code snippet of the docker run command with the --rm flag](/blog-images/6-must-know-docker-commands/image-02.png)
     
 3. **Renaming a Running Container**
     
     By default, Docker assigns a random name to a container when it is created. However, if you wish to change the name of a running container, you can use the following command. Replace `<container-name>` with the actual identifier or name of the container, and `<new-name>` with the desired new name.
     
-    ![](/blog-images/6-must-know-docker-commands/image-03.png)
+    ![Code snippet of the docker rename command taking a container name and a new name](/blog-images/6-must-know-docker-commands/image-03.png)
     
 4. **Removing Containers with Volumes**
     
     When creating a container, an unnamed volume is often created alongside it. To remove both the volume and the container simultaneously, you can use the `-v` flag with the `docker rm` command. Replace `<container-name>` with the identifier or name of the container you want to remove.
     
-    ![](/blog-images/6-must-know-docker-commands/image-04.png)
+    ![Code snippet of the docker rm command with the -v flag to also remove the container's volumes](/blog-images/6-must-know-docker-commands/image-04.png)
     
 5. **Removing all exited containers**
     
     To remove all exited containers in one go, you can use the following command:
     
-    ![](/blog-images/6-must-know-docker-commands/image-05.png)
+    ![Code snippet of the docker rm command combined with docker ps filtered on exited containers](/blog-images/6-must-know-docker-commands/image-05.png)
     
 6. **Checking Exposed and Forwarded Ports**
     
     To check the exposed and forwarded ports of a running container, you can use the following command. Replace `<container-name/id>` with the name of the container or id you want to inspect.
     
-    ![](/blog-images/6-must-know-docker-commands/image-06.png)
+    ![Code snippet of the docker port command taking a container name or id](/blog-images/6-must-know-docker-commands/image-06.png)
     
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. If you have any questions or feedback, feel free to leave a comment below. Thanks for reading and have a great day!

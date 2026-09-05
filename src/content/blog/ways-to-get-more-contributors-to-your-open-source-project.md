@@ -18,25 +18,25 @@ In this blog, we will see how we can follow some good practices and use GitHub i
     
     Building a community around your project is the best way to create awareness and establish a communication channel between you and other contributors. It can also promote collaborations and make it easier for contributors to seek help. You can create a community on platforms such as Discord, Slack, Telegram, or any other suitable platform. A great example of a community-driven project is LinkFree from [EddieHub](https://github.com/eddiehubCommunity).
     
-    [![](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-01.png)](https://github.com/EddieHubCommunity)
+    [![GitHub organization profile for the EddieHub community, showing its welcome README and pinned repositories](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-01.png)](https://github.com/EddieHubCommunity)
     
 2. Polished README
     
     The README is the most crucial part of your project. It serves as the landing page and is the first thing anyone sees when looking at your project. It should include a proper call-to-action, describing the aim and vision of your project and what you expect from the community. Having a demo of the project is always a huge plus. Creating a polished README takes time, but with time it will happen, and there is always room for improvement. Also, remember to keep it regularly updated, as nobody likes outdated information.
     
-    [![](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-02.gif)](https://github.com/Pradumnasaraf/LinkFree-CLI)
+    [![GitHub README for LinkFree CLI showing status badges, a terminal demo, a feature list and usage instructions](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-02.gif)](https://github.com/Pradumnasaraf/LinkFree-CLI)
     
 3. Community Standards and inclusivity
     
     Setting up things like a LICENSE, a Code of Conduct, contributing guidelines, and other community standards in the Community Standards section of a repository is a great way to demonstrate and ensure that a project has clear guidelines for communication and promotes inclusivity. Additionally, setting up issue templates allows issue and bug reporters, as well as contributors, to provide a well-structured format for explaining issues. This can help save time for both the reporters and the developers, and ensure that issues are addressed effectively.
     
-    ![](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-03.png)
+    ![GitHub Community Standards checklist with description, README, code of conduct, contributing, license and templates ticked off](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-03.png)
     
 4. Topics
     
     By adding topics to your project, you can make it more discoverable. Topics are essentially keywords or categories that help users find and filter relevant repositories based on their interests or expertise. GitHub also uses topics to recommend projects to users, and it has a search feature that allows users to search for projects based on topics. Adding topics is also a good way to let contributors know what your project is about and the technologies used in it.
     
-    ![](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-04.png)
+    ![GitHub repository sidebar with the project's topic tags highlighted below the description and website link](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-04.png)
     
 5. Issue labels
     
@@ -44,7 +44,7 @@ In this blog, we will see how we can follow some good practices and use GitHub i
     
     Using labels can also help make your project more discoverable. People also search for projects based on specific labels, and some third-party tools also use issue labels to suggest relevant projects.
     
-    ![](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-05.png)
+    ![GitHub issue list where each issue carries labels for goal, aspect, status and difficulty](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-05.png)
     
 6. Good First Issue.
     
@@ -52,13 +52,13 @@ In this blog, we will see how we can follow some good practices and use GitHub i
     
     However, it's important to keep in mind that the `good-first-issue` label should only be applied to issues that are truly suitable for beginners. Don't use the label solely for the sake of increasing traffic and visibility.
     
-    ![](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-06.png)
+    ![GitHub issue list with the good first issue label highlighted on several entries](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-06.png)
     
 7. Cloud development environments
     
     Setting up a local development environment can be a daunting task for new contributors and a significant barrier to entry for contributing to a project. Cloud development environments offer an excellent solution to make your project more accessible to contributors, as they enable contributors to work on your project without needing to install any dependencies. Popular cloud development environments include [Gitpod](https://gitpod.io/) and [GitHub Codespaces](https://github.com/features/codespaces). Additionally, we can make it easier for contributors to access our project in Gitpod by adding a button to our README file.
     
-    ![](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-07.png)
+    ![Project README section on developing the API, with the Open in Gitpod button highlighted above the Docker Compose and local setup instructions](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-07.png)
     
 8. Social media promotion
     
@@ -66,13 +66,13 @@ In this blog, we will see how we can follow some good practices and use GitHub i
     
     It's good to regularly share updates with the community and keep them informed about the progress of your project. Also, when you open any `good-first-issue`, share it with the community to let new contributors know about it and encourage their participation.
     
-    ![](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-08.png)
+    ![Social media post announcing around ten non-code good first issues and explaining how to claim one](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-08.png)
     
 9. Appreciation
     
     Appreciating good work is important because it encourages others to do the same. There are many ways to show appreciation for contributors, such as giving them a shoutout on social media, adding their names to the README, or including their names in the release notes. Another incentive is to offer contributors the chance to become a maintainer of your project.
     
-    ![](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-09.png)
+    ![Social media post announcing LinkFree CLI v2.0.0, listing the new features and crediting a collaborator](/blog-images/ways-to-get-more-contributors-to-your-open-source-project/image-09.png)
     
 
 **In the end, if your project adds value and is inclusive, people will continue to show up. Don't focus solely on stars, as having more stars doesn't necessarily mean more contributors. Instead, focus on improving the quality of your project, and as a byproduct, people will naturally be more inclined to contribute to it, as well as Star it.**

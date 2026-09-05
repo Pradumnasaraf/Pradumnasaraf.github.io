@@ -39,7 +39,7 @@ sbx login
 
 It will open a browser for the Docker OAuth. It's a one-time thing.
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-01.png)
+![Terminal showing brew install of the sbx CLI, then sbx login reporting the signed-in user and a started daemon](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-01.png)
 
 ### Setting the network policy
 
@@ -55,7 +55,7 @@ You will be prompted to select a default network policy. Depending on how open o
 
 I will be selecting **Balanced**, as it is a good starting point to have and going forward, we can modify. Balanced by default allows AI provider APIs, package managers, code hosts, container registries, and common cloud services. And we can extend it by command. We will see later in the section.
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-02.png)
+![sbx policy reset prompting for a default network policy, listing Open, Balanced and Locked Down with Balanced selected](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-02.png)
 
 If we have chosen **Open**, it would allow all the traffic without any restriction. And **Locked Down** will lock all the outgoing traffic, and we need to explicitly allow everything we need. If we want to be really restrictive, Locked Down is the way.
 
@@ -67,7 +67,7 @@ sbx policy ls
 
 We get the output of all the domains that are allowed.
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-03.png)
+![sbx policy ls printing a table of active network policies with the AI service and package manager domains each one allows](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-03.png)
 
 ### Authenticating the agent
 
@@ -88,7 +88,7 @@ I know we still haven't discussed the project inside the sandbox, which is the n
 
 Once you execute the above command, it will prompt you to enter the secret. Enter the secret, and it will save it.
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-04.png)
+![sbx secret set prompting for a secret and confirming it was saved for the openai service in global scope](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-04.png)
 
 Now, to list all the credentials and their scope, execute the command below:
 
@@ -102,7 +102,7 @@ And to remove a credential:
 sbx secret rm -g openai
 ```
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-05.png)
+![sbx secret ls listing masked openai and anthropic credentials, then sbx secret rm deleting the openai one after a confirmation](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-05.png)
 
 The real credential stays on the host; the sandbox sees only a sentinel value for the security model. You can learn more about how credential injection works and how custom secrets work here.
 
@@ -124,17 +124,17 @@ sbx run claude
 
 As you run, it will start pulling the agent image, which might take a little longer in the first run. Subsequent runs reuse the cached image and start in seconds.
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-06.png)
+![sbx run claude downloading the agent image layers and opening the Claude Code welcome screen inside the sandbox](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-06.png)
 
 Now we can give some prompts and see if it's working or not.
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-07.png)
+![Claude Code running in the sandbox, answering a prompt about outdated dependencies with a table of current and latest package versions](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-07.png)
 
 And it's working!
 
 To test if it respects the network policy, let's try to prompt to fetch information from a blocked domain by default and one from the allow list.
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-08.png)
+![Claude Code in the sandbox getting 403 Forbidden when fetching a domain outside the policy, then 200 OK from an allowed domain](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-08.png)
 
 You can see in the above image that it respected the policy. As I requested to fetch the info from my own website domain, `pradumnasaraf.dev`, it gets a 403 forbidden error, and it was able to fetch from `github.com` because it's in the default list.
 
@@ -146,7 +146,7 @@ To see all the sandboxes that are running, execute the following ls command:
 sbx ls
 ```
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-09.png)
+![sbx ls listing two sandboxes with their agent, status and workspace path, one running and one stopped](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-09.png)
 
 ### Managing the network policy
 
@@ -160,11 +160,11 @@ sbx policy allow network -g pradumnasaraf.dev
 
 And a Policy ID will get printed. The ID can be used for removing the policy completely if we ever want to.
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-10.png)
+![sbx policy allow network adding a domain to the allow list and printing the new policy ID](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-10.png)
 
 Now, it's allowed, let's try again to fetch details from our domain.
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-11.png)
+![Claude Code fetching the newly allowed domain with a 200 OK and summarizing what the page contains](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-11.png)
 
 And this time it worked. You can see in the above image that it got 200 and gets all the details. And you can verify that it's in the allow list by doing `sbx policy ls`.
 
@@ -174,7 +174,7 @@ Above, we set our domain on a global level, but just like previously, you can ch
 
 One of my favourite things is that we can also run Sandbox in interactive mode. And we can do similar things. Like managing projects, attaching the agent, opening the shell and managing the network policy.
 
-![](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-12.png)
+![Docker Sandboxes interactive terminal UI with the sandbox list on the left and a network log of allowed and blocked hosts on the right](/blog-images/run-ai-coding-agents-safely-with-docker-sandboxes/image-12.png)
 
 That was it. That's how you can run your AI coding agents safely with Docker Sandboxes.
 

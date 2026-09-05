@@ -27,7 +27,7 @@ In this tutorial, we will learn how to automate the process of building and push
 
 Create a GitHub repository and place a Dockerfile in the root directory. While you can store the file anywhere, it is advisable to keep it in the root directory.
 
-![](/blog-images/dockerhub-githubactions/image-01.png)
+![GitHub repository page for a hello-world project containing a single Dockerfile](/blog-images/dockerhub-githubactions/image-01.png)
 
 For this demo, we will use a very simple `Dockerfile` that prints "Hello World" by running an echo command on an Alpine image. Here is the syntax for it:
 
@@ -38,7 +38,7 @@ CMD ["echo", "Hello World!"]
 
 To store our Docker image, we need to create a new repository on **DockerHub**. To do this, log into your DockerHub account and click on the "Create Repository" button. Choose a name for your repository and select whether it will be public or private. In this example, we will create a public repository called "hello-world".
 
-![](/blog-images/dockerhub-githubactions/image-02.gif)
+![Docker Hub repositories page with the Create repository button highlighted](/blog-images/dockerhub-githubactions/image-02.gif)
 
 Now, let's use a GitHub Workflow (a set of GitHub Actions) to automate the process of building and pushing our Docker image to Docker Hub.
 
@@ -46,7 +46,7 @@ However, before we do that, we need to create two **Actions Repo Secrets** on Gi
 
 To do this, go to **Settings** -&gt; **Actions** -&gt; **New repository secret**.
 
-![](/blog-images/dockerhub-githubactions/image-03.png)
+![GitHub repository settings with Secrets and variables then Actions selected, and the New repository secret button highlighted](/blog-images/dockerhub-githubactions/image-03.png)
 
 Create two secrets with the following names:
 
@@ -55,11 +55,11 @@ Create two secrets with the following names:
 * `DOCKERHUB_PASSWORD` - Add your Docker Hub password or personal access token in the secret section.
     
 
-![](/blog-images/dockerhub-githubactions/image-04.png)
+![GitHub new Actions secret form with the name set to DOCKERHUB_PASSWORD and a value entered](/blog-images/dockerhub-githubactions/image-04.png)
 
 After creating both secrets, your Actions window should look like this. Make sure you have entered the correct credentials.
 
-![](/blog-images/dockerhub-githubactions/image-05.png)
+![GitHub Actions secrets page listing the DOCKERHUB_PASSWORD and DOCKERHUB_USERNAME repository secrets](/blog-images/dockerhub-githubactions/image-05.png)
 
 Now let's write the configuration for your GitHub Workflow which will build and push the Dockerfile.
 
@@ -152,11 +152,11 @@ Now let's commit the changes. As soon as you commit the file, the workflow will 
 
 To check if the workflow is running, head over to the **Actions** tab. In my case, the workflow ran so fast that it already completed all the steps and pushed our Docker image to DockerHub.
 
-![](/blog-images/dockerhub-githubactions/image-06.png)
+![Successful GitHub Actions run with every build step green, including DockerHub Login, Build the Docker image and Docker Push](/blog-images/dockerhub-githubactions/image-06.png)
 
 Now, go to DockerHub to see your image. Its name will be `{DOCKERHUB_USERNAME}/hello-world`.
 
-![](/blog-images/dockerhub-githubactions/image-07.png)
+![Docker Hub repository page for the pushed image showing the latest tag published a minute ago](/blog-images/dockerhub-githubactions/image-07.png)
 
 We can test our Docker image locally by running the following command in the terminal:
 
@@ -166,7 +166,7 @@ Replace `{DOCKERHUB_USERNAME}` with your actual DockerHub username. This command
 docker run {DOCKERHUB_USERNAME}/hello-world
 ```
 
-![](/blog-images/dockerhub-githubactions/image-08.png)
+![Terminal running docker run on the published Docker Hub image, pulling it and printing Hello World](/blog-images/dockerhub-githubactions/image-08.png)
 
 **Congratulations on successfully building and pushing a Docker image to DockerHub using GitHub Actions!** **🎉**
 

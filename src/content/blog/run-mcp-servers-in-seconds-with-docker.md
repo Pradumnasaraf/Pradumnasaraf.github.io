@@ -18,31 +18,31 @@ In this blog, we will first under what **Docker MCP Catalog** and **MCP Toolkit*
 
 Docker MCP Catalog is a trusted [collection of MCP servers](https://hub.docker.com/catalogs/mcp). Currently has verified tools from 100 verified (and the number keeps bumping while writing this) tools publishers like Stripe, Elastic, Grafana, etc. And the tools are it’s just like container images, that means like traditional pull mechanism, we can pull and use it (or use MCP toolkit for UI perks, more on that later) without any hassle to find and configure it manually.
 
-![](/blog-images/run-mcp-servers-in-seconds-with-docker/image-01.png)
+![Docker MCP Catalog showing a grid of official MCP server images with their pull counts, stars and last updated time](/blog-images/run-mcp-servers-in-seconds-with-docker/image-01.png)
 
 ### What is Docker MCP Toolkit?
 
 With [Docker MCP Toolkit](https://hub.docker.com/extensions/docker/labs-ai-tools-for-devs), with a single click of a button from Docker Desktop, we can spin MCP servers in seconds and connect to our favourite client like Cluade, Cursor, Windsurf, Docker AI Agent, etc. The way it works is that a Gateway MCP Server is created and dynamically exposes enabled tools to compatible clients. This makes it so easy to manage all the tools in one place.
 
-![](/blog-images/run-mcp-servers-in-seconds-with-docker/image-02.png)
+![Docker Desktop MCP Toolkit on the Servers tab, listing four installed MCP servers with their tool counts and a highlighted catalog below](/blog-images/run-mcp-servers-in-seconds-with-docker/image-02.png)
 
 ## Using Docker MCP Toolkit
 
 Let’s now test Docker MCP Toolkit. Make sure you have the latest version of Docker Desktop. My current version is Docker Desktop (Mac) is **4.43.0 (196668)**. Once you open it, you will see the **MCP Toolkit** button on the sidebar. Initially, it was shipped as an extension; now it’s baked into the Docker Desktop itself.
 
-![](/blog-images/run-mcp-servers-in-seconds-with-docker/image-03.png)
+![MCP Toolkit Catalog tab showing available MCP servers as cards, each with a description, tool count and download stats](/blog-images/run-mcp-servers-in-seconds-with-docker/image-03.png)
 
 Now let’s install/turn on some MCP servers like **curl** and **Wikipedia**. You can search and add it. It’s that simple. It’s really handy to add and remove when needed. No copying and pasting of manual config, and managing them.
 
-![](/blog-images/run-mcp-servers-in-seconds-with-docker/image-04.png)
+![MCP Toolkit Servers tab with only the curl and Wikipedia servers left installed after removing the others](/blog-images/run-mcp-servers-in-seconds-with-docker/image-04.png)
 
 Now, let’s connect the Dockerized MCP servers to our MCP clients. I will be using Claude; you can use any according to your preference. We simply need to click on the Connect button, and it will automatically add the Docker configuration to Claude Desktop's MCP server config `claude_desktop_config.json` file. The same goes for other MCP Clients.
 
-![](/blog-images/run-mcp-servers-in-seconds-with-docker/image-05.png)
+![MCP Toolkit Clients tab showing Claude Desktop connected, plus the docker mcp gateway run command offered for other clients](/blog-images/run-mcp-servers-in-seconds-with-docker/image-05.png)
 
 Let’s open Claude and see it. It will be **Settings &gt; Developer &gt; MCP\_DOCKER.** As you can see, it’s running, which means everything is correctly configured. If we click on the **Edit Config** button, we can see the config and how it works.
 
-![](/blog-images/run-mcp-servers-in-seconds-with-docker/image-06.png)
+![Claude Desktop developer settings showing the MCP_DOCKER server running with command docker and arguments mcp gateway run](/blog-images/run-mcp-servers-in-seconds-with-docker/image-06.png)
 
 **Config**:
 
@@ -63,21 +63,21 @@ Let’s open Claude and see it. It will be **Settings &gt; Developer &gt; MCP\_D
 
 Let’s close the config and open the chat screen on Claude. Now, click on the **Search and Tools** option to see all the MCP servers, for just, it’s just one, **MCP\_DOCKER,** having **10** tools. If you are not seeing it, completely close down Claude and re-open it, and it will start showing up.
 
-![](/blog-images/run-mcp-servers-in-seconds-with-docker/image-07.png)
+![Claude Desktop new chat with the tools menu open, showing MCP_DOCKER listed alongside a tool count badge](/blog-images/run-mcp-servers-in-seconds-with-docker/image-07.png)
 
 We can click on the arrow next to **10** to see all the available tools.
 
-![](/blog-images/run-mcp-servers-in-seconds-with-docker/image-08.png)
+![Claude Desktop tool menu expanded to list the individual MCP tools, each with its own on and off toggle](/blog-images/run-mcp-servers-in-seconds-with-docker/image-08.png)
 
 Now, let’s test it out.
 
 To test **curl,** I will ask whether the website is up or not. When you enter the prompt, you might get a pop-up saying “**Claude would like to use an external integration”;** it is just to determine whether you want to use the MCP tools or not. You can either choose, **always allow** or **allow once**, depending on your preference.
 
-![](/blog-images/run-mcp-servers-in-seconds-with-docker/image-09.png)
+![Claude Desktop calling the curl MCP tool to check whether a site is up, showing the request arguments and a 200 response](/blog-images/run-mcp-servers-in-seconds-with-docker/image-09.png)
 
 Let’s now search for some history so that it uses the **Wikipedia** tool. As you can see, it is called both `search_wikipedia` and `get_wikipedia` and gave the result.
 
-![](/blog-images/run-mcp-servers-in-seconds-with-docker/image-10.png)
+![Claude Desktop chaining the search_wikipedia and get_article MCP tools to research Docker's history, then summarizing the findings](/blog-images/run-mcp-servers-in-seconds-with-docker/image-10.png)
 
 That was it. That’s how you can use MCP Servers with less hassle and focus more on development and solving problems instead of worrying about managing them.
 

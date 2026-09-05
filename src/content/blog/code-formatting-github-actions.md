@@ -83,7 +83,7 @@ In the final step, we automatically commit the formatted changes in the JavaScri
 
 To enable the Auto-commit Action for creating a commit with formatted changes, we need to have the appropriate write permissions. By default, it is set to read-only. To verify this, navigate to `Settings` -&gt; `Actions` -&gt; `General` and ensure that the workflow has both read and write permissions enabled.
 
-![](/blog-images/code-formatting-github-actions/image-01.png)
+![GitHub Actions general settings with Read and write permissions selected under Workflow permissions](/blog-images/code-formatting-github-actions/image-01.png)
 
 ### Working
 
@@ -91,7 +91,7 @@ Now, whenever there is a push (either through commit or direct push) or a pull r
 
 ### Demo
 
-![](/blog-images/code-formatting-github-actions/image-02.gif)
+![GitHub repository page for a Prettier demo project with a workflows directory and a JavaScript file](/blog-images/code-formatting-github-actions/image-02.gif)
 
 Congratulations on successfully automating JavaScript Code Formatting Using GitHub Actions and Prettier**🎉**
 

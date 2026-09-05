@@ -572,11 +572,11 @@ Now that we have our application running, head over to the Grafana dashboard to 
 
 Once we are logged in, we can create a new dashboard. While creating a dashboard, you will notice that the default data source is `Prometheus`. This is because we have already configured the data source in the `grafana.yml` file.
 
-![](/blog-images/monitoring-go-app-with-grafana-prometheus/image-01.png)
+![Grafana panel editor with the Select data source dialog open and Prometheus listed as the default](/blog-images/monitoring-go-app-with-grafana-prometheus/image-01.png)
 
 We can use different panels to visualise the metrics. This guide doesn't go into details of Grafana. We can refer to the [Grafana documentation](https://grafana.com/docs/grafana/latest/) for more information. There is a Bar Gauge panel to visualise the total number of requests from different endpoints. We used the `api_http_request_total` and `api_http_request_error_total` metrics to get the data.
 
-![](/blog-images/monitoring-go-app-with-grafana-prometheus/image-02.png)
+![Grafana dashboard panel showing a bar gauge of total request counts broken down by endpoint and status code](/blog-images/monitoring-go-app-with-grafana-prometheus/image-02.png)
 
 We created this panel to visualise the total number of requests from different endpoints to compare the successful and failed requests. For all the good requests, the bar will be green, and for all the failed requests, the bar will be red. Plus, it will also show from which endpoint the request is coming, whether it's a successful request or a failed request. If you want to get the dashboard JSON, you can visit this repo [here](https://github.com/Pradumnasaraf/Blog-Demo/tree/main/go-prometheus-monitoring). You will also find the complete code for the Golang application, Dockerfile and Docker Compose file we created in this blog.
 

@@ -22,15 +22,15 @@ Docker Hardened Image or DHI (we will be calling “DHI” throughout the blog) 
 
 To make the discovery, usability, and transparency simpler. Docker built a dedicated [DHI catalogue](https://hub.docker.com/hardened-images/catalog). There are thousands of Hardened images with various versions for the tool or language. You can visit [dhi.io](https://dhi.io) (yes, they went ahead and got this domain ^^, how cool is that).
 
-![](/blog-images/improving-container-security-with-docker-hardened-images/image-01.png)
+![Docker Hub Hardened Images catalog listing recently added and featured hardened images with their OS, architecture and compliance](/blog-images/improving-container-security-with-docker-hardened-images/image-01.png)
 
 One of my favourites feature in the whole DHI catalogue thing is the “**Tool Included**” section on the website. In many images, you will find a dedicated column on the right with a list of tools included in that image. This brings a lot of transparency and ease.
 
-![](/blog-images/improving-container-security-with-docker-hardened-images/image-02.png)
+![Docker Hub page for a hardened Node.js image, with the image version picker open and the included tools panel highlighted](/blog-images/improving-container-security-with-docker-hardened-images/image-02.png)
 
 There are a lot of Hardened images in the market, and calling an image “Hardened” actually does not make it hardened. Here is a really nice comparison of **DHI vs Others**:
 
-![](/blog-images/improving-container-security-with-docker-hardened-images/image-03.png)
+![Comparison table of Docker Hardened Images against other hardened image offerings across distro, license, access, security and lifecycle](/blog-images/improving-container-security-with-docker-hardened-images/image-03.png)
 
 Source: Docker.com
 
@@ -124,7 +124,7 @@ Of course, we can’t end the blog with comparing and getting those numbers. We,
 
 Then I used **Docker Scout** and ran `docker scout quickview` for both images to check how vulnerable each image is, and the result is expected, but still shocking. In the screenshot below, the number of High and Medium vulnerabilities the first image contains is magnificent. And DHI has just had 8 Low, that’s a huge leap in overall security!
 
-![](/blog-images/improving-container-security-with-docker-hardened-images/image-04.png)
+![Two docker scout quickview runs side by side, the image without a hardened base showing many vulnerabilities and the hardened one showing none](/blog-images/improving-container-security-with-docker-hardened-images/image-04.png)
 
 Note: This is not the end of the security/vulnerability optimisation :) This was just to demo what and how to use DHI. The Dockerfile can be improved further by introducing best practices, such as running containers as a non-root user, tightening permissions, etc.
 

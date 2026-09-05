@@ -25,7 +25,7 @@ Throughout the blog, GHCR will be used instead of the complete name.
 
 Create a GitHub repository and place a Dockerfile in the root directory. While you can store the file anywhere, it is advisable to keep it in the root directory.
 
-![](/blog-images/publish-image-on-ghcr/image-01.png)
+![GitHub repository page for a hello-world project with a single Dockerfile and no packages published yet](/blog-images/publish-image-on-ghcr/image-01.png)
 
 For this demo, we will use a very simple `Dockerfile` that prints "Hello World" by running an echo command on an Alpine image. Here is the syntax for it:
 
@@ -165,15 +165,15 @@ Now, let's commit the changes. As soon as you commit the file, the workflow will
 
 To check if the workflow is running, go to the "Actions" tab. In my case, the workflow ran so fast that it already completed all the steps to publish an image to GHCR and publish a package.
 
-![](/blog-images/publish-image-on-ghcr/image-02.png)
+![Successful GitHub Actions run of the build-and-push-image job, with the registry login, metadata and push steps all green](/blog-images/publish-image-on-ghcr/image-02.png)
 
 To check if the package has been released, navigate to the root of your GitHub repository. Under the **Packages** section, you should find a package named **hello-world**. This package indicates that the Docker image has been successfully built and published to the container registry.
 
-![](/blog-images/publish-image-on-ghcr/image-03.png)
+![GitHub repository page after the workflow run, with the new hello-world entry highlighted in the Packages sidebar](/blog-images/publish-image-on-ghcr/image-03.png)
 
 Next, click on the `hello-world` package to retrieve the image URL and other relevant details.
 
-![](/blog-images/publish-image-on-ghcr/image-04.png)
+![GitHub package page for the published image showing the docker pull command and the recently published latest tag](/blog-images/publish-image-on-ghcr/image-04.png)
 
 To test our Docker image locally, we can run the following command. Instead of using **pull**, we will replace it with the **run** and use the copied URL.
 
@@ -185,7 +185,7 @@ docker run ghcr.io/pradumnasaraf/hello-world:latest
 
 This command will download the Docker image from GHCR and run it in a container. You should see the "Hello World" message printed in the terminal.
 
-![](/blog-images/publish-image-on-ghcr/image-05.png)
+![Terminal running docker run against the image on ghcr.io, pulling it and printing Hello World](/blog-images/publish-image-on-ghcr/image-05.png)
 
 **Congratulations on successfully building and pushing a Docker image to GHCR using GitHub Actions!** **🎉**
 

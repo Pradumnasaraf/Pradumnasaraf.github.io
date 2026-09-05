@@ -233,13 +233,13 @@ Above is the complete **Dockerfile** code. We have taken a couple of best practi
 
 Once we are done with that, now, let’s run the Compose application by executing the `docker compose up` command in the terminal. You will see a similar output in the terminal as shown in the screenshot.
 
-![](/blog-images/running-ai-models-with-docker-compose/image-01.png)
+![Editor showing a compose.yml with a models block, and the terminal running docker compose up until the app is ready](/blog-images/running-ai-models-with-docker-compose/image-01.png)
 
 Now, we can head over `localhost:3000` in our browser and test out the application. You will have a chat window like ChatGPT, type your prompt and ask questions.
 
 Here is a short demo:
 
-![](/blog-images/running-ai-models-with-docker-compose/image-02.gif)
+![Browser at localhost:3000 showing a chat app welcome screen with a message being typed into the input box](/blog-images/running-ai-models-with-docker-compose/image-02.gif)
 
 That was it. That’s how you can run AI models with Docker Compose.
 

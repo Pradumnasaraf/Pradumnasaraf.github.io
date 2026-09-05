@@ -19,7 +19,7 @@ In the blog, we will explore some of the built-in GitHub functionalities to find
     
     > Link - [finder.eddiehub.io](http://finder.eddiehub.io)
     
-    ![](/blog-images/5-ways-to-find-projects-in-open-source/image-01.png)
+    ![Good first issue crawler listing beginner-friendly issues from community repositories, each with labels and an Open in Gitpod button](/blog-images/5-ways-to-find-projects-in-open-source/image-01.png)
     
 2. GitHub's advanced search. GitHub advanced search provides tons of filters to find repos and issues according to our preferences. We can filter by language, extension, Issue labels, no. of stars/forks, etc.
     
@@ -33,7 +33,7 @@ In the blog, we will explore some of the built-in GitHub functionalities to find
     
     > Link - [github.com/topics/javascript](http://github.com/topics/JavaScript)
     
-    ![](/blog-images/5-ways-to-find-projects-in-open-source/image-03.png)
+    ![GitHub topic page for JavaScript showing the number of matching public repositories and the most starred ones](/blog-images/5-ways-to-find-projects-in-open-source/image-03.png)
     
 4. Good First Issue label `good first issue` is the best way to start your Open Source journey. We can find all of those on GitHub by doing a label search.
     
@@ -53,7 +53,7 @@ In the blog, we will explore some of the built-in GitHub functionalities to find
       
     > Link - [https://quine.sh/contribute](https://quine.sh/contribute)  
     
-    ![](/blog-images/5-ways-to-find-projects-in-open-source/image-06.png)
+    ![Quine contributor dashboard listing repositories ranked by how many good starter issues they have](/blog-images/5-ways-to-find-projects-in-open-source/image-06.png)
 
 I hope you learned something from this blog. If you have, don't forget to drop a like, follow me on Hashnode, and subscribe to my Hashnode newsletter so that you don't miss any future posts. Thanks for reading and have a great day!
 
