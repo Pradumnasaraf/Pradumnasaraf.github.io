@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAllTags, getPostsByTag } from '@/lib/blog';
+import { toPostSummary } from '@/lib/blog-utils';
 import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
 import BlogPostExplorer from '@/components/BlogPostExplorer';
 import BlogThemeToggle from '@/components/BlogThemeToggle';
@@ -152,7 +153,7 @@ export default async function TagPage({ params }) {
           </p>
         </header>
 
-        <BlogPostExplorer posts={posts} hideTopicChips />
+        <BlogPostExplorer posts={posts.map(toPostSummary)} hideTopicChips />
       </div>
     </>
   );

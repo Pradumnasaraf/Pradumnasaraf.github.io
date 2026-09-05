@@ -20,3 +20,26 @@ export function getThumbnailUrl(thumbnail) {
   // If thumbnail is relative, make it absolute
   return `${SITE_URL}${thumbnail.startsWith('/') ? thumbnail : `/${thumbnail}`}`;
 }
+
+/**
+ * Strip a post down to the fields the listing UI actually renders.
+ *
+ * getAllPosts() carries the full raw markdown in `content`. BlogPostExplorer is
+ * a client component, so anything handed to it is serialized into the RSC
+ * payload of every listing page - that would ship ~250KB of article text no
+ * visitor ever reads. Project first, then pass.
+ *
+ * @param {object} post - A post from getAllPosts()
+ * @returns {object} Listing-safe summary
+ */
+export function toPostSummary(post) {
+  return {
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    date: post.date,
+    tags: post.tags || [],
+    thumbnail: post.thumbnail,
+    readingTime: post.readingTime,
+  };
+}

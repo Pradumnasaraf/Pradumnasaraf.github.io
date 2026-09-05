@@ -1,4 +1,5 @@
 import { getAllPosts } from '@/lib/blog';
+import { toPostSummary } from '@/lib/blog-utils';
 import Link from 'next/link';
 import './style.css';
 import { metadata } from './metadata';
@@ -11,6 +12,7 @@ export { metadata };
 
 export default function BlogPage() {
   const posts = getAllPosts();
+  const listingPosts = posts.map(toPostSummary);
   const searchPosts = posts.map((post) => ({
     slug: post.slug,
     title: post.title,
@@ -64,7 +66,7 @@ export default function BlogPage() {
             <p>No blog posts yet. Check back soon!</p>
           </div>
         ) : (
-          <BlogPostExplorer posts={posts} />
+          <BlogPostExplorer posts={listingPosts} />
         )}
       </div>
 

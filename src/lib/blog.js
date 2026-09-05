@@ -8,6 +8,7 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import rehypeSlug from 'rehype-slug';
+import rehypeBlogImages from './rehype-blog-images.js';
 import { SITE_URL } from './constants.js';
 import dockerfile from 'highlight.js/lib/languages/dockerfile';
 import javascript from 'highlight.js/lib/languages/javascript';
@@ -71,6 +72,10 @@ const sanitizeSchema = {
       'decoding',
       'width',
       'height',
+      // Set by rehype-blog-images so in-body screenshots are served resized
+      // and reserve their layout box.
+      'srcSet',
+      'sizes',
     ],
     code: [
       ...(defaultSchema.attributes?.code || []),
@@ -188,6 +193,7 @@ export async function processMarkdown(content) {
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeSlug)
+    .use(rehypeBlogImages)
     .use(rehypeHighlight, {
       detect: true,
       ignoreMissing: true,
@@ -209,19 +215,22 @@ export async function processMarkdown(content) {
 }
 
 export async function getPostBySlug(slug) {
-  const fullPath = path.join(postsDirectory, `${slug}.md`);
-  const mdxPath = path.join(postsDirectory, `${slug}.mdx`);
-
-  let filePath;
-  if (fs.existsSync(fullPath)) {
-    filePath = fullPath;
-  } else if (fs.existsSync(mdxPath)) {
-    filePath = mdxPath;
+  // Keep the join inline so Turbopack can statically scope the read to
+  // postsDirectory. Reading through a plain `filePath` variable defeats that
+  // analysis and makes it trace (and bundle) the whole project.
+  let fileName;
+  if (fs.existsSync(path.join(postsDirectory, `${slug}.md`))) {
+    fileName = `${slug}.md`;
+  } else if (fs.existsSync(path.join(postsDirectory, `${slug}.mdx`))) {
+    fileName = `${slug}.mdx`;
   } else {
     return null;
   }
 
-  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const fileContents = fs.readFileSync(
+    path.join(postsDirectory, fileName),
+    'utf8'
+  );
   const { data, content } = matter(fileContents);
 
   const wordsPerMinute = 200;

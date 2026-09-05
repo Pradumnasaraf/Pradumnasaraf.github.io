@@ -1,11 +1,17 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { useEffect, useRef, useState } from 'react';
 import './globals.css';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import KonamiGame from '@/components/KonamiGame';
 import BackToTopButton from '@/components/BackToTopButton';
+
+// Easter egg: only reachable via the Konami code, so keep it out of the
+// homepage bundle and fetch it on the first activation.
+const KonamiGame = dynamic(() => import('@/components/KonamiGame'), {
+  ssr: false,
+});
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
