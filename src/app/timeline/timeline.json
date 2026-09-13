@@ -1,5 +1,18 @@
 [
   {
+    "title": "Renewed as a Microsoft MVP",
+    "date": "September, 2026",
+    "description": "I was renewed as a Microsoft MVP in Developer Technologies (DevOps) for the 2026-2027 cycle. Another year of writing, making videos, and speaking about DevOps and developer tooling. Thanks to the MVP team for the support.",
+    "image": {
+      "src": "/timeline-logo/microsoft.png",
+      "alt": "Microsoft MVP"
+    },
+    "link": {
+      "href": "https://x.com/pradumna_saraf/status/2098698688688480679?s=20",
+      "ariaLabel": "Microsoft MVP renewal"
+    }
+  },
+  {
     "title": "Logitech Luminary",
     "date": "August, 2026",
     "description": "I was named a Logitech Luminary for my work in the developer community. I create content around developer tooling, workflows, and the setups people use to build software. Looking forward to working with the Logitech team.",
