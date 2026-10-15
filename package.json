@@ -70,7 +70,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^17.5.0",
     "postcss": "^8.5.29",
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.10",
     "tailwindcss": "^4.3.3"
   },
   "overrides": {
