@@ -42,5 +42,3 @@ Now, you can easily debug and collaborate with any number of people around the w
 
 
 ![Livecycle Dashboard message feature](/blog-images/share-your-docker-compose-app-logs-remotely/livecycle-dashboard-message-feature.png)
-
-Join our Livecycle community to stay informed

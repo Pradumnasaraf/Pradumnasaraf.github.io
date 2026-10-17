@@ -39,5 +39,3 @@ Once you open the Livecycle Dashboard, choose your environment, here in my case 
 Now, you can easily debug and collaborate with any number of people around the world. We are also soon adding the commenting feature (like the screen below) so that you can have a conversation in one place to involve non-technical people like designers and marketers, enabling them to provide feedback and bring more transparency. This way, a senior can never blame a junior if they asked for something and it hasn't been done.
 
 ![Livecycle Dashboard message feature](/blog-images/share-your-terminal-remotely/livecycle-dashboard-message-feature.png)
-
-Join our Livecycle community to stay informed
