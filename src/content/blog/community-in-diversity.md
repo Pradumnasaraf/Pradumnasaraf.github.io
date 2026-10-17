@@ -14,7 +14,7 @@ draft: false
 
 A community is a group of people who share an identity-forming narrative and UNITE together to help each other out.
 
-**E.g.:** [**Eddiehub**](https://www.eddiehub.org/) **- An inclusive community that is spreading literacy about Open Source and helping beginners get started.**
+**E.g.:** **Eddiehub** **- An inclusive community that is spreading literacy about Open Source and helping beginners get started.**
 
 ![people](/blog-images/community-in-diversity/people.png)
 
@@ -48,7 +48,7 @@ Every person should allow in the community and also take part in the activities 
 
 ## 👤 My experience with the community.
 
-My first ever community was **EddieHub** (Founded by @[Eddie Jaoude](@eddiejaoude)), and it's the closest to me.
+My first ever community was **EddieHub** (Founded by Eddie Jaoude), and it's the closest to me.
 
 ![Untitled design.png](/blog-images/community-in-diversity/untitled-design-png.png)
 
@@ -78,6 +78,6 @@ As a developer, we sometimes get burned out and go through tough times, but peop
 
 Want to say a few before ending this Blog.
 
-> "Get involved in any community, whichever you like, and feel safe. Take part in the conversation and start interacting with people. You will soon start realizing that your progress and wins get skyrocketed and that couldn't be possible without CommUNITY...." - @[Pradumna Saraf](@Pradumnasaraf)
+> "Get involved in any community, whichever you like, and feel safe. Take part in the conversation and start interacting with people. You will soon start realizing that your progress and wins get skyrocketed and that couldn't be possible without CommUNITY...." - Pradumna Saraf
 
 Thank you for reading, **COMMUNITY FTW**

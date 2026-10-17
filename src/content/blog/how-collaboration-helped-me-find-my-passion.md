@@ -17,7 +17,7 @@ Let's talk about an Open Source project. It's a pure collaboration of different 
 
 **Now coming to the story and title of the Blog *\- "How collaboration helped me find my passion."***
 
-Last year I stepped into Open Source. I have no idea how it works and what scale the world depends on this. I joined some of the best communities like [EddieHub](https://www.eddiehub.org/) and [WeMakeDevs](https://github.com/WeMakeDevs). I started by contributing to community projects and connected with many people by collaborating with them on Pull Request and GitHub Discussions. With those healthy connections, I worked on their personal projects, and every project taught me something new. I learned a ton about technologies and how a production-level project should perform in real-case scenarios by teaming up and collaborating on different projects.
+Last year I stepped into Open Source. I have no idea how it works and what scale the world depends on this. I joined some of the best communities like EddieHub and [WeMakeDevs](https://github.com/WeMakeDevs). I started by contributing to community projects and connected with many people by collaborating with them on Pull Request and GitHub Discussions. With those healthy connections, I worked on their personal projects, and every project taught me something new. I learned a ton about technologies and how a production-level project should perform in real-case scenarios by teaming up and collaborating on different projects.
 
 This Open collaboration thing about Open Source makes it so great. There is no barrier. We can connect and work with any person from anywhere in the world. This thing completely changed my mindset and made me passionate about Open Source. As of today, I advocate for it by producing content on Twitter and writing blogs to help and educate hundreds of folks to kick-start their journey in the Open Source world.
 
@@ -39,7 +39,7 @@ Collaboration can happen in any place. It can be via email or with some person y
     ![GitHub Discussion in EddieHub](/blog-images/how-collaboration-helped-me-find-my-passion/github-discussion-in-eddiehub.png)
     
 *   **Online international communities**  
-    Joining international communities is a great way to connect and collaborate with people all over the globe. You will find people from every background and level of experience. Some great communities to join, [EddieHub](https://www.eddiehub.org/), [WeMakeDevs](https://github.com/WeMakeDevs), [MLH](https://mlh.io/), etc.
+    Joining international communities is a great way to connect and collaborate with people all over the globe. You will find people from every background and level of experience. Some great communities to join, EddieHub, [WeMakeDevs](https://github.com/WeMakeDevs), [MLH](https://mlh.io/), etc.
     
 
 ![Screenshots of a community video call grid and a Discord collaboration channel where members offer to pair up on projects](/blog-images/how-collaboration-helped-me-find-my-passion/image-05.png)

@@ -259,7 +259,7 @@ Now let's execute the command the right way giving it an argument - a prompt/que
 
 As you can see, it provided us with the answer. We pass the prompt in quotes so that we can add special characters like "?", ".", etc. So here it is, a fully functional AI-powered CLI.
 
-Now, if you want to publish the package so that your CLI can directly execute commands and be used from anywhere in the system, it’s very simple to do that. First, push your changes to GitHub and then head over to the URL [`https://pkg.go.dev/github.com/<repo-url>`](https://pkg.go.dev/github.com/<repo-url>). In my case, it would be [`https://pkg.go.dev/github.com/Pradumnasaraf/go-ai`](https://pkg.go.dev/github.com/Pradumnasaraf/go-ai). When you visit, you will see a request button; click on that to request adding the package to [`pkg.go.dev`](http://pkg.go.dev). Once you’re done, after a few hours, it will be on the website.
+Now, if you want to publish the package so that your CLI can directly execute commands and be used from anywhere in the system, it’s very simple to do that. First, push your changes to GitHub and then head over to the URL `https://pkg.go.dev/github.com/<repo-url>`. In my case, it would be `https://pkg.go.dev/github.com/Pradumnasaraf/go-ai`. When you visit, you will see a request button; click on that to request adding the package to [`pkg.go.dev`](http://pkg.go.dev). Once you’re done, after a few hours, it will be on the website.
 
 ![Image description](/blog-images/ai-cli-with-golang/image-description-6.png)
 

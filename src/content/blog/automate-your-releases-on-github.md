@@ -140,7 +140,7 @@ To make the workflow create the automated releases. We need to follow some commi
 * `BREAKING CHANGE:` - It will bump the first digit by - major
     
 
-I have also written a blog on Conventional Commits. You can check out that - [Getting started with Conventional Commits](https://blog.pradumnasaraf.co/getting-started-with-conventional-commits)
+I have also written a blog on Conventional Commits. You can check out that - [Getting started with Conventional Commits](/blog/getting-started-with-conventional-commits)
 
 **We are now all set. Now, when we create a commit with the proper convention, it will do all the magic for us.**
 

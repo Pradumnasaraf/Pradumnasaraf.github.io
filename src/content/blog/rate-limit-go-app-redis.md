@@ -25,7 +25,7 @@ In case you have no idea what Gin and Redis are. [Gin](https://github.com/gin-go
 
 ### Getting Started
 
-To Initialize the project run `go mod init <github path>` for eg, `go mod init` [`github.com/Pradumnasaraf/go-redis`](http://github.com/Pradumnasaraf/go-redis).
+To Initialize the project run `go mod init <github path>` for eg, `go mod init` `github.com/Pradumnasaraf/go-redis`.
 
 Then let's create a simple HTTP server with Gin Framework then we apply the logic for rate limiting it. You can copy the code below. It's very basic. The server will reply with a message when we hit the `/message` endpoint.
 

@@ -12,7 +12,7 @@ draft: false
 
 Publishing a package is a good way to share your tool with the world. Someone can import the package and use it in their project, and achieve the functionality you have built. It's quite easy to publish a Golang package compared to other languages. We will do that in this blog. I recently published my GenCLI package you can check it out [here](https://pkg.go.dev/github.com/Pradumnasaraf/gencli).
 
-For demo purposes, I have this [CLI project](https://github.com/Pradumnasaraf/Blog-Demo/tree/main/Go-AI). This AI-powered CLI. It provides you with the answers to your questions via the terminal, built with Cobra and Google Gemini API. Now this project is local, and the only way to run it is to go to the Root of the project and do `go run main.go` and then use sub-commands. It will work fine, but the issue here is that this is not reliable, every time, we need to go to the project root and run it, ideally, it should run from anywhere on the computer, just like other CLI tools. Plus, not everyone will do this much hassle to use it. So, this is why it's necessary, as well as important to publish the tools.
+For demo purposes, I have this [CLI project](https://github.com/Pradumnasaraf/Blog-Demo/tree/main/go-ai). This AI-powered CLI. It provides you with the answers to your questions via the terminal, built with Cobra and Google Gemini API. Now this project is local, and the only way to run it is to go to the Root of the project and do `go run main.go` and then use sub-commands. It will work fine, but the issue here is that this is not reliable, every time, we need to go to the project root and run it, ideally, it should run from anywhere on the computer, just like other CLI tools. Plus, not everyone will do this much hassle to use it. So, this is why it's necessary, as well as important to publish the tools.
 
 There can be multiple ways to name your package, but as we will host it on GitHub we will use the GitHub way. Make sure in your `go.mod` file your module name is the following convention - [`github.com/<username>/<repo-name`](http://github.com/<username>/<repo-name) `module-name>`, just like below.
 
@@ -43,7 +43,7 @@ Once you push the code to GitHub now it's time to publish your package, but befo
 * **Tags:** Tagging is good when a person has a particular version of the package also tagged versions give predictable outcomes during builds. Tags should follow Semver. Also, try to release stable versions with `1.0.0` and above, this gives developers confidence.
     
 
-Now to publish the package head over to the URL [`https://pkg.go.dev/github.com/<repo-url>`](https://pkg.go.dev/github.com/<repo-url>). In my case, it would be [`https://pkg.go.dev/github.com/Pradumnasaraf/go-ai`](https://pkg.go.dev/github.com/Pradumnasaraf/go-ai). When you visit, you will see a request button; click on that to request adding the package to [`pkg.go.dev`](http://pkg.go.dev). I will not because I don't want to publish this tool as it was just for a demo.
+Now to publish the package head over to the URL `https://pkg.go.dev/github.com/<repo-url>`. In my case, it would be `https://pkg.go.dev/github.com/Pradumnasaraf/go-ai`. When you visit, you will see a request button; click on that to request adding the package to [`pkg.go.dev`](http://pkg.go.dev). I will not because I don't want to publish this tool as it was just for a demo.
 
 ![Screenshot of go dev package website](/blog-images/how-to-publish-a-golang-package/screenshot-of-go-dev-package-website.png)
 
