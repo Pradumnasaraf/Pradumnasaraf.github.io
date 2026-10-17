@@ -200,6 +200,11 @@ const Globe = () => {
     let calloutOpacity = 0;
     const FADE_TAU = 0.16; // ease time constant (seconds)
     const render = (now) => {
+      // On unmount React detaches refs before this effect's cleanup cancels the
+      // loop, so a frame can land in between with the DOM already gone.
+      if (!cardRef.current || !highlightRef.current || !wrap.isConnected)
+        return;
+
       // Time-based step: seconds since the last frame, clamped so a backgrounded
       // tab (or a long stall) can't jump the globe forward on return.
       const dt = Math.min((now - lastTime) / 1000, 0.1);
