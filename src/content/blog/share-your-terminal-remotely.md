@@ -40,4 +40,4 @@ Now, you can easily debug and collaborate with any number of people around the w
 
 ![Livecycle Dashboard message feature](/blog-images/share-your-terminal-remotely/livecycle-dashboard-message-feature.png)
 
-Join our [Livecycle community](https://community.livecycle.io/?utm_source=hashnode&utm_medium=article&utm_campaign=livecycle) to stay informed
+Join our Livecycle community to stay informed
