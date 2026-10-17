@@ -14,7 +14,7 @@ Publishing a package is a good way to share your tool with the world. Someone ca
 
 For demo purposes, I have this [CLI project](https://github.com/Pradumnasaraf/Blog-Demo/tree/main/go-ai). This AI-powered CLI. It provides you with the answers to your questions via the terminal, built with Cobra and Google Gemini API. Now this project is local, and the only way to run it is to go to the Root of the project and do `go run main.go` and then use sub-commands. It will work fine, but the issue here is that this is not reliable, every time, we need to go to the project root and run it, ideally, it should run from anywhere on the computer, just like other CLI tools. Plus, not everyone will do this much hassle to use it. So, this is why it's necessary, as well as important to publish the tools.
 
-There can be multiple ways to name your package, but as we will host it on GitHub we will use the GitHub way. Make sure in your `go.mod` file your module name is the following convention - [`github.com/<username>/<repo-name`](http://github.com/<username>/<repo-name) `module-name>`, just like below.
+There can be multiple ways to name your package, but as we will host it on GitHub we will use the GitHub way. Make sure in your `go.mod` file your module name is the following convention - `github.com/<username>/<repo-name` `module-name>`, just like below.
 
 One thing to note is that the module is a collection of Packages. We generally say Publishing a Module Not Packages, but to keep it simple we kept it that way.
 
