@@ -95,6 +95,14 @@ const Globe = () => {
     let globe;
     const buildGlobe = () => {
       if (globe) globe.destroy();
+      // A rebuild reuses this canvas's WebGL context, where the old globe left
+      // vertex attributes enabled against buffers destroy() just deleted. Every
+      // draw then fails ("no buffer is bound") and the globe goes blank.
+      const gl = canvas.getContext('webgl2') || canvas.getContext('webgl');
+      if (gl) {
+        const count = gl.getParameter(gl.MAX_VERTEX_ATTRIBS);
+        for (let i = 0; i < count; i++) gl.disableVertexAttribArray(i);
+      }
       cobeAnchors = {}; // anchors are recreated by cobe; drop stale refs
       globe = createGlobe(canvas, {
         devicePixelRatio: 2,
