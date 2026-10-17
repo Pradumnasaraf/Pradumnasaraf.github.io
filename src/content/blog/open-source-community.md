@@ -40,8 +40,6 @@ HIGHLY RECOMMEND!!
 
 Inclusive Open Source community, helping out new folks to kick off their Open Source journey and do their first even Open Source contribution. Highly focuses on collaboration culture.
 
-(Discord and Github org link) - EddieHub
-
 ### ▶️ MLH
 
 The hackathon community highly focuses on building projects around Open Source and encouraging new Hackers to learn Tech and Open Source Tools.

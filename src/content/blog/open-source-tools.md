@@ -32,8 +32,6 @@ Link - https://vscode.dev/
 
 Good First Issue finder is a EddieHub's project that helps new open source contributors to find the project's good first issues to kickstart the t world of Open Source.
 
-Link - EddieHub
-
 ![Untitled design (1).png](/blog-images/open-source-tools/untitled-design-1-png.png)
 
 ## ➤ "The only repo you need"
