@@ -41,7 +41,7 @@ You can master your git branching concept by visualizing, playing, and doing cer
 
 ### 4) GitHub Learning Lab:
 
-[GitHub](https://github.com/) itself provides a learning track, which grows your skills by completing fun, realistic projects. [`Link`](https://lab.github.com/)
+[GitHub](https://github.com/) itself provides a learning track, which grows your skills by completing fun, realistic projects.
 
 
 ![GitHub Learning Lab](/blog-images/learn-git-and-github-in-a-more-fun-way/github-learning-lab.png)
