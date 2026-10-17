@@ -1,5 +1,60 @@
 [
   {
+    "id": "prague",
+    "place": "Prague",
+    "country": "Czech Republic",
+    "flag": "🇨🇿",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 50.0755,
+    "lng": 14.4378
+  },
+  {
+    "id": "szczecin",
+    "place": "Szczecin",
+    "country": "Poland",
+    "flag": "🇵🇱",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 53.4285,
+    "lng": 14.5528
+  },
+  {
+    "id": "berlin",
+    "place": "Berlin",
+    "country": "Germany",
+    "flag": "🇩🇪",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 52.52,
+    "lng": 13.405
+  },
+  {
+    "id": "potsdam",
+    "place": "Potsdam",
+    "country": "Germany",
+    "flag": "🇩🇪",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 52.3906,
+    "lng": 13.0645
+  },
+  {
+    "id": "cancun",
+    "place": "Cancún",
+    "country": "Mexico",
+    "flag": "🇲🇽",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 21.1619,
+    "lng": -86.8515
+  },
+  {
     "id": "istanbul",
     "place": "Istanbul",
     "country": "Turkey",
