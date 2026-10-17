@@ -40,7 +40,7 @@ HIGHLY RECOMMEND!!
 
 Inclusive Open Source community, helping out new folks to kick off their Open Source journey and do their first even Open Source contribution. Highly focuses on collaboration culture.
 
-(Discord and Github org link) - https://eddiehub.org
+(Discord and Github org link) - EddieHub
 
 ### ▶️ MLH
 

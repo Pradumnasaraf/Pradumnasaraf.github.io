@@ -16,7 +16,7 @@ In the blog, we will explore some of the built-in GitHub functionalities to find
 1. Good First Issue Finder by [**EddieHub Community**](https://github.com/EddieHubCommunity)  
     It finds **good first issues** from all over GitHub and gives you a list of them. We can further filter down the Issues by clicking the labels.
     
-    > Link - finder.eddiehub.io
+    > Link - EddieHub
     
     ![Good first issue crawler listing beginner-friendly issues from community repositories, each with labels and an Open in Gitpod button](/blog-images/5-ways-to-find-projects-in-open-source/image-01.png)
     
