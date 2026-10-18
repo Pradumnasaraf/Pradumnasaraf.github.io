@@ -1,5 +1,17 @@
 [
   {
+    "id": "docker-captains-summit-2026",
+    "title": "Docker Captains Summit",
+    "event": "Docker Captains Summit - 2026",
+    "date": "29th September 2026",
+    "location": "Cancun, Mexico",
+    "topic": "A smaller internet for your agent",
+    "technologies": ["Docker", "Docker Sandboxes", "AI Agents"],
+    "slides": "https://github.com/Pradumnasaraf/Speaking/tree/main/Docker%20Captains%20Summit%20-%202026/smaller-internet-agent.pdf",
+    "recording": null,
+    "eventUrl": "https://github.com/Pradumnasaraf/Speaking/tree/main/Docker%20Captains%20Summit%20-%202026"
+  },
+  {
     "id": "byteverse-nit-patna-2026",
     "title": "ByteVerse NIT Patna",
     "event": "ByteVerse NIT Patna - 2026",

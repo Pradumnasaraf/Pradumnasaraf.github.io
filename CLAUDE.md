@@ -85,9 +85,9 @@ excerpt: '...'
 date: 'YYYY-MM-DD'
 author: 'Pradumna Saraf'
 category: '...'
-tags: ['docker', 'ci-cd', ...]   # see ALLOWED_TAGS
+tags: ['docker', 'ci-cd', ...] # see ALLOWED_TAGS
 thumbnail: '/blog-images/<slug>/thumbnail.png'
-canonical: 'https://...'          # optional
+canonical: 'https://...' # optional
 draft: false
 ```
 
