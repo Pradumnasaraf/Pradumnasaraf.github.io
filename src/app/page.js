@@ -139,6 +139,11 @@ export default function Home() {
               </Link>
             </span>
             <span className="page-item">
+              <Link href="/timeline" onClick={closeAllMenus}>
+                Timeline
+              </Link>
+            </span>
+            <span className="page-item">
               <Link
                 href="https://pradumnasaraf.substack.com"
                 target="_blank"
@@ -175,13 +180,6 @@ export default function Home() {
                   <path d="m6 9 6 6 6-6" />
                 </svg>
               </button>
-            </span>
-            <span
-              className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
-            >
-              <Link href="/timeline" onClick={closeAllMenus}>
-                Timeline
-              </Link>
             </span>
             <span
               className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
@@ -231,9 +229,6 @@ export default function Home() {
             <div
               className={`extra-menu-dropdown ${isExtraMenuOpen ? 'active' : ''}`}
             >
-              <Link href="/timeline" onClick={closeAllMenus}>
-                Timeline
-              </Link>
               <Link href="/toolkit" onClick={closeAllMenus}>
                 Toolkit
               </Link>
