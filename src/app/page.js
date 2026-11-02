@@ -139,23 +139,23 @@ export default function Home() {
               </Link>
             </span>
             <span className="page-item">
-              <Link href="/toolkit" onClick={closeAllMenus}>
-                Toolkit
-              </Link>
-            </span>
-            <span className="page-item">
-              <Link href="/photography" onClick={closeAllMenus}>
-                Photography
-              </Link>
-            </span>
-            <span className="page-item">
-              <Link href="/travel" onClick={closeAllMenus}>
-                Travel
+              <Link href="/speaking" onClick={closeAllMenus}>
+                Speaking
               </Link>
             </span>
             <span className="page-item">
               <Link href="/contact" onClick={closeAllMenus}>
                 Contact
+              </Link>
+            </span>
+            <span className="page-item">
+              <Link
+                href="https://pradumnasaraf.substack.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeAllMenus}
+              >
+                Newsletter
               </Link>
             </span>
             <span className="page-item page-item-more">
@@ -184,20 +184,22 @@ export default function Home() {
             <span
               className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
             >
-              <Link href="/speaking" onClick={closeAllMenus}>
-                Speaking
+              <Link href="/toolkit" onClick={closeAllMenus}>
+                Toolkit
               </Link>
             </span>
             <span
               className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
             >
-              <Link
-                href="https://pradumnasaraf.substack.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeAllMenus}
-              >
-                Newsletter
+              <Link href="/photography" onClick={closeAllMenus}>
+                Photography
+              </Link>
+            </span>
+            <span
+              className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
+            >
+              <Link href="/travel" onClick={closeAllMenus}>
+                Travel
               </Link>
             </span>
           </div>
@@ -227,16 +229,14 @@ export default function Home() {
             <div
               className={`extra-menu-dropdown ${isExtraMenuOpen ? 'active' : ''}`}
             >
-              <Link href="/speaking" onClick={closeAllMenus}>
-                Speaking
+              <Link href="/toolkit" onClick={closeAllMenus}>
+                Toolkit
               </Link>
-              <Link
-                href="https://pradumnasaraf.substack.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeAllMenus}
-              >
-                Newsletter
+              <Link href="/photography" onClick={closeAllMenus}>
+                Photography
+              </Link>
+              <Link href="/travel" onClick={closeAllMenus}>
+                Travel
               </Link>
             </div>
           </div>
