@@ -18,7 +18,7 @@ import {
   SiTypescript,
   SiWebassembly,
 } from 'react-icons/si';
-import { TbBrandOpenai } from 'react-icons/tb';
+import { TbBrandOpenai, TbRobot, TbSparkles } from 'react-icons/tb';
 import speakingData from './speaking.json';
 import PageTopbar from '@/components/PageTopbar';
 import './style.css';
@@ -45,6 +45,8 @@ const techIconMap = {
   webassembly: SiWebassembly,
   wasm: SiWebassembly,
   chatgpt: TbBrandOpenai,
+  ai: TbSparkles,
+  'ai agents': TbRobot,
 };
 
 function inferTechnologies(item) {
