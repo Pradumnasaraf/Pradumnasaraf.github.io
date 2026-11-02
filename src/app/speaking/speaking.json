@@ -1,5 +1,18 @@
 [
   {
+    "id": "wearedevelopers-india-2026",
+    "title": "WeAreDevelopers Conference India",
+    "event": "WeAreDevelopers Conference India - 2026",
+    "date": "25th-26th November 2026",
+    "location": "Bengaluru, India",
+    "topic": "Supply Chain Security for the Everyday Engineer",
+    "technologies": ["JavaScript", "Open Source"],
+    "slides": null,
+    "recording": null,
+    "eventUrl": "https://www.wearedevelopers.com/conference-india/agenda/sessions/supply-chain-security-for-the-everyday-engineer-1217164",
+    "upcoming": true
+  },
+  {
     "id": "docker-captains-summit-2026",
     "title": "Docker Captains Summit",
     "event": "Docker Captains Summit - 2026",

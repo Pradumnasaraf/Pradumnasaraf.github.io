@@ -78,6 +78,8 @@ function inferTechnologies(item) {
   return detected.slice(0, 6);
 }
 
+const upcomingTalks = speakingData.filter((item) => item.upcoming);
+
 const SpeakingPage = () => {
   return (
     <>
@@ -86,6 +88,14 @@ const SpeakingPage = () => {
       <div className="speaking-container">
         <div className="speaking-header">
           <h1>Speaking</h1>
+          {upcomingTalks.map((item) => (
+            <p key={item.id} className="speaking-upcoming">
+              <span className="speaking-upcoming-label">Upcoming</span>
+              <a href={item.eventUrl} target="_blank" rel="noopener noreferrer">
+                {item.title}, {item.location} · {item.date}
+              </a>
+            </p>
+          ))}
         </div>
 
         <div className="speaking-timeline">
@@ -97,6 +107,9 @@ const SpeakingPage = () => {
                 </div>
 
                 <div className="speaking-meta-row">
+                  {item.upcoming && (
+                    <span className="speaking-upcoming-chip">Upcoming</span>
+                  )}
                   <span className="speaking-date-chip">{item.date}</span>
                   <span className="speaking-location-chip">
                     <FaMapMarkerAlt />
