@@ -220,12 +220,6 @@
   letter-spacing: 0.02em;
 }
 
-.speaking-tech-mark {
-  font-size: 0.56rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
 .speaking-actions {
   margin-top: auto;
   display: flex;

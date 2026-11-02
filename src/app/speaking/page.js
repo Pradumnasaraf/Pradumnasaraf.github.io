@@ -8,6 +8,7 @@ import {
   SiGrafana,
   SiJavascript,
   SiKubernetes,
+  SiModelcontextprotocol,
   SiMongodb,
   SiNodedotjs,
   SiPostman,
@@ -32,6 +33,7 @@ const techIconMap = {
   grafana: SiGrafana,
   javascript: SiJavascript,
   kubernetes: SiKubernetes,
+  mcp: SiModelcontextprotocol,
   mongodb: SiMongodb,
   node: SiNodedotjs,
   'open source': RiOpenSourceFill,
@@ -132,9 +134,7 @@ const SpeakingPage = () => {
                           title={tech}
                           aria-label={tech}
                         >
-                          {normalizedTech === 'mcp' ? (
-                            <span className="speaking-tech-mark">MCP</span>
-                          ) : Icon ? (
+                          {Icon ? (
                             <Icon />
                           ) : (
                             <span className="speaking-tech-fallback">
