@@ -8,6 +8,7 @@ import {
   SiGrafana,
   SiJavascript,
   SiKubernetes,
+  SiModelcontextprotocol,
   SiMongodb,
   SiNodedotjs,
   SiPostman,
@@ -18,7 +19,7 @@ import {
   SiTypescript,
   SiWebassembly,
 } from 'react-icons/si';
-import { TbBrandOpenai } from 'react-icons/tb';
+import { TbBrandOpenai, TbRobot, TbSparkles } from 'react-icons/tb';
 import speakingData from './speaking.json';
 import PageTopbar from '@/components/PageTopbar';
 import './style.css';
@@ -32,6 +33,7 @@ const techIconMap = {
   grafana: SiGrafana,
   javascript: SiJavascript,
   kubernetes: SiKubernetes,
+  mcp: SiModelcontextprotocol,
   mongodb: SiMongodb,
   node: SiNodedotjs,
   'open source': RiOpenSourceFill,
@@ -45,6 +47,8 @@ const techIconMap = {
   webassembly: SiWebassembly,
   wasm: SiWebassembly,
   chatgpt: TbBrandOpenai,
+  ai: TbSparkles,
+  'ai agents': TbRobot,
 };
 
 function inferTechnologies(item) {
@@ -78,6 +82,8 @@ function inferTechnologies(item) {
   return detected.slice(0, 6);
 }
 
+const upcomingTalks = speakingData.filter((item) => item.upcoming);
+
 const SpeakingPage = () => {
   return (
     <>
@@ -86,6 +92,14 @@ const SpeakingPage = () => {
       <div className="speaking-container">
         <div className="speaking-header">
           <h1>Speaking</h1>
+          {upcomingTalks.map((item) => (
+            <p key={item.id} className="speaking-upcoming">
+              <span className="speaking-upcoming-label">Upcoming</span>
+              <a href={item.eventUrl} target="_blank" rel="noopener noreferrer">
+                {item.title}, {item.location} · {item.date}
+              </a>
+            </p>
+          ))}
         </div>
 
         <div className="speaking-timeline">
@@ -97,6 +111,9 @@ const SpeakingPage = () => {
                 </div>
 
                 <div className="speaking-meta-row">
+                  {item.upcoming && (
+                    <span className="speaking-upcoming-chip">Upcoming</span>
+                  )}
                   <span className="speaking-date-chip">{item.date}</span>
                   <span className="speaking-location-chip">
                     <FaMapMarkerAlt />
@@ -117,9 +134,7 @@ const SpeakingPage = () => {
                           title={tech}
                           aria-label={tech}
                         >
-                          {normalizedTech === 'mcp' ? (
-                            <span className="speaking-tech-mark">MCP</span>
-                          ) : Icon ? (
+                          {Icon ? (
                             <Icon />
                           ) : (
                             <span className="speaking-tech-fallback">
