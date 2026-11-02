@@ -6,7 +6,7 @@
     "date": "29th September 2026",
     "location": "Cancun, Mexico",
     "topic": "A smaller internet for your agent",
-    "technologies": ["Docker", "Docker Sandboxes", "AI Agents"],
+    "technologies": ["Docker", "AI Agents"],
     "slides": "https://github.com/Pradumnasaraf/Speaking/tree/main/Docker%20Captains%20Summit%20-%202026/smaller-internet-agent.pdf",
     "recording": null,
     "eventUrl": "https://github.com/Pradumnasaraf/Speaking/tree/main/Docker%20Captains%20Summit%20-%202026"
