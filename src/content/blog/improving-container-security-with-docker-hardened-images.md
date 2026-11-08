@@ -1,7 +1,7 @@
 ---
 title: 'Improving Container Security with Docker Hardened Images'
 excerpt: 'Improve security with Docker Hardened Images, reducing vulnerabilities while maintaining workflow, and securing production environments'
-date: '2025-12-22'
+date: '2026-04-15'
 author: 'Pradumna Saraf'
 category: 'docker'
 tags: ['docker', 'security', 'devops', 'containers', 'docker-images']
