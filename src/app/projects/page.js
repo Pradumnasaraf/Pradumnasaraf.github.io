@@ -1,6 +1,5 @@
 import { FaCss3Alt, FaGithub, FaJava, FaStar } from 'react-icons/fa';
 import {
-  SiDocker,
   SiGithubactions,
   SiGo,
   SiGrafana,
@@ -20,11 +19,12 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 import projects from './projects.json';
+import DockerIcon from '@/components/DockerIcon';
 import PageTopbar from '@/components/PageTopbar';
 import './style.css';
 
 const techIconMap = {
-  docker: SiDocker,
+  docker: DockerIcon,
   'github actions': SiGithubactions,
   go: SiGo,
   grafana: SiGrafana,

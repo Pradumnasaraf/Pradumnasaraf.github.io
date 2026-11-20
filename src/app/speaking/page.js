@@ -1,7 +1,6 @@
 import { FaMapMarkerAlt, FaSlideshare, FaYoutube } from 'react-icons/fa';
 import { RiOpenSourceFill } from 'react-icons/ri';
 import {
-  SiDocker,
   SiGithubactions,
   SiGo,
   SiGooglegemini,
@@ -21,11 +20,12 @@ import {
 } from 'react-icons/si';
 import { TbBrandOpenai, TbRobot, TbSparkles } from 'react-icons/tb';
 import speakingData from './speaking.json';
+import DockerIcon from '@/components/DockerIcon';
 import PageTopbar from '@/components/PageTopbar';
 import './style.css';
 
 const techIconMap = {
-  docker: SiDocker,
+  docker: DockerIcon,
   'github actions': SiGithubactions,
   go: SiGo,
   'google gemini': SiGooglegemini,
