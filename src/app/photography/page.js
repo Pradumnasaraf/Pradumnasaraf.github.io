@@ -217,12 +217,14 @@ const FullScreenModal = ({
       <button
         type="button"
         className="modal-tap-zone modal-tap-zone-prev"
+        tabIndex={-1}
         onClick={tapPrev}
         aria-label="Previous image"
       />
       <button
         type="button"
         className="modal-tap-zone modal-tap-zone-next"
+        tabIndex={-1}
         onClick={tapNext}
         aria-label="Next image"
       />
