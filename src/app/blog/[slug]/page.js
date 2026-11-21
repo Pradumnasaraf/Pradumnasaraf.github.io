@@ -7,9 +7,8 @@ import {
   getAllPostSlugs,
   getAllPosts,
 } from '@/lib/blog';
-import { getThumbnailUrl } from '@/lib/blog-utils';
+import { formatPostDate, getThumbnailUrl } from '@/lib/blog-utils';
 import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
-import { format } from 'date-fns';
 import BlogShareButtons from '@/components/BlogShareButtons';
 import CodeBlockCopy from '@/components/CodeBlockCopy';
 import ReadingProgress from '@/components/ReadingProgress';
@@ -214,7 +213,7 @@ export default async function BlogPost({ params }) {
             <h1 className="blog-post-title">{post.title}</h1>
             <div className="blog-post-meta">
               <time className="blog-post-date" dateTime={post.date || ''}>
-                {post.date ? format(new Date(post.date), 'MMMM dd, yyyy') : ''}
+                {formatPostDate(post.date)}
               </time>
               {post.readingTime && (
                 <span className="blog-post-reading-time">
@@ -308,10 +307,7 @@ export default async function BlogPost({ params }) {
                           <div className="related-post-card-meta">
                             {relatedPost.date && (
                               <time dateTime={relatedPost.date}>
-                                {format(
-                                  new Date(relatedPost.date),
-                                  'MMMM dd, yyyy'
-                                )}
+                                {formatPostDate(relatedPost.date)}
                               </time>
                             )}
                             {relatedPost.readingTime && (

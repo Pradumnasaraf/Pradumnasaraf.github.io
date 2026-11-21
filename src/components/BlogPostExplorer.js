@@ -1,8 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { tagLabel } from '@/lib/blog-utils';
-import { format } from 'date-fns';
+import { formatPostDate, tagLabel } from '@/lib/blog-utils';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -36,14 +35,6 @@ function normalizePost(post) {
     ...post,
     tags: Array.isArray(post.tags) ? post.tags : [],
   };
-}
-
-function formatPostDate(date) {
-  if (!date) return '';
-
-  const parsed = new Date(date);
-  if (Number.isNaN(parsed.getTime())) return '';
-  return format(parsed, 'MMMM dd, yyyy');
 }
 
 // Narrower tags that overlap a broader one already in the top row. They stay

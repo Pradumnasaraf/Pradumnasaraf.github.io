@@ -7,7 +7,11 @@ import {
   getFeedEligiblePosts,
   processMarkdown,
 } from '../src/lib/blog.js';
-import { getThumbnailUrl, tagLabel } from '../src/lib/blog-utils.js';
+import {
+  getThumbnailUrl,
+  tagLabel,
+  formatPostDate,
+} from '../src/lib/blog-utils.js';
 import { OG_IMAGE_URL, SITE_URL } from '../src/lib/constants.js';
 
 test('getAllPosts returns sorted, non-empty blog post list', () => {
@@ -185,4 +189,11 @@ test('tagLabel turns tag slugs into readable names', () => {
   assert.equal(tagLabel('ci-cd'), 'CI/CD');
   assert.equal(tagLabel('docker-compose'), 'Docker Compose');
   assert.equal(tagLabel('security'), 'Security');
+});
+
+test('formatPostDate formats in UTC and handles bad input', () => {
+  assert.equal(formatPostDate('2026-07-10'), 'July 10, 2026');
+  assert.equal(formatPostDate('2026-06-04'), 'June 04, 2026');
+  assert.equal(formatPostDate(''), '');
+  assert.equal(formatPostDate('not a date'), '');
 });

@@ -75,3 +75,22 @@ export function tagLabel(tag) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
+
+const POST_DATE_FORMAT = new Intl.DateTimeFormat('en-US', {
+  month: 'long',
+  day: '2-digit',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+
+/**
+ * Formats a post's YYYY-MM-DD date as "July 10, 2026". Formatted in UTC so
+ * the day never shifts with the visitor's time zone.
+ * @param {string} date - Frontmatter date
+ * @returns {string} Display date, or '' when missing or invalid
+ */
+export function formatPostDate(date) {
+  if (!date) return '';
+  const parsed = new Date(date);
+  return Number.isNaN(parsed.getTime()) ? '' : POST_DATE_FORMAT.format(parsed);
+}
