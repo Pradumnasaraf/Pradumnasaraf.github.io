@@ -445,18 +445,6 @@
   letter-spacing: -0.01em;
 }
 
-.blog-post-category {
-  background: #f5f5f5;
-  color: var(--color-fg-secondary);
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.7rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border: 1px solid #eaeaea;
-}
-
 .blog-post-link {
   text-decoration: none;
   color: inherit;
@@ -503,16 +491,6 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   margin: 0.5rem 0;
-}
-
-.blog-post-tag {
-  background: var(--color-surface);
-  color: var(--color-fg-muted);
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  border: 1px solid #eaeaea;
-  font-weight: 300;
 }
 
 .blog-post-tag-button {
@@ -691,11 +669,6 @@
   flex-wrap: wrap;
 }
 
-.blog-post-author {
-  color: var(--color-fg-secondary);
-  font-weight: 400;
-}
-
 .blog-post-reading-time,
 .blog-post-word-count {
   color: var(--color-fg-muted);
@@ -809,28 +782,6 @@
 .blog-share-button:hover::after,
 .blog-share-button:focus::after {
   opacity: 1;
-}
-
-.blog-post-back-link {
-  color: var(--color-fg-secondary);
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
-  padding: 10px 18px;
-  border: 1px solid var(--color-fg-secondary);
-  border-radius: 8px;
-  letter-spacing: -0.01em;
-  width: fit-content;
-}
-
-.blog-post-back-link:hover {
-  background: var(--color-fg-secondary);
-  color: var(--color-surface);
-  transform: translateX(-4px);
 }
 
 .related-posts {
@@ -1722,11 +1673,6 @@
     margin: 0.75rem 0;
   }
 
-  .blog-post-tag {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.6rem;
-  }
-
   .blog-post-content {
     font-size: 0.95rem;
     line-height: 1.7;
@@ -1812,11 +1758,6 @@
   .blog-share-button {
     padding: 8px;
     font-size: 1.1em;
-  }
-
-  .blog-post-back-link {
-    font-size: 0.9rem;
-    padding: 8px 16px;
   }
 }
 
@@ -2409,8 +2350,7 @@ html[data-blog-theme='dark'] .blog-theme-root .blog-post-featured-label {
 
 /* Tags (chips on toolbar + per-card buttons) */
 html[data-blog-theme='dark'] .blog-theme-root .blog-topic-chip,
-html[data-blog-theme='dark'] .blog-theme-root .blog-post-tag-button,
-html[data-blog-theme='dark'] .blog-theme-root .blog-post-tag {
+html[data-blog-theme='dark'] .blog-theme-root .blog-post-tag-button {
   background: #1c1f26;
   border-color: #2c313b;
   color: #c8ccd2;
