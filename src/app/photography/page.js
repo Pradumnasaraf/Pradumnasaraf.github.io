@@ -158,10 +158,12 @@ const FullScreenModal = ({
   index,
   total,
   country,
+  neighbours = [],
   onClose,
   onPrev,
   onNext,
 }) => {
+  const [loadedSrc, setLoadedSrc] = useState(null);
   const [showHint, setShowHint] = useState(false);
   const [hintVerb, setHintVerb] = useState('Tap');
   const touchStartX = useRef(null);
@@ -291,21 +293,58 @@ const FullScreenModal = ({
         </button>
         <span className="modal-label modal-label-left">Close</span>
       </div>
+      {loadedSrc !== imageSrc && (
+        <span className="modal-loading" role="status">
+          Loading photo…
+        </span>
+      )}
+      {/* Keyed by src so the previous photo is removed at once instead of
+          lingering under the new counter while the next one loads. */}
       <Image
+        key={imageSrc}
         src={imageSrc}
         alt={imageAlt || 'Full screen photograph'}
         width={1920}
         height={1080}
         sizes="(max-width: 768px) 100vw, 90vw"
-        className="modal-image"
+        className={`modal-image${loadedSrc === imageSrc ? '' : ' modal-image-loading'}`}
         style={{ objectFit: 'contain' }}
+        onLoad={() => setLoadedSrc(imageSrc)}
       />
+      {neighbours.map((src) => (
+        <Image
+          key={`preload-${src}`}
+          src={src}
+          alt=""
+          aria-hidden="true"
+          width={1920}
+          height={1080}
+          sizes="(max-width: 768px) 100vw, 90vw"
+          loading="eager"
+          className="modal-preload"
+        />
+      ))}
     </div>,
     document.body
   );
 };
 
+const RELOAD_GUARD_KEY = 'photography-layout-reload';
+
+// True when tiles are much narrower than their columns, the "squeezed"
+// layout seen a few times and fixed by a refresh.
+function isGridSqueezed() {
+  const column = document.querySelector('.my-masonry-grid_column');
+  const tile = column?.firstElementChild;
+  if (!column || !tile) return false;
+  const columnWidth = column.getBoundingClientRect().width;
+  return (
+    columnWidth > 0 && tile.getBoundingClientRect().width < columnWidth * 0.6
+  );
+}
+
 export default function PhotographyPage() {
+  const [gridKey, setGridKey] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageSrc, setModalImageSrc] = useState('');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -343,6 +382,31 @@ export default function PhotographyPage() {
     setModalImageSrc(images[newIndex].src);
   };
 
+  // Safety net for the squeezed layout: rebuild the grid once, and if it is
+  // still squeezed, reload the page once per session.
+  useEffect(() => {
+    const timers = [];
+    timers.push(
+      setTimeout(() => {
+        if (!isGridSqueezed()) return;
+        setGridKey((k) => k + 1);
+        timers.push(
+          setTimeout(() => {
+            if (!isGridSqueezed()) return;
+            try {
+              if (sessionStorage.getItem(RELOAD_GUARD_KEY)) return;
+              sessionStorage.setItem(RELOAD_GUARD_KEY, '1');
+            } catch {
+              return;
+            }
+            window.location.reload();
+          }, 1500)
+        );
+      }, 1500)
+    );
+    return () => timers.forEach(clearTimeout);
+  }, []);
+
   return (
     <>
       <PageTopbar />
@@ -357,6 +421,7 @@ export default function PhotographyPage() {
 
         <div className="container mx-auto">
           <Masonry
+            key={gridKey}
             breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
@@ -381,6 +446,11 @@ export default function PhotographyPage() {
           index={currentImageIndex}
           total={images.length}
           country={images[currentImageIndex]?.country}
+          neighbours={[
+            images[(currentImageIndex + 1) % images.length]?.src,
+            images[(currentImageIndex - 1 + images.length) % images.length]
+              ?.src,
+          ].filter(Boolean)}
           onClose={closeModal}
           onPrev={showPrevImage}
           onNext={showNextImage}
