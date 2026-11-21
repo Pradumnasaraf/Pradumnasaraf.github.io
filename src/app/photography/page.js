@@ -14,6 +14,7 @@ const COUNTRY_NAMES = {
   CZ: 'Czech Republic',
   DE: 'Germany',
   FR: 'France',
+  GLOBE: 'Somewhere',
   HK: 'Hong Kong',
   IN: 'India',
   MO: 'Macau',
@@ -25,6 +26,7 @@ const COUNTRY_NAMES = {
 // `country` in images.json is an ISO 3166 code taken from the photo's own GPS
 // data (matched to the nearest place in travel/travel.json).
 function flagEmoji(code) {
+  if (code === 'GLOBE') return '🌐';
   return String.fromCodePoint(
     ...code
       .toUpperCase()
