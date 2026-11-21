@@ -448,3 +448,27 @@
 .photo-retry:hover {
   border-color: var(--color-fg);
 }
+
+.modal-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.modal-image-loading {
+  opacity: 0;
+}
+
+/* Off-screen copies of the next and previous photos, loaded ahead of time. */
+.modal-preload {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}

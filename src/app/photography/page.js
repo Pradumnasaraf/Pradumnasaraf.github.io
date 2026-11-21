@@ -158,10 +158,12 @@ const FullScreenModal = ({
   index,
   total,
   country,
+  neighbours = [],
   onClose,
   onPrev,
   onNext,
 }) => {
+  const [loadedSrc, setLoadedSrc] = useState(null);
   const [showHint, setShowHint] = useState(false);
   const [hintVerb, setHintVerb] = useState('Tap');
   const touchStartX = useRef(null);
@@ -291,15 +293,37 @@ const FullScreenModal = ({
         </button>
         <span className="modal-label modal-label-left">Close</span>
       </div>
+      {loadedSrc !== imageSrc && (
+        <span className="modal-loading" role="status">
+          Loading photo…
+        </span>
+      )}
+      {/* Keyed by src so the previous photo is removed at once instead of
+          lingering under the new counter while the next one loads. */}
       <Image
+        key={imageSrc}
         src={imageSrc}
         alt={imageAlt || 'Full screen photograph'}
         width={1920}
         height={1080}
         sizes="(max-width: 768px) 100vw, 90vw"
-        className="modal-image"
+        className={`modal-image${loadedSrc === imageSrc ? '' : ' modal-image-loading'}`}
         style={{ objectFit: 'contain' }}
+        onLoad={() => setLoadedSrc(imageSrc)}
       />
+      {neighbours.map((src) => (
+        <Image
+          key={`preload-${src}`}
+          src={src}
+          alt=""
+          aria-hidden="true"
+          width={1920}
+          height={1080}
+          sizes="(max-width: 768px) 100vw, 90vw"
+          loading="eager"
+          className="modal-preload"
+        />
+      ))}
     </div>,
     document.body
   );
@@ -381,6 +405,11 @@ export default function PhotographyPage() {
           index={currentImageIndex}
           total={images.length}
           country={images[currentImageIndex]?.country}
+          neighbours={[
+            images[(currentImageIndex + 1) % images.length]?.src,
+            images[(currentImageIndex - 1 + images.length) % images.length]
+              ?.src,
+          ].filter(Boolean)}
           onClose={closeModal}
           onPrev={showPrevImage}
           onNext={showNextImage}
