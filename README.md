@@ -1,6 +1,6 @@
 ## Pradumnasaraf.github.io (pradumnasaraf.dev)
 
-This repository contains the source code for my personal/portfolio/service website. It is built Next.js and Tailwind CSS. The Code is 100% open source and available for anyone to use.
+This repository contains the source code for my personal/portfolio/service website. It is built with Next.js and Tailwind CSS. The code is 100% open source and available for anyone to use.
 
 ![website screenshot](https://github.com/user-attachments/assets/918aea3f-f273-46ea-85c6-494f18e57f25)
 

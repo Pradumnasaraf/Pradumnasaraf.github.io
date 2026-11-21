@@ -160,6 +160,16 @@ Reuse these instead of inventing new styles.
 - **No per-item filters on long lists.** Don't put `filter: drop-shadow` or `backdrop-filter` on every tile or pill of a long grid (photography has 100+). Chromium browsers (Dia especially) run out of graphics memory and stop painting the grid, so it shows and then goes blank. Use `box-shadow` and a solid translucent background instead; the grayscale `filter` on each photo is the one filter the gallery keeps.
 - **Never read `public/` from server code at request time.** `next.config.mjs` excludes `public/` from function bundles (it used to fill Vercel's 10 GB Function Storage). Assets a server route needs go in `src/assets/` (for example `og-avatar.png` for OG images).
 
+## README screenshot
+
+Whenever the homepage changes, the README screenshot must be refreshed in the same style. Ask the user for a new screenshot, or take one yourself (headless Chrome, `https://pradumnasaraf.dev/` or the local server, 1512x949 viewport at 2x scale, no browser chrome). Then frame it like the current one:
+
+- Crop off any dark line at the very top edge.
+- Round the corners (28px radius at 2x), wrap it in a 14px `#e9e6e1` frame with the same radius.
+- Put it on a transparent canvas with 130px padding and a soft shadow underneath: the frame shape filled black at 28% opacity, shifted 22px down, blurred by 40px. With `sharp`, render the shadow shape to a buffer first and blur that buffer; `composite()` runs after `blur()` in one pipeline, so blurring in the same chain leaves a hard edge.
+- Save it as `website-screenshot-readme.png` on the user's Desktop, have the user upload it to GitHub, then put the returned `https://github.com/user-attachments/assets/...` URL in `README.md`. That URL answers 404 to anonymous `curl`; check it through the rendered README (`gh api repos/<owner>/<repo>/readme -H "Accept: application/vnd.github.html"`) instead.
+- macOS screenshot filenames use a narrow no-break space before AM/PM, so reference them with a glob (`~/Desktop/Screenshot*9.06.26*.png`) rather than typing the name.
+
 ## Checking UI changes
 
 The Chrome extension is often not connected, so check pages with headless Chrome against the dev server. Plain `--window-size` clamps below about 500px wide, so emulate phones through the DevTools protocol (`Emulation.setDeviceMetricsOverride` at 390x844, `mobile: true`). Also confirm `document.documentElement.scrollWidth <= innerWidth`, so nothing scrolls sideways.
