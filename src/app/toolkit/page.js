@@ -28,14 +28,20 @@ const ToolKitPage = () => {
               </div>
 
               <div className="toolkit-item">
+                <h3>Camera</h3>
+                <p>OBSBOT Tiny 3</p>
+              </div>
+
+              <div className="toolkit-item">
                 <h3>Keyboard</h3>
                 <p>Logitech MX Keys S</p>
                 <p>Logitech K345</p>
               </div>
               <div className="toolkit-item">
-                <h3>Mouse</h3>
+                <h3>Mouse & Trackpad</h3>
                 <p>Logitech MX Master 4</p>
                 <p>Logitech M331</p>
+                <p>Apple Magic Trackpad</p>
               </div>
               <div className="toolkit-item">
                 <h3>Headphones</h3>
