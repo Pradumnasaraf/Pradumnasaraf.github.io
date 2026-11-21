@@ -1,4 +1,4 @@
-import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from './constants.js';
+import { SITE_URL, TWITTER_HANDLE } from './constants.js';
 
 const ROBOTS = {
   full: {
@@ -17,8 +17,9 @@ const ROBOTS = {
 };
 
 // Shared builder for per-route metadata. Pass only the fields that differ;
-// ogTitle/ogDescription default to title/description, ogImage defaults to the
-// generic site image and accepts a bare filename under /media, robots is
+// ogTitle/ogDescription default to title/description. Social images come from
+// each route's opengraph-image.js; pass ogImage (a bare filename under /media
+// or an absolute URL) only to override that. robots is
 // 'full' | 'simple' | 'noindex'. Extra top-level fields (authors, creator,
 // publisher, metadataBase) pass through via ...rest.
 export function buildMetadata({
@@ -38,7 +39,7 @@ export function buildMetadata({
 }) {
   const url = `${SITE_URL}${path}`;
   const image = !ogImage
-    ? OG_IMAGE_URL
+    ? null
     : ogImage.startsWith('http')
       ? ogImage
       : `${SITE_URL}/media/${ogImage}`;
@@ -53,7 +54,9 @@ export function buildMetadata({
       description: ogDescription,
       url,
       type: 'website',
-      images: [{ url: image, width: 1200, height: 630, alt: imageAlt }],
+      ...(image
+        ? { images: [{ url: image, width: 1200, height: 630, alt: imageAlt }] }
+        : {}),
       locale: 'en_US',
     },
     twitter: {
@@ -61,7 +64,7 @@ export function buildMetadata({
       title: ogTitle,
       description: ogDescription,
       ...(twitterCreator ? { creator: twitterCreator } : {}),
-      images: [image],
+      ...(image ? { images: [image] } : {}),
     },
     robots: ROBOTS[robots],
     alternates: {

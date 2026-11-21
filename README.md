@@ -2,7 +2,7 @@
 
 This repository contains the source code for my personal/portfolio/service website. It is built Next.js and Tailwind CSS. The Code is 100% open source and available for anyone to use.
 
-![website screenshot](https://github.com/user-attachments/assets/cb0bb938-6e97-4e40-9631-d4235c5021b4)
+![website screenshot](https://github.com/user-attachments/assets/6777b0d6-2d68-405d-978f-d634c9a6b40d)
 
 ### 📜 License
 

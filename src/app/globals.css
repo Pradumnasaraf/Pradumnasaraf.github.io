@@ -13,6 +13,9 @@
   --color-fg-secondary: #333333;
   --color-fg-muted: #666666;
   --color-fg-strong: #000000;
+  --color-border: #dcdcdc;
+  --color-border-subtle: #ececec;
+  --color-hover: #f7f7f7;
 }
 
 *,
@@ -99,12 +102,12 @@ main {
   align-items: center;
   justify-content: center;
   background: #ffffff;
-  border: 1px solid #e3e3e3;
+  border: 1px solid var(--color-border-subtle);
   border-radius: 999px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: none !important;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    border-color 0.2s ease,
+    background-color 0.2s ease;
   cursor: pointer;
   z-index: auto;
 }
@@ -116,8 +119,9 @@ main {
 }
 
 .page-topbar .back-button:hover {
-  transform: translateX(-4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: none !important;
+  border-color: var(--color-border);
+  background: var(--color-hover);
 }
 
 .page-topbar .back-button::after {
@@ -253,9 +257,9 @@ main {
 }
 
 .extra-menu-toggle {
-  width: 34px;
-  height: 34px;
-  border: 1px solid #d5d5d5;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ececec;
   border-radius: 8px;
   background: #ffffff;
   color: #333333;
@@ -271,8 +275,8 @@ main {
 }
 
 .extra-menu-toggle:hover {
-  background: #ffffff;
-  border-color: #d5d5d5;
+  background: #f7f7f7;
+  border-color: #dcdcdc;
   color: #333333;
 }
 
@@ -356,31 +360,35 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 6rem;
+  padding-bottom: 6vh;
   margin-top: 10vh;
   overflow-x: hidden;
   box-sizing: border-box;
 }
 
 .left {
-  width: 35%;
-  max-width: 500px;
+  width: 40%;
+  max-width: 560px;
   padding-right: 2rem;
 }
 
 .socialmedia {
-  margin: 35px 0;
+  margin: 0 0 28px;
   display: flex;
-  gap: 16px;
+  gap: 8px;
 }
 
 .socialmedia a {
   color: #333333;
-  padding: 14px;
+  padding: 9px;
   border-radius: 8px;
-  border: 1px solid #333333;
-  font-size: 1.7em;
-  transition: all 0.3s ease;
+  border: 1px solid #e5e5e5;
+  font-size: 1.15rem;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -388,26 +396,28 @@ main {
 }
 
 .socialmedia a:hover {
-  background-color: #333333;
-  color: #ffffff;
-  transform: translateY(-2px);
+  border-color: #1a1a1a;
+  color: #000000;
+  background-color: #f7f7f7;
 }
 
 .left > h1 {
-  color: #333333;
-  font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 2.2rem;
-  letter-spacing: -0.02em;
+  color: var(--color-fg);
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .left > p {
   color: #666666;
   font-weight: 300;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
   letter-spacing: -0.01em;
   max-width: 100%;
 }
@@ -420,30 +430,47 @@ main {
 
 .ibutton {
   display: flex;
-  gap: 16px;
-  margin-top: 30px;
+  gap: 10px;
+  margin-top: 28px;
 }
 
 .connect {
   font-family: 'League Spartan', sans-serif;
-  padding: 14px 28px;
-  border: 1px solid #000000;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px 9px;
+  border: 1px solid #dcdcdc;
   background-color: #ffffff;
-  color: #000000;
+  color: var(--color-fg);
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 400;
   border-radius: 8px;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
   white-space: nowrap;
   letter-spacing: 0;
   cursor: pointer;
 }
 
 .connect:hover {
-  background-color: #000000;
+  border-color: #1a1a1a;
+  background-color: #f7f7f7;
+}
+
+.connect-primary {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
   color: #ffffff;
-  transform: translateY(-2px);
+}
+
+.connect-primary:hover {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
 }
 
 /* Right Section */
@@ -453,17 +480,16 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 250px;
+  max-width: 320px;
   width: 100%;
 }
 
 .right img {
   width: 100%;
   height: auto;
-  max-width: 250px;
+  max-width: 320px;
   object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid white;
+  border-radius: 14px;
 }
 
 /* Hamburger Menu Styles */
@@ -651,7 +677,7 @@ main {
   }
 
   .left > h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 6px 0;
     letter-spacing: -0.02em;
   }
@@ -668,13 +694,13 @@ main {
 
   .socialmedia {
     justify-content: center;
-    gap: 12px;
-    margin: 10px 0;
+    gap: 8px;
+    margin: 0 0 12px;
   }
 
   .socialmedia a {
     padding: 10px;
-    font-size: 1.4em;
+    font-size: 1.2rem;
   }
 
   .ibutton {
@@ -686,8 +712,9 @@ main {
   }
 
   .connect {
-    padding: 10px 18px;
-    font-size: 0.95rem;
+    padding: 10px 18px 9px;
+    font-size: 1rem;
+    justify-content: center;
     min-width: 140px;
   }
 
@@ -798,5 +825,148 @@ main {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Shared button and pill geometry for every page.
+   Each page keeps its own colours; size, type and spacing live here so
+   all buttons and all pills match. `:root` raises specificity above the
+   per-page rules. League Spartan sits high in its line box, so the top
+   padding is a little larger than the bottom (0.15em each way) to centre
+   the letters optically. Keep new buttons and pills in these lists.
+   ------------------------------------------------------------------ */
+:root .connect,
+:root .project-link,
+:root .speaking-action-button,
+:root .contact-button,
+:root .blog-explorer-load-more,
+:root .not-found-actions .primary-button,
+:root .not-found-actions .secondary-button,
+:root .download-button,
+:root .qr-copy-button,
+:root .suggestion-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 0;
+  height: auto;
+  padding: calc(0.6rem + 0.15em) 0.95rem calc(0.6rem - 0.15em);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+  transform: none;
+  box-shadow: none;
+}
+
+:root .connect svg,
+:root .project-link svg,
+:root .speaking-action-button svg,
+:root .contact-button svg,
+:root .download-button svg,
+:root .not-found-actions .primary-button svg,
+:root .not-found-actions .secondary-button svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+:root .blog-topic-chip,
+:root .blog-post-tag-button,
+:root .toolkit-chips li,
+:root .speaking-date-chip,
+:root .speaking-location-chip,
+:root .speaking-upcoming-chip,
+:root .speaking-upcoming-label,
+:root .contact-info p,
+:root .timeline-year span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 0;
+  padding: calc(0.38rem + 0.15em) 0.7rem calc(0.38rem - 0.15em);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  transform: none;
+  box-shadow: none;
+}
+
+:root .speaking-upcoming-chip,
+:root .speaking-upcoming-label,
+:root .blog-topic-chip-active {
+  border-color: var(--color-fg);
+}
+
+:root .contact-info p svg,
+:root .speaking-location-chip svg {
+  width: 0.9em;
+  height: 0.9em;
+}
+
+/* Small labels that sit on images */
+:root .blog-post-featured-label,
+:root .photo-flag {
+  line-height: 1;
+  padding: calc(0.32rem + 0.14em) 0.6rem calc(0.32rem - 0.14em);
+}
+
+:root .qr-copy-button,
+:root .download-button {
+  border-color: transparent;
+}
+
+/* Shared page header: title plus an optional one-line subtitle. */
+.page-header {
+  max-width: 1080px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.page-header-tight {
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--color-fg);
+}
+
+.page-subtitle {
+  margin-top: 0.5rem;
+  color: var(--color-fg-muted);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-header-tight {
+    margin-bottom: 1.25rem;
+  }
+
+  .page-title {
+    margin-top: 15px;
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.95rem;
   }
 }

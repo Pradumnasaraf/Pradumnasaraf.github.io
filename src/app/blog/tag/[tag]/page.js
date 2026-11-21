@@ -1,11 +1,13 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAllTags, getPostsByTag } from '@/lib/blog';
-import { toPostSummary } from '@/lib/blog-utils';
-import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+import { toPostSummary, tagLabel } from '@/lib/blog-utils';
+import { SITE_URL } from '@/lib/constants';
+import { buildMetadata } from '@/lib/metadata';
 import BlogPostExplorer from '@/components/BlogPostExplorer';
 import BlogThemeToggle from '@/components/BlogThemeToggle';
 import '../../style.css';
+import BackArrowIcon from '@/components/BackArrowIcon';
 
 export async function generateStaticParams() {
   return getAllTags().map(({ tag }) => ({ tag }));
@@ -18,43 +20,14 @@ export async function generateMetadata({ params }) {
     return { title: 'Tag Not Found' };
   }
 
-  const title = `Posts tagged "${tag}" | Pradumna Saraf Blog`;
-  const description = `${posts.length} ${posts.length === 1 ? 'article' : 'articles'} tagged "${tag}" — technical writing on Docker, Kubernetes, DevOps, and Cloud Native by Pradumna Saraf.`;
-  const url = `${SITE_URL}/blog/tag/${tag}`;
-
-  return {
-    title,
-    description,
-    keywords: tag,
-    openGraph: {
-      title,
-      description,
-      url,
-      type: 'website',
-      images: [
-        {
-          url: OG_IMAGE_URL,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      creator: TWITTER_HANDLE,
-      images: [OG_IMAGE_URL],
-    },
-    alternates: {
-      canonical: url,
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  };
+  const label = tagLabel(tag);
+  return buildMetadata({
+    title: `${label} articles | Pradumna Saraf Blog`,
+    description: `${posts.length} ${posts.length === 1 ? 'article' : 'articles'} on ${label} by Pradumna Saraf.`,
+    path: `/blog/tag/${tag}`,
+    keywords: label,
+    robots: 'simple',
+  });
 }
 
 export default async function TagPage({ params }) {
@@ -109,7 +82,7 @@ export default async function TagPage({ params }) {
 
   return (
     <>
-      <div className="blog-topbar" role="banner">
+      <div className="blog-topbar">
         <div className="blog-topbar-inner">
           <Link
             href="/blog"
@@ -117,19 +90,7 @@ export default async function TagPage({ params }) {
             aria-label="Back to Blog"
             title="Back to Blog"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
+            <BackArrowIcon />
           </Link>
           <BlogThemeToggle />
         </div>
@@ -145,10 +106,10 @@ export default async function TagPage({ params }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <header className="blog-header">
-          <h1 className="blog-title">{tag}</h1>
+          <h1 className="blog-title">{tagLabel(tag)}</h1>
           <p className="blog-subtitle">
             {posts.length} {posts.length === 1 ? 'article' : 'articles'} tagged
-            with <strong>{tag}</strong>.{' '}
+            with <strong>{tagLabel(tag)}</strong>.{' '}
             <Link href="/blog">Browse all posts →</Link>
           </p>
         </header>

@@ -1,10 +1,14 @@
+import { cache } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getPostBySlug, getAllPostSlugs, getAllPosts } from '@/lib/blog';
-import { getThumbnailUrl } from '@/lib/blog-utils';
+import {
+  getPostBySlug as loadPost,
+  getAllPostSlugs,
+  getAllPosts,
+} from '@/lib/blog';
+import { formatPostDate, getThumbnailUrl } from '@/lib/blog-utils';
 import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
-import { format } from 'date-fns';
 import BlogShareButtons from '@/components/BlogShareButtons';
 import CodeBlockCopy from '@/components/CodeBlockCopy';
 import ReadingProgress from '@/components/ReadingProgress';
@@ -14,6 +18,9 @@ import ImageLightbox from '@/components/ImageLightbox';
 import TableOfContents from '@/components/TableOfContents';
 import BackToTopButton from '@/components/BackToTopButton';
 import '../style.css';
+
+// Metadata and the page both need the post; render its markdown once.
+const getPostBySlug = cache(loadPost);
 
 export async function generateStaticParams() {
   const slugs = getAllPostSlugs();
@@ -34,8 +41,7 @@ export async function generateMetadata({ params }) {
 
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
 
-  // If post has a canonical URL in frontmatter (for reposted content),
-  // use that. Otherwise, use this site as the canonical URL.
+  // Cross-posted articles keep the original as canonical.
   const canonicalUrl = post.canonical || `${SITE_URL}/blog/${slug}`;
 
   return {
@@ -46,7 +52,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: post.title,
       description: post.excerpt || post.title,
-      url: `${SITE_URL}/blog/${slug}`,
+      url: canonicalUrl,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author || 'Pradumna Saraf'],
@@ -85,6 +91,11 @@ export default async function BlogPost({ params }) {
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
   const allPosts = getAllPosts();
 
+  // allPosts is sorted newest first: "previous" is the older post.
+  const postIndex = allPosts.findIndex((item) => item.slug === post.slug);
+  const olderPost = postIndex >= 0 ? allPosts[postIndex + 1] : null;
+  const newerPost = postIndex > 0 ? allPosts[postIndex - 1] : null;
+
   const currentTags = Array.isArray(post.tags) ? post.tags : [];
   const normalizedCurrentTags = currentTags.map((tag) => tag.toLowerCase());
 
@@ -115,8 +126,7 @@ export default async function BlogPost({ params }) {
   if (relatedPosts.length === 0) {
     relatedPosts = allPosts
       .filter((item) => item.slug !== post.slug)
-      .slice(0, 3)
-      .map((item) => ({ ...item, overlapCount: 0, dateValue: 0 }));
+      .slice(0, 3);
   }
 
   const structuredData = {
@@ -182,7 +192,7 @@ export default async function BlogPost({ params }) {
     <>
       <ReadingProgress />
       <BackToTopButton />
-      <div className="blog-topbar" role="banner">
+      <div className="blog-topbar">
         <div className="blog-topbar-inner">
           <BlogBackButton />
           <BlogThemeToggle />
@@ -203,7 +213,7 @@ export default async function BlogPost({ params }) {
             <h1 className="blog-post-title">{post.title}</h1>
             <div className="blog-post-meta">
               <time className="blog-post-date" dateTime={post.date || ''}>
-                {post.date ? format(new Date(post.date), 'MMMM dd, yyyy') : ''}
+                {formatPostDate(post.date)}
               </time>
               {post.readingTime && (
                 <span className="blog-post-reading-time">
@@ -244,6 +254,35 @@ export default async function BlogPost({ params }) {
             <div className="blog-post-footer-content">
               <BlogShareButtons url={postUrl} title={post.title} />
 
+              {(olderPost || newerPost) && (
+                <nav className="post-pager" aria-label="More posts">
+                  {olderPost ? (
+                    <Link
+                      href={`/blog/${olderPost.slug}`}
+                      className="post-pager-link"
+                    >
+                      <span className="post-pager-label">← Previous post</span>
+                      <span className="post-pager-title">
+                        {olderPost.title}
+                      </span>
+                    </Link>
+                  ) : (
+                    <span />
+                  )}
+                  {newerPost && (
+                    <Link
+                      href={`/blog/${newerPost.slug}`}
+                      className="post-pager-link post-pager-next"
+                    >
+                      <span className="post-pager-label">Next post →</span>
+                      <span className="post-pager-title">
+                        {newerPost.title}
+                      </span>
+                    </Link>
+                  )}
+                </nav>
+              )}
+
               {relatedPosts.length > 0 && (
                 <section className="related-posts" aria-label="Related posts">
                   <h2 className="related-posts-title">Continue Reading</h2>
@@ -268,10 +307,7 @@ export default async function BlogPost({ params }) {
                           <div className="related-post-card-meta">
                             {relatedPost.date && (
                               <time dateTime={relatedPost.date}>
-                                {format(
-                                  new Date(relatedPost.date),
-                                  'MMMM dd, yyyy'
-                                )}
+                                {formatPostDate(relatedPost.date)}
                               </time>
                             )}
                             {relatedPost.readingTime && (

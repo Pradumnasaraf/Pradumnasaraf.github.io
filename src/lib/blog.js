@@ -25,25 +25,18 @@ import rust from 'highlight.js/lib/languages/rust';
 import java from 'highlight.js/lib/languages/java';
 import sql from 'highlight.js/lib/languages/sql';
 import markdown from 'highlight.js/lib/languages/markdown';
-import html from 'highlight.js/lib/languages/xml';
 
 const allLanguages = {
   dockerfile: dockerfile,
-  Dockerfile: dockerfile,
   javascript: javascript,
-  js: javascript,
   json: json,
   typescript: typescript,
-  ts: typescript,
   python: python,
-  py: python,
   bash: bash,
   shell: shell,
-  sh: shell,
   yaml: yaml,
-  yml: yaml,
   xml: xml,
-  html: html,
+  html: xml,
   css: css,
   go: go,
   rust: rust,
@@ -97,6 +90,20 @@ const sanitizeSchema = {
 /**
  * Get all blog posts sorted by date
  */
+// Reading time is words / 200, ignoring code blocks, inline code, link URLs
+// and markdown punctuation.
+function readingStats(content) {
+  const text = content
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`]+`/g, '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[#*[\]!]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const wordCount = text ? text.split(' ').length : 0;
+  return { wordCount, readingTime: Math.max(1, Math.ceil(wordCount / 200)) };
+}
+
 export function getAllPosts() {
   if (!fs.existsSync(postsDirectory)) {
     return [];
@@ -113,18 +120,7 @@ export function getAllPosts() {
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         const { data, content } = matter(fileContents);
 
-        const wordsPerMinute = 200;
-        const textContent = content
-          .replace(/```[\s\S]*?```/g, '')
-          .replace(/`[^`]+`/g, '')
-          .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-          .replace(/[#*[\]!]/g, '')
-          .replace(/\s+/g, ' ')
-          .trim();
-        const wordCount = textContent
-          ? textContent.split(/\s+/).filter((word) => word.length > 0).length
-          : 0;
-        const readingTime = Math.max(1, Math.ceil(wordCount / wordsPerMinute));
+        const { wordCount, readingTime } = readingStats(content);
 
         return {
           slug,
@@ -165,23 +161,11 @@ export function getFeedEligiblePosts(posts = getAllPosts()) {
   });
 }
 
-/**
- * Get all post slugs
- */
+// Slugs of published posts (drafts excluded).
 export function getAllPostSlugs() {
-  if (!fs.existsSync(postsDirectory)) {
-    return [];
-  }
-
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames
-    .filter((fileName) => fileName.endsWith('.md') || fileName.endsWith('.mdx'))
-    .map((fileName) => fileName.replace(/\.(md|mdx)$/, ''));
+  return getAllPosts().map((post) => post.slug);
 }
 
-/**
- * Get a single post by slug
- */
 /**
  * Process a Markdown string through the same pipeline used by getPostBySlug.
  * Pure function — no filesystem access. Suitable for unit testing the
@@ -233,18 +217,9 @@ export async function getPostBySlug(slug) {
   );
   const { data, content } = matter(fileContents);
 
-  const wordsPerMinute = 200;
-  const textContent = content
-    .replace(/```[\s\S]*?```/g, '')
-    .replace(/`[^`]+`/g, '')
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/[#*[\]!]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-  const wordCount = textContent
-    ? textContent.split(/\s+/).filter((word) => word.length > 0).length
-    : 0;
-  const readingTime = Math.max(1, Math.ceil(wordCount / wordsPerMinute));
+  if (data.draft) return null;
+
+  const { wordCount, readingTime } = readingStats(content);
 
   const contentHtml = await processMarkdown(content);
 

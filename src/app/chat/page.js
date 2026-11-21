@@ -1,11 +1,27 @@
 'use client';
 import './style.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PageTopbar from '@/components/PageTopbar';
 
 const ChatPage = () => {
+  const [calendarReady, setCalendarReady] = useState(false);
+
+  // Cal.com injects an iframe into the container; hide the placeholder once
+  // it shows up.
   useEffect(() => {
-    // Cal inline embed code
+    const el = document.getElementById('my-cal-inline');
+    if (!el) return undefined;
+    const observer = new MutationObserver(() => {
+      if (el.querySelector('iframe')) {
+        setCalendarReady(true);
+        observer.disconnect();
+      }
+    });
+    observer.observe(el, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     const calScript = document.createElement('script');
     calScript.type = 'text/javascript';
     calScript.innerHTML = `
@@ -58,8 +74,21 @@ const ChatPage = () => {
       <div className="chat-page">
         <PageTopbar />
 
-        {/* Calendar Section */}
-        <div id="my-cal-inline" className="calendar-container"></div>
+        <header className="page-header page-header-tight">
+          <h1 className="page-title">Let&apos;s chat</h1>
+          <p className="page-subtitle">
+            Book a 30-minute call about talks, collaborations or content.
+          </p>
+        </header>
+
+        <div className="calendar-wrap">
+          {!calendarReady && (
+            <p className="calendar-loading" role="status">
+              Loading calendar…
+            </p>
+          )}
+          <div id="my-cal-inline" className="calendar-container"></div>
+        </div>
       </div>
     </>
   );

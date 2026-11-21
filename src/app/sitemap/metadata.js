@@ -21,5 +21,4 @@ export const metadata = buildMetadata({
   ],
   ogDescription:
     'Navigate through all pages and resources on pradumnasaraf.dev',
-  imageAlt: 'Pradumna Saraf - Site Map',
 });

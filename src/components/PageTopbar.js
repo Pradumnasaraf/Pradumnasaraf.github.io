@@ -7,7 +7,7 @@ export default function PageTopbar({
   children,
 }) {
   return (
-    <div className="page-topbar" role="banner">
+    <div className="page-topbar">
       <div className="page-topbar-inner">
         <Link href={href} className="back-button" aria-label={ariaLabel}>
           <BackArrowIcon />

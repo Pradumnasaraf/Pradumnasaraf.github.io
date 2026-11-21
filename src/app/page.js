@@ -1,254 +1,21 @@
-'use client';
-import Link from 'next/link';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
-import { useEffect, useRef, useState } from 'react';
-import './globals.css';
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiX } from 'react-icons/si';
 import BackToTopButton from '@/components/BackToTopButton';
-
-// Easter egg: only reachable via the Konami code, so keep it out of the
-// homepage bundle and fetch it on the first activation.
-const KonamiGame = dynamic(() => import('@/components/KonamiGame'), {
-  ssr: false,
-});
+import HomeNav from '@/components/HomeNav';
+import { SOCIAL } from '@/lib/constants';
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isExtraMenuOpen, setIsExtraMenuOpen] = useState(false);
-  const [isMobileMoreOpen, setIsMobileMoreOpen] = useState(false);
-  const [showGame, setShowGame] = useState(false);
-  const extraMenuRef = useRef(null);
-  const keySequenceRef = useRef([]);
-  const avatarTapsRef = useRef([]);
-
-  const toggleMenu = () => {
-    const nextState = !isMenuOpen;
-    setIsMenuOpen(nextState);
-    if (!nextState) {
-      setIsMobileMoreOpen(false);
-    }
-    setIsExtraMenuOpen(false);
-  };
-
-  const toggleExtraMenu = () => {
-    setIsExtraMenuOpen(!isExtraMenuOpen);
-  };
-
-  const closeAllMenus = () => {
-    setIsMenuOpen(false);
-    setIsExtraMenuOpen(false);
-    setIsMobileMoreOpen(false);
-  };
-
-  const handleAvatarTap = () => {
-    const TAP_COUNT_NEEDED = 5;
-    const TAP_WINDOW_MS = 2000;
-    const now = Date.now();
-    const recent = avatarTapsRef.current.filter((t) => now - t < TAP_WINDOW_MS);
-    recent.push(now);
-    avatarTapsRef.current = recent;
-    if (recent.length >= TAP_COUNT_NEEDED) {
-      avatarTapsRef.current = [];
-      setShowGame(true);
-    }
-  };
-
-  useEffect(() => {
-    const konamiCode = [
-      'ArrowUp',
-      'ArrowUp',
-      'ArrowDown',
-      'ArrowDown',
-      'ArrowLeft',
-      'ArrowRight',
-      'ArrowLeft',
-      'ArrowRight',
-      'b',
-      'a',
-    ];
-    const handleKeyDown = (e) => {
-      if (!konamiCode.includes(e.key)) return;
-      const next = [...keySequenceRef.current, e.key].slice(-konamiCode.length);
-      keySequenceRef.current = next;
-      if (
-        next.length === konamiCode.length &&
-        next.every((key, index) => key === konamiCode[index])
-      ) {
-        keySequenceRef.current = [];
-        setShowGame(true);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        extraMenuRef.current &&
-        !extraMenuRef.current.contains(event.target)
-      ) {
-        setIsExtraMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
   return (
     <>
-      <div className="nav">
-        <button
-          type="button"
-          className="hamburger"
-          onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
-          aria-expanded={isMenuOpen}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div className="nav-links-group">
-          <div className={`pages ${isMenuOpen ? 'active' : ''}`}>
-            <span className="page-item">
-              <Link href="/blog" onClick={closeAllMenus}>
-                Blog
-              </Link>
-            </span>
-            <span className="page-item">
-              <Link href="/projects" onClick={closeAllMenus}>
-                Projects
-              </Link>
-            </span>
-            <span className="page-item">
-              <Link href="/speaking" onClick={closeAllMenus}>
-                Speaking
-              </Link>
-            </span>
-            <span className="page-item">
-              <Link
-                href="https://rebasemedia.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeAllMenus}
-              >
-                Services
-              </Link>
-            </span>
-            <span className="page-item">
-              <Link href="/timeline" onClick={closeAllMenus}>
-                Timeline
-              </Link>
-            </span>
-            <span className="page-item">
-              <Link
-                href="https://pradumnasaraf.substack.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeAllMenus}
-              >
-                Newsletter
-              </Link>
-            </span>
-            <span className="page-item">
-              <Link href="/contact" onClick={closeAllMenus}>
-                Contact
-              </Link>
-            </span>
-            <span className="page-item page-item-more">
-              <button
-                type="button"
-                className="more-pages-toggle arrow-only-toggle"
-                onClick={() => setIsMobileMoreOpen(!isMobileMoreOpen)}
-                aria-expanded={isMobileMoreOpen}
-                aria-label="Toggle extra pages"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </button>
-            </span>
-            <span
-              className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
-            >
-              <Link href="/toolkit" onClick={closeAllMenus}>
-                Toolkit
-              </Link>
-            </span>
-            <span
-              className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
-            >
-              <Link href="/photography" onClick={closeAllMenus}>
-                Photography
-              </Link>
-            </span>
-            <span
-              className={`page-item extra-page-item ${isMobileMoreOpen ? 'active' : ''}`}
-            >
-              <Link href="/travel" onClick={closeAllMenus}>
-                Travel
-              </Link>
-            </span>
-          </div>
-
-          <div className="extra-menu" ref={extraMenuRef}>
-            <button
-              type="button"
-              className="extra-menu-toggle"
-              onClick={toggleExtraMenu}
-              aria-label="Open more pages menu"
-              aria-expanded={isExtraMenuOpen}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-            </button>
-            <div
-              className={`extra-menu-dropdown ${isExtraMenuOpen ? 'active' : ''}`}
-            >
-              <Link href="/toolkit" onClick={closeAllMenus}>
-                Toolkit
-              </Link>
-              <Link href="/photography" onClick={closeAllMenus}>
-                Photography
-              </Link>
-              <Link href="/travel" onClick={closeAllMenus}>
-                Travel
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HomeNav />
 
       <div className="heading">
         <div className="left">
           <div className="socialmedia">
-            {/* Using React Icons */}
             <Link
-              href="https://github.com/Pradumnasaraf"
+              href={SOCIAL.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on GitHub"
@@ -256,15 +23,15 @@ export default function Home() {
               <FaGithub aria-hidden="true" focusable="false" />
             </Link>
             <Link
-              href="https://x.com/pradumna_saraf"
+              href={SOCIAL.x}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on X"
             >
-              <FaTwitter aria-hidden="true" focusable="false" />
+              <SiX aria-hidden="true" focusable="false" />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/pradumnasaraf/"
+              href={SOCIAL.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on LinkedIn"
@@ -281,8 +48,8 @@ export default function Home() {
           </p>
           <div className="ibutton">
             <a
-              className="connect"
-              href="https://github.com/Pradumnasaraf"
+              className="connect connect-primary"
+              href={SOCIAL.github}
               target="_blank"
               rel="noopener noreferrer"
             >{`Let's Collaborate`}</a>
@@ -300,17 +67,13 @@ export default function Home() {
           <Image
             src="/media/pradumna-saraf.png"
             alt="Pradumna Saraf - DevOps and Go Developer"
-            width={250}
-            height={250}
+            width={640}
+            height={640}
+            sizes="(max-width: 800px) 65vw, 320px"
             priority
-            onClick={handleAvatarTap}
           />
         </div>
       </div>
-
-      <main>
-        {showGame && <KonamiGame onClose={() => setShowGame(false)} />}
-      </main>
 
       <BackToTopButton />
     </>

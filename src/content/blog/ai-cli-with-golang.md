@@ -12,14 +12,14 @@ draft: false
 
 I recently built an AI-powered CLI with Golang named GenCLI, from which you can ask questions in text format or give it an image and ask for details about it from the terminal. If that is something that sounds interesting to you, this blog is for you. In this, we build a CLI completely from scratch and give it AI power using Google's Gemini API. In case you want to check out my GenCLI here is the [link](https://github.com/Pradumnasaraf/gencli) Yes, it's open source.
 
-### Prerequisite
+## Prerequisite
 
 * Familiarity with Golang
     
 * Tried [Cobra](https://pkg.go.dev/github.com/spf13/cobra) Package
     
 
-### Getting started
+## Getting started
 
 Let's go step by step and understand each process.
 

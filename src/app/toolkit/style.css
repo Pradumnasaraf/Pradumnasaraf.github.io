@@ -1,302 +1,136 @@
-.toolkit-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 5rem 1rem 2rem;
+.toolkit-page {
   min-height: 100vh;
+  padding: 1.25rem 1.25rem 4rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.toolkit-container {
+  max-width: 1080px;
+  margin: 0 auto;
   /* Container-query context for .toolkit-grid. */
   container-type: inline-size;
   container-name: toolkit;
 }
 
-.back-button {
-  position: fixed;
-  top: calc(env(safe-area-inset-top, 0px) + 20px);
-  left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-surface);
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  cursor: pointer;
-  border: none;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-.back-button:hover {
-  transform: translateX(-4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.back-button svg {
-  color: var(--color-fg-secondary);
-  transition: color 0.3s ease;
-  width: 24px;
-  height: 24px;
-}
-
-.back-button:hover svg {
-  color: var(--color-fg-strong);
-}
-
-.back-button::after {
-  content: 'Home';
-  position: absolute;
-  left: 50px;
-  background-color: var(--color-fg-secondary);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-@media (max-width: 640px) {
-  .back-button::after {
-    display: none;
-  }
-}
-
-.back-button:hover::after {
-  opacity: 1;
-}
-
-.toolkit-title {
-  text-align: center;
-  font-size: 3rem;
-  color: var(--color-fg);
-  margin-top: 20px;
-  margin-bottom: 25px;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
 .toolkit-section {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .toolkit-section h2 {
-  font-size: 1.8rem;
-  color: var(--color-fg-secondary);
-  margin-bottom: 2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #eee;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-fg);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .toolkit-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
 }
 
-/*
-  Container queries for .toolkit-grid. Thresholds correspond to the
-  inner content width of .toolkit-container at the original viewport
-  breakpoints (~viewport - 32-48px of padding):
-    container <= 992px  ~~  viewport <= 1024px  =>  smaller minmax
-    container <= 720px  ~~  viewport <= 768px   =>  single column
-*/
-@container toolkit (max-width: 992px) {
-  .toolkit-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.25rem;
-  }
-}
-
-@container toolkit (max-width: 720px) {
+@container toolkit (max-width: 560px) {
   .toolkit-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
 }
 
 .toolkit-item {
   background: var(--color-surface);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 14px;
   transition:
-    transform 0.2s,
+    border-color 0.2s,
     box-shadow 0.2s;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
 }
 
 .toolkit-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-border);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
 }
 
 .toolkit-item h3 {
-  font-size: 1.2rem;
-  color: var(--color-fg-secondary);
-  margin-bottom: 0.5rem;
-}
-
-.toolkit-item p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--color-fg-muted);
-  margin: 0.3rem 0;
+  margin-bottom: 0.6rem;
+}
+
+.toolkit-item ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.toolkit-item li {
+  color: var(--color-fg);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
-/* Tablet styles */
-@media (max-width: 1024px) {
-  .toolkit-title {
-    font-size: 2.5rem;
-  }
-
-  /* .toolkit-grid rule moved to @container toolkit (max-width: 992px). */
+.toolkit-list {
+  margin: 0;
 }
 
-/* Mobile First - Responsive Design */
+.toolkit-list-row {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.toolkit-list-row:last-child {
+  border-bottom: none;
+}
+
+.toolkit-list-row dt {
+  font-size: 1rem;
+  color: var(--color-fg);
+}
+
+.toolkit-list-row dd {
+  margin: 0;
+}
+
+.toolkit-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.toolkit-chips li {
+  border-color: var(--color-border-subtle);
+  background: #fafafa;
+  color: var(--color-fg-secondary);
+}
+
 @media (max-width: 768px) {
-  .toolkit-container {
-    padding: 4rem 1.5rem 2rem;
-  }
-
-  .back-button {
-    width: 36px;
-    height: 36px;
-    top: calc(env(safe-area-inset-top, 0px) + 15px);
-    left: 15px;
-  }
-
-  .back-button svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .back-button::after {
-    left: 45px;
-    font-size: 11px;
-    padding: 3px 6px;
-  }
-
-  .toolkit-title {
-    font-size: 2rem;
-    margin-top: 15px;
-    margin-bottom: 20px;
-  }
-
-  .toolkit-section h2 {
-    font-size: 1.5rem;
-  }
-
-  /* .toolkit-grid 1-col rule moved to @container toolkit (max-width: 720px). */
-
-  .toolkit-item {
-    padding: 1.25rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .toolkit-container {
-    padding: 0;
-    padding-top: max(1rem, calc(env(safe-area-inset-top, 0px) + 1rem));
-    padding-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-    overflow-x: hidden;
-  }
-
-  .back-button {
-    width: 36px;
-    height: 36px;
-    top: calc(env(safe-area-inset-top, 0px) + 15px);
-    left: 15px;
-  }
-
-  .toolkit-title {
-    font-size: 1.75rem;
-    margin-top: 10px;
-    margin-bottom: 15px;
+  .toolkit-page {
+    padding: 0.5rem 0.9rem 2.5rem;
   }
 
   .toolkit-section {
-    margin-bottom: 3rem;
+    margin-bottom: 2.25rem;
   }
 
   .toolkit-section h2 {
     font-size: 1.3rem;
-    margin-bottom: 1.5rem;
   }
 
-  .toolkit-item {
-    padding: 1rem;
-  }
-
-  .toolkit-item h3 {
-    font-size: 1.1rem;
-  }
-
-  .toolkit-item p {
-    font-size: 0.95rem;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 375px) {
-  .toolkit-container {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-bottom: 1.75rem;
-  }
-
-  .back-button {
-    width: 32px;
-    height: 32px;
-    top: calc(env(safe-area-inset-top, 0px) + 10px);
-    left: 10px;
-  }
-
-  .back-button svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* Tablet and larger */
-@media (min-width: 641px) and (max-width: 1024px) {
-  .toolkit-container {
-    padding: 4rem 1.5rem 2rem;
-  }
-}
-
-/* Large screens */
-@media (min-width: 1025px) {
-  .toolkit-container {
-    padding: 5rem 2rem 2rem;
-  }
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .back-button {
-    transition: none;
-  }
-
-  .back-button:hover {
-    transform: none;
-  }
-
-  .toolkit-item {
-    transition: none;
-  }
-
-  .toolkit-item:hover {
-    transform: none;
+  .toolkit-list-row {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    padding: 0.9rem 0;
   }
 }

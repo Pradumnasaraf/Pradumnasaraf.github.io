@@ -8,6 +8,4 @@ export const metadata = buildMetadata({
   keywords:
     'Pradumna Saraf Tools, Developer Tools, Docker Captain Tools, Development Setup, Productivity Tools, Software Stack, Hardware Setup',
   ogTitle: "Pradumna's Toolkit",
-  ogImage: 'toolkit-og.png',
-  imageAlt: 'Pradumna Saraf - Tools & Gear',
 });

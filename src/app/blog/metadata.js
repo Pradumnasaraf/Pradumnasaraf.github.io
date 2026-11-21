@@ -19,7 +19,5 @@ export const metadata = buildMetadata({
     'CI/CD',
     'Microservices',
   ],
-  ogImage: 'blog-og.png',
-  imageAlt: 'Pradumna Saraf - Blog',
   rss: true,
 });

@@ -1,4 +1,3 @@
-// Shared sitemap data
 export const sitemapPages = [
   {
     url: '',
@@ -9,7 +8,6 @@ export const sitemapPages = [
     description:
       'Pradumna Saraf - Developer Advocate, Docker Captain, and Open Source evangelist',
     category: 'Main',
-    priorityLabel: 'High',
   },
   {
     url: '/timeline',
@@ -19,7 +17,6 @@ export const sitemapPages = [
     changefreq: 'monthly',
     description: 'Career timeline and major milestones',
     category: 'Professional',
-    priorityLabel: 'High',
   },
   {
     url: '/speaking',
@@ -29,7 +26,6 @@ export const sitemapPages = [
     changefreq: 'monthly',
     description: 'Speaking engagements and conference talks',
     category: 'Professional',
-    priorityLabel: 'High',
   },
   {
     url: '/projects',
@@ -38,9 +34,8 @@ export const sitemapPages = [
     priority: '0.8',
     changefreq: 'weekly',
     description:
-      'Project portfolio with stars, problem statements, and tech stack',
+      'Featured projects plus the tools, guides, APIs and apps I have built',
     category: 'Professional',
-    priorityLabel: 'High',
   },
   {
     url: '/toolkit',
@@ -50,7 +45,6 @@ export const sitemapPages = [
     changefreq: 'monthly',
     description: 'Tools and gear I use for development',
     category: 'Resources',
-    priorityLabel: 'Medium',
   },
   {
     url: '/photography',
@@ -60,7 +54,6 @@ export const sitemapPages = [
     changefreq: 'monthly',
     description: 'Photography portfolio and gallery',
     category: 'Creative',
-    priorityLabel: 'Medium',
   },
   {
     url: '/travel',
@@ -70,17 +63,6 @@ export const sitemapPages = [
     changefreq: 'monthly',
     description: 'Places I have travelled to, shown on an interactive globe',
     category: 'Creative',
-    priorityLabel: 'Medium',
-  },
-  {
-    url: '/chat',
-    href: '/chat',
-    title: 'Schedule Meeting',
-    priority: '0.6',
-    changefreq: 'monthly',
-    description: 'Schedule a meeting or consultation',
-    category: 'Communication',
-    priorityLabel: 'Medium',
   },
   {
     url: '/blog',
@@ -91,7 +73,6 @@ export const sitemapPages = [
     description:
       'Technical articles and tutorials about Docker, Kubernetes, DevOps, and Open Source',
     category: 'Content',
-    priorityLabel: 'High',
   },
   {
     url: '/links',
@@ -102,7 +83,6 @@ export const sitemapPages = [
     description:
       'All important links in one place: website, blog, social media, and more',
     category: 'Communication',
-    priorityLabel: 'High',
   },
   {
     url: '/sitemap',
@@ -112,7 +92,6 @@ export const sitemapPages = [
     changefreq: 'monthly',
     description: 'Site map and navigation guide',
     category: 'Navigation',
-    priorityLabel: 'Low',
   },
 ];
 

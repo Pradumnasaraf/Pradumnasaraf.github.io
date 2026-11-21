@@ -1,14 +1,14 @@
 import './style.css';
 import PageTopbar from '@/components/PageTopbar';
-import { SITE_URL } from '@/lib/constants';
+import { SITE_URL, SOCIAL } from '@/lib/constants';
 import {
   FaGithub,
-  FaTwitter,
   FaLinkedin,
   FaEnvelope,
   FaGlobe,
   FaRss,
 } from 'react-icons/fa';
+import { SiX } from 'react-icons/si';
 
 const CVPage = () => {
   return (
@@ -20,6 +20,7 @@ const CVPage = () => {
           rel="noopener noreferrer"
           className="download-cv-button"
           title="Download CV"
+          aria-label="Download CV"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +45,7 @@ const CVPage = () => {
           <header>
             <h1>Pradumna Saraf</h1>
             <p className="bio">
-              {`A dedicated open source developer and contributor with over 4 years of experience in coding, crafting technical content, community building, and delivering talks. I'm also an enthusiastic team player, skilled at effective collaboration, and capable of working independently to achieve goals.`}
+              {`A dedicated open source developer and contributor with over 5 years of experience in coding, crafting technical content, community building, and delivering talks. I'm also an enthusiastic team player, skilled at effective collaboration, and capable of working independently to achieve goals.`}
             </p>
             <div className="contact-info">
               <p>
@@ -57,15 +58,12 @@ const CVPage = () => {
                 </a>
               </p>
               <p>
-                <FaRss />{' '}
-                <a href="/blog" target="_blank" rel="noopener noreferrer">
-                  blog.pradumnasaraf.dev
-                </a>
+                <FaRss /> <a href="/blog">pradumnasaraf.dev/blog</a>
               </p>
               <p>
                 <FaLinkedin />{' '}
                 <a
-                  href="https://linkedin.com/in/pradumnasaraf"
+                  href={SOCIAL.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -73,19 +71,15 @@ const CVPage = () => {
                 </a>
               </p>
               <p>
-                <FaTwitter />{' '}
-                <a
-                  href="https://x.com/pradumna_saraf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <SiX />{' '}
+                <a href={SOCIAL.x} target="_blank" rel="noopener noreferrer">
                   @pradumna_saraf
                 </a>
               </p>
               <p>
                 <FaGithub />{' '}
                 <a
-                  href="https://github.com/Pradumnasaraf"
+                  href={SOCIAL.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

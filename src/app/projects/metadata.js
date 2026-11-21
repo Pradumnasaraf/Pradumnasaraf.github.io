@@ -12,6 +12,4 @@ export const metadata = buildMetadata({
     'Developer portfolio',
     'Project showcase',
   ],
-  ogImage: 'projects-og.png',
-  imageAlt: 'Pradumna Saraf - Projects',
 });

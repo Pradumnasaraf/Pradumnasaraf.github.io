@@ -620,3 +620,7 @@
     transition: none;
   }
 }
+
+.blog-search-input::-webkit-search-cancel-button {
+  display: none;
+}

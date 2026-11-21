@@ -85,38 +85,33 @@
 
 .primary-button,
 .secondary-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 14px 28px;
-  border-radius: 8px;
   text-decoration: none;
-  font-weight: 300;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  border: 1px solid #000000;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  border-color: var(--color-border);
   font-family: 'League Spartan', sans-serif;
 }
 
 .primary-button {
-  background-color: #000000;
+  background-color: var(--color-fg);
+  border-color: var(--color-fg);
   color: #ffffff;
 }
 
 .primary-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .secondary-button {
   background-color: #ffffff;
-  color: #000000;
+  color: var(--color-fg);
 }
 
 .secondary-button:hover {
-  background-color: #000000;
-  color: #ffffff;
-  transform: translateY(-2px);
+  border-color: var(--color-fg);
+  background-color: var(--color-hover);
 }
 
 .not-found-suggestions {
@@ -141,19 +136,16 @@
 .suggestion-links a {
   color: #333333;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: 1px solid #333333;
-  font-size: 0.9rem;
-  font-weight: 300;
-  transition: all 0.3s ease;
+  border-color: var(--color-border);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
   font-family: 'League Spartan', sans-serif;
 }
 
 .suggestion-links a:hover {
-  background-color: #333333;
-  color: #ffffff;
-  transform: translateY(-1px);
+  border-color: var(--color-fg);
+  background-color: var(--color-hover);
 }
 
 /* Responsive Design */
@@ -187,16 +179,10 @@
   .secondary-button {
     width: 100%;
     max-width: 250px;
-    justify-content: center;
   }
 
   .suggestion-links {
     gap: 0.5rem;
-  }
-
-  .suggestion-links a {
-    padding: 6px 12px;
-    font-size: 0.85rem;
   }
 }
 

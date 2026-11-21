@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { format } from 'date-fns';
+import { formatPostDate, tagLabel } from '@/lib/blog-utils';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -30,32 +30,19 @@ function byLongest(a, b) {
   return (b.readingTime || 0) - (a.readingTime || 0);
 }
 
-function normalizePost(post) {
-  return {
-    ...post,
-    tags: Array.isArray(post.tags) ? post.tags : [],
-  };
-}
-
-function formatPostDate(date) {
-  if (!date) return '';
-
-  const parsed = new Date(date);
-  if (Number.isNaN(parsed.getTime())) return '';
-  return format(parsed, 'MMMM dd, yyyy');
-}
+// Narrower tags that overlap a broader one already in the top row. They stay
+// on posts and keep their own /blog/tag pages; they just aren't a top chip.
+const HIDDEN_TOP_TAGS = new Set(['docker-compose']);
 
 export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
   const [activeTag, setActiveTag] = useState('all');
   const [sortBy, setSortBy] = useState('latest');
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_POSTS);
 
-  const normalizedPosts = useMemo(() => posts.map(normalizePost), [posts]);
-
   const topTags = useMemo(() => {
     const counts = new Map();
 
-    normalizedPosts.forEach((post) => {
+    posts.forEach((post) => {
       post.tags.forEach((tag) => {
         if (!tag) return;
         counts.set(tag, (counts.get(tag) || 0) + 1);
@@ -67,12 +54,13 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
         if (b[1] !== a[1]) return b[1] - a[1];
         return a[0].localeCompare(b[0]);
       })
+      .filter(([tag]) => !HIDDEN_TOP_TAGS.has(tag))
       .slice(0, 8)
       .map(([tag]) => tag);
-  }, [normalizedPosts]);
+  }, [posts]);
 
   const filteredPosts = useMemo(() => {
-    const filtered = normalizedPosts.filter((post) => {
+    const filtered = posts.filter((post) => {
       const tagMatch = activeTag === 'all' || post.tags.includes(activeTag);
 
       return tagMatch;
@@ -84,7 +72,7 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
     if (sortBy === 'shortest') sorted.sort(byShortest);
     if (sortBy === 'longest') sorted.sort(byLongest);
     return sorted;
-  }, [normalizedPosts, activeTag, sortBy]);
+  }, [posts, activeTag, sortBy]);
 
   const isDefaultView =
     activeTag === 'all' && sortBy === 'latest' && filteredPosts.length > 1;
@@ -152,7 +140,7 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
               }}
               aria-pressed={activeTag === tag}
             >
-              {tag}
+              {tagLabel(tag)}
             </button>
           ))}
         </div>
@@ -226,7 +214,7 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
                     href={`/blog/tag/${tag}`}
                     className="blog-post-tag-button"
                   >
-                    {tag}
+                    {tagLabel(tag)}
                   </Link>
                 ))}
               </div>
@@ -292,18 +280,11 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
                           href={`/blog/tag/${tag}`}
                           className="blog-post-tag-button"
                         >
-                          {tag}
+                          {tagLabel(tag)}
                         </Link>
                       ))}
                     </div>
                   )}
-
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="blog-post-read-more"
-                  >
-                    Read article
-                  </Link>
                 </div>
               </article>
             ))}

@@ -15,14 +15,14 @@ This will work for projects with a simple `index.js` file, and there is no requi
 
 This becomes way more convenient when you have a project on the scale of [EddieHubCommunity/LinkFree](https://github.com/EddieHubCommunity/LinkFree) and receive a good number of pull requests on a daily basis. This way, you can focus more on the code and valuable parts.
 
-### Prerequisites
+## Prerequisites
 
 * A GitHub account
     
 * Basic understanding of YAML (Not mandatory)
     
 
-### Steps
+## Steps
 
 To begin, ensure that you are at the root of the repository. Next, create a folder called `.github`, and within that folder, create another folder named `workflows`. Inside the `workflows` folder, create a file called `prettier.yml`. You can choose any name for this file. The path to the file should be `.github/workflows/prettier.yml`.
 
@@ -55,7 +55,7 @@ jobs:
           commit_message: "style: format files"
 ```
 
-### Understanding the YAML config
+## Understanding the YAML config
 
 ```yaml
       - uses: actions/setup-node@v3
@@ -84,11 +84,11 @@ To enable the Auto-commit Action for creating a commit with formatted changes, w
 
 ![GitHub Actions general settings with Read and write permissions selected under Workflow permissions](/blog-images/code-formatting-github-actions/image-01.png)
 
-### Working
+## Working
 
 Now, whenever there is a push (either through commit or direct push) or a pull request, the workflow will automatically execute. You can also modify these behaviours by adjusting the `on:` property in the YAML config.
 
-### Demo
+## Demo
 
 ![GitHub repository page for a Prettier demo project with a workflows directory and a JavaScript file](/blog-images/code-formatting-github-actions/image-02.gif)
 

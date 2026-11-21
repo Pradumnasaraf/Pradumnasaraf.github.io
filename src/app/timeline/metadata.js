@@ -7,6 +7,4 @@ export const metadata = buildMetadata({
   keywords:
     'Pradumna Saraf Timeline, Professional Journey, Career Timeline, Developer Advocate Journey, Docker Captain Journey, Career Milestones',
   ogTitle: "Pradumna's Professional Timeline",
-  ogImage: 'timeline-og.png',
-  imageAlt: 'Pradumna Saraf - Professional Timeline',
 });

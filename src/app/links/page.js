@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
-import { SITE_URL } from '@/lib/constants';
+import { EMAIL, SITE_URL, SOCIAL } from '@/lib/constants';
 import {
   FiMail,
   FiYoutube,
@@ -10,9 +10,10 @@ import {
   FiCopy,
   FiX,
 } from 'react-icons/fi';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { SiBluesky, SiSessionize, SiThreads } from 'react-icons/si';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiBluesky, SiSessionize, SiThreads, SiX } from 'react-icons/si';
 import './style.css';
+import { copyText } from '@/lib/clipboard';
 
 export default function LinksPage() {
   const [showQRCode, setShowQRCode] = useState(false);
@@ -27,14 +28,9 @@ export default function LinksPage() {
   const qrCodeUrl = `${SITE_URL}/links`;
 
   const handleCopyLink = async () => {
-    try {
-      await navigator.clipboard.writeText(qrCodeUrl);
+    if (await copyText(qrCodeUrl)) {
       setCopied(true);
-      setTimeout(() => {
-        setCopied(false);
-      }, 1500);
-    } catch (err) {
-      console.error('Failed to copy:', err);
+      setTimeout(() => setCopied(false), 1500);
     }
   };
 
@@ -43,28 +39,26 @@ export default function LinksPage() {
   };
 
   const handleShareClick = () => {
-    // Directly open QR code modal for all devices
     setShowQRCode(true);
   };
 
-  // Social media icons - displayed below name (all black/monochrome)
   const socialLinks = [
     {
       id: 'twitter',
       label: 'X',
-      url: 'https://x.com/pradumna_saraf',
-      icon: FaTwitter,
+      url: SOCIAL.x,
+      icon: SiX,
     },
     {
       id: 'linkedin',
       label: 'LinkedIn',
-      url: 'https://linkedin.com/in/pradumnasaraf',
+      url: SOCIAL.linkedin,
       icon: FaLinkedin,
     },
     {
       id: 'github',
       label: 'GitHub',
-      url: 'https://github.com/Pradumnasaraf',
+      url: SOCIAL.github,
       icon: FaGithub,
     },
     {
@@ -100,12 +94,11 @@ export default function LinksPage() {
     {
       id: 'email',
       label: 'Email',
-      url: 'mailto:pradumnasaraf@gmail.com',
+      url: `mailto:${EMAIL}`,
       icon: FiMail,
     },
   ];
 
-  // Main links - displayed as buttons below social icons (exact from bio.link)
   const links = [
     {
       id: 1,
@@ -129,18 +122,18 @@ export default function LinksPage() {
     },
     {
       id: 5,
-      title: 'Twitter (X)',
-      url: 'https://x.com/pradumna_saraf',
+      title: 'X',
+      url: SOCIAL.x,
     },
   ];
 
   return (
     <div className="links-container">
-      {/* QR Code Modal */}
       {showQRCode && (
         <div
           className="qr-modal"
           onClick={handleCloseQRCode}
+          ref={(el) => el?.focus()}
           onKeyDown={(e) => {
             if (e.key === 'Escape') handleCloseQRCode();
           }}
@@ -163,7 +156,7 @@ export default function LinksPage() {
             <h3>Share</h3>
             <Image
               src="/media/qr-code.png"
-              alt="QR Code"
+              alt="QR code linking to this links page"
               width={200}
               height={200}
               className="qr-code-image"
@@ -185,9 +178,7 @@ export default function LinksPage() {
       )}
 
       <div className="links-content">
-        {/* Profile Section */}
         <div className="profile-section">
-          {/* Share Button */}
           <button
             className="share-button"
             onClick={handleShareClick}
@@ -212,7 +203,6 @@ export default function LinksPage() {
           <h1 className="profile-name">{profileData.name}</h1>
           {profileData.bio && <p className="profile-bio">{profileData.bio}</p>}
 
-          {/* Social Icons - displayed below name/bio */}
           {socialLinks.length > 0 && (
             <div className="social-icons">
               {socialLinks.map((social) => {
@@ -238,7 +228,6 @@ export default function LinksPage() {
           )}
         </div>
 
-        {/* Links Section */}
         <div className="links-section">
           {links.map((link) => {
             return (

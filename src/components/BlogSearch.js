@@ -53,7 +53,6 @@ export default function BlogSearch({ posts }) {
   const [searchQuery, setSearchQuery] = useState('');
   const inputRef = useRef(null);
 
-  // Filter posts based on search query
   const filteredPosts = useMemo(() => {
     if (!searchQuery.trim()) return [];
 
@@ -70,7 +69,6 @@ export default function BlogSearch({ posts }) {
     });
   }, [searchQuery, posts]);
 
-  // Close on escape key
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape' && isOpen) {
@@ -82,13 +80,10 @@ export default function BlogSearch({ posts }) {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen]);
 
-  // Prevent body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
-      // Save current scroll position
       const scrollY = window.scrollY;
 
-      // Lock body scroll - works on both desktop and mobile
       // Using position: fixed prevents all scrolling (touch, wheel, etc.)
       document.body.style.position = 'fixed';
       document.body.style.top = `-${scrollY}px`;
@@ -98,7 +93,6 @@ export default function BlogSearch({ posts }) {
       document.body.style.width = '100%';
 
       return () => {
-        // Restore scroll position and unlock body
         document.body.style.position = '';
         document.body.style.top = '';
         document.body.style.left = '';
@@ -114,10 +108,8 @@ export default function BlogSearch({ posts }) {
     setIsOpen(true);
   };
 
-  // Focus input when modal opens
   useEffect(() => {
     if (isOpen && inputRef.current) {
-      // Small delay to ensure modal is rendered
       const timer = setTimeout(() => {
         inputRef.current?.focus();
       }, 100);
@@ -133,7 +125,6 @@ export default function BlogSearch({ posts }) {
   return (
     <>
       <div className="blog-search-trigger">
-        {/* Search Icon Button */}
         <button
           className="blog-search-button"
           onClick={handleSearchClick}
@@ -144,7 +135,6 @@ export default function BlogSearch({ posts }) {
           <SearchIcon />
         </button>
 
-        {/* Close Button - Shows when modal is open */}
         {isOpen && (
           <button
             className="blog-search-close-button"
@@ -157,14 +147,15 @@ export default function BlogSearch({ posts }) {
         )}
       </div>
 
-      {/* Search Modal */}
       {isOpen && (
         <div className="blog-search-modal" onClick={handleClose}>
           <div
             className="blog-search-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Search blog posts"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header */}
             <div className="blog-search-header">
               <div className="blog-search-input-wrapper">
                 <span className="blog-search-input-icon" aria-hidden="true">
@@ -172,7 +163,8 @@ export default function BlogSearch({ posts }) {
                 </span>
                 <input
                   ref={inputRef}
-                  type="text"
+                  type="search"
+                  aria-label="Search blog posts"
                   placeholder="Search blogs..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -192,7 +184,6 @@ export default function BlogSearch({ posts }) {
               </div>
             </div>
 
-            {/* Results */}
             <div className="blog-search-results">
               {searchQuery.trim() ? (
                 filteredPosts.length > 0 ? (

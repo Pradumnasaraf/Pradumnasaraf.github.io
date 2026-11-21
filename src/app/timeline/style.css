@@ -1,31 +1,8 @@
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'League Spartan', sans-serif;
-}
-
-body {
-  background-color: var(--color-surface);
-}
-
-/* Timeline Title */
-.timeline-title {
-  text-align: center;
-  font-size: 3rem;
-  color: var(--color-fg);
-  margin-top: 20px;
-  margin-bottom: 25px;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
 /* Timeline Container */
 .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 100px auto;
+  margin: 60px auto 100px;
   padding: 0 1rem;
 }
 
@@ -83,8 +60,7 @@ body {
   position: relative;
   border-radius: 12px;
   font-size: 15px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .text-box h2 {
@@ -99,9 +75,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   color: var(--color-fg-muted);
-  background-color: #f0f0f0;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 0;
 }
 
 .text-box p {
@@ -130,8 +104,7 @@ body {
   top: 32px;
   z-index: 10;
   background-color: var(--color-surface);
-  border: 2px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .right-container img {
@@ -173,7 +146,7 @@ body {
   width: 32px;
   height: 32px;
   background-color: var(--color-surface);
-  border: 1px solid var(--color-fg);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -183,8 +156,8 @@ body {
 }
 
 .source-button:hover {
-  background-color: var(--color-fg);
-  color: var(--color-surface);
+  border-color: var(--color-fg);
+  background-color: var(--color-hover);
 }
 
 .source-button svg {
@@ -192,63 +165,8 @@ body {
   height: 16px;
 }
 
-.back-button {
-  position: fixed;
-  top: calc(env(safe-area-inset-top, 0px) + 20px);
-  left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-surface);
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.back-button:hover {
-  transform: translateX(-4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.back-button svg {
-  color: var(--color-fg-secondary);
-  transition: color 0.3s ease;
-  width: 24px;
-  height: 24px;
-}
-
-.back-button:hover svg {
-  color: var(--color-fg-strong);
-}
-
-.back-button::after {
-  content: 'Home';
-  position: absolute;
-  left: 50px;
-  background-color: var(--color-fg-secondary);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-.back-button:hover::after {
-  opacity: 1;
-}
-
 /* Tablet styles */
 @media (max-width: 1024px) {
-  .timeline-title {
-    font-size: 2.5rem;
-  }
-
   .timeline {
     margin: 80px auto;
   }
@@ -282,7 +200,7 @@ body {
 
   .text-box small {
     font-size: 12px;
-    padding: 3px 6px;
+    padding: 0;
   }
 
   .right-container {
@@ -313,30 +231,6 @@ body {
     width: 14px;
     height: 14px;
   }
-
-  .back-button {
-    width: 36px;
-    height: 36px;
-    top: calc(env(safe-area-inset-top, 0px) + 15px);
-    left: 15px;
-  }
-
-  .back-button svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .back-button::after {
-    left: 45px;
-    font-size: 11px;
-    padding: 3px 6px;
-  }
-
-  .timeline-title {
-    font-size: 2rem;
-    margin-top: 15px;
-    margin-bottom: 20px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -357,7 +251,7 @@ body {
 
   .text-box small {
     font-size: 11px;
-    padding: 2px 5px;
+    padding: 0;
   }
 
   .left-container img,
@@ -375,28 +269,34 @@ body {
     width: 12px;
     height: 12px;
   }
+}
 
-  .back-button {
-    width: 32px;
-    height: 32px;
-    top: calc(env(safe-area-inset-top, 0px) + 10px);
-    left: 10px;
+/* Year marker on the line, shown before the first milestone of each year. */
+.timeline-year {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 18px 0 8px;
+  opacity: 0;
+  animation: movedown 1s linear forwards;
+}
+
+.timeline-year span {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-year {
+    justify-content: flex-start;
+    padding-left: 6px;
   }
+}
 
-  .back-button svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .back-button::after {
-    left: 40px;
-    font-size: 10px;
-    padding: 2px 5px;
-  }
-
-  .timeline-title {
-    font-size: 1.75rem;
-    margin-top: 10px;
-    margin-bottom: 15px;
+@media (prefers-reduced-motion: reduce) {
+  .timeline-year {
+    animation: none;
+    opacity: 1;
   }
 }

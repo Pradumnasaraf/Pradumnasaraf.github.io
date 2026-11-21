@@ -44,8 +44,8 @@
     "lng": 13.0645
   },
   {
-    "id": "cancun",
-    "place": "Cancún",
+    "id": "quintana-roo",
+    "place": "Quintana Roo",
     "country": "Mexico",
     "flag": "🇲🇽",
     "date": "",
@@ -53,6 +53,17 @@
     "photo": "",
     "lat": 21.1619,
     "lng": -86.8515
+  },
+  {
+    "id": "yucatan",
+    "place": "Yucatán",
+    "country": "Mexico",
+    "flag": "🇲🇽",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 20.6843,
+    "lng": -88.5678
   },
   {
     "id": "istanbul",

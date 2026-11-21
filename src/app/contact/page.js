@@ -1,9 +1,15 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiX } from 'react-icons/si';
+import { FiCalendar, FiCopy, FiCheck, FiMail } from 'react-icons/fi';
 import PageTopbar from '@/components/PageTopbar';
+import './style.css';
+import { copyText } from '@/lib/clipboard';
+import { EMAIL, SOCIAL } from '@/lib/constants';
 
-const EMAIL = 'pradumnasaraf@gmail.com';
 const subject = encodeURIComponent('Collaboration Inquiry');
 const body = encodeURIComponent(
   `Hi Pradumna,
@@ -20,7 +26,19 @@ Thanks,`
 );
 const mailtoUrl = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
 
+const SOCIALS = [
+  { href: SOCIAL.github, label: 'GitHub', icon: FaGithub },
+  { href: SOCIAL.x, label: 'X', icon: SiX },
+  {
+    href: SOCIAL.linkedin,
+    label: 'LinkedIn',
+    icon: FaLinkedin,
+  },
+];
+
 export default function ContactPage() {
+  const [copied, setCopied] = useState(false);
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get('opened') === '1') {
@@ -34,24 +52,74 @@ export default function ContactPage() {
     window.location.href = mailtoUrl;
   }, []);
 
-  return (
-    <main className="relative flex min-h-dvh items-center justify-center px-6 py-16">
-      <div className="absolute inset-x-0 top-0">
-        <PageTopbar />
-      </div>
+  const copyEmail = async () => {
+    if (await copyText(EMAIL)) {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
 
-      <div className="w-full max-w-md text-center">
-        <p className="mb-6 leading-relaxed text-fg-secondary">
-          Your email app should have opened with a message ready to send. If it
-          did not, you can reach me directly at:
-        </p>
-        <a
-          href={mailtoUrl}
-          className="text-lg text-fg underline underline-offset-4 transition-colors hover:text-fg-muted"
-        >
-          {EMAIL}
-        </a>
+  return (
+    <>
+      <PageTopbar />
+
+      <div className="contact-page">
+        <div className="contact-card">
+          <h1>Contact</h1>
+          <p className="contact-intro">
+            For talks, collaborations, content work or just to say hi, email is
+            the best way to reach me.
+          </p>
+
+          <p className="contact-email">{EMAIL}</p>
+
+          <div className="contact-actions">
+            <a
+              href={mailtoUrl}
+              className="contact-button contact-button-primary"
+            >
+              <FiMail aria-hidden="true" />
+              Email me
+            </a>
+            <button
+              type="button"
+              className="contact-button"
+              onClick={copyEmail}
+              aria-live="polite"
+            >
+              {copied ? (
+                <FiCheck aria-hidden="true" />
+              ) : (
+                <FiCopy aria-hidden="true" />
+              )}
+              {copied ? 'Copied' : 'Copy email'}
+            </button>
+            <Link href="/chat" className="contact-button">
+              <FiCalendar aria-hidden="true" />
+              Book a call
+            </Link>
+          </div>
+
+          <p className="contact-note">
+            If your email app opened, a message is already drafted for you.
+          </p>
+
+          <div className="contact-socials">
+            {SOCIALS.map(({ href, label, icon: Icon }) => (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                title={label}
+              >
+                <Icon aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
-    </main>
+    </>
   );
 }

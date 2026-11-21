@@ -1,14 +1,3 @@
-/* Page Title - Match Timeline & Toolkit style */
-.photography-title {
-  text-align: center;
-  font-size: 3rem;
-  color: var(--color-fg);
-  margin-top: 20px;
-  margin-bottom: 25px;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
 /* Photography Page Container - Ensure scrolling works */
 .photography-page-container {
   max-width: 1200px;
@@ -23,16 +12,8 @@
   /* Ensure touch scrolling works on mobile - Safari specific */
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
-  /* Prevent layout blocking */
-  contain: layout style;
-  /* Ensure container allows scrolling */
   min-height: 100vh;
   height: auto;
-  /* Safari-specific: Force hardware acceleration for smooth scrolling */
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  /* Safari-specific: Prevent scroll blocking during image load */
-  will-change: scroll-position;
 }
 
 /* Masonry Grid Styles */
@@ -45,11 +26,6 @@
   /* Ensure grid doesn't block scrolling */
   position: relative;
   min-height: 100px;
-  /* Safari-specific: Prevent layout thrashing during image load */
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  /* Safari-specific: Enable GPU acceleration */
-  will-change: contents;
 }
 
 .my-masonry-grid_column {
@@ -60,10 +36,6 @@
   width: 100%;
   /* Ensure columns don't block scrolling */
   position: relative;
-  will-change: contents;
-  /* Safari-specific: Prevent scroll blocking */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .my-masonry-grid_column > div {
@@ -79,7 +51,6 @@
   /* Use filter drop-shadow for better rounded corner support - respects border-radius */
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))
     drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
-  will-change: transform;
   /* Ensure shadow respects border-radius */
   border-radius: 0.5rem;
   overflow: hidden;
@@ -95,55 +66,79 @@
     opacity 300ms ease;
 }
 
-/* Update hover effect to show both color and button */
+/* Hover reveals the photo in colour */
 .group:hover .grayscale-image {
   filter: grayscale(0%);
   transform: scale(1.05);
 }
 
-.photo-hover-overlay {
+.photo-open {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 1;
+  border: 0;
+  padding: 0;
   border-radius: 0.5rem;
-  background-color: rgba(0, 0, 0, 0);
+  background: transparent;
+  cursor: zoom-in;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.photo-open:focus-visible {
+  outline: 2px solid var(--color-fg);
+  outline-offset: 2px;
+}
+
+/* Country pill in the corner, shown on hover (always on touch screens). */
+.photo-flag {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: calc(100% - 16px);
+  padding: 0.25rem 0.6rem 0.2rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(20, 20, 20, 0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.78rem;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   pointer-events: none;
-  transition: background-color 300ms ease;
-}
-
-.group:hover .photo-hover-overlay {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.photo-view-button {
-  background-color: var(--color-surface);
-  color: var(--color-fg-strong);
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
   opacity: 0;
-  transform: translateY(1rem);
-  pointer-events: auto;
-  box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transform: translateY(3px);
   transition:
-    opacity 300ms ease,
-    transform 300ms ease,
-    background-color 200ms ease;
+    opacity 200ms ease,
+    transform 200ms ease;
 }
 
-.photo-view-button:hover {
-  background-color: #f3f4f6;
+.photo-flag-emoji {
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
-.group:hover .photo-view-button {
+/* The globe glyph draws larger than flag glyphs; scale it to match. */
+.photo-flag-globe .photo-flag-emoji {
+  font-size: 0.78rem;
+}
+
+.group:hover .photo-flag,
+.group:focus-within .photo-flag {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (hover: none) {
+  .photo-flag {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Loading Animation */
@@ -185,58 +180,6 @@
   transition:
     filter 0.3s ease,
     transform 0.3s ease;
-}
-
-.back-button {
-  position: fixed;
-  top: calc(env(safe-area-inset-top, 0px) + 20px);
-  left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-surface);
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-.back-button:hover {
-  transform: translateX(-4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.back-button svg {
-  color: var(--color-fg-secondary);
-  transition: color 0.3s ease;
-  width: 24px;
-  height: 24px;
-}
-
-.back-button:hover svg {
-  color: var(--color-fg-strong);
-}
-
-.back-button::after {
-  content: 'Home';
-  position: absolute;
-  left: 50px;
-  background-color: var(--color-fg-secondary);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-.back-button:hover::after {
-  opacity: 1;
 }
 
 .modal-circle-button {
@@ -286,9 +229,6 @@
 }
 
 /* Tooltip to the right (for Previous button) */
-.modal-label-right {
-  left: 120%;
-}
 
 /* Tooltip to the left (for Close and Next buttons) */
 .modal-label-left {
@@ -309,10 +249,6 @@
 
 /* Tablet styles */
 @media (max-width: 1024px) {
-  .photography-title {
-    font-size: 2.5rem;
-  }
-
   .my-masonry-grid {
     margin-left: -0.75rem;
   }
@@ -328,30 +264,6 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .back-button {
-    width: 36px;
-    height: 36px;
-    top: calc(env(safe-area-inset-top, 0px) + 15px);
-    left: 15px;
-  }
-
-  .back-button svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .back-button::after {
-    left: 45px;
-    font-size: 11px;
-    padding: 3px 6px;
-  }
-
-  .photography-title {
-    font-size: 2rem;
-    margin-top: 15px;
-    margin-bottom: 20px;
-  }
-
   .my-masonry-grid {
     margin-left: -0.5rem;
   }
@@ -381,30 +293,6 @@
 }
 
 @media (max-width: 480px) {
-  .back-button {
-    width: 32px;
-    height: 32px;
-    top: calc(env(safe-area-inset-top, 0px) + 10px);
-    left: 10px;
-  }
-
-  .back-button svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .back-button::after {
-    left: 40px;
-    font-size: 10px;
-    padding: 2px 5px;
-  }
-
-  .photography-title {
-    font-size: 1.75rem;
-    margin-top: 10px;
-    margin-bottom: 15px;
-  }
-
   .modal-circle-button {
     width: 32px;
     height: 32px;
@@ -421,170 +309,142 @@
   }
 }
 
-/* Welcome Popup Styles */
-.popup-backdrop {
-  backdrop-filter: blur(4px);
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.welcome-popup {
-  background: white;
-  border-radius: 16px;
+/* Full-screen viewer: tap zones sit over the photo; arrows and close stay above them. */
+.modal-tap-zone {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background: transparent;
+  border: 0;
   padding: 0;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  position: relative;
-  animation: slideUp 0.3s ease-out;
-  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.modal-tap-zone-prev {
+  left: 0;
+  width: 35%;
+  cursor: w-resize;
 }
 
-.popup-close-button {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 32px;
-  height: 32px;
+.modal-tap-zone-next {
+  right: 0;
+  width: 65%;
+  cursor: e-resize;
+}
+
+.modal-tap-zone:focus {
+  outline: none;
+}
+
+.modal-close-wrap {
+  z-index: 2;
+}
+
+.modal-counter {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.modal-tap-hint {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  pointer-events: none;
+  animation: tap-hint-fade 3.2s ease forwards;
+}
+
+.modal-tap-hint-side {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f3f4f6;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  z-index: 10;
+  gap: 0.4rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  background: rgba(0, 0, 0, 0.45);
 }
 
-.popup-close-button:hover {
-  background: #e5e7eb;
-  transform: scale(1.1);
+.modal-tap-hint-side:first-child {
+  flex: 0 0 35%;
+  border-right: 1px dashed rgba(255, 255, 255, 0.35);
 }
 
-.popup-close-button svg {
-  color: var(--color-fg-secondary);
-  width: 16px;
-  height: 16px;
+.modal-tap-hint-arrow {
+  font-size: 1.6rem;
+  line-height: 1;
 }
 
-.popup-content {
-  padding: 50px 32px 32px; /* Increased top padding to account for close button */
-  text-align: center;
+@keyframes tap-hint-fade {
+  0%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.popup-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-fg);
-  margin-bottom: 16px;
-  line-height: 1.4;
-}
-
-.popup-message {
-  font-size: 1rem;
-  color: #4b5563;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.popup-ok-button {
-  background: var(--color-fg);
-  color: white;
-  border: none;
-  padding: 12px 32px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.popup-ok-button:hover {
-  background: var(--color-fg-secondary);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.popup-ok-button:active {
-  transform: translateY(0);
-}
-
-/* Responsive Popup Styles */
 @media (max-width: 768px) {
-  .welcome-popup {
-    max-width: 90%;
-    width: 90%;
-  }
-
-  .popup-content {
-    padding: 40px 24px 24px; /* Increased top padding for mobile */
-  }
-
-  .popup-title {
-    font-size: 1.25rem;
-    margin-bottom: 12px;
-  }
-
-  .popup-message {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-  }
-
-  .popup-ok-button {
-    padding: 10px 24px;
-    font-size: 0.9rem;
-  }
-
-  .popup-close-button {
-    top: 12px;
-    right: 12px;
-    width: 28px;
-    height: 28px;
-  }
-
-  .popup-close-button svg {
-    width: 14px;
-    height: 14px;
+  .modal-close-wrap .modal-label {
+    display: none;
   }
 }
 
-@media (max-width: 480px) {
-  .popup-content {
-    padding: 45px 20px 20px; /* Increased top padding for small mobile */
+@media (prefers-reduced-motion: reduce) {
+  .modal-tap-hint {
+    animation: none;
   }
+}
 
-  .popup-title {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-  }
+.modal-country {
+  margin-left: 0.6rem;
+  padding-left: 0.6rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
 
-  .popup-message {
-    font-size: 0.85rem;
-    margin-bottom: 18px;
-  }
+/* Leave a clear strip at the top for the counter and close button. */
+.modal-image {
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 140px);
+  object-fit: contain;
+}
 
-  .popup-ok-button {
-    padding: 10px 20px;
-    font-size: 0.85rem;
+@media (max-width: 768px) {
+  .modal-image {
+    max-width: 100vw;
+    max-height: calc(100dvh - 150px);
   }
+}
+
+.photo-retry {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  min-height: 40px;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-fg-secondary);
+  font-family: inherit;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.photo-retry:hover {
+  border-color: var(--color-fg);
 }

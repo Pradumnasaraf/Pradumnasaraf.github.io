@@ -8,6 +8,4 @@ export const metadata = buildMetadata({
   keywords:
     'Pradumna Saraf Photography, Photography Portfolio, Professional Photography, Personal Photography, Photo Gallery',
   ogTitle: "Pradumna's Photography",
-  ogImage: 'photography-og.png',
-  imageAlt: 'Pradumna Saraf - Photography Portfolio',
 });

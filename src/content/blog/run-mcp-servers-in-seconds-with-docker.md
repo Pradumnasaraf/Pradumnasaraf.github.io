@@ -14,13 +14,13 @@ Model Context Protocol (MCP) has taken the AI world by storm. It has become the 
 
 In this blog, we will first under what **Docker MCP Catalog** and **MCP Toolkit** are. Then we will see step-by-step how we can use Docker MCP Toolkit using Docker Desktop to interact with various tools using MCP Clients offered by Claude, Cursor, etc.
 
-### What is Docker MCP Catalog?
+## What is Docker MCP Catalog?
 
 Docker MCP Catalog is a trusted [collection of MCP servers](https://hub.docker.com/catalogs/mcp). Currently has verified tools from 100 verified (and the number keeps bumping while writing this) tools publishers like Stripe, Elastic, Grafana, etc. And the tools are it’s just like container images, that means like traditional pull mechanism, we can pull and use it (or use MCP toolkit for UI perks, more on that later) without any hassle to find and configure it manually.
 
 ![Docker MCP Catalog showing a grid of official MCP server images with their pull counts, stars and last updated time](/blog-images/run-mcp-servers-in-seconds-with-docker/image-01.png)
 
-### What is Docker MCP Toolkit?
+## What is Docker MCP Toolkit?
 
 With [Docker MCP Toolkit](https://hub.docker.com/extensions/docker/labs-ai-tools-for-devs), with a single click of a button from Docker Desktop, we can spin MCP servers in seconds and connect to our favourite client like Cluade, Cursor, Windsurf, Docker AI Agent, etc. The way it works is that a Gateway MCP Server is created and dynamically exposes enabled tools to compatible clients. This makes it so easy to manage all the tools in one place.
 

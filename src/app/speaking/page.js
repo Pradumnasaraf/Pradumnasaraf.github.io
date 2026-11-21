@@ -84,14 +84,27 @@ function inferTechnologies(item) {
 
 const upcomingTalks = speakingData.filter((item) => item.upcoming);
 
+function talkYear(item) {
+  const match = String(item.date || '').match(/\b(\d{4})\b/);
+  return match ? match[1] : 'Other';
+}
+
+const talksByYear = speakingData.reduce((groups, item) => {
+  const year = talkYear(item);
+  const group = groups.find((g) => g.year === year);
+  if (group) group.talks.push(item);
+  else groups.push({ year, talks: [item] });
+  return groups;
+}, []);
+
 const SpeakingPage = () => {
   return (
     <>
       <PageTopbar ariaLabel="Back to home page" />
 
       <div className="speaking-container">
-        <div className="speaking-header">
-          <h1>Speaking</h1>
+        <header className="page-header">
+          <h1 className="page-title">Speaking</h1>
           {upcomingTalks.map((item) => (
             <p key={item.id} className="speaking-upcoming">
               <span className="speaking-upcoming-label">Upcoming</span>
@@ -100,87 +113,99 @@ const SpeakingPage = () => {
               </a>
             </p>
           ))}
-        </div>
+        </header>
 
-        <div className="speaking-timeline">
-          {speakingData.map((item) => (
-            <article key={item.id} className="speaking-timeline-item">
-              <div className="speaking-card">
-                <div className="speaking-card-top">
-                  <h2>{item.topic || item.title}</h2>
-                </div>
-
-                <div className="speaking-meta-row">
-                  {item.upcoming && (
-                    <span className="speaking-upcoming-chip">Upcoming</span>
-                  )}
-                  <span className="speaking-date-chip">{item.date}</span>
-                  <span className="speaking-location-chip">
-                    <FaMapMarkerAlt />
-                    {item.location}
-                  </span>
-                  <div
-                    className="speaking-tech-list"
-                    aria-label="Talk technologies"
+        <div className="speaking-years">
+          {talksByYear.map(({ year, talks }) => (
+            <section
+              key={year}
+              className="speaking-year"
+              aria-labelledby={`talks-${year}`}
+            >
+              <h2 id={`talks-${year}`} className="speaking-year-title">
+                {year}
+                <span>
+                  {talks.length} {talks.length === 1 ? 'talk' : 'talks'}
+                </span>
+              </h2>
+              <div className="speaking-year-grid">
+                {talks.map((item) => (
+                  <article
+                    key={item.id}
+                    className={`speaking-card${item.upcoming ? ' speaking-card-upcoming' : ''}`}
                   >
-                    {inferTechnologies(item).map((tech) => {
-                      const normalizedTech = String(tech).toLowerCase();
-                      const Icon = techIconMap[normalizedTech] || null;
-                      return (
-                        <span
-                          key={`${item.id}-${tech}`}
-                          className="speaking-tech-icon"
-                          data-tech={tech}
-                          title={tech}
-                          aria-label={tech}
-                        >
-                          {Icon ? (
-                            <Icon />
-                          ) : (
-                            <span className="speaking-tech-fallback">
-                              {String(tech).slice(0, 2).toUpperCase()}
+                    <h3 className="speaking-card-title">
+                      {item.topic || item.title}
+                    </h3>
+                    <p className="speaking-event-name">{item.event}</p>
+
+                    <div className="speaking-meta-row">
+                      {item.upcoming && (
+                        <span className="speaking-upcoming-chip">Upcoming</span>
+                      )}
+                      <span className="speaking-date-chip">{item.date}</span>
+                      <span className="speaking-location-chip">
+                        <FaMapMarkerAlt />
+                        {item.location}
+                      </span>
+                    </div>
+
+                    <div className="speaking-card-footer">
+                      <div className="speaking-actions">
+                        {item.slides && (
+                          <a
+                            href={item.slides}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="speaking-action-button"
+                          >
+                            <FaSlideshare />
+                            Slides
+                          </a>
+                        )}
+                        {item.recording && (
+                          <a
+                            href={item.recording}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="speaking-action-button"
+                          >
+                            <FaYoutube />
+                            Recording
+                          </a>
+                        )}
+                      </div>
+                      <div
+                        className="speaking-tech-list"
+                        aria-label="Talk technologies"
+                      >
+                        {inferTechnologies(item).map((tech) => {
+                          const Icon =
+                            techIconMap[String(tech).toLowerCase()] || null;
+                          return (
+                            <span
+                              key={`${item.id}-${tech}`}
+                              className="speaking-tech-icon"
+                              data-tech={tech}
+                              title={tech}
+                              aria-label={tech}
+                            >
+                              {Icon ? (
+                                <Icon />
+                              ) : (
+                                <span className="speaking-tech-fallback">
+                                  {String(tech).slice(0, 2).toUpperCase()}
+                                </span>
+                              )}
                             </span>
-                          )}
-                        </span>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                <p className="speaking-event-name">
-                  <span>Event:</span> {item.event}
-                </p>
-                <p className="speaking-topic">
-                  <span>Topic:</span> {item.topic}
-                </p>
-
-                <div className="speaking-actions">
-                  {item.slides && (
-                    <a
-                      href={item.slides}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="speaking-action-button"
-                    >
-                      <FaSlideshare />
-                      Slides
-                    </a>
-                  )}
-
-                  {item.recording && (
-                    <a
-                      href={item.recording}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="speaking-action-button"
-                    >
-                      <FaYoutube />
-                      Recording
-                    </a>
-                  )}
-                </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </article>
+                ))}
               </div>
-            </article>
+            </section>
           ))}
         </div>
 

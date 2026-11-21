@@ -11,7 +11,7 @@ draft: false
 
 Are you looking to learn how to build a simple API using Mux in Go? Look no further! In this blog post, we will walk through step-by-step instructions on how to create your own "Hello, World!" API using Mux in Go. We will cover the prerequisites you need, setting up the project, writing the logic, and finally running and testing the API. By the end of this tutorial, you will have a good understanding of how to use Mux in Go to build simple APIs. So, let's get started!
 
-### **Prerequisites**
+## **Prerequisites**
 
 To get started with this project, make sure you have the following prerequisites:
 
@@ -22,7 +22,7 @@ To get started with this project, make sure you have the following prerequisites
 * A code editor such as VSCode, Sublime, etc.
     
 
-### Setting up the project
+## Setting up the project
 
 Start with creating a project folder name `mux-api-project`, and then open that folder. You can do it by the terminal by following commands.
 
@@ -57,7 +57,7 @@ Now your file/folder structure will look something like this (If you are in VSCo
 
 ![Editor showing the go.sum file after running go get for the gorilla/mux package in the terminal](/blog-images/go-api-with-mux/image-01.png)
 
-### Writing the logic
+## Writing the logic
 
 Now that we have everything set up, including `mux`, let's start writing the logic for our API. To do this, open the `main.go` file and import the mux and some build modules in `main.go` to use them in further steps.
 
@@ -116,7 +116,7 @@ func main() {
 }
 ```
 
-### Running and testing
+## Running and testing
 
 We are almost done. Open the terminal, make sure you are inside the `mux-api-project` dir or you can open the integrated terminal of VScode. Start the server by following the command:
 

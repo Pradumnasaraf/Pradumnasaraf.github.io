@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import './style.css';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,6 +18,10 @@ const ArrowIcon = () => (
   </svg>
 );
 
+function entryYear(entry) {
+  return String(entry.date || '').match(/\d{4}/)?.[0] || '';
+}
+
 const TimelinePage = () => {
   // Must match the moveline animation duration in style.css so the last card
   // fades in as the line finishes drawing.
@@ -28,38 +33,53 @@ const TimelinePage = () => {
       <PageTopbar />
 
       <div className="min-h-screen">
-        <h1 className="timeline-title">Timeline</h1>
+        <header className="page-header page-header-tight">
+          <h1 className="page-title">Timeline</h1>
+        </header>
         <div className="timeline">
           {entries.map((entry, index) => {
             const side = index % 2 === 0 ? 'right' : 'left';
+            const year = entryYear(entry);
+            const newYear =
+              year && (index === 0 || entryYear(entries[index - 1]) !== year);
+            const delay = `${(index * step).toFixed(2)}s`;
             return (
-              <div
-                key={index}
-                className={`container ${side}-container`}
-                style={{ animationDelay: `${(index * step).toFixed(2)}s` }}
-              >
-                <Image
-                  src={entry.image.src}
-                  alt={entry.image.alt}
-                  width={40}
-                  height={40}
-                />
-                <div className="text-box">
-                  {entry.link && (
-                    <Link
-                      href={entry.link.href}
-                      className="source-button"
-                      aria-label={entry.link.ariaLabel}
-                    >
-                      <ArrowIcon />
-                    </Link>
-                  )}
-                  <h2>{entry.title}</h2>
-                  <small>{entry.date}</small>
-                  <p>{entry.description}</p>
-                  <span className={`${side}-container-arrow`}></span>
+              <Fragment key={`${entry.date}-${entry.title}`}>
+                {newYear && (
+                  <div
+                    className="timeline-year"
+                    style={{ animationDelay: delay }}
+                  >
+                    <span>{year}</span>
+                  </div>
+                )}
+                <div
+                  className={`container ${side}-container`}
+                  style={{ animationDelay: delay }}
+                >
+                  <Image
+                    src={entry.image.src}
+                    alt={entry.image.alt}
+                    width={40}
+                    height={40}
+                  />
+                  <div className="text-box">
+                    {entry.link && (
+                      <Link
+                        href={entry.link.href}
+                        className="source-button"
+                        aria-label={entry.link.ariaLabel}
+                      >
+                        <ArrowIcon />
+                      </Link>
+                    )}
+                    <h2>{entry.title}</h2>
+                    <small>{entry.date}</small>
+                    <p>{entry.description}</p>
+                    <span className={`${side}-container-arrow`}></span>
+                  </div>
                 </div>
-              </div>
+              </Fragment>
             );
           })}
         </div>

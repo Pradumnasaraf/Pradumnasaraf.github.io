@@ -1,15 +1,6 @@
-import { OG_IMAGE_URL, SITE_URL } from '../../lib/constants.js';
+import { escapeXml } from '../../lib/xml.js';
+import { SITE_URL } from '../../lib/constants.js';
 import speakingTalks from '../speaking/speaking.json' with { type: 'json' };
-
-function escapeXml(value) {
-  if (value == null) return '';
-  return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-}
 
 /**
  * Extract a YouTube video ID from any of the common URL shapes used in
@@ -61,7 +52,7 @@ export async function GET() {
   const videoEntries = videos
     .map(
       (v) => `    <video:video>
-      <video:thumbnail_loc>${OG_IMAGE_URL}</video:thumbnail_loc>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/${v.id}/hqdefault.jpg</video:thumbnail_loc>
       <video:title>${escapeXml(v.title)}</video:title>
       <video:description>${escapeXml(v.description)}</video:description>
       <video:content_loc>https://youtu.be/${v.id}</video:content_loc>

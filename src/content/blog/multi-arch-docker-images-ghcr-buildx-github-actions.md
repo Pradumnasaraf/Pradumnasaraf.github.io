@@ -17,14 +17,14 @@ In the blog, we will learn how to automate the process of building a Multi-Arch 
 
 [How to Publish a Golang Package](/blog/how-to-publish-a-golang-package)
 
-### Prerequisite
+## Prerequisite
 
 * A good understanding of Docker
     
 * A decent understanding of GitHub Actions
     
 
-### Getting started
+## Getting started
 
 Before starting, I assume you have already Dockerized your project, created a Dockerfile, and pushed that to GitHub. In case, you haven't done one yet and still want to try the process out, you can create a GitHub repo with a minimal `Dockerfile` in the root that prints "Hello World" by running an echo command using Alpine as the base image. Dockerfile syntax for it:
 

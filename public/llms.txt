@@ -28,4 +28,4 @@
 - The main authored long-form content is published under `/blog`.
 - Some reposted articles may point to an external canonical URL.
 - The `/contact` route opens an email client and is not intended to be indexed as a content page.
-- The `/cv` route is served with `noindex` on purpose and is deliberately left out of the list above.
+- The `/cv` and `/chat` routes are served with `noindex` on purpose and are deliberately left out of the list above.
