@@ -55,6 +55,17 @@
     "lng": -86.8515
   },
   {
+    "id": "chichen-itza",
+    "place": "Chichén Itzá",
+    "country": "Mexico",
+    "flag": "🇲🇽",
+    "date": "",
+    "note": "",
+    "photo": "",
+    "lat": 20.6843,
+    "lng": -88.5678
+  },
+  {
     "id": "istanbul",
     "place": "Istanbul",
     "country": "Turkey",
