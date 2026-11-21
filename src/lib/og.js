@@ -12,7 +12,8 @@ const fontDir = join(
 const assets = Promise.all([
   readFile(join(fontDir, 'league-spartan-latin-400-normal.woff')),
   readFile(join(fontDir, 'league-spartan-latin-500-normal.woff')),
-  readFile(join(process.cwd(), 'public/media/pradumna-saraf.png')),
+  // Kept outside public/ because public/ is excluded from function bundles.
+  readFile(join(process.cwd(), 'src/assets/og-avatar.png')),
 ]);
 
 export function monthYear(date) {
