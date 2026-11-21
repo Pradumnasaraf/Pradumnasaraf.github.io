@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAllTags, getPostsByTag } from '@/lib/blog';
 import { toPostSummary } from '@/lib/blog-utils';
-import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
 import BlogPostExplorer from '@/components/BlogPostExplorer';
 import BlogThemeToggle from '@/components/BlogThemeToggle';
 import '../../style.css';
@@ -31,21 +31,12 @@ export async function generateMetadata({ params }) {
       description,
       url,
       type: 'website',
-      images: [
-        {
-          url: OG_IMAGE_URL,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
       creator: TWITTER_HANDLE,
-      images: [OG_IMAGE_URL],
     },
     alternates: {
       canonical: url,

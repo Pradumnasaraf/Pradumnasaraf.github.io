@@ -19,6 +19,4 @@ export const metadata = buildMetadata({
     'Open Source',
     'Community Building',
   ],
-  ogImage: 'speaking-og.png',
-  imageAlt: 'Pradumna Saraf - Speaking & Events',
 });

@@ -9,8 +9,6 @@ export const metadata = buildMetadata({
   path: '',
   keywords:
     'Pradumna Saraf, Developer Advocate, Docker Captain, Microsoft MVP, Open Source, Cloud Native, DevOps, Software Development',
-  imageAlt:
-    'Pradumna Saraf - Developer Advocate, Docker Captain & Microsoft MVP',
   authors: [{ name: 'Pradumna Saraf' }],
   creator: 'Pradumna Saraf',
   publisher: 'Pradumna Saraf',

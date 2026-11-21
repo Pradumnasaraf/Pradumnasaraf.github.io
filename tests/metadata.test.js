@@ -1,11 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buildMetadata } from '../src/lib/metadata.js';
-import {
-  OG_IMAGE_URL,
-  SITE_URL,
-  TWITTER_HANDLE,
-} from '../src/lib/constants.js';
+import { SITE_URL, TWITTER_HANDLE } from '../src/lib/constants.js';
 
 test('buildMetadata derives canonical and OG url from path', () => {
   const meta = buildMetadata({
@@ -29,13 +25,12 @@ test('buildMetadata defaults OG/twitter title and description to the page ones',
   assert.equal(meta.twitter.card, 'summary_large_image');
 });
 
-test('buildMetadata falls back to the generic OG image at 1200x630', () => {
+test('buildMetadata leaves images to opengraph-image routes by default', () => {
   const meta = buildMetadata({ title: 'X', description: 'Y' });
 
-  assert.equal(meta.openGraph.images[0].url, OG_IMAGE_URL);
-  assert.equal(meta.openGraph.images[0].width, 1200);
-  assert.equal(meta.openGraph.images[0].height, 630);
-  assert.equal(meta.twitter.images[0], OG_IMAGE_URL);
+  assert.equal(meta.openGraph.images, undefined);
+  assert.equal(meta.twitter.images, undefined);
+  assert.equal(meta.twitter.card, 'summary_large_image');
 });
 
 test('buildMetadata resolves a bare ogImage filename under /media', () => {
