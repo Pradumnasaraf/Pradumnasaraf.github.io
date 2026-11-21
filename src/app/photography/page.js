@@ -7,8 +7,36 @@ import './style.css';
 import PageTopbar from '@/components/PageTopbar';
 import images from './images.json';
 
+// Fixed names so server and client render the same text (Intl.DisplayNames
+// output can differ between Node and the browser and break hydration).
+const COUNTRY_NAMES = {
+  CZ: 'Czechia',
+  DE: 'Germany',
+  HK: 'Hong Kong',
+  IN: 'India',
+  MO: 'Macau',
+  MX: 'Mexico',
+  PL: 'Poland',
+  TR: 'Türkiye',
+};
+
+// `country` in images.json is an ISO 3166 code taken from the photo's own GPS
+// data (matched to the nearest place in travel/travel.json).
+function flagEmoji(code) {
+  return String.fromCodePoint(
+    ...code
+      .toUpperCase()
+      .split('')
+      .map((c) => 0x1f1e6 + c.charCodeAt(0) - 65)
+  );
+}
+
+function countryName(code) {
+  return COUNTRY_NAMES[code] || code;
+}
+
 // ImageItem Component with enhanced features
-const ImageItem = ({ src, alt, onClick }) => {
+const ImageItem = ({ src, alt, country, onClick }) => {
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
@@ -58,20 +86,29 @@ const ImageItem = ({ src, alt, onClick }) => {
             unoptimized
             loading="lazy"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className={`w-full h-auto cursor-pointer grayscale-image rounded-lg ${
+            className={`w-full h-auto grayscale-image rounded-lg ${
               isLoading ? 'opacity-0' : 'opacity-100'
             }`}
-            onClick={onClick}
             onError={() => setHasError(true)}
             onLoad={() => setIsLoading(false)}
           />
         )}
       </div>
-      <div className="photo-hover-overlay">
-        <button onClick={onClick} className="photo-view-button">
-          View Photo
-        </button>
-      </div>
+      <button
+        type="button"
+        className="photo-open"
+        onClick={onClick}
+        aria-label={`View photo: ${alt}${country ? `, ${countryName(country)}` : ''}`}
+      />
+      {country && (
+        <span
+          className="photo-flag"
+          title={countryName(country)}
+          aria-hidden="true"
+        >
+          {flagEmoji(country)}
+        </span>
+      )}
     </div>
   ) : null;
 };
@@ -86,6 +123,7 @@ const FullScreenModal = ({
   imageAlt,
   index,
   total,
+  country,
   onClose,
   onPrev,
   onNext,
@@ -178,6 +216,11 @@ const FullScreenModal = ({
       {total > 0 && (
         <span className="modal-counter" aria-live="polite">
           {index + 1} / {total}
+          {country && (
+            <span className="modal-country">
+              {flagEmoji(country)} {countryName(country)}
+            </span>
+          )}
         </span>
       )}
       {showHint && (
@@ -426,6 +469,7 @@ export default function Home() {
                 key={index}
                 src={image.src}
                 alt={image.alt}
+                country={image.country}
                 onClick={() => openModal(image.src)}
               />
             ))}
@@ -438,6 +482,7 @@ export default function Home() {
           imageAlt={images[currentImageIndex]?.alt}
           index={currentImageIndex}
           total={images.length}
+          country={images[currentImageIndex]?.country}
           onClose={closeModal}
           onPrev={showPrevImage}
           onNext={showNextImage}

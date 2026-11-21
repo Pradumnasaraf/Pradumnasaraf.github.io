@@ -95,54 +95,60 @@
     opacity 300ms ease;
 }
 
-/* Update hover effect to show both color and button */
+/* Hover reveals the photo in colour */
 .group:hover .grayscale-image {
   filter: grayscale(0%);
   transform: scale(1.05);
 }
 
-.photo-hover-overlay {
+.photo-open {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 1;
+  border: 0;
+  padding: 0;
   border-radius: 0.5rem;
-  background-color: rgba(0, 0, 0, 0);
+  background: transparent;
+  cursor: zoom-in;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.photo-open:focus-visible {
+  outline: 2px solid var(--color-fg);
+  outline-offset: 2px;
+}
+
+/* Small country flag in the corner, shown on hover (always on touch screens). */
+.photo-flag {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
+  line-height: 1.3;
   pointer-events: none;
-  transition: background-color 300ms ease;
-}
-
-.group:hover .photo-hover-overlay {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.photo-view-button {
-  background-color: var(--color-surface);
-  color: var(--color-fg-strong);
-  padding: 0.4rem 0.85rem 0.35rem;
-  border-radius: 9999px;
-  font-size: 0.85rem;
-  font-weight: 400;
-  border: none;
-  cursor: pointer;
   opacity: 0;
-  transform: translateY(1rem);
-  pointer-events: auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
   transition:
-    opacity 300ms ease,
-    transform 300ms ease,
-    background-color 200ms ease;
+    opacity 200ms ease,
+    transform 200ms ease;
 }
 
-.photo-view-button:hover {
-  background-color: #f3f4f6;
-}
-
-.group:hover .photo-view-button {
+.group:hover .photo-flag,
+.group:focus-within .photo-flag {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (hover: none) {
+  .photo-flag {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Loading Animation */
@@ -685,4 +691,10 @@
   .modal-tap-hint {
     animation: none;
   }
+}
+
+.modal-country {
+  margin-left: 0.6rem;
+  padding-left: 0.6rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
