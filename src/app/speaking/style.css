@@ -24,12 +24,8 @@
 
 .speaking-upcoming-label,
 .speaking-upcoming-chip {
-  border-radius: 999px;
-  padding: 0.28rem 0.6rem;
-  font-size: 0.8rem;
   background: var(--color-fg);
   color: var(--color-surface);
-  white-space: nowrap;
 }
 
 .speaking-years {
@@ -102,14 +98,9 @@
 }
 
 .speaking-date-chip {
-  border: 1px solid #d6d6d6;
-  border-radius: 999px;
-  padding: 0.28rem 0.5rem;
+  border-color: #d6d6d6;
   color: var(--color-fg);
-  font-size: 0.84rem;
-  font-weight: 400;
   background: var(--color-surface);
-  white-space: nowrap;
 }
 
 .speaking-meta-row {
@@ -120,16 +111,9 @@
 }
 
 .speaking-location-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
   color: #555555;
-  font-size: 0.88rem;
-  border: 1px solid #e1e1e1;
-  border-radius: 999px;
-  padding: 0.28rem 0.54rem;
+  border-color: #e1e1e1;
   background: var(--color-surface);
-  line-height: 1;
 }
 
 .speaking-event-name {
@@ -210,17 +194,10 @@
 
 .speaking-action-button {
   text-decoration: none;
-  border: 1px solid var(--color-border);
+  border-color: var(--color-border);
   background: var(--color-surface);
   color: var(--color-fg);
-  border-radius: 8px;
-  padding: 0.46rem 0.68rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
   width: fit-content;
-  font-size: 0.86rem;
-  font-weight: 500;
   transition:
     border-color 0.2s ease,
     background-color 0.2s ease,

@@ -303,12 +303,9 @@
 }
 
 .blog-topic-chip {
-  border: 1px solid #dcdcdc;
+  border-color: #dcdcdc;
   background: var(--color-surface);
   color: #444;
-  border-radius: 999px;
-  padding: 0.3rem 0.7rem;
-  font-size: 0.8rem;
   cursor: pointer;
   transition:
     border-color 0.2s ease,
@@ -530,12 +527,9 @@
 }
 
 .blog-post-tag-button {
-  border: 1px solid #e0e0e0;
+  border-color: #e0e0e0;
   background: var(--color-surface);
   color: #555;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
   cursor: pointer;
 }
 
@@ -633,12 +627,9 @@
 }
 
 .blog-explorer-load-more {
-  border: 1px solid var(--color-border);
+  border-color: var(--color-border);
   background: var(--color-surface);
   color: var(--color-fg-secondary);
-  border-radius: 8px;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
   cursor: pointer;
   transition:
     border-color 0.2s ease,
@@ -1492,10 +1483,6 @@
   .blog-explorer-select {
     font-size: 0.85rem;
     padding: 0.5rem 2rem 0.5rem 0.65rem;
-  }
-
-  .blog-topic-chip {
-    font-size: 0.8rem;
   }
 
   .blog-post-content h2 {
@@ -2862,11 +2849,6 @@ html[data-blog-theme='dark'] .blog-theme-root .blog-theme-toggle-button:hover {
   font-size: 0.85rem;
 }
 
-.blog-explorer-load-more {
-  padding: 0.4rem 0.95rem;
-  font-size: 0.85rem;
-}
-
 @media (max-width: 768px) {
   .blog-explorer-select {
     width: auto;
@@ -2936,15 +2918,6 @@ html[data-blog-theme='dark'] .blog-theme-root .post-pager-link:hover {
   .post-pager-next {
     text-align: left;
   }
-}
-
-/* League Spartan draws its letters high in the line box, so equal padding
-   leaves more space under the text. Use line-height 1 and a little more
-   padding on top so pills and the select look centred. */
-.blog-topic-chip,
-.blog-post-tag-button {
-  line-height: 1;
-  padding: 0.42rem 0.7rem 0.3rem;
 }
 
 .blog-post-featured-label {

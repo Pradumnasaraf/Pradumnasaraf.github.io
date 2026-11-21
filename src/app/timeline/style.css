@@ -282,12 +282,9 @@
 }
 
 .timeline-year span {
-  padding: 0.25rem 0.8rem;
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
+  border-color: var(--color-border);
   background: var(--color-surface);
   color: var(--color-fg);
-  font-size: 0.95rem;
 }
 
 @media screen and (max-width: 768px) {

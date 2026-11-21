@@ -129,16 +129,9 @@
 }
 
 .project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  min-height: 34px;
-  padding: 0.35rem 0.7rem;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-color: var(--color-border);
   color: var(--color-fg);
   text-decoration: none;
-  font-size: 0.85rem;
   transition:
     border-color 0.2s ease,
     background-color 0.2s ease;
@@ -184,9 +177,5 @@
 
   .project-card-featured .project-card-top h3 {
     font-size: 1.25rem;
-  }
-
-  .project-link {
-    min-height: 40px;
   }
 }

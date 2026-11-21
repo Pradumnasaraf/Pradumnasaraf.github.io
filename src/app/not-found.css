@@ -85,18 +85,11 @@
 
 .primary-button,
 .secondary-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 10px 20px 9px;
-  border-radius: 8px;
   text-decoration: none;
-  font-weight: 400;
-  font-size: 1.05rem;
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease;
-  border: 1px solid var(--color-border);
+  border-color: var(--color-border);
   font-family: 'League Spartan', sans-serif;
 }
 
@@ -143,11 +136,7 @@
 .suggestion-links a {
   color: #333333;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  font-size: 0.9rem;
-  font-weight: 300;
+  border-color: var(--color-border);
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease;
@@ -190,16 +179,10 @@
   .secondary-button {
     width: 100%;
     max-width: 250px;
-    justify-content: center;
   }
 
   .suggestion-links {
     gap: 0.5rem;
-  }
-
-  .suggestion-links a {
-    padding: 6px 12px;
-    font-size: 0.85rem;
   }
 }
 

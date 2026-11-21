@@ -139,18 +139,10 @@
 }
 
 .qr-copy-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
   width: 100%;
-  padding: 0.875rem 1rem;
   background: var(--color-fg-strong);
   color: var(--color-surface);
-  border: none;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 500;
+  border-color: transparent;
   cursor: pointer;
   transition: background-color 0.2s ease;
   -webkit-tap-highlight-color: transparent;
