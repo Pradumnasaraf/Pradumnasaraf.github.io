@@ -56,16 +56,20 @@ export default function ProjectsPage() {
       <section className="projects-page">
         <div className="projects-header">
           <h1>Projects</h1>
+          <p className="projects-subtitle">
+            {projectList.length} open source projects I&apos;ve built and
+            maintain.
+          </p>
         </div>
 
-        <div className="projects-timeline">
+        <div className="projects-grid">
           {projectList.map((project) => {
             const launchUrl = project.url || project.repoUrl;
 
             return (
               <article
                 key={project.id || project.name}
-                className="project-timeline-item"
+                className="project-item"
               >
                 <div className="project-card">
                   <div className="project-card-top">
