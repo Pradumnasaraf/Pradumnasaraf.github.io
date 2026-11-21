@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { tagLabel } from '@/lib/blog-utils';
 import { format } from 'date-fns';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -157,7 +158,7 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
               }}
               aria-pressed={activeTag === tag}
             >
-              {tag}
+              {tagLabel(tag)}
             </button>
           ))}
         </div>
@@ -231,7 +232,7 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
                     href={`/blog/tag/${tag}`}
                     className="blog-post-tag-button"
                   >
-                    {tag}
+                    {tagLabel(tag)}
                   </Link>
                 ))}
               </div>
@@ -297,7 +298,7 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
                           href={`/blog/tag/${tag}`}
                           className="blog-post-tag-button"
                         >
-                          {tag}
+                          {tagLabel(tag)}
                         </Link>
                       ))}
                     </div>

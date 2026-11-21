@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAllTags, getPostsByTag } from '@/lib/blog';
-import { toPostSummary } from '@/lib/blog-utils';
+import { toPostSummary, tagLabel } from '@/lib/blog-utils';
 import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
 import BlogPostExplorer from '@/components/BlogPostExplorer';
 import BlogThemeToggle from '@/components/BlogThemeToggle';
@@ -136,10 +136,10 @@ export default async function TagPage({ params }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <header className="blog-header">
-          <h1 className="blog-title">{tag}</h1>
+          <h1 className="blog-title">{tagLabel(tag)}</h1>
           <p className="blog-subtitle">
             {posts.length} {posts.length === 1 ? 'article' : 'articles'} tagged
-            with <strong>{tag}</strong>.{' '}
+            with <strong>{tagLabel(tag)}</strong>.{' '}
             <Link href="/blog">Browse all posts →</Link>
           </p>
         </header>

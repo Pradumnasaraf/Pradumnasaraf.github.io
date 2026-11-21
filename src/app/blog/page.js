@@ -56,8 +56,7 @@ export default function BlogPage() {
         <header className="blog-header">
           <h1 className="blog-title">Blog</h1>
           <p className="blog-subtitle">
-            Technical articles, tutorials, and insights about Docker,
-            Kubernetes, DevOps, and Cloud Native technologies
+            Hands-on guides on Docker, Kubernetes, DevOps and AI tooling.
           </p>
         </header>
 

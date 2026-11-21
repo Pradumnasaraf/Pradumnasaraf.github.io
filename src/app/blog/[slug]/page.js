@@ -85,6 +85,11 @@ export default async function BlogPost({ params }) {
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
   const allPosts = getAllPosts();
 
+  // allPosts is sorted newest first: "previous" is the older post.
+  const postIndex = allPosts.findIndex((item) => item.slug === post.slug);
+  const olderPost = postIndex >= 0 ? allPosts[postIndex + 1] : null;
+  const newerPost = postIndex > 0 ? allPosts[postIndex - 1] : null;
+
   const currentTags = Array.isArray(post.tags) ? post.tags : [];
   const normalizedCurrentTags = currentTags.map((tag) => tag.toLowerCase());
 
@@ -243,6 +248,35 @@ export default async function BlogPost({ params }) {
           <footer className="blog-post-footer">
             <div className="blog-post-footer-content">
               <BlogShareButtons url={postUrl} title={post.title} />
+
+              {(olderPost || newerPost) && (
+                <nav className="post-pager" aria-label="More posts">
+                  {olderPost ? (
+                    <Link
+                      href={`/blog/${olderPost.slug}`}
+                      className="post-pager-link"
+                    >
+                      <span className="post-pager-label">← Previous post</span>
+                      <span className="post-pager-title">
+                        {olderPost.title}
+                      </span>
+                    </Link>
+                  ) : (
+                    <span />
+                  )}
+                  {newerPost && (
+                    <Link
+                      href={`/blog/${newerPost.slug}`}
+                      className="post-pager-link post-pager-next"
+                    >
+                      <span className="post-pager-label">Next post →</span>
+                      <span className="post-pager-title">
+                        {newerPost.title}
+                      </span>
+                    </Link>
+                  )}
+                </nav>
+              )}
 
               {relatedPosts.length > 0 && (
                 <section className="related-posts" aria-label="Related posts">

@@ -43,3 +43,41 @@ export function toPostSummary(post) {
     readingTime: post.readingTime,
   };
 }
+
+const TAG_LABELS = {
+  ai: 'AI',
+  apis: 'APIs',
+  arm: 'ARM',
+  'ci-cd': 'CI/CD',
+  cli: 'CLI',
+  devops: 'DevOps',
+  dockerhub: 'Docker Hub',
+  github: 'GitHub',
+  'github-actions': 'GitHub Actions',
+  golang: 'Golang',
+  gpu: 'GPU',
+  javascript: 'JavaScript',
+  llm: 'LLM',
+  mcp: 'MCP',
+  'mcp-server': 'MCP Server',
+  mysql: 'MySQL',
+  opensource: 'Open Source',
+  opentelemetry: 'OpenTelemetry',
+  postgresql: 'PostgreSQL',
+  wemakedevs: 'WeMakeDevs',
+};
+
+/**
+ * Human-readable label for a tag slug (URLs keep the slug).
+ * @param {string} tag - Tag slug, e.g. "github-actions"
+ * @returns {string} Display label, e.g. "GitHub Actions"
+ */
+export function tagLabel(tag) {
+  const key = String(tag || '').toLowerCase();
+  if (TAG_LABELS[key]) return TAG_LABELS[key];
+  return key
+    .split('-')
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}

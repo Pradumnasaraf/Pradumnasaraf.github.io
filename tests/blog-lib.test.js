@@ -7,7 +7,7 @@ import {
   getFeedEligiblePosts,
   processMarkdown,
 } from '../src/lib/blog.js';
-import { getThumbnailUrl } from '../src/lib/blog-utils.js';
+import { getThumbnailUrl, tagLabel } from '../src/lib/blog-utils.js';
 import { OG_IMAGE_URL, SITE_URL } from '../src/lib/constants.js';
 
 test('getAllPosts returns sorted, non-empty blog post list', () => {
@@ -177,4 +177,12 @@ test('processMarkdown drops javascript: URLs and disallowed tags', async () => {
   assert.ok(!html.includes('javascript:'));
   assert.ok(!/href=/.test(html));
   assert.ok(!html.includes('<iframe'));
+});
+
+test('tagLabel turns tag slugs into readable names', () => {
+  assert.equal(tagLabel('github-actions'), 'GitHub Actions');
+  assert.equal(tagLabel('opensource'), 'Open Source');
+  assert.equal(tagLabel('ci-cd'), 'CI/CD');
+  assert.equal(tagLabel('docker-compose'), 'Docker Compose');
+  assert.equal(tagLabel('security'), 'Security');
 });
