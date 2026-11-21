@@ -120,17 +120,16 @@
 .photo-view-button {
   background-color: var(--color-surface);
   color: var(--color-fg-strong);
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.85rem 0.35rem;
   border-radius: 9999px;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 400;
   border: none;
   cursor: pointer;
   opacity: 0;
   transform: translateY(1rem);
   pointer-events: auto;
-  box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition:
     opacity 300ms ease,
     transform 300ms ease,
@@ -438,11 +437,11 @@
 
 .welcome-popup {
   background: white;
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 0;
-  max-width: 500px;
+  max-width: 460px;
   width: 90%;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
   position: relative;
   animation: slideUp 0.3s ease-out;
   overflow: hidden;
@@ -468,17 +467,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f3f4f6;
-  border: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
   z-index: 10;
 }
 
 .popup-close-button:hover {
-  background: #e5e7eb;
-  transform: scale(1.1);
+  border-color: var(--color-border);
+  background: var(--color-hover);
 }
 
 .popup-close-button svg {
@@ -488,13 +489,13 @@
 }
 
 .popup-content {
-  padding: 50px 32px 32px; /* Increased top padding to account for close button */
+  padding: 44px 28px 28px; /* Top padding leaves room for the close button */
   text-align: center;
 }
 
 .popup-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.35rem;
+  font-weight: 500;
   color: var(--color-fg);
   margin-bottom: 16px;
   line-height: 1.4;
@@ -502,31 +503,26 @@
 
 .popup-message {
   font-size: 1rem;
-  color: #4b5563;
+  color: #565656;
+  font-weight: 300;
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .popup-ok-button {
   background: var(--color-fg);
   color: white;
-  border: none;
-  padding: 12px 32px;
+  border: 1px solid var(--color-fg);
+  padding: 10px 22px 9px;
   border-radius: 8px;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .popup-ok-button:hover {
-  background: var(--color-fg-secondary);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.popup-ok-button:active {
-  transform: translateY(0);
+  background: #000000;
 }
 
 /* Responsive Popup Styles */

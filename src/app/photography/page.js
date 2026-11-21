@@ -344,7 +344,7 @@ const WelcomePopup = ({ isOpen, onClose }) => {
           </svg>
         </button>
         <div className="popup-content">
-          <h2 className="popup-title">Welcome to Photography page!</h2>
+          <h2 className="popup-title">Welcome to my photography</h2>
           <p className="popup-message">
             Tap any image to view it full screen, then tap the right or left
             side (or swipe) to move between photos. Images start in grayscale
