@@ -37,9 +37,12 @@ function countryName(code) {
   return COUNTRY_NAMES[code] || code;
 }
 
+const MAX_IMAGE_RETRIES = 3;
+
 // ImageItem Component with enhanced features
 const ImageItem = ({ src, alt, country, onClick }) => {
   const [hasError, setHasError] = useState(false);
+  const [attempt, setAttempt] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -81,7 +84,7 @@ const ImageItem = ({ src, alt, country, onClick }) => {
       >
         {isVisible && (
           <Image
-            src={src}
+            src={attempt ? `${src}&retry=${attempt}` : src}
             alt={alt}
             width={800}
             height={1200}
@@ -91,7 +94,18 @@ const ImageItem = ({ src, alt, country, onClick }) => {
             className={`w-full h-auto grayscale-image rounded-lg ${
               isLoading ? 'opacity-0' : 'opacity-100'
             }`}
-            onError={() => setHasError(true)}
+            onError={() => {
+              // Drive rate-limits bursts of large image requests; retry a
+              // couple of times with a short delay before hiding the tile.
+              if (attempt < MAX_IMAGE_RETRIES) {
+                setTimeout(
+                  () => setAttempt((n) => n + 1),
+                  1500 * (attempt + 1)
+                );
+              } else {
+                setHasError(true);
+              }
+            }}
             onLoad={() => setIsLoading(false)}
           />
         )}
