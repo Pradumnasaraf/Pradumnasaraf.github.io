@@ -121,7 +121,7 @@ const ToolKitPage = () => {
 
               <div className="toolkit-item">
                 <h3>Browser</h3>
-                <p>Arc, Safari</p>
+                <p>Dia, Safari</p>
               </div>
 
               <div className="toolkit-item">
