@@ -151,11 +151,11 @@
       },
       {
         "name": "Productivity",
-        "items": ["Google Calendar"]
+        "items": ["Notion", "Google Calendar"]
       },
       {
         "name": "Communication and Collaboration",
-        "items": ["GitHub", "Slack", "Microsoft Teams"]
+        "items": ["GitHub", "Slack", "Discord", "Microsoft Teams"]
       }
     ]
   }
