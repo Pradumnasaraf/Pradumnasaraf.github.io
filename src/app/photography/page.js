@@ -329,7 +329,22 @@ const FullScreenModal = ({
   );
 };
 
+const RELOAD_GUARD_KEY = 'photography-layout-reload';
+
+// True when tiles are much narrower than their columns, the "squeezed"
+// layout seen a few times and fixed by a refresh.
+function isGridSqueezed() {
+  const column = document.querySelector('.my-masonry-grid_column');
+  const tile = column?.firstElementChild;
+  if (!column || !tile) return false;
+  const columnWidth = column.getBoundingClientRect().width;
+  return (
+    columnWidth > 0 && tile.getBoundingClientRect().width < columnWidth * 0.6
+  );
+}
+
 export default function PhotographyPage() {
+  const [gridKey, setGridKey] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageSrc, setModalImageSrc] = useState('');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -367,6 +382,31 @@ export default function PhotographyPage() {
     setModalImageSrc(images[newIndex].src);
   };
 
+  // Safety net for the squeezed layout: rebuild the grid once, and if it is
+  // still squeezed, reload the page once per session.
+  useEffect(() => {
+    const timers = [];
+    timers.push(
+      setTimeout(() => {
+        if (!isGridSqueezed()) return;
+        setGridKey((k) => k + 1);
+        timers.push(
+          setTimeout(() => {
+            if (!isGridSqueezed()) return;
+            try {
+              if (sessionStorage.getItem(RELOAD_GUARD_KEY)) return;
+              sessionStorage.setItem(RELOAD_GUARD_KEY, '1');
+            } catch {
+              return;
+            }
+            window.location.reload();
+          }, 1500)
+        );
+      }, 1500)
+    );
+    return () => timers.forEach(clearTimeout);
+  }, []);
+
   return (
     <>
       <PageTopbar />
@@ -381,6 +421,7 @@ export default function PhotographyPage() {
 
         <div className="container mx-auto">
           <Masonry
+            key={gridKey}
             breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
