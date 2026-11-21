@@ -2822,3 +2822,50 @@ html[data-blog-theme='dark'] .blog-theme-root .back-to-top-progress-bar {
     transition: none;
   }
 }
+
+/* Round topbar buttons (back, theme, search): hairline border, no shadow or
+   hover jump, matching the site's other buttons. */
+.blog-listing-back-button,
+.blog-post-back-button,
+.blog-theme-toggle-button,
+.blog-search-button,
+.blog-search-close-button {
+  border: 1px solid var(--color-border-subtle) !important;
+  box-shadow: none !important;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease !important;
+}
+
+.blog-listing-back-button:hover,
+.blog-post-back-button:hover,
+.blog-theme-toggle-button:hover,
+.blog-search-button:hover,
+.blog-search-close-button:hover {
+  transform: none !important;
+  border-color: var(--color-border) !important;
+  background-color: var(--color-hover) !important;
+}
+
+html[data-blog-theme='dark'] .blog-theme-root .blog-listing-back-button,
+html[data-blog-theme='dark'] .blog-theme-root .blog-post-back-button,
+html[data-blog-theme='dark'] .blog-theme-root .blog-search-button,
+html[data-blog-theme='dark'] .blog-theme-root .blog-search-close-button,
+html[data-blog-theme='dark'] .blog-theme-root .blog-theme-toggle-button {
+  border-color: #2c313b !important;
+}
+
+html[data-blog-theme='dark'] .blog-theme-root .blog-listing-back-button:hover,
+html[data-blog-theme='dark'] .blog-theme-root .blog-post-back-button:hover,
+html[data-blog-theme='dark'] .blog-theme-root .blog-search-button:hover,
+html[data-blog-theme='dark'] .blog-theme-root .blog-search-close-button:hover,
+html[data-blog-theme='dark'] .blog-theme-root .blog-theme-toggle-button:hover {
+  border-color: #5a626f !important;
+  background-color: #262a33 !important;
+}
+
+/* Compact sort select */
+.blog-explorer-select {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}

@@ -102,12 +102,12 @@ main {
   align-items: center;
   justify-content: center;
   background: #ffffff;
-  border: 1px solid #e3e3e3;
+  border: 1px solid var(--color-border-subtle);
   border-radius: 999px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: none !important;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    border-color 0.2s ease,
+    background-color 0.2s ease;
   cursor: pointer;
   z-index: auto;
 }
@@ -119,8 +119,9 @@ main {
 }
 
 .page-topbar .back-button:hover {
-  transform: translateX(-4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: none !important;
+  border-color: var(--color-border);
+  background: var(--color-hover);
 }
 
 .page-topbar .back-button::after {

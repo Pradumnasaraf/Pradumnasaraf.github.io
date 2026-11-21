@@ -45,6 +45,10 @@ function formatPostDate(date) {
   return format(parsed, 'MMMM dd, yyyy');
 }
 
+// Narrower tags that overlap a broader one already in the top row. They stay
+// on posts and keep their own /blog/tag pages; they just aren't a top chip.
+const HIDDEN_TOP_TAGS = new Set(['docker-compose']);
+
 export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
   const [activeTag, setActiveTag] = useState('all');
   const [sortBy, setSortBy] = useState('latest');
@@ -67,6 +71,7 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
         if (b[1] !== a[1]) return b[1] - a[1];
         return a[0].localeCompare(b[0]);
       })
+      .filter(([tag]) => !HIDDEN_TOP_TAGS.has(tag))
       .slice(0, 8)
       .map(([tag]) => tag);
   }, [normalizedPosts]);
