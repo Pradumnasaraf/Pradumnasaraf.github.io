@@ -78,7 +78,7 @@ const ImageItem = ({ src, alt, country, eager = false, onClick }) => {
     }
   }, [src]);
 
-  return !hasError ? (
+  return (
     <div className="relative group w-full" style={{ marginBottom: '0.75rem' }}>
       <div
         id={`image-${src}`}
@@ -87,9 +87,9 @@ const ImageItem = ({ src, alt, country, eager = false, onClick }) => {
         }`}
         // Reserve space before the image loads so lazy-loading doesn't shift
         // the page and jank the scroll on mobile.
-        style={isLoading ? { aspectRatio: '2 / 3' } : undefined}
+        style={isLoading || hasError ? { aspectRatio: '2 / 3' } : undefined}
       >
-        {isVisible && (
+        {isVisible && !hasError && (
           <Image
             src={attempt ? `${gridSrc(src)}&retry=${attempt}` : gridSrc(src)}
             alt={alt}
@@ -101,8 +101,9 @@ const ImageItem = ({ src, alt, country, eager = false, onClick }) => {
               isLoading ? 'opacity-0' : 'opacity-100'
             }`}
             onError={() => {
-              // Drive rate-limits bursts of large image requests; retry a
-              // couple of times with a short delay before hiding the tile.
+              // Drive can rate-limit bursts of requests; retry a few times
+              // with a growing delay, then offer a manual retry. The tile
+              // always keeps its place so the grid never collapses.
               if (attempt < MAX_IMAGE_RETRIES) {
                 setTimeout(
                   () => setAttempt((n) => n + 1),
@@ -116,6 +117,18 @@ const ImageItem = ({ src, alt, country, eager = false, onClick }) => {
           />
         )}
       </div>
+      {hasError && (
+        <button
+          type="button"
+          className="photo-retry"
+          onClick={() => {
+            setHasError(false);
+            setAttempt((n) => n + 1);
+          }}
+        >
+          Couldn&apos;t load. Tap to retry
+        </button>
+      )}
       <button
         type="button"
         className="photo-open"
@@ -129,7 +142,7 @@ const ImageItem = ({ src, alt, country, eager = false, onClick }) => {
         </span>
       )}
     </div>
-  ) : null;
+  );
 };
 
 // Enhanced FullScreenModal Component
