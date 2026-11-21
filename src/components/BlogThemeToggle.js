@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useSyncExternalStore } from 'react';
-import { flushSync } from 'react-dom';
+import { useEffect, useId, useSyncExternalStore } from 'react';
 
 const STORAGE_KEY = 'blog-theme';
 const ATTR = 'data-blog-theme';
@@ -38,88 +37,48 @@ function setTheme(next) {
   listeners.forEach((cb) => cb());
 }
 
-const REVEAL_MS = 650;
-
-// Reveals the new theme as a circle growing out of the toggle button, using
-// the View Transitions API. Falls back to an instant switch when the API is
-// missing or the visitor prefers reduced motion.
-function switchThemeFrom(button, next) {
-  const reduceMotion = window.matchMedia(
-    '(prefers-reduced-motion: reduce)'
-  ).matches;
-  if (!document.startViewTransition || reduceMotion || !button) {
-    setTheme(next);
-    return;
-  }
-
-  const rect = button.getBoundingClientRect();
-  const x = rect.left + rect.width / 2;
-  const y = rect.top + rect.height / 2;
-  const radius = Math.hypot(
-    Math.max(x, window.innerWidth - x),
-    Math.max(y, window.innerHeight - y)
-  );
-
-  const transition = document.startViewTransition(() => {
-    flushSync(() => setTheme(next));
-  });
-
-  transition.ready
-    .then(() => {
-      document.documentElement.animate(
-        {
-          clipPath: [
-            `circle(0px at ${x}px ${y}px)`,
-            `circle(${radius}px at ${x}px ${y}px)`,
-          ],
-        },
-        {
-          duration: REVEAL_MS,
-          easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
-          pseudoElement: '::view-transition-new(root)',
-        }
-      );
-    })
-    .catch(() => {});
-}
-
-function SunIcon() {
+// One icon that morphs between a crescent moon (light theme) and a sun (dark
+// theme): a mask circle slides off the disc while the rays rotate in. The
+// motion lives in .theme-icon rules in blog/style.css.
+function ThemeIcon({ theme }) {
+  const maskId = `theme-icon-mask-${useId().replace(/:/g, '')}`;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      className="theme-icon"
+      data-theme={theme}
       aria-hidden="true"
       focusable="false"
     >
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-    </svg>
-  );
-}
-
-function MoonIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      focusable="false"
-    >
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      <mask id={maskId}>
+        <rect width="24" height="24" fill="white" />
+        <circle
+          className="theme-icon-shadow"
+          cx="17"
+          cy="7"
+          r="7"
+          fill="black"
+        />
+      </mask>
+      <circle
+        className="theme-icon-disc"
+        cx="12"
+        cy="12"
+        r="8.5"
+        fill="currentColor"
+        mask={`url(#${maskId})`}
+      />
+      <g
+        className="theme-icon-rays"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      >
+        <path d="M12 1.5v2M12 20.5v2M1.5 12h2M20.5 12h2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M4.6 19.4L6 18M18 6l1.4-1.4" />
+      </g>
     </svg>
   );
 }
@@ -155,18 +114,11 @@ export default function BlogThemeToggle() {
       <button
         type="button"
         className="blog-theme-toggle-button"
-        onClick={(event) =>
-          switchThemeFrom(
-            event.currentTarget,
-            theme === 'dark' ? 'light' : 'dark'
-          )
-        }
+        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         aria-label={label}
         title={label}
       >
-        <span key={theme} className="blog-theme-toggle-icon">
-          {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-        </span>
+        <ThemeIcon theme={theme} />
       </button>
     </div>
   );

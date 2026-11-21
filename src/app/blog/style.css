@@ -2787,40 +2787,38 @@ html[data-blog-theme='dark'] .blog-theme-root .back-to-top-progress-bar {
   }
 }
 
-/* Theme switch: the new theme is revealed by a growing circle (driven from
-   BlogThemeToggle.js), so the default cross-fade is turned off. */
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
+/* Theme toggle icon: crescent moon in light mode, sun in dark mode. */
+.theme-icon-disc,
+.theme-icon-shadow,
+.theme-icon-rays {
+  transform-origin: 12px 12px;
+  transition:
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease;
 }
 
-::view-transition-old(root) {
-  z-index: 1;
+.theme-icon[data-theme='light'] .theme-icon-rays {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.4);
 }
 
-::view-transition-new(root) {
-  z-index: 2;
+.theme-icon[data-theme='dark'] .theme-icon-disc {
+  transform: scale(0.55);
 }
 
-.blog-theme-toggle-icon {
-  display: inline-flex;
-  animation: theme-icon-in 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+.theme-icon[data-theme='dark'] .theme-icon-shadow {
+  transform: translate(9px, -9px);
 }
 
-@keyframes theme-icon-in {
-  from {
-    opacity: 0;
-    transform: rotate(-90deg) scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
-  }
+.theme-icon[data-theme='dark'] .theme-icon-rays {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .blog-theme-toggle-icon {
-    animation: none;
+  .theme-icon-disc,
+  .theme-icon-shadow,
+  .theme-icon-rays {
+    transition: none;
   }
 }
