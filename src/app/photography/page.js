@@ -11,7 +11,7 @@ import images from './images.json';
 // output can differ between Node and the browser and break hydration).
 const COUNTRY_NAMES = {
   AE: 'United Arab Emirates',
-  CZ: 'Czechia',
+  CZ: 'Czech Republic',
   DE: 'Germany',
   FR: 'France',
   HK: 'Hong Kong',

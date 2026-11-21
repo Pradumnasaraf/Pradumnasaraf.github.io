@@ -31,16 +31,8 @@
   /* Ensure touch scrolling works on mobile - Safari specific */
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
-  /* Prevent layout blocking */
-  contain: layout style;
-  /* Ensure container allows scrolling */
   min-height: 100vh;
   height: auto;
-  /* Safari-specific: Force hardware acceleration for smooth scrolling */
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  /* Safari-specific: Prevent scroll blocking during image load */
-  will-change: scroll-position;
 }
 
 /* Masonry Grid Styles */
@@ -53,11 +45,6 @@
   /* Ensure grid doesn't block scrolling */
   position: relative;
   min-height: 100px;
-  /* Safari-specific: Prevent layout thrashing during image load */
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  /* Safari-specific: Enable GPU acceleration */
-  will-change: contents;
 }
 
 .my-masonry-grid_column {
@@ -68,10 +55,6 @@
   width: 100%;
   /* Ensure columns don't block scrolling */
   position: relative;
-  will-change: contents;
-  /* Safari-specific: Prevent scroll blocking */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .my-masonry-grid_column > div {
@@ -87,7 +70,6 @@
   /* Use filter drop-shadow for better rounded corner support - respects border-radius */
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))
     drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
-  will-change: transform;
   /* Ensure shadow respects border-radius */
   border-radius: 0.5rem;
   overflow: hidden;
