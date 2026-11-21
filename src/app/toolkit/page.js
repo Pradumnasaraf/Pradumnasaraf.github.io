@@ -114,8 +114,8 @@ const ToolKitPage = () => {
               <div className="toolkit-item">
                 <h3>AI Tools</h3>
                 <p>
-                  Claude, ChatGPT, Perplexity, LM Studio, Claude Code, Codex,
-                  OpenCode, Agent Browser
+                  Claude, ChatGPT, Claude Code, OpenCode, Agent Browser,
+                  MacWhisper, Wispr Flow
                 </p>
               </div>
 
