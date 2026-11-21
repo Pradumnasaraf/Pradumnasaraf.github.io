@@ -138,7 +138,10 @@ const ImageItem = ({ src, alt, country, eager = false, onClick }) => {
         aria-label={`View photo: ${alt}${country ? `, ${countryName(country)}` : ''}`}
       />
       {country && (
-        <span className="photo-flag" aria-hidden="true">
+        <span
+          className={`photo-flag${country === 'GLOBE' ? ' photo-flag-globe' : ''}`}
+          aria-hidden="true"
+        >
           <span className="photo-flag-emoji">{flagEmoji(country)}</span>
           {countryName(country)}
         </span>

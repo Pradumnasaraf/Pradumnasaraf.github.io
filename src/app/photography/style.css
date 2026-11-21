@@ -142,6 +142,11 @@
   line-height: 1;
 }
 
+/* The globe glyph draws larger than flag glyphs; scale it to match. */
+.photo-flag-globe .photo-flag-emoji {
+  font-size: 0.78rem;
+}
+
 .group:hover .photo-flag,
 .group:focus-within .photo-flag {
   opacity: 1;
