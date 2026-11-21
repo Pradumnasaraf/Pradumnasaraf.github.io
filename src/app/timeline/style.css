@@ -16,16 +16,23 @@ body {
   font-size: 3rem;
   color: var(--color-fg);
   margin-top: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 0.5rem;
   font-weight: 300;
   letter-spacing: -0.02em;
+}
+
+.timeline-subtitle {
+  text-align: center;
+  color: var(--color-fg-muted);
+  font-size: 1.05rem;
+  font-weight: 300;
 }
 
 /* Timeline Container */
 .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 100px auto;
+  margin: 60px auto 100px;
   padding: 0 1rem;
 }
 
@@ -83,8 +90,7 @@ body {
   position: relative;
   border-radius: 12px;
   font-size: 15px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .text-box h2 {
@@ -99,9 +105,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   color: var(--color-fg-muted);
-  background-color: #f0f0f0;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 0;
 }
 
 .text-box p {
@@ -130,8 +134,7 @@ body {
   top: 32px;
   z-index: 10;
   background-color: var(--color-surface);
-  border: 2px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .right-container img {
@@ -282,7 +285,7 @@ body {
 
   .text-box small {
     font-size: 12px;
-    padding: 3px 6px;
+    padding: 0;
   }
 
   .right-container {
@@ -329,7 +332,7 @@ body {
   .back-button::after {
     left: 45px;
     font-size: 11px;
-    padding: 3px 6px;
+    padding: 0;
   }
 
   .timeline-title {
@@ -357,7 +360,7 @@ body {
 
   .text-box small {
     font-size: 11px;
-    padding: 2px 5px;
+    padding: 0;
   }
 
   .left-container img,
@@ -391,12 +394,49 @@ body {
   .back-button::after {
     left: 40px;
     font-size: 10px;
-    padding: 2px 5px;
+    padding: 0;
   }
 
   .timeline-title {
     font-size: 1.75rem;
     margin-top: 10px;
     margin-bottom: 15px;
+  }
+}
+
+/* Year marker on the line, shown before the first milestone of each year. */
+.timeline-year {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 18px 0 8px;
+  opacity: 0;
+  animation: movedown 1s linear forwards;
+}
+
+.timeline-year span {
+  padding: 0.25rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-fg);
+  font-size: 0.95rem;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .timeline-year {
+    justify-content: flex-start;
+    padding-left: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-year {
+    animation: none;
+    opacity: 1;
   }
 }
