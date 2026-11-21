@@ -109,3 +109,31 @@ The slug is the filename. Images go under `public/blog-images/<slug>/`.
 - **Links social icons** (`src/app/links/page.js`): each icon is tagged `social-icon-filled` or `social-icon-stroke` via a hardcoded `social.id` list. Filled marks (most `Fa*`/`Si*` brand icons) **must** have their `id` in the filled list, or the stroke CSS (`fill: none`) renders them invisible; outline `Fi*` icons use stroke. When switching an icon's style, update that list too. Display labels are the visitor-facing product name, not the repo slug (no dashes/lowercase).
 - **OG images** are generated per route by `opengraph-image.js` files (Next's file convention), all rendered through `renderOg()` in `src/lib/og.js` (League Spartan from `@fontsource/league-spartan`, 1200×630, built at deploy time from the route's own data). Add one next to any new route. `buildMetadata` no longer sets images unless you pass `ogImage`, so don't add static `*-og.png` files. Blog posts keep their own thumbnail as the OG image via `generateMetadata`; `public/media/pradumna-saraf-og.png` (`OG_IMAGE_URL`) stays only as the fallback for posts without a thumbnail and for `sitemap-videos.xml`.
 - Baseline security headers and `poweredByHeader: false` are set in `next.config.mjs` via `headers()`; `metadataBase` is set on the root metadata (`src/app/metadata.js`), so new metadata can use relative OG/canonical paths instead of hardcoding the origin. There is intentionally **no** CSP yet (would need careful allowlisting for GTM, the Cal.com embed, Google Drive images, and inline scripts).
+
+## Settled decisions (do not re-ask)
+
+These were decided with the user. Apply them; don't propose changing them or ask about them again.
+
+- **CV and Contact stay out of search on purpose.** `/cv` and `/contact` use `robots: 'noindex'` and are deliberately missing from `src/app/sitemap/data.js` and `sitemap.xml`. Never add them back or flag it as a gap.
+- **Keep the current design and polish it.** White background, League Spartan, ink text. No redesigns, no developer-jargon themes (terminal UIs, `docker ps` tables), nothing that looks like a generic AI-built site. No green anywhere in the palette. Never invent personal details (city, pronouns, stats) on a page.
+- **Light mode is site-wide; dark mode exists only under `/blog`.** Don't propose site-wide dark mode.
+- **Theme toggle animates only the icon** (`BlogThemeToggle.js`: the moon's shadow slides off and rays rotate in). No full-page or View Transition effects.
+- **Timeline keeps its vertical line.** Projects is featured cards plus themed groups; Speaking is grouped by year. Don't switch these back.
+- **Toolkit:** content lives in `src/app/toolkit/toolkit.json`. Apply only the edits the user asks for. Any other addition or removal is a question first.
+- **Every UI change must work on phones** and is checked at phone width before it is called done.
+
+## UI patterns
+
+Reuse these instead of inventing new styles.
+
+- **Tokens** (in `globals.css` `@theme`): `--color-border` (#dcdcdc) for button and control borders, `--color-border-subtle` (#ececec) for card borders and dividers, `--color-hover` (#f7f7f7) for hover backgrounds.
+- **Buttons:** secondary = 1px `--color-border`, 8px radius, hover changes the border to `--color-fg` and the background to `--color-hover`. Primary = filled `--color-fg` with white text, hover `#000`. No `translateY` hover lifts, no `transition: all`, no thick black outlines that flip to black on hover.
+- **Page header:** centred `h1` (3rem, weight 300, 2rem on mobile) with a muted one-line subtitle under it.
+- **Section heading:** `h2` at 1.5rem, weight 400, with a 1px `--color-border-subtle` bottom border.
+- **Card grid:** `grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr))`, cards with a 1px subtle border, 14px radius, and a soft shadow on hover.
+- **Spacing in page CSS, not Tailwind utilities.** The unlayered `* { padding: 0; margin: 0 }` reset in `globals.css` overrides Tailwind v4 spacing utilities (`p-*`, `m-*`, `mx-auto`), which is why the old sitemap rendered with no padding. Put layout spacing in the route's `style.css`.
+- **Never read `public/` from server code at request time.** `next.config.mjs` excludes `public/` from function bundles (it used to fill Vercel's 10 GB Function Storage). Assets a server route needs go in `src/assets/` (for example `og-avatar.png` for OG images).
+
+## Checking UI changes
+
+The Chrome extension is often not connected, so check pages with headless Chrome against the dev server. Plain `--window-size` clamps below about 500px wide, so emulate phones through the DevTools protocol (`Emulation.setDeviceMetricsOverride` at 390x844, `mobile: true`). Also confirm `document.documentElement.scrollWidth <= innerWidth`, so nothing scrolls sideways.
