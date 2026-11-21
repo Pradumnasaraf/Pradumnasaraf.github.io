@@ -10,6 +10,9 @@ const nextConfig = {
     '/*': ['./public/**/*'],
   },
   images: {
+    // Gallery photos come from Google Drive; keep optimized copies cached for
+    // a month so visitors are served from Vercel instead of hitting Drive.
+    minimumCacheTTL: 2678400,
     remotePatterns: [
       {
         protocol: 'https',

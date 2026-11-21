@@ -95,7 +95,6 @@ const ImageItem = ({ src, alt, country, eager = false, onClick }) => {
             alt={alt}
             width={800}
             height={1200}
-            unoptimized
             loading={eager ? 'eager' : 'lazy'}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             className={`w-full h-auto grayscale-image rounded-lg ${
@@ -284,7 +283,7 @@ const FullScreenModal = ({
         alt={imageAlt || 'Full screen photograph'}
         width={1920}
         height={1080}
-        unoptimized
+        sizes="(max-width: 768px) 100vw, 90vw"
         className="modal-image"
         style={{ objectFit: 'contain' }}
       />
