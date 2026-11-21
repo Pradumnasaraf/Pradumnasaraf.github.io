@@ -123,18 +123,18 @@
 .toolkit-item {
   background: var(--color-surface);
   padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 14px;
   transition:
-    transform 0.2s,
+    border-color 0.2s,
     box-shadow 0.2s;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 
 .toolkit-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-border);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
 }
 
 .toolkit-item h3 {
