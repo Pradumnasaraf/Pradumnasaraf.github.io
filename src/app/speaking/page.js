@@ -103,8 +103,8 @@ const SpeakingPage = () => {
       <PageTopbar ariaLabel="Back to home page" />
 
       <div className="speaking-container">
-        <div className="speaking-header">
-          <h1>Speaking</h1>
+        <header className="page-header">
+          <h1 className="page-title">Speaking</h1>
           {upcomingTalks.map((item) => (
             <p key={item.id} className="speaking-upcoming">
               <span className="speaking-upcoming-label">Upcoming</span>
@@ -113,7 +113,7 @@ const SpeakingPage = () => {
               </a>
             </p>
           ))}
-        </div>
+        </header>
 
         <div className="speaking-years">
           {talksByYear.map(({ year, talks }) => (

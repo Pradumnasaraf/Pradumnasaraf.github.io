@@ -354,10 +354,12 @@ export default function Home() {
       <PageTopbar />
 
       <div className="min-h-screen p-4 md:p-8 photography-page-container">
-        <h1 className="photography-title">Photography</h1>
-        <p className="photography-subtitle">
-          Open any photo to see it full screen in colour.
-        </p>
+        <header className="page-header page-header-tight">
+          <h1 className="page-title">Photography</h1>
+          <p className="page-subtitle">
+            Open any photo to see it full screen in colour.
+          </p>
+        </header>
 
         <div className="container mx-auto">
           <Masonry

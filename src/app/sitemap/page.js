@@ -21,9 +21,11 @@ const SitemapPage = () => {
       <PageTopbar />
 
       <div className="sitemap-page">
-        <header className="sitemap-header">
-          <h1>Sitemap</h1>
-          <p>Every page on pradumnasaraf.dev in one place.</p>
+        <header className="page-header">
+          <h1 className="page-title">Sitemap</h1>
+          <p className="page-subtitle">
+            Every page on pradumnasaraf.dev in one place.
+          </p>
         </header>
 
         <div className="sitemap-body">

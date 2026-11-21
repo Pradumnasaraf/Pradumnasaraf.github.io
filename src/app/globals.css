@@ -925,3 +925,48 @@ main {
 :root .download-button {
   border-color: transparent;
 }
+
+/* Shared page header: title plus an optional one-line subtitle. */
+.page-header {
+  max-width: 1080px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.page-header-tight {
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--color-fg);
+}
+
+.page-subtitle {
+  margin-top: 0.5rem;
+  color: var(--color-fg-muted);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-header-tight {
+    margin-bottom: 1.25rem;
+  }
+
+  .page-title {
+    margin-top: 15px;
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.95rem;
+  }
+}

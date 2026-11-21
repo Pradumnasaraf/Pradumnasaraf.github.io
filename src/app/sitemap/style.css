@@ -3,27 +3,6 @@
   padding: 1.25rem 1.25rem 4rem;
 }
 
-.sitemap-header {
-  max-width: 1080px;
-  margin: 0 auto 2.5rem;
-  text-align: center;
-}
-
-.sitemap-header h1 {
-  font-size: 3rem;
-  color: var(--color-fg);
-  margin-top: 20px;
-  margin-bottom: 0.5rem;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
-.sitemap-header p {
-  color: var(--color-fg-muted);
-  font-size: 1.05rem;
-  font-weight: 300;
-}
-
 .sitemap-body {
   max-width: 1080px;
   margin: 0 auto;
@@ -126,19 +105,6 @@
 @media (max-width: 768px) {
   .sitemap-page {
     padding: 0.5rem 0.9rem 2.5rem;
-  }
-
-  .sitemap-header {
-    margin-bottom: 2rem;
-  }
-
-  .sitemap-header h1 {
-    font-size: 2rem;
-    margin-top: 15px;
-  }
-
-  .sitemap-header p {
-    font-size: 0.95rem;
   }
 
   .sitemap-group h2 {

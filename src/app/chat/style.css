@@ -1,7 +1,3 @@
-.nav {
-  justify-content: center;
-}
-
 .calendar-container {
   width: 100%;
   height: 82vh;
@@ -14,140 +10,15 @@
   align-items: center;
 }
 
-.chat-page .nav {
-  position: static;
-  height: auto;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #eaeaea;
-}
-
 .chat-page .calendar-container {
   margin-top: 0;
 }
 
 @media (max-width: 800px) {
-  .nav {
-    display: none !important;
-  }
-
   .calendar-container {
     margin-top: 0 !important;
     height: 100vh !important;
   }
-}
-
-.back-button {
-  position: fixed;
-  top: calc(env(safe-area-inset-top, 0px) + 20px);
-  left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-surface);
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-.back-button:hover {
-  transform: translateX(-4px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.back-button svg {
-  color: var(--color-fg-secondary);
-  transition: color 0.3s ease;
-  width: 24px;
-  height: 24px;
-}
-
-.back-button:hover svg {
-  color: var(--color-fg-strong);
-}
-
-.back-button::after {
-  content: 'Home';
-  position: absolute;
-  left: 50px;
-  background-color: var(--color-fg-secondary);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-.back-button:hover::after {
-  opacity: 1;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .back-button {
-    width: 36px;
-    height: 36px;
-    top: calc(env(safe-area-inset-top, 0px) + 15px);
-    left: 15px;
-  }
-
-  .back-button svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .back-button::after {
-    left: 45px;
-    font-size: 11px;
-    padding: 3px 6px;
-  }
-}
-
-@media (max-width: 480px) {
-  .back-button {
-    width: 32px;
-    height: 32px;
-    top: calc(env(safe-area-inset-top, 0px) + 10px);
-    left: 10px;
-  }
-
-  .back-button svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .back-button::after {
-    left: 40px;
-    font-size: 10px;
-    padding: 2px 5px;
-  }
-}
-
-.chat-header {
-  max-width: 1080px;
-  margin: 0 auto 1rem;
-  padding: 0 1.25rem;
-  text-align: center;
-}
-
-.chat-header h1 {
-  font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  color: var(--color-fg);
-  margin: 20px 0 0.5rem;
-}
-
-.chat-header p {
-  color: var(--color-fg-muted);
-  font-size: 1.05rem;
-  font-weight: 300;
 }
 
 .calendar-wrap {
@@ -182,15 +53,6 @@
 }
 
 @media (max-width: 800px) {
-  .chat-header h1 {
-    font-size: 2rem;
-    margin-top: 15px;
-  }
-
-  .chat-header p {
-    font-size: 0.95rem;
-  }
-
   .chat-page .calendar-container {
     height: auto !important;
     min-height: 80vh;
@@ -201,4 +63,8 @@
   .calendar-loading {
     animation: none;
   }
+}
+
+.chat-page .page-header {
+  padding: 0 1.25rem;
 }

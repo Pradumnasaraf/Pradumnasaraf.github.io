@@ -118,13 +118,13 @@ export default function ProjectsPage() {
       <PageTopbar ariaLabel="Back to home page" />
 
       <section className="projects-page">
-        <div className="projects-header">
-          <h1>Projects</h1>
-          <p className="projects-subtitle">
+        <header className="page-header">
+          <h1 className="page-title">Projects</h1>
+          <p className="page-subtitle">
             {projectList.length} things I&apos;ve built in the open: tools,
             guides, APIs and apps.
           </p>
-        </div>
+        </header>
 
         {featured.length > 0 && (
           <section

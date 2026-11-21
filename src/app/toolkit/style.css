@@ -5,27 +5,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.toolkit-header {
-  max-width: 1080px;
-  margin: 0 auto 2.5rem;
-  text-align: center;
-}
-
-.toolkit-title {
-  font-size: 3rem;
-  color: var(--color-fg);
-  margin-top: 20px;
-  margin-bottom: 0.5rem;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
-.toolkit-subtitle {
-  color: var(--color-fg-muted);
-  font-size: 1.05rem;
-  font-weight: 300;
-}
-
 .toolkit-container {
   max-width: 1080px;
   margin: 0 auto;
@@ -143,19 +122,6 @@
 @media (max-width: 768px) {
   .toolkit-page {
     padding: 0.5rem 0.9rem 2.5rem;
-  }
-
-  .toolkit-header {
-    margin-bottom: 2rem;
-  }
-
-  .toolkit-title {
-    font-size: 2rem;
-    margin-top: 15px;
-  }
-
-  .toolkit-subtitle {
-    font-size: 0.95rem;
   }
 
   .toolkit-section {

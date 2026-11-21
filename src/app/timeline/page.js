@@ -33,7 +33,9 @@ const TimelinePage = () => {
       <PageTopbar />
 
       <div className="min-h-screen">
-        <h1 className="timeline-title">Timeline</h1>
+        <header className="page-header page-header-tight">
+          <h1 className="page-title">Timeline</h1>
+        </header>
         <div className="timeline">
           {entries.map((entry, index) => {
             const side = index % 2 === 0 ? 'right' : 'left';

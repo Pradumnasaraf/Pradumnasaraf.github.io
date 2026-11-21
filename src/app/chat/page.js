@@ -75,9 +75,11 @@ const ChatPage = () => {
       <div className="chat-page">
         <PageTopbar />
 
-        <header className="chat-header">
-          <h1>Let&apos;s chat</h1>
-          <p>Book a 30-minute call about talks, collaborations or content.</p>
+        <header className="page-header page-header-tight">
+          <h1 className="page-title">Let&apos;s chat</h1>
+          <p className="page-subtitle">
+            Book a 30-minute call about talks, collaborations or content.
+          </p>
         </header>
 
         <div className="calendar-wrap">

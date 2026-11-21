@@ -5,22 +5,6 @@
   color: var(--color-fg-secondary);
 }
 
-.speaking-header {
-  max-width: 1080px;
-  margin: 0 auto 2rem;
-  text-align: center;
-}
-
-.speaking-header h1 {
-  text-align: center;
-  font-size: 3rem;
-  color: var(--color-fg);
-  margin-top: 20px;
-  margin-bottom: 25px;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
 .speaking-upcoming {
   display: inline-flex;
   align-items: center;
@@ -263,12 +247,6 @@
     padding: 0.5rem 0.9rem 2rem;
   }
 
-  .speaking-header h1 {
-    font-size: 2rem;
-    margin-top: 15px;
-    margin-bottom: 20px;
-  }
-
   .speaking-years {
     gap: 2rem;
   }
@@ -280,4 +258,8 @@
   .speaking-tech-list {
     display: none;
   }
+}
+
+.page-title + .speaking-upcoming {
+  margin-top: 1.25rem;
 }

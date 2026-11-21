@@ -44,9 +44,9 @@ const ToolKitPage = () => {
       <PageTopbar />
 
       <div className="toolkit-page">
-        <header className="toolkit-header">
-          <h1 className="toolkit-title">Tools & Gear I Use</h1>
-          <p className="toolkit-subtitle">
+        <header className="page-header">
+          <h1 className="page-title">Tools & Gear I Use</h1>
+          <p className="page-subtitle">
             The hardware and software I use every day to build, write and
             record.
           </p>

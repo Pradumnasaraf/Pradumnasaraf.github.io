@@ -4,28 +4,6 @@
   padding: 1.25rem 1.25rem 4rem;
 }
 
-.projects-header {
-  max-width: 1080px;
-  margin: 0 auto 2.5rem;
-  text-align: center;
-}
-
-.projects-header h1 {
-  text-align: center;
-  font-size: 3rem;
-  color: var(--color-fg);
-  margin-top: 20px;
-  margin-bottom: 0.5rem;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-}
-
-.projects-subtitle {
-  color: var(--color-fg-muted);
-  font-size: 1.05rem;
-  font-weight: 300;
-}
-
 .projects-group {
   max-width: 1080px;
   margin: 0 auto 3rem;
@@ -190,19 +168,6 @@
 @media (max-width: 768px) {
   .projects-page {
     padding: 0.5rem 0.9rem 2.5rem;
-  }
-
-  .projects-header {
-    margin-bottom: 2rem;
-  }
-
-  .projects-header h1 {
-    font-size: 2rem;
-    margin-top: 15px;
-  }
-
-  .projects-subtitle {
-    font-size: 0.95rem;
   }
 
   .projects-group {
