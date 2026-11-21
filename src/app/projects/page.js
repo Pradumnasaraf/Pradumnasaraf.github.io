@@ -83,7 +83,6 @@ export default function ProjectsPage() {
                   </div>
 
                   <p className="project-problem">
-                    <span>Problem it solves:</span>{' '}
                     {project.problem ||
                       'Provides an open source implementation to solve a focused developer workflow problem.'}
                   </p>

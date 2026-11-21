@@ -359,15 +359,16 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 6rem;
+  padding-bottom: 6vh;
   margin-top: 10vh;
   overflow-x: hidden;
   box-sizing: border-box;
 }
 
 .left {
-  width: 35%;
-  max-width: 500px;
+  width: 40%;
+  max-width: 560px;
   padding-right: 2rem;
 }
 
@@ -403,8 +404,8 @@ main {
   color: var(--color-fg);
   font-weight: 500;
   margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 2.6rem;
+  margin-bottom: 14px;
+  font-size: 3.2rem;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
@@ -414,7 +415,7 @@ main {
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   letter-spacing: -0.01em;
   max-width: 100%;
@@ -478,14 +479,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 250px;
+  max-width: 320px;
   width: 100%;
 }
 
 .right img {
   width: 100%;
   height: auto;
-  max-width: 250px;
+  max-width: 320px;
   object-fit: cover;
   border-radius: 14px;
 }

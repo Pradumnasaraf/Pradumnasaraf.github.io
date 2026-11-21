@@ -297,13 +297,6 @@ export default function BlogPostExplorer({ posts, hideTopicChips = false }) {
                       ))}
                     </div>
                   )}
-
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="blog-post-read-more"
-                  >
-                    Read article
-                  </Link>
                 </div>
               </article>
             ))}

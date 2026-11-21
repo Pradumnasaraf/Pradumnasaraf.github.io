@@ -127,11 +127,6 @@
   font-size: 0.98rem;
 }
 
-.project-problem span {
-  color: #222222;
-  font-weight: 500;
-}
-
 .project-tech-list {
   display: flex;
   flex-wrap: wrap;
