@@ -127,7 +127,8 @@ const ImageItem = ({ src, alt, country, onClick }) => {
 };
 
 // Enhanced FullScreenModal Component
-const HINT_STORAGE_KEY = 'photo-viewer-hint-seen';
+// The tap hint shows on the first photo opened after each page load.
+let hintShownThisVisit = false;
 const SWIPE_THRESHOLD = 50;
 
 const FullScreenModal = ({
@@ -146,22 +147,11 @@ const FullScreenModal = ({
   const touchStartX = useRef(null);
 
   useEffect(() => {
-    if (!isOpen) return undefined;
-    let seen = true;
-    try {
-      seen = window.localStorage.getItem(HINT_STORAGE_KEY) === '1';
-    } catch {
-      seen = true;
-    }
-    if (seen) return undefined;
+    if (!isOpen || hintShownThisVisit) return undefined;
+    hintShownThisVisit = true;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setHintVerb(window.matchMedia('(hover: hover)').matches ? 'Click' : 'Tap');
     setShowHint(true);
-    try {
-      window.localStorage.setItem(HINT_STORAGE_KEY, '1');
-    } catch {
-      // Storage can be blocked; the hint then shows once per visit.
-    }
     const timer = setTimeout(() => setShowHint(false), 3200);
     return () => clearTimeout(timer);
   }, [isOpen]);
@@ -282,79 +272,15 @@ const FullScreenModal = ({
         </button>
         <span className="modal-label modal-label-left">Close</span>
       </div>
-      {/* Previous Button */}
-      <div
-        className="modal-nav-wrap"
-        style={{
-          position: 'fixed',
-          left: 20,
-          top: '50%',
-          transform: 'translateY(-50%)',
-          display: 'inline-block',
-        }}
-      >
-        <button
-          onClick={onPrev}
-          className="modal-circle-button modal-nav-button prev-modal-button"
-          aria-label="Previous image"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-        </button>
-        <span className="modal-label modal-label-right">Previous</span>
-      </div>
       <Image
         src={imageSrc}
         alt={imageAlt || 'Full screen photograph'}
         width={1920}
         height={1080}
         unoptimized
-        className="modal-image max-w-[90vw] max-h-[90vh] object-contain"
+        className="modal-image"
         style={{ objectFit: 'contain' }}
       />
-      {/* Next Button */}
-      <div
-        className="modal-nav-wrap"
-        style={{
-          position: 'fixed',
-          right: 20,
-          top: '50%',
-          transform: 'translateY(-50%)',
-          display: 'inline-block',
-        }}
-      >
-        <button
-          onClick={onNext}
-          className="modal-circle-button modal-nav-button next-modal-button"
-          aria-label="Next image"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M9 6l6 6-6 6" />
-          </svg>
-        </button>
-        <span className="modal-label modal-label-left">Next</span>
-      </div>
     </div>,
     document.body
   );

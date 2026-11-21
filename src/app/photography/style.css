@@ -313,9 +313,6 @@
 }
 
 /* Tooltip to the right (for Previous button) */
-.modal-label-right {
-  left: 120%;
-}
 
 /* Tooltip to the left (for Close and Next buttons) */
 .modal-label-left {
@@ -476,8 +473,7 @@
   outline: none;
 }
 
-.modal-close-wrap,
-.modal-nav-wrap {
+.modal-close-wrap {
   z-index: 2;
 }
 
@@ -534,10 +530,6 @@
 }
 
 @media (max-width: 768px) {
-  .modal-nav-wrap {
-    display: none !important;
-  }
-
   .modal-close-wrap .modal-label {
     display: none;
   }
@@ -553,4 +545,20 @@
   margin-left: 0.6rem;
   padding-left: 0.6rem;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Leave a clear strip at the top for the counter and close button. */
+.modal-image {
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 140px);
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .modal-image {
+    max-width: 100vw;
+    max-height: calc(100dvh - 150px);
+  }
 }
