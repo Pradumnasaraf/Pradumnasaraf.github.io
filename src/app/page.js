@@ -301,8 +301,9 @@ export default function Home() {
           <Image
             src="/media/pradumna-saraf.png"
             alt="Pradumna Saraf - DevOps and Go Developer"
-            width={250}
-            height={250}
+            width={640}
+            height={640}
+            sizes="(max-width: 800px) 65vw, 320px"
             priority
             onClick={handleAvatarTap}
           />

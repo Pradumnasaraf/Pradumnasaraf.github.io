@@ -827,3 +827,101 @@ main {
     scroll-behavior: auto !important;
   }
 }
+
+/* ------------------------------------------------------------------
+   Shared button and pill geometry for every page.
+   Each page keeps its own colours; size, type and spacing live here so
+   all buttons and all pills match. `:root` raises specificity above the
+   per-page rules. League Spartan sits high in its line box, so the top
+   padding is a little larger than the bottom (0.15em each way) to centre
+   the letters optically. Keep new buttons and pills in these lists.
+   ------------------------------------------------------------------ */
+:root .connect,
+:root .project-link,
+:root .speaking-action-button,
+:root .contact-button,
+:root .blog-explorer-load-more,
+:root .not-found-actions .primary-button,
+:root .not-found-actions .secondary-button,
+:root .download-button,
+:root .qr-copy-button,
+:root .suggestion-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 0;
+  height: auto;
+  padding: calc(0.6rem + 0.15em) 0.95rem calc(0.6rem - 0.15em);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+  transform: none;
+  box-shadow: none;
+}
+
+:root .connect svg,
+:root .project-link svg,
+:root .speaking-action-button svg,
+:root .contact-button svg,
+:root .download-button svg,
+:root .not-found-actions .primary-button svg,
+:root .not-found-actions .secondary-button svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+:root .blog-topic-chip,
+:root .blog-post-tag-button,
+:root .toolkit-chips li,
+:root .speaking-date-chip,
+:root .speaking-location-chip,
+:root .speaking-upcoming-chip,
+:root .speaking-upcoming-label,
+:root .contact-info p,
+:root .timeline-year span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 0;
+  padding: calc(0.38rem + 0.15em) 0.7rem calc(0.38rem - 0.15em);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  transform: none;
+  box-shadow: none;
+}
+
+:root .speaking-upcoming-chip,
+:root .speaking-upcoming-label,
+:root .blog-topic-chip-active {
+  border-color: var(--color-fg);
+}
+
+:root .contact-info p svg,
+:root .speaking-location-chip svg {
+  width: 0.9em;
+  height: 0.9em;
+}
+
+/* Small labels that sit on images */
+:root .blog-post-featured-label,
+:root .photo-flag {
+  line-height: 1;
+  padding: calc(0.32rem + 0.14em) 0.6rem calc(0.32rem - 0.14em);
+}
+
+:root .qr-copy-button,
+:root .download-button {
+  border-color: transparent;
+}
