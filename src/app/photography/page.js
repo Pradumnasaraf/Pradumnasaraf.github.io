@@ -40,11 +40,18 @@ function countryName(code) {
 const MAX_IMAGE_RETRIES = 3;
 
 // ImageItem Component with enhanced features
-const ImageItem = ({ src, alt, country, onClick }) => {
+// The grid only needs a small copy; images.json keeps the full-size Drive
+// URL (sz=w2500) for the full-screen viewer.
+const GRID_WIDTH = 800;
+function gridSrc(src) {
+  return src.replace(/([?&]sz=)w\d+/, `$1w${GRID_WIDTH}`);
+}
+
+const ImageItem = ({ src, alt, country, eager = false, onClick }) => {
   const [hasError, setHasError] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(eager);
 
   useEffect(() => {
     // Use a more lenient IntersectionObserver to prevent scroll blocking
@@ -84,12 +91,12 @@ const ImageItem = ({ src, alt, country, onClick }) => {
       >
         {isVisible && (
           <Image
-            src={attempt ? `${src}&retry=${attempt}` : src}
+            src={attempt ? `${gridSrc(src)}&retry=${attempt}` : gridSrc(src)}
             alt={alt}
             width={800}
             height={1200}
             unoptimized
-            loading="lazy"
+            loading={eager ? 'eager' : 'lazy'}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             className={`w-full h-auto grayscale-image rounded-lg ${
               isLoading ? 'opacity-0' : 'opacity-100'
@@ -347,6 +354,7 @@ export default function Home() {
                 src={image.src}
                 alt={image.alt}
                 country={image.country}
+                eager={index < 4}
                 onClick={() => openModal(image.src)}
               />
             ))}
