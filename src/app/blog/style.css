@@ -2947,3 +2947,23 @@ html[data-blog-theme='dark'] .blog-theme-root .post-pager-link:hover {
     text-align: left;
   }
 }
+
+/* League Spartan draws its letters high in the line box, so equal padding
+   leaves more space under the text. Use line-height 1 and a little more
+   padding on top so pills and the select look centred. */
+.blog-topic-chip,
+.blog-post-tag-button {
+  line-height: 1;
+  padding: 0.42rem 0.7rem 0.3rem;
+}
+
+.blog-post-featured-label {
+  line-height: 1;
+  padding: 0.38rem 0.6rem 0.26rem;
+}
+
+.blog-explorer-select {
+  line-height: 1;
+  padding-top: 0.52rem;
+  padding-bottom: 0.32rem;
+}

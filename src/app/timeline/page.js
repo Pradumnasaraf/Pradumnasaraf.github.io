@@ -22,8 +22,6 @@ function entryYear(entry) {
   return String(entry.date || '').match(/\d{4}/)?.[0] || '';
 }
 
-const firstYear = entries.length ? entryYear(entries[entries.length - 1]) : '';
-
 const TimelinePage = () => {
   // Must match the moveline animation duration in style.css so the last card
   // fades in as the line finishes drawing.
@@ -36,9 +34,6 @@ const TimelinePage = () => {
 
       <div className="min-h-screen">
         <h1 className="timeline-title">Timeline</h1>
-        <p className="timeline-subtitle">
-          {entries.length} milestones{firstYear ? ` since ${firstYear}` : ''}
-        </p>
         <div className="timeline">
           {entries.map((entry, index) => {
             const side = index % 2 === 0 ? 'right' : 'left';
