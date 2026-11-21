@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
+  // The blog pipeline reads image headers from public/ at build time, which
+  // makes file tracing copy all of public/ into every server function that
+  // imports it. Vercel serves public/ as static files, so the functions do not
+  // need it at runtime. Without this, each deployment stored hundreds of MB of
+  // duplicated images and filled the Hobby Function Storage limit.
+  outputFileTracingExcludes: {
+    '/*': ['./public/**/*'],
+  },
   images: {
     remotePatterns: [
       {
