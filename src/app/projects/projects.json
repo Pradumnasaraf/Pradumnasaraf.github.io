@@ -1,6 +1,8 @@
 [
   {
     "id": "agent-pr-police",
+    "category": "ai",
+    "featured": true,
     "name": "Agent PR Police",
     "stars": 2,
     "repoUrl": "https://github.com/Pradumnasaraf/agent-pr-police",
@@ -10,6 +12,7 @@
   },
   {
     "id": "aviationincidents",
+    "category": "apps",
     "name": "Aviation Incidents",
     "stars": 2,
     "repoUrl": "https://github.com/Pradumnasaraf/aviationincidents",
@@ -19,6 +22,7 @@
   },
   {
     "id": "dockerfile-on-vercel",
+    "category": "backend",
     "name": "Dockerfile on Vercel",
     "stars": 2,
     "repoUrl": "https://github.com/Pradumnasaraf/Dockerfile-On-Vercel",
@@ -28,6 +32,7 @@
   },
   {
     "id": "sniplockr",
+    "category": "apps",
     "name": "SnipLockr",
     "stars": 0,
     "repoUrl": "https://github.com/Pradumnasaraf/SnipLockr",
@@ -37,6 +42,7 @@
   },
   {
     "id": "myaudience",
+    "category": "apps",
     "name": "MyAudience",
     "stars": 0,
     "repoUrl": "https://github.com/Pradumnasaraf/MyAudience",
@@ -46,6 +52,7 @@
   },
   {
     "id": "cardvault",
+    "category": "apps",
     "name": "CardVault",
     "stars": 1,
     "repoUrl": "https://github.com/Pradumnasaraf/CardVault",
@@ -55,6 +62,7 @@
   },
   {
     "id": "saraf-ai",
+    "category": "ai",
     "name": "Saraf AI",
     "stars": 6,
     "repoUrl": "https://github.com/Pradumnasaraf/Saraf-AI",
@@ -64,8 +72,10 @@
   },
   {
     "id": "aviationstack-mcp",
+    "category": "ai",
+    "featured": true,
     "name": "AviationStack MCP",
-    "stars": 25,
+    "stars": 30,
     "repoUrl": "https://github.com/Pradumnasaraf/aviationstack-mcp",
     "url": "https://pypi.org/project/aviationstack-mcp",
     "problem": "An MCP server using the AviationStack API to fetch real-time flight data including airline flights, airport schedules, future flights and aircraft types.",
@@ -73,6 +83,7 @@
   },
   {
     "id": "go-prometheus-monitoring",
+    "category": "learning",
     "name": "Go Prometheus Monitoring",
     "stars": 1,
     "repoUrl": "https://github.com/Pradumnasaraf/go-prometheus-monitoring",
@@ -82,6 +93,7 @@
   },
   {
     "id": "permihook",
+    "category": "backend",
     "name": "PermiHook",
     "stars": 0,
     "repoUrl": "https://github.com/Pradumnasaraf/PermiHook",
@@ -91,6 +103,7 @@
   },
   {
     "id": "pullprompt",
+    "category": "ai",
     "name": "PullPrompt",
     "stars": 4,
     "repoUrl": "https://github.com/Pradumnasaraf/pullprompt",
@@ -100,6 +113,7 @@
   },
   {
     "id": "kuredopogo",
+    "category": "backend",
     "name": "KuReDoPoGo",
     "stars": 7,
     "repoUrl": "https://github.com/Pradumnasaraf/KuReDoPoGo",
@@ -109,8 +123,9 @@
   },
   {
     "id": "gencli",
+    "category": "ai",
     "name": "GenCLI",
-    "stars": 34,
+    "stars": 35,
     "repoUrl": "https://github.com/Pradumnasaraf/gencli",
     "url": "https://pkg.go.dev/github.com/Pradumnasaraf/gencli",
     "problem": "GenCLI is an AI-powered CLI tool built with Golang that answers your questions using the Google Gemini API. It is developed with Cobra and Viper libraries.",
@@ -118,6 +133,7 @@
   },
   {
     "id": "scrapy",
+    "category": "ai",
     "name": "Scrapy",
     "stars": 4,
     "repoUrl": "https://github.com/Pradumnasaraf/scrapy",
@@ -127,6 +143,7 @@
   },
   {
     "id": "shortify",
+    "category": "backend",
     "name": "Shortify",
     "stars": 9,
     "repoUrl": "https://github.com/Pradumnasaraf/Shortify",
@@ -136,6 +153,7 @@
   },
   {
     "id": "candy",
+    "category": "ai",
     "name": "Candy",
     "stars": 61,
     "repoUrl": "https://github.com/Pradumnasaraf/candy",
@@ -145,6 +163,7 @@
   },
   {
     "id": "taskit",
+    "category": "ai",
     "name": "TaskIT",
     "stars": 8,
     "repoUrl": "https://github.com/Pradumnasaraf/taskit",
@@ -154,6 +173,7 @@
   },
   {
     "id": "contributors",
+    "category": "backend",
     "name": "Contributors",
     "stars": 25,
     "repoUrl": "https://github.com/Pradumnasaraf/Contributors",
@@ -163,8 +183,10 @@
   },
   {
     "id": "devops",
+    "category": "learning",
+    "featured": true,
     "name": "DevOps",
-    "stars": 3267,
+    "stars": 3286,
     "repoUrl": "https://github.com/Pradumnasaraf/DevOps",
     "url": "https://devops.pradumnasaraf.dev",
     "problem": "I created this repository to keep my learning, notes, and code in one place for various tools in DevOps. Now, it's helping thousands of learners, practitioners, and professionals every day in their DevOps journey.",
@@ -172,8 +194,9 @@
   },
   {
     "id": "biodrop-cli",
+    "category": "ai",
     "name": "BioDrop CLI",
-    "stars": 76,
+    "stars": 77,
     "repoUrl": "https://github.com/Pradumnasaraf/BioDrop-CLI",
     "url": "https://www.npmjs.com/package/biodrop-cli",
     "problem": "BioDrop CLI is a command-line tool for creating, updating, and managing your LinkFree profile. Easily add testimonials and events with simplicity.",
@@ -181,6 +204,7 @@
   },
   {
     "id": "post-my-message",
+    "category": "backend",
     "name": "Post My Message",
     "stars": 24,
     "repoUrl": "https://github.com/Pradumnasaraf/Post-My-Message",
@@ -190,6 +214,7 @@
   },
   {
     "id": "octouser",
+    "category": "apps",
     "name": "OctoUser",
     "stars": 5,
     "repoUrl": "https://github.com/Pradumnasaraf/OctoUser",
@@ -199,6 +224,7 @@
   },
   {
     "id": "monitoring",
+    "category": "apps",
     "name": "Monitoring",
     "stars": 7,
     "repoUrl": "https://github.com/Pradumnasaraf/Monitoring",
@@ -208,6 +234,7 @@
   },
   {
     "id": "socialslash",
+    "category": "backend",
     "name": "SocialSlash",
     "stars": 15,
     "repoUrl": "https://github.com/Pradumnasaraf/SocialSlash",
@@ -217,6 +244,7 @@
   },
   {
     "id": "opensource-api",
+    "category": "backend",
     "name": "OpenSource API",
     "stars": 32,
     "repoUrl": "https://github.com/Pradumnasaraf/OpenSource-API",
@@ -226,8 +254,10 @@
   },
   {
     "id": "open-source-with-pradumna",
+    "category": "learning",
+    "featured": true,
     "name": "Open Source with Pradumna",
-    "stars": 833,
+    "stars": 835,
     "repoUrl": "https://github.com/Pradumnasaraf/open-source-with-pradumna",
     "url": "https://os.pradumnasaraf.dev",
     "problem": "Open Source guide - Contains resources and materials to learn and get yourself started with Open Source, Git, and GitHub.",
@@ -235,6 +265,7 @@
   },
   {
     "id": "ddrss",
+    "category": "apps",
     "name": "DDRSS",
     "stars": 16,
     "repoUrl": "https://github.com/Pradumnasaraf/DDRSS",
@@ -244,6 +275,7 @@
   },
   {
     "id": "team-moon-api",
+    "category": "backend",
     "name": "Team Moon API",
     "stars": 9,
     "repoUrl": "https://github.com/Pradumnasaraf/Team-Moon-API",
@@ -253,6 +285,7 @@
   },
   {
     "id": "snippets",
+    "category": "learning",
     "name": "Snippets",
     "stars": 3,
     "repoUrl": "https://github.com/Pradumnasaraf/Snippets",
@@ -262,6 +295,7 @@
   },
   {
     "id": "cryptogram",
+    "category": "apps",
     "name": "CryptoGram",
     "stars": 0,
     "repoUrl": "https://github.com/Pradumnasaraf/CryptoGram",
@@ -271,6 +305,7 @@
   },
   {
     "id": "botchain",
+    "category": "apps",
     "name": "Botchain",
     "stars": 18,
     "repoUrl": "https://github.com/Pradumnasaraf/Botchain",
@@ -280,6 +315,7 @@
   },
   {
     "id": "pradumnasaraf-github-io",
+    "category": "apps",
     "name": "Pradumnasaraf.github.io",
     "stars": 20,
     "repoUrl": "https://github.com/Pradumnasaraf/Pradumnasaraf.github.io",

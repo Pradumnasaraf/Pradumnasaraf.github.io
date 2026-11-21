@@ -1,53 +1,117 @@
-import { FaCss3Alt, FaGithub, FaJava, FaStar } from 'react-icons/fa';
-import {
-  SiGithubactions,
-  SiGo,
-  SiGrafana,
-  SiJavascript,
-  SiKubernetes,
-  SiKotlin,
-  SiMarkdown,
-  SiMongodb,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPostgresql,
-  SiPrometheus,
-  SiPython,
-  SiReact,
-  SiRedis,
-  SiSwift,
-  SiTypescript,
-} from 'react-icons/si';
+import { FaGithub, FaStar } from 'react-icons/fa';
+import { FiArrowUpRight } from 'react-icons/fi';
 import projects from './projects.json';
-import DockerIcon from '@/components/DockerIcon';
 import PageTopbar from '@/components/PageTopbar';
 import './style.css';
 
-const techIconMap = {
-  docker: DockerIcon,
-  'github actions': SiGithubactions,
-  go: SiGo,
-  grafana: SiGrafana,
-  javascript: SiJavascript,
-  java: FaJava,
-  kubernetes: SiKubernetes,
-  kotlin: SiKotlin,
-  markdown: SiMarkdown,
-  mongodb: SiMongodb,
-  'next.js': SiNextdotjs,
-  node: SiNodedotjs,
-  postgresql: SiPostgresql,
-  prometheus: SiPrometheus,
-  python: SiPython,
-  react: SiReact,
-  redis: SiRedis,
-  swift: SiSwift,
-  typescript: SiTypescript,
-  css: FaCss3Alt,
-};
+const GROUPS = [
+  {
+    id: 'ai',
+    title: 'AI and developer tools',
+    intro: 'CLIs, GitHub Actions and MCP servers for day-to-day dev work.',
+  },
+  {
+    id: 'learning',
+    title: 'Guides and learning',
+    intro: 'Open notes, guides and examples for DevOps and open source.',
+  },
+  {
+    id: 'backend',
+    title: 'Docker, Go and APIs',
+    intro: 'Backend services and public APIs built with Go, Node and Docker.',
+  },
+  {
+    id: 'apps',
+    title: 'Apps and bots',
+    intro: 'Small apps, bots and side projects.',
+  },
+];
+
+// Names where a project lives besides its repo, so the card links there
+// first. Anything unrecognised is treated as a live site.
+function destinationLabel(project) {
+  const { url, repoUrl } = project;
+  if (!url || url === repoUrl) return null;
+  let host = '';
+  try {
+    host = new URL(url).hostname;
+  } catch {
+    return null;
+  }
+  if (url.includes('github.com/marketplace')) return 'Marketplace';
+  if (host.endsWith('pypi.org')) return 'PyPI';
+  if (host.endsWith('npmjs.com')) return 'npm';
+  if (host === 'pkg.go.dev') return 'Go package';
+  if (host === 't.me') return 'Telegram';
+  if (host.endsWith('discord.com')) return 'Discord';
+  if (host === 'docs.docker.com') return 'Docker docs';
+  return 'Live site';
+}
+
+function formatStars(count) {
+  const n = Number(count) || 0;
+  return n >= 1000 ? `${(n / 1000).toFixed(1).replace(/\.0$/, '')}k` : `${n}`;
+}
+
+function ProjectCard({ project, featured = false }) {
+  const destination = destinationLabel(project);
+
+  return (
+    <article
+      className={`project-card${featured ? ' project-card-featured' : ''}`}
+    >
+      <div className="project-card-top">
+        <h3>{project.name}</h3>
+        {project.stars > 0 && (
+          <span
+            className="project-stars"
+            aria-label={`${project.stars} GitHub stars`}
+          >
+            <FaStar aria-hidden="true" />
+            {formatStars(project.stars)}
+          </span>
+        )}
+      </div>
+
+      <p className="project-problem">{project.problem}</p>
+
+      {project.technologies?.length > 0 && (
+        <p className="project-tech">{project.technologies.join(' · ')}</p>
+      )}
+
+      <div className="project-actions">
+        {destination && (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link project-link-primary"
+          >
+            {destination}
+            <FiArrowUpRight aria-hidden="true" />
+          </a>
+        )}
+        <a
+          href={project.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
+          aria-label={`${project.name} source code on GitHub`}
+        >
+          <FaGithub aria-hidden="true" />
+          Source
+        </a>
+      </div>
+    </article>
+  );
+}
 
 export default function ProjectsPage() {
   const projectList = Array.isArray(projects) ? projects : [];
+  const featured = projectList
+    .filter((p) => p.featured)
+    .sort((a, b) => (b.stars || 0) - (a.stars || 0));
+  const rest = projectList.filter((p) => !p.featured);
 
   return (
     <>
@@ -57,92 +121,48 @@ export default function ProjectsPage() {
         <div className="projects-header">
           <h1>Projects</h1>
           <p className="projects-subtitle">
-            {projectList.length} open source projects I&apos;ve built and
-            maintain.
+            {projectList.length} things I&apos;ve built in the open: tools,
+            guides, APIs and apps.
           </p>
         </div>
 
-        <div className="projects-grid">
-          {projectList.map((project) => {
-            const launchUrl = project.url || project.repoUrl;
+        {featured.length > 0 && (
+          <section
+            className="projects-group"
+            aria-labelledby="projects-featured"
+          >
+            <div className="projects-group-head">
+              <h2 id="projects-featured">Featured</h2>
+            </div>
+            <div className="projects-grid projects-grid-featured">
+              {featured.map((project) => (
+                <ProjectCard key={project.id} project={project} featured />
+              ))}
+            </div>
+          </section>
+        )}
 
-            return (
-              <article
-                key={project.id || project.name}
-                className="project-item"
-              >
-                <div className="project-card">
-                  <div className="project-card-top">
-                    <h2>{project.name}</h2>
-                    <a
-                      href={project.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-stars"
-                      aria-label={`Open ${project.name} on GitHub`}
-                    >
-                      <FaStar />
-                      <span>{project.stars}</span>
-                    </a>
-                  </div>
-
-                  <p className="project-problem">
-                    {project.problem ||
-                      'Provides an open source implementation to solve a focused developer workflow problem.'}
-                  </p>
-
-                  <div
-                    className="project-tech-list"
-                    aria-label="Technologies used"
-                  >
-                    {(project.technologies || []).map((tech) => {
-                      const Icon =
-                        techIconMap[String(tech).trim().toLowerCase()] || null;
-                      return (
-                        <span
-                          key={`${project.id || project.name}-${tech}`}
-                          className="project-tech-icon"
-                          data-tech={tech}
-                          title={tech}
-                          aria-label={tech}
-                        >
-                          {Icon ? (
-                            <Icon />
-                          ) : (
-                            <span className="project-tech-fallback">
-                              {String(tech).slice(0, 2).toUpperCase()}
-                            </span>
-                          )}
-                        </span>
-                      );
-                    })}
-                  </div>
-
-                  <div className="project-actions">
-                    <a
-                      href={launchUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="open-project-button"
-                    >
-                      <FaGithub />
-                      Open Project
-                    </a>
-                    <a
-                      href={project.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="star-project-button"
-                    >
-                      <FaStar />
-                      Star
-                    </a>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
-        </div>
+        {GROUPS.map((group) => {
+          const items = rest.filter((p) => p.category === group.id);
+          if (items.length === 0) return null;
+          return (
+            <section
+              key={group.id}
+              className="projects-group"
+              aria-labelledby={`projects-${group.id}`}
+            >
+              <div className="projects-group-head">
+                <h2 id={`projects-${group.id}`}>{group.title}</h2>
+                <p>{group.intro}</p>
+              </div>
+              <div className="projects-grid">
+                {items.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
+              </div>
+            </section>
+          );
+        })}
       </section>
     </>
   );
