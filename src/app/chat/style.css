@@ -128,3 +128,77 @@
     padding: 2px 5px;
   }
 }
+
+.chat-header {
+  max-width: 1080px;
+  margin: 0 auto 1rem;
+  padding: 0 1.25rem;
+  text-align: center;
+}
+
+.chat-header h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--color-fg);
+  margin: 20px 0 0.5rem;
+}
+
+.chat-header p {
+  color: var(--color-fg-muted);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.calendar-wrap {
+  position: relative;
+}
+
+.calendar-loading {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--color-fg-muted);
+  font-size: 0.95rem;
+  animation: calendar-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes calendar-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.chat-page .calendar-container {
+  height: auto;
+  min-height: 70vh;
+  padding: 0 1rem 2rem;
+}
+
+@media (max-width: 800px) {
+  .chat-header h1 {
+    font-size: 2rem;
+    margin-top: 15px;
+  }
+
+  .chat-header p {
+    font-size: 0.95rem;
+  }
+
+  .chat-page .calendar-container {
+    height: auto !important;
+    min-height: 80vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .calendar-loading {
+    animation: none;
+  }
+}

@@ -136,6 +136,7 @@ Reuse these instead of inventing new styles.
 - **Page header:** centred `h1` (3rem, weight 300, 2rem on mobile) with a muted one-line subtitle under it.
 - **Section heading:** `h2` at 1.5rem, weight 400, with a 1px `--color-border-subtle` bottom border.
 - **Card grid:** `grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr))`, cards with a 1px subtle border, 14px radius, and a soft shadow on hover.
+- **Centre text in pills by eye, not by equal padding.** League Spartan draws its letters high in the line box, so a pill or select with equal top and bottom padding shows extra space under the text. Use `line-height: 1` with slightly more top padding than bottom (for example `0.42rem 0.7rem 0.3rem`), and check the result zoomed in.
 - **Spacing in page CSS, not Tailwind utilities.** The unlayered `* { padding: 0; margin: 0 }` reset in `globals.css` overrides Tailwind v4 spacing utilities (`p-*`, `m-*`, `mx-auto`), which is why the old sitemap rendered with no padding. Put layout spacing in the route's `style.css`.
 - **Never read `public/` from server code at request time.** `next.config.mjs` excludes `public/` from function bundles (it used to fill Vercel's 10 GB Function Storage). Assets a server route needs go in `src/assets/` (for example `og-avatar.png` for OG images).
 
