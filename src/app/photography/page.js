@@ -128,6 +128,7 @@ const FullScreenModal = ({
   onNext,
 }) => {
   const [showHint, setShowHint] = useState(false);
+  const [hintVerb, setHintVerb] = useState('Tap');
   const touchStartX = useRef(null);
 
   useEffect(() => {
@@ -138,10 +139,9 @@ const FullScreenModal = ({
     } catch {
       seen = true;
     }
-    if (seen || !window.matchMedia('(max-width: 768px)').matches) {
-      return undefined;
-    }
+    if (seen) return undefined;
     // eslint-disable-next-line react-hooks/set-state-in-effect
+    setHintVerb(window.matchMedia('(hover: hover)').matches ? 'Click' : 'Tap');
     setShowHint(true);
     try {
       window.localStorage.setItem(HINT_STORAGE_KEY, '1');
@@ -226,10 +226,10 @@ const FullScreenModal = ({
         <div className="modal-tap-hint" aria-hidden="true">
           <span className="modal-tap-hint-side">
             <span className="modal-tap-hint-arrow">‹</span>
-            Tap left to go back
+            {hintVerb} left to go back
           </span>
           <span className="modal-tap-hint-side">
-            Tap right for next
+            {hintVerb} right for next
             <span className="modal-tap-hint-arrow">›</span>
           </span>
         </div>
@@ -344,70 +344,11 @@ const FullScreenModal = ({
   );
 };
 
-// Welcome Pop-up Component
-const WelcomePopup = ({ isOpen, onClose }) => {
-  useEffect(() => {
-    const handleKeyPress = (e) => {
-      if (isOpen && e.key === 'Escape') {
-        onClose();
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyPress);
-    return () => document.removeEventListener('keydown', handleKeyPress);
-  }, [isOpen, onClose]);
-
-  if (!isOpen) return null;
-
-  return createPortal(
-    <div
-      className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 popup-backdrop"
-      style={{ paddingLeft: '16px', paddingRight: '16px' }}
-    >
-      <div className="welcome-popup">
-        <button
-          onClick={onClose}
-          className="popup-close-button"
-          aria-label="Close"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
-        <div className="popup-content">
-          <h2 className="popup-title">Welcome to my photography</h2>
-          <p className="popup-message">
-            Tap any image to view it full screen, then tap the right or left
-            side (or swipe) to move between photos. Images start in grayscale
-            and, on desktop, reveal their full color on hover.
-          </p>
-          <button onClick={onClose} className="popup-ok-button">
-            Got it!
-          </button>
-        </div>
-      </div>
-    </div>,
-    document.body
-  );
-};
-
 // Main Home Component
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageSrc, setModalImageSrc] = useState('');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [showWelcomePopup, setShowWelcomePopup] = useState(false);
 
   // Define breakpoint columns (react-masonry-css uses max-width semantics:
   // smaller keys override larger ones).
@@ -442,20 +383,15 @@ export default function Home() {
     setModalImageSrc(images[newIndex].src);
   };
 
-  useEffect(() => {
-    // Client-only so it doesn't cause an SSR/hydration mismatch. Images load
-    // lazily per-item via IntersectionObserver, so there's no global preload
-    // (mass-preloading every Drive image at once triggered rate-limit 403s).
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setShowWelcomePopup(true);
-  }, []);
-
   return (
     <>
       <PageTopbar />
 
       <div className="min-h-screen p-4 md:p-8 photography-page-container">
         <h1 className="photography-title">Photography</h1>
+        <p className="photography-subtitle">
+          Open any photo to see it full screen in colour.
+        </p>
 
         <div className="container mx-auto">
           <Masonry
@@ -485,11 +421,6 @@ export default function Home() {
           onClose={closeModal}
           onPrev={showPrevImage}
           onNext={showNextImage}
-        />
-
-        <WelcomePopup
-          isOpen={showWelcomePopup}
-          onClose={() => setShowWelcomePopup(false)}
         />
       </div>
     </>
