@@ -16,7 +16,7 @@ Using Docker **Buildx** we can very easily build multi-platform images. All buil
 
 In the blog, we will leverage the functionality of Buildx to build a Multi-Arch Image, pushing it to DockerHub by automating all the tasks using a GitHub workflow/Actions.
 
-### Prerequisite
+## Prerequisite
 
 * A DockerHub account
     
@@ -25,7 +25,7 @@ In the blog, we will leverage the functionality of Buildx to build a Multi-Arch 
 * A decent understanding of GitHub Actions
     
 
-### Getting started
+## Getting started
 
 Before starting, I assume you have already Dockerized your project, created a Dockerfile, and pushed it to GitHub. In case, you haven't done one yet and still want to try the process out, you can create a GitHub repo with just a minimal `Dockerfile` in the root that prints "Hello World" by running an echo command using Alpine as the base image. Dockerfile syntax for it:
 

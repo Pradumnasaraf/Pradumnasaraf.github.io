@@ -14,7 +14,7 @@ This year, DockerCon was amazing. There were lots of significant announcements a
 
 Here are some of the highlights:
 
-### Docker AI
+## Docker AI
 
 ![Docker AI Poster](/blog-images/docker-2023/docker-ai-poster.png)
 
@@ -33,7 +33,7 @@ Their focus is on 4 pillars:
 
 ---
 
-### Docker Compose Watch
+## Docker Compose Watch
 
 ![Compose Watch Banner](/blog-images/docker-2023/compose-watch-banner.png)
 
@@ -59,7 +59,7 @@ services:
 
 ---
 
-### Docker Debug
+## Docker Debug
 
 ![Docker Debug Poster](/blog-images/docker-2023/docker-debug-poster.jpeg)
 
@@ -67,7 +67,7 @@ Docker Debug offers an integrated toolbox to debug containerized apps both local
 
 ---
 
-### Next-Gen Docker Build
+## Next-Gen Docker Build
 
 ![Docker Next-Gen Docker Build Poster](/blog-images/docker-2023/docker-next-gen-docker-build-poster.jpeg)
 
@@ -75,7 +75,7 @@ Docker images are now being constructed 39x faster with the next-gen Docker Buil
 
 ---
 
-### Docker Scout
+## Docker Scout
 
 Docker Scout offers insights into the security of container images, enabling users to make informed decisions on addressing vulnerabilities and enhancing the overall security of their applications.
 
@@ -85,6 +85,6 @@ The core focus is on bolstering security throughout the entire SDLC.
 
 ---
 
-### Summary
+## Summary
 
 DockerCon showcased exciting updates this year in areas like AI and security. Some highlighted features include faster Docker image creation, enhanced debugging tools, and improved security measures.

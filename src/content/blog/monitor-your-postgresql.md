@@ -18,7 +18,7 @@ In this blog, we will see how, by using OpenTelemetry and OpenObserve, we can ea
 
 Now, what will we do with all of the telemetry data we collected if we can't analyze them? This is where [OpenObserve](https://openobserve.ai/) comes into the picture. I can say it's Grafana on steroids. It provides a user-friendly UI (unlike Grafana) supporting SQL as its primary query language. Additionally, we support PromQL for querying metrics data, extending its versatility. One of the great features of OpenObserve is its built-in alerting mechanism, so you don't have to set it up yourself! Also, OpenObserve significantly lowers storage costs - reducing them to about 140 times less than Elasticsearch.
 
-### Prerequisite
+## Prerequisite
 
 * Some experience with Postgres
     
@@ -27,7 +27,7 @@ Now, what will we do with all of the telemetry data we collected if we can't ana
 * OpenObserve Account
     
 
-### Getting Started
+## Getting Started
 
 For this demo, we will perform all the tasks in an Ubuntu environment. You can also do these in a Windows environment.
 
@@ -188,6 +188,6 @@ There is a lot more you can do with the dashboard. Check out [this video](https:
 
 That’s about it for this blog. I hope you learned how to monitor your PostgreSQL performance with OpenTelemetry and OpenObserve. Thanks for reading!
 
-### Troubleshooting
+## Troubleshooting
 
 If you encounter any error logs in the Otel Collector, make sure you cross-check the YAML config for the collector and verify that the collector can properly authenticate with the PostgreSQL database. You can check that by reviewing the PostgreSQL logs.

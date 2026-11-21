@@ -12,7 +12,7 @@ draft: false
 
 Yes!! you heard it right, with the help of [`GitHub Pages`](https://pages.github.com/) you can host a website within a minute, for FREE.
 
-### So what is GitHub Pages?
+## So what is GitHub Pages?
 
 ![Image description](/blog-images/host-a-website-within-a-minute-for-free/image-description.gif)
 
@@ -24,19 +24,19 @@ GitHub Pages is a static website hosting service that takes HTML, CSS, and JavaS
 
 ![Image description](/blog-images/host-a-website-within-a-minute-for-free/image-description-1.gif)
 
-#### Step-1 : Creating a [GitHub account](https://github.com/),
+### Step-1 : Creating a [GitHub account](https://github.com/),
 
 If you already have, you can skip this step.
 
 ![Image description](/blog-images/host-a-website-within-a-minute-for-free/image-description-1.png)
 
-#### Step-2 : Creating a GitHub Repo.
+### Step-2 : Creating a GitHub Repo.
 
 Create a new public repository and named it as `<Your-username>.github.io`,(as shown in the image below). If it's an organization account, then put the organization name. After that commit it.
 
 ![Image description](/blog-images/host-a-website-within-a-minute-for-free/image-description-2.png)
 
-#### Step-3 : Adding a `index.html` file.
+### Step-3 : Adding a `index.html` file.
 
 After the repo is created, now it's time to add the index file. You will get served with this kind of screen after you committed the repo, click on **creating a new file**. Also, you can head over to the repo main page for creating the file.
 

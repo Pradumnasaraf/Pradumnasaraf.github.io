@@ -26,23 +26,23 @@ Getting surrounded by like-minded people makes it easy to learn and grow at a fa
 
 Every community is good and serves its own purpose, but having some specific things makes it great and open and welcoming to everyone.
 
-#### 🔶 Inclusivity
+### 🔶 Inclusivity
 
 Including all types of people, and things and treating them all fairly and equally. People should promote the use of gender-natural words and give equal opportunity to everyone.
 
-#### 🔶 Collaborative
+### 🔶 Collaborative
 
 The community should promote and believe in a collaborative culture and also believe in growing and winning together.
 
-#### 🔶 Openness
+### 🔶 Openness
 
 People should not feel restricted and bound to ask anything or share their thought and suggestions.
 
-#### 🔶 Safety
+### 🔶 Safety
 
 People should feel safe and welcoming, so they can express their feelings and can share and talk about their work and well as personal stuff.
 
-#### 🔶 Zero barrier to entry.
+### 🔶 Zero barrier to entry.
 
 Every person should allow in the community and also take part in the activities and conversation, no matter what's their age, level of knowledge, and experience.
 

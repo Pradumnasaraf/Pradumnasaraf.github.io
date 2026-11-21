@@ -16,14 +16,14 @@ In this blog, we will create an HTTP server with Golang using the Gin framework 
 
 In case you have no idea what Gin and Redis are. [Gin](https://github.com/gin-gonic/gin) is a web framework written in Golang. It helps to create a simple and fast server without writing a lot of code. [Redis](https://github.com/redis/redis) it's an in-memory and key-value data store that can be used as a database or for caching capabilities.
 
-### Prerequisite
+## Prerequisite
 
 * Familiarity with Golang, Gin and Redis
     
 * A Redis instance (We can use Docker or a remote machine)
     
 
-### Getting Started
+## Getting Started
 
 To Initialize the project run `go mod init <github path>` for eg, `go mod init` `github.com/Pradumnasaraf/go-redis`.
 

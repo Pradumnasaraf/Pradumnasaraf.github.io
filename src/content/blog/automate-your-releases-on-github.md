@@ -10,11 +10,11 @@ draft: false
 ---
 
 
-### So, what are releases?
+## So, what are releases?
 
 Packaging/bundling software and making it available for a broader audience for download and use.
 
-### Why use them?
+## Why use them?
 
 * To distribute the software (Binary distribution).
     
@@ -27,7 +27,7 @@ Packaging/bundling software and making it available for a broader audience for d
 * It looks professional.
     
 
-### Why automate releases?
+## Why automate releases?
 
 Creating a release manually can be a little tricky and challenging at the same time. Using a GitHub workflow with a few lines of the YAML, we can automate that task and focus more on development. Alongside, it also generates a changelog file (`CHANGELOG.md`) and tags.
 
@@ -35,7 +35,7 @@ Creating a release manually can be a little tricky and challenging at the same t
 
 Picture - [EddieHubCommunity/LinkFree](https://github.com/EddieHubCommunity/LinkFree) repo.
 
-### Using the workflow.
+## Using the workflow.
 
 Create a `.github` folder inside the root of the repo. Create a folder name `workflows` inside the `.github` folder. Then create a `releases.yml` file by adding the YAML config provided below inside the `workflows` folder.
 
@@ -74,7 +74,7 @@ jobs:
           body: ${{ steps.changelog.outputs.clean_changelog }}
 ```
 
-#### Understanding the config
+### Understanding the config
 
 * To automatically trigger a workflow on some events, we use the `on:` property. In this case, action will get triggered when the changes are pushed to the `main` branch. We can also modify the branch according to our preferences
     
@@ -127,7 +127,7 @@ It will auto-set the body and the release commit naming.
           body: ${{ steps.changelog.outputs.clean_changelog }}
 ```
 
-### Working
+## Working
 
 To make the workflow create the automated releases. We need to follow some commit conventions - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Depending upon the convention used, it will version the new release.
 

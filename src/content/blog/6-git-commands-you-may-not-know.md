@@ -12,7 +12,7 @@ draft: false
 
 Here are some of the top `git` commands which I handpicked, can be useful to increase your productivity, and also save you some time.
 
-### 1) Updating the last commit message.
+## 1) Updating the last commit message.
 
 If you want to update the message of your last commit, because either it didn't look conventional or meaningful, use this command to edit it:
 
@@ -20,7 +20,7 @@ If you want to update the message of your last commit, because either it didn't 
 git commit --amend -m "Updated message"
 ```
 
-### 2) Blank Commit.
+## 2) Blank Commit.
 
 Sometimes we need a blank commit (no changes added or deleted) maybe we need to initialize our repo or trigger some kind of action, we can use this command:
 
@@ -28,7 +28,7 @@ Sometimes we need a blank commit (no changes added or deleted) maybe we need to 
 git commit --allow-empty -m "blank commit message"
 ```
 
-### 3) Checking the total number of commits.
+## 3) Checking the total number of commits.
 
 If we want to check the total no of the commit on a particular branch we can use this command.
 
@@ -42,7 +42,7 @@ Eg:
 git rev-list --count main
 ```
 
-### 4) Checking files from different a branch.
+## 4) Checking files from different a branch.
 
 If we want to view some files from a different branch while working on a different branch, we can use this command:
 
@@ -56,7 +56,7 @@ For Eg: If we are working on the `test` branch and want to see the README.md fil
 git show main:README.md
 ```
 
-### 5) Staging (adding) and committing the changes in a single command.
+## 5) Staging (adding) and committing the changes in a single command.
 
 Instead of doing `git add` and `git commit` separately, we can use this single command to perform this:
 
@@ -64,7 +64,7 @@ Instead of doing `git add` and `git commit` separately, we can use this single c
 git commit -am "message"
 ```
 
-### 6) Git tutorial on the terminal.
+## 6) Git tutorial on the terminal.
 
 Yes!,you heard is right, with only single command use can have a whole git tutorial at your fingertips.
 

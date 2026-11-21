@@ -14,7 +14,7 @@ As we have observed a significant transition toward ARM-based CPUs, such as Appl
 
 GitHub recently announced that Linux ARM-based (arm64) GitHub Actions are now available as hosted runners for free in public repositories. You can read the official announcement [here](https://github.blog/changelog/2025-01-16-linux-arm64-hosted-runners-now-available-for-free-in-public-repositories-public-preview). Previously, developers had to rely on virtualization for Actions runs, which was cumbersome. To use it, we have to set the value for `runs-on:` as `ubuntu-24.04-arm` or `ubuntu-22.04-arm` based on which version of Ubuntu we are going to use based on our needs.
 
-### Let's see in Action
+## Let's see in Action
 
 We will create a basic workflow to print "Hello World". First, create a GitHub repo and make sure you are at the root. Then create a dir name `.github` inside that, create a dir called `workflows`, and inside that create a YAML file with any name, we will name it `hello.yaml`. The complete file path will look like this `.github/workflows/hello.yaml`. Now paste the below configuration.
 
