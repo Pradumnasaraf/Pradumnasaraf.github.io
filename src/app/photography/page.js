@@ -10,8 +10,10 @@ import images from './images.json';
 // Fixed names so server and client render the same text (Intl.DisplayNames
 // output can differ between Node and the browser and break hydration).
 const COUNTRY_NAMES = {
+  AE: 'United Arab Emirates',
   CZ: 'Czechia',
   DE: 'Germany',
+  FR: 'France',
   HK: 'Hong Kong',
   IN: 'India',
   MO: 'Macau',
@@ -101,12 +103,9 @@ const ImageItem = ({ src, alt, country, onClick }) => {
         aria-label={`View photo: ${alt}${country ? `, ${countryName(country)}` : ''}`}
       />
       {country && (
-        <span
-          className="photo-flag"
-          title={countryName(country)}
-          aria-hidden="true"
-        >
-          {flagEmoji(country)}
+        <span className="photo-flag" aria-hidden="true">
+          <span className="photo-flag-emoji">{flagEmoji(country)}</span>
+          {countryName(country)}
         </span>
       )}
     </div>
