@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useSyncExternalStore } from 'react';
+import { flushSync } from 'react-dom';
 
 const STORAGE_KEY = 'blog-theme';
 const ATTR = 'data-blog-theme';
@@ -35,6 +36,51 @@ function setTheme(next) {
     // localStorage may be unavailable (private mode, disabled storage); ignore.
   }
   listeners.forEach((cb) => cb());
+}
+
+const REVEAL_MS = 650;
+
+// Reveals the new theme as a circle growing out of the toggle button, using
+// the View Transitions API. Falls back to an instant switch when the API is
+// missing or the visitor prefers reduced motion.
+function switchThemeFrom(button, next) {
+  const reduceMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+  if (!document.startViewTransition || reduceMotion || !button) {
+    setTheme(next);
+    return;
+  }
+
+  const rect = button.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top + rect.height / 2;
+  const radius = Math.hypot(
+    Math.max(x, window.innerWidth - x),
+    Math.max(y, window.innerHeight - y)
+  );
+
+  const transition = document.startViewTransition(() => {
+    flushSync(() => setTheme(next));
+  });
+
+  transition.ready
+    .then(() => {
+      document.documentElement.animate(
+        {
+          clipPath: [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${radius}px at ${x}px ${y}px)`,
+          ],
+        },
+        {
+          duration: REVEAL_MS,
+          easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+          pseudoElement: '::view-transition-new(root)',
+        }
+      );
+    })
+    .catch(() => {});
 }
 
 function SunIcon() {
@@ -109,11 +155,18 @@ export default function BlogThemeToggle() {
       <button
         type="button"
         className="blog-theme-toggle-button"
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        onClick={(event) =>
+          switchThemeFrom(
+            event.currentTarget,
+            theme === 'dark' ? 'light' : 'dark'
+          )
+        }
         aria-label={label}
         title={label}
       >
-        {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+        <span key={theme} className="blog-theme-toggle-icon">
+          {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+        </span>
       </button>
     </div>
   );
