@@ -8,4 +8,5 @@ export const metadata = buildMetadata({
   keywords:
     'Schedule Meeting, Book Meeting, Pradumna Saraf Meeting, Developer Advocate Consultation, Docker Captain Consultation',
   ogTitle: 'Chat with Pradumna',
+  robots: 'noindex',
 });

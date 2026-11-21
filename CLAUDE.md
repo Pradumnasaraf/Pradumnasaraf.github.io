@@ -119,7 +119,7 @@ The slug is the filename. Images go under `public/blog-images/<slug>/`.
 
 These were decided with the user. Apply them; don't propose changing them or ask about them again.
 
-- **CV and Contact stay out of search on purpose.** `/cv` and `/contact` use `robots: 'noindex'` and are deliberately missing from `src/app/sitemap/data.js` and `sitemap.xml`. Never add them back or flag it as a gap.
+- **CV, Contact and Chat stay out of search on purpose.** `/cv`, `/contact` and `/chat` use `robots: 'noindex'` and are deliberately missing from `src/app/sitemap/data.js`, `sitemap.xml` and the `/sitemap` page. Never add them back or flag it as a gap.
 - **Keep the current design and polish it.** White background, League Spartan, ink text. No redesigns, no developer-jargon themes (terminal UIs, `docker ps` tables), nothing that looks like a generic AI-built site. No green anywhere in the palette. Never invent personal details (city, pronouns, stats) on a page.
 - **Light mode is site-wide; dark mode exists only under `/blog`.** Don't propose site-wide dark mode.
 - **Theme toggle animates only the icon** (`BlogThemeToggle.js`: the moon's shadow slides off and rays rotate in). No full-page or View Transition effects.

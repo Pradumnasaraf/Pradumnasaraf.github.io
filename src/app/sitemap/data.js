@@ -65,15 +65,6 @@ export const sitemapPages = [
     category: 'Creative',
   },
   {
-    url: '/chat',
-    href: '/chat',
-    title: 'Schedule Meeting',
-    priority: '0.6',
-    changefreq: 'monthly',
-    description: 'Schedule a meeting or consultation',
-    category: 'Communication',
-  },
-  {
     url: '/blog',
     href: '/blog',
     title: 'Blog',
