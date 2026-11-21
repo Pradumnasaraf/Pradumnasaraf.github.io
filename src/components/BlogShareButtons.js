@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaLinkedin, FaLink } from 'react-icons/fa';
 import { SiX } from 'react-icons/si';
+import { copyText } from '@/lib/clipboard';
 
 export default function BlogShareButtons({ url, title }) {
   const [copied, setCopied] = useState(false);
@@ -16,27 +17,9 @@ export default function BlogShareButtons({ url, title }) {
   };
 
   const copyToClipboard = async () => {
-    if (typeof window !== 'undefined' && navigator.clipboard) {
-      try {
-        await navigator.clipboard.writeText(url);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-      } catch {
-        const textArea = document.createElement('textarea');
-        textArea.value = url;
-        textArea.style.position = 'fixed';
-        textArea.style.opacity = '0';
-        document.body.appendChild(textArea);
-        textArea.select();
-        try {
-          document.execCommand('copy');
-          setCopied(true);
-          setTimeout(() => setCopied(false), 2000);
-        } catch {
-          // Clipboard not supported
-        }
-        document.body.removeChild(textArea);
-      }
+    if (await copyText(url)) {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     }
   };
 

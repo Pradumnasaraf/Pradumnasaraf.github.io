@@ -5,7 +5,7 @@ import { League_Spartan } from 'next/font/google';
 import { metadata } from './metadata'; // Import metadata from metadata.js
 import GTMPageView from '@/components/GTMPageView';
 import BodyRouteClass from '@/components/BodyRouteClass';
-import { GTM_ID, SITE_URL } from '@/lib/constants';
+import { GTM_ID, SITE_URL, SOCIAL } from '@/lib/constants';
 
 const leagueSpartan = League_Spartan({
   weight: ['300', '400', '500'],
@@ -62,9 +62,9 @@ export default function RootLayout({ children }) {
               name: 'Pradumna Saraf',
               url: SITE_URL,
               sameAs: [
-                'https://github.com/Pradumnasaraf',
-                'https://x.com/pradumna_saraf',
-                'https://linkedin.com/in/pradumnasaraf',
+                SOCIAL.github,
+                SOCIAL.x,
+                SOCIAL.linkedin,
                 `${SITE_URL}/blog`,
                 'https://mvp.microsoft.com/en-US/MVP/profile/504ebf09-e92f-4620-82d7-67590711df58',
               ],

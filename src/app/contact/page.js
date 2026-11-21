@@ -7,8 +7,9 @@ import { SiX } from 'react-icons/si';
 import { FiCalendar, FiCopy, FiCheck, FiMail } from 'react-icons/fi';
 import PageTopbar from '@/components/PageTopbar';
 import './style.css';
+import { copyText } from '@/lib/clipboard';
+import { EMAIL, SOCIAL } from '@/lib/constants';
 
-const EMAIL = 'pradumnasaraf@gmail.com';
 const subject = encodeURIComponent('Collaboration Inquiry');
 const body = encodeURIComponent(
   `Hi Pradumna,
@@ -26,10 +27,10 @@ Thanks,`
 const mailtoUrl = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
 
 const SOCIALS = [
-  { href: 'https://github.com/Pradumnasaraf', label: 'GitHub', icon: FaGithub },
-  { href: 'https://x.com/pradumna_saraf', label: 'X', icon: SiX },
+  { href: SOCIAL.github, label: 'GitHub', icon: FaGithub },
+  { href: SOCIAL.x, label: 'X', icon: SiX },
   {
-    href: 'https://www.linkedin.com/in/pradumnasaraf/',
+    href: SOCIAL.linkedin,
     label: 'LinkedIn',
     icon: FaLinkedin,
   },
@@ -52,12 +53,9 @@ export default function ContactPage() {
   }, []);
 
   const copyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(EMAIL);
+    if (await copyText(EMAIL)) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // Clipboard can be blocked; the address stays visible to copy by hand.
     }
   };
 

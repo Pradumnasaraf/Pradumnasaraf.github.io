@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiX } from 'react-icons/si';
 import BackToTopButton from '@/components/BackToTopButton';
+import { SOCIAL } from '@/lib/constants';
 
 // Easter egg: only reachable via the Konami code, so keep it out of the
 // homepage bundle and fetch it on the first activation.
@@ -247,7 +248,7 @@ export default function Home() {
         <div className="left">
           <div className="socialmedia">
             <Link
-              href="https://github.com/Pradumnasaraf"
+              href={SOCIAL.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on GitHub"
@@ -255,7 +256,7 @@ export default function Home() {
               <FaGithub aria-hidden="true" focusable="false" />
             </Link>
             <Link
-              href="https://x.com/pradumna_saraf"
+              href={SOCIAL.x}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on X"
@@ -263,7 +264,7 @@ export default function Home() {
               <SiX aria-hidden="true" focusable="false" />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/pradumnasaraf/"
+              href={SOCIAL.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on LinkedIn"
@@ -281,7 +282,7 @@ export default function Home() {
           <div className="ibutton">
             <a
               className="connect connect-primary"
-              href="https://github.com/Pradumnasaraf"
+              href={SOCIAL.github}
               target="_blank"
               rel="noopener noreferrer"
             >{`Let's Collaborate`}</a>

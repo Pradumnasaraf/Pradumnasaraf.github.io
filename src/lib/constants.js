@@ -15,3 +15,11 @@ export const OG_IMAGE_URL = `${SITE_URL}/media/pradumna-saraf-og.png`;
 export const TWITTER_HANDLE = '@pradumna_saraf';
 
 export const GTM_ID = 'GTM-WRGLMZCX';
+
+export const SOCIAL = {
+  github: 'https://github.com/Pradumnasaraf',
+  x: 'https://x.com/pradumna_saraf',
+  linkedin: 'https://www.linkedin.com/in/pradumnasaraf/',
+};
+
+export const EMAIL = 'pradumnasaraf@gmail.com';

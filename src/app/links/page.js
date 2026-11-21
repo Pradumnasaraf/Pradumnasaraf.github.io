@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
-import { SITE_URL } from '@/lib/constants';
+import { EMAIL, SITE_URL, SOCIAL } from '@/lib/constants';
 import {
   FiMail,
   FiYoutube,
@@ -13,6 +13,7 @@ import {
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiBluesky, SiSessionize, SiThreads, SiX } from 'react-icons/si';
 import './style.css';
+import { copyText } from '@/lib/clipboard';
 
 export default function LinksPage() {
   const [showQRCode, setShowQRCode] = useState(false);
@@ -27,14 +28,9 @@ export default function LinksPage() {
   const qrCodeUrl = `${SITE_URL}/links`;
 
   const handleCopyLink = async () => {
-    try {
-      await navigator.clipboard.writeText(qrCodeUrl);
+    if (await copyText(qrCodeUrl)) {
       setCopied(true);
-      setTimeout(() => {
-        setCopied(false);
-      }, 1500);
-    } catch (err) {
-      console.error('Failed to copy:', err);
+      setTimeout(() => setCopied(false), 1500);
     }
   };
 
@@ -50,19 +46,19 @@ export default function LinksPage() {
     {
       id: 'twitter',
       label: 'X',
-      url: 'https://x.com/pradumna_saraf',
+      url: SOCIAL.x,
       icon: SiX,
     },
     {
       id: 'linkedin',
       label: 'LinkedIn',
-      url: 'https://linkedin.com/in/pradumnasaraf',
+      url: SOCIAL.linkedin,
       icon: FaLinkedin,
     },
     {
       id: 'github',
       label: 'GitHub',
-      url: 'https://github.com/Pradumnasaraf',
+      url: SOCIAL.github,
       icon: FaGithub,
     },
     {
@@ -98,7 +94,7 @@ export default function LinksPage() {
     {
       id: 'email',
       label: 'Email',
-      url: 'mailto:pradumnasaraf@gmail.com',
+      url: `mailto:${EMAIL}`,
       icon: FiMail,
     },
   ];
@@ -127,7 +123,7 @@ export default function LinksPage() {
     {
       id: 5,
       title: 'X',
-      url: 'https://x.com/pradumna_saraf',
+      url: SOCIAL.x,
     },
   ];
 

@@ -1,3 +1,4 @@
+import { escapeXml } from '../../lib/xml.js';
 import { OG_IMAGE_URL, SITE_URL } from '../../lib/constants.js';
 import { getFeedEligiblePosts } from '../../lib/blog.js';
 
@@ -59,14 +60,4 @@ ${rssItems}
       'Cache-Control': 'public, max-age=3600, s-maxage=3600', // Cache for 1 hour
     },
   });
-}
-
-function escapeXml(unsafe) {
-  if (!unsafe) return '';
-  return unsafe
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
 }

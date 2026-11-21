@@ -1,6 +1,6 @@
 import './style.css';
 import PageTopbar from '@/components/PageTopbar';
-import { SITE_URL } from '@/lib/constants';
+import { SITE_URL, SOCIAL } from '@/lib/constants';
 import {
   FaGithub,
   FaLinkedin,
@@ -63,7 +63,7 @@ const CVPage = () => {
               <p>
                 <FaLinkedin />{' '}
                 <a
-                  href="https://linkedin.com/in/pradumnasaraf"
+                  href={SOCIAL.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -72,18 +72,14 @@ const CVPage = () => {
               </p>
               <p>
                 <SiX />{' '}
-                <a
-                  href="https://x.com/pradumna_saraf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={SOCIAL.x} target="_blank" rel="noopener noreferrer">
                   @pradumna_saraf
                 </a>
               </p>
               <p>
                 <FaGithub />{' '}
                 <a
-                  href="https://github.com/Pradumnasaraf"
+                  href={SOCIAL.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -1,18 +1,9 @@
+import { escapeXml } from '../../lib/xml.js';
 import { SITE_URL } from '../../lib/constants.js';
 import { getFeedEligiblePosts } from '../../lib/blog.js';
 import photos from '../photography/images.json' with { type: 'json' };
 
 const MARKDOWN_IMAGE = /!\[([^\]]*)\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g;
-
-function escapeXml(unsafe) {
-  if (!unsafe) return '';
-  return unsafe
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-}
 
 function imageEntry({ loc, title, caption }) {
   return [
