@@ -47,7 +47,7 @@ The HTML transformation is exposed separately as `processMarkdown(content)` — 
 
 v4 makes each token available both as a CSS variable (`var(--color-fg)`) and as a Tailwind utility (`text-fg`, `bg-surface`, etc.). Per-route `style.css` files use the variables; JSX can use either. `src/app/blog/style.css` keeps its own (dark-mode-aware) palette and is not part of this token system.
 
-**Container-query foundation.** Three grid wrappers declare `container-type: inline-size` and a `container-name`: `.blog-container` (parent of `.blog-posts`), `.blog-post-footer-content` (parent of `.related-posts-grid`), `.toolkit-container` (parent of `.toolkit-grid`). The existing `@media` rules are deliberately viewport-driven and were left intact; new responsive rules on these grids can use `@container (name <op> ...)` queries.
+**Container-query foundation.** Three grid wrappers declare `container-type: inline-size` and a `container-name`: `.blog-container` (parent of `.blog-posts`), `.blog-post-footer-content` (parent of `.related-posts-grid`), `.toolkit-container` (parent of `.toolkit-grid`; toolkit content lives in `src/app/toolkit/toolkit.json`, ask the user before adding or removing items). The existing `@media` rules are deliberately viewport-driven and were left intact; new responsive rules on these grids can use `@container (name <op> ...)` queries.
 
 **Redirects.** Persistent route redirects (`/monitoring`, `/newsletter`, `/getcv`, `/services*`, `/camera`) live in `next.config.mjs` `redirects()`. Host-based subdomain redirects live in `src/proxy.js`. Pick the right layer when adding a new one.
 

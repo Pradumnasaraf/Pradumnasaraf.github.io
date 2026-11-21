@@ -1,0 +1,162 @@
+[
+  {
+    "id": "hardware",
+    "title": "Hardware",
+    "layout": "cards",
+    "groups": [
+      {
+        "name": "Computer",
+        "items": [
+          "MacBook Pro 14 M1 Pro, 8C CPU 14C GPU",
+          "MacBook Pro 14 M2 Pro, 10C CPU 16C GPU",
+          "MacBook Pro 14 M4 Pro, 14C CPU 20C GPU",
+          "MacBook Air 13 i5 (Mid 2013), 2C CPU"
+        ]
+      },
+      {
+        "name": "Monitor",
+        "items": ["LG UltraWide 29 inch (IPS)", "LG UltraWide 34 inch (IPS)"]
+      },
+      {
+        "name": "Camera",
+        "items": ["OBSBOT Tiny 3"]
+      },
+      {
+        "name": "Keyboard",
+        "items": ["Logitech MX Keys S"]
+      },
+      {
+        "name": "Mouse & Trackpad",
+        "items": ["Logitech MX Master 4", "Apple Magic Trackpad"]
+      },
+      {
+        "name": "Headphones",
+        "items": ["AirPods Pro 2, AirPods 2nd Gen"]
+      },
+      {
+        "name": "Mobile",
+        "items": ["iPhone 16 Pro, iPhone 6, Moto G(9)"]
+      }
+    ]
+  },
+  {
+    "id": "workspace",
+    "title": "Workspace, Ergonomics & Accessories",
+    "layout": "cards",
+    "groups": [
+      {
+        "name": "Desk",
+        "items": [
+          "ErgoYou E3 Dual Motor (3 Stage) with Table-Top Standing Desk"
+        ]
+      },
+      {
+        "name": "Chair",
+        "items": ["Featherlite Helix High Back"]
+      },
+      {
+        "name": "Backpack",
+        "items": ["Samsonite Open Road"]
+      }
+    ]
+  },
+  {
+    "id": "software",
+    "title": "Software",
+    "layout": "list",
+    "groups": [
+      {
+        "name": "Development Tools",
+        "items": [
+          "Docker",
+          "Docker Sandboxes",
+          "Lens Kubernetes IDE",
+          "Postman",
+          "TablePlus",
+          "MongoDB Compass"
+        ]
+      },
+      {
+        "name": "CLI Tools",
+        "items": [
+          "Homebrew",
+          "Oh My Zsh",
+          "nvm",
+          "yarn",
+          "git",
+          "act",
+          "gh",
+          "helm",
+          "jq",
+          "kind",
+          "kubectl",
+          "localtunnel",
+          "ngrok",
+          "zsh-autosuggestions",
+          "k9s",
+          "goreleaser",
+          "UV",
+          "go",
+          "terraform",
+          "tree",
+          "speedtest"
+        ]
+      },
+      {
+        "name": "Mac Apps (Workflow)",
+        "items": [
+          "Raycast",
+          "Amphetamine",
+          "Lunar",
+          "LocalSend",
+          "Grammarly Desktop",
+          "GPG Suite",
+          "PDFgear",
+          "VLC",
+          "Zoom",
+          "VNC Viewer",
+          "AnySwitch",
+          "OneMenu",
+          "Launchy",
+          "Logi Options+"
+        ]
+      },
+      {
+        "name": "Code Editor",
+        "items": ["Cursor"]
+      },
+      {
+        "name": "Terminal",
+        "items": ["Warp"]
+      },
+      {
+        "name": "AI Tools",
+        "items": [
+          "Claude",
+          "ChatGPT",
+          "Claude Code",
+          "OpenCode",
+          "Agent Browser",
+          "MacWhisper",
+          "Wispr Flow"
+        ]
+      },
+      {
+        "name": "Browser",
+        "items": ["Dia", "Safari"]
+      },
+      {
+        "name": "Content Creation",
+        "items": ["Canva", "Figma", "Screen Studio", "Buffer"]
+      },
+      {
+        "name": "Productivity",
+        "items": ["Notion", "Google Calendar"]
+      },
+      {
+        "name": "Communication and Collaboration",
+        "items": ["GitHub", "Slack", "Discord", "Microsoft Teams"]
+      }
+    ]
+  }
+]
