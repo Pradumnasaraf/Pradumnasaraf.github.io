@@ -65,7 +65,7 @@ export default function ContactPage() {
     <>
       <PageTopbar />
 
-      <main className="contact-page">
+      <div className="contact-page">
         <div className="contact-card">
           <h1>Contact</h1>
           <p className="contact-intro">
@@ -121,7 +121,7 @@ export default function ContactPage() {
             ))}
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { useEffect, useRef, useState } from 'react';
-import './globals.css';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiX } from 'react-icons/si';
 import BackToTopButton from '@/components/BackToTopButton';
@@ -247,7 +246,6 @@ export default function Home() {
       <div className="heading">
         <div className="left">
           <div className="socialmedia">
-            {/* Using React Icons */}
             <Link
               href="https://github.com/Pradumnasaraf"
               target="_blank"
@@ -310,9 +308,7 @@ export default function Home() {
         </div>
       </div>
 
-      <main>
-        {showGame && <KonamiGame onClose={() => setShowGame(false)} />}
-      </main>
+      {showGame && <KonamiGame onClose={() => setShowGame(false)} />}
 
       <BackToTopButton />
     </>

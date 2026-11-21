@@ -49,8 +49,8 @@ export default function BlogShareButtons({ url, title }) {
           target="_blank"
           rel="noopener noreferrer"
           className="blog-share-button twitter"
-          aria-label="Share on Twitter"
-          title="Share on Twitter"
+          aria-label="Share on X"
+          title="Share on X"
         >
           <SiX />
         </a>

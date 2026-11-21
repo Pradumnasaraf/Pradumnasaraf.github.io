@@ -41,7 +41,6 @@ function countryName(code) {
 
 const MAX_IMAGE_RETRIES = 3;
 
-// ImageItem Component with enhanced features
 // The grid only needs a small copy; images.json keeps the full-size Drive
 // URL (sz=w2500) for the full-screen viewer.
 const GRID_WIDTH = 800;
@@ -56,8 +55,6 @@ const ImageItem = ({ src, alt, country, eager = false, onClick }) => {
   const [isVisible, setIsVisible] = useState(eager);
 
   useEffect(() => {
-    // Use a more lenient IntersectionObserver to prevent scroll blocking
-    // Safari-specific: Delay observer setup to prevent blocking initial render
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -150,7 +147,6 @@ const ImageItem = ({ src, alt, country, eager = false, onClick }) => {
   );
 };
 
-// Enhanced FullScreenModal Component
 // The tap hint shows on the first photo opened after each page load.
 let hintShownThisVisit = false;
 const SWIPE_THRESHOLD = 50;
@@ -264,7 +260,6 @@ const FullScreenModal = ({
           </span>
         </div>
       )}
-      {/* Close Button */}
       <div
         className="modal-close-wrap"
         style={{
@@ -310,8 +305,7 @@ const FullScreenModal = ({
   );
 };
 
-// Main Home Component
-export default function Home() {
+export default function PhotographyPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageSrc, setModalImageSrc] = useState('');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -369,7 +363,7 @@ export default function Home() {
           >
             {images.map((image, index) => (
               <ImageItem
-                key={index}
+                key={image.src}
                 src={image.src}
                 alt={image.alt}
                 country={image.country}

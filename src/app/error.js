@@ -3,7 +3,7 @@
 import './not-found.css';
 import Link from 'next/link';
 
-export default function Error({ reset }) {
+export default function ErrorPage({ reset }) {
   return (
     <div className="not-found-container">
       <div className="not-found-content">

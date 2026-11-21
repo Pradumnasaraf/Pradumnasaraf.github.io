@@ -1,4 +1,4 @@
-import { SITE_URL } from '../../lib/constants.js';
+import { OG_IMAGE_URL, SITE_URL } from '../../lib/constants.js';
 import { getFeedEligiblePosts } from '../../lib/blog.js';
 
 export async function GET() {
@@ -9,7 +9,6 @@ export async function GET() {
   // (see getFeedEligiblePosts).
   const originalPosts = getFeedEligiblePosts();
 
-  // Generate RSS items for blog posts
   const rssItems = originalPosts
     .slice(0, 50) // Limit to latest 50 posts
     .map((post) => {
@@ -35,7 +34,6 @@ export async function GET() {
     })
     .join('\n');
 
-  // RSS feed for blog posts
   const rssFeed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -46,7 +44,7 @@ export async function GET() {
     <lastBuildDate>${currentDate}</lastBuildDate>
     <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>${baseUrl}/media/pradumna-saraf-og.png</url>
+      <url>${OG_IMAGE_URL}</url>
       <title>Pradumna Saraf</title>
       <link>${baseUrl}</link>
     </image>
@@ -63,7 +61,6 @@ ${rssItems}
   });
 }
 
-// Helper function to escape XML special characters
 function escapeXml(unsafe) {
   if (!unsafe) return '';
   return unsafe

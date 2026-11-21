@@ -1,5 +1,4 @@
-// src/app/layout.js
-import './globals.css'; // Tailwind and global styles
+import './globals.css';
 import Script from 'next/script';
 import { Suspense } from 'react';
 import { League_Spartan } from 'next/font/google';
@@ -19,7 +18,6 @@ export const viewport = {
   initialScale: 1,
 };
 
-// Export the metadata to ensure Next.js uses it
 export { metadata };
 
 export default function RootLayout({ children }) {
@@ -30,7 +28,6 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <head>
-        {/* Google Tag Manager initialization */}
         <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || []; window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});`}
         </Script>
@@ -48,10 +45,7 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
         />
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
 
-        {/* RSS Feed */}
         <link
           rel="alternate"
           type="application/rss+xml"
@@ -59,9 +53,6 @@ export default function RootLayout({ children }) {
           title="Pradumna Saraf - Blog RSS Feed"
         />
 
-        {/* Note: OG and Twitter tags are handled by Next.js metadata API per page */}
-
-        {/* Enhanced Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -126,7 +117,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body suppressHydrationWarning>
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             title="Google Tag Manager"

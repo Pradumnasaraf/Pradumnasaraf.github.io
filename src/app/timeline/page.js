@@ -44,7 +44,7 @@ const TimelinePage = () => {
               year && (index === 0 || entryYear(entries[index - 1]) !== year);
             const delay = `${(index * step).toFixed(2)}s`;
             return (
-              <Fragment key={index}>
+              <Fragment key={`${entry.date}-${entry.title}`}>
                 {newYear && (
                   <div
                     className="timeline-year"

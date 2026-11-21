@@ -1,7 +1,12 @@
+import { cache } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getPostBySlug, getAllPostSlugs, getAllPosts } from '@/lib/blog';
+import {
+  getPostBySlug as loadPost,
+  getAllPostSlugs,
+  getAllPosts,
+} from '@/lib/blog';
 import { getThumbnailUrl } from '@/lib/blog-utils';
 import { OG_IMAGE_URL, SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
 import { format } from 'date-fns';
@@ -14,6 +19,9 @@ import ImageLightbox from '@/components/ImageLightbox';
 import TableOfContents from '@/components/TableOfContents';
 import BackToTopButton from '@/components/BackToTopButton';
 import '../style.css';
+
+// Metadata and the page both need the post; render its markdown once.
+const getPostBySlug = cache(loadPost);
 
 export async function generateStaticParams() {
   const slugs = getAllPostSlugs();
@@ -34,8 +42,7 @@ export async function generateMetadata({ params }) {
 
   const thumbnailUrl = getThumbnailUrl(post.thumbnail);
 
-  // If post has a canonical URL in frontmatter (for reposted content),
-  // use that. Otherwise, use this site as the canonical URL.
+  // Cross-posted articles keep the original as canonical.
   const canonicalUrl = post.canonical || `${SITE_URL}/blog/${slug}`;
 
   return {
@@ -46,7 +53,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: post.title,
       description: post.excerpt || post.title,
-      url: `${SITE_URL}/blog/${slug}`,
+      url: canonicalUrl,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author || 'Pradumna Saraf'],
@@ -120,8 +127,7 @@ export default async function BlogPost({ params }) {
   if (relatedPosts.length === 0) {
     relatedPosts = allPosts
       .filter((item) => item.slug !== post.slug)
-      .slice(0, 3)
-      .map((item) => ({ ...item, overlapCount: 0, dateValue: 0 }));
+      .slice(0, 3);
   }
 
   const structuredData = {
@@ -187,7 +193,7 @@ export default async function BlogPost({ params }) {
     <>
       <ReadingProgress />
       <BackToTopButton />
-      <div className="blog-topbar" role="banner">
+      <div className="blog-topbar">
         <div className="blog-topbar-inner">
           <BlogBackButton />
           <BlogThemeToggle />

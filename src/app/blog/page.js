@@ -24,7 +24,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <div className="blog-topbar" role="banner">
+      <div className="blog-topbar">
         <div className="blog-topbar-inner">
           <Link
             href="/"

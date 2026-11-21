@@ -43,11 +43,9 @@ export default function LinksPage() {
   };
 
   const handleShareClick = () => {
-    // Directly open QR code modal for all devices
     setShowQRCode(true);
   };
 
-  // Social media icons - displayed below name (all black/monochrome)
   const socialLinks = [
     {
       id: 'twitter',
@@ -105,7 +103,6 @@ export default function LinksPage() {
     },
   ];
 
-  // Main links - displayed as buttons below social icons (exact from bio.link)
   const links = [
     {
       id: 1,
@@ -136,7 +133,6 @@ export default function LinksPage() {
 
   return (
     <div className="links-container">
-      {/* QR Code Modal */}
       {showQRCode && (
         <div
           className="qr-modal"
@@ -163,7 +159,7 @@ export default function LinksPage() {
             <h3>Share</h3>
             <Image
               src="/media/qr-code.png"
-              alt="QR Code"
+              alt="QR code linking to this links page"
               width={200}
               height={200}
               className="qr-code-image"
@@ -185,9 +181,7 @@ export default function LinksPage() {
       )}
 
       <div className="links-content">
-        {/* Profile Section */}
         <div className="profile-section">
-          {/* Share Button */}
           <button
             className="share-button"
             onClick={handleShareClick}
@@ -212,7 +206,6 @@ export default function LinksPage() {
           <h1 className="profile-name">{profileData.name}</h1>
           {profileData.bio && <p className="profile-bio">{profileData.bio}</p>}
 
-          {/* Social Icons - displayed below name/bio */}
           {socialLinks.length > 0 && (
             <div className="social-icons">
               {socialLinks.map((social) => {
@@ -238,7 +231,6 @@ export default function LinksPage() {
           )}
         </div>
 
-        {/* Links Section */}
         <div className="links-section">
           {links.map((link) => {
             return (

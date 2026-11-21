@@ -20,6 +20,7 @@ const CVPage = () => {
           rel="noopener noreferrer"
           className="download-cv-button"
           title="Download CV"
+          aria-label="Download CV"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -57,10 +58,7 @@ const CVPage = () => {
                 </a>
               </p>
               <p>
-                <FaRss />{' '}
-                <a href="/blog" target="_blank" rel="noopener noreferrer">
-                  blog.pradumnasaraf.dev
-                </a>
+                <FaRss /> <a href="/blog">pradumnasaraf.dev/blog</a>
               </p>
               <p>
                 <FaLinkedin />{' '}

@@ -87,7 +87,7 @@ export default function BlogThemeToggle() {
   const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   // The pre-paint Script in the root layout only runs on the first page load.
-  // On client-side navigations (e.g. /home → /blog via <Link>) it doesn't fire,
+  // On client-side navigations (for example / to /blog) it doesn't fire,
   // so we reapply the stored preference here.
   useEffect(() => {
     let desired = null;

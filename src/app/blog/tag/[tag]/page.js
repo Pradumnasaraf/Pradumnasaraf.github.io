@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAllTags, getPostsByTag } from '@/lib/blog';
 import { toPostSummary, tagLabel } from '@/lib/blog-utils';
-import { SITE_URL, TWITTER_HANDLE } from '@/lib/constants';
+import { SITE_URL } from '@/lib/constants';
+import { buildMetadata } from '@/lib/metadata';
 import BlogPostExplorer from '@/components/BlogPostExplorer';
 import BlogThemeToggle from '@/components/BlogThemeToggle';
 import '../../style.css';
@@ -18,34 +19,14 @@ export async function generateMetadata({ params }) {
     return { title: 'Tag Not Found' };
   }
 
-  const title = `Posts tagged "${tag}" | Pradumna Saraf Blog`;
-  const description = `${posts.length} ${posts.length === 1 ? 'article' : 'articles'} tagged "${tag}" — technical writing on Docker, Kubernetes, DevOps, and Cloud Native by Pradumna Saraf.`;
-  const url = `${SITE_URL}/blog/tag/${tag}`;
-
-  return {
-    title,
-    description,
-    keywords: tag,
-    openGraph: {
-      title,
-      description,
-      url,
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      creator: TWITTER_HANDLE,
-    },
-    alternates: {
-      canonical: url,
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  };
+  const label = tagLabel(tag);
+  return buildMetadata({
+    title: `${label} articles | Pradumna Saraf Blog`,
+    description: `${posts.length} ${posts.length === 1 ? 'article' : 'articles'} on ${label} by Pradumna Saraf.`,
+    path: `/blog/tag/${tag}`,
+    keywords: label,
+    robots: 'simple',
+  });
 }
 
 export default async function TagPage({ params }) {
@@ -100,7 +81,7 @@ export default async function TagPage({ params }) {
 
   return (
     <>
-      <div className="blog-topbar" role="banner">
+      <div className="blog-topbar">
         <div className="blog-topbar-inner">
           <Link
             href="/blog"

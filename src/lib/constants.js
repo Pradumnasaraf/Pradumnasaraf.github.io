@@ -3,9 +3,7 @@
  *
  * Anything that shows up as a literal in many files (the domain, the
  * OG image URL, the Twitter handle, the GTM container ID) lives here so
- * a rebrand or analytics swap is a one-file change. Values are exact
- * matches for what was previously hardcoded throughout the codebase --
- * no behavioral changes.
+ * a rebrand or analytics swap is a one-file change.
  */
 
 export const SITE_URL = 'https://pradumnasaraf.dev';

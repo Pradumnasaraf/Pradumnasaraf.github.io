@@ -22,7 +22,6 @@ const ChatPage = () => {
   }, []);
 
   useEffect(() => {
-    // Cal inline embed code
     const calScript = document.createElement('script');
     calScript.type = 'text/javascript';
     calScript.innerHTML = `

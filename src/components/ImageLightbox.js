@@ -16,7 +16,6 @@ export default function ImageLightbox() {
     const handleImageClick = (e) => {
       const target = e.target;
 
-      // Check if clicked element is an image
       if (target.tagName === 'IMG' && !target.closest('.blog-post-thumbnail')) {
         e.preventDefault();
         e.stopPropagation();
@@ -24,10 +23,8 @@ export default function ImageLightbox() {
         let src = target.src || target.getAttribute('src');
         const alt = target.alt || '';
 
-        // Get the full-size image URL
         // If it's a Next.js optimized image, try to get the original
         if (src && src.includes('_next/image')) {
-          // Extract the original URL from Next.js optimized image
           const urlMatch = src.match(/url=(.+?)(?:&|$)/);
           if (urlMatch) {
             src = decodeURIComponent(urlMatch[1]);
@@ -70,7 +67,6 @@ export default function ImageLightbox() {
       }
     };
 
-    // Add click listeners to all images in blog content
     const blogContent = document.querySelector('.blog-post-content');
     const featuredImageContainer = document.querySelector(
       '.blog-post-featured-image'

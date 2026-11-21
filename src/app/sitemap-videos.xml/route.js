@@ -1,4 +1,4 @@
-import { OG_IMAGE_URL, SITE_URL } from '../../lib/constants.js';
+import { SITE_URL } from '../../lib/constants.js';
 import speakingTalks from '../speaking/speaking.json' with { type: 'json' };
 
 function escapeXml(value) {
@@ -61,7 +61,7 @@ export async function GET() {
   const videoEntries = videos
     .map(
       (v) => `    <video:video>
-      <video:thumbnail_loc>${OG_IMAGE_URL}</video:thumbnail_loc>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/${v.id}/hqdefault.jpg</video:thumbnail_loc>
       <video:title>${escapeXml(v.title)}</video:title>
       <video:description>${escapeXml(v.description)}</video:description>
       <video:content_loc>https://youtu.be/${v.id}</video:content_loc>
