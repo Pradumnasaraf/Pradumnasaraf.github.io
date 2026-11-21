@@ -112,18 +112,18 @@ header h1 {
 
 .contact-info p:hover {
   background-color: #f1f3f5;
-  transform: translateY(-2px);
 }
 
 .contact-info a {
-  color: #0066cc;
+  color: var(--color-fg);
   text-decoration: underline;
-  transition: color 0.2s;
+  text-decoration-color: #c4c4c4;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
 }
 
 .contact-info a:hover {
-  color: #004999;
-  text-decoration: underline;
+  text-decoration-color: var(--color-fg);
 }
 
 .section {
@@ -202,16 +202,17 @@ li {
 }
 
 .project a {
-  color: #0066cc;
+  color: var(--color-fg);
   text-decoration: underline;
-  transition: color 0.2s;
+  text-decoration-color: #c4c4c4;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
   display: inline-block;
   margin-top: 0.5rem;
 }
 
 .project a:hover {
-  color: #004999;
-  text-decoration: underline;
+  text-decoration-color: var(--color-fg);
 }
 
 .skills {
@@ -311,14 +312,15 @@ li {
 }
 
 .social-link {
-  color: #0066cc;
+  color: var(--color-fg);
   text-decoration: underline;
-  transition: color 0.2s;
+  text-decoration-color: #c4c4c4;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
 }
 
 .social-link:hover {
-  color: #004999;
-  text-decoration: underline;
+  text-decoration-color: var(--color-fg);
 }
 
 .download-cv-button {

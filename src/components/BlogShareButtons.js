@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { FaTwitter, FaLinkedin, FaLink } from 'react-icons/fa';
+import { FaLinkedin, FaLink } from 'react-icons/fa';
+import { SiX } from 'react-icons/si';
 
 export default function BlogShareButtons({ url, title }) {
   const [copied, setCopied] = useState(false);
@@ -51,7 +52,7 @@ export default function BlogShareButtons({ url, title }) {
           aria-label="Share on Twitter"
           title="Share on Twitter"
         >
-          <FaTwitter />
+          <SiX />
         </a>
         <a
           href={shareLinks.linkedin}

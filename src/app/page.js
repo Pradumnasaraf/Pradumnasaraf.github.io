@@ -4,7 +4,8 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { useEffect, useRef, useState } from 'react';
 import './globals.css';
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiX } from 'react-icons/si';
 import BackToTopButton from '@/components/BackToTopButton';
 
 // Easter egg: only reachable via the Konami code, so keep it out of the
@@ -261,7 +262,7 @@ export default function Home() {
               rel="noopener noreferrer"
               aria-label="Visit Pradumna Saraf on X"
             >
-              <FaTwitter aria-hidden="true" focusable="false" />
+              <SiX aria-hidden="true" focusable="false" />
             </Link>
             <Link
               href="https://www.linkedin.com/in/pradumnasaraf/"
@@ -281,7 +282,7 @@ export default function Home() {
           </p>
           <div className="ibutton">
             <a
-              className="connect"
+              className="connect connect-primary"
               href="https://github.com/Pradumnasaraf"
               target="_blank"
               rel="noopener noreferrer"

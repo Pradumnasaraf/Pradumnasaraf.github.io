@@ -194,7 +194,7 @@
 
 .open-project-button {
   text-decoration: none;
-  border: 1px solid var(--color-fg);
+  border: 1px solid var(--color-border);
   background: var(--color-surface);
   color: var(--color-fg);
   border-radius: 8px;
@@ -209,24 +209,17 @@
   transition:
     border-color 0.2s ease,
     background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+    color 0.2s ease;
 }
 
 .open-project-button:hover {
   border-color: var(--color-fg);
-  background: var(--color-fg);
-  color: var(--color-surface);
-  transform: translateY(-1px);
-}
-
-.open-project-button:active {
-  transform: translateY(0);
+  background: var(--color-hover);
 }
 
 .star-project-button {
   text-decoration: none;
-  border: 1px solid var(--color-fg);
+  border: 1px solid var(--color-border);
   background: var(--color-surface);
   color: var(--color-fg);
   border-radius: 8px;
@@ -240,19 +233,12 @@
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
+    border-color 0.2s ease;
 }
 
 .star-project-button:hover {
   border-color: var(--color-fg);
-  background: var(--color-fg);
-  color: var(--color-surface);
-  transform: translateY(-1px);
-}
-
-.star-project-button:active {
-  transform: translateY(0);
+  background: var(--color-hover);
 }
 
 @media (max-width: 768px) {

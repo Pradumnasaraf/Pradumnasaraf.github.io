@@ -3,12 +3,12 @@ import PageTopbar from '@/components/PageTopbar';
 import { SITE_URL } from '@/lib/constants';
 import {
   FaGithub,
-  FaTwitter,
   FaLinkedin,
   FaEnvelope,
   FaGlobe,
   FaRss,
 } from 'react-icons/fa';
+import { SiX } from 'react-icons/si';
 
 const CVPage = () => {
   return (
@@ -73,7 +73,7 @@ const CVPage = () => {
                 </a>
               </p>
               <p>
-                <FaTwitter />{' '}
+                <SiX />{' '}
                 <a
                   href="https://x.com/pradumna_saraf"
                   target="_blank"

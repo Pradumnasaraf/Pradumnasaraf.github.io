@@ -10,8 +10,8 @@ import {
   FiCopy,
   FiX,
 } from 'react-icons/fi';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { SiBluesky, SiSessionize, SiThreads } from 'react-icons/si';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiBluesky, SiSessionize, SiThreads, SiX } from 'react-icons/si';
 import './style.css';
 
 export default function LinksPage() {
@@ -53,7 +53,7 @@ export default function LinksPage() {
       id: 'twitter',
       label: 'X',
       url: 'https://x.com/pradumna_saraf',
-      icon: FaTwitter,
+      icon: SiX,
     },
     {
       id: 'linkedin',
@@ -129,7 +129,7 @@ export default function LinksPage() {
     },
     {
       id: 5,
-      title: 'Twitter (X)',
+      title: 'X',
       url: 'https://x.com/pradumna_saraf',
     },
   ];
