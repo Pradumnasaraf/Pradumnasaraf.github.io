@@ -48,10 +48,12 @@
 
 /* Image Container with rounded shadow */
 .image-container {
-  /* Use filter drop-shadow for better rounded corner support - respects border-radius */
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))
-    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
-  /* Ensure shadow respects border-radius */
+  /* A plain box-shadow, not filter: drop-shadow. A filter on each of the
+     100+ tiles made Chromium browsers run out of graphics memory and stop
+     painting the grid. */
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -101,9 +103,7 @@
   max-width: calc(100% - 16px);
   padding: 0.25rem 0.6rem 0.2rem 0.45rem;
   border-radius: 999px;
-  background: rgba(20, 20, 20, 0.55);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  background: rgba(20, 20, 20, 0.7);
   color: #ffffff;
   font-size: 0.78rem;
   line-height: 1.3;
