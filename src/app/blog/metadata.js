@@ -3,7 +3,7 @@ import { buildMetadata } from '@/lib/metadata';
 export const metadata = buildMetadata({
   title: 'Pradumna Saraf | Blog',
   description:
-    'Technical articles and tutorials about Docker, Kubernetes, DevOps, and cloud-native tech.',
+    'Hands-on articles and tutorials on Docker, Kubernetes, DevOps, GitHub Actions and AI tooling, written from real projects and talks.',
   path: '/blog',
   keywords: [
     'Pradumna Saraf Blog',
@@ -12,7 +12,6 @@ export const metadata = buildMetadata({
     'DevOps Blog',
     'Cloud Native',
     'Open Source',
-    'Developer Advocate',
     'Technical Articles',
     'Tutorials',
     'Container Technology',

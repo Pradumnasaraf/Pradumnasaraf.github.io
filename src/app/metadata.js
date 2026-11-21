@@ -5,10 +5,10 @@ export const metadata = buildMetadata({
   metadataBase: new URL(SITE_URL),
   title: 'Pradumna Saraf',
   description:
-    'Developer Advocate, Docker Captain, and Microsoft MVP. I work with cloud-native tech, DevOps, and open source.',
+    'Open Source Developer, Docker Captain and Microsoft MVP. I write and speak about Docker, Kubernetes, DevOps and AI tooling, and run rebase media.',
   path: '',
   keywords:
-    'Pradumna Saraf, Developer Advocate, Docker Captain, Microsoft MVP, Open Source, Cloud Native, DevOps, Software Development',
+    'Pradumna Saraf, Open Source Developer, Docker Captain, Microsoft MVP, Open Source, Cloud Native, DevOps, Software Development',
   authors: [{ name: 'Pradumna Saraf' }],
   creator: 'Pradumna Saraf',
   publisher: 'Pradumna Saraf',

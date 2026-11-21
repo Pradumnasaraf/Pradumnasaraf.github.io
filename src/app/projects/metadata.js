@@ -3,7 +3,7 @@ import { buildMetadata } from '@/lib/metadata';
 export const metadata = buildMetadata({
   title: 'Pradumna Saraf | Projects',
   description:
-    'A curated list of my projects with star counts, tech stack, and quick links.',
+    'Open source projects I have built and maintain: AI and developer tools, guides, Go and Docker backends, APIs, apps and bots.',
   path: '/projects',
   keywords: [
     'Pradumna Saraf projects',

@@ -6,7 +6,7 @@ export const metadata = buildMetadata({
     'Schedule a meeting with me for consulting, speaking, or just to chat.',
   path: '/chat',
   keywords:
-    'Schedule Meeting, Book Meeting, Pradumna Saraf Meeting, Developer Advocate Consultation, Docker Captain Consultation',
+    'Schedule Meeting, Book Meeting, Pradumna Saraf Meeting, Docker Captain Consultation',
   ogTitle: 'Chat with Pradumna',
   robots: 'noindex',
 });

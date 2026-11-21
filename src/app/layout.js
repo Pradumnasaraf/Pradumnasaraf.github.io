@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
                 `${SITE_URL}/blog`,
                 'https://mvp.microsoft.com/en-US/MVP/profile/504ebf09-e92f-4620-82d7-67590711df58',
               ],
-              jobTitle: 'Developer Advocate, Docker Captain & Microsoft MVP',
+              jobTitle: 'Open Source Developer, Docker Captain & Microsoft MVP',
               worksFor: {
                 '@type': 'Organization',
                 name: 'Kestra',

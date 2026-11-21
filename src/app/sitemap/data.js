@@ -6,7 +6,7 @@ export const sitemapPages = [
     priority: '1.0',
     changefreq: 'weekly',
     description:
-      'Pradumna Saraf - Developer Advocate, Docker Captain, and Open Source evangelist',
+      'Pradumna Saraf, Open Source Developer, Docker Captain and Microsoft MVP',
     category: 'Main',
   },
   {

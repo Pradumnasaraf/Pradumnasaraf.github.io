@@ -3,7 +3,7 @@ import { buildMetadata } from '@/lib/metadata';
 export const metadata = buildMetadata({
   title: 'Pradumna Saraf | Speaking',
   description:
-    "My speaking engagements - conferences, meetups, and webinars I've been part of.",
+    'Talks I have given at conferences, meetups and community events, including KubeCon and the Docker Captains Summit, with slides and recordings.',
   path: '/speaking',
   keywords: [
     'Pradumna Saraf',

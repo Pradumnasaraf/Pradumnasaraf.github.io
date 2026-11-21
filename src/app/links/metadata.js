@@ -3,7 +3,7 @@ import { buildMetadata } from '@/lib/metadata';
 export const metadata = buildMetadata({
   title: 'Pradumna Saraf | Links',
   description:
-    'Find all my links in one place - website, blog, and social media.',
+    'All my links in one place: my website, blog, newsletter, GitHub, X, LinkedIn, YouTube and other places you can find me online.',
   path: '/links',
   robots: 'simple',
   twitterCreator: null,

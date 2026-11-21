@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
   const label = tagLabel(tag);
   return buildMetadata({
     title: `${label} articles | Pradumna Saraf Blog`,
-    description: `${posts.length} ${posts.length === 1 ? 'article' : 'articles'} on ${label} by Pradumna Saraf.`,
+    description: `${posts.length} ${posts.length === 1 ? 'article' : 'articles'} on ${label} by Pradumna Saraf: hands-on guides, tutorials and talks on ${label} and related tools.`,
     path: `/blog/tag/${tag}`,
     keywords: label,
     robots: 'simple',

@@ -3,17 +3,15 @@ import { buildMetadata } from '@/lib/metadata';
 export const metadata = buildMetadata({
   title: 'Pradumna Saraf | Sitemap',
   description:
-    'Navigate through all pages and resources on pradumnasaraf.dev. Find CV, timeline, speaking engagements, toolkit, photography, and more.',
+    'Every page on pradumnasaraf.dev in one place: blog, projects, speaking, timeline, toolkit, photography, travel and links.',
   path: '/sitemap',
   keywords: [
     'sitemap',
     'navigation',
     'pradumna saraf',
-    'developer advocate',
     'docker captain',
     'open source',
     'portfolio',
-    'cv',
     'timeline',
     'speaking',
     'toolkit',
