@@ -29,21 +29,30 @@ const GROUPS = [
 
 // Names where a project lives besides its repo, so the card links there
 // first. Anything unrecognised is treated as a live site.
+// Matches a host or any of its subdomains, never a lookalike such as
+// "evilpypi.org".
+function isHost(host, domain) {
+  return host === domain || host.endsWith(`.${domain}`);
+}
+
 function destinationLabel(project) {
   const { url, repoUrl } = project;
   if (!url || url === repoUrl) return null;
-  let host = '';
+  let parsed;
   try {
-    host = new URL(url).hostname;
+    parsed = new URL(url);
   } catch {
     return null;
   }
-  if (url.includes('github.com/marketplace')) return 'Marketplace';
-  if (host.endsWith('pypi.org')) return 'PyPI';
-  if (host.endsWith('npmjs.com')) return 'npm';
+  const host = parsed.hostname;
+  if (host === 'github.com' && parsed.pathname.startsWith('/marketplace')) {
+    return 'Marketplace';
+  }
+  if (isHost(host, 'pypi.org')) return 'PyPI';
+  if (isHost(host, 'npmjs.com')) return 'npm';
   if (host === 'pkg.go.dev') return 'Go package';
   if (host === 't.me') return 'Telegram';
-  if (host.endsWith('discord.com')) return 'Discord';
+  if (isHost(host, 'discord.com')) return 'Discord';
   if (host === 'docs.docker.com') return 'Docker docs';
   return 'Live site';
 }
