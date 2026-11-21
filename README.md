@@ -4,10 +4,10 @@ This repository contains the source code for my personal/portfolio/service websi
 
 ![website screenshot](https://github.com/user-attachments/assets/918aea3f-f273-46ea-85c6-494f18e57f25)
 
-### 📜 License
+### License
 
 **Pradumnasaraf.github.io** is licensed under the GPL-3.0 License - see the [LICENSE](/LICENSE) file for details.
 
-### 🛡 Security
+### Security
 
 If you discover a security vulnerability within this project, please check the [SECURITY](SECURITY.md) for more information.
