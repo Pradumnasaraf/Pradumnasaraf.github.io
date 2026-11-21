@@ -43,15 +43,6 @@ export default function ImageLightbox() {
           }
         }
 
-        // For Next.js Image component, try to get original src from parent
-        const nextImageParent = target.closest('span[style*="position"]');
-        if (nextImageParent) {
-          const imgElement = nextImageParent.querySelector('img');
-          if (imgElement && imgElement.src) {
-            src = imgElement.src;
-          }
-        }
-
         if (src) {
           setImageSrc(src);
           setImageAlt(alt);

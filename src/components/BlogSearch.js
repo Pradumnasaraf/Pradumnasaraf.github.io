@@ -151,6 +151,9 @@ export default function BlogSearch({ posts }) {
         <div className="blog-search-modal" onClick={handleClose}>
           <div
             className="blog-search-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Search blog posts"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="blog-search-header">
@@ -160,7 +163,8 @@ export default function BlogSearch({ posts }) {
                 </span>
                 <input
                   ref={inputRef}
-                  type="text"
+                  type="search"
+                  aria-label="Search blog posts"
                   placeholder="Search blogs..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}

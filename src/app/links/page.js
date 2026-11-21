@@ -133,6 +133,7 @@ export default function LinksPage() {
         <div
           className="qr-modal"
           onClick={handleCloseQRCode}
+          ref={(el) => el?.focus()}
           onKeyDown={(e) => {
             if (e.key === 'Escape') handleCloseQRCode();
           }}

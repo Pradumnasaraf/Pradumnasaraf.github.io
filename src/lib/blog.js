@@ -25,25 +25,18 @@ import rust from 'highlight.js/lib/languages/rust';
 import java from 'highlight.js/lib/languages/java';
 import sql from 'highlight.js/lib/languages/sql';
 import markdown from 'highlight.js/lib/languages/markdown';
-import html from 'highlight.js/lib/languages/xml';
 
 const allLanguages = {
   dockerfile: dockerfile,
-  Dockerfile: dockerfile,
   javascript: javascript,
-  js: javascript,
   json: json,
   typescript: typescript,
-  ts: typescript,
   python: python,
-  py: python,
   bash: bash,
   shell: shell,
-  sh: shell,
   yaml: yaml,
-  yml: yaml,
   xml: xml,
-  html: html,
+  html: xml,
   css: css,
   go: go,
   rust: rust,
