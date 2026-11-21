@@ -78,8 +78,8 @@ const ToolKitPage = () => {
               <div className="toolkit-item">
                 <h3>Development Tools</h3>
                 <p>
-                  Docker, Lens Kubernetes IDE, Postman, TablePlus, MongoDB
-                  Compass
+                  Docker, Docker Sandboxes, Lens Kubernetes IDE, Postman,
+                  TablePlus, MongoDB Compass
                 </p>
               </div>
 
@@ -95,9 +95,9 @@ const ToolKitPage = () => {
               <div className="toolkit-item">
                 <h3>Mac Apps (Workflow)</h3>
                 <p>
-                  Raycast, Lunar, LocalSend, Grammarly Desktop, GPG Suite,
-                  PDFgear, VLC, Zoom, VNC Viewer, AnySwitch, OneMenu, Launchy,
-                  Logi Options+
+                  Raycast, Amphetamine, Lunar, LocalSend, Grammarly Desktop, GPG
+                  Suite, PDFgear, VLC, Zoom, VNC Viewer, AnySwitch, OneMenu,
+                  Launchy, Logi Options+
                 </p>
               </div>
 
