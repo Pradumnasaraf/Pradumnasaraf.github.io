@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Masonry from 'react-masonry-css';
 import { createPortal } from 'react-dom';
@@ -77,14 +77,68 @@ const ImageItem = ({ src, alt, onClick }) => {
 };
 
 // Enhanced FullScreenModal Component
+const HINT_STORAGE_KEY = 'photo-viewer-hint-seen';
+const SWIPE_THRESHOLD = 50;
+
 const FullScreenModal = ({
   isOpen,
   imageSrc,
   imageAlt,
+  index,
+  total,
   onClose,
   onPrev,
   onNext,
 }) => {
+  const [showHint, setShowHint] = useState(false);
+  const touchStartX = useRef(null);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    let seen = true;
+    try {
+      seen = window.localStorage.getItem(HINT_STORAGE_KEY) === '1';
+    } catch {
+      seen = true;
+    }
+    if (seen || !window.matchMedia('(max-width: 768px)').matches) {
+      return undefined;
+    }
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setShowHint(true);
+    try {
+      window.localStorage.setItem(HINT_STORAGE_KEY, '1');
+    } catch {
+      // Storage can be blocked; the hint then shows once per visit.
+    }
+    const timer = setTimeout(() => setShowHint(false), 3200);
+    return () => clearTimeout(timer);
+  }, [isOpen]);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(dx) < SWIPE_THRESHOLD) return;
+    setShowHint(false);
+    if (dx < 0) onNext();
+    else onPrev();
+  };
+
+  const tapPrev = () => {
+    setShowHint(false);
+    onPrev();
+  };
+
+  const tapNext = () => {
+    setShowHint(false);
+    onNext();
+  };
+
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (!isOpen) return;
@@ -106,9 +160,41 @@ const FullScreenModal = ({
       aria-modal="true"
       aria-label="Full screen image viewer"
       tabIndex={-1}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
+      <button
+        type="button"
+        className="modal-tap-zone modal-tap-zone-prev"
+        onClick={tapPrev}
+        aria-label="Previous image"
+      />
+      <button
+        type="button"
+        className="modal-tap-zone modal-tap-zone-next"
+        onClick={tapNext}
+        aria-label="Next image"
+      />
+      {total > 0 && (
+        <span className="modal-counter" aria-live="polite">
+          {index + 1} / {total}
+        </span>
+      )}
+      {showHint && (
+        <div className="modal-tap-hint" aria-hidden="true">
+          <span className="modal-tap-hint-side">
+            <span className="modal-tap-hint-arrow">‹</span>
+            Tap left to go back
+          </span>
+          <span className="modal-tap-hint-side">
+            Tap right for next
+            <span className="modal-tap-hint-arrow">›</span>
+          </span>
+        </div>
+      )}
       {/* Close Button */}
       <div
+        className="modal-close-wrap"
         style={{
           position: 'fixed',
           right: 20,
@@ -140,6 +226,7 @@ const FullScreenModal = ({
       </div>
       {/* Previous Button */}
       <div
+        className="modal-nav-wrap"
         style={{
           position: 'fixed',
           left: 20,
@@ -175,11 +262,12 @@ const FullScreenModal = ({
         width={1920}
         height={1080}
         unoptimized
-        className="max-w-[90vw] max-h-[90vh] object-contain"
+        className="modal-image max-w-[90vw] max-h-[90vh] object-contain"
         style={{ objectFit: 'contain' }}
       />
       {/* Next Button */}
       <div
+        className="modal-nav-wrap"
         style={{
           position: 'fixed',
           right: 20,
@@ -258,8 +346,9 @@ const WelcomePopup = ({ isOpen, onClose }) => {
         <div className="popup-content">
           <h2 className="popup-title">Welcome to Photography page!</h2>
           <p className="popup-message">
-            Tap any image to view it full screen. Images start in grayscale and,
-            on desktop, reveal their full color on hover.
+            Tap any image to view it full screen, then tap the right or left
+            side (or swipe) to move between photos. Images start in grayscale
+            and, on desktop, reveal their full color on hover.
           </p>
           <button onClick={onClose} className="popup-ok-button">
             Got it!
@@ -347,6 +436,8 @@ export default function Home() {
           isOpen={isModalOpen}
           imageSrc={modalImageSrc}
           imageAlt={images[currentImageIndex]?.alt}
+          index={currentImageIndex}
+          total={images.length}
           onClose={closeModal}
           onPrev={showPrevImage}
           onNext={showNextImage}

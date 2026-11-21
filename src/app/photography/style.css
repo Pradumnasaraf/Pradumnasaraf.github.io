@@ -588,3 +588,105 @@
     font-size: 0.85rem;
   }
 }
+
+/* Full-screen viewer: tap zones sit over the photo; arrows and close stay above them. */
+.modal-tap-zone {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.modal-tap-zone-prev {
+  left: 0;
+  width: 35%;
+  cursor: w-resize;
+}
+
+.modal-tap-zone-next {
+  right: 0;
+  width: 65%;
+  cursor: e-resize;
+}
+
+.modal-tap-zone:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: -6px;
+}
+
+.modal-close-wrap,
+.modal-nav-wrap {
+  z-index: 2;
+}
+
+.modal-counter {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.modal-tap-hint {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  pointer-events: none;
+  animation: tap-hint-fade 3.2s ease forwards;
+}
+
+.modal-tap-hint-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal-tap-hint-side:first-child {
+  flex: 0 0 35%;
+  border-right: 1px dashed rgba(255, 255, 255, 0.35);
+}
+
+.modal-tap-hint-arrow {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+@keyframes tap-hint-fade {
+  0%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-nav-wrap {
+    display: none !important;
+  }
+
+  .modal-close-wrap .modal-label {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-tap-hint {
+    animation: none;
+  }
+}
