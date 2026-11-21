@@ -44,7 +44,7 @@ const CVPage = () => {
           <header>
             <h1>Pradumna Saraf</h1>
             <p className="bio">
-              {`A dedicated open source developer and contributor with over 4 years of experience in coding, crafting technical content, community building, and delivering talks. I'm also an enthusiastic team player, skilled at effective collaboration, and capable of working independently to achieve goals.`}
+              {`A dedicated open source developer and contributor with over 5 years of experience in coding, crafting technical content, community building, and delivering talks. I'm also an enthusiastic team player, skilled at effective collaboration, and capable of working independently to achieve goals.`}
             </p>
             <div className="contact-info">
               <p>
