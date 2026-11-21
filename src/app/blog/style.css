@@ -2864,8 +2864,25 @@ html[data-blog-theme='dark'] .blog-theme-root .blog-theme-toggle-button:hover {
   background-color: #262a33 !important;
 }
 
-/* Compact sort select */
+/* Compact sort select and load more button */
 .blog-explorer-select {
-  padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
+  min-width: 0;
+  padding: 0.3rem 1.9rem 0.3rem 0.65rem;
+  background-position: right 0.65rem center;
+  font-size: 0.85rem;
+}
+
+.blog-explorer-load-more {
+  padding: 0.4rem 0.95rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .blog-explorer-select {
+    width: auto;
+  }
+
+  .blog-explorer-load-more {
+    width: auto;
+  }
 }
