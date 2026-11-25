@@ -3,14 +3,13 @@
     "id": "wearedevelopers-india-2026",
     "title": "WeAreDevelopers Conference India",
     "event": "WeAreDevelopers Conference India - 2026",
-    "date": "25th-26th November 2026",
+    "date": "25th November 2026",
     "location": "Bengaluru, India",
     "topic": "Supply Chain Security for the Everyday Engineer",
     "technologies": ["Docker", "Open Source"],
-    "slides": null,
+    "slides": "https://github.com/Pradumnasaraf/Speaking/tree/main/WeAreDevelopers%20India%20-%202026/supply-chain-security-wad-india-2026.pdf",
     "recording": null,
-    "eventUrl": "https://www.wearedevelopers.com/conference-india/agenda/sessions/supply-chain-security-for-the-everyday-engineer-1217164",
-    "upcoming": true
+    "eventUrl": "https://github.com/Pradumnasaraf/Speaking/tree/main/WeAreDevelopers%20India%20-%202026"
   },
   {
     "id": "docker-captains-summit-2026",
